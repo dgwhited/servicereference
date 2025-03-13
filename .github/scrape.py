@@ -5,7 +5,7 @@ import requests
 from pathlib import Path
 
 # URL to the service index
-INDEX_URL = 'https://servicereference.us-east-1.amazonaws.com/v1/access-analyzer/access-analyzer.json'
+INDEX_URL = 'https://servicereference.us-east-1.amazonaws.com'
 
 def main():
     try:
