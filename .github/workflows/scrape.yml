@@ -1,0 +1,99 @@
+name: AWS Service Reference Scraper
+
+on:
+  schedule:
+    - cron: '14 */8 * * *' # Run every 8 hours 
+  workflow_dispatch:     # Allow manual triggering
+  
+jobs:
+  scrape-and-store:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write    # Needed for pushing changes and creating releases
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0  # Fetch all history for changelog generation
+
+      - name: Set up Python
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
+        with:
+          python-version: '3.10'
+          
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run scraper
+        run: python .github/scripts/scraper.py
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git add -A
+          if git diff --staged --quiet; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "No changes detected"
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected"
+            
+            # Generate list of changed files
+            echo "::group::Changed Files"
+            git diff --staged --name-status
+            echo "::endgroup::"
+          fi
+
+      - name: Commit Changes
+        if: steps.changes.outputs.changes == 'true'
+        run: |
+          git config --global user.email "${EMAIL}"
+          git config --global user.name "${NAME}"
+          git remote set-url origin https://x-access-token:${PAT}@github.com/${GITHUB_REPOSITORY}.git
+          git add .
+          git commit -am "Update AWS service references"
+          git push
+        env:
+          NAME: ${{ secrets.NAME }}
+          EMAIL: ${{ secrets.EMAIL }}
+          PAT: ${{ secrets.PAT }}
+
+      - name: Generate detailed changelog
+        if: steps.git-check.outputs.changes == 'true'
+        id: changelog
+        run: |
+          echo "# AWS Service Reference Changes" > changelog.md
+          echo "## Service Changes" >> changelog.md
+          echo "" >> changelog.md
+          
+          # Add file status (Added/Modified/Deleted)
+          git diff --staged --name-status | while read status file; do
+            service=$(echo $file | cut -d'/' -f1)
+            if [ "$status" == "A" ]; then
+              echo "- **${service}**: Added new service reference" >> changelog.md
+            elif [ "$status" == "M" ]; then
+              echo "- **${service}**: Updated service reference" >> changelog.md
+            elif [ "$status" == "D" ]; then
+              echo "- **${service}**: Removed service reference" >> changelog.md
+            fi
+          done
+          
+          echo "" >> changelog.md
+          echo "## Detailed Changes" >> changelog.md
+          echo "For full changes, see the [commit diff](https://github.com/${{ github.repository }}/commit/${{ github.sha }})" >> changelog.md
+          
+          # Set output for release
+          changelog_content=$(cat changelog.md)
+          echo "changelog<<EOF" >> $GITHUB_OUTPUT
+          echo "$changelog_content" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create Release
+        if: steps.git-check.outputs.changes == 'true'
+        uses: softprops/action-gh-release@c95fe1489396fe8a9eb87c0abf8aa5b2ef267fda # v2.2.1
+        with:
+          name: AWS Service References Update ${{ github.run_id }}
+          tag_name: release-${{ github.run_number }}-${{ github.run_attempt }}
+          body_path: CHANGELOG.md
+          generate_release_notes: true
