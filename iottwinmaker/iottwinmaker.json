@@ -1,0 +1,510 @@
+{
+  "Name": "iottwinmaker",
+  "Actions": [
+    {
+      "Name": "BatchPutPropertyValues",
+      "Resources": [
+        {
+          "Name": "entity"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "CancelMetadataTransferJob",
+      "Resources": [
+        {
+          "Name": "metadataTransferJob"
+        }
+      ]
+    },
+    {
+      "Name": "CreateComponentType",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEntity",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMetadataTransferJob"
+    },
+    {
+      "Name": "CreateScene",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSyncJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWorkspace",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteComponentType",
+      "Resources": [
+        {
+          "Name": "componentType"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEntity",
+      "Resources": [
+        {
+          "Name": "entity"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteScene",
+      "Resources": [
+        {
+          "Name": "scene"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSyncJob",
+      "Resources": [
+        {
+          "Name": "syncJob"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkspace",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "ExecuteQuery",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "GetComponentType",
+      "Resources": [
+        {
+          "Name": "componentType"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "GetEntity",
+      "Resources": [
+        {
+          "Name": "entity"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "GetMetadataTransferJob",
+      "Resources": [
+        {
+          "Name": "metadataTransferJob"
+        }
+      ]
+    },
+    {
+      "Name": "GetPricingPlan"
+    },
+    {
+      "Name": "GetPropertyValue",
+      "Resources": [
+        {
+          "Name": "componentType"
+        },
+        {
+          "Name": "entity"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "GetPropertyValueHistory",
+      "Resources": [
+        {
+          "Name": "componentType"
+        },
+        {
+          "Name": "entity"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "GetScene",
+      "Resources": [
+        {
+          "Name": "scene"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "GetSyncJob",
+      "Resources": [
+        {
+          "Name": "syncJob"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "GetWorkspace",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "ListComponentTypes",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "ListComponents",
+      "Resources": [
+        {
+          "Name": "entity"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "ListEntities",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "ListMetadataTransferJobs"
+    },
+    {
+      "Name": "ListProperties",
+      "Resources": [
+        {
+          "Name": "entity"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "ListScenes",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "ListSyncJobs",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "ListSyncResources",
+      "Resources": [
+        {
+          "Name": "syncJob"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "componentType"
+        },
+        {
+          "Name": "entity"
+        },
+        {
+          "Name": "scene"
+        },
+        {
+          "Name": "syncJob"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "ListWorkspaces"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "componentType"
+        },
+        {
+          "Name": "entity"
+        },
+        {
+          "Name": "scene"
+        },
+        {
+          "Name": "syncJob"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "componentType"
+        },
+        {
+          "Name": "entity"
+        },
+        {
+          "Name": "scene"
+        },
+        {
+          "Name": "syncJob"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateComponentType",
+      "Resources": [
+        {
+          "Name": "componentType"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEntity",
+      "Resources": [
+        {
+          "Name": "entity"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePricingPlan"
+    },
+    {
+      "Name": "UpdateScene",
+      "Resources": [
+        {
+          "Name": "scene"
+        },
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWorkspace",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "iottwinmaker:destinationType",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "iottwinmaker:linkedServices",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "iottwinmaker:sourceType",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "componentType",
+      "ARNFormats": [
+        "arn:${Partition}:iottwinmaker:${Region}:${Account}:workspace/${WorkspaceId}/component-type/${ComponentTypeId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "entity",
+      "ARNFormats": [
+        "arn:${Partition}:iottwinmaker:${Region}:${Account}:workspace/${WorkspaceId}/entity/${EntityId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "metadataTransferJob",
+      "ARNFormats": [
+        "arn:${Partition}:iottwinmaker:${Region}:${Account}:metadata-transfer-job/${MetadataTransferJobId}"
+      ]
+    },
+    {
+      "Name": "scene",
+      "ARNFormats": [
+        "arn:${Partition}:iottwinmaker:${Region}:${Account}:workspace/${WorkspaceId}/scene/${SceneId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "syncJob",
+      "ARNFormats": [
+        "arn:${Partition}:iottwinmaker:${Region}:${Account}:workspace/${WorkspaceId}/sync-job/${SyncJobId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "workspace",
+      "ARNFormats": [
+        "arn:${Partition}:iottwinmaker:${Region}:${Account}:workspace/${WorkspaceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

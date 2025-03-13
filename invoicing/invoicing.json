@@ -1,0 +1,128 @@
+{
+  "Name": "invoicing",
+  "Actions": [
+    {
+      "Name": "BatchGetInvoiceProfile"
+    },
+    {
+      "Name": "CreateInvoiceUnit",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteInvoiceUnit",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "invoice-unit"
+        }
+      ]
+    },
+    {
+      "Name": "GetInvoiceEmailDeliveryPreferences"
+    },
+    {
+      "Name": "GetInvoicePDF"
+    },
+    {
+      "Name": "GetInvoiceUnit",
+      "Resources": [
+        {
+          "Name": "invoice-unit"
+        }
+      ]
+    },
+    {
+      "Name": "ListInvoiceSummaries"
+    },
+    {
+      "Name": "ListInvoiceUnits"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "invoice-unit"
+        }
+      ]
+    },
+    {
+      "Name": "PutInvoiceEmailDeliveryPreferences"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "invoice-unit"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "invoice-unit"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInvoiceUnit",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "invoice-unit"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "invoice-unit",
+      "ARNFormats": [
+        "arn:${Partition}:invoicing::${Account}:invoice-unit/${Identifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

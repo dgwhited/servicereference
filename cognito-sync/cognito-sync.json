@@ -1,0 +1,173 @@
+{
+  "Name": "cognito-sync",
+  "Actions": [
+    {
+      "Name": "BulkPublish",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataset",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDataset",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeIdentityPoolUsage",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeIdentityUsage",
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "GetBulkPublishDetails",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "GetCognitoEvents",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "GetIdentityPoolConfiguration",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "ListDatasets",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "ListIdentityPoolUsage",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "ListRecords",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "QueryRecords"
+    },
+    {
+      "Name": "RegisterDevice",
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "SetCognitoEvents",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "SetDatasetConfiguration",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "SetIdentityPoolConfiguration",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "SubscribeToDataset",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "UnsubscribeFromDataset",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRecords",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "dataset",
+      "ARNFormats": [
+        "arn:${Partition}:cognito-sync:${Region}:${Account}:identitypool/${IdentityPoolId}/identity/${IdentityId}/dataset/${DatasetName}"
+      ]
+    },
+    {
+      "Name": "identity",
+      "ARNFormats": [
+        "arn:${Partition}:cognito-sync:${Region}:${Account}:identitypool/${IdentityPoolId}/identity/${IdentityId}"
+      ]
+    },
+    {
+      "Name": "identitypool",
+      "ARNFormats": [
+        "arn:${Partition}:cognito-sync:${Region}:${Account}:identitypool/${IdentityPoolId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

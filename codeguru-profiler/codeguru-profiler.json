@@ -1,0 +1,217 @@
+{
+  "Name": "codeguru-profiler",
+  "Actions": [
+    {
+      "Name": "AddNotificationChannels",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetFrameMetricData",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "ConfigureAgent",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "CreateProfilingGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteProfilingGroup",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeProfilingGroup",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetFindingsReportAccountSummary"
+    },
+    {
+      "Name": "GetNotificationConfiguration",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetPolicy",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetProfile",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetRecommendations",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "ListFindingsReports",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "ListProfileTimes",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "ListProfilingGroups"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "PostAgentProfile",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "PutPermission",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveNotificationChannel",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "RemovePermission",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "SubmitFeedback",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProfilingGroup",
+      "Resources": [
+        {
+          "Name": "ProfilingGroup"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "ProfilingGroup",
+      "ARNFormats": [
+        "arn:${Partition}:codeguru-profiler:${Region}:${Account}:profilingGroup/${ProfilingGroupName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

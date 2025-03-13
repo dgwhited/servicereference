@@ -1,0 +1,106 @@
+{
+  "Name": "license-manager-linux-subscriptions",
+  "Actions": [
+    {
+      "Name": "DeregisterSubscriptionProvider",
+      "Resources": [
+        {
+          "Name": "subscription-provider"
+        }
+      ]
+    },
+    {
+      "Name": "GetRegisteredSubscriptionProvider",
+      "Resources": [
+        {
+          "Name": "subscription-provider"
+        }
+      ]
+    },
+    {
+      "Name": "GetServiceSettings"
+    },
+    {
+      "Name": "ListLinuxSubscriptionInstances"
+    },
+    {
+      "Name": "ListLinuxSubscriptions"
+    },
+    {
+      "Name": "ListRegisteredSubscriptionProviders"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "subscription-provider"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterSubscriptionProvider",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "subscription-provider"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "subscription-provider"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServiceSettings"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "subscription-provider",
+      "ARNFormats": [
+        "arn:${Partition}:license-manager-linux-subscriptions:${Region}:${Account}:subscription-provider/${SubscriptionProviderId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

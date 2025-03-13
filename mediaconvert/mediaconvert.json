@@ -1,0 +1,327 @@
+{
+  "Name": "mediaconvert",
+  "Actions": [
+    {
+      "Name": "AssociateCertificate"
+    },
+    {
+      "Name": "CancelJob",
+      "Resources": [
+        {
+          "Name": "Job"
+        }
+      ]
+    },
+    {
+      "Name": "CreateJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "mediaconvert:HttpInputsAllowed",
+        "mediaconvert:HttpsInputsAllowed",
+        "mediaconvert:S3InputsAllowed"
+      ],
+      "Resources": [
+        {
+          "Name": "JobTemplate"
+        },
+        {
+          "Name": "Preset"
+        },
+        {
+          "Name": "Queue"
+        }
+      ]
+    },
+    {
+      "Name": "CreateJobTemplate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Preset"
+        },
+        {
+          "Name": "Queue"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePreset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateQueue",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteJobTemplate",
+      "Resources": [
+        {
+          "Name": "JobTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePolicy"
+    },
+    {
+      "Name": "DeletePreset",
+      "Resources": [
+        {
+          "Name": "Preset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteQueue",
+      "Resources": [
+        {
+          "Name": "Queue"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEndpoints"
+    },
+    {
+      "Name": "DisassociateCertificate"
+    },
+    {
+      "Name": "GetJob",
+      "Resources": [
+        {
+          "Name": "Job"
+        }
+      ]
+    },
+    {
+      "Name": "GetJobTemplate",
+      "Resources": [
+        {
+          "Name": "JobTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "GetPolicy"
+    },
+    {
+      "Name": "GetPreset",
+      "Resources": [
+        {
+          "Name": "Preset"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueue",
+      "Resources": [
+        {
+          "Name": "Queue"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobTemplates"
+    },
+    {
+      "Name": "ListJobs",
+      "Resources": [
+        {
+          "Name": "Queue"
+        }
+      ]
+    },
+    {
+      "Name": "ListPresets"
+    },
+    {
+      "Name": "ListQueues"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "JobTemplate"
+        },
+        {
+          "Name": "Preset"
+        },
+        {
+          "Name": "Queue"
+        }
+      ]
+    },
+    {
+      "Name": "ListVersions"
+    },
+    {
+      "Name": "PutPolicy"
+    },
+    {
+      "Name": "SearchJobs",
+      "Resources": [
+        {
+          "Name": "Queue"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "JobTemplate"
+        },
+        {
+          "Name": "Preset"
+        },
+        {
+          "Name": "Queue"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "JobTemplate"
+        },
+        {
+          "Name": "Preset"
+        },
+        {
+          "Name": "Queue"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateJobTemplate",
+      "Resources": [
+        {
+          "Name": "JobTemplate"
+        },
+        {
+          "Name": "Preset"
+        },
+        {
+          "Name": "Queue"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePreset",
+      "Resources": [
+        {
+          "Name": "Preset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateQueue",
+      "Resources": [
+        {
+          "Name": "Queue"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "mediaconvert:HttpInputsAllowed",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
+      "Name": "mediaconvert:HttpsInputsAllowed",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
+      "Name": "mediaconvert:S3InputsAllowed",
+      "Types": [
+        "Bool"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "CertificateAssociation",
+      "ARNFormats": [
+        "arn:${Partition}:mediaconvert:${Region}:${Account}:certificates/${CertificateArn}"
+      ]
+    },
+    {
+      "Name": "Job",
+      "ARNFormats": [
+        "arn:${Partition}:mediaconvert:${Region}:${Account}:jobs/${JobId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "JobTemplate",
+      "ARNFormats": [
+        "arn:${Partition}:mediaconvert:${Region}:${Account}:jobTemplates/${JobTemplateName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Preset",
+      "ARNFormats": [
+        "arn:${Partition}:mediaconvert:${Region}:${Account}:presets/${PresetName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Queue",
+      "ARNFormats": [
+        "arn:${Partition}:mediaconvert:${Region}:${Account}:queues/${QueueName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,378 @@
+{
+  "Name": "controltower",
+  "Actions": [
+    {
+      "Name": "CreateLandingZone",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateManagedAccount"
+    },
+    {
+      "Name": "DeleteLandingZone",
+      "Resources": [
+        {
+          "Name": "LandingZone"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterManagedAccount"
+    },
+    {
+      "Name": "DeregisterOrganizationalUnit"
+    },
+    {
+      "Name": "DescribeAccountFactoryConfig"
+    },
+    {
+      "Name": "DescribeCoreService"
+    },
+    {
+      "Name": "DescribeGuardrail"
+    },
+    {
+      "Name": "DescribeGuardrailForTarget"
+    },
+    {
+      "Name": "DescribeLandingZoneConfiguration"
+    },
+    {
+      "Name": "DescribeManagedAccount"
+    },
+    {
+      "Name": "DescribeManagedOrganizationalUnit"
+    },
+    {
+      "Name": "DescribeRegisterOrganizationalUnitOperation"
+    },
+    {
+      "Name": "DescribeSingleSignOn"
+    },
+    {
+      "Name": "DisableBaseline",
+      "Resources": [
+        {
+          "Name": "EnabledBaseline"
+        }
+      ]
+    },
+    {
+      "Name": "DisableControl",
+      "Resources": [
+        {
+          "Name": "EnabledControl"
+        }
+      ]
+    },
+    {
+      "Name": "DisableGuardrail"
+    },
+    {
+      "Name": "EnableBaseline",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "EnableControl",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "EnabledControl"
+        }
+      ]
+    },
+    {
+      "Name": "EnableGuardrail"
+    },
+    {
+      "Name": "GetAccountInfo"
+    },
+    {
+      "Name": "GetAvailableUpdates"
+    },
+    {
+      "Name": "GetBaseline",
+      "Resources": [
+        {
+          "Name": "Baseline"
+        }
+      ]
+    },
+    {
+      "Name": "GetBaselineOperation"
+    },
+    {
+      "Name": "GetControlOperation"
+    },
+    {
+      "Name": "GetEnabledBaseline",
+      "Resources": [
+        {
+          "Name": "EnabledBaseline"
+        }
+      ]
+    },
+    {
+      "Name": "GetEnabledControl",
+      "Resources": [
+        {
+          "Name": "EnabledControl"
+        }
+      ]
+    },
+    {
+      "Name": "GetGuardrailComplianceStatus"
+    },
+    {
+      "Name": "GetHomeRegion"
+    },
+    {
+      "Name": "GetLandingZone",
+      "Resources": [
+        {
+          "Name": "LandingZone"
+        }
+      ]
+    },
+    {
+      "Name": "GetLandingZoneDriftStatus"
+    },
+    {
+      "Name": "GetLandingZoneOperation"
+    },
+    {
+      "Name": "GetLandingZoneStatus"
+    },
+    {
+      "Name": "ListBaselines"
+    },
+    {
+      "Name": "ListControlOperations"
+    },
+    {
+      "Name": "ListDirectoryGroups"
+    },
+    {
+      "Name": "ListDriftDetails"
+    },
+    {
+      "Name": "ListEnabledBaselines"
+    },
+    {
+      "Name": "ListEnabledControls"
+    },
+    {
+      "Name": "ListEnabledGuardrails"
+    },
+    {
+      "Name": "ListExtendGovernancePrecheckDetails"
+    },
+    {
+      "Name": "ListExternalConfigRuleCompliance"
+    },
+    {
+      "Name": "ListGuardrailViolations"
+    },
+    {
+      "Name": "ListGuardrails"
+    },
+    {
+      "Name": "ListGuardrailsForTarget"
+    },
+    {
+      "Name": "ListLandingZoneOperations"
+    },
+    {
+      "Name": "ListLandingZones"
+    },
+    {
+      "Name": "ListManagedAccounts"
+    },
+    {
+      "Name": "ListManagedAccountsForGuardrail"
+    },
+    {
+      "Name": "ListManagedAccountsForParent"
+    },
+    {
+      "Name": "ListManagedOrganizationalUnits"
+    },
+    {
+      "Name": "ListManagedOrganizationalUnitsForGuardrail"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "EnabledBaseline"
+        },
+        {
+          "Name": "EnabledControl"
+        },
+        {
+          "Name": "LandingZone"
+        }
+      ]
+    },
+    {
+      "Name": "ManageOrganizationalUnit"
+    },
+    {
+      "Name": "PerformPreLaunchChecks"
+    },
+    {
+      "Name": "ResetEnabledBaseline",
+      "Resources": [
+        {
+          "Name": "EnabledBaseline"
+        }
+      ]
+    },
+    {
+      "Name": "ResetEnabledControl",
+      "Resources": [
+        {
+          "Name": "EnabledControl"
+        }
+      ]
+    },
+    {
+      "Name": "ResetLandingZone",
+      "Resources": [
+        {
+          "Name": "LandingZone"
+        }
+      ]
+    },
+    {
+      "Name": "SetupLandingZone"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "EnabledBaseline"
+        },
+        {
+          "Name": "EnabledControl"
+        },
+        {
+          "Name": "LandingZone"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "EnabledBaseline"
+        },
+        {
+          "Name": "EnabledControl"
+        },
+        {
+          "Name": "LandingZone"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAccountFactoryConfig"
+    },
+    {
+      "Name": "UpdateEnabledBaseline",
+      "Resources": [
+        {
+          "Name": "EnabledBaseline"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEnabledControl",
+      "Resources": [
+        {
+          "Name": "EnabledControl"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLandingZone",
+      "Resources": [
+        {
+          "Name": "LandingZone"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Baseline",
+      "ARNFormats": [
+        "arn:${Partition}:controltower:${Region}::baseline/${BaselineId}"
+      ]
+    },
+    {
+      "Name": "EnabledBaseline",
+      "ARNFormats": [
+        "arn:${Partition}:controltower:${Region}:${Account}:enabledbaseline/${EnabledBaselineId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "EnabledControl",
+      "ARNFormats": [
+        "arn:${Partition}:controltower:${Region}:${Account}:enabledcontrol/${EnabledControlId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "LandingZone",
+      "ARNFormats": [
+        "arn:${Partition}:controltower:${Region}:${Account}:landingzone/${LandingZoneId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

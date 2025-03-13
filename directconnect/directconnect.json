@@ -1,0 +1,652 @@
+{
+  "Name": "directconnect",
+  "Actions": [
+    {
+      "Name": "AcceptDirectConnectGatewayAssociationProposal",
+      "Resources": [
+        {
+          "Name": "dx-gateway"
+        }
+      ]
+    },
+    {
+      "Name": "AllocateConnectionOnInterconnect",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        }
+      ]
+    },
+    {
+      "Name": "AllocateHostedConnection",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "AllocatePrivateVirtualInterface",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "AllocatePublicVirtualInterface",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "AllocateTransitVirtualInterface",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateConnectionWithLag",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateHostedConnection",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateMacSecKey",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateVirtualInterface",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        },
+        {
+          "Name": "dxvif"
+        }
+      ]
+    },
+    {
+      "Name": "ConfirmConnection",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        }
+      ]
+    },
+    {
+      "Name": "ConfirmCustomerAgreement"
+    },
+    {
+      "Name": "ConfirmPrivateVirtualInterface",
+      "Resources": [
+        {
+          "Name": "dxvif"
+        }
+      ]
+    },
+    {
+      "Name": "ConfirmPublicVirtualInterface",
+      "Resources": [
+        {
+          "Name": "dxvif"
+        }
+      ]
+    },
+    {
+      "Name": "ConfirmTransitVirtualInterface",
+      "Resources": [
+        {
+          "Name": "dxvif"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBGPPeer",
+      "Resources": [
+        {
+          "Name": "dxvif"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConnection",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDirectConnectGateway"
+    },
+    {
+      "Name": "CreateDirectConnectGatewayAssociation",
+      "Resources": [
+        {
+          "Name": "dx-gateway"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDirectConnectGatewayAssociationProposal",
+      "Resources": [
+        {
+          "Name": "dx-gateway"
+        }
+      ]
+    },
+    {
+      "Name": "CreateInterconnect",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLag",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dxcon"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePrivateVirtualInterface",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePublicVirtualInterface",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTransitVirtualInterface",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBGPPeer",
+      "Resources": [
+        {
+          "Name": "dxvif"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConnection",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDirectConnectGateway",
+      "Resources": [
+        {
+          "Name": "dx-gateway"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDirectConnectGatewayAssociation",
+      "Resources": [
+        {
+          "Name": "dx-gateway"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDirectConnectGatewayAssociationProposal"
+    },
+    {
+      "Name": "DeleteInterconnect",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLag",
+      "Resources": [
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteVirtualInterface",
+      "Resources": [
+        {
+          "Name": "dxvif"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeConnectionLoa",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeConnections",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeConnectionsOnInterconnect",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCustomerMetadata"
+    },
+    {
+      "Name": "DescribeDirectConnectGatewayAssociationProposals",
+      "Resources": [
+        {
+          "Name": "dx-gateway"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDirectConnectGatewayAssociations",
+      "Resources": [
+        {
+          "Name": "dx-gateway"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDirectConnectGatewayAttachments",
+      "Resources": [
+        {
+          "Name": "dx-gateway"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDirectConnectGateways",
+      "Resources": [
+        {
+          "Name": "dx-gateway"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeHostedConnections",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeInterconnectLoa",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeInterconnects",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeLags",
+      "Resources": [
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeLoa",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeLocations"
+    },
+    {
+      "Name": "DescribeRouterConfiguration",
+      "Resources": [
+        {
+          "Name": "dxvif"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTags",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        },
+        {
+          "Name": "dxvif"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeVirtualGateways"
+    },
+    {
+      "Name": "DescribeVirtualInterfaces",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        },
+        {
+          "Name": "dxvif"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateConnectionFromLag",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateMacSecKey",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "ListVirtualInterfaceTestHistory",
+      "Resources": [
+        {
+          "Name": "dxvif"
+        }
+      ]
+    },
+    {
+      "Name": "StartBgpFailoverTest",
+      "Resources": [
+        {
+          "Name": "dxvif"
+        }
+      ]
+    },
+    {
+      "Name": "StopBgpFailoverTest",
+      "Resources": [
+        {
+          "Name": "dxvif"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        },
+        {
+          "Name": "dxvif"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dxcon"
+        },
+        {
+          "Name": "dxlag"
+        },
+        {
+          "Name": "dxvif"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConnection",
+      "Resources": [
+        {
+          "Name": "dxcon"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDirectConnectGateway",
+      "Resources": [
+        {
+          "Name": "dx-gateway"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDirectConnectGatewayAssociation"
+    },
+    {
+      "Name": "UpdateLag",
+      "Resources": [
+        {
+          "Name": "dxlag"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateVirtualInterfaceAttributes",
+      "Resources": [
+        {
+          "Name": "dxvif"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "dx-gateway",
+      "ARNFormats": [
+        "arn:${Partition}:directconnect::${Account}:dx-gateway/${DirectConnectGatewayId}"
+      ]
+    },
+    {
+      "Name": "dxcon",
+      "ARNFormats": [
+        "arn:${Partition}:directconnect:${Region}:${Account}:dxcon/${ConnectionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "dxlag",
+      "ARNFormats": [
+        "arn:${Partition}:directconnect:${Region}:${Account}:dxlag/${LagId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "dxvif",
+      "ARNFormats": [
+        "arn:${Partition}:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

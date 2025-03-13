@@ -1,0 +1,355 @@
+{
+  "Name": "license-manager",
+  "Actions": [
+    {
+      "Name": "AcceptGrant",
+      "Resources": [
+        {
+          "Name": "grant"
+        }
+      ]
+    },
+    {
+      "Name": "CheckInLicense"
+    },
+    {
+      "Name": "CheckoutBorrowLicense",
+      "Resources": [
+        {
+          "Name": "license"
+        }
+      ]
+    },
+    {
+      "Name": "CheckoutLicense"
+    },
+    {
+      "Name": "CreateGrant",
+      "Resources": [
+        {
+          "Name": "license"
+        }
+      ]
+    },
+    {
+      "Name": "CreateGrantVersion",
+      "Resources": [
+        {
+          "Name": "grant"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLicense"
+    },
+    {
+      "Name": "CreateLicenseConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateLicenseConversionTaskForResource"
+    },
+    {
+      "Name": "CreateLicenseManagerReportGenerator",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateLicenseVersion",
+      "Resources": [
+        {
+          "Name": "license"
+        }
+      ]
+    },
+    {
+      "Name": "CreateToken",
+      "Resources": [
+        {
+          "Name": "license"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGrant",
+      "Resources": [
+        {
+          "Name": "grant"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLicense",
+      "Resources": [
+        {
+          "Name": "license"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLicenseConfiguration",
+      "Resources": [
+        {
+          "Name": "license-configuration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLicenseManagerReportGenerator",
+      "Resources": [
+        {
+          "Name": "report-generator"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteToken"
+    },
+    {
+      "Name": "ExtendLicenseConsumption"
+    },
+    {
+      "Name": "GetAccessToken"
+    },
+    {
+      "Name": "GetGrant",
+      "Resources": [
+        {
+          "Name": "grant"
+        }
+      ]
+    },
+    {
+      "Name": "GetLicense",
+      "Resources": [
+        {
+          "Name": "license"
+        }
+      ]
+    },
+    {
+      "Name": "GetLicenseConfiguration",
+      "Resources": [
+        {
+          "Name": "license-configuration"
+        }
+      ]
+    },
+    {
+      "Name": "GetLicenseConversionTask"
+    },
+    {
+      "Name": "GetLicenseManagerReportGenerator",
+      "Resources": [
+        {
+          "Name": "report-generator"
+        }
+      ]
+    },
+    {
+      "Name": "GetLicenseUsage",
+      "Resources": [
+        {
+          "Name": "license"
+        }
+      ]
+    },
+    {
+      "Name": "GetServiceSettings"
+    },
+    {
+      "Name": "ListAssociationsForLicenseConfiguration",
+      "Resources": [
+        {
+          "Name": "license-configuration"
+        }
+      ]
+    },
+    {
+      "Name": "ListDistributedGrants"
+    },
+    {
+      "Name": "ListFailuresForLicenseConfigurationOperations",
+      "Resources": [
+        {
+          "Name": "license-configuration"
+        }
+      ]
+    },
+    {
+      "Name": "ListLicenseConfigurations"
+    },
+    {
+      "Name": "ListLicenseConversionTasks"
+    },
+    {
+      "Name": "ListLicenseManagerReportGenerators",
+      "Resources": [
+        {
+          "Name": "license-configuration"
+        }
+      ]
+    },
+    {
+      "Name": "ListLicenseSpecificationsForResource"
+    },
+    {
+      "Name": "ListLicenseVersions",
+      "Resources": [
+        {
+          "Name": "license"
+        }
+      ]
+    },
+    {
+      "Name": "ListLicenses"
+    },
+    {
+      "Name": "ListReceivedGrants"
+    },
+    {
+      "Name": "ListReceivedGrantsForOrganization"
+    },
+    {
+      "Name": "ListReceivedLicenses"
+    },
+    {
+      "Name": "ListReceivedLicensesForOrganization"
+    },
+    {
+      "Name": "ListResourceInventory"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "license-configuration"
+        }
+      ]
+    },
+    {
+      "Name": "ListTokens"
+    },
+    {
+      "Name": "ListUsageForLicenseConfiguration",
+      "Resources": [
+        {
+          "Name": "license-configuration"
+        }
+      ]
+    },
+    {
+      "Name": "RejectGrant",
+      "Resources": [
+        {
+          "Name": "grant"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "license-configuration"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "Resources": [
+        {
+          "Name": "license-configuration"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLicenseConfiguration",
+      "Resources": [
+        {
+          "Name": "license-configuration"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLicenseManagerReportGenerator",
+      "Resources": [
+        {
+          "Name": "report-generator"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLicenseSpecificationsForResource",
+      "Resources": [
+        {
+          "Name": "license-configuration"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServiceSettings"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "license-manager:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "grant",
+      "ARNFormats": [
+        "arn:${Partition}:license-manager::${Account}:grant:${GrantId}"
+      ]
+    },
+    {
+      "Name": "license",
+      "ARNFormats": [
+        "arn:${Partition}:license-manager::${Account}:license:${LicenseId}"
+      ]
+    },
+    {
+      "Name": "license-configuration",
+      "ARNFormats": [
+        "arn:${Partition}:license-manager:${Region}:${Account}:license-configuration:${LicenseConfigurationId}"
+      ],
+      "ConditionKeys": [
+        "license-manager:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "report-generator",
+      "ARNFormats": [
+        "arn:${Partition}:license-manager:${Region}:${Account}:report-generator:${ReportGeneratorId}"
+      ],
+      "ConditionKeys": [
+        "license-manager:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

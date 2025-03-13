@@ -1,0 +1,258 @@
+{
+  "Name": "aoss",
+  "Actions": [
+    {
+      "Name": "APIAccessAll",
+      "ActionConditionKeys": [
+        "aoss:CollectionId",
+        "aoss:collection"
+      ],
+      "Resources": [
+        {
+          "Name": "Collection"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetCollection"
+    },
+    {
+      "Name": "BatchGetEffectiveLifecyclePolicy"
+    },
+    {
+      "Name": "BatchGetLifecyclePolicy"
+    },
+    {
+      "Name": "BatchGetVpcEndpoint"
+    },
+    {
+      "Name": "CreateAccessPolicy",
+      "ActionConditionKeys": [
+        "aoss:collection",
+        "aoss:index"
+      ]
+    },
+    {
+      "Name": "CreateCollection",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateLifecyclePolicy",
+      "ActionConditionKeys": [
+        "aoss:collection",
+        "aoss:index"
+      ]
+    },
+    {
+      "Name": "CreateSecurityConfig"
+    },
+    {
+      "Name": "CreateSecurityPolicy",
+      "ActionConditionKeys": [
+        "aoss:collection"
+      ]
+    },
+    {
+      "Name": "CreateVpcEndpoint"
+    },
+    {
+      "Name": "DashboardsAccessAll",
+      "ActionConditionKeys": [
+        "aoss:CollectionId",
+        "aoss:collection"
+      ],
+      "Resources": [
+        {
+          "Name": "Dashboards"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAccessPolicy",
+      "ActionConditionKeys": [
+        "aoss:collection",
+        "aoss:index"
+      ]
+    },
+    {
+      "Name": "DeleteCollection",
+      "Resources": [
+        {
+          "Name": "Collection"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLifecyclePolicy",
+      "ActionConditionKeys": [
+        "aoss:collection",
+        "aoss:index"
+      ]
+    },
+    {
+      "Name": "DeleteSecurityConfig"
+    },
+    {
+      "Name": "DeleteSecurityPolicy",
+      "ActionConditionKeys": [
+        "aoss:collection"
+      ]
+    },
+    {
+      "Name": "DeleteVpcEndpoint"
+    },
+    {
+      "Name": "GetAccessPolicy",
+      "ActionConditionKeys": [
+        "aoss:collection",
+        "aoss:index"
+      ]
+    },
+    {
+      "Name": "GetAccountSettings"
+    },
+    {
+      "Name": "GetPoliciesStats"
+    },
+    {
+      "Name": "GetSecurityConfig"
+    },
+    {
+      "Name": "GetSecurityPolicy",
+      "ActionConditionKeys": [
+        "aoss:collection"
+      ]
+    },
+    {
+      "Name": "ListAccessPolicies"
+    },
+    {
+      "Name": "ListCollections"
+    },
+    {
+      "Name": "ListLifecyclePolicies"
+    },
+    {
+      "Name": "ListSecurityConfigs"
+    },
+    {
+      "Name": "ListSecurityPolicies"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "ListVpcEndpoints"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "UpdateAccessPolicy",
+      "ActionConditionKeys": [
+        "aoss:collection",
+        "aoss:index"
+      ]
+    },
+    {
+      "Name": "UpdateAccountSettings"
+    },
+    {
+      "Name": "UpdateCollection",
+      "Resources": [
+        {
+          "Name": "Collection"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLifecyclePolicy",
+      "ActionConditionKeys": [
+        "aoss:collection",
+        "aoss:index"
+      ]
+    },
+    {
+      "Name": "UpdateSecurityConfig"
+    },
+    {
+      "Name": "UpdateSecurityPolicy",
+      "ActionConditionKeys": [
+        "aoss:collection"
+      ]
+    },
+    {
+      "Name": "UpdateVpcEndpoint"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aoss:CollectionId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aoss:collection",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aoss:index",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Collection",
+      "ARNFormats": [
+        "arn:${Partition}:aoss:${Region}:${Account}:collection/${CollectionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Dashboards",
+      "ARNFormats": [
+        "arn:${Partition}:aoss:${Region}:${Account}:dashboards/default"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,315 @@
+{
+  "Name": "inspector2",
+  "Actions": [
+    {
+      "Name": "AssociateMember"
+    },
+    {
+      "Name": "BatchGetAccountStatus"
+    },
+    {
+      "Name": "BatchGetCodeSnippet"
+    },
+    {
+      "Name": "BatchGetFindingDetails"
+    },
+    {
+      "Name": "BatchGetFreeTrialInfo"
+    },
+    {
+      "Name": "BatchGetMemberEc2DeepInspectionStatus"
+    },
+    {
+      "Name": "BatchUpdateMemberEc2DeepInspectionStatus"
+    },
+    {
+      "Name": "CancelFindingsReport"
+    },
+    {
+      "Name": "CancelSbomExport"
+    },
+    {
+      "Name": "CreateCisScanConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "CIS Scan Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFilter",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Filter"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFindingsReport"
+    },
+    {
+      "Name": "CreateSbomExport"
+    },
+    {
+      "Name": "DeleteCisScanConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "CIS Scan Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFilter",
+      "Resources": [
+        {
+          "Name": "Filter"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeOrganizationConfiguration"
+    },
+    {
+      "Name": "Disable"
+    },
+    {
+      "Name": "DisableDelegatedAdminAccount"
+    },
+    {
+      "Name": "DisassociateMember"
+    },
+    {
+      "Name": "Enable"
+    },
+    {
+      "Name": "EnableDelegatedAdminAccount"
+    },
+    {
+      "Name": "GetCisScanReport"
+    },
+    {
+      "Name": "GetCisScanResultDetails"
+    },
+    {
+      "Name": "GetConfiguration"
+    },
+    {
+      "Name": "GetDelegatedAdminAccount"
+    },
+    {
+      "Name": "GetEc2DeepInspectionConfiguration"
+    },
+    {
+      "Name": "GetEncryptionKey"
+    },
+    {
+      "Name": "GetFindingsReportStatus"
+    },
+    {
+      "Name": "GetMember"
+    },
+    {
+      "Name": "GetSbomExport"
+    },
+    {
+      "Name": "ListAccountPermissions"
+    },
+    {
+      "Name": "ListCisScanConfigurations"
+    },
+    {
+      "Name": "ListCisScanResultsAggregatedByChecks"
+    },
+    {
+      "Name": "ListCisScanResultsAggregatedByTargetResource"
+    },
+    {
+      "Name": "ListCisScans"
+    },
+    {
+      "Name": "ListCoverage"
+    },
+    {
+      "Name": "ListCoverageStatistics"
+    },
+    {
+      "Name": "ListDelegatedAdminAccounts"
+    },
+    {
+      "Name": "ListFilters"
+    },
+    {
+      "Name": "ListFindingAggregations"
+    },
+    {
+      "Name": "ListFindings"
+    },
+    {
+      "Name": "ListMembers"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "ListUsageTotals"
+    },
+    {
+      "Name": "ResetEncryptionKey"
+    },
+    {
+      "Name": "SearchVulnerabilities"
+    },
+    {
+      "Name": "SendCisSessionHealth"
+    },
+    {
+      "Name": "SendCisSessionTelemetry"
+    },
+    {
+      "Name": "StartCisSession"
+    },
+    {
+      "Name": "StopCisSession"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "CIS Scan Configuration",
+          "ConditionKeys": [
+            "inspector2:Cis Scan Configuration"
+          ]
+        },
+        {
+          "Name": "Filter",
+          "ConditionKeys": [
+            "inspector2:Filter"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "CIS Scan Configuration",
+          "ConditionKeys": [
+            "inspector2:Cis Scan Configuration"
+          ]
+        },
+        {
+          "Name": "Filter",
+          "ConditionKeys": [
+            "inspector2:Filter"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCisScanConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "CIS Scan Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConfiguration"
+    },
+    {
+      "Name": "UpdateEc2DeepInspectionConfiguration"
+    },
+    {
+      "Name": "UpdateEncryptionKey"
+    },
+    {
+      "Name": "UpdateFilter",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Filter"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateOrgEc2DeepInspectionConfiguration"
+    },
+    {
+      "Name": "UpdateOrganizationConfiguration"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "CIS Scan Configuration",
+      "ARNFormats": [
+        "arn:${Partition}:inspector2:${Region}:${Account}:owner/${OwnerId}/cis-configuration/${CISScanConfigurationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Filter",
+      "ARNFormats": [
+        "arn:${Partition}:inspector2:${Region}:${Account}:owner/${OwnerId}/filter/${FilterId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Finding",
+      "ARNFormats": [
+        "arn:${Partition}:inspector2:${Region}:${Account}:finding/${FindingId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

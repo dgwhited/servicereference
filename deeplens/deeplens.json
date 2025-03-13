@@ -1,0 +1,161 @@
+{
+  "Name": "deeplens",
+  "Actions": [
+    {
+      "Name": "AssociateServiceRoleToAccount"
+    },
+    {
+      "Name": "BatchGetDevice",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetModel",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDeviceCertificates"
+    },
+    {
+      "Name": "CreateModel"
+    },
+    {
+      "Name": "CreateProject"
+    },
+    {
+      "Name": "DeleteModel",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DeployProject",
+      "Resources": [
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterDevice",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "GetAssociatedResources"
+    },
+    {
+      "Name": "GetDeploymentStatus"
+    },
+    {
+      "Name": "GetDevice",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "GetModel",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "GetProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "ImportProjectFromTemplate"
+    },
+    {
+      "Name": "ListDeployments"
+    },
+    {
+      "Name": "ListDevices"
+    },
+    {
+      "Name": "ListModels"
+    },
+    {
+      "Name": "ListProjects"
+    },
+    {
+      "Name": "RegisterDevice"
+    },
+    {
+      "Name": "RemoveProject",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "device",
+      "ARNFormats": [
+        "arn:${Partition}:deeplens:${Region}:${Account}:device/${DeviceName}"
+      ]
+    },
+    {
+      "Name": "model",
+      "ARNFormats": [
+        "arn:${Partition}:deeplens:${Region}:${Account}:model/${ModelName}"
+      ]
+    },
+    {
+      "Name": "project",
+      "ARNFormats": [
+        "arn:${Partition}:deeplens:${Region}:${Account}:project/${ProjectName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,1013 @@
+{
+  "Name": "sso",
+  "Actions": [
+    {
+      "Name": "AssociateDirectory"
+    },
+    {
+      "Name": "AssociateProfile"
+    },
+    {
+      "Name": "AttachCustomerManagedPolicyReferenceToPermissionSet",
+      "Resources": [
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "AttachManagedPolicyToPermissionSet",
+      "Resources": [
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAccountAssignment",
+      "Resources": [
+        {
+          "Name": "Account"
+        },
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "CreateApplication",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ApplicationProvider"
+        },
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "CreateApplicationAssignment",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "CreateApplicationInstance"
+    },
+    {
+      "Name": "CreateApplicationInstanceCertificate"
+    },
+    {
+      "Name": "CreateInstance",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "CreateInstanceAccessControlAttributeConfiguration",
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "CreateManagedApplicationInstance"
+    },
+    {
+      "Name": "CreatePermissionSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "CreateProfile"
+    },
+    {
+      "Name": "CreateTrust"
+    },
+    {
+      "Name": "CreateTrustedTokenIssuer",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAccountAssignment",
+      "Resources": [
+        {
+          "Name": "Account"
+        },
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApplication",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApplicationAccessScope",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApplicationAssignment",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApplicationAuthenticationMethod",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApplicationGrant",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApplicationInstance"
+    },
+    {
+      "Name": "DeleteApplicationInstanceCertificate"
+    },
+    {
+      "Name": "DeleteInlinePolicyFromPermissionSet",
+      "Resources": [
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInstance",
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInstanceAccessControlAttributeConfiguration",
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteManagedApplicationInstance"
+    },
+    {
+      "Name": "DeletePermissionSet",
+      "Resources": [
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePermissionsBoundaryFromPermissionSet",
+      "Resources": [
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePermissionsPolicy"
+    },
+    {
+      "Name": "DeleteProfile"
+    },
+    {
+      "Name": "DeleteTrustedTokenIssuer",
+      "Resources": [
+        {
+          "Name": "TrustedTokenIssuer"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAccountAssignmentCreationStatus",
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAccountAssignmentDeletionStatus",
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeApplication",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeApplicationAssignment",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeApplicationProvider",
+      "Resources": [
+        {
+          "Name": "ApplicationProvider"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDirectories"
+    },
+    {
+      "Name": "DescribeInstance",
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeInstanceAccessControlAttributeConfiguration",
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePermissionSet",
+      "Resources": [
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePermissionSetProvisioningStatus",
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePermissionsPolicies"
+    },
+    {
+      "Name": "DescribeRegisteredRegions"
+    },
+    {
+      "Name": "DescribeTrustedTokenIssuer",
+      "Resources": [
+        {
+          "Name": "TrustedTokenIssuer"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTrusts"
+    },
+    {
+      "Name": "DetachCustomerManagedPolicyReferenceFromPermissionSet",
+      "Resources": [
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "DetachManagedPolicyFromPermissionSet",
+      "Resources": [
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateDirectory"
+    },
+    {
+      "Name": "DisassociateProfile"
+    },
+    {
+      "Name": "GetApplicationAccessScope",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "GetApplicationAssignmentConfiguration",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "GetApplicationAuthenticationMethod",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "GetApplicationGrant",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "GetApplicationInstance"
+    },
+    {
+      "Name": "GetApplicationTemplate"
+    },
+    {
+      "Name": "GetInlinePolicyForPermissionSet",
+      "Resources": [
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "GetManagedApplicationInstance"
+    },
+    {
+      "Name": "GetMfaDeviceManagementForDirectory"
+    },
+    {
+      "Name": "GetPermissionSet"
+    },
+    {
+      "Name": "GetPermissionsBoundaryForPermissionSet",
+      "Resources": [
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "GetPermissionsPolicy"
+    },
+    {
+      "Name": "GetProfile"
+    },
+    {
+      "Name": "GetSSOStatus"
+    },
+    {
+      "Name": "GetSharedSsoConfiguration"
+    },
+    {
+      "Name": "GetSsoConfiguration"
+    },
+    {
+      "Name": "GetTrust"
+    },
+    {
+      "Name": "ImportApplicationInstanceServiceProviderMetadata"
+    },
+    {
+      "Name": "ListAccountAssignmentCreationStatus",
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "ListAccountAssignmentDeletionStatus",
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "ListAccountAssignments",
+      "Resources": [
+        {
+          "Name": "Account"
+        },
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "ListAccountAssignmentsForPrincipal",
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "ListAccountsForProvisionedPermissionSet",
+      "Resources": [
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplicationAccessScopes",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplicationAssignments",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplicationAssignmentsForPrincipal",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplicationAuthenticationMethods",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplicationGrants",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplicationInstanceCertificates"
+    },
+    {
+      "Name": "ListApplicationInstances"
+    },
+    {
+      "Name": "ListApplicationProviders",
+      "Resources": [
+        {
+          "Name": "ApplicationProvider"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplicationTemplates"
+    },
+    {
+      "Name": "ListApplications"
+    },
+    {
+      "Name": "ListCustomerManagedPolicyReferencesInPermissionSet",
+      "Resources": [
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "ListDirectoryAssociations"
+    },
+    {
+      "Name": "ListInstances"
+    },
+    {
+      "Name": "ListManagedPoliciesInPermissionSet",
+      "Resources": [
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "ListPermissionSetProvisioningStatus",
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "ListPermissionSets",
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "ListPermissionSetsProvisionedToAccount",
+      "Resources": [
+        {
+          "Name": "Account"
+        },
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "ListProfileAssociations"
+    },
+    {
+      "Name": "ListProfiles"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "Application"
+        },
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        },
+        {
+          "Name": "TrustedTokenIssuer"
+        }
+      ]
+    },
+    {
+      "Name": "ListTrustedTokenIssuers",
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "ProvisionPermissionSet",
+      "Resources": [
+        {
+          "Name": "Account"
+        },
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "PutApplicationAccessScope",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "PutApplicationAssignmentConfiguration",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "PutApplicationAuthenticationMethod",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "PutApplicationGrant",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "PutInlinePolicyToPermissionSet",
+      "Resources": [
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "PutMfaDeviceManagementForDirectory"
+    },
+    {
+      "Name": "PutPermissionsBoundaryToPermissionSet",
+      "Resources": [
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "PutPermissionsPolicy"
+    },
+    {
+      "Name": "SearchGroups"
+    },
+    {
+      "Name": "SearchUsers"
+    },
+    {
+      "Name": "StartSSO"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        },
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        },
+        {
+          "Name": "TrustedTokenIssuer"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        },
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        },
+        {
+          "Name": "TrustedTokenIssuer"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateApplication",
+      "ActionConditionKeys": [
+        "sso:ApplicationAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateApplicationInstanceActiveCertificate"
+    },
+    {
+      "Name": "UpdateApplicationInstanceDisplayData"
+    },
+    {
+      "Name": "UpdateApplicationInstanceResponseConfiguration"
+    },
+    {
+      "Name": "UpdateApplicationInstanceResponseSchemaConfiguration"
+    },
+    {
+      "Name": "UpdateApplicationInstanceSecurityConfiguration"
+    },
+    {
+      "Name": "UpdateApplicationInstanceServiceProviderConfiguration"
+    },
+    {
+      "Name": "UpdateApplicationInstanceStatus"
+    },
+    {
+      "Name": "UpdateDirectoryAssociation"
+    },
+    {
+      "Name": "UpdateInstance",
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInstanceAccessControlAttributeConfiguration",
+      "Resources": [
+        {
+          "Name": "Instance"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateManagedApplicationInstanceStatus"
+    },
+    {
+      "Name": "UpdatePermissionSet",
+      "Resources": [
+        {
+          "Name": "Instance"
+        },
+        {
+          "Name": "PermissionSet"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProfile"
+    },
+    {
+      "Name": "UpdateSSOConfiguration"
+    },
+    {
+      "Name": "UpdateTrust"
+    },
+    {
+      "Name": "UpdateTrustedTokenIssuer",
+      "Resources": [
+        {
+          "Name": "TrustedTokenIssuer"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "sso:ApplicationAccount",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Account",
+      "ARNFormats": [
+        "arn:${Partition}:sso:::account/${AccountId}"
+      ]
+    },
+    {
+      "Name": "Application",
+      "ARNFormats": [
+        "arn:${Partition}:sso::${AccountId}:application/${InstanceId}/${ApplicationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sso:ApplicationAccount"
+      ]
+    },
+    {
+      "Name": "ApplicationProvider",
+      "ARNFormats": [
+        "arn:${Partition}:sso::aws:applicationProvider/${ApplicationProviderId}"
+      ]
+    },
+    {
+      "Name": "Instance",
+      "ARNFormats": [
+        "arn:${Partition}:sso:::instance/${InstanceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "PermissionSet",
+      "ARNFormats": [
+        "arn:${Partition}:sso:::permissionSet/${InstanceId}/${PermissionSetId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "TrustedTokenIssuer",
+      "ARNFormats": [
+        "arn:${Partition}:sso::${AccountId}:trustedTokenIssuer/${InstanceId}/${TrustedTokenIssuerId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

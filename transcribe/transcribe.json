@@ -1,0 +1,449 @@
+{
+  "Name": "transcribe",
+  "Actions": [
+    {
+      "Name": "CreateCallAnalyticsCategory",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateLanguageModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateMedicalVocabulary",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateVocabulary",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateVocabularyFilter",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteCallAnalyticsCategory",
+      "Resources": [
+        {
+          "Name": "callanalyticscategory"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCallAnalyticsJob",
+      "Resources": [
+        {
+          "Name": "callanalyticsjob"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLanguageModel",
+      "Resources": [
+        {
+          "Name": "languagemodel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMedicalScribeJob",
+      "Resources": [
+        {
+          "Name": "medicalscribejob"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMedicalTranscriptionJob",
+      "Resources": [
+        {
+          "Name": "medicaltranscriptionjob"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMedicalVocabulary",
+      "Resources": [
+        {
+          "Name": "medicalvocabulary"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTranscriptionJob",
+      "Resources": [
+        {
+          "Name": "transcriptionjob"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteVocabulary",
+      "Resources": [
+        {
+          "Name": "vocabulary"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteVocabularyFilter",
+      "Resources": [
+        {
+          "Name": "vocabularyfilter"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeLanguageModel",
+      "Resources": [
+        {
+          "Name": "languagemodel"
+        }
+      ]
+    },
+    {
+      "Name": "GetCallAnalyticsCategory",
+      "Resources": [
+        {
+          "Name": "callanalyticscategory"
+        }
+      ]
+    },
+    {
+      "Name": "GetCallAnalyticsJob",
+      "Resources": [
+        {
+          "Name": "callanalyticsjob"
+        }
+      ]
+    },
+    {
+      "Name": "GetMedicalScribeJob",
+      "Resources": [
+        {
+          "Name": "medicalscribejob"
+        }
+      ]
+    },
+    {
+      "Name": "GetMedicalScribeStream"
+    },
+    {
+      "Name": "GetMedicalTranscriptionJob",
+      "Resources": [
+        {
+          "Name": "medicaltranscriptionjob"
+        }
+      ]
+    },
+    {
+      "Name": "GetMedicalVocabulary",
+      "Resources": [
+        {
+          "Name": "medicalvocabulary"
+        }
+      ]
+    },
+    {
+      "Name": "GetTranscriptionJob",
+      "Resources": [
+        {
+          "Name": "transcriptionjob"
+        }
+      ]
+    },
+    {
+      "Name": "GetVocabulary",
+      "Resources": [
+        {
+          "Name": "vocabulary"
+        }
+      ]
+    },
+    {
+      "Name": "GetVocabularyFilter",
+      "Resources": [
+        {
+          "Name": "vocabularyfilter"
+        }
+      ]
+    },
+    {
+      "Name": "ListCallAnalyticsCategories"
+    },
+    {
+      "Name": "ListCallAnalyticsJobs"
+    },
+    {
+      "Name": "ListLanguageModels"
+    },
+    {
+      "Name": "ListMedicalScribeJobs"
+    },
+    {
+      "Name": "ListMedicalTranscriptionJobs"
+    },
+    {
+      "Name": "ListMedicalVocabularies"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "ListTranscriptionJobs"
+    },
+    {
+      "Name": "ListVocabularies"
+    },
+    {
+      "Name": "ListVocabularyFilters"
+    },
+    {
+      "Name": "StartCallAnalyticsJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "transcribe:OutputEncryptionKMSKeyId",
+        "transcribe:OutputLocation"
+      ]
+    },
+    {
+      "Name": "StartCallAnalyticsStreamTranscription"
+    },
+    {
+      "Name": "StartCallAnalyticsStreamTranscriptionWebSocket"
+    },
+    {
+      "Name": "StartMedicalScribeJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "transcribe:OutputBucketName",
+        "transcribe:OutputEncryptionKMSKeyId"
+      ]
+    },
+    {
+      "Name": "StartMedicalScribeStream"
+    },
+    {
+      "Name": "StartMedicalStreamTranscription"
+    },
+    {
+      "Name": "StartMedicalStreamTranscriptionWebSocket"
+    },
+    {
+      "Name": "StartMedicalTranscriptionJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "transcribe:OutputBucketName",
+        "transcribe:OutputEncryptionKMSKeyId",
+        "transcribe:OutputKey"
+      ]
+    },
+    {
+      "Name": "StartStreamTranscription"
+    },
+    {
+      "Name": "StartStreamTranscriptionWebSocket"
+    },
+    {
+      "Name": "StartTranscriptionJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "transcribe:OutputBucketName",
+        "transcribe:OutputEncryptionKMSKeyId",
+        "transcribe:OutputKey"
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "UpdateCallAnalyticsCategory",
+      "Resources": [
+        {
+          "Name": "callanalyticscategory"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMedicalVocabulary",
+      "Resources": [
+        {
+          "Name": "medicalvocabulary"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateVocabulary",
+      "Resources": [
+        {
+          "Name": "vocabulary"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateVocabularyFilter",
+      "Resources": [
+        {
+          "Name": "vocabularyfilter"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "transcribe:OutputBucketName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "transcribe:OutputEncryptionKMSKeyId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "transcribe:OutputKey",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "transcribe:OutputLocation",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "callanalyticscategory",
+      "ARNFormats": [
+        "arn:${Partition}:transcribe:${Region}:${Account}:analytics-category/${CategoryName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "callanalyticsjob",
+      "ARNFormats": [
+        "arn:${Partition}:transcribe:${Region}:${Account}:analytics/${JobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "languagemodel",
+      "ARNFormats": [
+        "arn:${Partition}:transcribe:${Region}:${Account}:language-model/${ModelName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "medicalscribejob",
+      "ARNFormats": [
+        "arn:${Partition}:transcribe:${Region}:${Account}:medical-scribe-job/${JobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "medicaltranscriptionjob",
+      "ARNFormats": [
+        "arn:${Partition}:transcribe:${Region}:${Account}:medical-transcription-job/${JobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "medicalvocabulary",
+      "ARNFormats": [
+        "arn:${Partition}:transcribe:${Region}:${Account}:medical-vocabulary/${VocabularyName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "transcriptionjob",
+      "ARNFormats": [
+        "arn:${Partition}:transcribe:${Region}:${Account}:transcription-job/${JobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "vocabulary",
+      "ARNFormats": [
+        "arn:${Partition}:transcribe:${Region}:${Account}:vocabulary/${VocabularyName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "vocabularyfilter",
+      "ARNFormats": [
+        "arn:${Partition}:transcribe:${Region}:${Account}:vocabulary-filter/${VocabularyFilterName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

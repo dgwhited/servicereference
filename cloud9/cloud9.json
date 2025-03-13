@@ -1,0 +1,318 @@
+{
+  "Name": "cloud9",
+  "Actions": [
+    {
+      "Name": "ActivateEC2Remote",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEnvironmentEC2",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cloud9:EnvironmentName",
+        "cloud9:InstanceType",
+        "cloud9:OwnerArn",
+        "cloud9:SubnetId",
+        "cloud9:UserArn"
+      ]
+    },
+    {
+      "Name": "CreateEnvironmentMembership",
+      "ActionConditionKeys": [
+        "cloud9:EnvironmentId",
+        "cloud9:Permissions",
+        "cloud9:UserArn"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEnvironmentSSH",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cloud9:EnvironmentName",
+        "cloud9:OwnerArn"
+      ]
+    },
+    {
+      "Name": "CreateEnvironmentToken",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEnvironment",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEnvironmentMembership",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEC2Remote",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEnvironmentMemberships",
+      "ActionConditionKeys": [
+        "cloud9:EnvironmentId",
+        "cloud9:UserArn"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEnvironmentStatus",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEnvironments",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSSHRemote",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "GetEnvironmentConfig",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "GetEnvironmentSettings",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "GetMembershipSettings",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "GetMigrationExperiences"
+    },
+    {
+      "Name": "GetUserPublicKey",
+      "ActionConditionKeys": [
+        "cloud9:UserArn"
+      ]
+    },
+    {
+      "Name": "GetUserSettings"
+    },
+    {
+      "Name": "ListEnvironments"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyTemporaryCredentialsOnEnvironmentEC2",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEnvironment",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEnvironmentMembership",
+      "ActionConditionKeys": [
+        "cloud9:EnvironmentId",
+        "cloud9:Permissions",
+        "cloud9:UserArn"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEnvironmentSettings",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMembershipSettings",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSSHRemote",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateUserSettings"
+    },
+    {
+      "Name": "ValidateEnvironmentName"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "cloud9:EnvironmentId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "cloud9:EnvironmentName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "cloud9:InstanceType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "cloud9:OwnerArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "cloud9:Permissions",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "cloud9:SubnetId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "cloud9:UserArn",
+      "Types": [
+        "ARN"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "environment",
+      "ARNFormats": [
+        "arn:${Partition}:cloud9:${Region}:${Account}:environment:${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

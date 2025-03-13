@@ -1,0 +1,238 @@
+{
+  "Name": "grafana",
+  "Actions": [
+    {
+      "Name": "AssociateLicense",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWorkspace",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateWorkspaceApiKey",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWorkspaceServiceAccount",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWorkspaceServiceAccountToken",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkspace",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkspaceApiKey",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkspaceServiceAccount",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkspaceServiceAccountToken",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWorkspace",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWorkspaceAuthentication",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWorkspaceConfiguration",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateLicense",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "ListPermissions",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "ListVersions",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "ListWorkspaceServiceAccountTokens",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "ListWorkspaceServiceAccounts",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "ListWorkspaces"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePermissions",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWorkspace",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWorkspaceAuthentication",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWorkspaceConfiguration",
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "workspace",
+      "ARNFormats": [
+        "arn:${Partition}:grafana:${Region}:${Account}:/workspaces/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

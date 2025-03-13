@@ -1,0 +1,345 @@
+{
+  "Name": "ssm-incidents",
+  "Actions": [
+    {
+      "Name": "BatchGetIncidentFindings",
+      "Resources": [
+        {
+          "Name": "incident-record"
+        },
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "CreateReplicationSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateResponsePlan",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateTimelineEvent",
+      "Resources": [
+        {
+          "Name": "incident-record"
+        },
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIncidentRecord",
+      "Resources": [
+        {
+          "Name": "incident-record"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteReplicationSet",
+      "Resources": [
+        {
+          "Name": "replication-set"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Resources": [
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResponsePlan",
+      "Resources": [
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTimelineEvent",
+      "Resources": [
+        {
+          "Name": "incident-record"
+        }
+      ]
+    },
+    {
+      "Name": "GetIncidentRecord",
+      "Resources": [
+        {
+          "Name": "incident-record"
+        },
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "GetReplicationSet",
+      "Resources": [
+        {
+          "Name": "replication-set"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicies",
+      "Resources": [
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "GetResponsePlan",
+      "Resources": [
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "GetTimelineEvent",
+      "Resources": [
+        {
+          "Name": "incident-record"
+        },
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "ListIncidentFindings",
+      "Resources": [
+        {
+          "Name": "incident-record"
+        },
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "ListIncidentRecords"
+    },
+    {
+      "Name": "ListRelatedItems",
+      "Resources": [
+        {
+          "Name": "incident-record"
+        },
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "ListReplicationSets"
+    },
+    {
+      "Name": "ListResponsePlans"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "incident-record"
+        },
+        {
+          "Name": "replication-set"
+        },
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "ListTimelineEvents",
+      "Resources": [
+        {
+          "Name": "incident-record"
+        },
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "Resources": [
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "StartIncident",
+      "Resources": [
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "incident-record"
+        },
+        {
+          "Name": "replication-set"
+        },
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "incident-record"
+        },
+        {
+          "Name": "replication-set"
+        },
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDeletionProtection",
+      "Resources": [
+        {
+          "Name": "replication-set"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIncidentRecord",
+      "Resources": [
+        {
+          "Name": "incident-record"
+        },
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRelatedItems",
+      "Resources": [
+        {
+          "Name": "incident-record"
+        },
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateReplicationSet",
+      "Resources": [
+        {
+          "Name": "replication-set"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateResponsePlan",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "response-plan"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTimelineEvent",
+      "Resources": [
+        {
+          "Name": "incident-record"
+        },
+        {
+          "Name": "response-plan"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "incident-record",
+      "ARNFormats": [
+        "arn:${Partition}:ssm-incidents::${Account}:incident-record/${ResponsePlan}/${IncidentRecord}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "replication-set",
+      "ARNFormats": [
+        "arn:${Partition}:ssm-incidents::${Account}:replication-set/${ReplicationSet}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "response-plan",
+      "ARNFormats": [
+        "arn:${Partition}:ssm-incidents::${Account}:response-plan/${ResponsePlan}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

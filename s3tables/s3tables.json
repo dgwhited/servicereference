@@ -1,0 +1,320 @@
+{
+  "Name": "s3tables",
+  "Actions": [
+    {
+      "Name": "CreateNamespace",
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTable",
+      "ActionConditionKeys": [
+        "s3tables:namespace"
+      ],
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTableBucket",
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNamespace",
+      "ActionConditionKeys": [
+        "s3tables:namespace"
+      ],
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTable",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTableBucket",
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTableBucketPolicy",
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTablePolicy",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ]
+    },
+    {
+      "Name": "GetNamespace",
+      "ActionConditionKeys": [
+        "s3tables:namespace"
+      ],
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ]
+    },
+    {
+      "Name": "GetTable",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableBucket",
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableBucketMaintenanceConfiguration",
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableBucketPolicy",
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableData",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableMaintenanceConfiguration",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableMaintenanceJobStatus",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableMetadataLocation",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ]
+    },
+    {
+      "Name": "GetTablePolicy",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ]
+    },
+    {
+      "Name": "ListNamespaces",
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ]
+    },
+    {
+      "Name": "ListTableBuckets"
+    },
+    {
+      "Name": "ListTables",
+      "ActionConditionKeys": [
+        "s3tables:namespace"
+      ],
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ]
+    },
+    {
+      "Name": "PutTableBucketMaintenanceConfiguration",
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ]
+    },
+    {
+      "Name": "PutTableBucketPolicy",
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ]
+    },
+    {
+      "Name": "PutTableData",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ]
+    },
+    {
+      "Name": "PutTableMaintenanceConfiguration",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ]
+    },
+    {
+      "Name": "PutTablePolicy",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ]
+    },
+    {
+      "Name": "RenameTable",
+      "ActionConditionKeys": [
+        "s3tables:namespace"
+      ],
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTableMetadataLocation",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "s3tables:namespace",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "s3tables:tableName",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Table",
+      "ARNFormats": [
+        "arn:${Partition}:s3tables:${Region}:${Account}:bucket/${TableBucketName}/table/${TableID}"
+      ],
+      "ConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ]
+    },
+    {
+      "Name": "TableBucket",
+      "ARNFormats": [
+        "arn:${Partition}:s3tables:${Region}:${Account}:bucket/${TableBucketName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

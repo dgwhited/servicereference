@@ -1,0 +1,154 @@
+{
+  "Name": "osis",
+  "Actions": [
+    {
+      "Name": "CreatePipeline",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeletePipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "GetPipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "GetPipelineBlueprint",
+      "Resources": [
+        {
+          "Name": "pipeline-blueprint"
+        }
+      ]
+    },
+    {
+      "Name": "GetPipelineChangeProgress",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "Ingest",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "ListPipelineBlueprints"
+    },
+    {
+      "Name": "ListPipelines"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "StartPipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "StopPipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "ValidatePipeline"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "pipeline",
+      "ARNFormats": [
+        "arn:${Partition}:osis:${Region}:${Account}:pipeline/${PipelineName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "pipeline-blueprint",
+      "ARNFormats": [
+        "arn:${Partition}:osis:${Region}:${Account}:blueprint/${BlueprintName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

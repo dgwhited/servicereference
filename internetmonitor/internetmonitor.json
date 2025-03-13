@@ -1,0 +1,184 @@
+{
+  "Name": "internetmonitor",
+  "Actions": [
+    {
+      "Name": "CreateMonitor",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Monitor"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMonitor",
+      "Resources": [
+        {
+          "Name": "Monitor"
+        }
+      ]
+    },
+    {
+      "Name": "GetHealthEvent",
+      "Resources": [
+        {
+          "Name": "Monitor"
+        }
+      ]
+    },
+    {
+      "Name": "GetInternetEvent",
+      "Resources": [
+        {
+          "Name": "InternetEvent"
+        }
+      ]
+    },
+    {
+      "Name": "GetMonitor",
+      "Resources": [
+        {
+          "Name": "Monitor"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueryResults",
+      "Resources": [
+        {
+          "Name": "Monitor"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueryStatus",
+      "Resources": [
+        {
+          "Name": "Monitor"
+        }
+      ]
+    },
+    {
+      "Name": "Link"
+    },
+    {
+      "Name": "ListHealthEvents",
+      "Resources": [
+        {
+          "Name": "Monitor"
+        }
+      ]
+    },
+    {
+      "Name": "ListInternetEvents"
+    },
+    {
+      "Name": "ListMonitors"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "Monitor"
+        }
+      ]
+    },
+    {
+      "Name": "StartQuery",
+      "Resources": [
+        {
+          "Name": "Monitor"
+        }
+      ]
+    },
+    {
+      "Name": "StopQuery",
+      "Resources": [
+        {
+          "Name": "Monitor"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Monitor"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Monitor"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMonitor",
+      "Resources": [
+        {
+          "Name": "Monitor"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "HealthEvent",
+      "ARNFormats": [
+        "arn:${Partition}:internetmonitor:${Region}:${Account}:monitor/${MonitorName}/health-event/${EventId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "InternetEvent",
+      "ARNFormats": [
+        "arn:${Partition}:internetmonitor::${Account}:internet-event/${InternetEventId}"
+      ]
+    },
+    {
+      "Name": "Monitor",
+      "ARNFormats": [
+        "arn:${Partition}:internetmonitor:${Region}:${Account}:monitor/${MonitorName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

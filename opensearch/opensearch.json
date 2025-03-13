@@ -1,0 +1,60 @@
+{
+  "Name": "opensearch",
+  "Actions": [
+    {
+      "Name": "ApplicationAccessAll",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "CancelDirectQuery",
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "GetDirectQuery",
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "GetDirectQueryResult",
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "StartDirectQuery",
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "application",
+      "ARNFormats": [
+        "arn:${Partition}:opensearch:${Region}:${Account}:application/${AppId}"
+      ]
+    },
+    {
+      "Name": "datasource",
+      "ARNFormats": [
+        "arn:${Partition}:opensearch:${Region}:${Account}:datasource/${DataSourceName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

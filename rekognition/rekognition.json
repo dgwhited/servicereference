@@ -1,0 +1,601 @@
+{
+  "Name": "rekognition",
+  "Actions": [
+    {
+      "Name": "AssociateFaces",
+      "Resources": [
+        {
+          "Name": "collection"
+        }
+      ]
+    },
+    {
+      "Name": "CompareFaces"
+    },
+    {
+      "Name": "CopyProjectVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "project"
+        },
+        {
+          "Name": "projectversion"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCollection",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateDataset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFaceLivenessSession"
+    },
+    {
+      "Name": "CreateProject",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "CreateProjectVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStreamProcessor",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "collection"
+        }
+      ]
+    },
+    {
+      "Name": "CreateUser",
+      "Resources": [
+        {
+          "Name": "collection"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCollection",
+      "Resources": [
+        {
+          "Name": "collection"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataset",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFaces",
+      "Resources": [
+        {
+          "Name": "collection"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProjectPolicy",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProjectVersion",
+      "Resources": [
+        {
+          "Name": "projectversion"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStreamProcessor",
+      "Resources": [
+        {
+          "Name": "streamprocessor"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteUser",
+      "Resources": [
+        {
+          "Name": "collection"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCollection",
+      "Resources": [
+        {
+          "Name": "collection"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDataset",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeProjectVersions",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeProjects"
+    },
+    {
+      "Name": "DescribeStreamProcessor",
+      "Resources": [
+        {
+          "Name": "streamprocessor"
+        }
+      ]
+    },
+    {
+      "Name": "DetectCustomLabels",
+      "Resources": [
+        {
+          "Name": "projectversion"
+        }
+      ]
+    },
+    {
+      "Name": "DetectFaces"
+    },
+    {
+      "Name": "DetectLabels"
+    },
+    {
+      "Name": "DetectModerationLabels",
+      "Resources": [
+        {
+          "Name": "projectversion"
+        }
+      ]
+    },
+    {
+      "Name": "DetectProtectiveEquipment"
+    },
+    {
+      "Name": "DetectText"
+    },
+    {
+      "Name": "DisassociateFaces",
+      "Resources": [
+        {
+          "Name": "collection"
+        }
+      ]
+    },
+    {
+      "Name": "DistributeDatasetEntries",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "GetCelebrityInfo"
+    },
+    {
+      "Name": "GetCelebrityRecognition"
+    },
+    {
+      "Name": "GetContentModeration"
+    },
+    {
+      "Name": "GetFaceDetection"
+    },
+    {
+      "Name": "GetFaceLivenessSessionResults"
+    },
+    {
+      "Name": "GetFaceSearch"
+    },
+    {
+      "Name": "GetLabelDetection"
+    },
+    {
+      "Name": "GetMediaAnalysisJob"
+    },
+    {
+      "Name": "GetPersonTracking"
+    },
+    {
+      "Name": "GetSegmentDetection"
+    },
+    {
+      "Name": "GetTextDetection"
+    },
+    {
+      "Name": "IndexFaces",
+      "Resources": [
+        {
+          "Name": "collection"
+        }
+      ]
+    },
+    {
+      "Name": "ListCollections"
+    },
+    {
+      "Name": "ListDatasetEntries",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "ListDatasetLabels",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "ListFaces",
+      "Resources": [
+        {
+          "Name": "collection"
+        }
+      ]
+    },
+    {
+      "Name": "ListMediaAnalysisJobs"
+    },
+    {
+      "Name": "ListProjectPolicies",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "ListStreamProcessors",
+      "Resources": [
+        {
+          "Name": "streamprocessor"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "collection"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "project"
+        },
+        {
+          "Name": "projectversion"
+        },
+        {
+          "Name": "streamprocessor"
+        }
+      ]
+    },
+    {
+      "Name": "ListUsers",
+      "Resources": [
+        {
+          "Name": "collection"
+        }
+      ]
+    },
+    {
+      "Name": "PutProjectPolicy",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "RecognizeCelebrities"
+    },
+    {
+      "Name": "SearchFaces",
+      "Resources": [
+        {
+          "Name": "collection"
+        }
+      ]
+    },
+    {
+      "Name": "SearchFacesByImage",
+      "Resources": [
+        {
+          "Name": "collection"
+        }
+      ]
+    },
+    {
+      "Name": "SearchUsers",
+      "Resources": [
+        {
+          "Name": "collection"
+        }
+      ]
+    },
+    {
+      "Name": "SearchUsersByImage",
+      "Resources": [
+        {
+          "Name": "collection"
+        }
+      ]
+    },
+    {
+      "Name": "StartCelebrityRecognition"
+    },
+    {
+      "Name": "StartContentModeration"
+    },
+    {
+      "Name": "StartFaceDetection"
+    },
+    {
+      "Name": "StartFaceLivenessSession"
+    },
+    {
+      "Name": "StartFaceSearch",
+      "Resources": [
+        {
+          "Name": "collection"
+        }
+      ]
+    },
+    {
+      "Name": "StartLabelDetection"
+    },
+    {
+      "Name": "StartMediaAnalysisJob",
+      "Resources": [
+        {
+          "Name": "projectversion"
+        }
+      ]
+    },
+    {
+      "Name": "StartPersonTracking"
+    },
+    {
+      "Name": "StartProjectVersion",
+      "Resources": [
+        {
+          "Name": "projectversion"
+        }
+      ]
+    },
+    {
+      "Name": "StartSegmentDetection"
+    },
+    {
+      "Name": "StartStreamProcessor",
+      "Resources": [
+        {
+          "Name": "streamprocessor"
+        }
+      ]
+    },
+    {
+      "Name": "StartTextDetection"
+    },
+    {
+      "Name": "StopProjectVersion",
+      "Resources": [
+        {
+          "Name": "projectversion"
+        }
+      ]
+    },
+    {
+      "Name": "StopStreamProcessor",
+      "Resources": [
+        {
+          "Name": "streamprocessor"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "collection"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "project"
+        },
+        {
+          "Name": "projectversion"
+        },
+        {
+          "Name": "streamprocessor"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "collection"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "project"
+        },
+        {
+          "Name": "projectversion"
+        },
+        {
+          "Name": "streamprocessor"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDatasetEntries",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStreamProcessor",
+      "Resources": [
+        {
+          "Name": "streamprocessor"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "collection",
+      "ARNFormats": [
+        "arn:${Partition}:rekognition:${Region}:${Account}:collection/${CollectionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "dataset",
+      "ARNFormats": [
+        "arn:${Partition}:rekognition:${Region}:${Account}:project/${ProjectName}/dataset/${DatasetType}/${CreationTimestamp}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "project",
+      "ARNFormats": [
+        "arn:${Partition}:rekognition:${Region}:${Account}:project/${ProjectName}/${CreationTimestamp}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "projectversion",
+      "ARNFormats": [
+        "arn:${Partition}:rekognition:${Region}:${Account}:project/${ProjectName}/version/${VersionName}/${CreationTimestamp}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "streamprocessor",
+      "ARNFormats": [
+        "arn:${Partition}:rekognition:${Region}:${Account}:streamprocessor/${StreamprocessorId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

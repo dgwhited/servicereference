@@ -1,0 +1,144 @@
+{
+  "Name": "pipes",
+  "Actions": [
+    {
+      "Name": "CreatePipe",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "pipe"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePipe",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "pipe"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePipe",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "pipe"
+        }
+      ]
+    },
+    {
+      "Name": "ListPipes"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "pipe"
+        }
+      ]
+    },
+    {
+      "Name": "StartPipe",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "pipe"
+        }
+      ]
+    },
+    {
+      "Name": "StopPipe",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "pipe"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "pipe"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "pipe"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePipe",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "pipe"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "pipe",
+      "ARNFormats": [
+        "arn:${Partition}:pipes:${Region}:${Account}:pipe/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

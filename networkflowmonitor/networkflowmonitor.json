@@ -1,0 +1,258 @@
+{
+  "Name": "networkflowmonitor",
+  "Actions": [
+    {
+      "Name": "CreateMonitor",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "CreateScope",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteMonitor",
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteScope",
+      "Resources": [
+        {
+          "Name": "scope"
+        }
+      ]
+    },
+    {
+      "Name": "GetMonitor",
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueryResultsMonitorTopContributors",
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueryResultsWorkloadInsightsTopContributors",
+      "Resources": [
+        {
+          "Name": "scope"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueryResultsWorkloadInsightsTopContributorsData",
+      "Resources": [
+        {
+          "Name": "scope"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueryStatusMonitorTopContributors",
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueryStatusWorkloadInsightsTopContributors",
+      "Resources": [
+        {
+          "Name": "scope"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueryStatusWorkloadInsightsTopContributorsData",
+      "Resources": [
+        {
+          "Name": "scope"
+        }
+      ]
+    },
+    {
+      "Name": "GetScope",
+      "Resources": [
+        {
+          "Name": "scope"
+        }
+      ]
+    },
+    {
+      "Name": "ListMonitors"
+    },
+    {
+      "Name": "ListScopes"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "monitor"
+        },
+        {
+          "Name": "scope"
+        }
+      ]
+    },
+    {
+      "Name": "Publish"
+    },
+    {
+      "Name": "StartQueryMonitorTopContributors",
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "StartQueryWorkloadInsightsTopContributors",
+      "Resources": [
+        {
+          "Name": "scope"
+        }
+      ]
+    },
+    {
+      "Name": "StartQueryWorkloadInsightsTopContributorsData",
+      "Resources": [
+        {
+          "Name": "scope"
+        }
+      ]
+    },
+    {
+      "Name": "StopQueryMonitorTopContributors",
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "StopQueryWorkloadInsightsTopContributors",
+      "Resources": [
+        {
+          "Name": "scope"
+        }
+      ]
+    },
+    {
+      "Name": "StopQueryWorkloadInsightsTopContributorsData",
+      "Resources": [
+        {
+          "Name": "scope"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "monitor"
+        },
+        {
+          "Name": "scope"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "monitor"
+        },
+        {
+          "Name": "scope"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMonitor",
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateScope",
+      "Resources": [
+        {
+          "Name": "scope"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "monitor",
+      "ARNFormats": [
+        "arn:${Partition}:networkflowmonitor:${Region}:${Account}:monitor/${MonitorName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "scope",
+      "ARNFormats": [
+        "arn:${Partition}:networkflowmonitor:${Region}:${Account}:scope/${ScopeId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

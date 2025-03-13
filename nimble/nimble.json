@@ -1,0 +1,653 @@
+{
+  "Name": "nimble",
+  "Actions": [
+    {
+      "Name": "AcceptEulas",
+      "Resources": [
+        {
+          "Name": "eula"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLaunchProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStreamingImage",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStreamingSession",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "launch-profile"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStreamingSessionStream",
+      "ActionConditionKeys": [
+        "nimble:requesterPrincipalId"
+      ],
+      "Resources": [
+        {
+          "Name": "streaming-session"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStudio",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStudioComponent",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLaunchProfile",
+      "Resources": [
+        {
+          "Name": "launch-profile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLaunchProfileMember",
+      "Resources": [
+        {
+          "Name": "launch-profile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStreamingImage",
+      "Resources": [
+        {
+          "Name": "streaming-image"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStreamingSession",
+      "ActionConditionKeys": [
+        "nimble:requesterPrincipalId"
+      ],
+      "Resources": [
+        {
+          "Name": "streaming-session"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStudio",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStudioComponent",
+      "Resources": [
+        {
+          "Name": "studio-component"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStudioMember",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "GetEula",
+      "Resources": [
+        {
+          "Name": "eula"
+        }
+      ]
+    },
+    {
+      "Name": "GetFeatureMap"
+    },
+    {
+      "Name": "GetLaunchProfile",
+      "Resources": [
+        {
+          "Name": "launch-profile"
+        }
+      ]
+    },
+    {
+      "Name": "GetLaunchProfileDetails",
+      "Resources": [
+        {
+          "Name": "launch-profile"
+        }
+      ]
+    },
+    {
+      "Name": "GetLaunchProfileInitialization",
+      "Resources": [
+        {
+          "Name": "launch-profile"
+        }
+      ]
+    },
+    {
+      "Name": "GetLaunchProfileMember",
+      "Resources": [
+        {
+          "Name": "launch-profile"
+        }
+      ]
+    },
+    {
+      "Name": "GetStreamingImage",
+      "Resources": [
+        {
+          "Name": "streaming-image"
+        }
+      ]
+    },
+    {
+      "Name": "GetStreamingSession",
+      "ActionConditionKeys": [
+        "nimble:requesterPrincipalId"
+      ],
+      "Resources": [
+        {
+          "Name": "streaming-session"
+        }
+      ]
+    },
+    {
+      "Name": "GetStreamingSessionBackup",
+      "ActionConditionKeys": [
+        "nimble:requesterPrincipalId"
+      ],
+      "Resources": [
+        {
+          "Name": "streaming-session-backup"
+        }
+      ]
+    },
+    {
+      "Name": "GetStreamingSessionStream",
+      "ActionConditionKeys": [
+        "nimble:requesterPrincipalId"
+      ],
+      "Resources": [
+        {
+          "Name": "streaming-session"
+        }
+      ]
+    },
+    {
+      "Name": "GetStudio",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "GetStudioComponent",
+      "Resources": [
+        {
+          "Name": "studio-component"
+        }
+      ]
+    },
+    {
+      "Name": "GetStudioMember",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "ListEulaAcceptances",
+      "Resources": [
+        {
+          "Name": "eula-acceptance"
+        }
+      ]
+    },
+    {
+      "Name": "ListEulas",
+      "Resources": [
+        {
+          "Name": "eula"
+        }
+      ]
+    },
+    {
+      "Name": "ListLaunchProfileMembers",
+      "Resources": [
+        {
+          "Name": "launch-profile"
+        }
+      ]
+    },
+    {
+      "Name": "ListLaunchProfiles",
+      "ActionConditionKeys": [
+        "nimble:principalId",
+        "nimble:requesterPrincipalId"
+      ],
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "ListStreamingImages",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "ListStreamingSessionBackups",
+      "ActionConditionKeys": [
+        "nimble:requesterPrincipalId"
+      ],
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "ListStreamingSessions",
+      "ActionConditionKeys": [
+        "nimble:createdBy",
+        "nimble:ownedBy",
+        "nimble:requesterPrincipalId"
+      ],
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "ListStudioComponents",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "ListStudioMembers",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "ListStudios"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "launch-profile"
+        },
+        {
+          "Name": "streaming-image"
+        },
+        {
+          "Name": "streaming-session"
+        },
+        {
+          "Name": "streaming-session-backup"
+        },
+        {
+          "Name": "studio"
+        },
+        {
+          "Name": "studio-component"
+        }
+      ]
+    },
+    {
+      "Name": "PutLaunchProfileMembers",
+      "Resources": [
+        {
+          "Name": "launch-profile"
+        }
+      ]
+    },
+    {
+      "Name": "PutStudioLogEvents",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "PutStudioMembers",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "StartStreamingSession",
+      "ActionConditionKeys": [
+        "nimble:requesterPrincipalId"
+      ],
+      "Resources": [
+        {
+          "Name": "streaming-session"
+        },
+        {
+          "Name": "streaming-session-backup"
+        }
+      ]
+    },
+    {
+      "Name": "StartStudioSSOConfigurationRepair",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "StopStreamingSession",
+      "ActionConditionKeys": [
+        "nimble:requesterPrincipalId"
+      ],
+      "Resources": [
+        {
+          "Name": "streaming-session"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "launch-profile"
+        },
+        {
+          "Name": "streaming-image"
+        },
+        {
+          "Name": "streaming-session"
+        },
+        {
+          "Name": "streaming-session-backup"
+        },
+        {
+          "Name": "studio"
+        },
+        {
+          "Name": "studio-component"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "launch-profile"
+        },
+        {
+          "Name": "streaming-image"
+        },
+        {
+          "Name": "streaming-session"
+        },
+        {
+          "Name": "streaming-session-backup"
+        },
+        {
+          "Name": "studio"
+        },
+        {
+          "Name": "studio-component"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLaunchProfile",
+      "Resources": [
+        {
+          "Name": "launch-profile"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLaunchProfileMember",
+      "Resources": [
+        {
+          "Name": "launch-profile"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStreamingImage",
+      "Resources": [
+        {
+          "Name": "streaming-image"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStudio",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStudioComponent",
+      "Resources": [
+        {
+          "Name": "studio-component"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "nimble:createdBy",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "nimble:ownedBy",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "nimble:principalId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "nimble:requesterPrincipalId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "nimble:studioId",
+      "Types": [
+        "ARN"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "eula",
+      "ARNFormats": [
+        "arn:${Partition}:nimble:${Region}:${Account}:eula/${EulaId}"
+      ]
+    },
+    {
+      "Name": "eula-acceptance",
+      "ARNFormats": [
+        "arn:${Partition}:nimble:${Region}:${Account}:eula-acceptance/${EulaAcceptanceId}"
+      ],
+      "ConditionKeys": [
+        "nimble:studioId"
+      ]
+    },
+    {
+      "Name": "launch-profile",
+      "ARNFormats": [
+        "arn:${Partition}:nimble:${Region}:${Account}:launch-profile/${LaunchProfileId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "nimble:studioId"
+      ]
+    },
+    {
+      "Name": "streaming-image",
+      "ARNFormats": [
+        "arn:${Partition}:nimble:${Region}:${Account}:streaming-image/${StreamingImageId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "nimble:studioId"
+      ]
+    },
+    {
+      "Name": "streaming-session",
+      "ARNFormats": [
+        "arn:${Partition}:nimble:${Region}:${Account}:streaming-session/${StreamingSessionId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "nimble:createdBy",
+        "nimble:ownedBy"
+      ]
+    },
+    {
+      "Name": "streaming-session-backup",
+      "ARNFormats": [
+        "arn:${Partition}:nimble:${Region}:${Account}:streaming-session-backup/${StreamingSessionBackupId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "nimble:ownedBy"
+      ]
+    },
+    {
+      "Name": "studio",
+      "ARNFormats": [
+        "arn:${Partition}:nimble:${Region}:${Account}:studio/${StudioId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "nimble:studioId"
+      ]
+    },
+    {
+      "Name": "studio-component",
+      "ARNFormats": [
+        "arn:${Partition}:nimble:${Region}:${Account}:studio-component/${StudioComponentId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "nimble:studioId"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,105 @@
+{
+  "Name": "notifications-contacts",
+  "Actions": [
+    {
+      "Name": "ActivateEmailContact",
+      "Resources": [
+        {
+          "Name": "EmailContactResource"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEmailContact",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteEmailContact",
+      "Resources": [
+        {
+          "Name": "EmailContactResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetEmailContact",
+      "Resources": [
+        {
+          "Name": "EmailContactResource"
+        }
+      ]
+    },
+    {
+      "Name": "ListEmailContacts"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "SendActivationCode",
+      "Resources": [
+        {
+          "Name": "EmailContactResource"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "EmailContactResource"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "EmailContactResource"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "EmailContactResource",
+      "ARNFormats": [
+        "arn:${Partition}:notifications-contacts::${Account}:emailcontact/${EmailContactId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,246 @@
+{
+  "Name": "medical-imaging",
+  "Actions": [
+    {
+      "Name": "CopyImageSet",
+      "Resources": [
+        {
+          "Name": "datastore"
+        },
+        {
+          "Name": "imageset"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDatastore",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteDatastore",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteImageSet",
+      "Resources": [
+        {
+          "Name": "datastore"
+        },
+        {
+          "Name": "imageset"
+        }
+      ]
+    },
+    {
+      "Name": "GetDICOMImportJob",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "GetDICOMInstance",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "GetDICOMInstanceFrames",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "GetDICOMInstanceMetadata",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "GetDatastore",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "GetImageFrame",
+      "Resources": [
+        {
+          "Name": "datastore"
+        },
+        {
+          "Name": "imageset"
+        }
+      ]
+    },
+    {
+      "Name": "GetImageSet",
+      "Resources": [
+        {
+          "Name": "datastore"
+        },
+        {
+          "Name": "imageset"
+        }
+      ]
+    },
+    {
+      "Name": "GetImageSetMetadata",
+      "Resources": [
+        {
+          "Name": "datastore"
+        },
+        {
+          "Name": "imageset"
+        }
+      ]
+    },
+    {
+      "Name": "ListDICOMImportJobs",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "ListDatastores"
+    },
+    {
+      "Name": "ListImageSetVersions",
+      "Resources": [
+        {
+          "Name": "datastore"
+        },
+        {
+          "Name": "imageset"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "datastore"
+        },
+        {
+          "Name": "imageset"
+        }
+      ]
+    },
+    {
+      "Name": "SearchImageSets",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "StartDICOMImportJob",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "datastore"
+        },
+        {
+          "Name": "imageset"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "datastore"
+        },
+        {
+          "Name": "imageset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateImageSetMetadata",
+      "Resources": [
+        {
+          "Name": "datastore"
+        },
+        {
+          "Name": "imageset"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "datastore",
+      "ARNFormats": [
+        "arn:${Partition}:medical-imaging:${Region}:${Account}:datastore/${DatastoreId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "imageset",
+      "ARNFormats": [
+        "arn:${Partition}:medical-imaging:${Region}:${Account}:datastore/${DatastoreId}/imageset/${ImageSetId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

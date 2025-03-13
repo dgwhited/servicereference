@@ -1,0 +1,329 @@
+{
+  "Name": "lookoutmetrics",
+  "Actions": [
+    {
+      "Name": "ActivateAnomalyDetector",
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "BackTestAnomalyDetector",
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAlert",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Alert"
+        },
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAnomalyDetector",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMetricSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        },
+        {
+          "Name": "MetricSet"
+        }
+      ]
+    },
+    {
+      "Name": "DeactivateAnomalyDetector",
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAlert",
+      "Resources": [
+        {
+          "Name": "Alert"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAnomalyDetector",
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAlert",
+      "Resources": [
+        {
+          "Name": "Alert"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAnomalyDetectionExecutions",
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAnomalyDetector",
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMetricSet",
+      "Resources": [
+        {
+          "Name": "MetricSet"
+        }
+      ]
+    },
+    {
+      "Name": "DetectMetricSetConfig",
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "GetAnomalyGroup",
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataQualityMetrics",
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "GetFeedback",
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "GetSampleData"
+    },
+    {
+      "Name": "ListAlerts",
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "ListAnomalyDetectors"
+    },
+    {
+      "Name": "ListAnomalyGroupRelatedMetrics",
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "ListAnomalyGroupSummaries",
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "ListAnomalyGroupTimeSeries",
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "ListMetricSets",
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "Alert"
+        },
+        {
+          "Name": "AnomalyDetector"
+        },
+        {
+          "Name": "MetricSet"
+        }
+      ]
+    },
+    {
+      "Name": "PutFeedback",
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Alert"
+        },
+        {
+          "Name": "AnomalyDetector"
+        },
+        {
+          "Name": "MetricSet"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Alert"
+        },
+        {
+          "Name": "AnomalyDetector"
+        },
+        {
+          "Name": "MetricSet"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAlert",
+      "Resources": [
+        {
+          "Name": "Alert"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAnomalyDetector",
+      "Resources": [
+        {
+          "Name": "AnomalyDetector"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMetricSet",
+      "Resources": [
+        {
+          "Name": "MetricSet"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Alert",
+      "ARNFormats": [
+        "arn:${Partition}:lookoutmetrics:${Region}:${Account}:Alert:${AlertName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "AnomalyDetector",
+      "ARNFormats": [
+        "arn:${Partition}:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "MetricSet",
+      "ARNFormats": [
+        "arn:${Partition}:lookoutmetrics:${Region}:${Account}:MetricSet/${AnomalyDetectorName}/${MetricSetName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

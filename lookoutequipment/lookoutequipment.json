@@ -1,0 +1,550 @@
+{
+  "Name": "lookoutequipment",
+  "Actions": [
+    {
+      "Name": "CreateDataset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "CreateInferenceScheduler",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "inference-scheduler"
+        },
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLabel",
+      "Resources": [
+        {
+          "Name": "label-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLabelGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "label-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "label-group"
+        },
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRetrainingScheduler",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataset",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInferenceScheduler",
+      "Resources": [
+        {
+          "Name": "inference-scheduler"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLabel",
+      "Resources": [
+        {
+          "Name": "label-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLabelGroup",
+      "Resources": [
+        {
+          "Name": "label-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteModel",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Resources": [
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "model"
+        },
+        {
+          "Name": "model-version"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRetrainingScheduler",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDataIngestionJob"
+    },
+    {
+      "Name": "DescribeDataset",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeInferenceScheduler",
+      "Resources": [
+        {
+          "Name": "inference-scheduler"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeLabelGroup",
+      "Resources": [
+        {
+          "Name": "label-group"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeModel",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeModelVersion",
+      "Resources": [
+        {
+          "Name": "model-version"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeResourcePolicy",
+      "Resources": [
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "model"
+        },
+        {
+          "Name": "model-version"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRetrainingScheduler",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "Describelabel",
+      "Resources": [
+        {
+          "Name": "label-group"
+        }
+      ]
+    },
+    {
+      "Name": "ImportDataset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "ImportModelVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "lookoutequipment:IsImportingData"
+      ],
+      "Resources": [
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "label-group"
+        },
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataIngestionJobs",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "ListDatasets"
+    },
+    {
+      "Name": "ListInferenceEvents",
+      "Resources": [
+        {
+          "Name": "inference-scheduler"
+        }
+      ]
+    },
+    {
+      "Name": "ListInferenceExecutions",
+      "Resources": [
+        {
+          "Name": "inference-scheduler"
+        }
+      ]
+    },
+    {
+      "Name": "ListInferenceSchedulers"
+    },
+    {
+      "Name": "ListLabelGroups",
+      "Resources": [
+        {
+          "Name": "label-group"
+        }
+      ]
+    },
+    {
+      "Name": "ListLabels",
+      "Resources": [
+        {
+          "Name": "label-group"
+        }
+      ]
+    },
+    {
+      "Name": "ListModelVersions",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "ListModels"
+    },
+    {
+      "Name": "ListRetrainingSchedulers"
+    },
+    {
+      "Name": "ListSensorStatistics",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "inference-scheduler"
+        },
+        {
+          "Name": "label-group"
+        },
+        {
+          "Name": "model"
+        },
+        {
+          "Name": "model-version"
+        }
+      ]
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "Resources": [
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "model"
+        },
+        {
+          "Name": "model-version"
+        }
+      ]
+    },
+    {
+      "Name": "StartDataIngestionJob",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "StartInferenceScheduler",
+      "Resources": [
+        {
+          "Name": "inference-scheduler"
+        }
+      ]
+    },
+    {
+      "Name": "StartRetrainingScheduler",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "StopInferenceScheduler",
+      "Resources": [
+        {
+          "Name": "inference-scheduler"
+        }
+      ]
+    },
+    {
+      "Name": "StopRetrainingScheduler",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "inference-scheduler"
+        },
+        {
+          "Name": "label-group"
+        },
+        {
+          "Name": "model"
+        },
+        {
+          "Name": "model-version"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "inference-scheduler"
+        },
+        {
+          "Name": "label-group"
+        },
+        {
+          "Name": "model"
+        },
+        {
+          "Name": "model-version"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateActiveModelVersion",
+      "Resources": [
+        {
+          "Name": "model"
+        },
+        {
+          "Name": "model-version"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInferenceScheduler",
+      "Resources": [
+        {
+          "Name": "inference-scheduler"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLabelGroup",
+      "Resources": [
+        {
+          "Name": "label-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateModel",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRetrainingScheduler",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "lookoutequipment:IsImportingData",
+      "Types": [
+        "Bool"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "dataset",
+      "ARNFormats": [
+        "arn:${Partition}:lookoutequipment:${Region}:${Account}:dataset/${DatasetName}/${DatasetId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "inference-scheduler",
+      "ARNFormats": [
+        "arn:${Partition}:lookoutequipment:${Region}:${Account}:inference-scheduler/${InferenceSchedulerName}/${InferenceSchedulerId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "label-group",
+      "ARNFormats": [
+        "arn:${Partition}:lookoutequipment:${Region}:${Account}:label-group/${LabelGroupName}/${LabelGroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model",
+      "ARNFormats": [
+        "arn:${Partition}:lookoutequipment:${Region}:${Account}:model/${ModelName}/${ModelId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model-version",
+      "ARNFormats": [
+        "arn:${Partition}:lookoutequipment:${Region}:${Account}:model/${ModelName}/${ModelId}/model-version/${ModelVersionNumber}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

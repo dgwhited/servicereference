@@ -1,0 +1,204 @@
+{
+  "Name": "emr-serverless",
+  "Actions": [
+    {
+      "Name": "AccessInteractiveEndpoints",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "AccessLivyEndpoints",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "CancelJobRun",
+      "Resources": [
+        {
+          "Name": "jobRun"
+        }
+      ]
+    },
+    {
+      "Name": "CreateApplication",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteApplication",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "GetApplication",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "GetDashboardForJobRun",
+      "Resources": [
+        {
+          "Name": "jobRun"
+        }
+      ]
+    },
+    {
+      "Name": "GetJobRun",
+      "Resources": [
+        {
+          "Name": "jobRun"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplications"
+    },
+    {
+      "Name": "ListJobRunAttempts",
+      "Resources": [
+        {
+          "Name": "jobRun"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobRuns",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "jobRun"
+        }
+      ]
+    },
+    {
+      "Name": "StartApplication",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "StartJobRun",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "StopApplication",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "jobRun"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "jobRun"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateApplication",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "application",
+      "ARNFormats": [
+        "arn:${Partition}:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "jobRun",
+      "ARNFormats": [
+        "arn:${Partition}:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}/jobruns/${JobRunId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

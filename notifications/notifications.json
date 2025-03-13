@@ -1,0 +1,289 @@
+{
+  "Name": "notifications",
+  "Actions": [
+    {
+      "Name": "AssociateChannel",
+      "Resources": [
+        {
+          "Name": "NotificationConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateManagedNotificationAccountContact",
+      "Resources": [
+        {
+          "Name": "ManagedNotificationConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateManagedNotificationAdditionalChannel",
+      "Resources": [
+        {
+          "Name": "ManagedNotificationConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEventRule"
+    },
+    {
+      "Name": "CreateNotificationConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteEventRule",
+      "Resources": [
+        {
+          "Name": "EventRule"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNotificationConfiguration",
+      "Resources": [
+        {
+          "Name": "NotificationConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterNotificationHub"
+    },
+    {
+      "Name": "DisableNotificationsAccessForOrganization"
+    },
+    {
+      "Name": "DisassociateChannel",
+      "Resources": [
+        {
+          "Name": "NotificationConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateManagedNotificationAccountContact",
+      "Resources": [
+        {
+          "Name": "ManagedNotificationConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateManagedNotificationAdditionalChannel",
+      "Resources": [
+        {
+          "Name": "ManagedNotificationConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "EnableNotificationsAccessForOrganization"
+    },
+    {
+      "Name": "GetEventRule",
+      "Resources": [
+        {
+          "Name": "EventRule"
+        }
+      ]
+    },
+    {
+      "Name": "GetFeatureOptInStatus"
+    },
+    {
+      "Name": "GetManagedNotificationChildEvent",
+      "Resources": [
+        {
+          "Name": "ManagedNotificationChildEvent"
+        }
+      ]
+    },
+    {
+      "Name": "GetManagedNotificationConfiguration",
+      "Resources": [
+        {
+          "Name": "ManagedNotificationConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "GetManagedNotificationEvent",
+      "Resources": [
+        {
+          "Name": "ManagedNotificationEvent"
+        }
+      ]
+    },
+    {
+      "Name": "GetNotificationConfiguration",
+      "Resources": [
+        {
+          "Name": "NotificationConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "GetNotificationEvent",
+      "Resources": [
+        {
+          "Name": "NotificationEvent"
+        }
+      ]
+    },
+    {
+      "Name": "GetNotificationsAccessForOrganization"
+    },
+    {
+      "Name": "ListChannels",
+      "Resources": [
+        {
+          "Name": "NotificationConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "ListEventRules"
+    },
+    {
+      "Name": "ListManagedNotificationChannelAssociations",
+      "Resources": [
+        {
+          "Name": "ManagedNotificationConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "ListManagedNotificationChildEvents"
+    },
+    {
+      "Name": "ListManagedNotificationConfigurations"
+    },
+    {
+      "Name": "ListManagedNotificationEvents"
+    },
+    {
+      "Name": "ListNotificationConfigurations"
+    },
+    {
+      "Name": "ListNotificationEvents"
+    },
+    {
+      "Name": "ListNotificationHubs"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "PutFeatureOptInStatus"
+    },
+    {
+      "Name": "RegisterNotificationHub"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "NotificationConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "NotificationConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEventRule",
+      "Resources": [
+        {
+          "Name": "EventRule"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNotificationConfiguration",
+      "Resources": [
+        {
+          "Name": "NotificationConfiguration"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "EventRule",
+      "ARNFormats": [
+        "arn:${Partition}:notifications::${Account}:configuration/${NotificationConfigurationId}/rule/${EventRuleId}"
+      ]
+    },
+    {
+      "Name": "ManagedNotificationChildEvent",
+      "ARNFormats": [
+        "arn:${Partition}:notifications::${Account}:managed-notification-configuration/category/${Category}/sub-category/${Subcategory}/event/${NotificationEventId}/child-event/${NotificationChildEventId}"
+      ]
+    },
+    {
+      "Name": "ManagedNotificationConfiguration",
+      "ARNFormats": [
+        "arn:${Partition}:notifications::${Account}:managed-notification-configuration/category/${Category}/sub-category/${Subcategory}"
+      ]
+    },
+    {
+      "Name": "ManagedNotificationEvent",
+      "ARNFormats": [
+        "arn:${Partition}:notifications::${Account}:managed-notification-configuration/category/${Category}/sub-category/${Subcategory}/event/${NotificationEventId}"
+      ]
+    },
+    {
+      "Name": "NotificationConfiguration",
+      "ARNFormats": [
+        "arn:${Partition}:notifications::${Account}:configuration/${NotificationConfigurationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "NotificationEvent",
+      "ARNFormats": [
+        "arn:${Partition}:notifications:${Region}:${Account}:configuration/${NotificationConfigurationId}/event/${NotificationEventId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

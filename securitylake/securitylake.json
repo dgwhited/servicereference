@@ -1,0 +1,265 @@
+{
+  "Name": "securitylake",
+  "Actions": [
+    {
+      "Name": "CreateAwsLogSource",
+      "Resources": [
+        {
+          "Name": "data-lake"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCustomLogSource",
+      "Resources": [
+        {
+          "Name": "data-lake"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataLake",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "data-lake"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataLakeExceptionSubscription"
+    },
+    {
+      "Name": "CreateDataLakeOrganizationConfiguration",
+      "Resources": [
+        {
+          "Name": "data-lake"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSubscriber",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateSubscriberNotification",
+      "Resources": [
+        {
+          "Name": "subscriber"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAwsLogSource",
+      "Resources": [
+        {
+          "Name": "data-lake"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCustomLogSource",
+      "Resources": [
+        {
+          "Name": "data-lake"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataLake",
+      "Resources": [
+        {
+          "Name": "data-lake"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataLakeExceptionSubscription"
+    },
+    {
+      "Name": "DeleteDataLakeOrganizationConfiguration",
+      "Resources": [
+        {
+          "Name": "data-lake"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSubscriber",
+      "Resources": [
+        {
+          "Name": "subscriber"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSubscriberNotification",
+      "Resources": [
+        {
+          "Name": "subscriber"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterDataLakeDelegatedAdministrator"
+    },
+    {
+      "Name": "GetDataLakeExceptionSubscription"
+    },
+    {
+      "Name": "GetDataLakeOrganizationConfiguration",
+      "Resources": [
+        {
+          "Name": "data-lake"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataLakeSources",
+      "Resources": [
+        {
+          "Name": "data-lake"
+        }
+      ]
+    },
+    {
+      "Name": "GetSubscriber",
+      "Resources": [
+        {
+          "Name": "subscriber"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataLakeExceptions"
+    },
+    {
+      "Name": "ListDataLakes"
+    },
+    {
+      "Name": "ListLogSources"
+    },
+    {
+      "Name": "ListSubscribers"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "data-lake"
+        },
+        {
+          "Name": "subscriber"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterDataLakeDelegatedAdministrator"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "data-lake"
+        },
+        {
+          "Name": "subscriber"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "data-lake"
+        },
+        {
+          "Name": "subscriber"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataLake",
+      "Resources": [
+        {
+          "Name": "data-lake"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataLakeExceptionSubscription"
+    },
+    {
+      "Name": "UpdateSubscriber",
+      "Resources": [
+        {
+          "Name": "subscriber"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSubscriberNotification",
+      "Resources": [
+        {
+          "Name": "subscriber"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "data-lake",
+      "ARNFormats": [
+        "arn:${Partition}:securitylake:${Region}:${Account}:data-lake/default"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "subscriber",
+      "ARNFormats": [
+        "arn:${Partition}:securitylake:${Region}:${Account}:subscriber/${SubscriberId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

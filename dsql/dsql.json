@@ -1,0 +1,148 @@
+{
+  "Name": "dsql",
+  "Actions": [
+    {
+      "Name": "CreateCluster",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Cluster"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMultiRegionClusters",
+      "ActionConditionKeys": [
+        "dsql:WitnessRegion"
+      ],
+      "Resources": [
+        {
+          "Name": "Cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DbConnect",
+      "Resources": [
+        {
+          "Name": "Cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DbConnectAdmin",
+      "Resources": [
+        {
+          "Name": "Cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCluster",
+      "Resources": [
+        {
+          "Name": "Cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMultiRegionClusters",
+      "Resources": [
+        {
+          "Name": "Cluster"
+        }
+      ]
+    },
+    {
+      "Name": "GetCluster",
+      "Resources": [
+        {
+          "Name": "Cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListClusters"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "Cluster"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Cluster"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Cluster"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCluster",
+      "Resources": [
+        {
+          "Name": "Cluster"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "dsql:WitnessRegion",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Cluster",
+      "ARNFormats": [
+        "arn:${Partition}:dsql:${Region}:${Account}:cluster/${Identifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

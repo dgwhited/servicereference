@@ -1,0 +1,282 @@
+{
+  "Name": "backup-gateway",
+  "Actions": [
+    {
+      "Name": "AssociateGatewayToServer",
+      "Resources": [
+        {
+          "Name": "gateway"
+        },
+        {
+          "Name": "hypervisor"
+        }
+      ]
+    },
+    {
+      "Name": "Backup",
+      "Resources": [
+        {
+          "Name": "virtualmachine"
+        }
+      ]
+    },
+    {
+      "Name": "CreateGateway",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteGateway",
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteHypervisor",
+      "Resources": [
+        {
+          "Name": "hypervisor"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateGatewayFromServer",
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "GetBandwidthRateLimitSchedule",
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "GetGateway",
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "GetHypervisor",
+      "Resources": [
+        {
+          "Name": "hypervisor"
+        }
+      ]
+    },
+    {
+      "Name": "GetHypervisorPropertyMappings",
+      "Resources": [
+        {
+          "Name": "hypervisor"
+        }
+      ]
+    },
+    {
+      "Name": "GetVirtualMachine",
+      "Resources": [
+        {
+          "Name": "virtualmachine"
+        }
+      ]
+    },
+    {
+      "Name": "ImportHypervisorConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "ListGateways"
+    },
+    {
+      "Name": "ListHypervisors"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "gateway"
+        },
+        {
+          "Name": "hypervisor"
+        },
+        {
+          "Name": "virtualmachine"
+        }
+      ]
+    },
+    {
+      "Name": "ListVirtualMachines"
+    },
+    {
+      "Name": "PutBandwidthRateLimitSchedule",
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "PutHypervisorPropertyMappings",
+      "Resources": [
+        {
+          "Name": "hypervisor"
+        }
+      ]
+    },
+    {
+      "Name": "PutMaintenanceStartTime",
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "Restore",
+      "Resources": [
+        {
+          "Name": "hypervisor"
+        }
+      ]
+    },
+    {
+      "Name": "StartVirtualMachinesMetadataSync",
+      "Resources": [
+        {
+          "Name": "hypervisor"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "gateway"
+        },
+        {
+          "Name": "hypervisor"
+        },
+        {
+          "Name": "virtualmachine"
+        }
+      ]
+    },
+    {
+      "Name": "TestHypervisorConfiguration",
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "gateway"
+        },
+        {
+          "Name": "hypervisor"
+        },
+        {
+          "Name": "virtualmachine"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGatewayInformation",
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGatewaySoftwareNow",
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateHypervisor",
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "gateway",
+      "ARNFormats": [
+        "arn:${Partition}:backup-gateway::${Account}:gateway/${GatewayId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "hypervisor",
+      "ARNFormats": [
+        "arn:${Partition}:backup-gateway::${Account}:hypervisor/${HypervisorId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "virtualmachine",
+      "ARNFormats": [
+        "arn:${Partition}:backup-gateway::${Account}:vm/${VirtualmachineId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

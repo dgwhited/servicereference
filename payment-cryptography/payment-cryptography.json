@@ -1,0 +1,305 @@
+{
+  "Name": "payment-cryptography",
+  "Actions": [
+    {
+      "Name": "CreateAlias",
+      "Resources": [
+        {
+          "Name": "alias"
+        },
+        {
+          "Name": "key"
+        }
+      ]
+    },
+    {
+      "Name": "CreateKey",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DecryptData"
+    },
+    {
+      "Name": "DeleteAlias",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "alias"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteKey",
+      "Resources": [
+        {
+          "Name": "key"
+        }
+      ]
+    },
+    {
+      "Name": "EncryptData"
+    },
+    {
+      "Name": "ExportKey",
+      "Resources": [
+        {
+          "Name": "key"
+        }
+      ]
+    },
+    {
+      "Name": "GenerateCardValidationData"
+    },
+    {
+      "Name": "GenerateMac"
+    },
+    {
+      "Name": "GenerateMacEmvPinChange",
+      "Resources": [
+        {
+          "Name": "alias"
+        },
+        {
+          "Name": "key"
+        }
+      ]
+    },
+    {
+      "Name": "GeneratePinData"
+    },
+    {
+      "Name": "GetAlias",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "alias"
+        },
+        {
+          "Name": "key"
+        }
+      ]
+    },
+    {
+      "Name": "GetKey",
+      "Resources": [
+        {
+          "Name": "key"
+        }
+      ]
+    },
+    {
+      "Name": "GetParametersForExport"
+    },
+    {
+      "Name": "GetParametersForImport"
+    },
+    {
+      "Name": "GetPublicKeyCertificate",
+      "Resources": [
+        {
+          "Name": "key"
+        }
+      ]
+    },
+    {
+      "Name": "ImportKey",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "ListAliases"
+    },
+    {
+      "Name": "ListKeys"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "key"
+        }
+      ]
+    },
+    {
+      "Name": "ReEncryptData"
+    },
+    {
+      "Name": "RestoreKey",
+      "Resources": [
+        {
+          "Name": "key"
+        }
+      ]
+    },
+    {
+      "Name": "StartKeyUsage",
+      "Resources": [
+        {
+          "Name": "key"
+        }
+      ]
+    },
+    {
+      "Name": "StopKeyUsage",
+      "Resources": [
+        {
+          "Name": "key"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "key"
+        }
+      ]
+    },
+    {
+      "Name": "TranslatePinData"
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "key"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAlias",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "alias"
+        },
+        {
+          "Name": "key"
+        }
+      ]
+    },
+    {
+      "Name": "VerifyAuthRequestCryptogram"
+    },
+    {
+      "Name": "VerifyCardValidationData"
+    },
+    {
+      "Name": "VerifyMac"
+    },
+    {
+      "Name": "VerifyPinData"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "payment-cryptography:CertificateAuthorityPublicKeyIdentifier",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "payment-cryptography:ImportKeyMaterial",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "payment-cryptography:KeyAlgorithm",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "payment-cryptography:KeyClass",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "payment-cryptography:KeyUsage",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "payment-cryptography:RequestAlias",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "payment-cryptography:ResourceAliases",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "payment-cryptography:WrappingKeyIdentifier",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "alias",
+      "ARNFormats": [
+        "arn:${Partition}:payment-cryptography:${Region}:${Account}:alias/${Alias}"
+      ],
+      "ConditionKeys": [
+        "payment-cryptography:ResourceAliases"
+      ]
+    },
+    {
+      "Name": "key",
+      "ARNFormats": [
+        "arn:${Partition}:payment-cryptography:${Region}:${Account}:key/${KeyId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "payment-cryptography:ResourceAliases"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

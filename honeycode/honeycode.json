@@ -1,0 +1,182 @@
+{
+  "Name": "honeycode",
+  "Actions": [
+    {
+      "Name": "ApproveTeamAssociation"
+    },
+    {
+      "Name": "BatchCreateTableRows",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDeleteTableRows",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "BatchUpdateTableRows",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "BatchUpsertTableRows",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTeam"
+    },
+    {
+      "Name": "CreateTenant"
+    },
+    {
+      "Name": "DeleteDomains"
+    },
+    {
+      "Name": "DeregisterGroups"
+    },
+    {
+      "Name": "DescribeTableDataImportJob",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTeam"
+    },
+    {
+      "Name": "GetScreenData",
+      "Resources": [
+        {
+          "Name": "screen"
+        }
+      ]
+    },
+    {
+      "Name": "InvokeScreenAutomation",
+      "Resources": [
+        {
+          "Name": "screen-automation"
+        }
+      ]
+    },
+    {
+      "Name": "ListDomains"
+    },
+    {
+      "Name": "ListGroups"
+    },
+    {
+      "Name": "ListTableColumns",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "ListTableRows",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "ListTables",
+      "Resources": [
+        {
+          "Name": "workbook"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "ListTeamAssociations"
+    },
+    {
+      "Name": "ListTenants"
+    },
+    {
+      "Name": "QueryTableRows",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterDomainForVerification"
+    },
+    {
+      "Name": "RegisterGroups"
+    },
+    {
+      "Name": "RejectTeamAssociation"
+    },
+    {
+      "Name": "RestartDomainVerification"
+    },
+    {
+      "Name": "StartTableDataImportJob",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource"
+    },
+    {
+      "Name": "UntagResource"
+    },
+    {
+      "Name": "UpdateTeam"
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "screen",
+      "ARNFormats": [
+        "arn:${Partition}:honeycode:${Region}:${Account}:screen:workbook/${WorkbookId}/app/${AppId}/screen/${ScreenId}"
+      ]
+    },
+    {
+      "Name": "screen-automation",
+      "ARNFormats": [
+        "arn:${Partition}:honeycode:${Region}:${Account}:screen-automation:workbook/${WorkbookId}/app/${AppId}/screen/${ScreenId}/automation/${AutomationId}"
+      ]
+    },
+    {
+      "Name": "table",
+      "ARNFormats": [
+        "arn:${Partition}:honeycode:${Region}:${Account}:table:workbook/${WorkbookId}/table/${TableId}"
+      ]
+    },
+    {
+      "Name": "workbook",
+      "ARNFormats": [
+        "arn:${Partition}:honeycode:${Region}:${Account}:workbook:workbook/${WorkbookId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

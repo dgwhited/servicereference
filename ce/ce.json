@@ -1,0 +1,425 @@
+{
+  "Name": "ce",
+  "Actions": [
+    {
+      "Name": "CreateAnomalyMonitor",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateAnomalySubscription",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateCostCategoryDefinition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateNotificationSubscription"
+    },
+    {
+      "Name": "CreateReport"
+    },
+    {
+      "Name": "DeleteAnomalyMonitor",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "anomalymonitor"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAnomalySubscription",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "anomalysubscription"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCostCategoryDefinition",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "costcategory"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNotificationSubscription"
+    },
+    {
+      "Name": "DeleteReport"
+    },
+    {
+      "Name": "DescribeCostCategoryDefinition",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "costcategory"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeNotificationSubscription"
+    },
+    {
+      "Name": "DescribeReport"
+    },
+    {
+      "Name": "GetAnomalies",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "anomalymonitor"
+        }
+      ]
+    },
+    {
+      "Name": "GetAnomalyMonitors",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "anomalymonitor"
+        }
+      ]
+    },
+    {
+      "Name": "GetAnomalySubscriptions",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "anomalysubscription"
+        }
+      ]
+    },
+    {
+      "Name": "GetApproximateUsageRecords"
+    },
+    {
+      "Name": "GetCommitmentPurchaseAnalysis"
+    },
+    {
+      "Name": "GetConsoleActionSetEnforced"
+    },
+    {
+      "Name": "GetCostAndUsage",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "GetCostAndUsageWithResources",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "GetCostCategories",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "GetCostForecast",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "GetDimensionValues",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "GetPreferences"
+    },
+    {
+      "Name": "GetReservationCoverage"
+    },
+    {
+      "Name": "GetReservationPurchaseRecommendation"
+    },
+    {
+      "Name": "GetReservationUtilization"
+    },
+    {
+      "Name": "GetRightsizingRecommendation"
+    },
+    {
+      "Name": "GetSavingsPlanPurchaseRecommendationDetails"
+    },
+    {
+      "Name": "GetSavingsPlansCoverage"
+    },
+    {
+      "Name": "GetSavingsPlansPurchaseRecommendation"
+    },
+    {
+      "Name": "GetSavingsPlansUtilization"
+    },
+    {
+      "Name": "GetSavingsPlansUtilizationDetails"
+    },
+    {
+      "Name": "GetTags",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "GetUsageForecast",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "ListCommitmentPurchaseAnalyses"
+    },
+    {
+      "Name": "ListCostAllocationTagBackfillHistory"
+    },
+    {
+      "Name": "ListCostAllocationTags"
+    },
+    {
+      "Name": "ListCostCategoryDefinitions"
+    },
+    {
+      "Name": "ListSavingsPlansPurchaseRecommendationGeneration"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "anomalymonitor"
+        },
+        {
+          "Name": "anomalysubscription"
+        },
+        {
+          "Name": "costcategory"
+        }
+      ]
+    },
+    {
+      "Name": "ProvideAnomalyFeedback"
+    },
+    {
+      "Name": "StartCommitmentPurchaseAnalysis"
+    },
+    {
+      "Name": "StartCostAllocationTagBackfill"
+    },
+    {
+      "Name": "StartSavingsPlansPurchaseRecommendationGeneration"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "anomalymonitor"
+        },
+        {
+          "Name": "anomalysubscription"
+        },
+        {
+          "Name": "costcategory"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "anomalymonitor"
+        },
+        {
+          "Name": "anomalysubscription"
+        },
+        {
+          "Name": "costcategory"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAnomalyMonitor",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "anomalymonitor"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAnomalySubscription",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "anomalysubscription"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConsoleActionSetEnforced"
+    },
+    {
+      "Name": "UpdateCostAllocationTagsStatus"
+    },
+    {
+      "Name": "UpdateCostCategoryDefinition",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "costcategory"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNotificationSubscription"
+    },
+    {
+      "Name": "UpdatePreferences"
+    },
+    {
+      "Name": "UpdateReport"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "anomalymonitor",
+      "ARNFormats": [
+        "arn:${Partition}:ce::${Account}:anomalymonitor/${Identifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "anomalysubscription",
+      "ARNFormats": [
+        "arn:${Partition}:ce::${Account}:anomalysubscription/${Identifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "billingview",
+      "ARNFormats": [
+        "arn:${Partition}:billing::${Account}:billingview/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "costcategory",
+      "ARNFormats": [
+        "arn:${Partition}:ce::${Account}:costcategory/${Identifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

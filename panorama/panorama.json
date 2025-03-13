@@ -1,0 +1,295 @@
+{
+  "Name": "panorama",
+  "Actions": [
+    {
+      "Name": "CreateApplicationInstance",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateJobForDevices"
+    },
+    {
+      "Name": "CreateNodeFromTemplateJob"
+    },
+    {
+      "Name": "CreatePackage",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreatePackageImportJob"
+    },
+    {
+      "Name": "DeleteDevice",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePackage",
+      "Resources": [
+        {
+          "Name": "package"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterPackageVersion",
+      "Resources": [
+        {
+          "Name": "package"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeApplicationInstance",
+      "Resources": [
+        {
+          "Name": "applicationInstance"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeApplicationInstanceDetails",
+      "Resources": [
+        {
+          "Name": "applicationInstance"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDevice",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDeviceJob"
+    },
+    {
+      "Name": "DescribeNode"
+    },
+    {
+      "Name": "DescribeNodeFromTemplateJob"
+    },
+    {
+      "Name": "DescribePackage",
+      "Resources": [
+        {
+          "Name": "package"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePackageImportJob"
+    },
+    {
+      "Name": "DescribePackageVersion",
+      "Resources": [
+        {
+          "Name": "package"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSoftware"
+    },
+    {
+      "Name": "GetWebSocketURL"
+    },
+    {
+      "Name": "ListApplicationInstanceDependencies",
+      "Resources": [
+        {
+          "Name": "applicationInstance"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplicationInstanceNodeInstances",
+      "Resources": [
+        {
+          "Name": "applicationInstance"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplicationInstances",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "ListDevices"
+    },
+    {
+      "Name": "ListDevicesJobs",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "ListNodeFromTemplateJobs"
+    },
+    {
+      "Name": "ListNodes"
+    },
+    {
+      "Name": "ListPackageImportJobs"
+    },
+    {
+      "Name": "ListPackages"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "applicationInstance"
+        },
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "package"
+        }
+      ]
+    },
+    {
+      "Name": "ProvisionDevice",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "RegisterPackageVersion",
+      "Resources": [
+        {
+          "Name": "package"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveApplicationInstance",
+      "Resources": [
+        {
+          "Name": "applicationInstance"
+        }
+      ]
+    },
+    {
+      "Name": "SignalApplicationInstanceNodeInstances",
+      "Resources": [
+        {
+          "Name": "applicationInstance"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "applicationInstance"
+        },
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "package"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "applicationInstance"
+        },
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "package"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDeviceMetadata",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "applicationInstance",
+      "ARNFormats": [
+        "arn:${Partition}:panorama:${Region}:${Account}:applicationInstance/${ApplicationInstanceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "device",
+      "ARNFormats": [
+        "arn:${Partition}:panorama:${Region}:${Account}:device/${DeviceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "package",
+      "ARNFormats": [
+        "arn:${Partition}:panorama:${Region}:${Account}:package/${PackageId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

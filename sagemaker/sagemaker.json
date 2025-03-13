@@ -1,0 +1,4768 @@
+{
+  "Name": "sagemaker",
+  "Actions": [
+    {
+      "Name": "AddAssociation",
+      "Resources": [
+        {
+          "Name": "action"
+        },
+        {
+          "Name": "artifact"
+        },
+        {
+          "Name": "context"
+        },
+        {
+          "Name": "experiment"
+        },
+        {
+          "Name": "experiment-trial-component"
+        }
+      ]
+    },
+    {
+      "Name": "AddTags",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:TaggingAction"
+      ],
+      "Resources": [
+        {
+          "Name": "action"
+        },
+        {
+          "Name": "algorithm"
+        },
+        {
+          "Name": "app"
+        },
+        {
+          "Name": "app-image-config"
+        },
+        {
+          "Name": "artifact"
+        },
+        {
+          "Name": "automl-job"
+        },
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "cluster-scheduler-config"
+        },
+        {
+          "Name": "code-repository"
+        },
+        {
+          "Name": "compilation-job"
+        },
+        {
+          "Name": "compute-quota"
+        },
+        {
+          "Name": "context"
+        },
+        {
+          "Name": "data-quality-job-definition"
+        },
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "device-fleet"
+        },
+        {
+          "Name": "domain"
+        },
+        {
+          "Name": "edge-deployment-plan"
+        },
+        {
+          "Name": "edge-packaging-job"
+        },
+        {
+          "Name": "endpoint"
+        },
+        {
+          "Name": "endpoint-config"
+        },
+        {
+          "Name": "experiment"
+        },
+        {
+          "Name": "experiment-trial"
+        },
+        {
+          "Name": "experiment-trial-component"
+        },
+        {
+          "Name": "feature-group"
+        },
+        {
+          "Name": "flow-definition"
+        },
+        {
+          "Name": "hub"
+        },
+        {
+          "Name": "hub-content"
+        },
+        {
+          "Name": "human-task-ui"
+        },
+        {
+          "Name": "hyper-parameter-tuning-job"
+        },
+        {
+          "Name": "image"
+        },
+        {
+          "Name": "inference-component"
+        },
+        {
+          "Name": "inference-recommendations-job"
+        },
+        {
+          "Name": "labeling-job"
+        },
+        {
+          "Name": "mlflow-tracking-server"
+        },
+        {
+          "Name": "model"
+        },
+        {
+          "Name": "model-bias-job-definition"
+        },
+        {
+          "Name": "model-card"
+        },
+        {
+          "Name": "model-explainability-job-definition"
+        },
+        {
+          "Name": "model-package"
+        },
+        {
+          "Name": "model-package-group"
+        },
+        {
+          "Name": "model-quality-job-definition"
+        },
+        {
+          "Name": "monitoring-schedule"
+        },
+        {
+          "Name": "notebook-instance"
+        },
+        {
+          "Name": "optimization-job"
+        },
+        {
+          "Name": "partner-app"
+        },
+        {
+          "Name": "pipeline"
+        },
+        {
+          "Name": "processing-job"
+        },
+        {
+          "Name": "project"
+        },
+        {
+          "Name": "reserved-capacity"
+        },
+        {
+          "Name": "space"
+        },
+        {
+          "Name": "studio-lifecycle-config"
+        },
+        {
+          "Name": "training-job"
+        },
+        {
+          "Name": "training-plan"
+        },
+        {
+          "Name": "transform-job"
+        },
+        {
+          "Name": "user-profile"
+        },
+        {
+          "Name": "workteam"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateTrialComponent",
+      "Resources": [
+        {
+          "Name": "experiment-trial"
+        },
+        {
+          "Name": "experiment-trial-component"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDeleteClusterNodes",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDescribeModelPackage",
+      "Resources": [
+        {
+          "Name": "model-package"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetMetrics",
+      "Resources": [
+        {
+          "Name": "experiment-trial-component"
+        },
+        {
+          "Name": "training-job"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetRecord",
+      "Resources": [
+        {
+          "Name": "feature-group"
+        }
+      ]
+    },
+    {
+      "Name": "BatchPutMetrics",
+      "Resources": [
+        {
+          "Name": "experiment-trial-component"
+        },
+        {
+          "Name": "training-job"
+        }
+      ]
+    },
+    {
+      "Name": "CallPartnerAppApi",
+      "Resources": [
+        {
+          "Name": "partner-app"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAction",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "action"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAlgorithm",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "algorithm"
+        }
+      ]
+    },
+    {
+      "Name": "CreateApp",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:ImageArns",
+        "sagemaker:ImageVersionArns",
+        "sagemaker:InstanceTypes",
+        "sagemaker:OwnerUserProfileArn",
+        "sagemaker:SpaceSharingType"
+      ],
+      "Resources": [
+        {
+          "Name": "app"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAppImageConfig",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "app-image-config"
+        }
+      ]
+    },
+    {
+      "Name": "CreateArtifact",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "artifact"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAutoMLJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:InterContainerTrafficEncryption",
+        "sagemaker:OutputKmsKey",
+        "sagemaker:VolumeKmsKey",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
+      "Resources": [
+        {
+          "Name": "automl-job"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAutoMLJobV2",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:InterContainerTrafficEncryption",
+        "sagemaker:OutputKmsKey",
+        "sagemaker:VolumeKmsKey",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
+      "Resources": [
+        {
+          "Name": "automl-job"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCluster",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "reserved-capacity"
+        },
+        {
+          "Name": "training-plan"
+        }
+      ]
+    },
+    {
+      "Name": "CreateClusterSchedulerConfig",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "cluster-scheduler-config"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCodeRepository",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "code-repository"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCompilationJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "compilation-job"
+        }
+      ]
+    },
+    {
+      "Name": "CreateComputeQuota",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "compute-quota"
+        }
+      ]
+    },
+    {
+      "Name": "CreateContext",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "context"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataQualityJobDefinition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:InstanceTypes",
+        "sagemaker:InterContainerTrafficEncryption",
+        "sagemaker:MaxRuntimeInSeconds",
+        "sagemaker:NetworkIsolation",
+        "sagemaker:OutputKmsKey",
+        "sagemaker:VolumeKmsKey",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
+      "Resources": [
+        {
+          "Name": "data-quality-job-definition"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDeviceFleet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "device-fleet"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDomain",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:AppNetworkAccessType",
+        "sagemaker:DomainSharingOutputKmsKey",
+        "sagemaker:ImageArns",
+        "sagemaker:ImageVersionArns",
+        "sagemaker:InstanceTypes",
+        "sagemaker:VolumeKmsKey",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEdgeDeploymentPlan",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "edge-deployment-plan"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEdgeDeploymentStage",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "edge-deployment-plan"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEdgePackagingJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "edge-packaging-job"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEndpoint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "endpoint"
+        },
+        {
+          "Name": "endpoint-config"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEndpointConfig",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:AcceleratorTypes",
+        "sagemaker:InstanceTypes",
+        "sagemaker:ModelArn",
+        "sagemaker:NetworkIsolation",
+        "sagemaker:ServerlessMaxConcurrency",
+        "sagemaker:ServerlessMemorySize",
+        "sagemaker:VolumeKmsKey",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
+      "Resources": [
+        {
+          "Name": "endpoint-config"
+        }
+      ]
+    },
+    {
+      "Name": "CreateExperiment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "experiment"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFeatureGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:FeatureGroupDisableGlueTableCreation",
+        "sagemaker:FeatureGroupEnableOnlineStore",
+        "sagemaker:FeatureGroupOfflineStoreConfig",
+        "sagemaker:FeatureGroupOfflineStoreKmsKey",
+        "sagemaker:FeatureGroupOfflineStoreS3Uri",
+        "sagemaker:FeatureGroupOnlineStoreKmsKey"
+      ],
+      "Resources": [
+        {
+          "Name": "feature-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFlowDefinition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:WorkteamArn",
+        "sagemaker:WorkteamType"
+      ],
+      "Resources": [
+        {
+          "Name": "flow-definition"
+        }
+      ]
+    },
+    {
+      "Name": "CreateHub",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "hub"
+        }
+      ]
+    },
+    {
+      "Name": "CreateHubContentReference",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "hub"
+        },
+        {
+          "Name": "hub-content"
+        }
+      ]
+    },
+    {
+      "Name": "CreateHumanTaskUi",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "human-task-ui"
+        }
+      ]
+    },
+    {
+      "Name": "CreateHyperParameterTuningJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:FileSystemAccessMode",
+        "sagemaker:FileSystemDirectoryPath",
+        "sagemaker:FileSystemId",
+        "sagemaker:FileSystemType",
+        "sagemaker:InstanceTypes",
+        "sagemaker:InterContainerTrafficEncryption",
+        "sagemaker:MaxRuntimeInSeconds",
+        "sagemaker:NetworkIsolation",
+        "sagemaker:OutputKmsKey",
+        "sagemaker:VolumeKmsKey",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
+      "Resources": [
+        {
+          "Name": "hyper-parameter-tuning-job"
+        }
+      ]
+    },
+    {
+      "Name": "CreateImage",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "image"
+        }
+      ]
+    },
+    {
+      "Name": "CreateImageVersion",
+      "Resources": [
+        {
+          "Name": "image"
+        }
+      ]
+    },
+    {
+      "Name": "CreateInferenceComponent",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:ModelArn"
+      ],
+      "Resources": [
+        {
+          "Name": "endpoint"
+        },
+        {
+          "Name": "inference-component"
+        }
+      ]
+    },
+    {
+      "Name": "CreateInferenceExperiment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "inference-experiment"
+        }
+      ]
+    },
+    {
+      "Name": "CreateInferenceRecommendationsJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "inference-recommendations-job"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLabelingJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:OutputKmsKey",
+        "sagemaker:VolumeKmsKey",
+        "sagemaker:WorkteamArn",
+        "sagemaker:WorkteamType"
+      ],
+      "Resources": [
+        {
+          "Name": "labeling-job"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLineageGroupPolicy"
+    },
+    {
+      "Name": "CreateMlflowTrackingServer",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "mlflow-tracking-server"
+        }
+      ]
+    },
+    {
+      "Name": "CreateModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:DirectGatedModelAccess",
+        "sagemaker:NetworkIsolation",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "CreateModelBiasJobDefinition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:InstanceTypes",
+        "sagemaker:InterContainerTrafficEncryption",
+        "sagemaker:MaxRuntimeInSeconds",
+        "sagemaker:NetworkIsolation",
+        "sagemaker:OutputKmsKey",
+        "sagemaker:VolumeKmsKey",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
+      "Resources": [
+        {
+          "Name": "model-bias-job-definition"
+        }
+      ]
+    },
+    {
+      "Name": "CreateModelCard",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "model-card"
+        }
+      ]
+    },
+    {
+      "Name": "CreateModelCardExportJob",
+      "Resources": [
+        {
+          "Name": "model-card"
+        }
+      ]
+    },
+    {
+      "Name": "CreateModelExplainabilityJobDefinition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:InstanceTypes",
+        "sagemaker:InterContainerTrafficEncryption",
+        "sagemaker:MaxRuntimeInSeconds",
+        "sagemaker:NetworkIsolation",
+        "sagemaker:OutputKmsKey",
+        "sagemaker:VolumeKmsKey",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
+      "Resources": [
+        {
+          "Name": "model-explainability-job-definition"
+        }
+      ]
+    },
+    {
+      "Name": "CreateModelPackage",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:CustomerMetadataProperties/${MetadataKey}",
+        "sagemaker:ModelApprovalStatus",
+        "sagemaker:ModelLifeCycle:Stage",
+        "sagemaker:ModelLifeCycle:StageStatus"
+      ],
+      "Resources": [
+        {
+          "Name": "model-package"
+        },
+        {
+          "Name": "model-package-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateModelPackageGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "model-package-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateModelQualityJobDefinition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:InstanceTypes",
+        "sagemaker:InterContainerTrafficEncryption",
+        "sagemaker:MaxRuntimeInSeconds",
+        "sagemaker:NetworkIsolation",
+        "sagemaker:OutputKmsKey",
+        "sagemaker:VolumeKmsKey",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
+      "Resources": [
+        {
+          "Name": "model-quality-job-definition"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMonitoringSchedule",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:InstanceTypes",
+        "sagemaker:InterContainerTrafficEncryption",
+        "sagemaker:MaxRuntimeInSeconds",
+        "sagemaker:NetworkIsolation",
+        "sagemaker:OutputKmsKey",
+        "sagemaker:VolumeKmsKey",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
+      "Resources": [
+        {
+          "Name": "monitoring-schedule"
+        }
+      ]
+    },
+    {
+      "Name": "CreateNotebookInstance",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:AcceleratorTypes",
+        "sagemaker:DirectInternetAccess",
+        "sagemaker:InstanceTypes",
+        "sagemaker:MinimumInstanceMetadataServiceVersion",
+        "sagemaker:RootAccess",
+        "sagemaker:VolumeKmsKey",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
+      "Resources": [
+        {
+          "Name": "notebook-instance"
+        }
+      ]
+    },
+    {
+      "Name": "CreateNotebookInstanceLifecycleConfig",
+      "Resources": [
+        {
+          "Name": "notebook-instance-lifecycle-config"
+        }
+      ]
+    },
+    {
+      "Name": "CreateOptimizationJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "optimization-job"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePartnerApp",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "partner-app"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePartnerAppPresignedUrl",
+      "Resources": [
+        {
+          "Name": "partner-app"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePipeline",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePresignedDomainUrl",
+      "Resources": [
+        {
+          "Name": "user-profile"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePresignedMlflowTrackingServerUrl",
+      "Resources": [
+        {
+          "Name": "mlflow-tracking-server"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePresignedNotebookInstanceUrl",
+      "Resources": [
+        {
+          "Name": "notebook-instance"
+        }
+      ]
+    },
+    {
+      "Name": "CreateProcessingJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:InstanceTypes",
+        "sagemaker:InterContainerTrafficEncryption",
+        "sagemaker:MaxRuntimeInSeconds",
+        "sagemaker:NetworkIsolation",
+        "sagemaker:OutputKmsKey",
+        "sagemaker:VolumeKmsKey",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
+      "Resources": [
+        {
+          "Name": "processing-job"
+        }
+      ]
+    },
+    {
+      "Name": "CreateProject",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "CreateReservedCapacity",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "reserved-capacity"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSharedModel",
+      "Resources": [
+        {
+          "Name": "shared-model"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSpace",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:ImageArns",
+        "sagemaker:ImageVersionArns",
+        "sagemaker:InstanceTypes",
+        "sagemaker:OwnerUserProfileArn",
+        "sagemaker:SpaceSharingType"
+      ],
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStudioLifecycleConfig",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "studio-lifecycle-config"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTrainingJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:DirectGatedModelAccess",
+        "sagemaker:EnableRemoteDebug",
+        "sagemaker:FileSystemAccessMode",
+        "sagemaker:FileSystemDirectoryPath",
+        "sagemaker:FileSystemId",
+        "sagemaker:FileSystemType",
+        "sagemaker:InstanceTypes",
+        "sagemaker:InterContainerTrafficEncryption",
+        "sagemaker:KeepAlivePeriod",
+        "sagemaker:MaxRuntimeInSeconds",
+        "sagemaker:NetworkIsolation",
+        "sagemaker:OutputKmsKey",
+        "sagemaker:VolumeKmsKey",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
+      "Resources": [
+        {
+          "Name": "reserved-capacity"
+        },
+        {
+          "Name": "training-job"
+        },
+        {
+          "Name": "training-plan"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTrainingPlan",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "training-plan"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTransformJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:InstanceTypes",
+        "sagemaker:ModelArn",
+        "sagemaker:OutputKmsKey",
+        "sagemaker:VolumeKmsKey"
+      ],
+      "Resources": [
+        {
+          "Name": "transform-job"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTrial",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "experiment"
+        },
+        {
+          "Name": "experiment-trial"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTrialComponent",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "experiment-trial-component"
+        }
+      ]
+    },
+    {
+      "Name": "CreateUserProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:DomainSharingOutputKmsKey",
+        "sagemaker:ImageArns",
+        "sagemaker:ImageVersionArns",
+        "sagemaker:InstanceTypes",
+        "sagemaker:VpcSecurityGroupIds"
+      ],
+      "Resources": [
+        {
+          "Name": "user-profile"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWorkforce",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "workforce"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWorkteam",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "workteam"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAction",
+      "Resources": [
+        {
+          "Name": "action"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAlgorithm",
+      "Resources": [
+        {
+          "Name": "algorithm"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApp",
+      "ActionConditionKeys": [
+        "sagemaker:OwnerUserProfileArn",
+        "sagemaker:SpaceSharingType"
+      ],
+      "Resources": [
+        {
+          "Name": "app"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAppImageConfig",
+      "Resources": [
+        {
+          "Name": "app-image-config"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteArtifact",
+      "Resources": [
+        {
+          "Name": "artifact"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAssociation",
+      "Resources": [
+        {
+          "Name": "action"
+        },
+        {
+          "Name": "artifact"
+        },
+        {
+          "Name": "context"
+        },
+        {
+          "Name": "experiment"
+        },
+        {
+          "Name": "experiment-trial-component"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteClusterSchedulerConfig",
+      "Resources": [
+        {
+          "Name": "cluster-scheduler-config"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCodeRepository",
+      "Resources": [
+        {
+          "Name": "code-repository"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCompilationJob",
+      "Resources": [
+        {
+          "Name": "compilation-job"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteComputeQuota",
+      "Resources": [
+        {
+          "Name": "compute-quota"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteContext",
+      "Resources": [
+        {
+          "Name": "context"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataQualityJobDefinition",
+      "Resources": [
+        {
+          "Name": "data-quality-job-definition"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeviceFleet",
+      "Resources": [
+        {
+          "Name": "device-fleet"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDomain",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEdgeDeploymentPlan",
+      "Resources": [
+        {
+          "Name": "edge-deployment-plan"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEdgeDeploymentStage",
+      "Resources": [
+        {
+          "Name": "edge-deployment-plan"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEndpoint",
+      "Resources": [
+        {
+          "Name": "endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEndpointConfig",
+      "Resources": [
+        {
+          "Name": "endpoint-config"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteExperiment",
+      "Resources": [
+        {
+          "Name": "experiment"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFeatureGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "feature-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFlowDefinition",
+      "Resources": [
+        {
+          "Name": "flow-definition"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteHub",
+      "Resources": [
+        {
+          "Name": "hub"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteHubContent",
+      "Resources": [
+        {
+          "Name": "hub"
+        },
+        {
+          "Name": "hub-content"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteHubContentReference",
+      "Resources": [
+        {
+          "Name": "hub"
+        },
+        {
+          "Name": "hub-content"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteHumanLoop",
+      "Resources": [
+        {
+          "Name": "human-loop"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteHumanTaskUi",
+      "Resources": [
+        {
+          "Name": "human-task-ui"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteHyperParameterTuningJob",
+      "Resources": [
+        {
+          "Name": "hyper-parameter-tuning-job"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteImage",
+      "Resources": [
+        {
+          "Name": "image"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteImageVersion",
+      "Resources": [
+        {
+          "Name": "image-version"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInferenceComponent",
+      "Resources": [
+        {
+          "Name": "inference-component"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInferenceExperiment",
+      "Resources": [
+        {
+          "Name": "inference-experiment"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLineageGroupPolicy"
+    },
+    {
+      "Name": "DeleteMlflowTrackingServer",
+      "Resources": [
+        {
+          "Name": "mlflow-tracking-server"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteModel",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteModelBiasJobDefinition",
+      "Resources": [
+        {
+          "Name": "model-bias-job-definition"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteModelCard",
+      "Resources": [
+        {
+          "Name": "model-card"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteModelExplainabilityJobDefinition",
+      "Resources": [
+        {
+          "Name": "model-explainability-job-definition"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteModelPackage",
+      "Resources": [
+        {
+          "Name": "model-package"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteModelPackageGroup",
+      "Resources": [
+        {
+          "Name": "model-package-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteModelPackageGroupPolicy",
+      "Resources": [
+        {
+          "Name": "model-package-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteModelQualityJobDefinition",
+      "Resources": [
+        {
+          "Name": "model-quality-job-definition"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMonitoringSchedule",
+      "Resources": [
+        {
+          "Name": "monitoring-schedule"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNotebookInstance",
+      "Resources": [
+        {
+          "Name": "notebook-instance"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNotebookInstanceLifecycleConfig",
+      "Resources": [
+        {
+          "Name": "notebook-instance-lifecycle-config"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteOptimizationJob",
+      "Resources": [
+        {
+          "Name": "optimization-job"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePartnerApp",
+      "Resources": [
+        {
+          "Name": "partner-app"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRecord",
+      "Resources": [
+        {
+          "Name": "feature-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy"
+    },
+    {
+      "Name": "DeleteSpace",
+      "ActionConditionKeys": [
+        "sagemaker:OwnerUserProfileArn",
+        "sagemaker:SpaceSharingType"
+      ],
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStudioLifecycleConfig",
+      "Resources": [
+        {
+          "Name": "studio-lifecycle-config"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTags",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "action"
+        },
+        {
+          "Name": "algorithm"
+        },
+        {
+          "Name": "app"
+        },
+        {
+          "Name": "app-image-config"
+        },
+        {
+          "Name": "artifact"
+        },
+        {
+          "Name": "automl-job"
+        },
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "cluster-scheduler-config"
+        },
+        {
+          "Name": "code-repository"
+        },
+        {
+          "Name": "compilation-job"
+        },
+        {
+          "Name": "compute-quota"
+        },
+        {
+          "Name": "context"
+        },
+        {
+          "Name": "data-quality-job-definition"
+        },
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "device-fleet"
+        },
+        {
+          "Name": "domain"
+        },
+        {
+          "Name": "edge-deployment-plan"
+        },
+        {
+          "Name": "edge-packaging-job"
+        },
+        {
+          "Name": "endpoint"
+        },
+        {
+          "Name": "endpoint-config"
+        },
+        {
+          "Name": "experiment"
+        },
+        {
+          "Name": "experiment-trial"
+        },
+        {
+          "Name": "experiment-trial-component"
+        },
+        {
+          "Name": "feature-group"
+        },
+        {
+          "Name": "flow-definition"
+        },
+        {
+          "Name": "hub"
+        },
+        {
+          "Name": "hub-content"
+        },
+        {
+          "Name": "human-task-ui"
+        },
+        {
+          "Name": "hyper-parameter-tuning-job"
+        },
+        {
+          "Name": "image"
+        },
+        {
+          "Name": "inference-component"
+        },
+        {
+          "Name": "inference-recommendations-job"
+        },
+        {
+          "Name": "labeling-job"
+        },
+        {
+          "Name": "mlflow-tracking-server"
+        },
+        {
+          "Name": "model"
+        },
+        {
+          "Name": "model-bias-job-definition"
+        },
+        {
+          "Name": "model-card"
+        },
+        {
+          "Name": "model-explainability-job-definition"
+        },
+        {
+          "Name": "model-package"
+        },
+        {
+          "Name": "model-package-group"
+        },
+        {
+          "Name": "model-quality-job-definition"
+        },
+        {
+          "Name": "monitoring-schedule"
+        },
+        {
+          "Name": "notebook-instance"
+        },
+        {
+          "Name": "optimization-job"
+        },
+        {
+          "Name": "partner-app"
+        },
+        {
+          "Name": "pipeline"
+        },
+        {
+          "Name": "processing-job"
+        },
+        {
+          "Name": "project"
+        },
+        {
+          "Name": "reserved-capacity"
+        },
+        {
+          "Name": "space"
+        },
+        {
+          "Name": "studio-lifecycle-config"
+        },
+        {
+          "Name": "training-job"
+        },
+        {
+          "Name": "training-plan"
+        },
+        {
+          "Name": "transform-job"
+        },
+        {
+          "Name": "user-profile"
+        },
+        {
+          "Name": "workteam"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTrial",
+      "Resources": [
+        {
+          "Name": "experiment-trial"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTrialComponent",
+      "Resources": [
+        {
+          "Name": "experiment-trial-component"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteUserProfile",
+      "Resources": [
+        {
+          "Name": "user-profile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkforce",
+      "Resources": [
+        {
+          "Name": "workforce"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkteam",
+      "Resources": [
+        {
+          "Name": "workteam"
+        }
+      ]
+    },
+    {
+      "Name": "DeployHubModel",
+      "Resources": [
+        {
+          "Name": "hub"
+        },
+        {
+          "Name": "hub-content"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterDevices",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAction",
+      "Resources": [
+        {
+          "Name": "action"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAlgorithm",
+      "Resources": [
+        {
+          "Name": "algorithm"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeApp",
+      "Resources": [
+        {
+          "Name": "app"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAppImageConfig",
+      "Resources": [
+        {
+          "Name": "app-image-config"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeArtifact",
+      "Resources": [
+        {
+          "Name": "artifact"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAutoMLJob",
+      "Resources": [
+        {
+          "Name": "automl-job"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAutoMLJobV2",
+      "Resources": [
+        {
+          "Name": "automl-job"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeClusterNode",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeClusterSchedulerConfig",
+      "Resources": [
+        {
+          "Name": "cluster-scheduler-config"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCodeRepository",
+      "Resources": [
+        {
+          "Name": "code-repository"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCompilationJob",
+      "Resources": [
+        {
+          "Name": "compilation-job"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeComputeQuota",
+      "Resources": [
+        {
+          "Name": "compute-quota"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeContext",
+      "Resources": [
+        {
+          "Name": "context"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDataQualityJobDefinition",
+      "Resources": [
+        {
+          "Name": "data-quality-job-definition"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDevice",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDeviceFleet",
+      "Resources": [
+        {
+          "Name": "device-fleet"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDomain",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEdgeDeploymentPlan",
+      "Resources": [
+        {
+          "Name": "edge-deployment-plan"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEdgePackagingJob",
+      "Resources": [
+        {
+          "Name": "edge-packaging-job"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEndpoint",
+      "Resources": [
+        {
+          "Name": "endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEndpointConfig",
+      "Resources": [
+        {
+          "Name": "endpoint-config"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeExperiment",
+      "Resources": [
+        {
+          "Name": "experiment"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFeatureGroup",
+      "Resources": [
+        {
+          "Name": "feature-group"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFeatureMetadata",
+      "Resources": [
+        {
+          "Name": "feature-group"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFlowDefinition",
+      "Resources": [
+        {
+          "Name": "flow-definition"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeHub",
+      "Resources": [
+        {
+          "Name": "hub"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeHubContent",
+      "Resources": [
+        {
+          "Name": "hub"
+        },
+        {
+          "Name": "hub-content"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeHumanLoop",
+      "Resources": [
+        {
+          "Name": "human-loop"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeHumanTaskUi",
+      "Resources": [
+        {
+          "Name": "human-task-ui"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeHyperParameterTuningJob",
+      "Resources": [
+        {
+          "Name": "hyper-parameter-tuning-job"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeImage",
+      "Resources": [
+        {
+          "Name": "image"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeImageVersion",
+      "Resources": [
+        {
+          "Name": "image-version"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeInferenceComponent",
+      "Resources": [
+        {
+          "Name": "inference-component"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeInferenceExperiment",
+      "Resources": [
+        {
+          "Name": "inference-experiment"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeInferenceRecommendationsJob",
+      "Resources": [
+        {
+          "Name": "inference-recommendations-job"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeLabelingJob",
+      "Resources": [
+        {
+          "Name": "labeling-job"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeLineageGroup"
+    },
+    {
+      "Name": "DescribeMlflowTrackingServer",
+      "Resources": [
+        {
+          "Name": "mlflow-tracking-server"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeModel",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeModelBiasJobDefinition",
+      "Resources": [
+        {
+          "Name": "model-bias-job-definition"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeModelCard",
+      "Resources": [
+        {
+          "Name": "model-card"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeModelCardExportJob",
+      "Resources": [
+        {
+          "Name": "model-card-export-job"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeModelExplainabilityJobDefinition",
+      "Resources": [
+        {
+          "Name": "model-explainability-job-definition"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeModelPackage",
+      "Resources": [
+        {
+          "Name": "model-package"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeModelPackageGroup",
+      "Resources": [
+        {
+          "Name": "model-package-group"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeModelQualityJobDefinition",
+      "Resources": [
+        {
+          "Name": "model-quality-job-definition"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMonitoringSchedule",
+      "Resources": [
+        {
+          "Name": "monitoring-schedule"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeNotebookInstance",
+      "Resources": [
+        {
+          "Name": "notebook-instance"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeNotebookInstanceLifecycleConfig",
+      "Resources": [
+        {
+          "Name": "notebook-instance-lifecycle-config"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeOptimizationJob",
+      "Resources": [
+        {
+          "Name": "optimization-job"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePartnerApp",
+      "Resources": [
+        {
+          "Name": "partner-app"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePipelineDefinitionForExecution",
+      "Resources": [
+        {
+          "Name": "pipeline-execution"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePipelineExecution",
+      "Resources": [
+        {
+          "Name": "pipeline-execution"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeProcessingJob",
+      "Resources": [
+        {
+          "Name": "processing-job"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSharedModel",
+      "Resources": [
+        {
+          "Name": "shared-model"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSpace",
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStudioLifecycleConfig",
+      "Resources": [
+        {
+          "Name": "studio-lifecycle-config"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSubscribedWorkteam",
+      "Resources": [
+        {
+          "Name": "workteam"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTrainingJob",
+      "Resources": [
+        {
+          "Name": "training-job"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTrainingPlan",
+      "Resources": [
+        {
+          "Name": "training-plan"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTransformJob",
+      "Resources": [
+        {
+          "Name": "transform-job"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTrial",
+      "Resources": [
+        {
+          "Name": "experiment-trial"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTrialComponent",
+      "Resources": [
+        {
+          "Name": "experiment-trial-component"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeUserProfile",
+      "Resources": [
+        {
+          "Name": "user-profile"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWorkforce",
+      "Resources": [
+        {
+          "Name": "workforce"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWorkteam",
+      "Resources": [
+        {
+          "Name": "workteam"
+        }
+      ]
+    },
+    {
+      "Name": "DisableSagemakerServicecatalogPortfolio"
+    },
+    {
+      "Name": "DisassociateTrialComponent",
+      "Resources": [
+        {
+          "Name": "experiment-trial"
+        },
+        {
+          "Name": "experiment-trial-component"
+        },
+        {
+          "Name": "processing-job"
+        }
+      ]
+    },
+    {
+      "Name": "EnableSagemakerServicecatalogPortfolio"
+    },
+    {
+      "Name": "GetDeployments",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeviceFleetReport",
+      "Resources": [
+        {
+          "Name": "device-fleet"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeviceRegistration",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "GetLineageGroupPolicy"
+    },
+    {
+      "Name": "GetModelPackageGroupPolicy",
+      "Resources": [
+        {
+          "Name": "model-package-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetRecord",
+      "Resources": [
+        {
+          "Name": "feature-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicy"
+    },
+    {
+      "Name": "GetSagemakerServicecatalogPortfolioStatus"
+    },
+    {
+      "Name": "GetScalingConfigurationRecommendation",
+      "Resources": [
+        {
+          "Name": "inference-recommendations-job"
+        }
+      ]
+    },
+    {
+      "Name": "GetSearchSuggestions"
+    },
+    {
+      "Name": "ImportHubContent",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "hub"
+        },
+        {
+          "Name": "hub-content"
+        }
+      ]
+    },
+    {
+      "Name": "InvokeEndpoint",
+      "ActionConditionKeys": [
+        "sagemaker:TargetModel"
+      ],
+      "Resources": [
+        {
+          "Name": "endpoint"
+        },
+        {
+          "Name": "inference-component"
+        }
+      ]
+    },
+    {
+      "Name": "InvokeEndpointAsync",
+      "Resources": [
+        {
+          "Name": "endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "InvokeEndpointWithResponseStream",
+      "Resources": [
+        {
+          "Name": "endpoint"
+        },
+        {
+          "Name": "inference-component"
+        }
+      ]
+    },
+    {
+      "Name": "ListActions"
+    },
+    {
+      "Name": "ListAlgorithms"
+    },
+    {
+      "Name": "ListAliases",
+      "Resources": [
+        {
+          "Name": "image"
+        },
+        {
+          "Name": "image-version"
+        }
+      ]
+    },
+    {
+      "Name": "ListAppImageConfigs"
+    },
+    {
+      "Name": "ListApps"
+    },
+    {
+      "Name": "ListArtifacts"
+    },
+    {
+      "Name": "ListAssociations"
+    },
+    {
+      "Name": "ListAutoMLJobs"
+    },
+    {
+      "Name": "ListCandidatesForAutoMLJob"
+    },
+    {
+      "Name": "ListClusterNodes",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListClusterSchedulerConfigs"
+    },
+    {
+      "Name": "ListClusters"
+    },
+    {
+      "Name": "ListCodeRepositories"
+    },
+    {
+      "Name": "ListCompilationJobs"
+    },
+    {
+      "Name": "ListComputeQuotas"
+    },
+    {
+      "Name": "ListContexts"
+    },
+    {
+      "Name": "ListDataQualityJobDefinitions"
+    },
+    {
+      "Name": "ListDeviceFleets"
+    },
+    {
+      "Name": "ListDevices"
+    },
+    {
+      "Name": "ListDomains"
+    },
+    {
+      "Name": "ListEdgeDeploymentPlans"
+    },
+    {
+      "Name": "ListEdgePackagingJobs"
+    },
+    {
+      "Name": "ListEndpointConfigs"
+    },
+    {
+      "Name": "ListEndpoints"
+    },
+    {
+      "Name": "ListExperiments"
+    },
+    {
+      "Name": "ListFeatureGroups"
+    },
+    {
+      "Name": "ListFlowDefinitions"
+    },
+    {
+      "Name": "ListHubContentVersions",
+      "Resources": [
+        {
+          "Name": "hub"
+        },
+        {
+          "Name": "hub-content"
+        }
+      ]
+    },
+    {
+      "Name": "ListHubContents",
+      "Resources": [
+        {
+          "Name": "hub"
+        }
+      ]
+    },
+    {
+      "Name": "ListHubs"
+    },
+    {
+      "Name": "ListHumanLoops"
+    },
+    {
+      "Name": "ListHumanTaskUis"
+    },
+    {
+      "Name": "ListHyperParameterTuningJobs"
+    },
+    {
+      "Name": "ListImageVersions",
+      "Resources": [
+        {
+          "Name": "image"
+        }
+      ]
+    },
+    {
+      "Name": "ListImages"
+    },
+    {
+      "Name": "ListInferenceComponents"
+    },
+    {
+      "Name": "ListInferenceExperiments"
+    },
+    {
+      "Name": "ListInferenceRecommendationsJobSteps"
+    },
+    {
+      "Name": "ListInferenceRecommendationsJobs"
+    },
+    {
+      "Name": "ListLabelingJobs"
+    },
+    {
+      "Name": "ListLabelingJobsForWorkteam",
+      "Resources": [
+        {
+          "Name": "workteam"
+        }
+      ]
+    },
+    {
+      "Name": "ListLineageGroups"
+    },
+    {
+      "Name": "ListMlflowTrackingServers"
+    },
+    {
+      "Name": "ListModelBiasJobDefinitions"
+    },
+    {
+      "Name": "ListModelCardExportJobs",
+      "Resources": [
+        {
+          "Name": "model-card"
+        }
+      ]
+    },
+    {
+      "Name": "ListModelCardVersions",
+      "Resources": [
+        {
+          "Name": "model-card"
+        }
+      ]
+    },
+    {
+      "Name": "ListModelCards"
+    },
+    {
+      "Name": "ListModelExplainabilityJobDefinitions"
+    },
+    {
+      "Name": "ListModelMetadata"
+    },
+    {
+      "Name": "ListModelPackageGroups"
+    },
+    {
+      "Name": "ListModelPackages",
+      "Resources": [
+        {
+          "Name": "model-package"
+        }
+      ]
+    },
+    {
+      "Name": "ListModelQualityJobDefinitions"
+    },
+    {
+      "Name": "ListModels"
+    },
+    {
+      "Name": "ListMonitoringAlertHistory"
+    },
+    {
+      "Name": "ListMonitoringAlerts"
+    },
+    {
+      "Name": "ListMonitoringExecutions"
+    },
+    {
+      "Name": "ListMonitoringSchedules"
+    },
+    {
+      "Name": "ListNotebookInstanceLifecycleConfigs"
+    },
+    {
+      "Name": "ListNotebookInstances"
+    },
+    {
+      "Name": "ListOptimizationJobs"
+    },
+    {
+      "Name": "ListPartnerApps"
+    },
+    {
+      "Name": "ListPipelineExecutionSteps",
+      "Resources": [
+        {
+          "Name": "pipeline-execution"
+        }
+      ]
+    },
+    {
+      "Name": "ListPipelineExecutions",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "ListPipelineParametersForExecution",
+      "Resources": [
+        {
+          "Name": "pipeline-execution"
+        }
+      ]
+    },
+    {
+      "Name": "ListPipelines"
+    },
+    {
+      "Name": "ListProcessingJobs"
+    },
+    {
+      "Name": "ListProjects"
+    },
+    {
+      "Name": "ListResourceCatalogs"
+    },
+    {
+      "Name": "ListSharedModelEvents"
+    },
+    {
+      "Name": "ListSharedModelVersions",
+      "Resources": [
+        {
+          "Name": "shared-model"
+        }
+      ]
+    },
+    {
+      "Name": "ListSharedModels"
+    },
+    {
+      "Name": "ListSpaces"
+    },
+    {
+      "Name": "ListStageDevices"
+    },
+    {
+      "Name": "ListStudioLifecycleConfigs"
+    },
+    {
+      "Name": "ListSubscribedWorkteams"
+    },
+    {
+      "Name": "ListTags",
+      "Resources": [
+        {
+          "Name": "action"
+        },
+        {
+          "Name": "algorithm"
+        },
+        {
+          "Name": "app"
+        },
+        {
+          "Name": "app-image-config"
+        },
+        {
+          "Name": "artifact"
+        },
+        {
+          "Name": "automl-job"
+        },
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "cluster-scheduler-config"
+        },
+        {
+          "Name": "code-repository"
+        },
+        {
+          "Name": "compilation-job"
+        },
+        {
+          "Name": "compute-quota"
+        },
+        {
+          "Name": "context"
+        },
+        {
+          "Name": "data-quality-job-definition"
+        },
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "device-fleet"
+        },
+        {
+          "Name": "domain"
+        },
+        {
+          "Name": "edge-deployment-plan"
+        },
+        {
+          "Name": "edge-packaging-job"
+        },
+        {
+          "Name": "endpoint"
+        },
+        {
+          "Name": "endpoint-config"
+        },
+        {
+          "Name": "experiment"
+        },
+        {
+          "Name": "experiment-trial"
+        },
+        {
+          "Name": "experiment-trial-component"
+        },
+        {
+          "Name": "feature-group"
+        },
+        {
+          "Name": "flow-definition"
+        },
+        {
+          "Name": "hub"
+        },
+        {
+          "Name": "hub-content"
+        },
+        {
+          "Name": "human-task-ui"
+        },
+        {
+          "Name": "hyper-parameter-tuning-job"
+        },
+        {
+          "Name": "image"
+        },
+        {
+          "Name": "inference-component"
+        },
+        {
+          "Name": "inference-recommendations-job"
+        },
+        {
+          "Name": "labeling-job"
+        },
+        {
+          "Name": "mlflow-tracking-server"
+        },
+        {
+          "Name": "model"
+        },
+        {
+          "Name": "model-bias-job-definition"
+        },
+        {
+          "Name": "model-card"
+        },
+        {
+          "Name": "model-explainability-job-definition"
+        },
+        {
+          "Name": "model-package"
+        },
+        {
+          "Name": "model-package-group"
+        },
+        {
+          "Name": "model-quality-job-definition"
+        },
+        {
+          "Name": "monitoring-schedule"
+        },
+        {
+          "Name": "notebook-instance"
+        },
+        {
+          "Name": "optimization-job"
+        },
+        {
+          "Name": "partner-app"
+        },
+        {
+          "Name": "pipeline"
+        },
+        {
+          "Name": "processing-job"
+        },
+        {
+          "Name": "project"
+        },
+        {
+          "Name": "reserved-capacity"
+        },
+        {
+          "Name": "space"
+        },
+        {
+          "Name": "studio-lifecycle-config"
+        },
+        {
+          "Name": "training-job"
+        },
+        {
+          "Name": "training-plan"
+        },
+        {
+          "Name": "transform-job"
+        },
+        {
+          "Name": "user-profile"
+        },
+        {
+          "Name": "workteam"
+        }
+      ]
+    },
+    {
+      "Name": "ListTrainingJobs"
+    },
+    {
+      "Name": "ListTrainingJobsForHyperParameterTuningJob",
+      "Resources": [
+        {
+          "Name": "hyper-parameter-tuning-job"
+        }
+      ]
+    },
+    {
+      "Name": "ListTrainingPlans"
+    },
+    {
+      "Name": "ListTransformJobs"
+    },
+    {
+      "Name": "ListTrialComponents"
+    },
+    {
+      "Name": "ListTrials"
+    },
+    {
+      "Name": "ListUserProfiles"
+    },
+    {
+      "Name": "ListWorkforces"
+    },
+    {
+      "Name": "ListWorkteams"
+    },
+    {
+      "Name": "PutLineageGroupPolicy"
+    },
+    {
+      "Name": "PutModelPackageGroupPolicy",
+      "Resources": [
+        {
+          "Name": "model-package-group"
+        }
+      ]
+    },
+    {
+      "Name": "PutRecord",
+      "Resources": [
+        {
+          "Name": "feature-group"
+        }
+      ]
+    },
+    {
+      "Name": "PutResourcePolicy"
+    },
+    {
+      "Name": "QueryLineage"
+    },
+    {
+      "Name": "RegisterDevices",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "RenderUiTemplate"
+    },
+    {
+      "Name": "RetryPipelineExecution",
+      "Resources": [
+        {
+          "Name": "pipeline-execution"
+        }
+      ]
+    },
+    {
+      "Name": "Search",
+      "ActionConditionKeys": [
+        "sagemaker:SearchVisibilityCondition/${FilterKey}"
+      ]
+    },
+    {
+      "Name": "SearchTrainingPlanOfferings"
+    },
+    {
+      "Name": "SendHeartbeat",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "SendPipelineExecutionStepFailure",
+      "Resources": [
+        {
+          "Name": "pipeline-execution"
+        }
+      ]
+    },
+    {
+      "Name": "SendPipelineExecutionStepSuccess",
+      "Resources": [
+        {
+          "Name": "pipeline-execution"
+        }
+      ]
+    },
+    {
+      "Name": "SendSharedModelEvent",
+      "Resources": [
+        {
+          "Name": "shared-model-event"
+        }
+      ]
+    },
+    {
+      "Name": "StartEdgeDeploymentStage",
+      "Resources": [
+        {
+          "Name": "edge-deployment-plan"
+        }
+      ]
+    },
+    {
+      "Name": "StartHumanLoop",
+      "Resources": [
+        {
+          "Name": "flow-definition"
+        }
+      ]
+    },
+    {
+      "Name": "StartInferenceExperiment",
+      "Resources": [
+        {
+          "Name": "inference-experiment"
+        }
+      ]
+    },
+    {
+      "Name": "StartMlflowTrackingServer",
+      "Resources": [
+        {
+          "Name": "mlflow-tracking-server"
+        }
+      ]
+    },
+    {
+      "Name": "StartMonitoringSchedule",
+      "Resources": [
+        {
+          "Name": "monitoring-schedule"
+        }
+      ]
+    },
+    {
+      "Name": "StartNotebookInstance",
+      "Resources": [
+        {
+          "Name": "notebook-instance"
+        }
+      ]
+    },
+    {
+      "Name": "StartPipelineExecution",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "StopAutoMLJob",
+      "Resources": [
+        {
+          "Name": "automl-job"
+        }
+      ]
+    },
+    {
+      "Name": "StopCompilationJob",
+      "Resources": [
+        {
+          "Name": "compilation-job"
+        }
+      ]
+    },
+    {
+      "Name": "StopEdgeDeploymentStage",
+      "Resources": [
+        {
+          "Name": "edge-deployment-plan"
+        }
+      ]
+    },
+    {
+      "Name": "StopEdgePackagingJob",
+      "Resources": [
+        {
+          "Name": "edge-packaging-job"
+        }
+      ]
+    },
+    {
+      "Name": "StopHumanLoop",
+      "Resources": [
+        {
+          "Name": "human-loop"
+        }
+      ]
+    },
+    {
+      "Name": "StopHyperParameterTuningJob",
+      "Resources": [
+        {
+          "Name": "hyper-parameter-tuning-job"
+        }
+      ]
+    },
+    {
+      "Name": "StopInferenceExperiment",
+      "Resources": [
+        {
+          "Name": "inference-experiment"
+        }
+      ]
+    },
+    {
+      "Name": "StopInferenceRecommendationsJob",
+      "Resources": [
+        {
+          "Name": "inference-recommendations-job"
+        }
+      ]
+    },
+    {
+      "Name": "StopLabelingJob",
+      "Resources": [
+        {
+          "Name": "labeling-job"
+        }
+      ]
+    },
+    {
+      "Name": "StopMlflowTrackingServer",
+      "Resources": [
+        {
+          "Name": "mlflow-tracking-server"
+        }
+      ]
+    },
+    {
+      "Name": "StopMonitoringSchedule",
+      "Resources": [
+        {
+          "Name": "monitoring-schedule"
+        }
+      ]
+    },
+    {
+      "Name": "StopNotebookInstance",
+      "Resources": [
+        {
+          "Name": "notebook-instance"
+        }
+      ]
+    },
+    {
+      "Name": "StopOptimizationJob",
+      "Resources": [
+        {
+          "Name": "optimization-job"
+        }
+      ]
+    },
+    {
+      "Name": "StopPipelineExecution",
+      "Resources": [
+        {
+          "Name": "pipeline-execution"
+        }
+      ]
+    },
+    {
+      "Name": "StopProcessingJob",
+      "Resources": [
+        {
+          "Name": "processing-job"
+        }
+      ]
+    },
+    {
+      "Name": "StopTrainingJob",
+      "Resources": [
+        {
+          "Name": "training-job"
+        }
+      ]
+    },
+    {
+      "Name": "StopTransformJob",
+      "Resources": [
+        {
+          "Name": "transform-job"
+        }
+      ]
+    },
+    {
+      "Name": "TrainHubModel",
+      "Resources": [
+        {
+          "Name": "hub"
+        },
+        {
+          "Name": "hub-content"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAction",
+      "Resources": [
+        {
+          "Name": "action"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAppImageConfig",
+      "Resources": [
+        {
+          "Name": "app-image-config"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateArtifact",
+      "Resources": [
+        {
+          "Name": "artifact"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "reserved-capacity"
+        },
+        {
+          "Name": "training-plan"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateClusterSchedulerConfig",
+      "Resources": [
+        {
+          "Name": "cluster-scheduler-config"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateClusterSoftware",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCodeRepository",
+      "Resources": [
+        {
+          "Name": "code-repository"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateComputeQuota",
+      "Resources": [
+        {
+          "Name": "compute-quota"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateContext",
+      "Resources": [
+        {
+          "Name": "context"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDeviceFleet",
+      "Resources": [
+        {
+          "Name": "device-fleet"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDevices",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDomain",
+      "ActionConditionKeys": [
+        "sagemaker:AppNetworkAccessType",
+        "sagemaker:DomainSharingOutputKmsKey",
+        "sagemaker:ImageArns",
+        "sagemaker:ImageVersionArns",
+        "sagemaker:InstanceTypes",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEndpoint",
+      "Resources": [
+        {
+          "Name": "endpoint"
+        },
+        {
+          "Name": "endpoint-config"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEndpointWeightsAndCapacities",
+      "Resources": [
+        {
+          "Name": "endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateExperiment",
+      "Resources": [
+        {
+          "Name": "experiment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFeatureGroup",
+      "Resources": [
+        {
+          "Name": "feature-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFeatureMetadata",
+      "Resources": [
+        {
+          "Name": "feature-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateHub",
+      "Resources": [
+        {
+          "Name": "hub"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateHubContent",
+      "Resources": [
+        {
+          "Name": "hub"
+        },
+        {
+          "Name": "hub-content"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateHubContentReference",
+      "Resources": [
+        {
+          "Name": "hub"
+        },
+        {
+          "Name": "hub-content"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateImage",
+      "Resources": [
+        {
+          "Name": "image"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateImageVersion",
+      "Resources": [
+        {
+          "Name": "image-version"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInferenceComponent",
+      "Resources": [
+        {
+          "Name": "inference-component"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInferenceComponentRuntimeConfig",
+      "Resources": [
+        {
+          "Name": "inference-component"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInferenceExperiment",
+      "Resources": [
+        {
+          "Name": "inference-experiment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMlflowTrackingServer",
+      "Resources": [
+        {
+          "Name": "mlflow-tracking-server"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateModelCard",
+      "Resources": [
+        {
+          "Name": "model-card"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateModelPackage",
+      "ActionConditionKeys": [
+        "sagemaker:CustomerMetadataProperties/${MetadataKey}",
+        "sagemaker:CustomerMetadataPropertiesToRemove",
+        "sagemaker:ModelApprovalStatus",
+        "sagemaker:ModelLifeCycle:Stage",
+        "sagemaker:ModelLifeCycle:StageStatus"
+      ],
+      "Resources": [
+        {
+          "Name": "model-package"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMonitoringAlert",
+      "Resources": [
+        {
+          "Name": "monitoring-schedule"
+        },
+        {
+          "Name": "monitoring-schedule-alert"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMonitoringSchedule",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:InstanceTypes",
+        "sagemaker:InterContainerTrafficEncryption",
+        "sagemaker:MaxRuntimeInSeconds",
+        "sagemaker:NetworkIsolation",
+        "sagemaker:OutputKmsKey",
+        "sagemaker:VolumeKmsKey",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
+      "Resources": [
+        {
+          "Name": "monitoring-schedule"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNotebookInstance",
+      "ActionConditionKeys": [
+        "sagemaker:AcceleratorTypes",
+        "sagemaker:InstanceTypes",
+        "sagemaker:MinimumInstanceMetadataServiceVersion",
+        "sagemaker:RootAccess"
+      ],
+      "Resources": [
+        {
+          "Name": "notebook-instance"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNotebookInstanceLifecycleConfig",
+      "Resources": [
+        {
+          "Name": "notebook-instance-lifecycle-config"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePartnerApp",
+      "Resources": [
+        {
+          "Name": "partner-app"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePipelineExecution",
+      "Resources": [
+        {
+          "Name": "pipeline-execution"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProject",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSharedModel",
+      "Resources": [
+        {
+          "Name": "shared-model"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSpace",
+      "ActionConditionKeys": [
+        "sagemaker:ImageArns",
+        "sagemaker:ImageVersionArns",
+        "sagemaker:InstanceTypes",
+        "sagemaker:OwnerUserProfileArn",
+        "sagemaker:SpaceSharingType"
+      ],
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTrainingJob",
+      "ActionConditionKeys": [
+        "sagemaker:EnableRemoteDebug",
+        "sagemaker:InstanceTypes",
+        "sagemaker:KeepAlivePeriod"
+      ],
+      "Resources": [
+        {
+          "Name": "training-job"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTrial",
+      "Resources": [
+        {
+          "Name": "experiment-trial"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTrialComponent",
+      "Resources": [
+        {
+          "Name": "experiment-trial-component"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateUserProfile",
+      "ActionConditionKeys": [
+        "sagemaker:DomainSharingOutputKmsKey",
+        "sagemaker:ImageArns",
+        "sagemaker:ImageVersionArns",
+        "sagemaker:InstanceTypes",
+        "sagemaker:InstanceTypes",
+        "sagemaker:VpcSecurityGroupIds"
+      ],
+      "Resources": [
+        {
+          "Name": "user-profile"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWorkforce",
+      "Resources": [
+        {
+          "Name": "workforce"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWorkteam",
+      "Resources": [
+        {
+          "Name": "workteam"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "sagemaker:AcceleratorTypes",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "sagemaker:AppNetworkAccessType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:CustomerMetadataProperties/${MetadataKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:CustomerMetadataPropertiesToRemove",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "sagemaker:DirectGatedModelAccess",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:DirectInternetAccess",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:DomainId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:DomainSharingOutputKmsKey",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "sagemaker:EnableRemoteDebug",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
+      "Name": "sagemaker:FeatureGroupDisableGlueTableCreation",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
+      "Name": "sagemaker:FeatureGroupEnableOnlineStore",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
+      "Name": "sagemaker:FeatureGroupOfflineStoreConfig",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
+      "Name": "sagemaker:FeatureGroupOfflineStoreKmsKey",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "sagemaker:FeatureGroupOfflineStoreS3Uri",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:FeatureGroupOnlineStoreKmsKey",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "sagemaker:FileSystemAccessMode",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:FileSystemDirectoryPath",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:FileSystemId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:FileSystemType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:HomeEfsFileSystemKmsKey",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "sagemaker:ImageArns",
+      "Types": [
+        "ArrayOfARN"
+      ]
+    },
+    {
+      "Name": "sagemaker:ImageVersionArns",
+      "Types": [
+        "ArrayOfARN"
+      ]
+    },
+    {
+      "Name": "sagemaker:InstanceTypes",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "sagemaker:InterContainerTrafficEncryption",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
+      "Name": "sagemaker:KeepAlivePeriod",
+      "Types": [
+        "Numeric"
+      ]
+    },
+    {
+      "Name": "sagemaker:MaxRuntimeInSeconds",
+      "Types": [
+        "Numeric"
+      ]
+    },
+    {
+      "Name": "sagemaker:MinimumInstanceMetadataServiceVersion",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:ModelApprovalStatus",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:ModelArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "sagemaker:ModelLifeCycle:Stage",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:ModelLifeCycle:StageStatus",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:NetworkIsolation",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
+      "Name": "sagemaker:OutputKmsKey",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "sagemaker:OwnerUserProfileArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "sagemaker:ResourceTag/",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:RootAccess",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:SearchVisibilityCondition/${FilterKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:ServerlessMaxConcurrency",
+      "Types": [
+        "Numeric"
+      ]
+    },
+    {
+      "Name": "sagemaker:ServerlessMemorySize",
+      "Types": [
+        "Numeric"
+      ]
+    },
+    {
+      "Name": "sagemaker:SpaceSharingType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:TaggingAction",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:TargetModel",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:UserProfileName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:VolumeKmsKey",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "sagemaker:VpcSecurityGroupIds",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "sagemaker:VpcSubnets",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "sagemaker:WorkteamArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "sagemaker:WorkteamType",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "action",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:action/${ActionName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "algorithm",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:algorithm/${AlgorithmName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "app",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:app/${DomainId}/${UserProfileName}/${AppType}/${AppName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "app-image-config",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:app-image-config/${AppImageConfigName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "artifact",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:artifact/${HashOfArtifactSource}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "automl-job",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:automl-job/${AutoMLJobJobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "cluster",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:cluster/${ClusterId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "cluster-scheduler-config",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:cluster-scheduler-config/${ClusterSchedulerConfigId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "code-repository",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:code-repository/${CodeRepositoryName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "compilation-job",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:compilation-job/${CompilationJobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "compute-quota",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:compute-quota/${ComputeQuotaId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "context",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:context/${ContextName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "data-quality-job-definition",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:data-quality-job-definition/${DataQualityJobDefinitionName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "device",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:device-fleet/${DeviceFleetName}/device/${DeviceName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "device-fleet",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:device-fleet/${DeviceFleetName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "domain",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:domain/${DomainId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "edge-deployment-plan",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:edge-deployment/${EdgeDeploymentPlanName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "edge-packaging-job",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:edge-packaging-job/${EdgePackagingJobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "endpoint",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:endpoint/${EndpointName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "endpoint-config",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:endpoint-config/${EndpointConfigName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "experiment",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:experiment/${ExperimentName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "experiment-trial",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:experiment-trial/${TrialName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "experiment-trial-component",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:experiment-trial-component/${TrialComponentName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "feature-group",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:feature-group/${FeatureGroupName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "flow-definition",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:flow-definition/${FlowDefinitionName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "hub",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:hub/${HubName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "hub-content",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:hub-content/${HubName}/${HubContentType}/${HubContentName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "human-loop",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:human-loop/${HumanLoopName}"
+      ]
+    },
+    {
+      "Name": "human-task-ui",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:human-task-ui/${HumanTaskUiName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "hyper-parameter-tuning-job",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:hyper-parameter-tuning-job/${HyperParameterTuningJobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "image",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:image/${ImageName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "image-version",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:image-version/${ImageName}/${Version}"
+      ]
+    },
+    {
+      "Name": "inference-component",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:inference-component/${InferenceComponentName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "inference-experiment",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:inference-experiment/${InferenceExperimentName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "inference-recommendations-job",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:inference-recommendations-job/${InferenceRecommendationsJobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "labeling-job",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:labeling-job/${LabelingJobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "lineage-group",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:lineage-group/${LineageGroupName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "mlflow-tracking-server",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:mlflow-tracking-server/${MlflowTrackingServerName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:model/${ModelName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model-bias-job-definition",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:model-bias-job-definition/${ModelBiasJobDefinitionName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model-card",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:model-card/${ModelCardName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model-card-export-job",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:model-card/${ModelCardName}/export-job/${ExportJobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model-explainability-job-definition",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:model-explainability-job-definition/${ModelExplainabilityJobDefinitionName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model-package",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:model-package/${ModelPackageName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model-package-group",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:model-package-group/${ModelPackageGroupName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model-quality-job-definition",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:model-quality-job-definition/${ModelQualityJobDefinitionName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "monitoring-schedule",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:monitoring-schedule/${MonitoringScheduleName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "monitoring-schedule-alert",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:monitoring-schedule/${MonitoringScheduleName}/alert/${MonitoringScheduleAlertName}"
+      ]
+    },
+    {
+      "Name": "notebook-instance",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:notebook-instance/${NotebookInstanceName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "notebook-instance-lifecycle-config",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:notebook-instance-lifecycle-config/${NotebookInstanceLifecycleConfigName}"
+      ]
+    },
+    {
+      "Name": "optimization-job",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:optimization-job/${OptimizationJobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "partner-app",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:partner-app/${AppId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "pipeline",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:pipeline/${PipelineName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "pipeline-execution",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:pipeline/${PipelineName}/execution/${RandomString}"
+      ]
+    },
+    {
+      "Name": "processing-job",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:processing-job/${ProcessingJobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "project",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:project/${ProjectName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "reserved-capacity",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:reserved-capacity/${RandomString}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "sagemaker-catalog",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:sagemaker-catalog/${ResourceCatalogName}"
+      ]
+    },
+    {
+      "Name": "shared-model",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:shared-model/${SharedModelId}"
+      ]
+    },
+    {
+      "Name": "shared-model-event",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:shared-model-event/${EventId}"
+      ]
+    },
+    {
+      "Name": "space",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:space/${DomainId}/${SpaceName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "studio-lifecycle-config",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:studio-lifecycle-config/${StudioLifecycleConfigName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "training-job",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:training-job/${TrainingJobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "training-plan",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:training-plan/${TrainingPlanName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "transform-job",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:transform-job/${TransformJobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "user-profile",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:user-profile/${DomainId}/${UserProfileName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "workforce",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:workforce/${WorkforceName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "workteam",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:workteam/${WorkteamName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

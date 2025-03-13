@@ -1,0 +1,157 @@
+{
+  "Name": "airflow",
+  "Actions": [
+    {
+      "Name": "CreateCliToken",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEnvironment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWebLoginToken",
+      "Resources": [
+        {
+          "Name": "rbac-role"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEnvironment",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "GetEnvironment",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "InvokeRestApi",
+      "Resources": [
+        {
+          "Name": "rbac-role"
+        }
+      ]
+    },
+    {
+      "Name": "ListEnvironments"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "PublishMetrics",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEnvironment",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "environment",
+      "ARNFormats": [
+        "arn:${Partition}:airflow:${Region}:${Account}:environment/${EnvironmentName}"
+      ]
+    },
+    {
+      "Name": "rbac-role",
+      "ARNFormats": [
+        "arn:${Partition}:airflow:${Region}:${Account}:role/${EnvironmentName}/${RoleName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

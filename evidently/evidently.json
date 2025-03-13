@@ -1,0 +1,363 @@
+{
+  "Name": "evidently",
+  "Actions": [
+    {
+      "Name": "BatchEvaluateFeature",
+      "Resources": [
+        {
+          "Name": "Feature"
+        }
+      ]
+    },
+    {
+      "Name": "CreateExperiment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateFeature",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateLaunch",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateProject",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateSegment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteExperiment",
+      "Resources": [
+        {
+          "Name": "Experiment"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFeature",
+      "Resources": [
+        {
+          "Name": "Feature"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLaunch",
+      "Resources": [
+        {
+          "Name": "Launch"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProject",
+      "Resources": [
+        {
+          "Name": "Project"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSegment",
+      "Resources": [
+        {
+          "Name": "Segment"
+        }
+      ]
+    },
+    {
+      "Name": "EvaluateFeature",
+      "Resources": [
+        {
+          "Name": "Feature"
+        }
+      ]
+    },
+    {
+      "Name": "GetExperiment",
+      "Resources": [
+        {
+          "Name": "Experiment"
+        }
+      ]
+    },
+    {
+      "Name": "GetExperimentResults",
+      "Resources": [
+        {
+          "Name": "Experiment"
+        }
+      ]
+    },
+    {
+      "Name": "GetFeature",
+      "Resources": [
+        {
+          "Name": "Feature"
+        }
+      ]
+    },
+    {
+      "Name": "GetLaunch",
+      "Resources": [
+        {
+          "Name": "Launch"
+        }
+      ]
+    },
+    {
+      "Name": "GetProject",
+      "Resources": [
+        {
+          "Name": "Project"
+        }
+      ]
+    },
+    {
+      "Name": "GetSegment",
+      "Resources": [
+        {
+          "Name": "Segment"
+        }
+      ]
+    },
+    {
+      "Name": "ListExperiments"
+    },
+    {
+      "Name": "ListFeatures"
+    },
+    {
+      "Name": "ListLaunches"
+    },
+    {
+      "Name": "ListProjects"
+    },
+    {
+      "Name": "ListSegmentReferences"
+    },
+    {
+      "Name": "ListSegments"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "PutProjectEvents",
+      "Resources": [
+        {
+          "Name": "Project"
+        }
+      ]
+    },
+    {
+      "Name": "StartExperiment",
+      "Resources": [
+        {
+          "Name": "Experiment"
+        }
+      ]
+    },
+    {
+      "Name": "StartLaunch",
+      "Resources": [
+        {
+          "Name": "Launch"
+        }
+      ]
+    },
+    {
+      "Name": "StopExperiment",
+      "Resources": [
+        {
+          "Name": "Experiment"
+        }
+      ]
+    },
+    {
+      "Name": "StopLaunch",
+      "Resources": [
+        {
+          "Name": "Launch"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Experiment"
+        },
+        {
+          "Name": "Feature"
+        },
+        {
+          "Name": "Launch"
+        },
+        {
+          "Name": "Project"
+        },
+        {
+          "Name": "Segment"
+        }
+      ]
+    },
+    {
+      "Name": "TestSegmentPattern"
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Experiment"
+        },
+        {
+          "Name": "Feature"
+        },
+        {
+          "Name": "Launch"
+        },
+        {
+          "Name": "Project"
+        },
+        {
+          "Name": "Segment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateExperiment",
+      "Resources": [
+        {
+          "Name": "Experiment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFeature",
+      "Resources": [
+        {
+          "Name": "Feature"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLaunch",
+      "Resources": [
+        {
+          "Name": "Launch"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProject",
+      "Resources": [
+        {
+          "Name": "Project"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProjectDataDelivery",
+      "Resources": [
+        {
+          "Name": "Project"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Experiment",
+      "ARNFormats": [
+        "arn:${Partition}:evidently:${Region}:${Account}:project/${ProjectName}/experiment/${ExperimentName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Feature",
+      "ARNFormats": [
+        "arn:${Partition}:evidently:${Region}:${Account}:project/${ProjectName}/feature/${FeatureName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Launch",
+      "ARNFormats": [
+        "arn:${Partition}:evidently:${Region}:${Account}:project/${ProjectName}/launch/${LaunchName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Project",
+      "ARNFormats": [
+        "arn:${Partition}:evidently:${Region}:${Account}:project/${ProjectName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Segment",
+      "ARNFormats": [
+        "arn:${Partition}:evidently:${Region}:${Account}:segment/${SegmentName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,89 @@
+{
+  "Name": "wickr",
+  "Actions": [
+    {
+      "Name": "CreateAdminSession",
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "CreateNetwork"
+    },
+    {
+      "Name": "DeleteNetwork"
+    },
+    {
+      "Name": "ListNetworks"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNetworkDetails",
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "network",
+      "ARNFormats": [
+        "arn:${Partition}:wickr:${Region}:${Account}:network/${NetworkId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

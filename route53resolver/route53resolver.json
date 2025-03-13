@@ -1,0 +1,709 @@
+{
+  "Name": "route53resolver",
+  "Actions": [
+    {
+      "Name": "AssociateFirewallRuleGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "firewall-rule-group-association"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateResolverEndpointIpAddress",
+      "Resources": [
+        {
+          "Name": "resolver-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateResolverQueryLogConfig",
+      "Resources": [
+        {
+          "Name": "resolver-query-log-config"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateResolverRule",
+      "Resources": [
+        {
+          "Name": "resolver-rule"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFirewallDomainList",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "firewall-domain-list"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFirewallRule",
+      "Resources": [
+        {
+          "Name": "firewall-domain-list"
+        },
+        {
+          "Name": "firewall-rule-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFirewallRuleGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "firewall-rule-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateOutpostResolver",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "outpost-resolver"
+        }
+      ]
+    },
+    {
+      "Name": "CreateResolverEndpoint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "resolver-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "CreateResolverQueryLogConfig",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateResolverRule",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "resolver-rule"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFirewallDomainList",
+      "Resources": [
+        {
+          "Name": "firewall-domain-list"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFirewallRule",
+      "Resources": [
+        {
+          "Name": "firewall-domain-list"
+        },
+        {
+          "Name": "firewall-rule-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFirewallRuleGroup",
+      "Resources": [
+        {
+          "Name": "firewall-rule-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteOutpostResolver",
+      "Resources": [
+        {
+          "Name": "outpost-resolver"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResolverEndpoint",
+      "Resources": [
+        {
+          "Name": "resolver-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResolverQueryLogConfig",
+      "Resources": [
+        {
+          "Name": "resolver-query-log-config"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResolverRule",
+      "Resources": [
+        {
+          "Name": "resolver-rule"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateFirewallRuleGroup",
+      "Resources": [
+        {
+          "Name": "firewall-rule-group-association"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateResolverEndpointIpAddress",
+      "Resources": [
+        {
+          "Name": "resolver-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateResolverQueryLogConfig",
+      "Resources": [
+        {
+          "Name": "resolver-query-log-config"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateResolverRule",
+      "Resources": [
+        {
+          "Name": "resolver-rule"
+        }
+      ]
+    },
+    {
+      "Name": "GetFirewallConfig",
+      "Resources": [
+        {
+          "Name": "firewall-config"
+        }
+      ]
+    },
+    {
+      "Name": "GetFirewallDomainList",
+      "Resources": [
+        {
+          "Name": "firewall-domain-list"
+        }
+      ]
+    },
+    {
+      "Name": "GetFirewallRuleGroup",
+      "Resources": [
+        {
+          "Name": "firewall-rule-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetFirewallRuleGroupAssociation",
+      "Resources": [
+        {
+          "Name": "firewall-rule-group-association"
+        }
+      ]
+    },
+    {
+      "Name": "GetFirewallRuleGroupPolicy",
+      "Resources": [
+        {
+          "Name": "firewall-rule-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetOutpostResolver",
+      "Resources": [
+        {
+          "Name": "outpost-resolver"
+        }
+      ]
+    },
+    {
+      "Name": "GetResolverConfig",
+      "Resources": [
+        {
+          "Name": "resolver-config"
+        }
+      ]
+    },
+    {
+      "Name": "GetResolverDnssecConfig",
+      "Resources": [
+        {
+          "Name": "resolver-dnssec-config"
+        }
+      ]
+    },
+    {
+      "Name": "GetResolverEndpoint",
+      "Resources": [
+        {
+          "Name": "resolver-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "GetResolverQueryLogConfig",
+      "Resources": [
+        {
+          "Name": "resolver-query-log-config"
+        }
+      ]
+    },
+    {
+      "Name": "GetResolverQueryLogConfigAssociation"
+    },
+    {
+      "Name": "GetResolverQueryLogConfigPolicy",
+      "Resources": [
+        {
+          "Name": "resolver-query-log-config"
+        }
+      ]
+    },
+    {
+      "Name": "GetResolverRule",
+      "Resources": [
+        {
+          "Name": "resolver-rule"
+        }
+      ]
+    },
+    {
+      "Name": "GetResolverRuleAssociation",
+      "Resources": [
+        {
+          "Name": "resolver-rule"
+        }
+      ]
+    },
+    {
+      "Name": "GetResolverRulePolicy",
+      "Resources": [
+        {
+          "Name": "resolver-rule"
+        }
+      ]
+    },
+    {
+      "Name": "ImportFirewallDomains",
+      "Resources": [
+        {
+          "Name": "firewall-domain-list"
+        }
+      ]
+    },
+    {
+      "Name": "ListFirewallConfigs"
+    },
+    {
+      "Name": "ListFirewallDomainLists"
+    },
+    {
+      "Name": "ListFirewallDomains",
+      "Resources": [
+        {
+          "Name": "firewall-domain-list"
+        }
+      ]
+    },
+    {
+      "Name": "ListFirewallRuleGroupAssociations"
+    },
+    {
+      "Name": "ListFirewallRuleGroups"
+    },
+    {
+      "Name": "ListFirewallRules",
+      "Resources": [
+        {
+          "Name": "firewall-rule-group"
+        }
+      ]
+    },
+    {
+      "Name": "ListOutpostResolvers"
+    },
+    {
+      "Name": "ListResolverConfigs",
+      "Resources": [
+        {
+          "Name": "resolver-config"
+        }
+      ]
+    },
+    {
+      "Name": "ListResolverDnssecConfigs",
+      "Resources": [
+        {
+          "Name": "resolver-dnssec-config"
+        }
+      ]
+    },
+    {
+      "Name": "ListResolverEndpointIpAddresses",
+      "Resources": [
+        {
+          "Name": "resolver-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "ListResolverEndpoints"
+    },
+    {
+      "Name": "ListResolverQueryLogConfigAssociations"
+    },
+    {
+      "Name": "ListResolverQueryLogConfigs"
+    },
+    {
+      "Name": "ListResolverRuleAssociations"
+    },
+    {
+      "Name": "ListResolverRules"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "firewall-domain-list"
+        },
+        {
+          "Name": "firewall-rule-group"
+        },
+        {
+          "Name": "firewall-rule-group-association"
+        },
+        {
+          "Name": "outpost-resolver"
+        },
+        {
+          "Name": "resolver-endpoint"
+        },
+        {
+          "Name": "resolver-query-log-config"
+        },
+        {
+          "Name": "resolver-rule"
+        }
+      ]
+    },
+    {
+      "Name": "PutFirewallRuleGroupPolicy",
+      "Resources": [
+        {
+          "Name": "firewall-rule-group"
+        }
+      ]
+    },
+    {
+      "Name": "PutResolverQueryLogConfigPolicy",
+      "Resources": [
+        {
+          "Name": "resolver-query-log-config"
+        }
+      ]
+    },
+    {
+      "Name": "PutResolverRulePolicy",
+      "Resources": [
+        {
+          "Name": "resolver-rule"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "firewall-config"
+        },
+        {
+          "Name": "firewall-domain-list"
+        },
+        {
+          "Name": "firewall-rule-group"
+        },
+        {
+          "Name": "firewall-rule-group-association"
+        },
+        {
+          "Name": "outpost-resolver"
+        },
+        {
+          "Name": "resolver-dnssec-config"
+        },
+        {
+          "Name": "resolver-endpoint"
+        },
+        {
+          "Name": "resolver-query-log-config"
+        },
+        {
+          "Name": "resolver-rule"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "firewall-config"
+        },
+        {
+          "Name": "firewall-domain-list"
+        },
+        {
+          "Name": "firewall-rule-group"
+        },
+        {
+          "Name": "firewall-rule-group-association"
+        },
+        {
+          "Name": "outpost-resolver"
+        },
+        {
+          "Name": "resolver-dnssec-config"
+        },
+        {
+          "Name": "resolver-endpoint"
+        },
+        {
+          "Name": "resolver-query-log-config"
+        },
+        {
+          "Name": "resolver-rule"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFirewallConfig",
+      "Resources": [
+        {
+          "Name": "firewall-config"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFirewallDomains",
+      "Resources": [
+        {
+          "Name": "firewall-domain-list"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFirewallRule",
+      "Resources": [
+        {
+          "Name": "firewall-domain-list"
+        },
+        {
+          "Name": "firewall-rule-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFirewallRuleGroupAssociation",
+      "Resources": [
+        {
+          "Name": "firewall-rule-group-association"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateOutpostResolver",
+      "Resources": [
+        {
+          "Name": "outpost-resolver"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateResolverConfig",
+      "Resources": [
+        {
+          "Name": "resolver-config"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateResolverDnssecConfig",
+      "Resources": [
+        {
+          "Name": "resolver-dnssec-config"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateResolverEndpoint",
+      "Resources": [
+        {
+          "Name": "resolver-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateResolverRule",
+      "Resources": [
+        {
+          "Name": "resolver-rule"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "firewall-config",
+      "ARNFormats": [
+        "arn:${Partition}:route53resolver:${Region}:${Account}:firewall-config/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "firewall-domain-list",
+      "ARNFormats": [
+        "arn:${Partition}:route53resolver:${Region}:${Account}:firewall-domain-list/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "firewall-rule-group",
+      "ARNFormats": [
+        "arn:${Partition}:route53resolver:${Region}:${Account}:firewall-rule-group/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "firewall-rule-group-association",
+      "ARNFormats": [
+        "arn:${Partition}:route53resolver:${Region}:${Account}:firewall-rule-group-association/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "outpost-resolver",
+      "ARNFormats": [
+        "arn:${Partition}:route53resolver:${Region}:${Account}:outpost-resolver/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "resolver-config",
+      "ARNFormats": [
+        "arn:${Partition}:route53resolver:${Region}:${Account}:resolver-config/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "resolver-dnssec-config",
+      "ARNFormats": [
+        "arn:${Partition}:route53resolver:${Region}:${Account}:resolver-dnssec-config/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "resolver-endpoint",
+      "ARNFormats": [
+        "arn:${Partition}:route53resolver:${Region}:${Account}:resolver-endpoint/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "resolver-query-log-config",
+      "ARNFormats": [
+        "arn:${Partition}:route53resolver:${Region}:${Account}:resolver-query-log-config/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "resolver-rule",
+      "ARNFormats": [
+        "arn:${Partition}:route53resolver:${Region}:${Account}:resolver-rule/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

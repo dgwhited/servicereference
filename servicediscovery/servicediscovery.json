@@ -1,0 +1,283 @@
+{
+  "Name": "servicediscovery",
+  "Actions": [
+    {
+      "Name": "CreateHttpNamespace",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreatePrivateDnsNamespace",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreatePublicDnsNamespace",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateService",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "servicediscovery:NamespaceArn"
+      ],
+      "Resources": [
+        {
+          "Name": "namespace"
+        },
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNamespace",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteService",
+      "Resources": [
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteServiceAttributes",
+      "Resources": [
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterInstance",
+      "ActionConditionKeys": [
+        "servicediscovery:ServiceArn"
+      ],
+      "Resources": [
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "DiscoverInstances",
+      "ActionConditionKeys": [
+        "servicediscovery:NamespaceName",
+        "servicediscovery:ServiceName"
+      ]
+    },
+    {
+      "Name": "DiscoverInstancesRevision",
+      "ActionConditionKeys": [
+        "servicediscovery:NamespaceName",
+        "servicediscovery:ServiceName"
+      ]
+    },
+    {
+      "Name": "GetInstance",
+      "ActionConditionKeys": [
+        "servicediscovery:ServiceArn"
+      ]
+    },
+    {
+      "Name": "GetInstancesHealthStatus",
+      "ActionConditionKeys": [
+        "servicediscovery:ServiceArn"
+      ]
+    },
+    {
+      "Name": "GetNamespace",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "GetOperation"
+    },
+    {
+      "Name": "GetService",
+      "Resources": [
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "GetServiceAttributes",
+      "Resources": [
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "ListInstances",
+      "ActionConditionKeys": [
+        "servicediscovery:ServiceArn"
+      ]
+    },
+    {
+      "Name": "ListNamespaces"
+    },
+    {
+      "Name": "ListOperations"
+    },
+    {
+      "Name": "ListServices"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "RegisterInstance",
+      "ActionConditionKeys": [
+        "servicediscovery:ServiceArn"
+      ],
+      "Resources": [
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "UpdateHttpNamespace",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInstanceCustomHealthStatus",
+      "ActionConditionKeys": [
+        "servicediscovery:ServiceArn"
+      ]
+    },
+    {
+      "Name": "UpdatePrivateDnsNamespace",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePublicDnsNamespace",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateService",
+      "Resources": [
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServiceAttributes",
+      "Resources": [
+        {
+          "Name": "service"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "servicediscovery:NamespaceArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "servicediscovery:NamespaceName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "servicediscovery:ServiceArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "servicediscovery:ServiceName",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "namespace",
+      "ARNFormats": [
+        "arn:${Partition}:servicediscovery:${Region}:${Account}:namespace/${NamespaceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "service",
+      "ARNFormats": [
+        "arn:${Partition}:servicediscovery:${Region}:${Account}:service/${ServiceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,699 @@
+{
+  "Name": "events",
+  "Actions": [
+    {
+      "Name": "ActivateEventSource",
+      "Resources": [
+        {
+          "Name": "event-source"
+        }
+      ]
+    },
+    {
+      "Name": "CancelReplay",
+      "Resources": [
+        {
+          "Name": "replay"
+        }
+      ]
+    },
+    {
+      "Name": "CreateApiDestination",
+      "Resources": [
+        {
+          "Name": "api-destination"
+        },
+        {
+          "Name": "connection"
+        }
+      ]
+    },
+    {
+      "Name": "CreateArchive",
+      "Resources": [
+        {
+          "Name": "archive"
+        },
+        {
+          "Name": "event-bus"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConnection",
+      "Resources": [
+        {
+          "Name": "connection"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEndpoint",
+      "ActionConditionKeys": [
+        "events:EventBusArn"
+      ],
+      "Resources": [
+        {
+          "Name": "endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEventBus",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "event-bus"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePartnerEventSource",
+      "Resources": [
+        {
+          "Name": "event-source"
+        }
+      ]
+    },
+    {
+      "Name": "DeactivateEventSource",
+      "Resources": [
+        {
+          "Name": "event-source"
+        }
+      ]
+    },
+    {
+      "Name": "DeauthorizeConnection",
+      "Resources": [
+        {
+          "Name": "connection"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApiDestination",
+      "Resources": [
+        {
+          "Name": "api-destination"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteArchive",
+      "Resources": [
+        {
+          "Name": "archive"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConnection",
+      "Resources": [
+        {
+          "Name": "connection"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEndpoint",
+      "Resources": [
+        {
+          "Name": "endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEventBus",
+      "Resources": [
+        {
+          "Name": "event-bus"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePartnerEventSource",
+      "Resources": [
+        {
+          "Name": "event-source"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRule",
+      "ActionConditionKeys": [
+        "events:ManagedBy",
+        "events:creatorAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "rule-on-custom-event-bus"
+        },
+        {
+          "Name": "rule-on-default-event-bus"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeApiDestination",
+      "Resources": [
+        {
+          "Name": "api-destination"
+        },
+        {
+          "Name": "connection"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeArchive",
+      "Resources": [
+        {
+          "Name": "archive"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeConnection",
+      "Resources": [
+        {
+          "Name": "connection"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEndpoint",
+      "Resources": [
+        {
+          "Name": "endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEventBus",
+      "Resources": [
+        {
+          "Name": "event-bus"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEventSource",
+      "Resources": [
+        {
+          "Name": "event-source"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePartnerEventSource",
+      "Resources": [
+        {
+          "Name": "event-source"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeReplay",
+      "Resources": [
+        {
+          "Name": "replay"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRule",
+      "ActionConditionKeys": [
+        "events:creatorAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "rule-on-custom-event-bus"
+        },
+        {
+          "Name": "rule-on-default-event-bus"
+        }
+      ]
+    },
+    {
+      "Name": "DisableRule",
+      "ActionConditionKeys": [
+        "events:ManagedBy",
+        "events:creatorAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "rule-on-custom-event-bus"
+        },
+        {
+          "Name": "rule-on-default-event-bus"
+        }
+      ]
+    },
+    {
+      "Name": "EnableRule",
+      "ActionConditionKeys": [
+        "events:ManagedBy",
+        "events:creatorAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "rule-on-custom-event-bus"
+        },
+        {
+          "Name": "rule-on-default-event-bus"
+        }
+      ]
+    },
+    {
+      "Name": "InvokeApiDestination",
+      "Resources": [
+        {
+          "Name": "api-destination"
+        }
+      ]
+    },
+    {
+      "Name": "ListApiDestinations"
+    },
+    {
+      "Name": "ListArchives"
+    },
+    {
+      "Name": "ListConnections"
+    },
+    {
+      "Name": "ListEndpoints"
+    },
+    {
+      "Name": "ListEventBuses"
+    },
+    {
+      "Name": "ListEventSources"
+    },
+    {
+      "Name": "ListPartnerEventSourceAccounts",
+      "Resources": [
+        {
+          "Name": "event-source"
+        }
+      ]
+    },
+    {
+      "Name": "ListPartnerEventSources"
+    },
+    {
+      "Name": "ListReplays"
+    },
+    {
+      "Name": "ListRuleNamesByTarget"
+    },
+    {
+      "Name": "ListRules"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "events:creatorAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "event-bus"
+        },
+        {
+          "Name": "rule-on-custom-event-bus"
+        },
+        {
+          "Name": "rule-on-default-event-bus"
+        }
+      ]
+    },
+    {
+      "Name": "ListTargetsByRule",
+      "ActionConditionKeys": [
+        "events:creatorAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "rule-on-custom-event-bus"
+        },
+        {
+          "Name": "rule-on-default-event-bus"
+        }
+      ]
+    },
+    {
+      "Name": "PutEvents",
+      "ActionConditionKeys": [
+        "events:detail-type",
+        "events:eventBusInvocation",
+        "events:source"
+      ],
+      "Resources": [
+        {
+          "Name": "event-bus"
+        }
+      ]
+    },
+    {
+      "Name": "PutPartnerEvents"
+    },
+    {
+      "Name": "PutPermission"
+    },
+    {
+      "Name": "PutRule",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "events:ManagedBy",
+        "events:creatorAccount",
+        "events:detail-type",
+        "events:detail.eventTypeCode",
+        "events:detail.service",
+        "events:detail.userIdentity.principalId",
+        "events:source"
+      ],
+      "Resources": [
+        {
+          "Name": "rule-on-custom-event-bus"
+        },
+        {
+          "Name": "rule-on-default-event-bus"
+        }
+      ]
+    },
+    {
+      "Name": "PutTargets",
+      "ActionConditionKeys": [
+        "events:ManagedBy",
+        "events:TargetArn",
+        "events:creatorAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "rule-on-custom-event-bus"
+        },
+        {
+          "Name": "rule-on-default-event-bus"
+        }
+      ]
+    },
+    {
+      "Name": "RemovePermission"
+    },
+    {
+      "Name": "RemoveTargets",
+      "ActionConditionKeys": [
+        "events:ManagedBy",
+        "events:creatorAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "rule-on-custom-event-bus"
+        },
+        {
+          "Name": "rule-on-default-event-bus"
+        }
+      ]
+    },
+    {
+      "Name": "RetrieveConnectionCredentials",
+      "Resources": [
+        {
+          "Name": "connection"
+        }
+      ]
+    },
+    {
+      "Name": "StartReplay",
+      "Resources": [
+        {
+          "Name": "archive"
+        },
+        {
+          "Name": "event-bus"
+        },
+        {
+          "Name": "replay"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "events:creatorAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "event-bus"
+        },
+        {
+          "Name": "rule-on-custom-event-bus"
+        },
+        {
+          "Name": "rule-on-default-event-bus"
+        }
+      ]
+    },
+    {
+      "Name": "TestEventPattern"
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys",
+        "events:creatorAccount"
+      ],
+      "Resources": [
+        {
+          "Name": "event-bus"
+        },
+        {
+          "Name": "rule-on-custom-event-bus"
+        },
+        {
+          "Name": "rule-on-default-event-bus"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateApiDestination",
+      "Resources": [
+        {
+          "Name": "api-destination"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateArchive",
+      "Resources": [
+        {
+          "Name": "archive"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConnection",
+      "Resources": [
+        {
+          "Name": "connection"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEndpoint",
+      "ActionConditionKeys": [
+        "events:EventBusArn"
+      ],
+      "Resources": [
+        {
+          "Name": "endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEventBus",
+      "Resources": [
+        {
+          "Name": "event-bus"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "events:EventBusArn",
+      "Types": [
+        "ArrayOfARN"
+      ]
+    },
+    {
+      "Name": "events:ManagedBy",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "events:TargetArn",
+      "Types": [
+        "ArrayOfARN"
+      ]
+    },
+    {
+      "Name": "events:creatorAccount",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "events:detail-type",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "events:detail.eventTypeCode",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "events:detail.service",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "events:detail.userIdentity.principalId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "events:eventBusInvocation",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "events:source",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "api-destination",
+      "ARNFormats": [
+        "arn:${Partition}:events:${Region}:${Account}:api-destination/${ApiDestinationName}"
+      ]
+    },
+    {
+      "Name": "archive",
+      "ARNFormats": [
+        "arn:${Partition}:events:${Region}:${Account}:archive/${ArchiveName}"
+      ]
+    },
+    {
+      "Name": "connection",
+      "ARNFormats": [
+        "arn:${Partition}:events:${Region}:${Account}:connection/${ConnectionName}"
+      ]
+    },
+    {
+      "Name": "create-snapshot",
+      "ARNFormats": [
+        "arn:${Partition}:events:${Region}:${Account}:target/create-snapshot"
+      ]
+    },
+    {
+      "Name": "endpoint",
+      "ARNFormats": [
+        "arn:${Partition}:events:${Region}:${Account}:endpoint/${EndpointName}"
+      ]
+    },
+    {
+      "Name": "event-bus",
+      "ARNFormats": [
+        "arn:${Partition}:events:${Region}:${Account}:event-bus/${EventBusName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "event-source",
+      "ARNFormats": [
+        "arn:${Partition}:events:${Region}::event-source/${EventSourceName}"
+      ]
+    },
+    {
+      "Name": "reboot-instance",
+      "ARNFormats": [
+        "arn:${Partition}:events:${Region}:${Account}:target/reboot-instance"
+      ]
+    },
+    {
+      "Name": "replay",
+      "ARNFormats": [
+        "arn:${Partition}:events:${Region}:${Account}:replay/${ReplayName}"
+      ]
+    },
+    {
+      "Name": "rule-on-custom-event-bus",
+      "ARNFormats": [
+        "arn:${Partition}:events:${Region}:${Account}:rule/${EventBusName}/${RuleName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "rule-on-default-event-bus",
+      "ARNFormats": [
+        "arn:${Partition}:events:${Region}:${Account}:rule/${RuleName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "stop-instance",
+      "ARNFormats": [
+        "arn:${Partition}:events:${Region}:${Account}:target/stop-instance"
+      ]
+    },
+    {
+      "Name": "terminate-instance",
+      "ARNFormats": [
+        "arn:${Partition}:events:${Region}:${Account}:target/terminate-instance"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

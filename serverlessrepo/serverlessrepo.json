@@ -1,0 +1,145 @@
+{
+  "Name": "serverlessrepo",
+  "Actions": [
+    {
+      "Name": "CreateApplication"
+    },
+    {
+      "Name": "CreateApplicationVersion",
+      "Resources": [
+        {
+          "Name": "applications"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCloudFormationChangeSet",
+      "ActionConditionKeys": [
+        "serverlessrepo:applicationType"
+      ],
+      "Resources": [
+        {
+          "Name": "applications"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCloudFormationTemplate",
+      "ActionConditionKeys": [
+        "serverlessrepo:applicationType"
+      ],
+      "Resources": [
+        {
+          "Name": "applications"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApplication",
+      "Resources": [
+        {
+          "Name": "applications"
+        }
+      ]
+    },
+    {
+      "Name": "GetApplication",
+      "ActionConditionKeys": [
+        "serverlessrepo:applicationType"
+      ],
+      "Resources": [
+        {
+          "Name": "applications"
+        }
+      ]
+    },
+    {
+      "Name": "GetApplicationPolicy",
+      "Resources": [
+        {
+          "Name": "applications"
+        }
+      ]
+    },
+    {
+      "Name": "GetCloudFormationTemplate",
+      "Resources": [
+        {
+          "Name": "applications"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplicationDependencies",
+      "ActionConditionKeys": [
+        "serverlessrepo:applicationType"
+      ],
+      "Resources": [
+        {
+          "Name": "applications"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplicationVersions",
+      "ActionConditionKeys": [
+        "serverlessrepo:applicationType"
+      ],
+      "Resources": [
+        {
+          "Name": "applications"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplications"
+    },
+    {
+      "Name": "PutApplicationPolicy",
+      "Resources": [
+        {
+          "Name": "applications"
+        }
+      ]
+    },
+    {
+      "Name": "SearchApplications",
+      "ActionConditionKeys": [
+        "serverlessrepo:applicationType"
+      ]
+    },
+    {
+      "Name": "UnshareApplication",
+      "Resources": [
+        {
+          "Name": "applications"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateApplication",
+      "Resources": [
+        {
+          "Name": "applications"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "serverlessrepo:applicationType",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "applications",
+      "ARNFormats": [
+        "arn:${Partition}:serverlessrepo:${Region}:${Account}:applications/${ResourceId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,156 @@
+{
+  "Name": "braket",
+  "Actions": [
+    {
+      "Name": "AcceptUserAgreement"
+    },
+    {
+      "Name": "AccessBraketFeature"
+    },
+    {
+      "Name": "CancelJob",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "CancelQuantumTask",
+      "Resources": [
+        {
+          "Name": "quantum-task"
+        }
+      ]
+    },
+    {
+      "Name": "CreateJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateQuantumTask",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "GetDevice"
+    },
+    {
+      "Name": "GetJob",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "GetQuantumTask",
+      "Resources": [
+        {
+          "Name": "quantum-task"
+        }
+      ]
+    },
+    {
+      "Name": "GetServiceLinkedRoleStatus"
+    },
+    {
+      "Name": "GetUserAgreementStatus"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "job"
+        },
+        {
+          "Name": "quantum-task"
+        }
+      ]
+    },
+    {
+      "Name": "SearchDevices"
+    },
+    {
+      "Name": "SearchJobs"
+    },
+    {
+      "Name": "SearchQuantumTasks"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "job"
+        },
+        {
+          "Name": "quantum-task"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "job"
+        },
+        {
+          "Name": "quantum-task"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "job",
+      "ARNFormats": [
+        "arn:${Partition}:braket:${Region}:${Account}:job/${JobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "quantum-task",
+      "ARNFormats": [
+        "arn:${Partition}:braket:${Region}:${Account}:quantum-task/${RandomId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

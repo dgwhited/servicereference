@@ -1,0 +1,323 @@
+{
+  "Name": "timestream",
+  "Actions": [
+    {
+      "Name": "CancelQuery"
+    },
+    {
+      "Name": "CreateBatchLoadTask",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDatabase",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "CreateScheduledQuery",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateTable",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDatabase",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteScheduledQuery",
+      "Resources": [
+        {
+          "Name": "scheduled-query"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTable",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAccountSettings"
+    },
+    {
+      "Name": "DescribeBatchLoadTask"
+    },
+    {
+      "Name": "DescribeDatabase",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEndpoints"
+    },
+    {
+      "Name": "DescribeScheduledQuery",
+      "Resources": [
+        {
+          "Name": "scheduled-query"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTable",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "ExecuteScheduledQuery",
+      "Resources": [
+        {
+          "Name": "scheduled-query"
+        }
+      ]
+    },
+    {
+      "Name": "GetAwsBackupStatus"
+    },
+    {
+      "Name": "GetAwsRestoreStatus"
+    },
+    {
+      "Name": "ListBatchLoadTasks"
+    },
+    {
+      "Name": "ListDatabases"
+    },
+    {
+      "Name": "ListMeasures",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "ListScheduledQueries"
+    },
+    {
+      "Name": "ListTables",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "scheduled-query"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "PrepareQuery",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "ResumeBatchLoadTask"
+    },
+    {
+      "Name": "Select",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "SelectValues"
+    },
+    {
+      "Name": "StartAwsBackupJob",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "StartAwsRestoreJob",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "scheduled-query"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "Unload",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "scheduled-query"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAccountSettings"
+    },
+    {
+      "Name": "UpdateDatabase",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateScheduledQuery",
+      "Resources": [
+        {
+          "Name": "scheduled-query"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTable",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "WriteRecords",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "database",
+      "ARNFormats": [
+        "arn:${Partition}:timestream:${Region}:${Account}:database/${DatabaseName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "scheduled-query",
+      "ARNFormats": [
+        "arn:${Partition}:timestream:${Region}:${Account}:scheduled-query/${ScheduledQueryName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "table",
+      "ARNFormats": [
+        "arn:${Partition}:timestream:${Region}:${Account}:database/${DatabaseName}/table/${TableName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

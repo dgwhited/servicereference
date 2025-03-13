@@ -1,0 +1,232 @@
+{
+  "Name": "mq",
+  "Actions": [
+    {
+      "Name": "CreateBroker",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateReplicaBroker",
+      "Resources": [
+        {
+          "Name": "brokers"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTags",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "brokers"
+        },
+        {
+          "Name": "configurations"
+        }
+      ]
+    },
+    {
+      "Name": "CreateUser",
+      "Resources": [
+        {
+          "Name": "brokers"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBroker",
+      "Resources": [
+        {
+          "Name": "brokers"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTags",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "brokers"
+        },
+        {
+          "Name": "configurations"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteUser",
+      "Resources": [
+        {
+          "Name": "brokers"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeBroker",
+      "Resources": [
+        {
+          "Name": "brokers"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeBrokerEngineTypes"
+    },
+    {
+      "Name": "DescribeBrokerInstanceOptions"
+    },
+    {
+      "Name": "DescribeConfiguration",
+      "Resources": [
+        {
+          "Name": "configurations"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeConfigurationRevision",
+      "Resources": [
+        {
+          "Name": "configurations"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeUser",
+      "Resources": [
+        {
+          "Name": "brokers"
+        }
+      ]
+    },
+    {
+      "Name": "ListBrokers"
+    },
+    {
+      "Name": "ListConfigurationRevisions",
+      "Resources": [
+        {
+          "Name": "configurations"
+        }
+      ]
+    },
+    {
+      "Name": "ListConfigurations"
+    },
+    {
+      "Name": "ListTags",
+      "Resources": [
+        {
+          "Name": "brokers"
+        },
+        {
+          "Name": "configurations"
+        }
+      ]
+    },
+    {
+      "Name": "ListUsers",
+      "Resources": [
+        {
+          "Name": "brokers"
+        }
+      ]
+    },
+    {
+      "Name": "Promote",
+      "Resources": [
+        {
+          "Name": "brokers"
+        }
+      ]
+    },
+    {
+      "Name": "RebootBroker",
+      "Resources": [
+        {
+          "Name": "brokers"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBroker",
+      "Resources": [
+        {
+          "Name": "brokers"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConfiguration",
+      "Resources": [
+        {
+          "Name": "configurations"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateUser",
+      "Resources": [
+        {
+          "Name": "brokers"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "brokers",
+      "ARNFormats": [
+        "arn:${Partition}:mq:${Region}:${Account}:broker:${BrokerName}:${BrokerId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "configurations",
+      "ARNFormats": [
+        "arn:${Partition}:mq:${Region}:${Account}:configuration:${ConfigurationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

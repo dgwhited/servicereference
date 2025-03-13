@@ -1,0 +1,345 @@
+{
+  "Name": "billingconductor",
+  "Actions": [
+    {
+      "Name": "AssociateAccounts",
+      "Resources": [
+        {
+          "Name": "billinggroup"
+        }
+      ]
+    },
+    {
+      "Name": "AssociatePricingRules",
+      "Resources": [
+        {
+          "Name": "pricingplan"
+        },
+        {
+          "Name": "pricingrule"
+        }
+      ]
+    },
+    {
+      "Name": "BatchAssociateResourcesToCustomLineItem",
+      "Resources": [
+        {
+          "Name": "customlineitem"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDisassociateResourcesFromCustomLineItem",
+      "Resources": [
+        {
+          "Name": "customlineitem"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBillingGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "pricingplan"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCustomLineItem",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "billinggroup"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePricingPlan",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "pricingrule"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePricingRule",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteBillingGroup",
+      "Resources": [
+        {
+          "Name": "billinggroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCustomLineItem",
+      "Resources": [
+        {
+          "Name": "customlineitem"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePricingPlan",
+      "Resources": [
+        {
+          "Name": "pricingplan"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePricingRule",
+      "Resources": [
+        {
+          "Name": "pricingrule"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateAccounts",
+      "Resources": [
+        {
+          "Name": "billinggroup"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociatePricingRules",
+      "Resources": [
+        {
+          "Name": "pricingplan"
+        },
+        {
+          "Name": "pricingrule"
+        }
+      ]
+    },
+    {
+      "Name": "GetBillingGroupCostReport",
+      "Resources": [
+        {
+          "Name": "billinggroup"
+        }
+      ]
+    },
+    {
+      "Name": "ListAccountAssociations"
+    },
+    {
+      "Name": "ListBillingGroupCostReports"
+    },
+    {
+      "Name": "ListBillingGroups"
+    },
+    {
+      "Name": "ListCustomLineItemVersions",
+      "Resources": [
+        {
+          "Name": "customlineitem"
+        }
+      ]
+    },
+    {
+      "Name": "ListCustomLineItems"
+    },
+    {
+      "Name": "ListPricingPlans"
+    },
+    {
+      "Name": "ListPricingPlansAssociatedWithPricingRule",
+      "Resources": [
+        {
+          "Name": "pricingrule"
+        }
+      ]
+    },
+    {
+      "Name": "ListPricingRules"
+    },
+    {
+      "Name": "ListPricingRulesAssociatedToPricingPlan",
+      "Resources": [
+        {
+          "Name": "pricingplan"
+        }
+      ]
+    },
+    {
+      "Name": "ListResourcesAssociatedToCustomLineItem",
+      "Resources": [
+        {
+          "Name": "customlineitem"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "billinggroup"
+        },
+        {
+          "Name": "customlineitem"
+        },
+        {
+          "Name": "pricingplan"
+        },
+        {
+          "Name": "pricingrule"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "billinggroup"
+        },
+        {
+          "Name": "customlineitem"
+        },
+        {
+          "Name": "pricingplan"
+        },
+        {
+          "Name": "pricingrule"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "billinggroup"
+        },
+        {
+          "Name": "customlineitem"
+        },
+        {
+          "Name": "pricingplan"
+        },
+        {
+          "Name": "pricingrule"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBillingGroup",
+      "Resources": [
+        {
+          "Name": "billinggroup"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCustomLineItem",
+      "Resources": [
+        {
+          "Name": "customlineitem"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePricingPlan",
+      "Resources": [
+        {
+          "Name": "pricingplan"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePricingRule",
+      "Resources": [
+        {
+          "Name": "pricingrule"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "billinggroup",
+      "ARNFormats": [
+        "arn:${Partition}:billingconductor::${Account}:billinggroup/${BillingGroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "customlineitem",
+      "ARNFormats": [
+        "arn:${Partition}:billingconductor::${Account}:customlineitem/${CustomLineItemId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "pricingplan",
+      "ARNFormats": [
+        "arn:${Partition}:billingconductor::${Account}:pricingplan/${PricingPlanId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "pricingrule",
+      "ARNFormats": [
+        "arn:${Partition}:billingconductor::${Account}:pricingrule/${PricingRuleId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

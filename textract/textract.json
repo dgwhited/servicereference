@@ -1,0 +1,190 @@
+{
+  "Name": "textract",
+  "Actions": [
+    {
+      "Name": "AnalyzeDocument"
+    },
+    {
+      "Name": "AnalyzeExpense"
+    },
+    {
+      "Name": "AnalyzeID"
+    },
+    {
+      "Name": "CreateAdapter",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateAdapterVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "adapter"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAdapter",
+      "Resources": [
+        {
+          "Name": "adapter"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAdapterVersion",
+      "Resources": [
+        {
+          "Name": "adapterversion"
+        }
+      ]
+    },
+    {
+      "Name": "DetectDocumentText"
+    },
+    {
+      "Name": "GetAdapter",
+      "Resources": [
+        {
+          "Name": "adapter"
+        }
+      ]
+    },
+    {
+      "Name": "GetAdapterVersion",
+      "Resources": [
+        {
+          "Name": "adapterversion"
+        }
+      ]
+    },
+    {
+      "Name": "GetDocumentAnalysis"
+    },
+    {
+      "Name": "GetDocumentTextDetection"
+    },
+    {
+      "Name": "GetExpenseAnalysis"
+    },
+    {
+      "Name": "GetLendingAnalysis"
+    },
+    {
+      "Name": "GetLendingAnalysisSummary"
+    },
+    {
+      "Name": "ListAdapterVersions"
+    },
+    {
+      "Name": "ListAdapters"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "adapter"
+        },
+        {
+          "Name": "adapterversion"
+        }
+      ]
+    },
+    {
+      "Name": "StartDocumentAnalysis"
+    },
+    {
+      "Name": "StartDocumentTextDetection"
+    },
+    {
+      "Name": "StartExpenseAnalysis"
+    },
+    {
+      "Name": "StartLendingAnalysis"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "adapter"
+        },
+        {
+          "Name": "adapterversion"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "adapter"
+        },
+        {
+          "Name": "adapterversion"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAdapter",
+      "Resources": [
+        {
+          "Name": "adapter"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "adapter",
+      "ARNFormats": [
+        "arn:${Partition}:textract:${Region}:${Account}:/adapters/${AdapterId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "adapterversion",
+      "ARNFormats": [
+        "arn:${Partition}:textract:${Region}:${Account}:/adapters/${AdapterId}/versions/${AdapterVersion}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

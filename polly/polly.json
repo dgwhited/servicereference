@@ -1,0 +1,66 @@
+{
+  "Name": "polly",
+  "Actions": [
+    {
+      "Name": "DeleteLexicon",
+      "Resources": [
+        {
+          "Name": "lexicon"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeVoices"
+    },
+    {
+      "Name": "GetLexicon",
+      "Resources": [
+        {
+          "Name": "lexicon"
+        }
+      ]
+    },
+    {
+      "Name": "GetSpeechSynthesisTask"
+    },
+    {
+      "Name": "ListLexicons"
+    },
+    {
+      "Name": "ListSpeechSynthesisTasks"
+    },
+    {
+      "Name": "PutLexicon",
+      "Resources": [
+        {
+          "Name": "lexicon"
+        }
+      ]
+    },
+    {
+      "Name": "StartSpeechSynthesisTask",
+      "Resources": [
+        {
+          "Name": "lexicon"
+        }
+      ]
+    },
+    {
+      "Name": "SynthesizeSpeech",
+      "Resources": [
+        {
+          "Name": "lexicon"
+        }
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "lexicon",
+      "ARNFormats": [
+        "arn:${Partition}:polly:${Region}:${Account}:lexicon/${LexiconName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

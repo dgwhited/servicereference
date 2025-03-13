@@ -1,0 +1,258 @@
+{
+  "Name": "mediastore",
+  "Actions": [
+    {
+      "Name": "CreateContainer",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteContainer",
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteContainerPolicy",
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCorsPolicy",
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLifecyclePolicy",
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMetricPolicy",
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteObject",
+      "Resources": [
+        {
+          "Name": "object"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeContainer",
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeObject",
+      "Resources": [
+        {
+          "Name": "object"
+        }
+      ]
+    },
+    {
+      "Name": "GetContainerPolicy",
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "GetCorsPolicy",
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "GetLifecyclePolicy",
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "GetMetricPolicy",
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "GetObject",
+      "Resources": [
+        {
+          "Name": "object"
+        }
+      ]
+    },
+    {
+      "Name": "ListContainers"
+    },
+    {
+      "Name": "ListItems",
+      "Resources": [
+        {
+          "Name": "folder"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "PutContainerPolicy",
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "PutCorsPolicy",
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "PutLifecyclePolicy",
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "PutMetricPolicy",
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "PutObject",
+      "Resources": [
+        {
+          "Name": "object"
+        }
+      ]
+    },
+    {
+      "Name": "StartAccessLogging",
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "StopAccessLogging",
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "container"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "container",
+      "ARNFormats": [
+        "arn:${Partition}:mediastore:${Region}:${Account}:container/${ContainerName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "folder",
+      "ARNFormats": [
+        "arn:${Partition}:mediastore:${Region}:${Account}:container/${ContainerName}/${FolderPath}"
+      ]
+    },
+    {
+      "Name": "object",
+      "ARNFormats": [
+        "arn:${Partition}:mediastore:${Region}:${Account}:container/${ContainerName}/${ObjectPath}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

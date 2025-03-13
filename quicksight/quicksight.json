@@ -1,0 +1,2177 @@
+{
+  "Name": "quicksight",
+  "Actions": [
+    {
+      "Name": "AccountConfigurations"
+    },
+    {
+      "Name": "BatchCreateTopicReviewedAnswer",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDeleteTopicReviewedAnswer",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "CancelIngestion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ingestion"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAccountCustomization",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateAccountSubscription",
+      "ActionConditionKeys": [
+        "quicksight:DirectoryType",
+        "quicksight:Edition"
+      ]
+    },
+    {
+      "Name": "CreateAdmin",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAnalysis",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "analysis"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBrand",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "brand"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCustomPermissions",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "custompermissions"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDashboard",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataSource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateEmailCustomizationTemplate",
+      "Resources": [
+        {
+          "Name": "emailCustomizationTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFolder",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "folder"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFolderMembership",
+      "Resources": [
+        {
+          "Name": "analysis"
+        },
+        {
+          "Name": "dashboard"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "folder"
+        }
+      ]
+    },
+    {
+      "Name": "CreateGroup",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateGroupMembership",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "group",
+          "ConditionKeys": [
+            "quicksight:UserName"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreateIAMPolicyAssignment",
+      "Resources": [
+        {
+          "Name": "assignment"
+        }
+      ]
+    },
+    {
+      "Name": "CreateIngestion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ingestion"
+        }
+      ]
+    },
+    {
+      "Name": "CreateNamespace",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "CreateReader",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRefreshSchedule",
+      "Resources": [
+        {
+          "Name": "refreshschedule"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRoleMembership",
+      "ActionConditionKeys": [
+        "identitystore:GroupId",
+        "quicksight:Group"
+      ]
+    },
+    {
+      "Name": "CreateTemplate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTemplateAlias",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTheme",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "theme"
+        }
+      ]
+    },
+    {
+      "Name": "CreateThemeAlias",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "theme"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTopic",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTopicRefreshSchedule",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "CreateUser",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "CreateVPCConnection",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteAccountCustomization",
+      "Resources": [
+        {
+          "Name": "customization"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAccountSubscription",
+      "Resources": [
+        {
+          "Name": "account"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAnalysis",
+      "Resources": [
+        {
+          "Name": "analysis"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBrand",
+      "Resources": [
+        {
+          "Name": "brand"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBrandAssignment"
+    },
+    {
+      "Name": "DeleteCustomPermissions"
+    },
+    {
+      "Name": "DeleteDashboard",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataSetRefreshProperties",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataSource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDefaultQBusinessApplication"
+    },
+    {
+      "Name": "DeleteEmailCustomizationTemplate",
+      "Resources": [
+        {
+          "Name": "emailCustomizationTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFolder",
+      "Resources": [
+        {
+          "Name": "folder"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFolderMembership",
+      "Resources": [
+        {
+          "Name": "analysis"
+        },
+        {
+          "Name": "dashboard"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "folder"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGroup",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGroupMembership",
+      "Resources": [
+        {
+          "Name": "group",
+          "ConditionKeys": [
+            "quicksight:UserName"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIAMPolicyAssignment",
+      "Resources": [
+        {
+          "Name": "assignment"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIdentityPropagationConfig"
+    },
+    {
+      "Name": "DeleteNamespace",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRefreshSchedule",
+      "Resources": [
+        {
+          "Name": "refreshschedule"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRoleCustomPermission"
+    },
+    {
+      "Name": "DeleteRoleMembership",
+      "ActionConditionKeys": [
+        "identitystore:GroupId",
+        "quicksight:Group"
+      ]
+    },
+    {
+      "Name": "DeleteTemplate",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTemplateAlias",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTheme",
+      "Resources": [
+        {
+          "Name": "theme"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteThemeAlias",
+      "Resources": [
+        {
+          "Name": "theme"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTopic",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTopicRefreshSchedule",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteUser",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteUserByPrincipalId",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteUserCustomPermission",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteVPCConnection",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "vpcconnection"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAccountCustomization",
+      "Resources": [
+        {
+          "Name": "customization"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAccountSettings"
+    },
+    {
+      "Name": "DescribeAccountSubscription",
+      "Resources": [
+        {
+          "Name": "account"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAnalysis",
+      "Resources": [
+        {
+          "Name": "analysis"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAnalysisPermissions",
+      "Resources": [
+        {
+          "Name": "analysis"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAssetBundleExportJob",
+      "Resources": [
+        {
+          "Name": "assetBundleExportJob"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAssetBundleImportJob",
+      "Resources": [
+        {
+          "Name": "assetBundleImportJob"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeBrand",
+      "Resources": [
+        {
+          "Name": "brand"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeBrandAssignment"
+    },
+    {
+      "Name": "DescribeBrandPublishedVersion",
+      "Resources": [
+        {
+          "Name": "brand"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCustomPermissions",
+      "Resources": [
+        {
+          "Name": "custompermissions"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDashboard",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDashboardPermissions",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDashboardSnapshotJob",
+      "Resources": [
+        {
+          "Name": "dashboardSnapshotJob"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDashboardSnapshotJobResult",
+      "Resources": [
+        {
+          "Name": "dashboardSnapshotJob"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDashboardsQAConfiguration"
+    },
+    {
+      "Name": "DescribeDataSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDataSetPermissions",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDataSetRefreshProperties",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDataSource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDataSourcePermissions",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDefaultQBusinessApplication"
+    },
+    {
+      "Name": "DescribeEmailCustomizationTemplate",
+      "Resources": [
+        {
+          "Name": "emailCustomizationTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFolder",
+      "Resources": [
+        {
+          "Name": "folder"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFolderPermissions",
+      "Resources": [
+        {
+          "Name": "folder"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFolderResolvedPermissions",
+      "Resources": [
+        {
+          "Name": "folder"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeGroup",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeGroupMembership",
+      "Resources": [
+        {
+          "Name": "group",
+          "ConditionKeys": [
+            "quicksight:UserName"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DescribeIAMPolicyAssignment",
+      "Resources": [
+        {
+          "Name": "assignment"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeIngestion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ingestion"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeIpRestriction"
+    },
+    {
+      "Name": "DescribeKeyRegistration"
+    },
+    {
+      "Name": "DescribeNamespace",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeQPersonalizationConfiguration"
+    },
+    {
+      "Name": "DescribeQuickSightQSearchConfiguration"
+    },
+    {
+      "Name": "DescribeRefreshSchedule",
+      "Resources": [
+        {
+          "Name": "refreshschedule"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRoleCustomPermission"
+    },
+    {
+      "Name": "DescribeTemplate",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTemplateAlias",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTemplatePermissions",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTheme",
+      "Resources": [
+        {
+          "Name": "theme"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeThemeAlias",
+      "Resources": [
+        {
+          "Name": "theme"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeThemePermissions",
+      "Resources": [
+        {
+          "Name": "theme"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTopic",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTopicPermissions",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTopicRefresh",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTopicRefreshSchedule",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeUser",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeVPCConnection",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "vpcconnection"
+        }
+      ]
+    },
+    {
+      "Name": "GenerateEmbedUrlForAnonymousUser",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "quicksight:AllowedEmbeddingDomains"
+      ],
+      "Resources": [
+        {
+          "Name": "dashboard"
+        },
+        {
+          "Name": "namespace"
+        },
+        {
+          "Name": "theme"
+        },
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "GenerateEmbedUrlForRegisteredUser",
+      "ActionConditionKeys": [
+        "quicksight:AllowedEmbeddingDomains"
+      ],
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "GenerateEmbedUrlForRegisteredUserWithIdentity",
+      "ActionConditionKeys": [
+        "quicksight:AllowedEmbeddingDomains"
+      ]
+    },
+    {
+      "Name": "GetAnonymousUserEmbedUrl"
+    },
+    {
+      "Name": "GetAuthCode",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "GetDashboardEmbedUrl",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "GetGroupMapping"
+    },
+    {
+      "Name": "GetSessionEmbedUrl"
+    },
+    {
+      "Name": "ListAnalyses",
+      "Resources": [
+        {
+          "Name": "analysis"
+        }
+      ]
+    },
+    {
+      "Name": "ListAssetBundleExportJobs",
+      "Resources": [
+        {
+          "Name": "assetBundleExportJob"
+        }
+      ]
+    },
+    {
+      "Name": "ListAssetBundleImportJobs",
+      "Resources": [
+        {
+          "Name": "assetBundleImportJob"
+        }
+      ]
+    },
+    {
+      "Name": "ListBrands"
+    },
+    {
+      "Name": "ListCustomPermissions"
+    },
+    {
+      "Name": "ListCustomerManagedKeys"
+    },
+    {
+      "Name": "ListDashboardVersions",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "ListDashboards",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataSets",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "ListDataSources",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "ListFolderMembers",
+      "Resources": [
+        {
+          "Name": "folder"
+        }
+      ]
+    },
+    {
+      "Name": "ListFolders",
+      "Resources": [
+        {
+          "Name": "folder"
+        }
+      ]
+    },
+    {
+      "Name": "ListFoldersForResource",
+      "Resources": [
+        {
+          "Name": "analysis"
+        },
+        {
+          "Name": "dashboard"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "datasource"
+        },
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "ListGroupMemberships",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "ListGroups",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "ListIAMPolicyAssignments",
+      "Resources": [
+        {
+          "Name": "assignment"
+        }
+      ]
+    },
+    {
+      "Name": "ListIAMPolicyAssignmentsForUser",
+      "Resources": [
+        {
+          "Name": "assignment"
+        }
+      ]
+    },
+    {
+      "Name": "ListIdentityPropagationConfigs"
+    },
+    {
+      "Name": "ListIngestions",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "ListKMSKeysForUser"
+    },
+    {
+      "Name": "ListNamespaces"
+    },
+    {
+      "Name": "ListRefreshSchedules"
+    },
+    {
+      "Name": "ListRoleMemberships"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "analysis"
+        },
+        {
+          "Name": "brand"
+        },
+        {
+          "Name": "customization"
+        },
+        {
+          "Name": "custompermissions"
+        },
+        {
+          "Name": "dashboard"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "datasource"
+        },
+        {
+          "Name": "folder"
+        },
+        {
+          "Name": "template"
+        },
+        {
+          "Name": "theme"
+        },
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "ListTemplateAliases",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "ListTemplateVersions",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "ListTemplates",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "ListThemeAliases",
+      "Resources": [
+        {
+          "Name": "theme"
+        }
+      ]
+    },
+    {
+      "Name": "ListThemeVersions",
+      "Resources": [
+        {
+          "Name": "theme"
+        }
+      ]
+    },
+    {
+      "Name": "ListThemes",
+      "Resources": [
+        {
+          "Name": "theme"
+        }
+      ]
+    },
+    {
+      "Name": "ListTopicRefreshSchedules"
+    },
+    {
+      "Name": "ListTopicReviewedAnswers",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "ListTopics",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "ListUserGroups",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "ListUsers",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "ListVPCConnections",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "PassDataSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "PassDataSource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "PredictQAResults",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        },
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "PutDataSetRefreshProperties",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterCustomerManagedKey"
+    },
+    {
+      "Name": "RegisterUser",
+      "Resources": [
+        {
+          "Name": "user",
+          "ConditionKeys": [
+            "quicksight:IamArn",
+            "quicksight:SessionName"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "RemoveCustomerManagedKey"
+    },
+    {
+      "Name": "RestoreAnalysis",
+      "Resources": [
+        {
+          "Name": "analysis"
+        }
+      ]
+    },
+    {
+      "Name": "ScopeDownPolicy"
+    },
+    {
+      "Name": "SearchAnalyses",
+      "Resources": [
+        {
+          "Name": "analysis"
+        }
+      ]
+    },
+    {
+      "Name": "SearchDashboards",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "SearchDataSets",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "SearchDataSources",
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "SearchDirectoryGroups"
+    },
+    {
+      "Name": "SearchFolders",
+      "Resources": [
+        {
+          "Name": "folder"
+        }
+      ]
+    },
+    {
+      "Name": "SearchGroups",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "SearchTopics",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "SearchUsers",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "SetGroupMapping"
+    },
+    {
+      "Name": "StartAssetBundleExportJob",
+      "Resources": [
+        {
+          "Name": "assetBundleExportJob"
+        }
+      ]
+    },
+    {
+      "Name": "StartAssetBundleImportJob",
+      "Resources": [
+        {
+          "Name": "assetBundleImportJob"
+        }
+      ]
+    },
+    {
+      "Name": "StartDashboardSnapshotJob",
+      "Resources": [
+        {
+          "Name": "dashboardSnapshotJob"
+        }
+      ]
+    },
+    {
+      "Name": "StartDashboardSnapshotJobSchedule"
+    },
+    {
+      "Name": "Subscribe",
+      "ActionConditionKeys": [
+        "quicksight:DirectoryType",
+        "quicksight:Edition"
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "analysis"
+        },
+        {
+          "Name": "brand"
+        },
+        {
+          "Name": "customization"
+        },
+        {
+          "Name": "custompermissions"
+        },
+        {
+          "Name": "dashboard"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "datasource"
+        },
+        {
+          "Name": "folder"
+        },
+        {
+          "Name": "ingestion"
+        },
+        {
+          "Name": "template"
+        },
+        {
+          "Name": "theme"
+        },
+        {
+          "Name": "topic"
+        },
+        {
+          "Name": "vpcconnection"
+        }
+      ]
+    },
+    {
+      "Name": "Unsubscribe"
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "analysis"
+        },
+        {
+          "Name": "brand"
+        },
+        {
+          "Name": "customization"
+        },
+        {
+          "Name": "custompermissions"
+        },
+        {
+          "Name": "dashboard"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "datasource"
+        },
+        {
+          "Name": "folder"
+        },
+        {
+          "Name": "ingestion"
+        },
+        {
+          "Name": "template"
+        },
+        {
+          "Name": "theme"
+        },
+        {
+          "Name": "topic"
+        },
+        {
+          "Name": "vpcconnection"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAccountCustomization",
+      "Resources": [
+        {
+          "Name": "customization"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAccountSettings"
+    },
+    {
+      "Name": "UpdateAnalysis",
+      "Resources": [
+        {
+          "Name": "analysis"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAnalysisPermissions",
+      "Resources": [
+        {
+          "Name": "analysis"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateApplicationWithTokenExchangeGrant"
+    },
+    {
+      "Name": "UpdateBrand",
+      "Resources": [
+        {
+          "Name": "brand"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBrandAssignment"
+    },
+    {
+      "Name": "UpdateBrandPublishedVersion",
+      "Resources": [
+        {
+          "Name": "brand"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCustomPermissions",
+      "Resources": [
+        {
+          "Name": "custompermissions"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDashboard",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDashboardLinks",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDashboardPermissions",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDashboardPublishedVersion",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDashboardsQAConfiguration"
+    },
+    {
+      "Name": "UpdateDataSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataSetPermissions",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataSource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataSourcePermissions",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDefaultQBusinessApplication"
+    },
+    {
+      "Name": "UpdateEmailCustomizationTemplate",
+      "Resources": [
+        {
+          "Name": "emailCustomizationTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFolder",
+      "Resources": [
+        {
+          "Name": "folder"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFolderPermissions",
+      "Resources": [
+        {
+          "Name": "folder"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGroup",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIAMPolicyAssignment",
+      "Resources": [
+        {
+          "Name": "assignment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIdentityPropagationConfig"
+    },
+    {
+      "Name": "UpdateIpRestriction"
+    },
+    {
+      "Name": "UpdateKeyRegistration"
+    },
+    {
+      "Name": "UpdatePublicSharingSettings"
+    },
+    {
+      "Name": "UpdateQPersonalizationConfiguration"
+    },
+    {
+      "Name": "UpdateQuickSightQSearchConfiguration"
+    },
+    {
+      "Name": "UpdateRefreshSchedule",
+      "Resources": [
+        {
+          "Name": "refreshschedule"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateResourcePermissions"
+    },
+    {
+      "Name": "UpdateRoleCustomPermission"
+    },
+    {
+      "Name": "UpdateSPICECapacityConfiguration"
+    },
+    {
+      "Name": "UpdateTemplate",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTemplateAlias",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTemplatePermissions",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTheme",
+      "Resources": [
+        {
+          "Name": "theme"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateThemeAlias",
+      "Resources": [
+        {
+          "Name": "theme"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateThemePermissions",
+      "Resources": [
+        {
+          "Name": "theme"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTopic",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTopicPermissions",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTopicRefreshSchedule",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateUser",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateUserCustomPermission",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateVPCConnection",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "vpcconnection"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "identitystore:GroupId",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "quicksight:AllowedEmbeddingDomains",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "quicksight:DirectoryType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "quicksight:Edition",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "quicksight:Group",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "quicksight:IamArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "quicksight:KmsKeyArns",
+      "Types": [
+        "ArrayOfARN"
+      ]
+    },
+    {
+      "Name": "quicksight:SessionName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "quicksight:UserName",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "account",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:account/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "analysis",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:analysis/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "assetBundleExportJob",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:asset-bundle-export-job/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "assetBundleImportJob",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:asset-bundle-import-job/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "assignment",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight::${Account}:assignment/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "brand",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:brand/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "customization",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:customization/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "custompermissions",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:custompermissions/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "dashboard",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:dashboard/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "dashboardSnapshotJob",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:dashboard/${DashboardId}/snapshot-job/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "dataset",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:dataset/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "datasource",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:datasource/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "emailCustomizationTemplate",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:email-customization-template/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "folder",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:folder/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "group",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:group/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "ingestion",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:dataset/${DatasetId}/ingestion/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "namespace",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:namespace/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "refreshschedule",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:dataset/${DatasetId}/refresh-schedule/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "template",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:template/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "theme",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:theme/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "topic",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:topic/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "user",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:user/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "vpcconnection",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:vpcConnection/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

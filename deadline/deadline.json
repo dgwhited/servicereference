@@ -1,0 +1,1219 @@
+{
+  "Name": "deadline",
+  "Actions": [
+    {
+      "Name": "AssociateMemberToFarm",
+      "ActionConditionKeys": [
+        "deadline:AssociatedMembershipLevel",
+        "deadline:MembershipLevel"
+      ],
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateMemberToFleet",
+      "ActionConditionKeys": [
+        "deadline:AssociatedMembershipLevel",
+        "deadline:MembershipLevel"
+      ],
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateMemberToJob",
+      "ActionConditionKeys": [
+        "deadline:AssociatedMembershipLevel",
+        "deadline:MembershipLevel"
+      ],
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateMemberToQueue",
+      "ActionConditionKeys": [
+        "deadline:AssociatedMembershipLevel",
+        "deadline:MembershipLevel"
+      ],
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "AssumeFleetRoleForRead",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "AssumeFleetRoleForWorker",
+      "Resources": [
+        {
+          "Name": "worker"
+        }
+      ]
+    },
+    {
+      "Name": "AssumeQueueRoleForRead",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "AssumeQueueRoleForUser",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "AssumeQueueRoleForWorker",
+      "Resources": [
+        {
+          "Name": "queue"
+        },
+        {
+          "Name": "worker"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetJobEntity",
+      "Resources": [
+        {
+          "Name": "worker"
+        }
+      ]
+    },
+    {
+      "Name": "CopyJobTemplate",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBudget",
+      "Resources": [
+        {
+          "Name": "budget"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFarm",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFleet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "CreateJob",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLicenseEndpoint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "license-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLimit",
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMonitor",
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "CreateQueue",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "CreateQueueEnvironment",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "CreateQueueFleetAssociation",
+      "Resources": [
+        {
+          "Name": "fleet"
+        },
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "CreateQueueLimitAssociation",
+      "Resources": [
+        {
+          "Name": "farm"
+        },
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStorageProfile",
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWorker",
+      "Resources": [
+        {
+          "Name": "worker"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBudget",
+      "Resources": [
+        {
+          "Name": "budget"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFarm",
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFleet",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLicenseEndpoint",
+      "Resources": [
+        {
+          "Name": "license-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLimit",
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMeteredProduct",
+      "Resources": [
+        {
+          "Name": "metered-product"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMonitor",
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteQueue",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteQueueEnvironment",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteQueueFleetAssociation",
+      "Resources": [
+        {
+          "Name": "fleet"
+        },
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteQueueLimitAssociation",
+      "Resources": [
+        {
+          "Name": "farm"
+        },
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStorageProfile",
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorker",
+      "Resources": [
+        {
+          "Name": "worker"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateMemberFromFarm",
+      "ActionConditionKeys": [
+        "deadline:AssociatedMembershipLevel"
+      ],
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateMemberFromFleet",
+      "ActionConditionKeys": [
+        "deadline:AssociatedMembershipLevel"
+      ],
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateMemberFromJob",
+      "ActionConditionKeys": [
+        "deadline:AssociatedMembershipLevel"
+      ],
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateMemberFromQueue",
+      "ActionConditionKeys": [
+        "deadline:AssociatedMembershipLevel"
+      ],
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "GetApplicationVersion",
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "GetBudget",
+      "Resources": [
+        {
+          "Name": "budget"
+        }
+      ]
+    },
+    {
+      "Name": "GetFarm",
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "GetFleet",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "GetJob",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "GetJobTemplate",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "GetLicenseEndpoint",
+      "Resources": [
+        {
+          "Name": "license-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "GetLimit",
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "GetMonitor",
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueue",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueueEnvironment",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueueFleetAssociation",
+      "Resources": [
+        {
+          "Name": "fleet"
+        },
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueueLimitAssociation",
+      "Resources": [
+        {
+          "Name": "farm"
+        },
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "GetSession",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "GetSessionAction",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "GetSessionsStatisticsAggregation",
+      "Resources": [
+        {
+          "Name": "farm"
+        },
+        {
+          "Name": "fleet"
+        },
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "GetStep",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "GetStorageProfile",
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "GetStorageProfileForQueue",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "GetTask",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "GetWorker",
+      "Resources": [
+        {
+          "Name": "worker"
+        }
+      ]
+    },
+    {
+      "Name": "ListAvailableMeteredProducts"
+    },
+    {
+      "Name": "ListBudgets",
+      "Resources": [
+        {
+          "Name": "budget"
+        }
+      ]
+    },
+    {
+      "Name": "ListFarmMembers",
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "ListFarms",
+      "ActionConditionKeys": [
+        "deadline:PrincipalId",
+        "deadline:RequesterPrincipalId"
+      ],
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "ListFleetMembers",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "ListFleets",
+      "ActionConditionKeys": [
+        "deadline:PrincipalId",
+        "deadline:RequesterPrincipalId"
+      ],
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobMembers",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobParameterDefinitions",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobs",
+      "ActionConditionKeys": [
+        "deadline:PrincipalId",
+        "deadline:RequesterPrincipalId"
+      ],
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "ListLicenseEndpoints",
+      "Resources": [
+        {
+          "Name": "license-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "ListLimits",
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "ListMeteredProducts",
+      "Resources": [
+        {
+          "Name": "metered-product"
+        }
+      ]
+    },
+    {
+      "Name": "ListMonitors",
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "ListQueueEnvironments",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "ListQueueFleetAssociations",
+      "Resources": [
+        {
+          "Name": "farm"
+        },
+        {
+          "Name": "fleet"
+        },
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "ListQueueLimitAssociations",
+      "Resources": [
+        {
+          "Name": "farm"
+        },
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "ListQueueMembers",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "ListQueues",
+      "ActionConditionKeys": [
+        "deadline:PrincipalId",
+        "deadline:RequesterPrincipalId"
+      ],
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "ListSessionActions",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "ListSessions",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "ListSessionsForWorker",
+      "Resources": [
+        {
+          "Name": "worker"
+        }
+      ]
+    },
+    {
+      "Name": "ListStepConsumers",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "ListStepDependencies",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "ListSteps",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "ListStorageProfiles",
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "ListStorageProfilesForQueue",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "farm"
+        },
+        {
+          "Name": "fleet"
+        },
+        {
+          "Name": "license-endpoint"
+        },
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "ListTasks",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "ListWorkers",
+      "Resources": [
+        {
+          "Name": "worker"
+        }
+      ]
+    },
+    {
+      "Name": "PutMeteredProduct",
+      "Resources": [
+        {
+          "Name": "metered-product"
+        }
+      ]
+    },
+    {
+      "Name": "SearchJobs",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "SearchSteps",
+      "Resources": [
+        {
+          "Name": "job"
+        },
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "SearchTasks",
+      "Resources": [
+        {
+          "Name": "job"
+        },
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "SearchWorkers",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "StartSessionsStatisticsAggregation",
+      "Resources": [
+        {
+          "Name": "fleet"
+        },
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "farm"
+        },
+        {
+          "Name": "fleet"
+        },
+        {
+          "Name": "license-endpoint"
+        },
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "farm"
+        },
+        {
+          "Name": "fleet"
+        },
+        {
+          "Name": "license-endpoint"
+        },
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBudget",
+      "Resources": [
+        {
+          "Name": "budget"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFarm",
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFleet",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateJob",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLimit",
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMonitor",
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateQueue",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateQueueEnvironment",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateQueueFleetAssociation",
+      "Resources": [
+        {
+          "Name": "fleet"
+        },
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateQueueLimitAssociation",
+      "Resources": [
+        {
+          "Name": "farm"
+        },
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSession",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStep",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStorageProfile",
+      "Resources": [
+        {
+          "Name": "farm"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTask",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWorker",
+      "Resources": [
+        {
+          "Name": "worker"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWorkerSchedule",
+      "Resources": [
+        {
+          "Name": "worker"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "deadline:AssociatedMembershipLevel",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "deadline:FarmMembershipLevels",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "deadline:FleetMembershipLevels",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "deadline:JobMembershipLevels",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "deadline:MembershipLevel",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "deadline:PrincipalId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "deadline:QueueMembershipLevels",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "deadline:RequesterPrincipalId",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "budget",
+      "ARNFormats": [
+        "arn:${Partition}:deadline:${Region}:${Account}:farm/${FarmId}/budget/${BudgetId}"
+      ],
+      "ConditionKeys": [
+        "deadline:FarmMembershipLevels"
+      ]
+    },
+    {
+      "Name": "farm",
+      "ARNFormats": [
+        "arn:${Partition}:deadline:${Region}:${Account}:farm/${FarmId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "deadline:FarmMembershipLevels"
+      ]
+    },
+    {
+      "Name": "fleet",
+      "ARNFormats": [
+        "arn:${Partition}:deadline:${Region}:${Account}:farm/${FarmId}/fleet/${FleetId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "deadline:FarmMembershipLevels",
+        "deadline:FleetMembershipLevels"
+      ]
+    },
+    {
+      "Name": "job",
+      "ARNFormats": [
+        "arn:${Partition}:deadline:${Region}:${Account}:farm/${FarmId}/queue/${QueueId}/job/${JobId}"
+      ],
+      "ConditionKeys": [
+        "deadline:FarmMembershipLevels",
+        "deadline:JobMembershipLevels",
+        "deadline:QueueMembershipLevels"
+      ]
+    },
+    {
+      "Name": "license-endpoint",
+      "ARNFormats": [
+        "arn:${Partition}:deadline:${Region}:${Account}:license-endpoint/${LicenseEndpointId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "metered-product",
+      "ARNFormats": [
+        "arn:${Partition}:deadline:${Region}:${Account}:license-endpoint/${LicenseEndpointId}/metered-product/${ProductId}"
+      ]
+    },
+    {
+      "Name": "monitor",
+      "ARNFormats": [
+        "arn:${Partition}:deadline:${Region}:${Account}:monitor/${MonitorId}"
+      ]
+    },
+    {
+      "Name": "queue",
+      "ARNFormats": [
+        "arn:${Partition}:deadline:${Region}:${Account}:farm/${FarmId}/queue/${QueueId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "deadline:FarmMembershipLevels",
+        "deadline:QueueMembershipLevels"
+      ]
+    },
+    {
+      "Name": "worker",
+      "ARNFormats": [
+        "arn:${Partition}:deadline:${Region}:${Account}:farm/${FarmId}/fleet/${FleetId}/worker/${WorkerId}"
+      ],
+      "ConditionKeys": [
+        "deadline:FarmMembershipLevels",
+        "deadline:FleetMembershipLevels"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

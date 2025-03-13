@@ -1,0 +1,357 @@
+{
+  "Name": "entityresolution",
+  "Actions": [
+    {
+      "Name": "AddPolicyStatement"
+    },
+    {
+      "Name": "BatchDeleteUniqueId",
+      "Resources": [
+        {
+          "Name": "MatchingWorkflow"
+        }
+      ]
+    },
+    {
+      "Name": "CreateIdMappingWorkflow",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateIdNamespace",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateMatchingWorkflow",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateSchemaMapping",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteIdMappingWorkflow",
+      "Resources": [
+        {
+          "Name": "IdMappingWorkflow"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIdNamespace",
+      "Resources": [
+        {
+          "Name": "IdNamespace"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMatchingWorkflow",
+      "Resources": [
+        {
+          "Name": "MatchingWorkflow"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePolicyStatement"
+    },
+    {
+      "Name": "DeleteSchemaMapping",
+      "Resources": [
+        {
+          "Name": "SchemaMapping"
+        }
+      ]
+    },
+    {
+      "Name": "GetIdMappingJob",
+      "Resources": [
+        {
+          "Name": "IdMappingWorkflow"
+        }
+      ]
+    },
+    {
+      "Name": "GetIdMappingWorkflow",
+      "Resources": [
+        {
+          "Name": "IdMappingWorkflow"
+        }
+      ]
+    },
+    {
+      "Name": "GetIdNamespace",
+      "Resources": [
+        {
+          "Name": "IdNamespace"
+        }
+      ]
+    },
+    {
+      "Name": "GetMatchId",
+      "Resources": [
+        {
+          "Name": "MatchingWorkflow"
+        }
+      ]
+    },
+    {
+      "Name": "GetMatchingJob",
+      "Resources": [
+        {
+          "Name": "MatchingWorkflow"
+        }
+      ]
+    },
+    {
+      "Name": "GetMatchingWorkflow",
+      "Resources": [
+        {
+          "Name": "MatchingWorkflow"
+        }
+      ]
+    },
+    {
+      "Name": "GetPolicy"
+    },
+    {
+      "Name": "GetProviderService",
+      "Resources": [
+        {
+          "Name": "ProviderService"
+        }
+      ]
+    },
+    {
+      "Name": "GetSchemaMapping",
+      "Resources": [
+        {
+          "Name": "SchemaMapping"
+        }
+      ]
+    },
+    {
+      "Name": "ListIdMappingJobs",
+      "Resources": [
+        {
+          "Name": "IdMappingWorkflow"
+        }
+      ]
+    },
+    {
+      "Name": "ListIdMappingWorkflows"
+    },
+    {
+      "Name": "ListIdNamespaces"
+    },
+    {
+      "Name": "ListMatchingJobs",
+      "Resources": [
+        {
+          "Name": "MatchingWorkflow"
+        }
+      ]
+    },
+    {
+      "Name": "ListMatchingWorkflows"
+    },
+    {
+      "Name": "ListProviderServices",
+      "Resources": [
+        {
+          "Name": "ProviderService"
+        }
+      ]
+    },
+    {
+      "Name": "ListSchemaMappings"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "PutPolicy"
+    },
+    {
+      "Name": "StartIdMappingJob",
+      "Resources": [
+        {
+          "Name": "IdMappingWorkflow"
+        }
+      ]
+    },
+    {
+      "Name": "StartMatchingJob",
+      "Resources": [
+        {
+          "Name": "MatchingWorkflow"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "IdMappingWorkflow"
+        },
+        {
+          "Name": "IdNamespace"
+        },
+        {
+          "Name": "MatchingWorkflow"
+        },
+        {
+          "Name": "ProviderService"
+        },
+        {
+          "Name": "SchemaMapping"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "IdMappingWorkflow"
+        },
+        {
+          "Name": "IdNamespace"
+        },
+        {
+          "Name": "MatchingWorkflow"
+        },
+        {
+          "Name": "ProviderService"
+        },
+        {
+          "Name": "SchemaMapping"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIdMappingWorkflow",
+      "Resources": [
+        {
+          "Name": "IdMappingWorkflow"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIdNamespace",
+      "Resources": [
+        {
+          "Name": "IdNamespace"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMatchingWorkflow",
+      "Resources": [
+        {
+          "Name": "MatchingWorkflow"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSchemaMapping",
+      "Resources": [
+        {
+          "Name": "SchemaMapping"
+        }
+      ]
+    },
+    {
+      "Name": "UseIdNamespace"
+    },
+    {
+      "Name": "UseWorkflow"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "IdMappingWorkflow",
+      "ARNFormats": [
+        "arn:${Partition}:entityresolution:${Region}:${Account}:idmappingworkflow/${WorkflowName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "IdNamespace",
+      "ARNFormats": [
+        "arn:${Partition}:entityresolution:${Region}:${Account}:idnamespace/${IdNamespaceName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "MatchingWorkflow",
+      "ARNFormats": [
+        "arn:${Partition}:entityresolution:${Region}:${Account}:matchingworkflow/${WorkflowName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ProviderService",
+      "ARNFormats": [
+        "arn:${Partition}:entityresolution:${Region}:${Account}:providerservice/${ProviderName}/${ProviderServiceName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "SchemaMapping",
+      "ARNFormats": [
+        "arn:${Partition}:entityresolution:${Region}:${Account}:schemamapping/${SchemaName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,410 @@
+{
+  "Name": "elasticfilesystem",
+  "Actions": [
+    {
+      "Name": "Backup",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "ClientMount",
+      "ActionConditionKeys": [
+        "elasticfilesystem:AccessPointArn",
+        "elasticfilesystem:AccessedViaMountTarget"
+      ],
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "ClientRootAccess",
+      "ActionConditionKeys": [
+        "elasticfilesystem:AccessPointArn",
+        "elasticfilesystem:AccessedViaMountTarget"
+      ],
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "ClientWrite",
+      "ActionConditionKeys": [
+        "elasticfilesystem:AccessPointArn",
+        "elasticfilesystem:AccessedViaMountTarget"
+      ],
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAccessPoint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFileSystem",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "elasticfilesystem:Encrypted"
+      ]
+    },
+    {
+      "Name": "CreateMountTarget",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "CreateReplicationConfiguration",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTags",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAccessPoint",
+      "Resources": [
+        {
+          "Name": "access-point"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFileSystem",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFileSystemPolicy",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMountTarget",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteReplicationConfiguration",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTags",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAccessPoints",
+      "Resources": [
+        {
+          "Name": "access-point"
+        },
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAccountPreferences"
+    },
+    {
+      "Name": "DescribeBackupPolicy",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFileSystemPolicy",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFileSystems",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeLifecycleConfiguration",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMountTargetSecurityGroups",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMountTargets",
+      "Resources": [
+        {
+          "Name": "access-point"
+        },
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeReplicationConfigurations",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTags",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "access-point"
+        },
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyMountTargetSecurityGroups",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "PutAccountPreferences"
+    },
+    {
+      "Name": "PutBackupPolicy",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "PutFileSystemPolicy",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "PutLifecycleConfiguration",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "ReplicationRead",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "ReplicationWrite",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "Restore",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "elasticfilesystem:CreateAction"
+      ],
+      "Resources": [
+        {
+          "Name": "access-point"
+        },
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "access-point"
+        },
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFileSystem",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFileSystemProtection",
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "elasticfilesystem:AccessPointArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "elasticfilesystem:AccessedViaMountTarget",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
+      "Name": "elasticfilesystem:CreateAction",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "elasticfilesystem:Encrypted",
+      "Types": [
+        "Bool"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "access-point",
+      "ARNFormats": [
+        "arn:${Partition}:elasticfilesystem:${Region}:${Account}:access-point/${AccessPointId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "file-system",
+      "ARNFormats": [
+        "arn:${Partition}:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,380 @@
+{
+  "Name": "mgh",
+  "Actions": [
+    {
+      "Name": "AcceptConnection",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ConnectionResource"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateAutomationUnitRole",
+      "Resources": [
+        {
+          "Name": "AutomationUnitResource"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateCreatedArtifact",
+      "Resources": [
+        {
+          "Name": "migrationTask"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateDiscoveredResource",
+      "Resources": [
+        {
+          "Name": "migrationTask"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateSourceResource",
+      "Resources": [
+        {
+          "Name": "migrationTask"
+        }
+      ]
+    },
+    {
+      "Name": "BatchAssociateIamRoleWithConnection",
+      "Resources": [
+        {
+          "Name": "ConnectionResource"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDisassociateIamRoleFromConnection",
+      "Resources": [
+        {
+          "Name": "ConnectionResource"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAutomationRun"
+    },
+    {
+      "Name": "CreateAutomationUnit"
+    },
+    {
+      "Name": "CreateHomeRegionControl"
+    },
+    {
+      "Name": "CreateProgressUpdateStream",
+      "Resources": [
+        {
+          "Name": "progressUpdateStream"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAutomationRun",
+      "Resources": [
+        {
+          "Name": "AutomationRunResource"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAutomationUnit",
+      "Resources": [
+        {
+          "Name": "AutomationUnitResource"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConnection",
+      "Resources": [
+        {
+          "Name": "ConnectionResource"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteHomeRegionControl"
+    },
+    {
+      "Name": "DeleteProgressUpdateStream",
+      "Resources": [
+        {
+          "Name": "progressUpdateStream"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeApplicationState"
+    },
+    {
+      "Name": "DescribeAutomationRun",
+      "Resources": [
+        {
+          "Name": "AutomationRunResource"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAutomationUnit",
+      "Resources": [
+        {
+          "Name": "AutomationUnitResource"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeHomeRegionControls"
+    },
+    {
+      "Name": "DescribeMigrationTask",
+      "Resources": [
+        {
+          "Name": "migrationTask"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateAutomationUnitRole",
+      "Resources": [
+        {
+          "Name": "AutomationUnitResource"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateCreatedArtifact",
+      "Resources": [
+        {
+          "Name": "migrationTask"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateDiscoveredResource",
+      "Resources": [
+        {
+          "Name": "migrationTask"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateSourceResource",
+      "Resources": [
+        {
+          "Name": "migrationTask"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnection",
+      "Resources": [
+        {
+          "Name": "ConnectionResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetHomeRegion"
+    },
+    {
+      "Name": "ImportMigrationTask",
+      "Resources": [
+        {
+          "Name": "migrationTask"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplicationStates"
+    },
+    {
+      "Name": "ListAutomationRuns"
+    },
+    {
+      "Name": "ListAutomationUnits"
+    },
+    {
+      "Name": "ListConnectionRoles",
+      "Resources": [
+        {
+          "Name": "ConnectionResource"
+        }
+      ]
+    },
+    {
+      "Name": "ListConnections"
+    },
+    {
+      "Name": "ListCreatedArtifacts",
+      "Resources": [
+        {
+          "Name": "migrationTask"
+        }
+      ]
+    },
+    {
+      "Name": "ListDiscoveredResources",
+      "Resources": [
+        {
+          "Name": "migrationTask"
+        }
+      ]
+    },
+    {
+      "Name": "ListMigrationTaskUpdates",
+      "Resources": [
+        {
+          "Name": "migrationTask"
+        }
+      ]
+    },
+    {
+      "Name": "ListMigrationTasks"
+    },
+    {
+      "Name": "ListProgressUpdateStreams"
+    },
+    {
+      "Name": "ListSourceResources",
+      "Resources": [
+        {
+          "Name": "migrationTask"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "NotifyApplicationState"
+    },
+    {
+      "Name": "NotifyMigrationTaskState",
+      "Resources": [
+        {
+          "Name": "migrationTask"
+        }
+      ]
+    },
+    {
+      "Name": "PutResourceAttributes",
+      "Resources": [
+        {
+          "Name": "migrationTask"
+        }
+      ]
+    },
+    {
+      "Name": "RejectConnection",
+      "Resources": [
+        {
+          "Name": "ConnectionResource"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "mgh:AutomationRunResourceRunID",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "mgh:AutomationUnitResourceAutomationUnitArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "mgh:ConnectionResourceConnectionArn",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "AutomationRunResource",
+      "ARNFormats": [
+        "arn:${Partition}:mgh:${Region}:${Account}:automation-run/${RunID}"
+      ],
+      "ConditionKeys": [
+        "mgh:AutomationRunResourceRunID"
+      ]
+    },
+    {
+      "Name": "AutomationUnitResource",
+      "ARNFormats": [
+        "arn:${Partition}:mgh:${Region}:${Account}:automation-unit/${AutomationUnitId}"
+      ],
+      "ConditionKeys": [
+        "mgh:AutomationUnitResourceAutomationUnitArn"
+      ]
+    },
+    {
+      "Name": "ConnectionResource",
+      "ARNFormats": [
+        "arn:${Partition}:mgh:${Region}:${Account}:${ConnectionArn}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "mgh:ConnectionResourceConnectionArn"
+      ]
+    },
+    {
+      "Name": "migrationTask",
+      "ARNFormats": [
+        "arn:${Partition}:mgh:${Region}:${Account}:progressUpdateStream/${Stream}/migrationTask/${Task}"
+      ]
+    },
+    {
+      "Name": "progressUpdateStream",
+      "ARNFormats": [
+        "arn:${Partition}:mgh:${Region}:${Account}:progressUpdateStream/${Stream}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

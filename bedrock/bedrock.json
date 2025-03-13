@@ -1,0 +1,1987 @@
+{
+  "Name": "bedrock",
+  "Actions": [
+    {
+      "Name": "AllowVendedLogDeliveryForResource",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "ApplyGuardrail",
+      "Resources": [
+        {
+          "Name": "guardrail"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateAgentCollaborator",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateAgentKnowledgeBase",
+      "Resources": [
+        {
+          "Name": "agent"
+        },
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateThirdPartyKnowledgeBase",
+      "ActionConditionKeys": [
+        "bedrock:ThirdPartyKnowledgeBaseCredentialsSecretArn"
+      ]
+    },
+    {
+      "Name": "BatchDeleteEvaluationJob",
+      "Resources": [
+        {
+          "Name": "evaluation-job"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAgent",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateAgentActionGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAgentAlias",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBlueprint"
+    },
+    {
+      "Name": "CreateBlueprintVersion",
+      "Resources": [
+        {
+          "Name": "blueprint"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataAutomationProject",
+      "Resources": [
+        {
+          "Name": "blueprint"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataSource",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEvaluationJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "custom-model"
+        },
+        {
+          "Name": "default-prompt-router"
+        },
+        {
+          "Name": "foundation-model"
+        },
+        {
+          "Name": "prompt-router"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFlow",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateFlowAlias",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFlowVersion",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFoundationModelAgreement"
+    },
+    {
+      "Name": "CreateGuardrail",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateGuardrailVersion",
+      "Resources": [
+        {
+          "Name": "guardrail"
+        }
+      ]
+    },
+    {
+      "Name": "CreateInferenceProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application-inference-profile"
+        },
+        {
+          "Name": "foundation-model"
+        },
+        {
+          "Name": "inference-profile"
+        }
+      ]
+    },
+    {
+      "Name": "CreateInvocation",
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "CreateKnowledgeBase",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateMarketplaceModelEndpoint"
+    },
+    {
+      "Name": "CreateModelCopyJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "custom-model"
+        }
+      ]
+    },
+    {
+      "Name": "CreateModelCustomizationJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "custom-model"
+        },
+        {
+          "Name": "foundation-model"
+        }
+      ]
+    },
+    {
+      "Name": "CreateModelEvaluationJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "custom-model"
+        },
+        {
+          "Name": "foundation-model"
+        }
+      ]
+    },
+    {
+      "Name": "CreateModelImportJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateModelInvocationJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "custom-model"
+        },
+        {
+          "Name": "foundation-model"
+        },
+        {
+          "Name": "model-invocation-job"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePrompt",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreatePromptRouter",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application-inference-profile"
+        },
+        {
+          "Name": "foundation-model"
+        },
+        {
+          "Name": "inference-profile"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePromptVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "prompt"
+        }
+      ]
+    },
+    {
+      "Name": "CreateProvisionedModelThroughput",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "custom-model"
+        },
+        {
+          "Name": "foundation-model"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSession",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteAgent",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAgentActionGroup",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAgentAlias",
+      "Resources": [
+        {
+          "Name": "agent-alias"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAgentMemory",
+      "Resources": [
+        {
+          "Name": "agent-alias"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAgentVersion",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBlueprint",
+      "Resources": [
+        {
+          "Name": "blueprint"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCustomModel",
+      "Resources": [
+        {
+          "Name": "custom-model"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataAutomationProject",
+      "Resources": [
+        {
+          "Name": "data-automation-project"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataSource",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFlow",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFlowAlias",
+      "Resources": [
+        {
+          "Name": "flow-alias"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFlowVersion",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFoundationModelAgreement"
+    },
+    {
+      "Name": "DeleteGuardrail",
+      "Resources": [
+        {
+          "Name": "guardrail"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteImportedModel",
+      "Resources": [
+        {
+          "Name": "imported-model"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInferenceProfile",
+      "Resources": [
+        {
+          "Name": "application-inference-profile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteKnowledgeBase",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteKnowledgeBaseDocuments",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMarketplaceModelAgreement"
+    },
+    {
+      "Name": "DeleteMarketplaceModelEndpoint",
+      "Resources": [
+        {
+          "Name": "bedrock-marketplace-model-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteModelInvocationLoggingConfiguration"
+    },
+    {
+      "Name": "DeletePrompt",
+      "Resources": [
+        {
+          "Name": "prompt"
+        },
+        {
+          "Name": "prompt-version"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePromptRouter",
+      "Resources": [
+        {
+          "Name": "prompt-router"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProvisionedModelThroughput",
+      "Resources": [
+        {
+          "Name": "provisioned-model"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Resources": [
+        {
+          "Name": "custom-model"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSession",
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterMarketplaceModelEndpoint",
+      "Resources": [
+        {
+          "Name": "bedrock-marketplace-model-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "DetectGeneratedContent",
+      "Resources": [
+        {
+          "Name": "foundation-model"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateAgentCollaborator",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateAgentKnowledgeBase",
+      "Resources": [
+        {
+          "Name": "agent"
+        },
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "EndSession",
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "GenerateQuery"
+    },
+    {
+      "Name": "GetAgent",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "GetAgentActionGroup",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "GetAgentAlias",
+      "Resources": [
+        {
+          "Name": "agent-alias"
+        }
+      ]
+    },
+    {
+      "Name": "GetAgentCollaborator",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "GetAgentKnowledgeBase",
+      "Resources": [
+        {
+          "Name": "agent"
+        },
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "GetAgentMemory",
+      "Resources": [
+        {
+          "Name": "agent-alias"
+        }
+      ]
+    },
+    {
+      "Name": "GetAgentVersion",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "GetAsyncInvoke",
+      "Resources": [
+        {
+          "Name": "async-invoke"
+        }
+      ]
+    },
+    {
+      "Name": "GetBlueprint",
+      "Resources": [
+        {
+          "Name": "blueprint"
+        }
+      ]
+    },
+    {
+      "Name": "GetBlueprintRecommendation"
+    },
+    {
+      "Name": "GetCustomModel",
+      "Resources": [
+        {
+          "Name": "custom-model"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataAutomationProject",
+      "Resources": [
+        {
+          "Name": "data-automation-project"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataAutomationStatus",
+      "Resources": [
+        {
+          "Name": "data-automation-invocation-job"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataSource",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "GetEvaluationJob",
+      "Resources": [
+        {
+          "Name": "evaluation-job"
+        }
+      ]
+    },
+    {
+      "Name": "GetFlow",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "GetFlowAlias",
+      "Resources": [
+        {
+          "Name": "flow-alias"
+        }
+      ]
+    },
+    {
+      "Name": "GetFlowVersion",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "GetFoundationModel",
+      "Resources": [
+        {
+          "Name": "foundation-model"
+        }
+      ]
+    },
+    {
+      "Name": "GetFoundationModelAvailability"
+    },
+    {
+      "Name": "GetGuardrail",
+      "Resources": [
+        {
+          "Name": "guardrail"
+        }
+      ]
+    },
+    {
+      "Name": "GetImportedModel",
+      "Resources": [
+        {
+          "Name": "imported-model"
+        }
+      ]
+    },
+    {
+      "Name": "GetInferenceProfile",
+      "Resources": [
+        {
+          "Name": "application-inference-profile"
+        },
+        {
+          "Name": "inference-profile"
+        }
+      ]
+    },
+    {
+      "Name": "GetIngestionJob",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "GetInvocationStep",
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "GetKnowledgeBase",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "GetKnowledgeBaseDocuments",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "GetMarketplaceModelEndpoint",
+      "Resources": [
+        {
+          "Name": "bedrock-marketplace-model-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "GetModelCopyJob",
+      "Resources": [
+        {
+          "Name": "model-copy-job"
+        }
+      ]
+    },
+    {
+      "Name": "GetModelCustomizationJob",
+      "Resources": [
+        {
+          "Name": "model-customization-job"
+        }
+      ]
+    },
+    {
+      "Name": "GetModelEvaluationJob",
+      "Resources": [
+        {
+          "Name": "model-evaluation-job"
+        }
+      ]
+    },
+    {
+      "Name": "GetModelImportJob",
+      "Resources": [
+        {
+          "Name": "model-import-job"
+        }
+      ]
+    },
+    {
+      "Name": "GetModelInvocationJob",
+      "Resources": [
+        {
+          "Name": "model-invocation-job"
+        }
+      ]
+    },
+    {
+      "Name": "GetModelInvocationLoggingConfiguration"
+    },
+    {
+      "Name": "GetPrompt",
+      "Resources": [
+        {
+          "Name": "prompt"
+        },
+        {
+          "Name": "prompt-version"
+        }
+      ]
+    },
+    {
+      "Name": "GetPromptRouter",
+      "Resources": [
+        {
+          "Name": "default-prompt-router"
+        },
+        {
+          "Name": "prompt-router"
+        }
+      ]
+    },
+    {
+      "Name": "GetProvisionedModelThroughput",
+      "Resources": [
+        {
+          "Name": "provisioned-model"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "Resources": [
+        {
+          "Name": "custom-model"
+        }
+      ]
+    },
+    {
+      "Name": "GetSession",
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "GetUseCaseForModelAccess"
+    },
+    {
+      "Name": "IngestKnowledgeBaseDocuments",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "InvokeAgent",
+      "Resources": [
+        {
+          "Name": "agent-alias"
+        }
+      ]
+    },
+    {
+      "Name": "InvokeBlueprintRecommendationAsync",
+      "Resources": [
+        {
+          "Name": "data-automation-profile"
+        }
+      ]
+    },
+    {
+      "Name": "InvokeBuilder"
+    },
+    {
+      "Name": "InvokeDataAutomationAsync",
+      "Resources": [
+        {
+          "Name": "blueprint"
+        },
+        {
+          "Name": "data-automation-profile"
+        },
+        {
+          "Name": "data-automation-project"
+        }
+      ]
+    },
+    {
+      "Name": "InvokeFlow",
+      "Resources": [
+        {
+          "Name": "flow-alias"
+        }
+      ]
+    },
+    {
+      "Name": "InvokeInlineAgent"
+    },
+    {
+      "Name": "InvokeModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "bedrock:GuardrailIdentifier",
+        "bedrock:InferenceProfileArn",
+        "bedrock:PromptRouterArn"
+      ],
+      "Resources": [
+        {
+          "Name": "application-inference-profile"
+        },
+        {
+          "Name": "async-invoke"
+        },
+        {
+          "Name": "bedrock-marketplace-model-endpoint"
+        },
+        {
+          "Name": "default-prompt-router"
+        },
+        {
+          "Name": "foundation-model"
+        },
+        {
+          "Name": "imported-model"
+        },
+        {
+          "Name": "inference-profile"
+        },
+        {
+          "Name": "prompt-router"
+        },
+        {
+          "Name": "provisioned-model"
+        }
+      ]
+    },
+    {
+      "Name": "InvokeModelWithResponseStream",
+      "ActionConditionKeys": [
+        "bedrock:GuardrailIdentifier",
+        "bedrock:InferenceProfileArn",
+        "bedrock:PromptRouterArn"
+      ],
+      "Resources": [
+        {
+          "Name": "application-inference-profile"
+        },
+        {
+          "Name": "bedrock-marketplace-model-endpoint"
+        },
+        {
+          "Name": "default-prompt-router"
+        },
+        {
+          "Name": "foundation-model"
+        },
+        {
+          "Name": "imported-model"
+        },
+        {
+          "Name": "inference-profile"
+        },
+        {
+          "Name": "prompt-router"
+        },
+        {
+          "Name": "provisioned-model"
+        }
+      ]
+    },
+    {
+      "Name": "ListAgentActionGroups",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "ListAgentAliases",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "ListAgentCollaborators",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "ListAgentKnowledgeBases",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "ListAgentVersions",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "ListAgents"
+    },
+    {
+      "Name": "ListAsyncInvokes"
+    },
+    {
+      "Name": "ListBlueprints",
+      "Resources": [
+        {
+          "Name": "data-automation-project"
+        }
+      ]
+    },
+    {
+      "Name": "ListCustomModels"
+    },
+    {
+      "Name": "ListDataAutomationProjects",
+      "Resources": [
+        {
+          "Name": "blueprint"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataSources",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "ListEvaluationJobs"
+    },
+    {
+      "Name": "ListFlowAliases",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "ListFlowVersions",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "ListFlows"
+    },
+    {
+      "Name": "ListFoundationModelAgreementOffers"
+    },
+    {
+      "Name": "ListFoundationModels"
+    },
+    {
+      "Name": "ListGuardrails",
+      "Resources": [
+        {
+          "Name": "guardrail"
+        }
+      ]
+    },
+    {
+      "Name": "ListImportedModels"
+    },
+    {
+      "Name": "ListInferenceProfiles"
+    },
+    {
+      "Name": "ListIngestionJobs",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "ListInvocationSteps",
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "ListInvocations",
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "ListKnowledgeBaseDocuments",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "ListKnowledgeBases"
+    },
+    {
+      "Name": "ListMarketplaceModelEndpoints"
+    },
+    {
+      "Name": "ListModelCopyJobs"
+    },
+    {
+      "Name": "ListModelCustomizationJobs"
+    },
+    {
+      "Name": "ListModelEvaluationJobs"
+    },
+    {
+      "Name": "ListModelImportJobs"
+    },
+    {
+      "Name": "ListModelInvocationJobs"
+    },
+    {
+      "Name": "ListPromptRouters"
+    },
+    {
+      "Name": "ListPrompts",
+      "Resources": [
+        {
+          "Name": "prompt"
+        }
+      ]
+    },
+    {
+      "Name": "ListProvisionedModelThroughputs"
+    },
+    {
+      "Name": "ListSessions"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "agent"
+        },
+        {
+          "Name": "agent-alias"
+        },
+        {
+          "Name": "application-inference-profile"
+        },
+        {
+          "Name": "async-invoke"
+        },
+        {
+          "Name": "blueprint"
+        },
+        {
+          "Name": "custom-model"
+        },
+        {
+          "Name": "data-automation-invocation-job"
+        },
+        {
+          "Name": "data-automation-project"
+        },
+        {
+          "Name": "evaluation-job"
+        },
+        {
+          "Name": "flow"
+        },
+        {
+          "Name": "flow-alias"
+        },
+        {
+          "Name": "guardrail"
+        },
+        {
+          "Name": "imported-model"
+        },
+        {
+          "Name": "knowledge-base"
+        },
+        {
+          "Name": "model-copy-job"
+        },
+        {
+          "Name": "model-customization-job"
+        },
+        {
+          "Name": "model-evaluation-job"
+        },
+        {
+          "Name": "model-import-job"
+        },
+        {
+          "Name": "model-invocation-job"
+        },
+        {
+          "Name": "prompt"
+        },
+        {
+          "Name": "prompt-router"
+        },
+        {
+          "Name": "prompt-version"
+        },
+        {
+          "Name": "provisioned-model"
+        },
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "OptimizePrompt"
+    },
+    {
+      "Name": "PrepareAgent",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "PrepareFlow",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "PutFoundationModelEntitlement"
+    },
+    {
+      "Name": "PutInvocationStep",
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "PutModelInvocationLoggingConfiguration"
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "custom-model"
+        }
+      ]
+    },
+    {
+      "Name": "PutUseCaseForModelAccess"
+    },
+    {
+      "Name": "RegisterMarketplaceModelEndpoint",
+      "Resources": [
+        {
+          "Name": "bedrock-marketplace-model-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "RenderPrompt",
+      "Resources": [
+        {
+          "Name": "prompt"
+        },
+        {
+          "Name": "prompt-version"
+        }
+      ]
+    },
+    {
+      "Name": "Rerank"
+    },
+    {
+      "Name": "Retrieve",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "RetrieveAndGenerate"
+    },
+    {
+      "Name": "StartIngestionJob",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "StopEvaluationJob",
+      "Resources": [
+        {
+          "Name": "evaluation-job"
+        }
+      ]
+    },
+    {
+      "Name": "StopIngestionJob",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "StopModelCustomizationJob",
+      "Resources": [
+        {
+          "Name": "model-customization-job"
+        }
+      ]
+    },
+    {
+      "Name": "StopModelInvocationJob",
+      "Resources": [
+        {
+          "Name": "model-invocation-job"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "agent"
+        },
+        {
+          "Name": "agent-alias"
+        },
+        {
+          "Name": "application-inference-profile"
+        },
+        {
+          "Name": "async-invoke"
+        },
+        {
+          "Name": "blueprint"
+        },
+        {
+          "Name": "custom-model"
+        },
+        {
+          "Name": "data-automation-invocation-job"
+        },
+        {
+          "Name": "data-automation-project"
+        },
+        {
+          "Name": "evaluation-job"
+        },
+        {
+          "Name": "flow"
+        },
+        {
+          "Name": "flow-alias"
+        },
+        {
+          "Name": "guardrail"
+        },
+        {
+          "Name": "imported-model"
+        },
+        {
+          "Name": "knowledge-base"
+        },
+        {
+          "Name": "model-copy-job"
+        },
+        {
+          "Name": "model-customization-job"
+        },
+        {
+          "Name": "model-evaluation-job"
+        },
+        {
+          "Name": "model-import-job"
+        },
+        {
+          "Name": "model-invocation-job"
+        },
+        {
+          "Name": "prompt"
+        },
+        {
+          "Name": "prompt-router"
+        },
+        {
+          "Name": "prompt-version"
+        },
+        {
+          "Name": "provisioned-model"
+        },
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "agent"
+        },
+        {
+          "Name": "agent-alias"
+        },
+        {
+          "Name": "application-inference-profile"
+        },
+        {
+          "Name": "async-invoke"
+        },
+        {
+          "Name": "blueprint"
+        },
+        {
+          "Name": "custom-model"
+        },
+        {
+          "Name": "data-automation-invocation-job"
+        },
+        {
+          "Name": "data-automation-project"
+        },
+        {
+          "Name": "evaluation-job"
+        },
+        {
+          "Name": "flow"
+        },
+        {
+          "Name": "flow-alias"
+        },
+        {
+          "Name": "guardrail"
+        },
+        {
+          "Name": "imported-model"
+        },
+        {
+          "Name": "knowledge-base"
+        },
+        {
+          "Name": "model-copy-job"
+        },
+        {
+          "Name": "model-customization-job"
+        },
+        {
+          "Name": "model-evaluation-job"
+        },
+        {
+          "Name": "model-import-job"
+        },
+        {
+          "Name": "model-invocation-job"
+        },
+        {
+          "Name": "prompt"
+        },
+        {
+          "Name": "prompt-router"
+        },
+        {
+          "Name": "prompt-version"
+        },
+        {
+          "Name": "provisioned-model"
+        },
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgent",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgentActionGroup",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgentAlias",
+      "Resources": [
+        {
+          "Name": "agent-alias"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgentCollaborator",
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgentKnowledgeBase",
+      "Resources": [
+        {
+          "Name": "agent"
+        },
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBlueprint",
+      "Resources": [
+        {
+          "Name": "blueprint"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataAutomationProject",
+      "Resources": [
+        {
+          "Name": "blueprint"
+        },
+        {
+          "Name": "data-automation-project"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataSource",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFlow",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFlowAlias",
+      "Resources": [
+        {
+          "Name": "flow-alias"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGuardrail",
+      "Resources": [
+        {
+          "Name": "guardrail"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateKnowledgeBase",
+      "Resources": [
+        {
+          "Name": "knowledge-base"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMarketplaceModelEndpoint",
+      "Resources": [
+        {
+          "Name": "bedrock-marketplace-model-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePrompt",
+      "Resources": [
+        {
+          "Name": "prompt"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProvisionedModelThroughput",
+      "Resources": [
+        {
+          "Name": "custom-model"
+        },
+        {
+          "Name": "foundation-model"
+        },
+        {
+          "Name": "provisioned-model"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSession",
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "ValidateFlowDefinition"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "bedrock:GuardrailIdentifier",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "bedrock:InferenceProfileArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "bedrock:PromptRouterArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "bedrock:ThirdPartyKnowledgeBaseCredentialsSecretArn",
+      "Types": [
+        "ARN"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "agent",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:agent/${AgentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "agent-alias",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:agent-alias/${AgentId}/${AgentAliasId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "application-inference-profile",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:application-inference-profile/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "async-invoke",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:async-invoke/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "bedrock-marketplace-model-endpoint",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:marketplace/model-endpoint/all-access"
+      ]
+    },
+    {
+      "Name": "blueprint",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:blueprint/${BlueprintId}"
+      ]
+    },
+    {
+      "Name": "custom-model",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:custom-model/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "data-automation-invocation-job",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:data-automation-invocation/${JobId}"
+      ]
+    },
+    {
+      "Name": "data-automation-profile",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:data-automation-profile/${ProfileId}"
+      ]
+    },
+    {
+      "Name": "data-automation-project",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:data-automation-project/${ProjectId}"
+      ]
+    },
+    {
+      "Name": "default-prompt-router",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:default-prompt-router/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "evaluation-job",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:evaluation-job/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "flow",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:flow/${FlowId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "flow-alias",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:flow/${FlowId}/alias/${FlowAliasId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "foundation-model",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}::foundation-model/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "guardrail",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:guardrail/${GuardrailId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "imported-model",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:imported-model/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "inference-profile",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:inference-profile/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "knowledge-base",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:knowledge-base/${KnowledgeBaseId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model-copy-job",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:model-copy-job/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model-customization-job",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:model-customization-job/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model-evaluation-job",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:model-evaluation-job/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model-import-job",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:model-import-job/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model-invocation-job",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:model-invocation-job/${JobIdentifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "prompt",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:prompt/${PromptId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "prompt-router",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:prompt-router/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "prompt-version",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:prompt/${PromptId}:${PromptVersion}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "provisioned-model",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:provisioned-model/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "session",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:session/${SessionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

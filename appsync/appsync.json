@@ -1,0 +1,596 @@
+{
+  "Name": "appsync",
+  "Actions": [
+    {
+      "Name": "AssociateApi",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateMergedGraphqlApi",
+      "Resources": [
+        {
+          "Name": "graphqlapi"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateSourceGraphqlApi",
+      "Resources": [
+        {
+          "Name": "graphqlapi"
+        }
+      ]
+    },
+    {
+      "Name": "CreateApi",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateApiCache"
+    },
+    {
+      "Name": "CreateApiKey"
+    },
+    {
+      "Name": "CreateChannelNamespace",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channelNamespace"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataSource"
+    },
+    {
+      "Name": "CreateDomainName"
+    },
+    {
+      "Name": "CreateFunction"
+    },
+    {
+      "Name": "CreateGraphqlApi",
+      "ActionConditionKeys": [
+        "appsync:Visibility",
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateResolver"
+    },
+    {
+      "Name": "CreateType"
+    },
+    {
+      "Name": "DeleteApi",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "api"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApiCache"
+    },
+    {
+      "Name": "DeleteApiKey"
+    },
+    {
+      "Name": "DeleteChannelNamespace",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "channelNamespace"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataSource"
+    },
+    {
+      "Name": "DeleteDomainName",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFunction"
+    },
+    {
+      "Name": "DeleteGraphqlApi",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "graphqlapi"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResolver"
+    },
+    {
+      "Name": "DeleteResourcePolicy"
+    },
+    {
+      "Name": "DeleteType"
+    },
+    {
+      "Name": "DisassociateApi",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateMergedGraphqlApi",
+      "Resources": [
+        {
+          "Name": "mergedApiAssociation"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateSourceGraphqlApi",
+      "Resources": [
+        {
+          "Name": "sourceApiAssociation"
+        }
+      ]
+    },
+    {
+      "Name": "EvaluateCode"
+    },
+    {
+      "Name": "EvaluateMappingTemplate"
+    },
+    {
+      "Name": "EventConnect",
+      "Resources": [
+        {
+          "Name": "api"
+        }
+      ]
+    },
+    {
+      "Name": "EventPublish",
+      "Resources": [
+        {
+          "Name": "channelNamespace"
+        }
+      ]
+    },
+    {
+      "Name": "EventSubscribe",
+      "Resources": [
+        {
+          "Name": "channelNamespace"
+        }
+      ]
+    },
+    {
+      "Name": "FlushApiCache"
+    },
+    {
+      "Name": "GetApi",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "api"
+        }
+      ]
+    },
+    {
+      "Name": "GetApiAssociation",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "GetApiCache"
+    },
+    {
+      "Name": "GetChannelNamespace",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "channelNamespace"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataSource"
+    },
+    {
+      "Name": "GetDataSourceIntrospection"
+    },
+    {
+      "Name": "GetDomainName",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "GetFunction"
+    },
+    {
+      "Name": "GetGraphqlApi",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "graphqlapi"
+        }
+      ]
+    },
+    {
+      "Name": "GetGraphqlApiEnvironmentVariables"
+    },
+    {
+      "Name": "GetIntrospectionSchema"
+    },
+    {
+      "Name": "GetResolver"
+    },
+    {
+      "Name": "GetResourcePolicy"
+    },
+    {
+      "Name": "GetSchemaCreationStatus"
+    },
+    {
+      "Name": "GetSourceApiAssociation",
+      "Resources": [
+        {
+          "Name": "sourceApiAssociation"
+        }
+      ]
+    },
+    {
+      "Name": "GetType"
+    },
+    {
+      "Name": "GraphQL",
+      "Resources": [
+        {
+          "Name": "field"
+        },
+        {
+          "Name": "graphqlapi"
+        }
+      ]
+    },
+    {
+      "Name": "ListApiKeys"
+    },
+    {
+      "Name": "ListApis",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ListChannelNamespaces",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "api"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataSources"
+    },
+    {
+      "Name": "ListDomainNames"
+    },
+    {
+      "Name": "ListFunctions"
+    },
+    {
+      "Name": "ListGraphqlApis"
+    },
+    {
+      "Name": "ListResolvers"
+    },
+    {
+      "Name": "ListResolversByFunction"
+    },
+    {
+      "Name": "ListSourceApiAssociations"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "api"
+        },
+        {
+          "Name": "channelNamespace"
+        },
+        {
+          "Name": "graphqlapi"
+        }
+      ]
+    },
+    {
+      "Name": "ListTypes"
+    },
+    {
+      "Name": "ListTypesByAssociation"
+    },
+    {
+      "Name": "PutGraphqlApiEnvironmentVariables"
+    },
+    {
+      "Name": "PutResourcePolicy"
+    },
+    {
+      "Name": "SetWebACL"
+    },
+    {
+      "Name": "SourceGraphQL",
+      "Resources": [
+        {
+          "Name": "field"
+        },
+        {
+          "Name": "graphqlapi"
+        }
+      ]
+    },
+    {
+      "Name": "StartDataSourceIntrospection"
+    },
+    {
+      "Name": "StartSchemaCreation"
+    },
+    {
+      "Name": "StartSchemaMerge",
+      "Resources": [
+        {
+          "Name": "sourceApiAssociation"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "api"
+        },
+        {
+          "Name": "channelNamespace"
+        },
+        {
+          "Name": "graphqlapi"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "api"
+        },
+        {
+          "Name": "channelNamespace"
+        },
+        {
+          "Name": "graphqlapi"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateApi",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "api"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateApiCache"
+    },
+    {
+      "Name": "UpdateApiKey"
+    },
+    {
+      "Name": "UpdateChannelNamespace",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "channelNamespace"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataSource"
+    },
+    {
+      "Name": "UpdateDomainName",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFunction"
+    },
+    {
+      "Name": "UpdateGraphqlApi",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "graphqlapi"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateResolver"
+    },
+    {
+      "Name": "UpdateSourceApiAssociation",
+      "Resources": [
+        {
+          "Name": "sourceApiAssociation"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateType"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "appsync:Visibility",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "api",
+      "ARNFormats": [
+        "arn:${Partition}:appsync:${Region}:${Account}:apis/${ApiId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "channelNamespace",
+      "ARNFormats": [
+        "arn:${Partition}:appsync:${Region}:${Account}:apis/${ApiId}/channelNamespace/${ChannelNamespaceName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "datasource",
+      "ARNFormats": [
+        "arn:${Partition}:appsync:${Region}:${Account}:apis/${GraphQLAPIId}/datasources/${DatasourceName}"
+      ]
+    },
+    {
+      "Name": "domain",
+      "ARNFormats": [
+        "arn:${Partition}:appsync:${Region}:${Account}:domainnames/${DomainName}"
+      ]
+    },
+    {
+      "Name": "field",
+      "ARNFormats": [
+        "arn:${Partition}:appsync:${Region}:${Account}:apis/${GraphQLAPIId}/types/${TypeName}/fields/${FieldName}"
+      ]
+    },
+    {
+      "Name": "function",
+      "ARNFormats": [
+        "arn:${Partition}:appsync:${Region}:${Account}:apis/${GraphQLAPIId}/functions/${FunctionId}"
+      ]
+    },
+    {
+      "Name": "graphqlapi",
+      "ARNFormats": [
+        "arn:${Partition}:appsync:${Region}:${Account}:apis/${GraphQLAPIId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "mergedApiAssociation",
+      "ARNFormats": [
+        "arn:${Partition}:appsync:${Region}:${Account}:apis/${SourceGraphQLAPIId}/mergedApiAssociations/${Associationid}"
+      ]
+    },
+    {
+      "Name": "sourceApiAssociation",
+      "ARNFormats": [
+        "arn:${Partition}:appsync:${Region}:${Account}:apis/${MergedGraphQLAPIId}/sourceApiAssociations/${Associationid}"
+      ]
+    },
+    {
+      "Name": "type",
+      "ARNFormats": [
+        "arn:${Partition}:appsync:${Region}:${Account}:apis/${GraphQLAPIId}/types/${TypeName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,199 @@
+{
+  "Name": "launchwizard",
+  "Actions": [
+    {
+      "Name": "CreateAdditionalNode"
+    },
+    {
+      "Name": "CreateDeployment",
+      "Resources": [
+        {
+          "Name": "deployment",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreateSettingsSet"
+    },
+    {
+      "Name": "DeleteAdditionalNode"
+    },
+    {
+      "Name": "DeleteApp"
+    },
+    {
+      "Name": "DeleteDeployment",
+      "Resources": [
+        {
+          "Name": "deployment",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSettingsSet"
+    },
+    {
+      "Name": "DescribeAdditionalNode"
+    },
+    {
+      "Name": "DescribeProvisionedApp"
+    },
+    {
+      "Name": "DescribeProvisioningEvents"
+    },
+    {
+      "Name": "DescribeSettingsSet"
+    },
+    {
+      "Name": "GetDeployment",
+      "Resources": [
+        {
+          "Name": "deployment",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "GetInfrastructureSuggestion"
+    },
+    {
+      "Name": "GetIpAddress"
+    },
+    {
+      "Name": "GetResourceCostEstimate"
+    },
+    {
+      "Name": "GetResourceRecommendation"
+    },
+    {
+      "Name": "GetSettingsSet"
+    },
+    {
+      "Name": "GetWorkload"
+    },
+    {
+      "Name": "GetWorkloadAsset"
+    },
+    {
+      "Name": "GetWorkloadAssets"
+    },
+    {
+      "Name": "GetWorkloadDeploymentPattern"
+    },
+    {
+      "Name": "ListAdditionalNodes"
+    },
+    {
+      "Name": "ListAllowedResources"
+    },
+    {
+      "Name": "ListDeploymentEvents"
+    },
+    {
+      "Name": "ListDeployments"
+    },
+    {
+      "Name": "ListProvisionedApps"
+    },
+    {
+      "Name": "ListResourceCostEstimates"
+    },
+    {
+      "Name": "ListSettingsSets"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "deployment",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "ListWorkloadDeploymentOptions"
+    },
+    {
+      "Name": "ListWorkloadDeploymentPatterns"
+    },
+    {
+      "Name": "ListWorkloads"
+    },
+    {
+      "Name": "PutSettingsSet"
+    },
+    {
+      "Name": "StartProvisioning"
+    },
+    {
+      "Name": "TagResource",
+      "Resources": [
+        {
+          "Name": "deployment",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "Resources": [
+        {
+          "Name": "deployment",
+          "ConditionKeys": [
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSettingsSet"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "deployment",
+      "ARNFormats": [
+        "arn:${Partition}:launchwizard:${Region}:${Account}:deployment/${DeploymentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

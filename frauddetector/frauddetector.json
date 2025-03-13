@@ -1,0 +1,990 @@
+{
+  "Name": "frauddetector",
+  "Actions": [
+    {
+      "Name": "BatchCreateVariable",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "BatchGetVariable",
+      "Resources": [
+        {
+          "Name": "variable"
+        }
+      ]
+    },
+    {
+      "Name": "CancelBatchImportJob",
+      "Resources": [
+        {
+          "Name": "batch-import"
+        }
+      ]
+    },
+    {
+      "Name": "CancelBatchPredictionJob",
+      "Resources": [
+        {
+          "Name": "batch-prediction"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBatchImportJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "batch-import"
+        },
+        {
+          "Name": "event-type"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBatchPredictionJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "batch-prediction"
+        },
+        {
+          "Name": "detector"
+        },
+        {
+          "Name": "detector-version"
+        },
+        {
+          "Name": "event-type"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDetectorVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "detector"
+        },
+        {
+          "Name": "external-model"
+        },
+        {
+          "Name": "model-version"
+        }
+      ]
+    },
+    {
+      "Name": "CreateList",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "event-type"
+        },
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "CreateModelVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRule",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "detector"
+        }
+      ]
+    },
+    {
+      "Name": "CreateVariable",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteBatchImportJob",
+      "Resources": [
+        {
+          "Name": "batch-import"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBatchPredictionJob",
+      "Resources": [
+        {
+          "Name": "batch-prediction"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDetector",
+      "Resources": [
+        {
+          "Name": "detector"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDetectorVersion",
+      "Resources": [
+        {
+          "Name": "detector-version"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEntityType",
+      "Resources": [
+        {
+          "Name": "entity-type"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEvent",
+      "Resources": [
+        {
+          "Name": "event-type"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEventType",
+      "Resources": [
+        {
+          "Name": "event-type"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEventsByEventType",
+      "Resources": [
+        {
+          "Name": "event-type"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteExternalModel",
+      "Resources": [
+        {
+          "Name": "external-model"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLabel",
+      "Resources": [
+        {
+          "Name": "label"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteList",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "list"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteModel",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteModelVersion",
+      "Resources": [
+        {
+          "Name": "model-version"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteOutcome",
+      "Resources": [
+        {
+          "Name": "outcome"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRule",
+      "Resources": [
+        {
+          "Name": "rule"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteVariable",
+      "Resources": [
+        {
+          "Name": "variable"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDetector",
+      "Resources": [
+        {
+          "Name": "detector"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeModelVersions",
+      "Resources": [
+        {
+          "Name": "model-version"
+        }
+      ]
+    },
+    {
+      "Name": "GetBatchImportJobValidationReport",
+      "Resources": [
+        {
+          "Name": "batch-import"
+        }
+      ]
+    },
+    {
+      "Name": "GetBatchImportJobs",
+      "Resources": [
+        {
+          "Name": "batch-import"
+        }
+      ]
+    },
+    {
+      "Name": "GetBatchPredictionJobs",
+      "Resources": [
+        {
+          "Name": "batch-prediction"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeleteEventsByEventTypeStatus",
+      "Resources": [
+        {
+          "Name": "event-type"
+        }
+      ]
+    },
+    {
+      "Name": "GetDetectorVersion",
+      "Resources": [
+        {
+          "Name": "detector-version"
+        }
+      ]
+    },
+    {
+      "Name": "GetDetectors",
+      "Resources": [
+        {
+          "Name": "detector"
+        }
+      ]
+    },
+    {
+      "Name": "GetEntityTypes",
+      "Resources": [
+        {
+          "Name": "entity-type"
+        }
+      ]
+    },
+    {
+      "Name": "GetEvent",
+      "Resources": [
+        {
+          "Name": "event-type"
+        }
+      ]
+    },
+    {
+      "Name": "GetEventPrediction",
+      "Resources": [
+        {
+          "Name": "detector"
+        },
+        {
+          "Name": "detector-version"
+        },
+        {
+          "Name": "event-type"
+        }
+      ]
+    },
+    {
+      "Name": "GetEventPredictionMetadata",
+      "Resources": [
+        {
+          "Name": "detector"
+        },
+        {
+          "Name": "detector-version"
+        },
+        {
+          "Name": "event-type"
+        }
+      ]
+    },
+    {
+      "Name": "GetEventTypes",
+      "Resources": [
+        {
+          "Name": "event-type"
+        }
+      ]
+    },
+    {
+      "Name": "GetExternalModels",
+      "Resources": [
+        {
+          "Name": "external-model"
+        }
+      ]
+    },
+    {
+      "Name": "GetKMSEncryptionKey"
+    },
+    {
+      "Name": "GetLabels",
+      "Resources": [
+        {
+          "Name": "label"
+        }
+      ]
+    },
+    {
+      "Name": "GetListElements",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "list"
+        }
+      ]
+    },
+    {
+      "Name": "GetListsMetadata",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "list"
+        }
+      ]
+    },
+    {
+      "Name": "GetModelVersion",
+      "Resources": [
+        {
+          "Name": "model-version"
+        }
+      ]
+    },
+    {
+      "Name": "GetModels",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "GetOutcomes",
+      "Resources": [
+        {
+          "Name": "outcome"
+        }
+      ]
+    },
+    {
+      "Name": "GetRules",
+      "Resources": [
+        {
+          "Name": "rule"
+        }
+      ]
+    },
+    {
+      "Name": "GetVariables",
+      "Resources": [
+        {
+          "Name": "variable"
+        }
+      ]
+    },
+    {
+      "Name": "ListEventPredictions",
+      "Resources": [
+        {
+          "Name": "detector"
+        },
+        {
+          "Name": "detector-version"
+        },
+        {
+          "Name": "event-type"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "batch-import"
+        },
+        {
+          "Name": "batch-prediction"
+        },
+        {
+          "Name": "detector"
+        },
+        {
+          "Name": "detector-version"
+        },
+        {
+          "Name": "entity-type"
+        },
+        {
+          "Name": "event-type"
+        },
+        {
+          "Name": "external-model"
+        },
+        {
+          "Name": "label"
+        },
+        {
+          "Name": "list"
+        },
+        {
+          "Name": "model"
+        },
+        {
+          "Name": "model-version"
+        },
+        {
+          "Name": "outcome"
+        },
+        {
+          "Name": "rule"
+        },
+        {
+          "Name": "variable"
+        }
+      ]
+    },
+    {
+      "Name": "PutDetector",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "detector"
+        },
+        {
+          "Name": "event-type"
+        }
+      ]
+    },
+    {
+      "Name": "PutEntityType",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "entity-type"
+        }
+      ]
+    },
+    {
+      "Name": "PutEventType",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "event-type"
+        }
+      ]
+    },
+    {
+      "Name": "PutExternalModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "event-type"
+        },
+        {
+          "Name": "external-model"
+        }
+      ]
+    },
+    {
+      "Name": "PutKMSEncryptionKey"
+    },
+    {
+      "Name": "PutLabel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "label"
+        }
+      ]
+    },
+    {
+      "Name": "PutOutcome",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "outcome"
+        }
+      ]
+    },
+    {
+      "Name": "SendEvent",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "event-type"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "batch-import"
+        },
+        {
+          "Name": "batch-prediction"
+        },
+        {
+          "Name": "detector"
+        },
+        {
+          "Name": "detector-version"
+        },
+        {
+          "Name": "entity-type"
+        },
+        {
+          "Name": "event-type"
+        },
+        {
+          "Name": "external-model"
+        },
+        {
+          "Name": "label"
+        },
+        {
+          "Name": "list"
+        },
+        {
+          "Name": "model"
+        },
+        {
+          "Name": "model-version"
+        },
+        {
+          "Name": "outcome"
+        },
+        {
+          "Name": "rule"
+        },
+        {
+          "Name": "variable"
+        },
+        {
+          "Name": "variable"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "batch-import"
+        },
+        {
+          "Name": "batch-prediction"
+        },
+        {
+          "Name": "detector"
+        },
+        {
+          "Name": "detector-version"
+        },
+        {
+          "Name": "entity-type"
+        },
+        {
+          "Name": "event-type"
+        },
+        {
+          "Name": "external-model"
+        },
+        {
+          "Name": "label"
+        },
+        {
+          "Name": "list"
+        },
+        {
+          "Name": "model"
+        },
+        {
+          "Name": "model-version"
+        },
+        {
+          "Name": "outcome"
+        },
+        {
+          "Name": "rule"
+        },
+        {
+          "Name": "variable"
+        },
+        {
+          "Name": "variable"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDetectorVersion",
+      "Resources": [
+        {
+          "Name": "detector"
+        },
+        {
+          "Name": "external-model"
+        },
+        {
+          "Name": "model-version"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDetectorVersionMetadata",
+      "Resources": [
+        {
+          "Name": "detector-version"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDetectorVersionStatus",
+      "Resources": [
+        {
+          "Name": "detector-version"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEventLabel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "event-type"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateList",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "list"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateModel",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateModelVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateModelVersionStatus",
+      "Resources": [
+        {
+          "Name": "model-version"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRuleMetadata",
+      "Resources": [
+        {
+          "Name": "rule"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRuleVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "rule"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateVariable",
+      "Resources": [
+        {
+          "Name": "variable"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "batch-import",
+      "ARNFormats": [
+        "arn:${Partition}:frauddetector:${Region}:${Account}:batch-import/${ResourcePath}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "batch-prediction",
+      "ARNFormats": [
+        "arn:${Partition}:frauddetector:${Region}:${Account}:batch-prediction/${ResourcePath}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "detector",
+      "ARNFormats": [
+        "arn:${Partition}:frauddetector:${Region}:${Account}:detector/${ResourcePath}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "detector-version",
+      "ARNFormats": [
+        "arn:${Partition}:frauddetector:${Region}:${Account}:detector-version/${ResourcePath}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "entity-type",
+      "ARNFormats": [
+        "arn:${Partition}:frauddetector:${Region}:${Account}:entity-type/${ResourcePath}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "event-type",
+      "ARNFormats": [
+        "arn:${Partition}:frauddetector:${Region}:${Account}:event-type/${ResourcePath}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "external-model",
+      "ARNFormats": [
+        "arn:${Partition}:frauddetector:${Region}:${Account}:external-model/${ResourcePath}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "label",
+      "ARNFormats": [
+        "arn:${Partition}:frauddetector:${Region}:${Account}:label/${ResourcePath}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "list",
+      "ARNFormats": [
+        "arn:${Partition}:frauddetector:${Region}:${Account}:list/${ResourcePath}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model",
+      "ARNFormats": [
+        "arn:${Partition}:frauddetector:${Region}:${Account}:model/${ResourcePath}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model-version",
+      "ARNFormats": [
+        "arn:${Partition}:frauddetector:${Region}:${Account}:model-version/${ResourcePath}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "outcome",
+      "ARNFormats": [
+        "arn:${Partition}:frauddetector:${Region}:${Account}:outcome/${ResourcePath}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "rule",
+      "ARNFormats": [
+        "arn:${Partition}:frauddetector:${Region}:${Account}:rule/${ResourcePath}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "variable",
+      "ARNFormats": [
+        "arn:${Partition}:frauddetector:${Region}:${Account}:variable/${ResourcePath}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

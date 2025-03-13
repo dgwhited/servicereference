@@ -1,0 +1,1188 @@
+{
+  "Name": "greengrass",
+  "Actions": [
+    {
+      "Name": "AssociateRoleToGroup",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateServiceRoleToAccount"
+    },
+    {
+      "Name": "BatchAssociateClientDeviceWithCoreDevice",
+      "Resources": [
+        {
+          "Name": "coreDevice"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDisassociateClientDeviceFromCoreDevice",
+      "Resources": [
+        {
+          "Name": "coreDevice"
+        }
+      ]
+    },
+    {
+      "Name": "CancelDeployment",
+      "Resources": [
+        {
+          "Name": "deployment"
+        }
+      ]
+    },
+    {
+      "Name": "CreateComponentVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "component"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConnectorDefinition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateConnectorDefinitionVersion",
+      "Resources": [
+        {
+          "Name": "connectorDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCoreDefinition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateCoreDefinitionVersion",
+      "Resources": [
+        {
+          "Name": "coreDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDeployment",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ],
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateDeviceDefinition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateDeviceDefinitionVersion",
+      "Resources": [
+        {
+          "Name": "deviceDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFunctionDefinition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateFunctionDefinitionVersion",
+      "Resources": [
+        {
+          "Name": "functionDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "CreateGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateGroupCertificateAuthority",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateGroupVersion",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLoggerDefinition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateLoggerDefinitionVersion",
+      "Resources": [
+        {
+          "Name": "loggerDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "CreateResourceDefinition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateResourceDefinitionVersion",
+      "Resources": [
+        {
+          "Name": "resourceDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSoftwareUpdateJob"
+    },
+    {
+      "Name": "CreateSubscriptionDefinition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateSubscriptionDefinitionVersion",
+      "Resources": [
+        {
+          "Name": "subscriptionDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteComponent",
+      "Resources": [
+        {
+          "Name": "componentVersion"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConnectorDefinition",
+      "Resources": [
+        {
+          "Name": "connectorDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCoreDefinition",
+      "Resources": [
+        {
+          "Name": "coreDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCoreDevice",
+      "Resources": [
+        {
+          "Name": "coreDevice"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeployment",
+      "Resources": [
+        {
+          "Name": "deployment"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeviceDefinition",
+      "Resources": [
+        {
+          "Name": "deviceDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFunctionDefinition",
+      "Resources": [
+        {
+          "Name": "functionDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGroup",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLoggerDefinition",
+      "Resources": [
+        {
+          "Name": "loggerDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourceDefinition",
+      "Resources": [
+        {
+          "Name": "resourceDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSubscriptionDefinition",
+      "Resources": [
+        {
+          "Name": "subscriptionDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeComponent",
+      "Resources": [
+        {
+          "Name": "componentVersion"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateRoleFromGroup",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateServiceRoleFromAccount"
+    },
+    {
+      "Name": "Discover",
+      "Resources": [
+        {
+          "Name": "thing"
+        }
+      ]
+    },
+    {
+      "Name": "GetAssociatedRole",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "GetBulkDeploymentStatus",
+      "Resources": [
+        {
+          "Name": "bulkDeployment"
+        }
+      ]
+    },
+    {
+      "Name": "GetComponent",
+      "Resources": [
+        {
+          "Name": "componentVersion"
+        }
+      ]
+    },
+    {
+      "Name": "GetComponentVersionArtifact",
+      "Resources": [
+        {
+          "Name": "componentVersion"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnectivityInfo",
+      "Resources": [
+        {
+          "Name": "connectivityInfo"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnectorDefinition",
+      "Resources": [
+        {
+          "Name": "connectorDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnectorDefinitionVersion",
+      "Resources": [
+        {
+          "Name": "connectorDefinition"
+        },
+        {
+          "Name": "connectorDefinitionVersion"
+        }
+      ]
+    },
+    {
+      "Name": "GetCoreDefinition",
+      "Resources": [
+        {
+          "Name": "coreDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "GetCoreDefinitionVersion",
+      "Resources": [
+        {
+          "Name": "coreDefinition"
+        },
+        {
+          "Name": "coreDefinitionVersion"
+        }
+      ]
+    },
+    {
+      "Name": "GetCoreDevice",
+      "Resources": [
+        {
+          "Name": "coreDevice"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeployment",
+      "Resources": [
+        {
+          "Name": "deployment"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeploymentStatus",
+      "Resources": [
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeviceDefinition",
+      "Resources": [
+        {
+          "Name": "deviceDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeviceDefinitionVersion",
+      "Resources": [
+        {
+          "Name": "deviceDefinition"
+        },
+        {
+          "Name": "deviceDefinitionVersion"
+        }
+      ]
+    },
+    {
+      "Name": "GetFunctionDefinition",
+      "Resources": [
+        {
+          "Name": "functionDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "GetFunctionDefinitionVersion",
+      "Resources": [
+        {
+          "Name": "functionDefinition"
+        },
+        {
+          "Name": "functionDefinitionVersion"
+        }
+      ]
+    },
+    {
+      "Name": "GetGroup",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "GetGroupCertificateAuthority",
+      "Resources": [
+        {
+          "Name": "certificateAuthority"
+        },
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "GetGroupCertificateConfiguration",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "GetGroupVersion",
+      "Resources": [
+        {
+          "Name": "group"
+        },
+        {
+          "Name": "groupVersion"
+        }
+      ]
+    },
+    {
+      "Name": "GetLoggerDefinition",
+      "Resources": [
+        {
+          "Name": "loggerDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "GetLoggerDefinitionVersion",
+      "Resources": [
+        {
+          "Name": "loggerDefinition"
+        },
+        {
+          "Name": "loggerDefinitionVersion"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourceDefinition",
+      "Resources": [
+        {
+          "Name": "resourceDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourceDefinitionVersion",
+      "Resources": [
+        {
+          "Name": "resourceDefinition"
+        },
+        {
+          "Name": "resourceDefinitionVersion"
+        }
+      ]
+    },
+    {
+      "Name": "GetServiceRoleForAccount"
+    },
+    {
+      "Name": "GetSubscriptionDefinition",
+      "Resources": [
+        {
+          "Name": "subscriptionDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "GetSubscriptionDefinitionVersion",
+      "Resources": [
+        {
+          "Name": "subscriptionDefinition"
+        },
+        {
+          "Name": "subscriptionDefinitionVersion"
+        }
+      ]
+    },
+    {
+      "Name": "GetThingRuntimeConfiguration",
+      "Resources": [
+        {
+          "Name": "thingRuntimeConfig"
+        }
+      ]
+    },
+    {
+      "Name": "ListBulkDeploymentDetailedReports",
+      "Resources": [
+        {
+          "Name": "bulkDeployment"
+        }
+      ]
+    },
+    {
+      "Name": "ListBulkDeployments"
+    },
+    {
+      "Name": "ListClientDevicesAssociatedWithCoreDevice",
+      "Resources": [
+        {
+          "Name": "coreDevice"
+        }
+      ]
+    },
+    {
+      "Name": "ListComponentVersions",
+      "Resources": [
+        {
+          "Name": "component"
+        }
+      ]
+    },
+    {
+      "Name": "ListComponents"
+    },
+    {
+      "Name": "ListConnectorDefinitionVersions",
+      "Resources": [
+        {
+          "Name": "connectorDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "ListConnectorDefinitions"
+    },
+    {
+      "Name": "ListCoreDefinitionVersions",
+      "Resources": [
+        {
+          "Name": "coreDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "ListCoreDefinitions"
+    },
+    {
+      "Name": "ListCoreDevices"
+    },
+    {
+      "Name": "ListDeployments",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeviceDefinitionVersions",
+      "Resources": [
+        {
+          "Name": "deviceDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeviceDefinitions"
+    },
+    {
+      "Name": "ListEffectiveDeployments",
+      "Resources": [
+        {
+          "Name": "coreDevice"
+        }
+      ]
+    },
+    {
+      "Name": "ListFunctionDefinitionVersions",
+      "Resources": [
+        {
+          "Name": "functionDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "ListFunctionDefinitions"
+    },
+    {
+      "Name": "ListGroupCertificateAuthorities",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "ListGroupVersions",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "ListGroups"
+    },
+    {
+      "Name": "ListInstalledComponents",
+      "Resources": [
+        {
+          "Name": "coreDevice"
+        }
+      ]
+    },
+    {
+      "Name": "ListLoggerDefinitionVersions",
+      "Resources": [
+        {
+          "Name": "loggerDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "ListLoggerDefinitions"
+    },
+    {
+      "Name": "ListResourceDefinitionVersions",
+      "Resources": [
+        {
+          "Name": "resourceDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "ListResourceDefinitions"
+    },
+    {
+      "Name": "ListSubscriptionDefinitionVersions",
+      "Resources": [
+        {
+          "Name": "subscriptionDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "ListSubscriptionDefinitions"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "bulkDeployment"
+        },
+        {
+          "Name": "component"
+        },
+        {
+          "Name": "componentVersion"
+        },
+        {
+          "Name": "connectorDefinition"
+        },
+        {
+          "Name": "coreDefinition"
+        },
+        {
+          "Name": "coreDevice"
+        },
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "deviceDefinition"
+        },
+        {
+          "Name": "functionDefinition"
+        },
+        {
+          "Name": "group"
+        },
+        {
+          "Name": "loggerDefinition"
+        },
+        {
+          "Name": "resourceDefinition"
+        },
+        {
+          "Name": "subscriptionDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "ResetDeployments",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "ResolveComponentCandidates",
+      "Resources": [
+        {
+          "Name": "componentVersion"
+        }
+      ]
+    },
+    {
+      "Name": "StartBulkDeployment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "StopBulkDeployment",
+      "Resources": [
+        {
+          "Name": "bulkDeployment"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "bulkDeployment"
+        },
+        {
+          "Name": "component"
+        },
+        {
+          "Name": "componentVersion"
+        },
+        {
+          "Name": "connectorDefinition"
+        },
+        {
+          "Name": "coreDefinition"
+        },
+        {
+          "Name": "coreDevice"
+        },
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "deviceDefinition"
+        },
+        {
+          "Name": "functionDefinition"
+        },
+        {
+          "Name": "group"
+        },
+        {
+          "Name": "loggerDefinition"
+        },
+        {
+          "Name": "resourceDefinition"
+        },
+        {
+          "Name": "subscriptionDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "bulkDeployment"
+        },
+        {
+          "Name": "component"
+        },
+        {
+          "Name": "componentVersion"
+        },
+        {
+          "Name": "connectorDefinition"
+        },
+        {
+          "Name": "coreDefinition"
+        },
+        {
+          "Name": "coreDevice"
+        },
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "deviceDefinition"
+        },
+        {
+          "Name": "functionDefinition"
+        },
+        {
+          "Name": "group"
+        },
+        {
+          "Name": "loggerDefinition"
+        },
+        {
+          "Name": "resourceDefinition"
+        },
+        {
+          "Name": "subscriptionDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConnectivityInfo",
+      "Resources": [
+        {
+          "Name": "connectivityInfo"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConnectorDefinition",
+      "Resources": [
+        {
+          "Name": "connectorDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCoreDefinition",
+      "Resources": [
+        {
+          "Name": "coreDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDeviceDefinition",
+      "Resources": [
+        {
+          "Name": "deviceDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFunctionDefinition",
+      "Resources": [
+        {
+          "Name": "functionDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGroup",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGroupCertificateConfiguration",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLoggerDefinition",
+      "Resources": [
+        {
+          "Name": "loggerDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateResourceDefinition",
+      "Resources": [
+        {
+          "Name": "resourceDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSubscriptionDefinition",
+      "Resources": [
+        {
+          "Name": "subscriptionDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateThingRuntimeConfiguration",
+      "Resources": [
+        {
+          "Name": "thingRuntimeConfig"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "bulkDeployment",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/bulk/deployments/${BulkDeploymentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "certificateAuthority",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}/certificateauthorities/${CertificateAuthorityId}"
+      ]
+    },
+    {
+      "Name": "component",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:components:${ComponentName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "componentVersion",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:components:${ComponentName}:versions:${ComponentVersion}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "connectivityInfo",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/things/${ThingName}/connectivityInfo"
+      ]
+    },
+    {
+      "Name": "connectorDefinition",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/definition/connectors/${ConnectorDefinitionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "connectorDefinitionVersion",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/definition/connectors/${ConnectorDefinitionId}/versions/${VersionId}"
+      ]
+    },
+    {
+      "Name": "coreDefinition",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/definition/cores/${CoreDefinitionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "coreDefinitionVersion",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/definition/cores/${CoreDefinitionId}/versions/${VersionId}"
+      ]
+    },
+    {
+      "Name": "coreDevice",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:coreDevices:${CoreDeviceThingName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "deployment",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}/deployments/${DeploymentId}",
+        "arn:${Partition}:greengrass:${Region}:${Account}:deployments:${DeploymentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "deviceDefinition",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/definition/devices/${DeviceDefinitionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "deviceDefinitionVersion",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/definition/devices/${DeviceDefinitionId}/versions/${VersionId}"
+      ]
+    },
+    {
+      "Name": "functionDefinition",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/definition/functions/${FunctionDefinitionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "functionDefinitionVersion",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/definition/functions/${FunctionDefinitionId}/versions/${VersionId}"
+      ]
+    },
+    {
+      "Name": "group",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "groupVersion",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}/versions/${VersionId}"
+      ]
+    },
+    {
+      "Name": "loggerDefinition",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/definition/loggers/${LoggerDefinitionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "loggerDefinitionVersion",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/definition/loggers/${LoggerDefinitionId}/versions/${VersionId}"
+      ]
+    },
+    {
+      "Name": "resourceDefinition",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/definition/resources/${ResourceDefinitionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "resourceDefinitionVersion",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/definition/resources/${ResourceDefinitionId}/versions/${VersionId}"
+      ]
+    },
+    {
+      "Name": "subscriptionDefinition",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/definition/subscriptions/${SubscriptionDefinitionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "subscriptionDefinitionVersion",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/definition/subscriptions/${SubscriptionDefinitionId}/versions/${VersionId}"
+      ]
+    },
+    {
+      "Name": "thing",
+      "ARNFormats": [
+        "arn:${Partition}:iot:${Region}:${Account}:thing/${ThingName}"
+      ]
+    },
+    {
+      "Name": "thingRuntimeConfig",
+      "ARNFormats": [
+        "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/things/${ThingName}/runtimeconfig"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

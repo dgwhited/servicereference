@@ -1,0 +1,151 @@
+{
+  "Name": "backup-search",
+  "Actions": [
+    {
+      "Name": "GetSearchJob",
+      "Resources": [
+        {
+          "Name": "searchJob"
+        }
+      ]
+    },
+    {
+      "Name": "GetSearchResultExportJob",
+      "Resources": [
+        {
+          "Name": "searchExportJob"
+        }
+      ]
+    },
+    {
+      "Name": "ListSearchJobBackups",
+      "Resources": [
+        {
+          "Name": "searchJob"
+        }
+      ]
+    },
+    {
+      "Name": "ListSearchJobResults",
+      "Resources": [
+        {
+          "Name": "searchJob"
+        }
+      ]
+    },
+    {
+      "Name": "ListSearchJobs"
+    },
+    {
+      "Name": "ListSearchResultExportJobs"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "searchExportJob"
+        },
+        {
+          "Name": "searchJob"
+        }
+      ]
+    },
+    {
+      "Name": "StartSearchJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "StartSearchResultExportJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "searchJob"
+        }
+      ]
+    },
+    {
+      "Name": "StopSearchJob",
+      "Resources": [
+        {
+          "Name": "searchJob"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "searchExportJob"
+        },
+        {
+          "Name": "searchJob"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "searchExportJob"
+        },
+        {
+          "Name": "searchJob"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "searchExportJob",
+      "ARNFormats": [
+        "arn:${Partition}:backup-search:${Region}:${Account}:search-export-job/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "searchJob",
+      "ARNFormats": [
+        "arn:${Partition}:backup-search:${Region}:${Account}:search-job/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

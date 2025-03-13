@@ -1,0 +1,1207 @@
+{
+  "Name": "medialive",
+  "Actions": [
+    {
+      "Name": "AcceptInputDeviceTransfer",
+      "Resources": [
+        {
+          "Name": "input-device"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDelete"
+    },
+    {
+      "Name": "BatchStart"
+    },
+    {
+      "Name": "BatchStop"
+    },
+    {
+      "Name": "BatchUpdateSchedule",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "CancelInputDeviceTransfer",
+      "Resources": [
+        {
+          "Name": "input-device"
+        }
+      ]
+    },
+    {
+      "Name": "ClaimDevice",
+      "Resources": [
+        {
+          "Name": "input-device"
+        }
+      ]
+    },
+    {
+      "Name": "CreateChannel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "input"
+        }
+      ]
+    },
+    {
+      "Name": "CreateChannelPlacementGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channel-placement-group"
+        },
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCloudWatchAlarmTemplate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cloudwatch-alarm-template"
+        },
+        {
+          "Name": "cloudwatch-alarm-template-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCloudWatchAlarmTemplateGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cloudwatch-alarm-template-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCluster",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEventBridgeRuleTemplate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "eventbridge-rule-template"
+        },
+        {
+          "Name": "eventbridge-rule-template-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEventBridgeRuleTemplateGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "eventbridge-rule-template-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateInput",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "input"
+        },
+        {
+          "Name": "input-security-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateInputSecurityGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "input-security-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMultiplex",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "multiplex"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMultiplexProgram",
+      "Resources": [
+        {
+          "Name": "multiplex"
+        }
+      ]
+    },
+    {
+      "Name": "CreateNetwork",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "CreateNode",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "node"
+        }
+      ]
+    },
+    {
+      "Name": "CreateNodeRegistrationScript",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePartnerInput",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "input"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSignalMap",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "signal-map"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTags",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "channel-placement-group"
+        },
+        {
+          "Name": "cloudwatch-alarm-template"
+        },
+        {
+          "Name": "cloudwatch-alarm-template-group"
+        },
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "eventbridge-rule-template"
+        },
+        {
+          "Name": "eventbridge-rule-template-group"
+        },
+        {
+          "Name": "input"
+        },
+        {
+          "Name": "input-security-group"
+        },
+        {
+          "Name": "multiplex"
+        },
+        {
+          "Name": "network"
+        },
+        {
+          "Name": "node"
+        },
+        {
+          "Name": "reservation"
+        },
+        {
+          "Name": "signal-map"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteChannelPlacementGroup",
+      "Resources": [
+        {
+          "Name": "channel-placement-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCloudWatchAlarmTemplate",
+      "Resources": [
+        {
+          "Name": "cloudwatch-alarm-template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCloudWatchAlarmTemplateGroup",
+      "Resources": [
+        {
+          "Name": "cloudwatch-alarm-template-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEventBridgeRuleTemplate",
+      "Resources": [
+        {
+          "Name": "eventbridge-rule-template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEventBridgeRuleTemplateGroup",
+      "Resources": [
+        {
+          "Name": "eventbridge-rule-template-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInput",
+      "Resources": [
+        {
+          "Name": "input"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInputSecurityGroup",
+      "Resources": [
+        {
+          "Name": "input-security-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMultiplex",
+      "Resources": [
+        {
+          "Name": "multiplex"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMultiplexProgram",
+      "Resources": [
+        {
+          "Name": "multiplex"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNetwork",
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNode",
+      "Resources": [
+        {
+          "Name": "node"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteReservation",
+      "Resources": [
+        {
+          "Name": "reservation"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSchedule",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSignalMap",
+      "Resources": [
+        {
+          "Name": "signal-map"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTags",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "channel-placement-group"
+        },
+        {
+          "Name": "cloudwatch-alarm-template"
+        },
+        {
+          "Name": "cloudwatch-alarm-template-group"
+        },
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "eventbridge-rule-template"
+        },
+        {
+          "Name": "eventbridge-rule-template-group"
+        },
+        {
+          "Name": "input"
+        },
+        {
+          "Name": "input-security-group"
+        },
+        {
+          "Name": "multiplex"
+        },
+        {
+          "Name": "network"
+        },
+        {
+          "Name": "node"
+        },
+        {
+          "Name": "reservation"
+        },
+        {
+          "Name": "signal-map"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAccountConfiguration"
+    },
+    {
+      "Name": "DescribeChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeChannelPlacementGroup",
+      "Resources": [
+        {
+          "Name": "channel-placement-group"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeInput",
+      "Resources": [
+        {
+          "Name": "input"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeInputDevice",
+      "Resources": [
+        {
+          "Name": "input-device"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeInputDeviceThumbnail",
+      "Resources": [
+        {
+          "Name": "input-device"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeInputSecurityGroup",
+      "Resources": [
+        {
+          "Name": "input-security-group"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMultiplex",
+      "Resources": [
+        {
+          "Name": "multiplex"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMultiplexProgram",
+      "Resources": [
+        {
+          "Name": "multiplex"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeNetwork",
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeNode",
+      "Resources": [
+        {
+          "Name": "node"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeOffering",
+      "Resources": [
+        {
+          "Name": "offering"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeReservation",
+      "Resources": [
+        {
+          "Name": "reservation"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSchedule",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeThumbnails",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "GetCloudWatchAlarmTemplate",
+      "Resources": [
+        {
+          "Name": "cloudwatch-alarm-template"
+        }
+      ]
+    },
+    {
+      "Name": "GetCloudWatchAlarmTemplateGroup",
+      "Resources": [
+        {
+          "Name": "cloudwatch-alarm-template-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetEventBridgeRuleTemplate",
+      "Resources": [
+        {
+          "Name": "eventbridge-rule-template"
+        }
+      ]
+    },
+    {
+      "Name": "GetEventBridgeRuleTemplateGroup",
+      "Resources": [
+        {
+          "Name": "eventbridge-rule-template-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetSignalMap",
+      "Resources": [
+        {
+          "Name": "signal-map"
+        }
+      ]
+    },
+    {
+      "Name": "ListChannelPlacementGroups"
+    },
+    {
+      "Name": "ListChannels"
+    },
+    {
+      "Name": "ListCloudWatchAlarmTemplateGroups"
+    },
+    {
+      "Name": "ListCloudWatchAlarmTemplates"
+    },
+    {
+      "Name": "ListClusters"
+    },
+    {
+      "Name": "ListEventBridgeRuleTemplateGroups"
+    },
+    {
+      "Name": "ListEventBridgeRuleTemplates"
+    },
+    {
+      "Name": "ListInputDeviceTransfers"
+    },
+    {
+      "Name": "ListInputDevices"
+    },
+    {
+      "Name": "ListInputSecurityGroups"
+    },
+    {
+      "Name": "ListInputs"
+    },
+    {
+      "Name": "ListMultiplexPrograms"
+    },
+    {
+      "Name": "ListMultiplexes"
+    },
+    {
+      "Name": "ListNetworks"
+    },
+    {
+      "Name": "ListNodes"
+    },
+    {
+      "Name": "ListOfferings"
+    },
+    {
+      "Name": "ListReservations"
+    },
+    {
+      "Name": "ListSignalMaps"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "channel-placement-group"
+        },
+        {
+          "Name": "cloudwatch-alarm-template"
+        },
+        {
+          "Name": "cloudwatch-alarm-template-group"
+        },
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "eventbridge-rule-template"
+        },
+        {
+          "Name": "eventbridge-rule-template-group"
+        },
+        {
+          "Name": "input"
+        },
+        {
+          "Name": "input-security-group"
+        },
+        {
+          "Name": "multiplex"
+        },
+        {
+          "Name": "network"
+        },
+        {
+          "Name": "node"
+        },
+        {
+          "Name": "reservation"
+        },
+        {
+          "Name": "signal-map"
+        }
+      ]
+    },
+    {
+      "Name": "ListVersions"
+    },
+    {
+      "Name": "PollAnywhere"
+    },
+    {
+      "Name": "PurchaseOffering",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "offering"
+        },
+        {
+          "Name": "reservation"
+        }
+      ]
+    },
+    {
+      "Name": "RebootInputDevice",
+      "Resources": [
+        {
+          "Name": "input-device"
+        }
+      ]
+    },
+    {
+      "Name": "RejectInputDeviceTransfer",
+      "Resources": [
+        {
+          "Name": "input-device"
+        }
+      ]
+    },
+    {
+      "Name": "RestartChannelPipelines",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "StartChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "StartDeleteMonitorDeployment",
+      "Resources": [
+        {
+          "Name": "signal-map"
+        }
+      ]
+    },
+    {
+      "Name": "StartInputDevice",
+      "Resources": [
+        {
+          "Name": "input-device"
+        }
+      ]
+    },
+    {
+      "Name": "StartInputDeviceMaintenanceWindow",
+      "Resources": [
+        {
+          "Name": "input-device"
+        }
+      ]
+    },
+    {
+      "Name": "StartMonitorDeployment",
+      "Resources": [
+        {
+          "Name": "signal-map"
+        }
+      ]
+    },
+    {
+      "Name": "StartMultiplex",
+      "Resources": [
+        {
+          "Name": "multiplex"
+        }
+      ]
+    },
+    {
+      "Name": "StartUpdateSignalMap",
+      "Resources": [
+        {
+          "Name": "signal-map"
+        }
+      ]
+    },
+    {
+      "Name": "StopChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "StopInputDevice",
+      "Resources": [
+        {
+          "Name": "input-device"
+        }
+      ]
+    },
+    {
+      "Name": "StopMultiplex",
+      "Resources": [
+        {
+          "Name": "multiplex"
+        }
+      ]
+    },
+    {
+      "Name": "SubmitAnywhereStateChange"
+    },
+    {
+      "Name": "TransferInputDevice",
+      "Resources": [
+        {
+          "Name": "input-device"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAccountConfiguration"
+    },
+    {
+      "Name": "UpdateChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateChannelClass",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateChannelPlacementGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channel-placement-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCloudWatchAlarmTemplate",
+      "Resources": [
+        {
+          "Name": "cloudwatch-alarm-template"
+        },
+        {
+          "Name": "cloudwatch-alarm-template-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCloudWatchAlarmTemplateGroup",
+      "Resources": [
+        {
+          "Name": "cloudwatch-alarm-template-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCluster",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEventBridgeRuleTemplate",
+      "Resources": [
+        {
+          "Name": "eventbridge-rule-template"
+        },
+        {
+          "Name": "eventbridge-rule-template-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEventBridgeRuleTemplateGroup",
+      "Resources": [
+        {
+          "Name": "eventbridge-rule-template-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInput",
+      "Resources": [
+        {
+          "Name": "input"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInputDevice",
+      "Resources": [
+        {
+          "Name": "input-device"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInputSecurityGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "input-security-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMultiplex",
+      "Resources": [
+        {
+          "Name": "multiplex"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMultiplexProgram",
+      "Resources": [
+        {
+          "Name": "multiplex"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNetwork",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNode",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "node"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNodeState",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "node"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateReservation",
+      "Resources": [
+        {
+          "Name": "reservation"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "channel",
+      "ARNFormats": [
+        "arn:${Partition}:medialive:${Region}:${Account}:channel:${ChannelId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "channel-placement-group",
+      "ARNFormats": [
+        "arn:${Partition}:medialive:${Region}:${Account}:channelPlacementGroup:${ClusterId}/${ChannelPlacementGroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "cloudwatch-alarm-template",
+      "ARNFormats": [
+        "arn:${Partition}:medialive:${Region}:${Account}:cloudwatch-alarm-template:${CloudWatchAlarmTemplateId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "cloudwatch-alarm-template-group",
+      "ARNFormats": [
+        "arn:${Partition}:medialive:${Region}:${Account}:cloudwatch-alarm-template-group:${CloudWatchAlarmTemplateGroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "cluster",
+      "ARNFormats": [
+        "arn:${Partition}:medialive:${Region}:${Account}:cluster:${ClusterId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "eventbridge-rule-template",
+      "ARNFormats": [
+        "arn:${Partition}:medialive:${Region}:${Account}:eventbridge-rule-template:${EventBridgeRuleTemplateId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "eventbridge-rule-template-group",
+      "ARNFormats": [
+        "arn:${Partition}:medialive:${Region}:${Account}:eventbridge-rule-template-group:${EventBridgeRuleTemplateGroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "input",
+      "ARNFormats": [
+        "arn:${Partition}:medialive:${Region}:${Account}:input:${InputId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "input-device",
+      "ARNFormats": [
+        "arn:${Partition}:medialive:${Region}:${Account}:inputDevice:${DeviceId}"
+      ]
+    },
+    {
+      "Name": "input-security-group",
+      "ARNFormats": [
+        "arn:${Partition}:medialive:${Region}:${Account}:inputSecurityGroup:${InputSecurityGroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "multiplex",
+      "ARNFormats": [
+        "arn:${Partition}:medialive:${Region}:${Account}:multiplex:${MultiplexId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "network",
+      "ARNFormats": [
+        "arn:${Partition}:medialive:${Region}:${Account}:network:${NetworkId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "node",
+      "ARNFormats": [
+        "arn:${Partition}:medialive:${Region}:${Account}:node:${ClusterId}/${NodeId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "offering",
+      "ARNFormats": [
+        "arn:${Partition}:medialive:${Region}:${Account}:offering:${OfferingId}"
+      ]
+    },
+    {
+      "Name": "reservation",
+      "ARNFormats": [
+        "arn:${Partition}:medialive:${Region}:${Account}:reservation:${ReservationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "signal-map",
+      "ARNFormats": [
+        "arn:${Partition}:medialive:${Region}:${Account}:signal-map:${SignalMapId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

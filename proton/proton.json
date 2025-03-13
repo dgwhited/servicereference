@@ -1,0 +1,1150 @@
+{
+  "Name": "proton",
+  "Actions": [
+    {
+      "Name": "AcceptEnvironmentAccountConnection",
+      "Resources": [
+        {
+          "Name": "environment-account-connection"
+        }
+      ]
+    },
+    {
+      "Name": "CancelComponentDeployment",
+      "Resources": [
+        {
+          "Name": "component"
+        }
+      ]
+    },
+    {
+      "Name": "CancelEnvironmentDeployment",
+      "ActionConditionKeys": [
+        "proton:EnvironmentTemplate"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "CancelServiceInstanceDeployment",
+      "ActionConditionKeys": [
+        "proton:ServiceTemplate"
+      ],
+      "Resources": [
+        {
+          "Name": "service-instance"
+        }
+      ]
+    },
+    {
+      "Name": "CancelServicePipelineDeployment",
+      "ActionConditionKeys": [
+        "proton:ServiceTemplate"
+      ],
+      "Resources": [
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "CreateComponent",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "component"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEnvironment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "proton:EnvironmentTemplate"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEnvironmentAccountConnection",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateEnvironmentTemplate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEnvironmentTemplateMajorVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEnvironmentTemplateMinorVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEnvironmentTemplateVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRepository",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "CreateService",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "proton:ServiceTemplate"
+      ],
+      "Resources": [
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "CreateServiceInstance",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "proton:ServiceTemplate"
+      ],
+      "Resources": [
+        {
+          "Name": "service-instance"
+        }
+      ]
+    },
+    {
+      "Name": "CreateServiceSyncConfig"
+    },
+    {
+      "Name": "CreateServiceTemplate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "CreateServiceTemplateMajorVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "CreateServiceTemplateMinorVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "CreateServiceTemplateVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTemplateSyncConfig"
+    },
+    {
+      "Name": "DeleteAccountRoles"
+    },
+    {
+      "Name": "DeleteComponent",
+      "Resources": [
+        {
+          "Name": "component"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeployment",
+      "Resources": [
+        {
+          "Name": "deployment"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEnvironment",
+      "ActionConditionKeys": [
+        "proton:EnvironmentTemplate"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEnvironmentAccountConnection",
+      "Resources": [
+        {
+          "Name": "environment-account-connection"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEnvironmentTemplate",
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEnvironmentTemplateMajorVersion",
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEnvironmentTemplateMinorVersion",
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEnvironmentTemplateVersion",
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRepository",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteService",
+      "ActionConditionKeys": [
+        "proton:ServiceTemplate"
+      ],
+      "Resources": [
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteServiceSyncConfig"
+    },
+    {
+      "Name": "DeleteServiceTemplate",
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteServiceTemplateMajorVersion",
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteServiceTemplateMinorVersion",
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteServiceTemplateVersion",
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTemplateSyncConfig"
+    },
+    {
+      "Name": "GetAccountRoles"
+    },
+    {
+      "Name": "GetAccountSettings"
+    },
+    {
+      "Name": "GetComponent",
+      "Resources": [
+        {
+          "Name": "component"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeployment",
+      "Resources": [
+        {
+          "Name": "deployment"
+        }
+      ]
+    },
+    {
+      "Name": "GetEnvironment",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "GetEnvironmentAccountConnection",
+      "Resources": [
+        {
+          "Name": "environment-account-connection"
+        }
+      ]
+    },
+    {
+      "Name": "GetEnvironmentTemplate",
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "GetEnvironmentTemplateMajorVersion",
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "GetEnvironmentTemplateMinorVersion",
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "GetEnvironmentTemplateVersion",
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "GetRepository",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "GetRepositorySyncStatus"
+    },
+    {
+      "Name": "GetResourceTemplateVersionStatusCounts"
+    },
+    {
+      "Name": "GetResourcesSummary"
+    },
+    {
+      "Name": "GetService",
+      "Resources": [
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "GetServiceInstance",
+      "Resources": [
+        {
+          "Name": "service-instance"
+        }
+      ]
+    },
+    {
+      "Name": "GetServiceInstanceSyncStatus"
+    },
+    {
+      "Name": "GetServiceSyncBlockerSummary"
+    },
+    {
+      "Name": "GetServiceSyncConfig"
+    },
+    {
+      "Name": "GetServiceTemplate",
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "GetServiceTemplateMajorVersion",
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "GetServiceTemplateMinorVersion",
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "GetServiceTemplateVersion",
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "GetTemplateSyncConfig"
+    },
+    {
+      "Name": "GetTemplateSyncStatus"
+    },
+    {
+      "Name": "ListComponentOutputs",
+      "Resources": [
+        {
+          "Name": "component"
+        },
+        {
+          "Name": "deployment"
+        }
+      ]
+    },
+    {
+      "Name": "ListComponentProvisionedResources",
+      "Resources": [
+        {
+          "Name": "component"
+        }
+      ]
+    },
+    {
+      "Name": "ListComponents",
+      "Resources": [
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "service"
+        },
+        {
+          "Name": "service-instance"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeployments"
+    },
+    {
+      "Name": "ListEnvironmentAccountConnections"
+    },
+    {
+      "Name": "ListEnvironmentOutputs",
+      "Resources": [
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "ListEnvironmentProvisionedResources",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "ListEnvironmentTemplateMajorVersions",
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "ListEnvironmentTemplateMinorVersions",
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "ListEnvironmentTemplateVersions",
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "ListEnvironmentTemplates"
+    },
+    {
+      "Name": "ListEnvironments"
+    },
+    {
+      "Name": "ListRepositories"
+    },
+    {
+      "Name": "ListRepositorySyncDefinitions"
+    },
+    {
+      "Name": "ListServiceInstanceOutputs",
+      "Resources": [
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "service"
+        },
+        {
+          "Name": "service-instance"
+        }
+      ]
+    },
+    {
+      "Name": "ListServiceInstanceProvisionedResources",
+      "Resources": [
+        {
+          "Name": "service"
+        },
+        {
+          "Name": "service-instance"
+        }
+      ]
+    },
+    {
+      "Name": "ListServiceInstances"
+    },
+    {
+      "Name": "ListServicePipelineOutputs",
+      "Resources": [
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "ListServicePipelineProvisionedResources",
+      "Resources": [
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "ListServiceTemplateMajorVersions",
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "ListServiceTemplateMinorVersions",
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "ListServiceTemplateVersions",
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "ListServiceTemplates"
+    },
+    {
+      "Name": "ListServices"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "component"
+        },
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "environment-account-connection"
+        },
+        {
+          "Name": "environment-template"
+        },
+        {
+          "Name": "environment-template-major-version"
+        },
+        {
+          "Name": "environment-template-minor-version"
+        },
+        {
+          "Name": "environment-template-version"
+        },
+        {
+          "Name": "repository"
+        },
+        {
+          "Name": "service"
+        },
+        {
+          "Name": "service-instance"
+        },
+        {
+          "Name": "service-template"
+        },
+        {
+          "Name": "service-template-major-version"
+        },
+        {
+          "Name": "service-template-minor-version"
+        },
+        {
+          "Name": "service-template-version"
+        }
+      ]
+    },
+    {
+      "Name": "NotifyResourceDeploymentStatusChange",
+      "Resources": [
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "service-instance"
+        }
+      ]
+    },
+    {
+      "Name": "RejectEnvironmentAccountConnection",
+      "Resources": [
+        {
+          "Name": "environment-account-connection"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "component"
+        },
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "environment-account-connection"
+        },
+        {
+          "Name": "environment-template"
+        },
+        {
+          "Name": "environment-template-major-version"
+        },
+        {
+          "Name": "environment-template-minor-version"
+        },
+        {
+          "Name": "environment-template-version"
+        },
+        {
+          "Name": "repository"
+        },
+        {
+          "Name": "service"
+        },
+        {
+          "Name": "service-instance"
+        },
+        {
+          "Name": "service-template"
+        },
+        {
+          "Name": "service-template-major-version"
+        },
+        {
+          "Name": "service-template-minor-version"
+        },
+        {
+          "Name": "service-template-version"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "component"
+        },
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "environment-account-connection"
+        },
+        {
+          "Name": "environment-template"
+        },
+        {
+          "Name": "environment-template-major-version"
+        },
+        {
+          "Name": "environment-template-minor-version"
+        },
+        {
+          "Name": "environment-template-version"
+        },
+        {
+          "Name": "repository"
+        },
+        {
+          "Name": "service"
+        },
+        {
+          "Name": "service-instance"
+        },
+        {
+          "Name": "service-template"
+        },
+        {
+          "Name": "service-template-major-version"
+        },
+        {
+          "Name": "service-template-minor-version"
+        },
+        {
+          "Name": "service-template-version"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAccountRoles"
+    },
+    {
+      "Name": "UpdateAccountSettings"
+    },
+    {
+      "Name": "UpdateComponent",
+      "Resources": [
+        {
+          "Name": "component"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEnvironment",
+      "ActionConditionKeys": [
+        "proton:EnvironmentTemplate"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEnvironmentAccountConnection",
+      "Resources": [
+        {
+          "Name": "environment-account-connection"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEnvironmentTemplate",
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEnvironmentTemplateMajorVersion",
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEnvironmentTemplateMinorVersion",
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEnvironmentTemplateVersion",
+      "Resources": [
+        {
+          "Name": "environment-template"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateService",
+      "ActionConditionKeys": [
+        "proton:ServiceTemplate"
+      ],
+      "Resources": [
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServiceInstance",
+      "ActionConditionKeys": [
+        "proton:ServiceTemplate"
+      ],
+      "Resources": [
+        {
+          "Name": "service-instance"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServicePipeline",
+      "ActionConditionKeys": [
+        "proton:ServiceTemplate"
+      ],
+      "Resources": [
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServiceSyncBlocker"
+    },
+    {
+      "Name": "UpdateServiceSyncConfig"
+    },
+    {
+      "Name": "UpdateServiceTemplate",
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServiceTemplateMajorVersion",
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServiceTemplateMinorVersion",
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServiceTemplateVersion",
+      "Resources": [
+        {
+          "Name": "service-template"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTemplateSyncConfig"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "proton:EnvironmentTemplate",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "proton:ServiceTemplate",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "component",
+      "ARNFormats": [
+        "arn:${Partition}:proton:${Region}:${Account}:component/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "deployment",
+      "ARNFormats": [
+        "arn:${Partition}:proton:${Region}:${Account}:deployment/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "environment",
+      "ARNFormats": [
+        "arn:${Partition}:proton:${Region}:${Account}:environment/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "environment-account-connection",
+      "ARNFormats": [
+        "arn:${Partition}:proton:${Region}:${Account}:environment-account-connection/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "environment-template",
+      "ARNFormats": [
+        "arn:${Partition}:proton:${Region}:${Account}:environment-template/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "environment-template-major-version",
+      "ARNFormats": [
+        "arn:${Partition}:proton:${Region}:${Account}:environment-template/${TemplateName}:${MajorVersionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "environment-template-minor-version",
+      "ARNFormats": [
+        "arn:${Partition}:proton:${Region}:${Account}:environment-template/${TemplateName}:${MajorVersionId}.${MinorVersionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "environment-template-version",
+      "ARNFormats": [
+        "arn:${Partition}:proton:${Region}:${Account}:environment-template/${TemplateName}:${MajorVersion}.${MinorVersion}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "repository",
+      "ARNFormats": [
+        "arn:${Partition}:proton:${Region}:${Account}:repository/${Provider}:${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "service",
+      "ARNFormats": [
+        "arn:${Partition}:proton:${Region}:${Account}:service/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "service-instance",
+      "ARNFormats": [
+        "arn:${Partition}:proton:${Region}:${Account}:service/${ServiceName}/service-instance/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "service-template",
+      "ARNFormats": [
+        "arn:${Partition}:proton:${Region}:${Account}:service-template/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "service-template-major-version",
+      "ARNFormats": [
+        "arn:${Partition}:proton:${Region}:${Account}:service-template/${TemplateName}:${MajorVersionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "service-template-minor-version",
+      "ARNFormats": [
+        "arn:${Partition}:proton:${Region}:${Account}:service-template/${TemplateName}:${MajorVersionId}.${MinorVersionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "service-template-version",
+      "ARNFormats": [
+        "arn:${Partition}:proton:${Region}:${Account}:service-template/${TemplateName}:${MajorVersion}.${MinorVersion}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

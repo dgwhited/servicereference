@@ -1,0 +1,364 @@
+{
+  "Name": "kinesis",
+  "Actions": [
+    {
+      "Name": "AddTagsToStream",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreateStream",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DecreaseStreamRetentionPeriod",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Resources": [
+        {
+          "Name": "consumer"
+        },
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStream",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterStreamConsumer",
+      "Resources": [
+        {
+          "Name": "consumer"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeLimits"
+    },
+    {
+      "Name": "DescribeStream",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStreamConsumer",
+      "Resources": [
+        {
+          "Name": "consumer"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStreamSummary",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DisableEnhancedMonitoring"
+    },
+    {
+      "Name": "EnableEnhancedMonitoring"
+    },
+    {
+      "Name": "GetRecords",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "Resources": [
+        {
+          "Name": "consumer"
+        },
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "GetShardIterator",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "IncreaseStreamRetentionPeriod",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "ListShards",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "ListStreamConsumers",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "ListStreams"
+    },
+    {
+      "Name": "ListTagsForStream",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "MergeShards",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "PutRecord",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "PutRecords",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "Resources": [
+        {
+          "Name": "consumer"
+        },
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "RegisterStreamConsumer",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "RemoveTagsFromStream",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "SplitShard",
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "StartStreamEncryption",
+      "Resources": [
+        {
+          "Name": "kmsKey"
+        },
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "StopStreamEncryption",
+      "Resources": [
+        {
+          "Name": "kmsKey"
+        },
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "SubscribeToShard",
+      "Resources": [
+        {
+          "Name": "consumer"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateShardCount"
+    },
+    {
+      "Name": "UpdateStreamMode"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "consumer",
+      "ARNFormats": [
+        "arn:${Partition}:kinesis:${Region}:${Account}:${StreamType}/${StreamName}/consumer/${ConsumerName}:${ConsumerCreationTimpstamp}"
+      ]
+    },
+    {
+      "Name": "kmsKey",
+      "ARNFormats": [
+        "arn:${Partition}:kms:${Region}:${Account}:key/${KeyId}"
+      ]
+    },
+    {
+      "Name": "stream",
+      "ARNFormats": [
+        "arn:${Partition}:kinesis:${Region}:${Account}:stream/${StreamName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,120 @@
+{
+  "Name": "servicequotas",
+  "Actions": [
+    {
+      "Name": "AssociateServiceQuotaTemplate"
+    },
+    {
+      "Name": "DeleteServiceQuotaIncreaseRequestFromTemplate"
+    },
+    {
+      "Name": "DisassociateServiceQuotaTemplate"
+    },
+    {
+      "Name": "GetAWSDefaultServiceQuota"
+    },
+    {
+      "Name": "GetAssociationForServiceQuotaTemplate"
+    },
+    {
+      "Name": "GetRequestedServiceQuotaChange"
+    },
+    {
+      "Name": "GetServiceQuota"
+    },
+    {
+      "Name": "GetServiceQuotaIncreaseRequestFromTemplate"
+    },
+    {
+      "Name": "ListAWSDefaultServiceQuotas"
+    },
+    {
+      "Name": "ListRequestedServiceQuotaChangeHistory"
+    },
+    {
+      "Name": "ListRequestedServiceQuotaChangeHistoryByQuota"
+    },
+    {
+      "Name": "ListServiceQuotaIncreaseRequestsInTemplate"
+    },
+    {
+      "Name": "ListServiceQuotas"
+    },
+    {
+      "Name": "ListServices"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "PutServiceQuotaIncreaseRequestIntoTemplate",
+      "ActionConditionKeys": [
+        "servicequotas:service"
+      ],
+      "Resources": [
+        {
+          "Name": "quota"
+        }
+      ]
+    },
+    {
+      "Name": "RequestServiceQuotaIncrease",
+      "ActionConditionKeys": [
+        "servicequotas:service"
+      ],
+      "Resources": [
+        {
+          "Name": "quota"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "servicequotas:service",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "quota",
+      "ARNFormats": [
+        "arn:${Partition}:servicequotas:${Region}:${Account}:${ServiceCode}/${QuotaCode}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

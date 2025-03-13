@@ -1,0 +1,264 @@
+{
+  "Name": "xray",
+  "Actions": [
+    {
+      "Name": "BatchGetTraceSummaryById"
+    },
+    {
+      "Name": "BatchGetTraces"
+    },
+    {
+      "Name": "CancelTraceRetrieval"
+    },
+    {
+      "Name": "CreateGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSamplingRule",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "sampling-rule"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGroup",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy"
+    },
+    {
+      "Name": "DeleteSamplingRule",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "sampling-rule"
+        }
+      ]
+    },
+    {
+      "Name": "GetDistinctTraceGraphs"
+    },
+    {
+      "Name": "GetEncryptionConfig"
+    },
+    {
+      "Name": "GetGroup",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "GetGroups"
+    },
+    {
+      "Name": "GetIndexingRules"
+    },
+    {
+      "Name": "GetInsight"
+    },
+    {
+      "Name": "GetInsightEvents"
+    },
+    {
+      "Name": "GetInsightImpactGraph"
+    },
+    {
+      "Name": "GetInsightSummaries"
+    },
+    {
+      "Name": "GetRetrievedTracesGraph"
+    },
+    {
+      "Name": "GetSamplingRules"
+    },
+    {
+      "Name": "GetSamplingStatisticSummaries"
+    },
+    {
+      "Name": "GetSamplingTargets"
+    },
+    {
+      "Name": "GetServiceGraph"
+    },
+    {
+      "Name": "GetTimeSeriesServiceStatistics"
+    },
+    {
+      "Name": "GetTraceGraph"
+    },
+    {
+      "Name": "GetTraceSegmentDestination"
+    },
+    {
+      "Name": "GetTraceSummaries"
+    },
+    {
+      "Name": "Link"
+    },
+    {
+      "Name": "ListResourcePolicies"
+    },
+    {
+      "Name": "ListRetrievedTraces"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "group"
+        },
+        {
+          "Name": "sampling-rule"
+        }
+      ]
+    },
+    {
+      "Name": "PutEncryptionConfig"
+    },
+    {
+      "Name": "PutResourcePolicy"
+    },
+    {
+      "Name": "PutSpans"
+    },
+    {
+      "Name": "PutSpansForIndexing"
+    },
+    {
+      "Name": "PutTelemetryRecords"
+    },
+    {
+      "Name": "PutTraceSegments"
+    },
+    {
+      "Name": "StartTraceRetrieval"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "group"
+        },
+        {
+          "Name": "sampling-rule"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "group"
+        },
+        {
+          "Name": "sampling-rule"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGroup",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIndexingRule"
+    },
+    {
+      "Name": "UpdateSamplingRule",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "sampling-rule"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTraceSegmentDestination"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "group",
+      "ARNFormats": [
+        "arn:${Partition}:xray:${Region}:${Account}:group/${GroupName}/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "sampling-rule",
+      "ARNFormats": [
+        "arn:${Partition}:xray:${Region}:${Account}:sampling-rule/${SamplingRuleName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

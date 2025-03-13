@@ -1,0 +1,236 @@
+{
+  "Name": "license-manager-user-subscriptions",
+  "Actions": [
+    {
+      "Name": "AssociateUser",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "identity-provider"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLicenseServerEndpoint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "identity-provider"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLicenseServerEndpoint",
+      "Resources": [
+        {
+          "Name": "identity-provider"
+        },
+        {
+          "Name": "license-server-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterIdentityProvider",
+      "Resources": [
+        {
+          "Name": "identity-provider"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateUser",
+      "Resources": [
+        {
+          "Name": "identity-provider"
+        },
+        {
+          "Name": "instance-user"
+        }
+      ]
+    },
+    {
+      "Name": "ListIdentityProviders"
+    },
+    {
+      "Name": "ListInstances"
+    },
+    {
+      "Name": "ListLicenseServerEndpoints"
+    },
+    {
+      "Name": "ListProductSubscriptions",
+      "Resources": [
+        {
+          "Name": "identity-provider"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "identity-provider"
+        },
+        {
+          "Name": "instance-user"
+        },
+        {
+          "Name": "license-server-endpoint"
+        },
+        {
+          "Name": "product-subscription"
+        }
+      ]
+    },
+    {
+      "Name": "ListUserAssociations",
+      "Resources": [
+        {
+          "Name": "identity-provider"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterIdentityProvider",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "StartProductSubscription",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "identity-provider"
+        }
+      ]
+    },
+    {
+      "Name": "StopProductSubscription",
+      "Resources": [
+        {
+          "Name": "identity-provider"
+        },
+        {
+          "Name": "product-subscription"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "identity-provider"
+        },
+        {
+          "Name": "instance-user"
+        },
+        {
+          "Name": "license-server-endpoint"
+        },
+        {
+          "Name": "product-subscription"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "Resources": [
+        {
+          "Name": "identity-provider"
+        },
+        {
+          "Name": "instance-user"
+        },
+        {
+          "Name": "license-server-endpoint"
+        },
+        {
+          "Name": "product-subscription"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIdentityProviderSettings",
+      "Resources": [
+        {
+          "Name": "identity-provider"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "identity-provider",
+      "ARNFormats": [
+        "arn:${Partition}:license-manager-user-subscriptions:${Region}:${Account}:identity-provider/${IdentityProviderId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "instance-user",
+      "ARNFormats": [
+        "arn:${Partition}:license-manager-user-subscriptions:${Region}:${Account}:instance-user/${InstanceUserId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "license-server-endpoint",
+      "ARNFormats": [
+        "arn:${Partition}:license-manager-user-subscriptions:${Region}:${Account}:license-server-endpoint/${LicenseServerEndpointId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "product-subscription",
+      "ARNFormats": [
+        "arn:${Partition}:license-manager-user-subscriptions:${Region}:${Account}:product-subscription/${ProductSubscriptionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

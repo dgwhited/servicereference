@@ -1,0 +1,182 @@
+{
+  "Name": "monitron",
+  "Actions": [
+    {
+      "Name": "AssociateProjectAdminUser",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "CreateProject",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateProjectUserAssociation",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "CreateUserAccessRoleAssociation",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProjectUserAssociation",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteUserAccessRoleAssociation",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateProjectAdminUser",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "GetProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "GetProjectAdminUser",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "ListProjectAdminUsers",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "ListProjectUserAssociations",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "ListProjects"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "ListUserAccessRoleAssociations",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "project",
+      "ARNFormats": [
+        "arn:${Partition}:monitron:${Region}:${Account}:project/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

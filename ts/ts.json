@@ -1,0 +1,115 @@
+{
+  "Name": "ts",
+  "Actions": [
+    {
+      "Name": "GetExecution",
+      "Resources": [
+        {
+          "Name": "execution"
+        }
+      ]
+    },
+    {
+      "Name": "GetExecutionOutput",
+      "Resources": [
+        {
+          "Name": "execution"
+        }
+      ]
+    },
+    {
+      "Name": "GetTool",
+      "Resources": [
+        {
+          "Name": "tool"
+        }
+      ]
+    },
+    {
+      "Name": "ListExecutions"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "execution"
+        }
+      ]
+    },
+    {
+      "Name": "ListTools"
+    },
+    {
+      "Name": "StartExecution",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "execution"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "execution"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "execution",
+      "ARNFormats": [
+        "arn:${Partition}:ts::${Account}:execution/${UserId}/${ToolId}/${ExecutionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "tool",
+      "ARNFormats": [
+        "arn:${Partition}:ts::aws:tool/${ToolId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

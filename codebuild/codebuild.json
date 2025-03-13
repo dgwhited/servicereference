@@ -1,0 +1,503 @@
+{
+  "Name": "codebuild",
+  "Actions": [
+    {
+      "Name": "BatchDeleteBuilds",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetBuildBatches",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetBuilds",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetFleets",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetProjects",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetReportGroups",
+      "Resources": [
+        {
+          "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetReports",
+      "Resources": [
+        {
+          "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "BatchPutCodeCoverages",
+      "Resources": [
+        {
+          "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "BatchPutTestCases",
+      "Resources": [
+        {
+          "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFleet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "CreateProject",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "CreateReport",
+      "Resources": [
+        {
+          "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateReportGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWebhook",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBuildBatch",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFleet",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteOAuthToken"
+    },
+    {
+      "Name": "DeleteProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteReport",
+      "Resources": [
+        {
+          "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteReportGroup",
+      "Resources": [
+        {
+          "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Resources": [
+        {
+          "Name": "project"
+        },
+        {
+          "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSourceCredentials"
+    },
+    {
+      "Name": "DeleteWebhook",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCodeCoverages",
+      "Resources": [
+        {
+          "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTestCases",
+      "Resources": [
+        {
+          "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetReportGroupTrend",
+      "Resources": [
+        {
+          "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "Resources": [
+        {
+          "Name": "project"
+        },
+        {
+          "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "ImportSourceCredentials"
+    },
+    {
+      "Name": "InvalidateProjectCache",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "ListBuildBatches"
+    },
+    {
+      "Name": "ListBuildBatchesForProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "ListBuilds"
+    },
+    {
+      "Name": "ListBuildsForProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "ListConnectedOAuthAccounts"
+    },
+    {
+      "Name": "ListCuratedEnvironmentImages"
+    },
+    {
+      "Name": "ListFleets"
+    },
+    {
+      "Name": "ListProjects"
+    },
+    {
+      "Name": "ListReportGroups"
+    },
+    {
+      "Name": "ListReports"
+    },
+    {
+      "Name": "ListReportsForReportGroup",
+      "Resources": [
+        {
+          "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "ListRepositories"
+    },
+    {
+      "Name": "ListSharedProjects"
+    },
+    {
+      "Name": "ListSharedReportGroups"
+    },
+    {
+      "Name": "ListSourceCredentials"
+    },
+    {
+      "Name": "PersistOAuthToken"
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "Resources": [
+        {
+          "Name": "project"
+        },
+        {
+          "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "RetryBuild",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "RetryBuildBatch",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "StartBuild",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "StartBuildBatch",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "StopBuild",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "StopBuildBatch",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFleet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProject",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProjectVisibility",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateReport",
+      "Resources": [
+        {
+          "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateReportGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWebhook",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "codebuild:buildArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "codebuild:projectArn",
+      "Types": [
+        "ARN"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "build",
+      "ARNFormats": [
+        "arn:${Partition}:codebuild:${Region}:${Account}:build/${BuildId}"
+      ]
+    },
+    {
+      "Name": "build-batch",
+      "ARNFormats": [
+        "arn:${Partition}:codebuild:${Region}:${Account}:build-batch/${BuildBatchId}"
+      ]
+    },
+    {
+      "Name": "fleet",
+      "ARNFormats": [
+        "arn:${Partition}:codebuild:${Region}:${Account}:fleet/${FleetName}:${FleetId}"
+      ]
+    },
+    {
+      "Name": "project",
+      "ARNFormats": [
+        "arn:${Partition}:codebuild:${Region}:${Account}:project/${ProjectName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "report",
+      "ARNFormats": [
+        "arn:${Partition}:codebuild:${Region}:${Account}:report/${ReportGroupName}:${ReportId}"
+      ]
+    },
+    {
+      "Name": "report-group",
+      "ARNFormats": [
+        "arn:${Partition}:codebuild:${Region}:${Account}:report-group/${ReportGroupName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

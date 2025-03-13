@@ -1,0 +1,187 @@
+{
+  "Name": "codeguru-reviewer",
+  "Actions": [
+    {
+      "Name": "AssociateRepository",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateCodeReview",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConnectionToken"
+    },
+    {
+      "Name": "DescribeCodeReview",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRecommendationFeedback",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRepositoryAssociation",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateRepository",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        }
+      ]
+    },
+    {
+      "Name": "GetMetricsData"
+    },
+    {
+      "Name": "ListCodeReviews"
+    },
+    {
+      "Name": "ListRecommendationFeedback",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        }
+      ]
+    },
+    {
+      "Name": "ListRecommendations",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        }
+      ]
+    },
+    {
+      "Name": "ListRepositoryAssociations"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        }
+      ]
+    },
+    {
+      "Name": "ListThirdPartyRepositories"
+    },
+    {
+      "Name": "PutRecommendationFeedback",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        }
+      ]
+    },
+    {
+      "Name": "UnTagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "association",
+      "ARNFormats": [
+        "arn:${Partition}:codeguru-reviewer:${Region}:${Account}:association:${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "codereview",
+      "ARNFormats": [
+        "arn:${Partition}:codeguru-reviewer:${Region}:${Account}:association:${ResourceId}:codereview:${CodeReviewId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

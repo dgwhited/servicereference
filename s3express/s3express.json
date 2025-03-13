@@ -1,0 +1,247 @@
+{
+  "Name": "s3express",
+  "Actions": [
+    {
+      "Name": "CreateBucket",
+      "ActionConditionKeys": [
+        "s3express:LocationName",
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSession",
+      "ActionConditionKeys": [
+        "s3express:ResourceAccount",
+        "s3express:SessionMode",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureAge",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256",
+        "s3express:x-amz-server-side-encryption",
+        "s3express:x-amz-server-side-encryption-aws-kms-key-id"
+      ],
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBucket",
+      "ActionConditionKeys": [
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBucketPolicy",
+      "ActionConditionKeys": [
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ]
+    },
+    {
+      "Name": "GetBucketPolicy",
+      "ActionConditionKeys": [
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ]
+    },
+    {
+      "Name": "GetEncryptionConfiguration",
+      "ActionConditionKeys": [
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ]
+    },
+    {
+      "Name": "GetLifecycleConfiguration",
+      "ActionConditionKeys": [
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ]
+    },
+    {
+      "Name": "ListAllMyDirectoryBuckets",
+      "ActionConditionKeys": [
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ]
+    },
+    {
+      "Name": "PutBucketPolicy",
+      "ActionConditionKeys": [
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ]
+    },
+    {
+      "Name": "PutEncryptionConfiguration",
+      "ActionConditionKeys": [
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ]
+    },
+    {
+      "Name": "PutLifecycleConfiguration",
+      "ActionConditionKeys": [
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "s3express:AllAccessRestrictedToLocalZoneGroup",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "s3express:LocationName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "s3express:ResourceAccount",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "s3express:SessionMode",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "s3express:TlsVersion",
+      "Types": [
+        "Numeric"
+      ]
+    },
+    {
+      "Name": "s3express:authType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "s3express:signatureAge",
+      "Types": [
+        "Numeric"
+      ]
+    },
+    {
+      "Name": "s3express:signatureversion",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "s3express:x-amz-content-sha256",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "s3express:x-amz-server-side-encryption",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "s3express:x-amz-server-side-encryption-aws-kms-key-id",
+      "Types": [
+        "ARN"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "bucket",
+      "ARNFormats": [
+        "arn:${Partition}:s3express:${Region}:${Account}:bucket/${BucketName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

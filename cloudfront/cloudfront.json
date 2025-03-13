@@ -1,0 +1,955 @@
+{
+  "Name": "cloudfront",
+  "Actions": [
+    {
+      "Name": "AllowVendedLogDeliveryForResource",
+      "Resources": [
+        {
+          "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateAlias",
+      "Resources": [
+        {
+          "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "CopyDistribution",
+      "Resources": [
+        {
+          "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAnycastIpList",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "anycast-ip-list"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCachePolicy",
+      "Resources": [
+        {
+          "Name": "cache-policy"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCloudFrontOriginAccessIdentity",
+      "Resources": [
+        {
+          "Name": "origin-access-identity"
+        }
+      ]
+    },
+    {
+      "Name": "CreateContinuousDeploymentPolicy",
+      "Resources": [
+        {
+          "Name": "continuous-deployment-policy"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDistribution",
+      "Resources": [
+        {
+          "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFieldLevelEncryptionConfig"
+    },
+    {
+      "Name": "CreateFieldLevelEncryptionProfile"
+    },
+    {
+      "Name": "CreateFunction",
+      "Resources": [
+        {
+          "Name": "function"
+        }
+      ]
+    },
+    {
+      "Name": "CreateInvalidation",
+      "Resources": [
+        {
+          "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "CreateKeyGroup"
+    },
+    {
+      "Name": "CreateKeyValueStore",
+      "Resources": [
+        {
+          "Name": "key-value-store"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMonitoringSubscription"
+    },
+    {
+      "Name": "CreateOriginAccessControl"
+    },
+    {
+      "Name": "CreateOriginRequestPolicy",
+      "Resources": [
+        {
+          "Name": "origin-request-policy"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePublicKey"
+    },
+    {
+      "Name": "CreateRealtimeLogConfig",
+      "Resources": [
+        {
+          "Name": "realtime-log-config"
+        }
+      ]
+    },
+    {
+      "Name": "CreateResponseHeadersPolicy",
+      "Resources": [
+        {
+          "Name": "response-headers-policy"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSavingsPlan"
+    },
+    {
+      "Name": "CreateStreamingDistribution",
+      "Resources": [
+        {
+          "Name": "streaming-distribution"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStreamingDistributionWithTags",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "streaming-distribution"
+        }
+      ]
+    },
+    {
+      "Name": "CreateVpcOrigin",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteAnycastIpList",
+      "Resources": [
+        {
+          "Name": "anycast-ip-list"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCachePolicy",
+      "Resources": [
+        {
+          "Name": "cache-policy"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCloudFrontOriginAccessIdentity",
+      "Resources": [
+        {
+          "Name": "origin-access-identity"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteContinuousDeploymentPolicy",
+      "Resources": [
+        {
+          "Name": "continuous-deployment-policy"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDistribution",
+      "Resources": [
+        {
+          "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFieldLevelEncryptionConfig",
+      "Resources": [
+        {
+          "Name": "field-level-encryption-config"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFieldLevelEncryptionProfile",
+      "Resources": [
+        {
+          "Name": "field-level-encryption-profile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFunction",
+      "Resources": [
+        {
+          "Name": "function"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteKeyGroup"
+    },
+    {
+      "Name": "DeleteKeyValueStore",
+      "Resources": [
+        {
+          "Name": "key-value-store"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMonitoringSubscription"
+    },
+    {
+      "Name": "DeleteOriginAccessControl",
+      "Resources": [
+        {
+          "Name": "origin-access-control"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteOriginRequestPolicy",
+      "Resources": [
+        {
+          "Name": "origin-request-policy"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePublicKey"
+    },
+    {
+      "Name": "DeleteRealtimeLogConfig",
+      "Resources": [
+        {
+          "Name": "realtime-log-config"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResponseHeadersPolicy",
+      "Resources": [
+        {
+          "Name": "response-headers-policy"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStreamingDistribution",
+      "Resources": [
+        {
+          "Name": "streaming-distribution"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteVpcOrigin",
+      "Resources": [
+        {
+          "Name": "vpcorigin"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFunction",
+      "Resources": [
+        {
+          "Name": "function"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeKeyValueStore",
+      "Resources": [
+        {
+          "Name": "key-value-store"
+        }
+      ]
+    },
+    {
+      "Name": "GetAnycastIpList",
+      "Resources": [
+        {
+          "Name": "anycast-ip-list"
+        }
+      ]
+    },
+    {
+      "Name": "GetCachePolicy",
+      "Resources": [
+        {
+          "Name": "cache-policy"
+        }
+      ]
+    },
+    {
+      "Name": "GetCachePolicyConfig",
+      "Resources": [
+        {
+          "Name": "cache-policy"
+        }
+      ]
+    },
+    {
+      "Name": "GetCloudFrontOriginAccessIdentity",
+      "Resources": [
+        {
+          "Name": "origin-access-identity"
+        }
+      ]
+    },
+    {
+      "Name": "GetCloudFrontOriginAccessIdentityConfig",
+      "Resources": [
+        {
+          "Name": "origin-access-identity"
+        }
+      ]
+    },
+    {
+      "Name": "GetContinuousDeploymentPolicy",
+      "Resources": [
+        {
+          "Name": "continuous-deployment-policy"
+        }
+      ]
+    },
+    {
+      "Name": "GetContinuousDeploymentPolicyConfig",
+      "Resources": [
+        {
+          "Name": "continuous-deployment-policy"
+        }
+      ]
+    },
+    {
+      "Name": "GetDistribution",
+      "Resources": [
+        {
+          "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "GetDistributionConfig",
+      "Resources": [
+        {
+          "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "GetFieldLevelEncryption",
+      "Resources": [
+        {
+          "Name": "field-level-encryption-config"
+        }
+      ]
+    },
+    {
+      "Name": "GetFieldLevelEncryptionConfig",
+      "Resources": [
+        {
+          "Name": "field-level-encryption-config"
+        }
+      ]
+    },
+    {
+      "Name": "GetFieldLevelEncryptionProfile",
+      "Resources": [
+        {
+          "Name": "field-level-encryption-profile"
+        }
+      ]
+    },
+    {
+      "Name": "GetFieldLevelEncryptionProfileConfig",
+      "Resources": [
+        {
+          "Name": "field-level-encryption-profile"
+        }
+      ]
+    },
+    {
+      "Name": "GetFunction",
+      "Resources": [
+        {
+          "Name": "function"
+        }
+      ]
+    },
+    {
+      "Name": "GetInvalidation",
+      "Resources": [
+        {
+          "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "GetKeyGroup"
+    },
+    {
+      "Name": "GetKeyGroupConfig"
+    },
+    {
+      "Name": "GetMonitoringSubscription"
+    },
+    {
+      "Name": "GetOriginAccessControl",
+      "Resources": [
+        {
+          "Name": "origin-access-control"
+        }
+      ]
+    },
+    {
+      "Name": "GetOriginAccessControlConfig",
+      "Resources": [
+        {
+          "Name": "origin-access-control"
+        }
+      ]
+    },
+    {
+      "Name": "GetOriginRequestPolicy",
+      "Resources": [
+        {
+          "Name": "origin-request-policy"
+        }
+      ]
+    },
+    {
+      "Name": "GetOriginRequestPolicyConfig",
+      "Resources": [
+        {
+          "Name": "origin-request-policy"
+        }
+      ]
+    },
+    {
+      "Name": "GetPublicKey"
+    },
+    {
+      "Name": "GetPublicKeyConfig"
+    },
+    {
+      "Name": "GetRealtimeLogConfig",
+      "Resources": [
+        {
+          "Name": "realtime-log-config"
+        }
+      ]
+    },
+    {
+      "Name": "GetResponseHeadersPolicy",
+      "Resources": [
+        {
+          "Name": "response-headers-policy"
+        }
+      ]
+    },
+    {
+      "Name": "GetResponseHeadersPolicyConfig",
+      "Resources": [
+        {
+          "Name": "response-headers-policy"
+        }
+      ]
+    },
+    {
+      "Name": "GetSavingsPlan"
+    },
+    {
+      "Name": "GetStreamingDistribution",
+      "Resources": [
+        {
+          "Name": "streaming-distribution"
+        }
+      ]
+    },
+    {
+      "Name": "GetStreamingDistributionConfig",
+      "Resources": [
+        {
+          "Name": "streaming-distribution"
+        }
+      ]
+    },
+    {
+      "Name": "GetVpcOrigin",
+      "Resources": [
+        {
+          "Name": "vpcorigin"
+        }
+      ]
+    },
+    {
+      "Name": "ListAnycastIpLists"
+    },
+    {
+      "Name": "ListCachePolicies"
+    },
+    {
+      "Name": "ListCloudFrontOriginAccessIdentities"
+    },
+    {
+      "Name": "ListConflictingAliases",
+      "Resources": [
+        {
+          "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "ListContinuousDeploymentPolicies"
+    },
+    {
+      "Name": "ListDistributions"
+    },
+    {
+      "Name": "ListDistributionsByAnycastIpListId"
+    },
+    {
+      "Name": "ListDistributionsByCachePolicyId"
+    },
+    {
+      "Name": "ListDistributionsByKeyGroup"
+    },
+    {
+      "Name": "ListDistributionsByLambdaFunction"
+    },
+    {
+      "Name": "ListDistributionsByOriginRequestPolicyId"
+    },
+    {
+      "Name": "ListDistributionsByRealtimeLogConfig"
+    },
+    {
+      "Name": "ListDistributionsByResponseHeadersPolicyId"
+    },
+    {
+      "Name": "ListDistributionsByVpcOriginId"
+    },
+    {
+      "Name": "ListDistributionsByWebACLId"
+    },
+    {
+      "Name": "ListFieldLevelEncryptionConfigs"
+    },
+    {
+      "Name": "ListFieldLevelEncryptionProfiles"
+    },
+    {
+      "Name": "ListFunctions"
+    },
+    {
+      "Name": "ListInvalidations",
+      "Resources": [
+        {
+          "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "ListKeyGroups"
+    },
+    {
+      "Name": "ListKeyValueStores"
+    },
+    {
+      "Name": "ListOriginAccessControls"
+    },
+    {
+      "Name": "ListOriginRequestPolicies"
+    },
+    {
+      "Name": "ListPublicKeys"
+    },
+    {
+      "Name": "ListRateCards"
+    },
+    {
+      "Name": "ListRealtimeLogConfigs"
+    },
+    {
+      "Name": "ListResponseHeadersPolicies"
+    },
+    {
+      "Name": "ListSavingsPlans"
+    },
+    {
+      "Name": "ListStreamingDistributions"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "anycast-ip-list"
+        },
+        {
+          "Name": "distribution"
+        },
+        {
+          "Name": "vpcorigin"
+        }
+      ]
+    },
+    {
+      "Name": "ListUsages"
+    },
+    {
+      "Name": "ListVpcOrigins"
+    },
+    {
+      "Name": "PublishFunction",
+      "Resources": [
+        {
+          "Name": "function"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "anycast-ip-list"
+        },
+        {
+          "Name": "distribution"
+        },
+        {
+          "Name": "streaming-distribution"
+        },
+        {
+          "Name": "vpcorigin"
+        }
+      ]
+    },
+    {
+      "Name": "TestFunction",
+      "Resources": [
+        {
+          "Name": "function"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "anycast-ip-list"
+        },
+        {
+          "Name": "distribution"
+        },
+        {
+          "Name": "streaming-distribution"
+        },
+        {
+          "Name": "vpcorigin"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCachePolicy",
+      "Resources": [
+        {
+          "Name": "cache-policy"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCloudFrontOriginAccessIdentity",
+      "Resources": [
+        {
+          "Name": "origin-access-identity"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateContinuousDeploymentPolicy",
+      "Resources": [
+        {
+          "Name": "continuous-deployment-policy"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDistribution",
+      "Resources": [
+        {
+          "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDistributionWithStagingConfig",
+      "Resources": [
+        {
+          "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFieldLevelEncryptionConfig"
+    },
+    {
+      "Name": "UpdateFieldLevelEncryptionProfile",
+      "Resources": [
+        {
+          "Name": "field-level-encryption-profile"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFunction",
+      "Resources": [
+        {
+          "Name": "function"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateKeyGroup"
+    },
+    {
+      "Name": "UpdateKeyValueStore",
+      "Resources": [
+        {
+          "Name": "key-value-store"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateOriginAccessControl",
+      "Resources": [
+        {
+          "Name": "origin-access-control"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateOriginRequestPolicy",
+      "Resources": [
+        {
+          "Name": "origin-request-policy"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePublicKey"
+    },
+    {
+      "Name": "UpdateRealtimeLogConfig",
+      "Resources": [
+        {
+          "Name": "realtime-log-config"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateResponseHeadersPolicy",
+      "Resources": [
+        {
+          "Name": "response-headers-policy"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSavingsPlan"
+    },
+    {
+      "Name": "UpdateStreamingDistribution",
+      "Resources": [
+        {
+          "Name": "streaming-distribution"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateVpcOrigin",
+      "Resources": [
+        {
+          "Name": "vpcorigin"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "anycast-ip-list",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:anycast-ip-list/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "cache-policy",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:cache-policy/${Id}"
+      ]
+    },
+    {
+      "Name": "continuous-deployment-policy",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:continuous-deployment-policy/${Id}"
+      ]
+    },
+    {
+      "Name": "distribution",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:distribution/${DistributionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "field-level-encryption-config",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:field-level-encryption-config/${Id}"
+      ]
+    },
+    {
+      "Name": "field-level-encryption-profile",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:field-level-encryption-profile/${Id}"
+      ]
+    },
+    {
+      "Name": "function",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:function/${Name}"
+      ]
+    },
+    {
+      "Name": "key-value-store",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:key-value-store/${Name}"
+      ]
+    },
+    {
+      "Name": "origin-access-control",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:origin-access-control/${Id}"
+      ]
+    },
+    {
+      "Name": "origin-access-identity",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:origin-access-identity/${Id}"
+      ]
+    },
+    {
+      "Name": "origin-request-policy",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:origin-request-policy/${Id}"
+      ]
+    },
+    {
+      "Name": "realtime-log-config",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:realtime-log-config/${Name}"
+      ]
+    },
+    {
+      "Name": "response-headers-policy",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:response-headers-policy/${Id}"
+      ]
+    },
+    {
+      "Name": "streaming-distribution",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:streaming-distribution/${DistributionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "vpcorigin",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:vpcorigin/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

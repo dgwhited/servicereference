@@ -1,0 +1,303 @@
+{
+  "Name": "migrationhub-orchestrator",
+  "Actions": [
+    {
+      "Name": "CreateTemplate"
+    },
+    {
+      "Name": "CreateWorkflow",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWorkflowStep",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWorkflowStepGroup",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTemplate",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkflow",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkflowStep",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkflowStepGroup",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "GetMessage"
+    },
+    {
+      "Name": "GetTemplate",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "GetTemplateStep",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "GetTemplateStepGroup",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "GetWorkflow",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "GetWorkflowStep",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "GetWorkflowStepGroup",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "ListPlugins"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "template"
+        },
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "ListTemplateStepGroups",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "ListTemplateSteps",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "ListTemplates"
+    },
+    {
+      "Name": "ListWorkflowStepGroups",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "ListWorkflowSteps",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "ListWorkflows"
+    },
+    {
+      "Name": "RegisterPlugin"
+    },
+    {
+      "Name": "RetryWorkflowStep",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "SendMessage"
+    },
+    {
+      "Name": "StartWorkflow",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "StopWorkflow",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "template"
+        },
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "template"
+        },
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTemplate",
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWorkflow",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWorkflowStep",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWorkflowStepGroup",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "template",
+      "ARNFormats": [
+        "arn:${Partition}:migrationhub-orchestrator:${Region}:${Account}:template/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "workflow",
+      "ARNFormats": [
+        "arn:${Partition}:migrationhub-orchestrator:${Region}:${Account}:workflow/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,513 @@
+{
+  "Name": "network-firewall",
+  "Actions": [
+    {
+      "Name": "AssociateFirewallPolicy",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        },
+        {
+          "Name": "FirewallPolicy"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateSubnets",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFirewall",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Firewall"
+        },
+        {
+          "Name": "FirewallPolicy"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFirewallPolicy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "FirewallPolicy"
+        },
+        {
+          "Name": "StatefulRuleGroup"
+        },
+        {
+          "Name": "StatelessRuleGroup"
+        },
+        {
+          "Name": "TLSInspectionConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRuleGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "StatefulRuleGroup"
+        },
+        {
+          "Name": "StatelessRuleGroup"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTLSInspectionConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "TLSInspectionConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFirewall",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFirewallPolicy",
+      "Resources": [
+        {
+          "Name": "FirewallPolicy"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Resources": [
+        {
+          "Name": "FirewallPolicy"
+        },
+        {
+          "Name": "StatefulRuleGroup"
+        },
+        {
+          "Name": "StatelessRuleGroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRuleGroup",
+      "Resources": [
+        {
+          "Name": "StatefulRuleGroup"
+        },
+        {
+          "Name": "StatelessRuleGroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTLSInspectionConfiguration",
+      "Resources": [
+        {
+          "Name": "TLSInspectionConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFirewall",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFirewallPolicy",
+      "Resources": [
+        {
+          "Name": "FirewallPolicy"
+        },
+        {
+          "Name": "StatefulRuleGroup"
+        },
+        {
+          "Name": "StatelessRuleGroup"
+        },
+        {
+          "Name": "TLSInspectionConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeLoggingConfiguration",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeResourcePolicy",
+      "Resources": [
+        {
+          "Name": "FirewallPolicy"
+        },
+        {
+          "Name": "StatefulRuleGroup"
+        },
+        {
+          "Name": "StatelessRuleGroup"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRuleGroup",
+      "Resources": [
+        {
+          "Name": "StatefulRuleGroup"
+        },
+        {
+          "Name": "StatelessRuleGroup"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRuleGroupMetadata",
+      "Resources": [
+        {
+          "Name": "StatefulRuleGroup"
+        },
+        {
+          "Name": "StatelessRuleGroup"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTLSInspectionConfiguration",
+      "Resources": [
+        {
+          "Name": "TLSInspectionConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateSubnets",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        }
+      ]
+    },
+    {
+      "Name": "GetAnalysisReportResults",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        }
+      ]
+    },
+    {
+      "Name": "ListAnalysisReports",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        }
+      ]
+    },
+    {
+      "Name": "ListFirewallPolicies",
+      "Resources": [
+        {
+          "Name": "FirewallPolicy"
+        }
+      ]
+    },
+    {
+      "Name": "ListFirewalls",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        }
+      ]
+    },
+    {
+      "Name": "ListRuleGroups"
+    },
+    {
+      "Name": "ListTLSInspectionConfigurations",
+      "Resources": [
+        {
+          "Name": "TLSInspectionConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        },
+        {
+          "Name": "FirewallPolicy"
+        },
+        {
+          "Name": "StatefulRuleGroup"
+        },
+        {
+          "Name": "StatelessRuleGroup"
+        },
+        {
+          "Name": "TLSInspectionConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "Resources": [
+        {
+          "Name": "FirewallPolicy"
+        },
+        {
+          "Name": "StatefulRuleGroup"
+        },
+        {
+          "Name": "StatelessRuleGroup"
+        }
+      ]
+    },
+    {
+      "Name": "StartAnalysisReport",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Firewall"
+        },
+        {
+          "Name": "FirewallPolicy"
+        },
+        {
+          "Name": "StatefulRuleGroup"
+        },
+        {
+          "Name": "StatelessRuleGroup"
+        },
+        {
+          "Name": "TLSInspectionConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Firewall"
+        },
+        {
+          "Name": "FirewallPolicy"
+        },
+        {
+          "Name": "StatefulRuleGroup"
+        },
+        {
+          "Name": "StatelessRuleGroup"
+        },
+        {
+          "Name": "TLSInspectionConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFirewallAnalysisSettings",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFirewallDeleteProtection",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFirewallDescription",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFirewallEncryptionConfiguration",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFirewallPolicy",
+      "Resources": [
+        {
+          "Name": "FirewallPolicy"
+        },
+        {
+          "Name": "StatefulRuleGroup"
+        },
+        {
+          "Name": "StatelessRuleGroup"
+        },
+        {
+          "Name": "TLSInspectionConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFirewallPolicyChangeProtection",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLoggingConfiguration",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRuleGroup",
+      "Resources": [
+        {
+          "Name": "StatefulRuleGroup"
+        },
+        {
+          "Name": "StatelessRuleGroup"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSubnetChangeProtection",
+      "Resources": [
+        {
+          "Name": "Firewall"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTLSInspectionConfiguration",
+      "Resources": [
+        {
+          "Name": "TLSInspectionConfiguration"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Firewall",
+      "ARNFormats": [
+        "arn:${Partition}:network-firewall:${Region}:${Account}:firewall/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "FirewallPolicy",
+      "ARNFormats": [
+        "arn:${Partition}:network-firewall:${Region}:${Account}:firewall-policy/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "StatefulRuleGroup",
+      "ARNFormats": [
+        "arn:${Partition}:network-firewall:${Region}:${Account}:stateful-rulegroup/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "StatelessRuleGroup",
+      "ARNFormats": [
+        "arn:${Partition}:network-firewall:${Region}:${Account}:stateless-rulegroup/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "TLSInspectionConfiguration",
+      "ARNFormats": [
+        "arn:${Partition}:network-firewall:${Region}:${Account}:tls-configuration/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

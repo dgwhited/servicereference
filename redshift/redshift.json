@@ -1,0 +1,1417 @@
+{
+  "Name": "redshift",
+  "Actions": [
+    {
+      "Name": "AcceptReservedNodeExchange"
+    },
+    {
+      "Name": "AddPartner"
+    },
+    {
+      "Name": "AssociateDataShareConsumer",
+      "ActionConditionKeys": [
+        "redshift:AllowWrites",
+        "redshift:ConsumerArn"
+      ],
+      "Resources": [
+        {
+          "Name": "datashare"
+        }
+      ]
+    },
+    {
+      "Name": "AuthorizeClusterSecurityGroupIngress",
+      "Resources": [
+        {
+          "Name": "securitygroup"
+        },
+        {
+          "Name": "securitygroupingress-ec2securitygroup"
+        }
+      ]
+    },
+    {
+      "Name": "AuthorizeDataShare",
+      "ActionConditionKeys": [
+        "redshift:AllowWrites",
+        "redshift:ConsumerIdentifier"
+      ],
+      "Resources": [
+        {
+          "Name": "datashare"
+        }
+      ]
+    },
+    {
+      "Name": "AuthorizeEndpointAccess"
+    },
+    {
+      "Name": "AuthorizeInboundIntegration",
+      "Resources": [
+        {
+          "Name": "integration"
+        }
+      ]
+    },
+    {
+      "Name": "AuthorizeSnapshotAccess",
+      "Resources": [
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDeleteClusterSnapshots",
+      "Resources": [
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "BatchModifyClusterSnapshots",
+      "Resources": [
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "CancelQuery"
+    },
+    {
+      "Name": "CancelQuerySession"
+    },
+    {
+      "Name": "CancelResize",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "CopyClusterSnapshot",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAuthenticationProfile"
+    },
+    {
+      "Name": "CreateCluster",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "CreateClusterParameterGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "parametergroup"
+        }
+      ]
+    },
+    {
+      "Name": "CreateClusterSecurityGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "securitygroup"
+        }
+      ]
+    },
+    {
+      "Name": "CreateClusterSnapshot",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "CreateClusterSubnetGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "subnetgroup"
+        }
+      ]
+    },
+    {
+      "Name": "CreateClusterUser",
+      "ActionConditionKeys": [
+        "redshift:DbUser"
+      ],
+      "Resources": [
+        {
+          "Name": "dbuser"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCustomDomainAssociation",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEndpointAccess"
+    },
+    {
+      "Name": "CreateEventSubscription",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "eventsubscription"
+        }
+      ]
+    },
+    {
+      "Name": "CreateHsmClientCertificate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "hsmclientcertificate"
+        }
+      ]
+    },
+    {
+      "Name": "CreateHsmConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "hsmconfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateInboundIntegration"
+    },
+    {
+      "Name": "CreateIntegration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "redshift:IntegrationSourceArn",
+        "redshift:IntegrationTargetArn"
+      ],
+      "Resources": [
+        {
+          "Name": "integration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateQev2IdcApplication"
+    },
+    {
+      "Name": "CreateRedshiftIdcApplication"
+    },
+    {
+      "Name": "CreateSavedQuery"
+    },
+    {
+      "Name": "CreateScheduledAction"
+    },
+    {
+      "Name": "CreateSnapshotCopyGrant",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "snapshotcopygrant"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSnapshotSchedule",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "snapshotschedule"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTags",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "eventsubscription"
+        },
+        {
+          "Name": "hsmclientcertificate"
+        },
+        {
+          "Name": "hsmconfiguration"
+        },
+        {
+          "Name": "integration"
+        },
+        {
+          "Name": "parametergroup"
+        },
+        {
+          "Name": "securitygroup"
+        },
+        {
+          "Name": "securitygroupingress-cidr"
+        },
+        {
+          "Name": "securitygroupingress-ec2securitygroup"
+        },
+        {
+          "Name": "snapshot"
+        },
+        {
+          "Name": "snapshotcopygrant"
+        },
+        {
+          "Name": "snapshotschedule"
+        },
+        {
+          "Name": "subnetgroup"
+        },
+        {
+          "Name": "usagelimit"
+        }
+      ]
+    },
+    {
+      "Name": "CreateUsageLimit",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "usagelimit"
+        }
+      ]
+    },
+    {
+      "Name": "DeauthorizeDataShare",
+      "ActionConditionKeys": [
+        "redshift:ConsumerIdentifier"
+      ],
+      "Resources": [
+        {
+          "Name": "datashare"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAuthenticationProfile"
+    },
+    {
+      "Name": "DeleteCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteClusterParameterGroup",
+      "Resources": [
+        {
+          "Name": "parametergroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteClusterSecurityGroup",
+      "Resources": [
+        {
+          "Name": "securitygroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteClusterSnapshot",
+      "Resources": [
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteClusterSubnetGroup",
+      "Resources": [
+        {
+          "Name": "subnetgroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCustomDomainAssociation",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEndpointAccess"
+    },
+    {
+      "Name": "DeleteEventSubscription",
+      "Resources": [
+        {
+          "Name": "eventsubscription"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteHsmClientCertificate",
+      "Resources": [
+        {
+          "Name": "hsmclientcertificate"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteHsmConfiguration",
+      "Resources": [
+        {
+          "Name": "hsmconfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIntegration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "integration"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePartner"
+    },
+    {
+      "Name": "DeleteQev2IdcApplication",
+      "Resources": [
+        {
+          "Name": "qev2idcapplication"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRedshiftIdcApplication",
+      "Resources": [
+        {
+          "Name": "redshiftidcapplication"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSavedQueries"
+    },
+    {
+      "Name": "DeleteScheduledAction"
+    },
+    {
+      "Name": "DeleteSnapshotCopyGrant",
+      "Resources": [
+        {
+          "Name": "snapshotcopygrant"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSnapshotSchedule",
+      "Resources": [
+        {
+          "Name": "snapshotschedule"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTags",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "eventsubscription"
+        },
+        {
+          "Name": "hsmclientcertificate"
+        },
+        {
+          "Name": "hsmconfiguration"
+        },
+        {
+          "Name": "integration"
+        },
+        {
+          "Name": "parametergroup"
+        },
+        {
+          "Name": "securitygroup"
+        },
+        {
+          "Name": "securitygroupingress-cidr"
+        },
+        {
+          "Name": "securitygroupingress-ec2securitygroup"
+        },
+        {
+          "Name": "snapshot"
+        },
+        {
+          "Name": "snapshotcopygrant"
+        },
+        {
+          "Name": "snapshotschedule"
+        },
+        {
+          "Name": "subnetgroup"
+        },
+        {
+          "Name": "usagelimit"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteUsageLimit",
+      "Resources": [
+        {
+          "Name": "usagelimit"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterNamespace"
+    },
+    {
+      "Name": "DescribeAccountAttributes"
+    },
+    {
+      "Name": "DescribeAuthenticationProfiles"
+    },
+    {
+      "Name": "DescribeClusterDbRevisions"
+    },
+    {
+      "Name": "DescribeClusterParameterGroups"
+    },
+    {
+      "Name": "DescribeClusterParameters",
+      "Resources": [
+        {
+          "Name": "parametergroup"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeClusterSecurityGroups"
+    },
+    {
+      "Name": "DescribeClusterSnapshots"
+    },
+    {
+      "Name": "DescribeClusterSubnetGroups"
+    },
+    {
+      "Name": "DescribeClusterTracks"
+    },
+    {
+      "Name": "DescribeClusterVersions"
+    },
+    {
+      "Name": "DescribeClusters"
+    },
+    {
+      "Name": "DescribeCustomDomainAssociations"
+    },
+    {
+      "Name": "DescribeDataShares"
+    },
+    {
+      "Name": "DescribeDataSharesForConsumer"
+    },
+    {
+      "Name": "DescribeDataSharesForProducer"
+    },
+    {
+      "Name": "DescribeDefaultClusterParameters"
+    },
+    {
+      "Name": "DescribeEndpointAccess"
+    },
+    {
+      "Name": "DescribeEndpointAuthorization"
+    },
+    {
+      "Name": "DescribeEventCategories"
+    },
+    {
+      "Name": "DescribeEventSubscriptions"
+    },
+    {
+      "Name": "DescribeEvents"
+    },
+    {
+      "Name": "DescribeHsmClientCertificates"
+    },
+    {
+      "Name": "DescribeHsmConfigurations"
+    },
+    {
+      "Name": "DescribeInboundIntegrations",
+      "ActionConditionKeys": [
+        "redshift:InboundIntegrationArn"
+      ]
+    },
+    {
+      "Name": "DescribeIntegrations",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "integration"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeLoggingStatus",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeNodeConfigurationOptions"
+    },
+    {
+      "Name": "DescribeOrderableClusterOptions"
+    },
+    {
+      "Name": "DescribePartners"
+    },
+    {
+      "Name": "DescribeQev2IdcApplications"
+    },
+    {
+      "Name": "DescribeQuery"
+    },
+    {
+      "Name": "DescribeRedshiftIdcApplications"
+    },
+    {
+      "Name": "DescribeReservedNodeExchangeStatus"
+    },
+    {
+      "Name": "DescribeReservedNodeOfferings"
+    },
+    {
+      "Name": "DescribeReservedNodes"
+    },
+    {
+      "Name": "DescribeResize",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSavedQueries"
+    },
+    {
+      "Name": "DescribeScheduledActions"
+    },
+    {
+      "Name": "DescribeSnapshotCopyGrants"
+    },
+    {
+      "Name": "DescribeSnapshotSchedules",
+      "Resources": [
+        {
+          "Name": "snapshotschedule"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStorage"
+    },
+    {
+      "Name": "DescribeTable"
+    },
+    {
+      "Name": "DescribeTableRestoreStatus"
+    },
+    {
+      "Name": "DescribeTags",
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "eventsubscription"
+        },
+        {
+          "Name": "hsmclientcertificate"
+        },
+        {
+          "Name": "hsmconfiguration"
+        },
+        {
+          "Name": "integration"
+        },
+        {
+          "Name": "parametergroup"
+        },
+        {
+          "Name": "securitygroup"
+        },
+        {
+          "Name": "securitygroupingress-cidr"
+        },
+        {
+          "Name": "securitygroupingress-ec2securitygroup"
+        },
+        {
+          "Name": "snapshot"
+        },
+        {
+          "Name": "snapshotcopygrant"
+        },
+        {
+          "Name": "snapshotschedule"
+        },
+        {
+          "Name": "subnetgroup"
+        },
+        {
+          "Name": "usagelimit"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeUsageLimits",
+      "Resources": [
+        {
+          "Name": "usagelimit"
+        }
+      ]
+    },
+    {
+      "Name": "DisableLogging",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DisableSnapshotCopy",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateDataShareConsumer",
+      "ActionConditionKeys": [
+        "redshift:ConsumerArn"
+      ],
+      "Resources": [
+        {
+          "Name": "datashare"
+        }
+      ]
+    },
+    {
+      "Name": "EnableLogging",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "EnableSnapshotCopy",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ExecuteQuery"
+    },
+    {
+      "Name": "FailoverPrimaryCompute",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "FetchResults"
+    },
+    {
+      "Name": "GetClusterCredentials",
+      "ActionConditionKeys": [
+        "redshift:DbName",
+        "redshift:DbUser",
+        "redshift:DurationSeconds"
+      ],
+      "Resources": [
+        {
+          "Name": "dbgroup"
+        },
+        {
+          "Name": "dbname"
+        },
+        {
+          "Name": "dbuser"
+        }
+      ]
+    },
+    {
+      "Name": "GetClusterCredentialsWithIAM",
+      "ActionConditionKeys": [
+        "redshift:DbName",
+        "redshift:DurationSeconds"
+      ],
+      "Resources": [
+        {
+          "Name": "dbname"
+        }
+      ]
+    },
+    {
+      "Name": "GetReservedNodeExchangeConfigurationOptions"
+    },
+    {
+      "Name": "GetReservedNodeExchangeOfferings"
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "JoinGroup",
+      "Resources": [
+        {
+          "Name": "dbgroup"
+        }
+      ]
+    },
+    {
+      "Name": "ListDatabases"
+    },
+    {
+      "Name": "ListRecommendations"
+    },
+    {
+      "Name": "ListSavedQueries"
+    },
+    {
+      "Name": "ListSchemas"
+    },
+    {
+      "Name": "ListTables"
+    },
+    {
+      "Name": "ModifyAquaConfiguration",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyAuthenticationProfile"
+    },
+    {
+      "Name": "ModifyCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyClusterDbRevision",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyClusterIamRoles",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyClusterMaintenance"
+    },
+    {
+      "Name": "ModifyClusterParameterGroup",
+      "Resources": [
+        {
+          "Name": "parametergroup"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyClusterSnapshot",
+      "Resources": [
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyClusterSnapshotSchedule",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyClusterSubnetGroup",
+      "Resources": [
+        {
+          "Name": "subnetgroup"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyCustomDomainAssociation",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyEndpointAccess"
+    },
+    {
+      "Name": "ModifyEventSubscription",
+      "Resources": [
+        {
+          "Name": "eventsubscription"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyIntegration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "integration"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyQev2IdcApplication",
+      "Resources": [
+        {
+          "Name": "qev2idcapplication"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyRedshiftIdcApplication",
+      "Resources": [
+        {
+          "Name": "redshiftidcapplication"
+        }
+      ]
+    },
+    {
+      "Name": "ModifySavedQuery"
+    },
+    {
+      "Name": "ModifyScheduledAction"
+    },
+    {
+      "Name": "ModifySnapshotCopyRetentionPeriod",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ModifySnapshotSchedule",
+      "Resources": [
+        {
+          "Name": "snapshotschedule"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyUsageLimit",
+      "Resources": [
+        {
+          "Name": "usagelimit"
+        }
+      ]
+    },
+    {
+      "Name": "PauseCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "PurchaseReservedNodeOffering"
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "RebootCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterNamespace"
+    },
+    {
+      "Name": "RejectDataShare",
+      "Resources": [
+        {
+          "Name": "datashare"
+        }
+      ]
+    },
+    {
+      "Name": "ResetClusterParameterGroup",
+      "Resources": [
+        {
+          "Name": "parametergroup"
+        }
+      ]
+    },
+    {
+      "Name": "ResizeCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "RestoreFromClusterSnapshot",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "RestoreTableFromClusterSnapshot",
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "ResumeCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "RevokeClusterSecurityGroupIngress",
+      "Resources": [
+        {
+          "Name": "securitygroup"
+        },
+        {
+          "Name": "securitygroupingress-ec2securitygroup"
+        }
+      ]
+    },
+    {
+      "Name": "RevokeEndpointAccess"
+    },
+    {
+      "Name": "RevokeSnapshotAccess",
+      "Resources": [
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "RotateEncryptionKey",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePartnerStatus"
+    },
+    {
+      "Name": "ViewQueriesFromConsole"
+    },
+    {
+      "Name": "ViewQueriesInConsole"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "redshift:AllowWrites",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
+      "Name": "redshift:ConsumerArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "redshift:ConsumerIdentifier",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "redshift:DbName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "redshift:DbUser",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "redshift:DurationSeconds",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "redshift:InboundIntegrationArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "redshift:IntegrationSourceArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "redshift:IntegrationTargetArn",
+      "Types": [
+        "ARN"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "cluster",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:cluster:${ClusterName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "datashare",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:datashare:${ProducerClusterNamespace}/${DataShareName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "dbgroup",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:dbgroup:${ClusterName}/${DbGroup}"
+      ]
+    },
+    {
+      "Name": "dbname",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:dbname:${ClusterName}/${DbName}"
+      ]
+    },
+    {
+      "Name": "dbuser",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:dbuser:${ClusterName}/${DbUser}"
+      ]
+    },
+    {
+      "Name": "eventsubscription",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:eventsubscription:${EventSubscriptionName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "hsmclientcertificate",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:hsmclientcertificate:${HSMClientCertificateId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "hsmconfiguration",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:hsmconfiguration:${HSMConfigurationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "integration",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:integration:${IntegrationIdentifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "namespace",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:namespace:${ClusterNamespace}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "parametergroup",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:parametergroup:${ParameterGroupName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "qev2idcapplication",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:qev2idcapplication:${Qev2IdcApplicationId}"
+      ]
+    },
+    {
+      "Name": "redshiftidcapplication",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:redshiftidcapplication:${RedshiftIdcApplicationId}"
+      ]
+    },
+    {
+      "Name": "securitygroup",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:securitygroup:${SecurityGroupName}/ec2securitygroup/${Owner}/${Ec2SecurityGroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "securitygroupingress-cidr",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:securitygroupingress:${SecurityGroupName}/cidrip/${IpRange}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "securitygroupingress-ec2securitygroup",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:securitygroupingress:${SecurityGroupName}/ec2securitygroup/${Owner}/${Ece2SecuritygroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "snapshot",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:snapshot:${ClusterName}/${SnapshotName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "snapshotcopygrant",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:snapshotcopygrant:${SnapshotCopyGrantName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "snapshotschedule",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:snapshotschedule:${ScheduleIdentifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "subnetgroup",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:subnetgroup:${SubnetGroupName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "usagelimit",
+      "ARNFormats": [
+        "arn:${Partition}:redshift:${Region}:${Account}:usagelimit:${UsageLimitId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

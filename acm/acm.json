@@ -1,0 +1,188 @@
+{
+  "Name": "acm",
+  "Actions": [
+    {
+      "Name": "AddTagsToCertificate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "certificate"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCertificate",
+      "Resources": [
+        {
+          "Name": "certificate"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCertificate",
+      "Resources": [
+        {
+          "Name": "certificate"
+        }
+      ]
+    },
+    {
+      "Name": "ExportCertificate",
+      "Resources": [
+        {
+          "Name": "certificate"
+        }
+      ]
+    },
+    {
+      "Name": "GetAccountConfiguration"
+    },
+    {
+      "Name": "GetCertificate",
+      "Resources": [
+        {
+          "Name": "certificate"
+        }
+      ]
+    },
+    {
+      "Name": "ImportCertificate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "certificate"
+        }
+      ]
+    },
+    {
+      "Name": "ListCertificates"
+    },
+    {
+      "Name": "ListTagsForCertificate",
+      "Resources": [
+        {
+          "Name": "certificate"
+        }
+      ]
+    },
+    {
+      "Name": "PutAccountConfiguration"
+    },
+    {
+      "Name": "RemoveTagsFromCertificate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "certificate"
+        }
+      ]
+    },
+    {
+      "Name": "RenewCertificate",
+      "Resources": [
+        {
+          "Name": "certificate"
+        }
+      ]
+    },
+    {
+      "Name": "RequestCertificate",
+      "ActionConditionKeys": [
+        "acm:CertificateAuthority",
+        "acm:CertificateTransparencyLogging",
+        "acm:DomainNames",
+        "acm:KeyAlgorithm",
+        "acm:ValidationMethod",
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "ResendValidationEmail",
+      "Resources": [
+        {
+          "Name": "certificate"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCertificateOptions",
+      "Resources": [
+        {
+          "Name": "certificate"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "acm:CertificateAuthority",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "acm:CertificateTransparencyLogging",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "acm:DomainNames",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "acm:KeyAlgorithm",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "acm:ValidationMethod",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "certificate",
+      "ARNFormats": [
+        "arn:${Partition}:acm:${Region}:${Account}:certificate/${CertificateId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

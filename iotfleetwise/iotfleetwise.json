@@ -1,0 +1,674 @@
+{
+  "Name": "iotfleetwise",
+  "Actions": [
+    {
+      "Name": "AssociateVehicleFleet",
+      "Resources": [
+        {
+          "Name": "fleet"
+        },
+        {
+          "Name": "vehicle"
+        }
+      ]
+    },
+    {
+      "Name": "BatchCreateVehicle",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "decodermanifest"
+        },
+        {
+          "Name": "modelmanifest"
+        },
+        {
+          "Name": "vehicle"
+        }
+      ]
+    },
+    {
+      "Name": "BatchUpdateVehicle",
+      "ActionConditionKeys": [
+        "iotfleetwise:UpdateToDecoderManifestArn",
+        "iotfleetwise:UpdateToModelManifestArn"
+      ],
+      "Resources": [
+        {
+          "Name": "decodermanifest"
+        },
+        {
+          "Name": "modelmanifest"
+        },
+        {
+          "Name": "vehicle"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCampaign",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "iotfleetwise:DestinationArn"
+      ],
+      "Resources": [
+        {
+          "Name": "campaign"
+        },
+        {
+          "Name": "fleet"
+        },
+        {
+          "Name": "signalcatalog"
+        },
+        {
+          "Name": "vehicle"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDecoderManifest",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "decodermanifest"
+        },
+        {
+          "Name": "modelmanifest"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFleet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "fleet"
+        },
+        {
+          "Name": "signalcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "CreateModelManifest",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "modelmanifest"
+        },
+        {
+          "Name": "signalcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSignalCatalog",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "signalcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStateTemplate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "signalcatalog"
+        },
+        {
+          "Name": "statetemplate"
+        }
+      ]
+    },
+    {
+      "Name": "CreateVehicle",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "decodermanifest"
+        },
+        {
+          "Name": "modelmanifest"
+        },
+        {
+          "Name": "vehicle"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCampaign",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDecoderManifest",
+      "Resources": [
+        {
+          "Name": "decodermanifest"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFleet",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteModelManifest",
+      "Resources": [
+        {
+          "Name": "modelmanifest"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSignalCatalog",
+      "Resources": [
+        {
+          "Name": "signalcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStateTemplate",
+      "Resources": [
+        {
+          "Name": "statetemplate"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteVehicle",
+      "Resources": [
+        {
+          "Name": "vehicle"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateVehicleFleet",
+      "Resources": [
+        {
+          "Name": "fleet"
+        },
+        {
+          "Name": "vehicle"
+        }
+      ]
+    },
+    {
+      "Name": "GenerateCommandPayload",
+      "ActionConditionKeys": [
+        "iotfleetwise:Signals"
+      ],
+      "Resources": [
+        {
+          "Name": "statetemplate"
+        },
+        {
+          "Name": "vehicle"
+        }
+      ]
+    },
+    {
+      "Name": "GetCampaign",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "GetDecoderManifest",
+      "Resources": [
+        {
+          "Name": "decodermanifest"
+        }
+      ]
+    },
+    {
+      "Name": "GetEncryptionConfiguration"
+    },
+    {
+      "Name": "GetFleet",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "GetLoggingOptions"
+    },
+    {
+      "Name": "GetModelManifest",
+      "Resources": [
+        {
+          "Name": "modelmanifest"
+        }
+      ]
+    },
+    {
+      "Name": "GetRegisterAccountStatus"
+    },
+    {
+      "Name": "GetSignalCatalog",
+      "Resources": [
+        {
+          "Name": "signalcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "GetStateTemplate",
+      "Resources": [
+        {
+          "Name": "statetemplate"
+        }
+      ]
+    },
+    {
+      "Name": "GetVehicle",
+      "Resources": [
+        {
+          "Name": "vehicle"
+        }
+      ]
+    },
+    {
+      "Name": "GetVehicleStatus",
+      "Resources": [
+        {
+          "Name": "vehicle"
+        }
+      ]
+    },
+    {
+      "Name": "ImportDecoderManifest",
+      "Resources": [
+        {
+          "Name": "decodermanifest"
+        }
+      ]
+    },
+    {
+      "Name": "ImportSignalCatalog",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "signalcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "ListCampaigns"
+    },
+    {
+      "Name": "ListDecoderManifestNetworkInterfaces",
+      "Resources": [
+        {
+          "Name": "decodermanifest"
+        }
+      ]
+    },
+    {
+      "Name": "ListDecoderManifestSignals",
+      "Resources": [
+        {
+          "Name": "decodermanifest"
+        }
+      ]
+    },
+    {
+      "Name": "ListDecoderManifests"
+    },
+    {
+      "Name": "ListFleets"
+    },
+    {
+      "Name": "ListFleetsForVehicle",
+      "Resources": [
+        {
+          "Name": "vehicle"
+        }
+      ]
+    },
+    {
+      "Name": "ListModelManifestNodes",
+      "Resources": [
+        {
+          "Name": "modelmanifest"
+        }
+      ]
+    },
+    {
+      "Name": "ListModelManifests"
+    },
+    {
+      "Name": "ListSignalCatalogNodes",
+      "Resources": [
+        {
+          "Name": "signalcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "ListSignalCatalogs"
+    },
+    {
+      "Name": "ListStateTemplates"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "campaign"
+        },
+        {
+          "Name": "decodermanifest"
+        },
+        {
+          "Name": "fleet"
+        },
+        {
+          "Name": "modelmanifest"
+        },
+        {
+          "Name": "signalcatalog"
+        },
+        {
+          "Name": "vehicle"
+        }
+      ]
+    },
+    {
+      "Name": "ListVehicles"
+    },
+    {
+      "Name": "ListVehiclesInFleet",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "PutEncryptionConfiguration"
+    },
+    {
+      "Name": "PutLoggingOptions"
+    },
+    {
+      "Name": "RegisterAccount"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "campaign"
+        },
+        {
+          "Name": "decodermanifest"
+        },
+        {
+          "Name": "fleet"
+        },
+        {
+          "Name": "modelmanifest"
+        },
+        {
+          "Name": "signalcatalog"
+        },
+        {
+          "Name": "statetemplate"
+        },
+        {
+          "Name": "vehicle"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "campaign"
+        },
+        {
+          "Name": "decodermanifest"
+        },
+        {
+          "Name": "fleet"
+        },
+        {
+          "Name": "modelmanifest"
+        },
+        {
+          "Name": "signalcatalog"
+        },
+        {
+          "Name": "statetemplate"
+        },
+        {
+          "Name": "vehicle"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCampaign",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDecoderManifest",
+      "Resources": [
+        {
+          "Name": "decodermanifest"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFleet",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateModelManifest",
+      "Resources": [
+        {
+          "Name": "modelmanifest"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSignalCatalog",
+      "Resources": [
+        {
+          "Name": "signalcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStateTemplate",
+      "Resources": [
+        {
+          "Name": "statetemplate"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateVehicle",
+      "ActionConditionKeys": [
+        "iotfleetwise:UpdateToDecoderManifestArn",
+        "iotfleetwise:UpdateToModelManifestArn"
+      ],
+      "Resources": [
+        {
+          "Name": "decodermanifest"
+        },
+        {
+          "Name": "modelmanifest"
+        },
+        {
+          "Name": "vehicle"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "iotfleetwise:DestinationArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "iotfleetwise:Signals",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "iotfleetwise:UpdateToDecoderManifestArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "iotfleetwise:UpdateToModelManifestArn",
+      "Types": [
+        "ARN"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "campaign",
+      "ARNFormats": [
+        "arn:${Partition}:iotfleetwise:${Region}:${Account}:campaign/${CampaignName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "decodermanifest",
+      "ARNFormats": [
+        "arn:${Partition}:iotfleetwise:${Region}:${Account}:decoder-manifest/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "fleet",
+      "ARNFormats": [
+        "arn:${Partition}:iotfleetwise:${Region}:${Account}:fleet/${FleetId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "modelmanifest",
+      "ARNFormats": [
+        "arn:${Partition}:iotfleetwise:${Region}:${Account}:model-manifest/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "signalcatalog",
+      "ARNFormats": [
+        "arn:${Partition}:iotfleetwise:${Region}:${Account}:signal-catalog/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "statetemplate",
+      "ARNFormats": [
+        "arn:${Partition}:iotfleetwise:${Region}:${Account}:state-template/${StateTemplateId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "vehicle",
+      "ARNFormats": [
+        "arn:${Partition}:iotfleetwise:${Region}:${Account}:vehicle/${VehicleId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

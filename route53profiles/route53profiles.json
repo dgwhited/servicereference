@@ -1,0 +1,141 @@
+{
+  "Name": "route53profiles",
+  "Actions": [
+    {
+      "Name": "AssociateProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "AssociateResourceToProfile"
+    },
+    {
+      "Name": "CreateProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteProfile"
+    },
+    {
+      "Name": "DisassociateProfile"
+    },
+    {
+      "Name": "DisassociateResourceFromProfile"
+    },
+    {
+      "Name": "GetProfile"
+    },
+    {
+      "Name": "GetProfileAssociation"
+    },
+    {
+      "Name": "GetProfilePolicy",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "GetProfileResourceAssociation"
+    },
+    {
+      "Name": "ListProfileAssociations"
+    },
+    {
+      "Name": "ListProfileResourceAssociations"
+    },
+    {
+      "Name": "ListProfiles"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "PutProfilePolicy",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "profile"
+        },
+        {
+          "Name": "profile-association"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "profile"
+        },
+        {
+          "Name": "profile-association"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProfileResourceAssociation"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "profile",
+      "ARNFormats": [
+        "arn:${Partition}:route53profiles:${Region}:${Account}:profile/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "profile-association",
+      "ARNFormats": [
+        "arn:${Partition}:route53profiles:${Region}:${Account}:profile-association/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

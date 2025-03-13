@@ -1,0 +1,214 @@
+{
+  "Name": "aiops",
+  "Actions": [
+    {
+      "Name": "CreateInvestigation",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateInvestigationEvent",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateInvestigationGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateInvestigationResource",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInvestigation",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInvestigationGroup",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInvestigationGroupPolicy",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetInvestigation",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetInvestigationEvent",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetInvestigationGroup",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetInvestigationGroupPolicy",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetInvestigationResource",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "ListInvestigationEvents",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "ListInvestigationGroups"
+    },
+    {
+      "Name": "ListInvestigations",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "PutInvestigationGroupPolicy",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInvestigation",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInvestigationEvent",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInvestigationGroup",
+      "Resources": [
+        {
+          "Name": "investigation-group"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "investigation-group",
+      "ARNFormats": [
+        "arn:${Partition}:aiops:${Region}:${Account}:investigation-group/${InvestigationGroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,492 @@
+{
+  "Name": "macie2",
+  "Actions": [
+    {
+      "Name": "AcceptInvitation"
+    },
+    {
+      "Name": "BatchGetCustomDataIdentifiers",
+      "Resources": [
+        {
+          "Name": "CustomDataIdentifier"
+        }
+      ]
+    },
+    {
+      "Name": "BatchUpdateAutomatedDiscoveryAccounts"
+    },
+    {
+      "Name": "CreateAllowList",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateClassificationJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ClassificationJob"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCustomDataIdentifier",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "CustomDataIdentifier"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFindingsFilter",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "FindingsFilter"
+        }
+      ]
+    },
+    {
+      "Name": "CreateInvitations"
+    },
+    {
+      "Name": "CreateMember",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Member"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSampleFindings"
+    },
+    {
+      "Name": "DeclineInvitations"
+    },
+    {
+      "Name": "DeleteAllowList",
+      "Resources": [
+        {
+          "Name": "AllowList"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCustomDataIdentifier",
+      "Resources": [
+        {
+          "Name": "CustomDataIdentifier"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFindingsFilter",
+      "Resources": [
+        {
+          "Name": "FindingsFilter"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInvitations"
+    },
+    {
+      "Name": "DeleteMember",
+      "Resources": [
+        {
+          "Name": "Member"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeBuckets"
+    },
+    {
+      "Name": "DescribeClassificationJob",
+      "Resources": [
+        {
+          "Name": "ClassificationJob"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeOrganizationConfiguration"
+    },
+    {
+      "Name": "DisableMacie"
+    },
+    {
+      "Name": "DisableOrganizationAdminAccount"
+    },
+    {
+      "Name": "DisassociateFromAdministratorAccount"
+    },
+    {
+      "Name": "DisassociateFromMasterAccount"
+    },
+    {
+      "Name": "DisassociateMember",
+      "Resources": [
+        {
+          "Name": "Member"
+        }
+      ]
+    },
+    {
+      "Name": "EnableMacie"
+    },
+    {
+      "Name": "EnableOrganizationAdminAccount"
+    },
+    {
+      "Name": "GetAdministratorAccount"
+    },
+    {
+      "Name": "GetAllowList",
+      "Resources": [
+        {
+          "Name": "AllowList"
+        }
+      ]
+    },
+    {
+      "Name": "GetAutomatedDiscoveryConfiguration"
+    },
+    {
+      "Name": "GetBucketStatistics"
+    },
+    {
+      "Name": "GetClassificationExportConfiguration"
+    },
+    {
+      "Name": "GetClassificationScope"
+    },
+    {
+      "Name": "GetCustomDataIdentifier",
+      "Resources": [
+        {
+          "Name": "CustomDataIdentifier"
+        }
+      ]
+    },
+    {
+      "Name": "GetFindingStatistics"
+    },
+    {
+      "Name": "GetFindings"
+    },
+    {
+      "Name": "GetFindingsFilter",
+      "Resources": [
+        {
+          "Name": "FindingsFilter"
+        }
+      ]
+    },
+    {
+      "Name": "GetFindingsPublicationConfiguration"
+    },
+    {
+      "Name": "GetInvitationsCount"
+    },
+    {
+      "Name": "GetMacieSession"
+    },
+    {
+      "Name": "GetMasterAccount"
+    },
+    {
+      "Name": "GetMember",
+      "Resources": [
+        {
+          "Name": "Member"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourceProfile"
+    },
+    {
+      "Name": "GetRevealConfiguration"
+    },
+    {
+      "Name": "GetSensitiveDataOccurrences"
+    },
+    {
+      "Name": "GetSensitiveDataOccurrencesAvailability"
+    },
+    {
+      "Name": "GetSensitivityInspectionTemplate"
+    },
+    {
+      "Name": "GetUsageStatistics"
+    },
+    {
+      "Name": "GetUsageTotals"
+    },
+    {
+      "Name": "ListAllowLists"
+    },
+    {
+      "Name": "ListAutomatedDiscoveryAccounts"
+    },
+    {
+      "Name": "ListClassificationJobs"
+    },
+    {
+      "Name": "ListClassificationScopes"
+    },
+    {
+      "Name": "ListCustomDataIdentifiers"
+    },
+    {
+      "Name": "ListFindings"
+    },
+    {
+      "Name": "ListFindingsFilters"
+    },
+    {
+      "Name": "ListInvitations"
+    },
+    {
+      "Name": "ListManagedDataIdentifiers"
+    },
+    {
+      "Name": "ListMembers"
+    },
+    {
+      "Name": "ListOrganizationAdminAccounts"
+    },
+    {
+      "Name": "ListResourceProfileArtifacts"
+    },
+    {
+      "Name": "ListResourceProfileDetections"
+    },
+    {
+      "Name": "ListSensitivityInspectionTemplates"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "AllowList"
+        },
+        {
+          "Name": "ClassificationJob"
+        },
+        {
+          "Name": "CustomDataIdentifier"
+        },
+        {
+          "Name": "FindingsFilter"
+        },
+        {
+          "Name": "Member"
+        }
+      ]
+    },
+    {
+      "Name": "PutClassificationExportConfiguration"
+    },
+    {
+      "Name": "PutFindingsPublicationConfiguration"
+    },
+    {
+      "Name": "SearchResources"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "AllowList"
+        },
+        {
+          "Name": "ClassificationJob"
+        },
+        {
+          "Name": "CustomDataIdentifier"
+        },
+        {
+          "Name": "FindingsFilter"
+        },
+        {
+          "Name": "Member"
+        }
+      ]
+    },
+    {
+      "Name": "TestCustomDataIdentifier"
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "AllowList"
+        },
+        {
+          "Name": "ClassificationJob"
+        },
+        {
+          "Name": "CustomDataIdentifier"
+        },
+        {
+          "Name": "FindingsFilter"
+        },
+        {
+          "Name": "Member"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAllowList",
+      "Resources": [
+        {
+          "Name": "AllowList"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAutomatedDiscoveryConfiguration"
+    },
+    {
+      "Name": "UpdateClassificationJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ClassificationJob"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateClassificationScope"
+    },
+    {
+      "Name": "UpdateFindingsFilter",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "FindingsFilter"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMacieSession"
+    },
+    {
+      "Name": "UpdateMemberSession"
+    },
+    {
+      "Name": "UpdateOrganizationConfiguration"
+    },
+    {
+      "Name": "UpdateResourceProfile"
+    },
+    {
+      "Name": "UpdateResourceProfileDetections"
+    },
+    {
+      "Name": "UpdateRevealConfiguration"
+    },
+    {
+      "Name": "UpdateSensitivityInspectionTemplate"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "AllowList",
+      "ARNFormats": [
+        "arn:${Partition}:macie2:${Region}:${Account}:allow-list/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ClassificationJob",
+      "ARNFormats": [
+        "arn:${Partition}:macie2:${Region}:${Account}:classification-job/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "CustomDataIdentifier",
+      "ARNFormats": [
+        "arn:${Partition}:macie2:${Region}:${Account}:custom-data-identifier/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "FindingsFilter",
+      "ARNFormats": [
+        "arn:${Partition}:macie2:${Region}:${Account}:findings-filter/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Member",
+      "ARNFormats": [
+        "arn:${Partition}:macie2:${Region}:${Account}:member/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

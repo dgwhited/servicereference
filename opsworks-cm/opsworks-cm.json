@@ -1,0 +1,77 @@
+{
+  "Name": "opsworks-cm",
+  "Actions": [
+    {
+      "Name": "AssociateNode"
+    },
+    {
+      "Name": "CreateBackup"
+    },
+    {
+      "Name": "CreateServer"
+    },
+    {
+      "Name": "DeleteBackup"
+    },
+    {
+      "Name": "DeleteServer"
+    },
+    {
+      "Name": "DescribeAccountAttributes"
+    },
+    {
+      "Name": "DescribeBackups"
+    },
+    {
+      "Name": "DescribeEvents"
+    },
+    {
+      "Name": "DescribeNodeAssociationStatus"
+    },
+    {
+      "Name": "DescribeServers"
+    },
+    {
+      "Name": "DisassociateNode"
+    },
+    {
+      "Name": "ExportServerEngineAttribute"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "RestoreServer"
+    },
+    {
+      "Name": "StartMaintenance"
+    },
+    {
+      "Name": "TagResource"
+    },
+    {
+      "Name": "UntagResource"
+    },
+    {
+      "Name": "UpdateServer"
+    },
+    {
+      "Name": "UpdateServerEngineAttributes"
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "backup",
+      "ARNFormats": [
+        "arn:${Partition}:opsworks-cm::${Account}:backup/${ServerName}-{Date-and-Time-Stamp-of-Backup}"
+      ]
+    },
+    {
+      "Name": "server",
+      "ARNFormats": [
+        "arn:${Partition}:opsworks-cm::${Account}:server/${ServerName}/${UniqueId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,195 @@
+{
+  "Name": "translate",
+  "Actions": [
+    {
+      "Name": "CreateParallelData",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "parallel-data"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteParallelData",
+      "Resources": [
+        {
+          "Name": "parallel-data"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTerminology",
+      "Resources": [
+        {
+          "Name": "terminology"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTextTranslationJob"
+    },
+    {
+      "Name": "GetParallelData",
+      "Resources": [
+        {
+          "Name": "parallel-data"
+        }
+      ]
+    },
+    {
+      "Name": "GetTerminology",
+      "Resources": [
+        {
+          "Name": "terminology"
+        }
+      ]
+    },
+    {
+      "Name": "ImportTerminology",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "terminology"
+        }
+      ]
+    },
+    {
+      "Name": "ListLanguages"
+    },
+    {
+      "Name": "ListParallelData"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "parallel-data"
+        },
+        {
+          "Name": "terminology"
+        }
+      ]
+    },
+    {
+      "Name": "ListTerminologies"
+    },
+    {
+      "Name": "ListTextTranslationJobs"
+    },
+    {
+      "Name": "StartTextTranslationJob",
+      "Resources": [
+        {
+          "Name": "parallel-data"
+        },
+        {
+          "Name": "terminology"
+        }
+      ]
+    },
+    {
+      "Name": "StopTextTranslationJob"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "parallel-data"
+        },
+        {
+          "Name": "terminology"
+        }
+      ]
+    },
+    {
+      "Name": "TranslateDocument",
+      "Resources": [
+        {
+          "Name": "terminology"
+        }
+      ]
+    },
+    {
+      "Name": "TranslateText",
+      "Resources": [
+        {
+          "Name": "terminology"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "parallel-data"
+        },
+        {
+          "Name": "terminology"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateParallelData",
+      "Resources": [
+        {
+          "Name": "parallel-data"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "parallel-data",
+      "ARNFormats": [
+        "arn:${Partition}:translate:${Region}:${Account}:parallel-data/${ResourceName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "terminology",
+      "ARNFormats": [
+        "arn:${Partition}:translate:${Region}:${Account}:terminology/${ResourceName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,686 @@
+{
+  "Name": "elasticmapreduce",
+  "Actions": [
+    {
+      "Name": "AddInstanceFleet",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "AddInstanceGroups",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "AddJobFlowSteps",
+      "ActionConditionKeys": [
+        "elasticmapreduce:ExecutionRoleArn"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "AddTags",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "elasticmapreduce:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "editor"
+        },
+        {
+          "Name": "notebook-execution"
+        },
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "AttachEditor",
+      "Resources": [
+        {
+          "Name": "editor"
+        }
+      ]
+    },
+    {
+      "Name": "CancelSteps",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEditor",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "elasticmapreduce:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePersistentAppUI",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRepository"
+    },
+    {
+      "Name": "CreateSecurityConfiguration"
+    },
+    {
+      "Name": "CreateStudio",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "elasticmapreduce:RequestTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "CreateStudioPresignedUrl",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStudioSessionMapping",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEditor",
+      "Resources": [
+        {
+          "Name": "editor"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRepository"
+    },
+    {
+      "Name": "DeleteSecurityConfiguration"
+    },
+    {
+      "Name": "DeleteStudio",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStudioSessionMapping",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkspaceAccess",
+      "Resources": [
+        {
+          "Name": "editor"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEditor",
+      "Resources": [
+        {
+          "Name": "editor"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeJobFlows",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeNotebookExecution",
+      "Resources": [
+        {
+          "Name": "notebook-execution"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePersistentAppUI",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeReleaseLabel"
+    },
+    {
+      "Name": "DescribeRepository"
+    },
+    {
+      "Name": "DescribeSecurityConfiguration"
+    },
+    {
+      "Name": "DescribeStep",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStudio",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "DetachEditor",
+      "Resources": [
+        {
+          "Name": "editor"
+        }
+      ]
+    },
+    {
+      "Name": "GetAutoTerminationPolicy",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "GetBlockPublicAccessConfiguration"
+    },
+    {
+      "Name": "GetClusterSessionCredentials",
+      "ActionConditionKeys": [
+        "elasticmapreduce:ExecutionRoleArn"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "GetManagedScalingPolicy",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "GetOnClusterAppUIPresignedURL",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "GetPersistentAppUIPresignedURL",
+      "ActionConditionKeys": [
+        "elasticmapreduce:ExecutionRoleArn"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "GetStudioSessionMapping",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "LinkRepository"
+    },
+    {
+      "Name": "ListBootstrapActions",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListClusters"
+    },
+    {
+      "Name": "ListEditors"
+    },
+    {
+      "Name": "ListInstanceFleets",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListInstanceGroups",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListInstances",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListNotebookExecutions"
+    },
+    {
+      "Name": "ListReleaseLabels"
+    },
+    {
+      "Name": "ListRepositories"
+    },
+    {
+      "Name": "ListSecurityConfigurations"
+    },
+    {
+      "Name": "ListSteps",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListStudioSessionMappings"
+    },
+    {
+      "Name": "ListStudios"
+    },
+    {
+      "Name": "ListSupportedInstanceTypes"
+    },
+    {
+      "Name": "ListWorkspaceAccessIdentities",
+      "Resources": [
+        {
+          "Name": "editor"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyInstanceFleet",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyInstanceGroups",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "OpenEditorInConsole",
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "editor"
+        }
+      ]
+    },
+    {
+      "Name": "PutAutoScalingPolicy",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "PutAutoTerminationPolicy",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "PutBlockPublicAccessConfiguration"
+    },
+    {
+      "Name": "PutManagedScalingPolicy",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "PutWorkspaceAccess",
+      "Resources": [
+        {
+          "Name": "editor"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveAutoScalingPolicy",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveAutoTerminationPolicy",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveManagedScalingPolicy",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveTags",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "editor"
+        },
+        {
+          "Name": "notebook-execution"
+        },
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "RunJobFlow",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "elasticmapreduce:RequestTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "SetKeepJobFlowAliveWhenNoSteps",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "SetTerminationProtection",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "SetUnhealthyNodeReplacement",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "SetVisibleToAllUsers",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "StartEditor",
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "editor"
+        }
+      ]
+    },
+    {
+      "Name": "StartNotebookExecution",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "elasticmapreduce:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "editor"
+        }
+      ]
+    },
+    {
+      "Name": "StopEditor",
+      "Resources": [
+        {
+          "Name": "editor"
+        }
+      ]
+    },
+    {
+      "Name": "StopNotebookExecution",
+      "Resources": [
+        {
+          "Name": "notebook-execution"
+        }
+      ]
+    },
+    {
+      "Name": "TerminateJobFlows",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "UnlinkRepository"
+    },
+    {
+      "Name": "UpdateEditor",
+      "Resources": [
+        {
+          "Name": "editor"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRepository"
+    },
+    {
+      "Name": "UpdateStudio",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStudioSessionMapping",
+      "Resources": [
+        {
+          "Name": "studio"
+        }
+      ]
+    },
+    {
+      "Name": "ViewEventsFromAllClustersInConsole"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "elasticmapreduce:ExecutionRoleArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "elasticmapreduce:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "elasticmapreduce:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "cluster",
+      "ARNFormats": [
+        "arn:${Partition}:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "elasticmapreduce:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "editor",
+      "ARNFormats": [
+        "arn:${Partition}:elasticmapreduce:${Region}:${Account}:editor/${EditorId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "elasticmapreduce:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "notebook-execution",
+      "ARNFormats": [
+        "arn:${Partition}:elasticmapreduce:${Region}:${Account}:notebook-execution/${NotebookExecutionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "elasticmapreduce:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "studio",
+      "ARNFormats": [
+        "arn:${Partition}:elasticmapreduce:${Region}:${Account}:studio/${StudioId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "elasticmapreduce:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

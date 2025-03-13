@@ -1,0 +1,965 @@
+{
+  "Name": "iotsitewise",
+  "Actions": [
+    {
+      "Name": "AssociateAssets",
+      "Resources": [
+        {
+          "Name": "asset"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateTimeSeriesToAssetProperty",
+      "Resources": [
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "time-series"
+        }
+      ]
+    },
+    {
+      "Name": "BatchAssociateProjectAssets",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDisassociateProjectAssets",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetAssetPropertyAggregates",
+      "Resources": [
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "time-series"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetAssetPropertyValue",
+      "Resources": [
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "time-series"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetAssetPropertyValueHistory",
+      "Resources": [
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "time-series"
+        }
+      ]
+    },
+    {
+      "Name": "BatchPutAssetPropertyValue",
+      "Resources": [
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "time-series"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAccessPolicy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "portal"
+        },
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAsset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "asset-model"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAssetModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateAssetModelCompositeModel",
+      "Resources": [
+        {
+          "Name": "asset-model"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBulkImportJob"
+    },
+    {
+      "Name": "CreateDashboard",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateGateway",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreatePortal",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateProject",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "portal"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAccessPolicy",
+      "Resources": [
+        {
+          "Name": "access-policy"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAsset",
+      "Resources": [
+        {
+          "Name": "asset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAssetModel",
+      "Resources": [
+        {
+          "Name": "asset-model"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAssetModelCompositeModel",
+      "Resources": [
+        {
+          "Name": "asset-model"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDashboard",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataset",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGateway",
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePortal",
+      "Resources": [
+        {
+          "Name": "portal"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTimeSeries",
+      "Resources": [
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "time-series"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAccessPolicy",
+      "Resources": [
+        {
+          "Name": "access-policy"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAction",
+      "Resources": [
+        {
+          "Name": "asset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAsset",
+      "Resources": [
+        {
+          "Name": "asset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAssetCompositeModel",
+      "Resources": [
+        {
+          "Name": "asset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAssetModel",
+      "Resources": [
+        {
+          "Name": "asset-model"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAssetModelCompositeModel",
+      "Resources": [
+        {
+          "Name": "asset-model"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAssetProperty",
+      "Resources": [
+        {
+          "Name": "asset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeBulkImportJob"
+    },
+    {
+      "Name": "DescribeDashboard",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDataset",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDefaultEncryptionConfiguration"
+    },
+    {
+      "Name": "DescribeGateway",
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeGatewayCapabilityConfiguration",
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeLoggingOptions"
+    },
+    {
+      "Name": "DescribePortal",
+      "Resources": [
+        {
+          "Name": "portal"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStorageConfiguration"
+    },
+    {
+      "Name": "DescribeTimeSeries",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "time-series"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateAssets",
+      "Resources": [
+        {
+          "Name": "asset"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateTimeSeriesFromAssetProperty",
+      "Resources": [
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "time-series"
+        }
+      ]
+    },
+    {
+      "Name": "EnableSiteWiseIntegration"
+    },
+    {
+      "Name": "ExecuteAction",
+      "Resources": [
+        {
+          "Name": "asset"
+        }
+      ]
+    },
+    {
+      "Name": "ExecuteQuery"
+    },
+    {
+      "Name": "GetAssetPropertyAggregates",
+      "Resources": [
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "time-series"
+        }
+      ]
+    },
+    {
+      "Name": "GetAssetPropertyValue",
+      "Resources": [
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "time-series"
+        }
+      ]
+    },
+    {
+      "Name": "GetAssetPropertyValueHistory",
+      "Resources": [
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "time-series"
+        }
+      ]
+    },
+    {
+      "Name": "GetInterpolatedAssetPropertyValues",
+      "Resources": [
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "time-series"
+        }
+      ]
+    },
+    {
+      "Name": "InvokeAssistant"
+    },
+    {
+      "Name": "ListAccessPolicies",
+      "Resources": [
+        {
+          "Name": "portal"
+        },
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "ListActions",
+      "Resources": [
+        {
+          "Name": "asset"
+        }
+      ]
+    },
+    {
+      "Name": "ListAssetModelCompositeModels",
+      "Resources": [
+        {
+          "Name": "asset-model"
+        }
+      ]
+    },
+    {
+      "Name": "ListAssetModelProperties",
+      "Resources": [
+        {
+          "Name": "asset-model"
+        }
+      ]
+    },
+    {
+      "Name": "ListAssetModels"
+    },
+    {
+      "Name": "ListAssetProperties",
+      "Resources": [
+        {
+          "Name": "asset"
+        }
+      ]
+    },
+    {
+      "Name": "ListAssetRelationships",
+      "Resources": [
+        {
+          "Name": "asset"
+        }
+      ]
+    },
+    {
+      "Name": "ListAssets",
+      "Resources": [
+        {
+          "Name": "asset-model"
+        }
+      ]
+    },
+    {
+      "Name": "ListAssociatedAssets",
+      "Resources": [
+        {
+          "Name": "asset"
+        }
+      ]
+    },
+    {
+      "Name": "ListBulkImportJobs"
+    },
+    {
+      "Name": "ListCompositionRelationships",
+      "Resources": [
+        {
+          "Name": "asset-model"
+        }
+      ]
+    },
+    {
+      "Name": "ListDashboards",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "ListDatasets"
+    },
+    {
+      "Name": "ListGateways"
+    },
+    {
+      "Name": "ListPortals"
+    },
+    {
+      "Name": "ListProjectAssets",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "ListProjects",
+      "Resources": [
+        {
+          "Name": "portal"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "access-policy"
+        },
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "asset-model"
+        },
+        {
+          "Name": "dashboard"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "gateway"
+        },
+        {
+          "Name": "portal"
+        },
+        {
+          "Name": "project"
+        },
+        {
+          "Name": "time-series"
+        }
+      ]
+    },
+    {
+      "Name": "ListTimeSeries",
+      "Resources": [
+        {
+          "Name": "asset"
+        }
+      ]
+    },
+    {
+      "Name": "PutDefaultEncryptionConfiguration"
+    },
+    {
+      "Name": "PutLoggingOptions"
+    },
+    {
+      "Name": "PutStorageConfiguration"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "access-policy"
+        },
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "asset-model"
+        },
+        {
+          "Name": "dashboard"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "gateway"
+        },
+        {
+          "Name": "portal"
+        },
+        {
+          "Name": "project"
+        },
+        {
+          "Name": "time-series"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "access-policy"
+        },
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "asset-model"
+        },
+        {
+          "Name": "dashboard"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "gateway"
+        },
+        {
+          "Name": "portal"
+        },
+        {
+          "Name": "project"
+        },
+        {
+          "Name": "time-series"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAccessPolicy",
+      "Resources": [
+        {
+          "Name": "access-policy"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAsset",
+      "Resources": [
+        {
+          "Name": "asset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAssetModel",
+      "Resources": [
+        {
+          "Name": "asset-model"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAssetModelCompositeModel",
+      "Resources": [
+        {
+          "Name": "asset-model"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAssetModelPropertyRouting",
+      "Resources": [
+        {
+          "Name": "asset-model"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAssetProperty",
+      "Resources": [
+        {
+          "Name": "asset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDashboard",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataset",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGateway",
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGatewayCapabilityConfiguration",
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePortal",
+      "Resources": [
+        {
+          "Name": "portal"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "iotsitewise:assetHierarchyPath",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "iotsitewise:childAssetId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "iotsitewise:group",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "iotsitewise:iam",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "iotsitewise:isAssociatedWithAssetProperty",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "iotsitewise:portal",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "iotsitewise:project",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "iotsitewise:propertyAlias",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "iotsitewise:propertyId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "iotsitewise:user",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "access-policy",
+      "ARNFormats": [
+        "arn:${Partition}:iotsitewise:${Region}:${Account}:access-policy/${AccessPolicyId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "asset",
+      "ARNFormats": [
+        "arn:${Partition}:iotsitewise:${Region}:${Account}:asset/${AssetId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "asset-model",
+      "ARNFormats": [
+        "arn:${Partition}:iotsitewise:${Region}:${Account}:asset-model/${AssetModelId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "dashboard",
+      "ARNFormats": [
+        "arn:${Partition}:iotsitewise:${Region}:${Account}:dashboard/${DashboardId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "dataset",
+      "ARNFormats": [
+        "arn:${Partition}:iotsitewise:${Region}:${Account}:dataset/${DatasetId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "gateway",
+      "ARNFormats": [
+        "arn:${Partition}:iotsitewise:${Region}:${Account}:gateway/${GatewayId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "portal",
+      "ARNFormats": [
+        "arn:${Partition}:iotsitewise:${Region}:${Account}:portal/${PortalId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "project",
+      "ARNFormats": [
+        "arn:${Partition}:iotsitewise:${Region}:${Account}:project/${ProjectId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "time-series",
+      "ARNFormats": [
+        "arn:${Partition}:iotsitewise:${Region}:${Account}:time-series/${TimeSeriesId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

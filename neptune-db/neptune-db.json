@@ -1,0 +1,301 @@
+{
+  "Name": "neptune-db",
+  "Actions": [
+    {
+      "Name": "CancelLoaderJob",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "CancelMLDataProcessingJob",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "CancelMLModelTrainingJob",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "CancelMLModelTransformJob",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "CancelQuery",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMLEndpoint",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataViaQuery",
+      "ActionConditionKeys": [
+        "neptune-db:QueryLanguage"
+      ],
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMLEndpoint",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStatistics",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "GetEngineStatus",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "GetGraphSummary",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "GetLoaderJobStatus",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "GetMLDataProcessingJobStatus",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "GetMLEndpointStatus",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "GetMLModelTrainingJobStatus",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "GetMLModelTransformJobStatus",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueryStatus",
+      "ActionConditionKeys": [
+        "neptune-db:QueryLanguage"
+      ],
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "GetStatisticsStatus",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "GetStreamRecords",
+      "ActionConditionKeys": [
+        "neptune-db:QueryLanguage"
+      ],
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "ListLoaderJobs",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "ListMLDataProcessingJobs",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "ListMLEndpoints",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "ListMLModelTrainingJobs",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "ListMLModelTransformJobs",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "ManageStatistics",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "ReadDataViaQuery",
+      "ActionConditionKeys": [
+        "neptune-db:QueryLanguage"
+      ],
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "ResetDatabase",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "StartLoaderJob",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "StartMLDataProcessingJob",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "StartMLModelTrainingJob",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "StartMLModelTransformJob",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "WriteDataViaQuery",
+      "ActionConditionKeys": [
+        "neptune-db:QueryLanguage"
+      ],
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "connect",
+      "Resources": [
+        {
+          "Name": "database"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "neptune-db:QueryLanguage",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "database",
+      "ARNFormats": [
+        "arn:${Partition}:neptune-db:${Region}:${Account}:${ClusterResourceId}/*"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

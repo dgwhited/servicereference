@@ -1,0 +1,392 @@
+{
+  "Name": "codepipeline",
+  "Actions": [
+    {
+      "Name": "AcknowledgeJob"
+    },
+    {
+      "Name": "AcknowledgeThirdPartyJob"
+    },
+    {
+      "Name": "CreateCustomActionType",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "actiontype"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePipeline",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCustomActionType",
+      "Resources": [
+        {
+          "Name": "actiontype"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWebhook",
+      "Resources": [
+        {
+          "Name": "webhook"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterWebhookWithThirdParty",
+      "Resources": [
+        {
+          "Name": "webhook"
+        }
+      ]
+    },
+    {
+      "Name": "DisableStageTransition",
+      "Resources": [
+        {
+          "Name": "stage"
+        }
+      ]
+    },
+    {
+      "Name": "EnableStageTransition",
+      "Resources": [
+        {
+          "Name": "stage"
+        }
+      ]
+    },
+    {
+      "Name": "GetActionType"
+    },
+    {
+      "Name": "GetJobDetails"
+    },
+    {
+      "Name": "GetPipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "GetPipelineExecution",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "GetPipelineState",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "GetThirdPartyJobDetails"
+    },
+    {
+      "Name": "ListActionExecutions",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "ListActionTypes"
+    },
+    {
+      "Name": "ListPipelineExecutions",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "ListPipelines"
+    },
+    {
+      "Name": "ListRuleExecutions",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "ListRuleTypes"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "actiontype"
+        },
+        {
+          "Name": "pipeline"
+        },
+        {
+          "Name": "webhook"
+        }
+      ]
+    },
+    {
+      "Name": "ListWebhooks",
+      "Resources": [
+        {
+          "Name": "webhook"
+        }
+      ]
+    },
+    {
+      "Name": "OverrideStageCondition",
+      "Resources": [
+        {
+          "Name": "stage"
+        }
+      ]
+    },
+    {
+      "Name": "PollForJobs",
+      "Resources": [
+        {
+          "Name": "actiontype"
+        }
+      ]
+    },
+    {
+      "Name": "PollForThirdPartyJobs"
+    },
+    {
+      "Name": "PutActionRevision",
+      "Resources": [
+        {
+          "Name": "action"
+        }
+      ]
+    },
+    {
+      "Name": "PutApprovalResult",
+      "Resources": [
+        {
+          "Name": "action"
+        }
+      ]
+    },
+    {
+      "Name": "PutJobFailureResult"
+    },
+    {
+      "Name": "PutJobSuccessResult"
+    },
+    {
+      "Name": "PutThirdPartyJobFailureResult"
+    },
+    {
+      "Name": "PutThirdPartyJobSuccessResult"
+    },
+    {
+      "Name": "PutWebhook",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "pipeline"
+        },
+        {
+          "Name": "webhook"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterWebhookWithThirdParty",
+      "Resources": [
+        {
+          "Name": "webhook"
+        }
+      ]
+    },
+    {
+      "Name": "RetryStageExecution",
+      "Resources": [
+        {
+          "Name": "stage"
+        }
+      ]
+    },
+    {
+      "Name": "RollbackStage",
+      "Resources": [
+        {
+          "Name": "stage"
+        }
+      ]
+    },
+    {
+      "Name": "StartPipelineExecution",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "StopPipelineExecution",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "actiontype"
+        },
+        {
+          "Name": "pipeline"
+        },
+        {
+          "Name": "webhook"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "actiontype"
+        },
+        {
+          "Name": "pipeline"
+        },
+        {
+          "Name": "webhook"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateActionType",
+      "Resources": [
+        {
+          "Name": "actiontype"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "action",
+      "ARNFormats": [
+        "arn:${Partition}:codepipeline:${Region}:${Account}:${PipelineName}/${StageName}/${ActionName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "actiontype",
+      "ARNFormats": [
+        "arn:${Partition}:codepipeline:${Region}:${Account}:actiontype:${Owner}/${Category}/${Provider}/${Version}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "pipeline",
+      "ARNFormats": [
+        "arn:${Partition}:codepipeline:${Region}:${Account}:${PipelineName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "stage",
+      "ARNFormats": [
+        "arn:${Partition}:codepipeline:${Region}:${Account}:${PipelineName}/${StageName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "webhook",
+      "ARNFormats": [
+        "arn:${Partition}:codepipeline:${Region}:${Account}:webhook:${WebhookName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

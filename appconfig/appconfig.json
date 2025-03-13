@@ -1,0 +1,648 @@
+{
+  "Name": "appconfig",
+  "Actions": [
+    {
+      "Name": "CreateApplication",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateConfigurationProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDeploymentStrategy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateEnvironment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "CreateExtension",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateExtensionAssociation",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateHostedConfigurationVersion",
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "configurationprofile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApplication",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfigurationProfile",
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "configurationprofile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeploymentStrategy",
+      "Resources": [
+        {
+          "Name": "deploymentstrategy"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEnvironment",
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteExtension",
+      "Resources": [
+        {
+          "Name": "extension"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteExtensionAssociation",
+      "Resources": [
+        {
+          "Name": "extensionassociation"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteHostedConfigurationVersion",
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "configurationprofile"
+        },
+        {
+          "Name": "hostedconfigurationversion"
+        }
+      ]
+    },
+    {
+      "Name": "GetAccountSettings"
+    },
+    {
+      "Name": "GetApplication",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "configurationprofile"
+        },
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfigurationProfile",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "configurationprofile"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeployment",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeploymentStrategy",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "deploymentstrategy"
+        }
+      ]
+    },
+    {
+      "Name": "GetEnvironment",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "GetExtension",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "extension"
+        }
+      ]
+    },
+    {
+      "Name": "GetExtensionAssociation",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "extensionassociation"
+        }
+      ]
+    },
+    {
+      "Name": "GetHostedConfigurationVersion",
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "configurationprofile"
+        },
+        {
+          "Name": "hostedconfigurationversion"
+        }
+      ]
+    },
+    {
+      "Name": "GetLatestConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplications"
+    },
+    {
+      "Name": "ListConfigurationProfiles",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeploymentStrategies"
+    },
+    {
+      "Name": "ListDeployments",
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "ListEnvironments",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "ListExtensionAssociations"
+    },
+    {
+      "Name": "ListExtensions"
+    },
+    {
+      "Name": "ListHostedConfigurationVersions",
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "configurationprofile"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "configurationprofile"
+        },
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "deploymentstrategy"
+        },
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "extension"
+        },
+        {
+          "Name": "extensionassociation"
+        }
+      ]
+    },
+    {
+      "Name": "StartConfigurationSession",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration"
+        }
+      ]
+    },
+    {
+      "Name": "StartDeployment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "configurationprofile"
+        },
+        {
+          "Name": "deploymentstrategy"
+        },
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "StopDeployment",
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "configuration"
+        },
+        {
+          "Name": "configurationprofile"
+        },
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "deploymentstrategy"
+        },
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "extension"
+        },
+        {
+          "Name": "extensionassociation"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "configuration"
+        },
+        {
+          "Name": "configurationprofile"
+        },
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "deploymentstrategy"
+        },
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "extension"
+        },
+        {
+          "Name": "extensionassociation"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAccountSettings"
+    },
+    {
+      "Name": "UpdateApplication",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConfigurationProfile",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "configurationprofile"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDeploymentStrategy",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "deploymentstrategy"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEnvironment",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateExtension",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "extension"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateExtensionAssociation",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "extensionassociation"
+        }
+      ]
+    },
+    {
+      "Name": "ValidateConfiguration",
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "configurationprofile"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "application",
+      "ARNFormats": [
+        "arn:${Partition}:appconfig:${Region}:${Account}:application/${ApplicationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "configuration",
+      "ARNFormats": [
+        "arn:${Partition}:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}/configuration/${ConfigurationProfileId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "configurationprofile",
+      "ARNFormats": [
+        "arn:${Partition}:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "deployment",
+      "ARNFormats": [
+        "arn:${Partition}:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}/deployment/${DeploymentNumber}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "deploymentstrategy",
+      "ARNFormats": [
+        "arn:${Partition}:appconfig:${Region}:${Account}:deploymentstrategy/${DeploymentStrategyId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "environment",
+      "ARNFormats": [
+        "arn:${Partition}:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "extension",
+      "ARNFormats": [
+        "arn:${Partition}:appconfig:${Region}:${Account}:extension/${ExtensionId}/${ExtensionVersionNumber}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "extensionassociation",
+      "ARNFormats": [
+        "arn:${Partition}:appconfig:${Region}:${Account}:extensionassociation/${ExtensionAssociationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "hostedconfigurationversion",
+      "ARNFormats": [
+        "arn:${Partition}:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}/hostedconfigurationversion/${VersionNumber}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

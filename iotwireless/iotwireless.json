@@ -1,0 +1,1103 @@
+{
+  "Name": "iotwireless",
+  "Actions": [
+    {
+      "Name": "AssociateAwsAccountWithPartnerAccount",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "AssociateMulticastGroupWithFuotaTask",
+      "Resources": [
+        {
+          "Name": "FuotaTask"
+        },
+        {
+          "Name": "MulticastGroup"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateWirelessDeviceWithFuotaTask",
+      "Resources": [
+        {
+          "Name": "FuotaTask"
+        },
+        {
+          "Name": "WirelessDevice"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateWirelessDeviceWithMulticastGroup",
+      "Resources": [
+        {
+          "Name": "MulticastGroup"
+        },
+        {
+          "Name": "WirelessDevice"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateWirelessDeviceWithThing",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "thing"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateWirelessGatewayWithCertificate",
+      "Resources": [
+        {
+          "Name": "WirelessGateway"
+        },
+        {
+          "Name": "cert"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateWirelessGatewayWithThing",
+      "Resources": [
+        {
+          "Name": "WirelessGateway"
+        },
+        {
+          "Name": "thing"
+        }
+      ]
+    },
+    {
+      "Name": "CancelMulticastGroupSession",
+      "Resources": [
+        {
+          "Name": "MulticastGroup"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDestination",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateDeviceProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateFuotaTask",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateMulticastGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateNetworkAnalyzerConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "MulticastGroup"
+        },
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "CreateServiceProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateWirelessDevice",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateWirelessGateway",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateWirelessGatewayTask",
+      "Resources": [
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWirelessGatewayTaskDefinition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteDestination",
+      "Resources": [
+        {
+          "Name": "Destination"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeviceProfile",
+      "Resources": [
+        {
+          "Name": "DeviceProfile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFuotaTask",
+      "Resources": [
+        {
+          "Name": "FuotaTask"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMulticastGroup",
+      "Resources": [
+        {
+          "Name": "MulticastGroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNetworkAnalyzerConfiguration",
+      "Resources": [
+        {
+          "Name": "NetworkAnalyzerConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteQueuedMessages"
+    },
+    {
+      "Name": "DeleteServiceProfile",
+      "Resources": [
+        {
+          "Name": "ServiceProfile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWirelessDevice",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWirelessDeviceImportTask",
+      "Resources": [
+        {
+          "Name": "ImportTask"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWirelessGateway",
+      "Resources": [
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWirelessGatewayTask",
+      "Resources": [
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWirelessGatewayTaskDefinition",
+      "Resources": [
+        {
+          "Name": "WirelessGatewayTaskDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterWirelessDevice",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateAwsAccountFromPartnerAccount",
+      "Resources": [
+        {
+          "Name": "SidewalkAccount"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateMulticastGroupFromFuotaTask",
+      "Resources": [
+        {
+          "Name": "FuotaTask"
+        },
+        {
+          "Name": "MulticastGroup"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateWirelessDeviceFromFuotaTask",
+      "Resources": [
+        {
+          "Name": "FuotaTask"
+        },
+        {
+          "Name": "WirelessDevice"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateWirelessDeviceFromMulticastGroup",
+      "Resources": [
+        {
+          "Name": "MulticastGroup"
+        },
+        {
+          "Name": "WirelessDevice"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateWirelessDeviceFromThing",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "thing"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateWirelessGatewayFromCertificate",
+      "Resources": [
+        {
+          "Name": "WirelessGateway"
+        },
+        {
+          "Name": "cert"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateWirelessGatewayFromThing",
+      "Resources": [
+        {
+          "Name": "WirelessGateway"
+        },
+        {
+          "Name": "thing"
+        }
+      ]
+    },
+    {
+      "Name": "GetDestination",
+      "Resources": [
+        {
+          "Name": "Destination"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeviceProfile",
+      "Resources": [
+        {
+          "Name": "DeviceProfile"
+        }
+      ]
+    },
+    {
+      "Name": "GetEventConfigurationByResourceTypes"
+    },
+    {
+      "Name": "GetFuotaTask",
+      "Resources": [
+        {
+          "Name": "FuotaTask"
+        }
+      ]
+    },
+    {
+      "Name": "GetLogLevelsByResourceTypes"
+    },
+    {
+      "Name": "GetMetricConfiguration"
+    },
+    {
+      "Name": "GetMetrics"
+    },
+    {
+      "Name": "GetMulticastGroup",
+      "Resources": [
+        {
+          "Name": "MulticastGroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetMulticastGroupSession",
+      "Resources": [
+        {
+          "Name": "MulticastGroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetNetworkAnalyzerConfiguration",
+      "Resources": [
+        {
+          "Name": "NetworkAnalyzerConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "GetPartnerAccount",
+      "Resources": [
+        {
+          "Name": "SidewalkAccount"
+        }
+      ]
+    },
+    {
+      "Name": "GetPosition",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "GetPositionConfiguration",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "GetPositionEstimate"
+    },
+    {
+      "Name": "GetResourceEventConfiguration",
+      "Resources": [
+        {
+          "Name": "SidewalkAccount"
+        },
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourceLogLevel",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePosition",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "GetServiceEndpoint"
+    },
+    {
+      "Name": "GetServiceProfile",
+      "Resources": [
+        {
+          "Name": "ServiceProfile"
+        }
+      ]
+    },
+    {
+      "Name": "GetWirelessDevice",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        }
+      ]
+    },
+    {
+      "Name": "GetWirelessDeviceImportTask",
+      "Resources": [
+        {
+          "Name": "ImportTask"
+        }
+      ]
+    },
+    {
+      "Name": "GetWirelessDeviceStatistics",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        }
+      ]
+    },
+    {
+      "Name": "GetWirelessGateway",
+      "Resources": [
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "GetWirelessGatewayCertificate",
+      "Resources": [
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "GetWirelessGatewayFirmwareInformation",
+      "Resources": [
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "GetWirelessGatewayStatistics",
+      "Resources": [
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "GetWirelessGatewayTask",
+      "Resources": [
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "GetWirelessGatewayTaskDefinition",
+      "Resources": [
+        {
+          "Name": "WirelessGatewayTaskDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "ListDestinations"
+    },
+    {
+      "Name": "ListDeviceProfiles"
+    },
+    {
+      "Name": "ListDevicesForWirelessDeviceImportTask",
+      "Resources": [
+        {
+          "Name": "ImportTask"
+        }
+      ]
+    },
+    {
+      "Name": "ListEventConfigurations"
+    },
+    {
+      "Name": "ListFuotaTasks"
+    },
+    {
+      "Name": "ListMulticastGroups"
+    },
+    {
+      "Name": "ListMulticastGroupsByFuotaTask",
+      "Resources": [
+        {
+          "Name": "FuotaTask"
+        }
+      ]
+    },
+    {
+      "Name": "ListNetworkAnalyzerConfigurations"
+    },
+    {
+      "Name": "ListPartnerAccounts"
+    },
+    {
+      "Name": "ListPositionConfigurations"
+    },
+    {
+      "Name": "ListQueuedMessages"
+    },
+    {
+      "Name": "ListServiceProfiles"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "Destination"
+        },
+        {
+          "Name": "DeviceProfile"
+        },
+        {
+          "Name": "FuotaTask"
+        },
+        {
+          "Name": "ImportTask"
+        },
+        {
+          "Name": "MulticastGroup"
+        },
+        {
+          "Name": "NetworkAnalyzerConfiguration"
+        },
+        {
+          "Name": "ServiceProfile"
+        },
+        {
+          "Name": "SidewalkAccount"
+        },
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "WirelessGateway"
+        },
+        {
+          "Name": "WirelessGatewayTaskDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "ListWirelessDeviceImportTasks"
+    },
+    {
+      "Name": "ListWirelessDevices"
+    },
+    {
+      "Name": "ListWirelessGatewayTaskDefinitions"
+    },
+    {
+      "Name": "ListWirelessGateways"
+    },
+    {
+      "Name": "PutPositionConfiguration",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "PutResourceLogLevel",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "ResetAllResourceLogLevels"
+    },
+    {
+      "Name": "ResetResourceLogLevel",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "SendDataToMulticastGroup",
+      "Resources": [
+        {
+          "Name": "MulticastGroup"
+        }
+      ]
+    },
+    {
+      "Name": "SendDataToWirelessDevice",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        }
+      ]
+    },
+    {
+      "Name": "StartBulkAssociateWirelessDeviceWithMulticastGroup",
+      "Resources": [
+        {
+          "Name": "MulticastGroup"
+        }
+      ]
+    },
+    {
+      "Name": "StartBulkDisassociateWirelessDeviceFromMulticastGroup",
+      "Resources": [
+        {
+          "Name": "MulticastGroup"
+        }
+      ]
+    },
+    {
+      "Name": "StartFuotaTask",
+      "Resources": [
+        {
+          "Name": "FuotaTask"
+        }
+      ]
+    },
+    {
+      "Name": "StartMulticastGroupSession",
+      "Resources": [
+        {
+          "Name": "MulticastGroup"
+        }
+      ]
+    },
+    {
+      "Name": "StartNetworkAnalyzerStream",
+      "Resources": [
+        {
+          "Name": "NetworkAnalyzerConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "StartSingleWirelessDeviceImportTask",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "StartWirelessDeviceImportTask",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ImportTask"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Destination"
+        },
+        {
+          "Name": "DeviceProfile"
+        },
+        {
+          "Name": "FuotaTask"
+        },
+        {
+          "Name": "ImportTask"
+        },
+        {
+          "Name": "MulticastGroup"
+        },
+        {
+          "Name": "NetworkAnalyzerConfiguration"
+        },
+        {
+          "Name": "ServiceProfile"
+        },
+        {
+          "Name": "SidewalkAccount"
+        },
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "WirelessGateway"
+        },
+        {
+          "Name": "WirelessGatewayTaskDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "TestWirelessDevice",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Destination"
+        },
+        {
+          "Name": "DeviceProfile"
+        },
+        {
+          "Name": "FuotaTask"
+        },
+        {
+          "Name": "ImportTask"
+        },
+        {
+          "Name": "MulticastGroup"
+        },
+        {
+          "Name": "NetworkAnalyzerConfiguration"
+        },
+        {
+          "Name": "ServiceProfile"
+        },
+        {
+          "Name": "SidewalkAccount"
+        },
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "WirelessGateway"
+        },
+        {
+          "Name": "WirelessGatewayTaskDefinition"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDestination",
+      "Resources": [
+        {
+          "Name": "Destination"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEventConfigurationByResourceTypes"
+    },
+    {
+      "Name": "UpdateFuotaTask",
+      "Resources": [
+        {
+          "Name": "FuotaTask"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLogLevelsByResourceTypes"
+    },
+    {
+      "Name": "UpdateMetricConfiguration"
+    },
+    {
+      "Name": "UpdateMulticastGroup",
+      "Resources": [
+        {
+          "Name": "MulticastGroup"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNetworkAnalyzerConfiguration",
+      "Resources": [
+        {
+          "Name": "MulticastGroup"
+        },
+        {
+          "Name": "NetworkAnalyzerConfiguration"
+        },
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePartnerAccount",
+      "Resources": [
+        {
+          "Name": "SidewalkAccount"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePosition",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateResourceEventConfiguration",
+      "Resources": [
+        {
+          "Name": "SidewalkAccount"
+        },
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateResourcePosition",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        },
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWirelessDevice",
+      "Resources": [
+        {
+          "Name": "WirelessDevice"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWirelessDeviceImportTask",
+      "Resources": [
+        {
+          "Name": "ImportTask"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWirelessGateway",
+      "Resources": [
+        {
+          "Name": "WirelessGateway"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Destination",
+      "ARNFormats": [
+        "arn:${Partition}:iotwireless:${Region}:${Account}:Destination/${DestinationName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "DeviceProfile",
+      "ARNFormats": [
+        "arn:${Partition}:iotwireless:${Region}:${Account}:DeviceProfile/${DeviceProfileId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "FuotaTask",
+      "ARNFormats": [
+        "arn:${Partition}:iotwireless:${Region}:${Account}:FuotaTask/${FuotaTaskId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ImportTask",
+      "ARNFormats": [
+        "arn:${Partition}:iotwireless:${Region}:${Account}:ImportTask/${ImportTaskId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "MulticastGroup",
+      "ARNFormats": [
+        "arn:${Partition}:iotwireless:${Region}:${Account}:MulticastGroup/${MulticastGroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "NetworkAnalyzerConfiguration",
+      "ARNFormats": [
+        "arn:${Partition}:iotwireless:${Region}:${Account}:NetworkAnalyzerConfiguration/${NetworkAnalyzerConfigurationName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ServiceProfile",
+      "ARNFormats": [
+        "arn:${Partition}:iotwireless:${Region}:${Account}:ServiceProfile/${ServiceProfileId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "SidewalkAccount",
+      "ARNFormats": [
+        "arn:${Partition}:iotwireless:${Region}:${Account}:SidewalkAccount/${SidewalkAccountId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "WirelessDevice",
+      "ARNFormats": [
+        "arn:${Partition}:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "WirelessGateway",
+      "ARNFormats": [
+        "arn:${Partition}:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "WirelessGatewayTaskDefinition",
+      "ARNFormats": [
+        "arn:${Partition}:iotwireless:${Region}:${Account}:WirelessGatewayTaskDefinition/${WirelessGatewayTaskDefinitionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "cert",
+      "ARNFormats": [
+        "arn:${Partition}:iot:${Region}:${Account}:cert/${Certificate}"
+      ]
+    },
+    {
+      "Name": "thing",
+      "ARNFormats": [
+        "arn:${Partition}:iot:${Region}:${Account}:thing/${ThingName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

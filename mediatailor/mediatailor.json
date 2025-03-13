@@ -1,0 +1,446 @@
+{
+  "Name": "mediatailor",
+  "Actions": [
+    {
+      "Name": "ConfigureLogsForChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "ConfigureLogsForPlaybackConfiguration",
+      "Resources": [
+        {
+          "Name": "playbackConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateChannel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateLiveSource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreatePrefetchSchedule",
+      "Resources": [
+        {
+          "Name": "playbackConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateProgram"
+    },
+    {
+      "Name": "CreateSourceLocation",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateVodSource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteChannelPolicy",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLiveSource",
+      "Resources": [
+        {
+          "Name": "liveSource"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePlaybackConfiguration",
+      "Resources": [
+        {
+          "Name": "playbackConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePrefetchSchedule",
+      "Resources": [
+        {
+          "Name": "playbackConfiguration"
+        },
+        {
+          "Name": "prefetchSchedule"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProgram",
+      "Resources": [
+        {
+          "Name": "program"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSourceLocation",
+      "Resources": [
+        {
+          "Name": "sourceLocation"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteVodSource",
+      "Resources": [
+        {
+          "Name": "vodSource"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeLiveSource",
+      "Resources": [
+        {
+          "Name": "liveSource"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeProgram",
+      "Resources": [
+        {
+          "Name": "program"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSourceLocation",
+      "Resources": [
+        {
+          "Name": "sourceLocation"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeVodSource",
+      "Resources": [
+        {
+          "Name": "vodSource"
+        }
+      ]
+    },
+    {
+      "Name": "GetChannelPolicy",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "GetChannelSchedule",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "GetPlaybackConfiguration",
+      "Resources": [
+        {
+          "Name": "playbackConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "GetPrefetchSchedule",
+      "Resources": [
+        {
+          "Name": "playbackConfiguration"
+        },
+        {
+          "Name": "prefetchSchedule"
+        }
+      ]
+    },
+    {
+      "Name": "ListAlerts"
+    },
+    {
+      "Name": "ListChannels"
+    },
+    {
+      "Name": "ListLiveSources"
+    },
+    {
+      "Name": "ListPlaybackConfigurations"
+    },
+    {
+      "Name": "ListPrefetchSchedules",
+      "Resources": [
+        {
+          "Name": "playbackConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "ListSourceLocations"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "liveSource"
+        },
+        {
+          "Name": "playbackConfiguration"
+        },
+        {
+          "Name": "sourceLocation"
+        },
+        {
+          "Name": "vodSource"
+        }
+      ]
+    },
+    {
+      "Name": "ListVodSources"
+    },
+    {
+      "Name": "PutChannelPolicy",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "PutPlaybackConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "StartChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "StopChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "liveSource"
+        },
+        {
+          "Name": "playbackConfiguration"
+        },
+        {
+          "Name": "sourceLocation"
+        },
+        {
+          "Name": "vodSource"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "liveSource"
+        },
+        {
+          "Name": "playbackConfiguration"
+        },
+        {
+          "Name": "sourceLocation"
+        },
+        {
+          "Name": "vodSource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLiveSource",
+      "Resources": [
+        {
+          "Name": "liveSource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProgram",
+      "Resources": [
+        {
+          "Name": "program"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSourceLocation",
+      "Resources": [
+        {
+          "Name": "sourceLocation"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateVodSource",
+      "Resources": [
+        {
+          "Name": "vodSource"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "channel",
+      "ARNFormats": [
+        "arn:${Partition}:mediatailor:${Region}:${Account}:channel/${ChannelName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "liveSource",
+      "ARNFormats": [
+        "arn:${Partition}:mediatailor:${Region}:${Account}:liveSource/${SourceLocationName}/${LiveSourceName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "playbackConfiguration",
+      "ARNFormats": [
+        "arn:${Partition}:mediatailor:${Region}:${Account}:playbackConfiguration/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "prefetchSchedule",
+      "ARNFormats": [
+        "arn:${Partition}:mediatailor:${Region}:${Account}:prefetchSchedule/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "program",
+      "ARNFormats": [
+        "arn:${Partition}:mediatailor:${Region}:${Account}:program/${ChannelName}/${ProgramName}"
+      ]
+    },
+    {
+      "Name": "sourceLocation",
+      "ARNFormats": [
+        "arn:${Partition}:mediatailor:${Region}:${Account}:sourceLocation/${SourceLocationName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "vodSource",
+      "ARNFormats": [
+        "arn:${Partition}:mediatailor:${Region}:${Account}:vodSource/${SourceLocationName}/${VodSourceName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

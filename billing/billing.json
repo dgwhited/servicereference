@@ -1,0 +1,201 @@
+{
+  "Name": "billing",
+  "Actions": [
+    {
+      "Name": "CreateBillingView",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBillingView",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "GetBillingData"
+    },
+    {
+      "Name": "GetBillingDetails"
+    },
+    {
+      "Name": "GetBillingNotifications"
+    },
+    {
+      "Name": "GetBillingPreferences"
+    },
+    {
+      "Name": "GetBillingView",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "GetContractInformation"
+    },
+    {
+      "Name": "GetCredits"
+    },
+    {
+      "Name": "GetIAMAccessPreference"
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "GetSellerOfRecord"
+    },
+    {
+      "Name": "ListBillingViews"
+    },
+    {
+      "Name": "ListSourceViewsForBillingView",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "PutContractInformation"
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "RedeemCredits"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBillingPreferences"
+    },
+    {
+      "Name": "UpdateBillingView",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "billingview"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIAMAccessPreference"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "billingview",
+      "ARNFormats": [
+        "arn:${Partition}:billing::${Account}:billingview/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

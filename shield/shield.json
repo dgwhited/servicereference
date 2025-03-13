@@ -1,0 +1,265 @@
+{
+  "Name": "shield",
+  "Actions": [
+    {
+      "Name": "AssociateDRTLogBucket"
+    },
+    {
+      "Name": "AssociateDRTRole"
+    },
+    {
+      "Name": "AssociateHealthCheck",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "protection"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateProactiveEngagementDetails"
+    },
+    {
+      "Name": "CreateProtection",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateProtectionGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateSubscription"
+    },
+    {
+      "Name": "DeleteProtection",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "protection"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProtectionGroup",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "protection-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSubscription"
+    },
+    {
+      "Name": "DescribeAttack",
+      "Resources": [
+        {
+          "Name": "attack"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAttackStatistics"
+    },
+    {
+      "Name": "DescribeDRTAccess"
+    },
+    {
+      "Name": "DescribeEmergencyContactSettings"
+    },
+    {
+      "Name": "DescribeProtection",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "protection"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeProtectionGroup",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "protection-group"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSubscription"
+    },
+    {
+      "Name": "DisableApplicationLayerAutomaticResponse"
+    },
+    {
+      "Name": "DisableProactiveEngagement"
+    },
+    {
+      "Name": "DisassociateDRTLogBucket"
+    },
+    {
+      "Name": "DisassociateDRTRole"
+    },
+    {
+      "Name": "DisassociateHealthCheck",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "protection"
+        }
+      ]
+    },
+    {
+      "Name": "EnableApplicationLayerAutomaticResponse"
+    },
+    {
+      "Name": "EnableProactiveEngagement"
+    },
+    {
+      "Name": "GetSubscriptionState"
+    },
+    {
+      "Name": "ListAttacks"
+    },
+    {
+      "Name": "ListProtectionGroups"
+    },
+    {
+      "Name": "ListProtections"
+    },
+    {
+      "Name": "ListResourcesInProtectionGroup",
+      "Resources": [
+        {
+          "Name": "protection-group"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "protection"
+        },
+        {
+          "Name": "protection-group"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "protection"
+        },
+        {
+          "Name": "protection-group"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "protection"
+        },
+        {
+          "Name": "protection-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateApplicationLayerAutomaticResponse"
+    },
+    {
+      "Name": "UpdateEmergencyContactSettings"
+    },
+    {
+      "Name": "UpdateProtectionGroup",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "protection-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSubscription"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "attack",
+      "ARNFormats": [
+        "arn:${Partition}:shield::${Account}:attack/${Id}"
+      ]
+    },
+    {
+      "Name": "protection",
+      "ARNFormats": [
+        "arn:${Partition}:shield::${Account}:protection/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "protection-group",
+      "ARNFormats": [
+        "arn:${Partition}:shield::${Account}:protection-group/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

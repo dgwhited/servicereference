@@ -1,0 +1,301 @@
+{
+  "Name": "rolesanywhere",
+  "Actions": [
+    {
+      "Name": "CreateProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateTrustAnchor",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteAttributeMapping",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCrl",
+      "Resources": [
+        {
+          "Name": "crl"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProfile",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTrustAnchor",
+      "Resources": [
+        {
+          "Name": "trust-anchor"
+        }
+      ]
+    },
+    {
+      "Name": "DisableCrl",
+      "Resources": [
+        {
+          "Name": "crl"
+        }
+      ]
+    },
+    {
+      "Name": "DisableProfile",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "DisableTrustAnchor",
+      "Resources": [
+        {
+          "Name": "trust-anchor"
+        }
+      ]
+    },
+    {
+      "Name": "EnableCrl",
+      "Resources": [
+        {
+          "Name": "crl"
+        }
+      ]
+    },
+    {
+      "Name": "EnableProfile",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "EnableTrustAnchor",
+      "Resources": [
+        {
+          "Name": "trust-anchor"
+        }
+      ]
+    },
+    {
+      "Name": "GetCrl",
+      "Resources": [
+        {
+          "Name": "crl"
+        }
+      ]
+    },
+    {
+      "Name": "GetProfile",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "GetSubject",
+      "Resources": [
+        {
+          "Name": "subject"
+        }
+      ]
+    },
+    {
+      "Name": "GetTrustAnchor",
+      "Resources": [
+        {
+          "Name": "trust-anchor"
+        }
+      ]
+    },
+    {
+      "Name": "ImportCrl",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "ListCrls"
+    },
+    {
+      "Name": "ListProfiles"
+    },
+    {
+      "Name": "ListSubjects"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "ListTrustAnchors"
+    },
+    {
+      "Name": "PutAttributeMapping",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "PutNotificationSettings",
+      "Resources": [
+        {
+          "Name": "trust-anchor"
+        }
+      ]
+    },
+    {
+      "Name": "ResetNotificationSettings",
+      "Resources": [
+        {
+          "Name": "trust-anchor"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "crl"
+        },
+        {
+          "Name": "profile"
+        },
+        {
+          "Name": "subject"
+        },
+        {
+          "Name": "trust-anchor"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "crl"
+        },
+        {
+          "Name": "profile"
+        },
+        {
+          "Name": "subject"
+        },
+        {
+          "Name": "trust-anchor"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCrl",
+      "Resources": [
+        {
+          "Name": "crl"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProfile",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTrustAnchor",
+      "Resources": [
+        {
+          "Name": "trust-anchor"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "crl",
+      "ARNFormats": [
+        "arn:${Partition}:rolesanywhere:${Region}:${Account}:crl/${CrlId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "profile",
+      "ARNFormats": [
+        "arn:${Partition}:rolesanywhere:${Region}:${Account}:profile/${ProfileId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "subject",
+      "ARNFormats": [
+        "arn:${Partition}:rolesanywhere:${Region}:${Account}:subject/${SubjectId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "trust-anchor",
+      "ARNFormats": [
+        "arn:${Partition}:rolesanywhere:${Region}:${Account}:trust-anchor/${TrustAnchorId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

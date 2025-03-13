@@ -1,0 +1,206 @@
+{
+  "Name": "cognito-identity",
+  "Actions": [
+    {
+      "Name": "CreateIdentityPool",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteIdentities"
+    },
+    {
+      "Name": "DeleteIdentityPool",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeIdentity"
+    },
+    {
+      "Name": "DescribeIdentityPool",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "GetCredentialsForIdentity"
+    },
+    {
+      "Name": "GetId"
+    },
+    {
+      "Name": "GetIdentityPoolAnalytics",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "GetIdentityPoolDailyAnalytics",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "GetIdentityPoolRoles",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "GetIdentityProviderDailyAnalytics",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "GetOpenIdToken"
+    },
+    {
+      "Name": "GetOpenIdTokenForDeveloperIdentity",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "GetPrincipalTagAttributeMap",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "ListIdentities",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "ListIdentityPools"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "LookupDeveloperIdentity",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "MergeDeveloperIdentities",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "SetIdentityPoolRoles"
+    },
+    {
+      "Name": "SetPrincipalTagAttributeMap"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "UnlinkDeveloperIdentity",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "UnlinkIdentity"
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIdentityPool",
+      "Resources": [
+        {
+          "Name": "identitypool"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "identitypool",
+      "ARNFormats": [
+        "arn:${Partition}:cognito-identity:${Region}:${Account}:identitypool/${IdentityPoolId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

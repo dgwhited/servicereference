@@ -1,0 +1,470 @@
+{
+  "Name": "globalaccelerator",
+  "Actions": [
+    {
+      "Name": "AddCustomRoutingEndpoints",
+      "Resources": [
+        {
+          "Name": "endpointgroup"
+        }
+      ]
+    },
+    {
+      "Name": "AddEndpoints",
+      "Resources": [
+        {
+          "Name": "endpointgroup"
+        }
+      ]
+    },
+    {
+      "Name": "AdvertiseByoipCidr"
+    },
+    {
+      "Name": "AllowCustomRoutingTraffic",
+      "Resources": [
+        {
+          "Name": "endpointgroup"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAccelerator",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateCrossAccountAttachment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateCustomRoutingAccelerator",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateCustomRoutingEndpointGroup",
+      "Resources": [
+        {
+          "Name": "listener"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCustomRoutingListener",
+      "Resources": [
+        {
+          "Name": "accelerator"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEndpointGroup",
+      "Resources": [
+        {
+          "Name": "listener"
+        }
+      ]
+    },
+    {
+      "Name": "CreateListener",
+      "Resources": [
+        {
+          "Name": "accelerator"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAccelerator",
+      "Resources": [
+        {
+          "Name": "accelerator"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCrossAccountAttachment",
+      "Resources": [
+        {
+          "Name": "attachment"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCustomRoutingAccelerator",
+      "Resources": [
+        {
+          "Name": "accelerator"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCustomRoutingEndpointGroup",
+      "Resources": [
+        {
+          "Name": "endpointgroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCustomRoutingListener",
+      "Resources": [
+        {
+          "Name": "listener"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEndpointGroup",
+      "Resources": [
+        {
+          "Name": "endpointgroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteListener",
+      "Resources": [
+        {
+          "Name": "listener"
+        }
+      ]
+    },
+    {
+      "Name": "DenyCustomRoutingTraffic",
+      "Resources": [
+        {
+          "Name": "endpointgroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeprovisionByoipCidr"
+    },
+    {
+      "Name": "DescribeAccelerator",
+      "Resources": [
+        {
+          "Name": "accelerator"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAcceleratorAttributes",
+      "Resources": [
+        {
+          "Name": "accelerator"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCrossAccountAttachment",
+      "Resources": [
+        {
+          "Name": "attachment"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCustomRoutingAccelerator",
+      "Resources": [
+        {
+          "Name": "accelerator"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCustomRoutingAcceleratorAttributes",
+      "Resources": [
+        {
+          "Name": "accelerator"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCustomRoutingEndpointGroup",
+      "Resources": [
+        {
+          "Name": "endpointgroup"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCustomRoutingListener",
+      "Resources": [
+        {
+          "Name": "listener"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEndpointGroup",
+      "Resources": [
+        {
+          "Name": "endpointgroup"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeListener",
+      "Resources": [
+        {
+          "Name": "listener"
+        }
+      ]
+    },
+    {
+      "Name": "ListAccelerators"
+    },
+    {
+      "Name": "ListByoipCidrs"
+    },
+    {
+      "Name": "ListCrossAccountAttachments"
+    },
+    {
+      "Name": "ListCrossAccountResourceAccounts"
+    },
+    {
+      "Name": "ListCrossAccountResources"
+    },
+    {
+      "Name": "ListCustomRoutingAccelerators"
+    },
+    {
+      "Name": "ListCustomRoutingEndpointGroups",
+      "Resources": [
+        {
+          "Name": "listener"
+        }
+      ]
+    },
+    {
+      "Name": "ListCustomRoutingListeners",
+      "Resources": [
+        {
+          "Name": "accelerator"
+        }
+      ]
+    },
+    {
+      "Name": "ListCustomRoutingPortMappings",
+      "Resources": [
+        {
+          "Name": "accelerator"
+        }
+      ]
+    },
+    {
+      "Name": "ListCustomRoutingPortMappingsByDestination"
+    },
+    {
+      "Name": "ListEndpointGroups",
+      "Resources": [
+        {
+          "Name": "listener"
+        }
+      ]
+    },
+    {
+      "Name": "ListListeners",
+      "Resources": [
+        {
+          "Name": "accelerator"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "accelerator"
+        },
+        {
+          "Name": "attachment"
+        }
+      ]
+    },
+    {
+      "Name": "ProvisionByoipCidr"
+    },
+    {
+      "Name": "RemoveCustomRoutingEndpoints",
+      "Resources": [
+        {
+          "Name": "endpointgroup"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveEndpoints",
+      "Resources": [
+        {
+          "Name": "endpointgroup"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "accelerator"
+        },
+        {
+          "Name": "attachment"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "accelerator"
+        },
+        {
+          "Name": "attachment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAccelerator",
+      "Resources": [
+        {
+          "Name": "accelerator"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAcceleratorAttributes",
+      "Resources": [
+        {
+          "Name": "accelerator"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCrossAccountAttachment",
+      "Resources": [
+        {
+          "Name": "attachment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCustomRoutingAccelerator",
+      "Resources": [
+        {
+          "Name": "accelerator"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCustomRoutingAcceleratorAttributes",
+      "Resources": [
+        {
+          "Name": "accelerator"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCustomRoutingListener",
+      "Resources": [
+        {
+          "Name": "listener"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEndpointGroup",
+      "Resources": [
+        {
+          "Name": "endpointgroup"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateListener",
+      "Resources": [
+        {
+          "Name": "listener"
+        }
+      ]
+    },
+    {
+      "Name": "WithdrawByoipCidr"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "accelerator",
+      "ARNFormats": [
+        "arn:${Partition}:globalaccelerator::${Account}:accelerator/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "attachment",
+      "ARNFormats": [
+        "arn:${Partition}:globalaccelerator::${Account}:attachment/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "endpointgroup",
+      "ARNFormats": [
+        "arn:${Partition}:globalaccelerator::${Account}:accelerator/${ResourceId}/listener/${ListenerId}/endpoint-group/${EndpointGroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "listener",
+      "ARNFormats": [
+        "arn:${Partition}:globalaccelerator::${Account}:accelerator/${ResourceId}/listener/${ListenerId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

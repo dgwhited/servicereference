@@ -1,0 +1,382 @@
+{
+  "Name": "ecr",
+  "Actions": [
+    {
+      "Name": "BatchCheckLayerAvailability",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDeleteImage",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetImage",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetRepositoryScanningConfiguration",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "BatchImportUpstreamImage"
+    },
+    {
+      "Name": "CompleteLayerUpload",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePullThroughCacheRule"
+    },
+    {
+      "Name": "CreateRepository",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRepositoryCreationTemplate"
+    },
+    {
+      "Name": "DeleteLifecyclePolicy",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePullThroughCacheRule"
+    },
+    {
+      "Name": "DeleteRegistryPolicy"
+    },
+    {
+      "Name": "DeleteRepository",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRepositoryCreationTemplate"
+    },
+    {
+      "Name": "DeleteRepositoryPolicy",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeImageReplicationStatus",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeImageScanFindings",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeImages",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePullThroughCacheRules"
+    },
+    {
+      "Name": "DescribeRegistry"
+    },
+    {
+      "Name": "DescribeRepositories",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRepositoryCreationTemplates"
+    },
+    {
+      "Name": "GetAccountSetting",
+      "ActionConditionKeys": [
+        "ecr:AccountSetting"
+      ]
+    },
+    {
+      "Name": "GetAuthorizationToken"
+    },
+    {
+      "Name": "GetDownloadUrlForLayer",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "GetImageCopyStatus"
+    },
+    {
+      "Name": "GetLifecyclePolicy",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "GetLifecyclePolicyPreview",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "GetRegistryPolicy"
+    },
+    {
+      "Name": "GetRegistryScanningConfiguration"
+    },
+    {
+      "Name": "GetRepositoryPolicy",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "InitiateLayerUpload",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "ListImages",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "PutAccountSetting",
+      "ActionConditionKeys": [
+        "ecr:AccountSetting"
+      ]
+    },
+    {
+      "Name": "PutImage",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "PutImageScanningConfiguration",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "PutImageTagMutability",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "PutLifecyclePolicy",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "PutRegistryPolicy"
+    },
+    {
+      "Name": "PutRegistryScanningConfiguration"
+    },
+    {
+      "Name": "PutReplicationConfiguration"
+    },
+    {
+      "Name": "ReplicateImage",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "SetRepositoryPolicy",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "StartImageScan",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "StartLifecyclePolicyPreview",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePullThroughCacheRule"
+    },
+    {
+      "Name": "UpdateRepositoryCreationTemplate"
+    },
+    {
+      "Name": "UploadLayerPart",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "ValidatePullThroughCacheRule"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "ecr:AccountSetting",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ecr:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "repository",
+      "ARNFormats": [
+        "arn:${Partition}:ecr:${Region}:${Account}:repository/${RepositoryName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ecr:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

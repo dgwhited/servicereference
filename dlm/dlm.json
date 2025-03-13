@@ -1,0 +1,102 @@
+{
+  "Name": "dlm",
+  "Actions": [
+    {
+      "Name": "CreateLifecyclePolicy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteLifecyclePolicy",
+      "Resources": [
+        {
+          "Name": "policy"
+        }
+      ]
+    },
+    {
+      "Name": "GetLifecyclePolicies"
+    },
+    {
+      "Name": "GetLifecyclePolicy",
+      "Resources": [
+        {
+          "Name": "policy"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "policy"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "policy"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "policy"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLifecyclePolicy",
+      "Resources": [
+        {
+          "Name": "policy"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "policy",
+      "ARNFormats": [
+        "arn:${Partition}:dlm:${Region}:${Account}:policy/${ResourceName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

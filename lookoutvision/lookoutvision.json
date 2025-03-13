@@ -1,0 +1,194 @@
+{
+  "Name": "lookoutvision",
+  "Actions": [
+    {
+      "Name": "CreateDataset"
+    },
+    {
+      "Name": "CreateModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "CreateProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataset"
+    },
+    {
+      "Name": "DeleteModel",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDataset"
+    },
+    {
+      "Name": "DescribeModel",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeModelPackagingJob"
+    },
+    {
+      "Name": "DescribeProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTrialDetection"
+    },
+    {
+      "Name": "DetectAnomalies",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "ListDatasetEntries"
+    },
+    {
+      "Name": "ListModelPackagingJobs"
+    },
+    {
+      "Name": "ListModels"
+    },
+    {
+      "Name": "ListProjects"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "ListTrialDetections"
+    },
+    {
+      "Name": "StartModel",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "StartModelPackagingJob",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "StartTrialDetection"
+    },
+    {
+      "Name": "StopModel",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDatasetEntries"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "model",
+      "ARNFormats": [
+        "arn:${Partition}:lookoutvision:${Region}:${Account}:model/${ProjectName}/${ModelVersion}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "project",
+      "ARNFormats": [
+        "arn:${Partition}:lookoutvision:${Region}:${Account}:project/${ProjectName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

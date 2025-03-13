@@ -1,0 +1,347 @@
+{
+  "Name": "fms",
+  "Actions": [
+    {
+      "Name": "AssociateAdminAccount"
+    },
+    {
+      "Name": "AssociateThirdPartyFirewall"
+    },
+    {
+      "Name": "BatchAssociateResource",
+      "Resources": [
+        {
+          "Name": "resource-set"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDisassociateResource",
+      "Resources": [
+        {
+          "Name": "resource-set"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAppsList",
+      "Resources": [
+        {
+          "Name": "applications-list"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNotificationChannel"
+    },
+    {
+      "Name": "DeletePolicy",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "policy"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProtocolsList",
+      "Resources": [
+        {
+          "Name": "protocols-list"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourceSet",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "resource-set"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateAdminAccount"
+    },
+    {
+      "Name": "DisassociateThirdPartyFirewall"
+    },
+    {
+      "Name": "GetAdminAccount"
+    },
+    {
+      "Name": "GetAdminScope"
+    },
+    {
+      "Name": "GetAppsList",
+      "Resources": [
+        {
+          "Name": "applications-list"
+        }
+      ]
+    },
+    {
+      "Name": "GetComplianceDetail",
+      "Resources": [
+        {
+          "Name": "policy"
+        }
+      ]
+    },
+    {
+      "Name": "GetNotificationChannel"
+    },
+    {
+      "Name": "GetPolicy",
+      "Resources": [
+        {
+          "Name": "policy"
+        }
+      ]
+    },
+    {
+      "Name": "GetProtectionStatus",
+      "Resources": [
+        {
+          "Name": "policy"
+        }
+      ]
+    },
+    {
+      "Name": "GetProtocolsList",
+      "Resources": [
+        {
+          "Name": "protocols-list"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourceSet",
+      "Resources": [
+        {
+          "Name": "resource-set"
+        }
+      ]
+    },
+    {
+      "Name": "GetThirdPartyFirewallAssociationStatus"
+    },
+    {
+      "Name": "GetViolationDetails",
+      "Resources": [
+        {
+          "Name": "policy"
+        }
+      ]
+    },
+    {
+      "Name": "ListAdminAccountsForOrganization"
+    },
+    {
+      "Name": "ListAdminsManagingAccount"
+    },
+    {
+      "Name": "ListAppsLists"
+    },
+    {
+      "Name": "ListComplianceStatus",
+      "Resources": [
+        {
+          "Name": "policy"
+        }
+      ]
+    },
+    {
+      "Name": "ListDiscoveredResources"
+    },
+    {
+      "Name": "ListMemberAccounts"
+    },
+    {
+      "Name": "ListPolicies"
+    },
+    {
+      "Name": "ListProtocolsLists"
+    },
+    {
+      "Name": "ListResourceSetResources",
+      "Resources": [
+        {
+          "Name": "resource-set"
+        }
+      ]
+    },
+    {
+      "Name": "ListResourceSets"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "policy"
+        }
+      ]
+    },
+    {
+      "Name": "ListThirdPartyFirewallFirewallPolicies"
+    },
+    {
+      "Name": "PutAdminAccount"
+    },
+    {
+      "Name": "PutAppsList",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "applications-list"
+        }
+      ]
+    },
+    {
+      "Name": "PutNotificationChannel"
+    },
+    {
+      "Name": "PutPolicy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "policy"
+        }
+      ]
+    },
+    {
+      "Name": "PutProtocolsList",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "protocols-list"
+        }
+      ]
+    },
+    {
+      "Name": "PutResourceSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "resource-set"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "applications-list"
+        },
+        {
+          "Name": "policy"
+        },
+        {
+          "Name": "protocols-list"
+        },
+        {
+          "Name": "resource-set"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "applications-list"
+        },
+        {
+          "Name": "policy"
+        },
+        {
+          "Name": "protocols-list"
+        },
+        {
+          "Name": "resource-set"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "applications-list",
+      "ARNFormats": [
+        "arn:${Partition}:fms:${Region}:${Account}:applications-list/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "policy",
+      "ARNFormats": [
+        "arn:${Partition}:fms:${Region}:${Account}:policy/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "protocols-list",
+      "ARNFormats": [
+        "arn:${Partition}:fms:${Region}:${Account}:protocols-list/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "resource-set",
+      "ARNFormats": [
+        "arn:${Partition}:fms:${Region}:${Account}:resource-set/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

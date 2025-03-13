@@ -1,0 +1,793 @@
+{
+  "Name": "a4b",
+  "Actions": [
+    {
+      "Name": "ApproveSkill"
+    },
+    {
+      "Name": "AssociateContactWithAddressBook",
+      "Resources": [
+        {
+          "Name": "addressbook"
+        },
+        {
+          "Name": "contact"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateDeviceWithNetworkProfile",
+      "Resources": [
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "networkprofile"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateDeviceWithRoom",
+      "Resources": [
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "room"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateSkillGroupWithRoom",
+      "Resources": [
+        {
+          "Name": "room"
+        },
+        {
+          "Name": "skillgroup"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateSkillWithSkillGroup",
+      "Resources": [
+        {
+          "Name": "skillgroup"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateSkillWithUsers"
+    },
+    {
+      "Name": "CompleteRegistration"
+    },
+    {
+      "Name": "CreateAddressBook",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateBusinessReportSchedule",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateConferenceProvider",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateContact",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateGatewayGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateNetworkProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateRoom",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSkillGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateUser",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAddressBook",
+      "Resources": [
+        {
+          "Name": "addressbook"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBusinessReportSchedule",
+      "Resources": [
+        {
+          "Name": "schedule"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConferenceProvider",
+      "Resources": [
+        {
+          "Name": "conferenceprovider"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteContact",
+      "Resources": [
+        {
+          "Name": "contact"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDevice",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeviceUsageData",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGatewayGroup",
+      "Resources": [
+        {
+          "Name": "gatewaygroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNetworkProfile",
+      "Resources": [
+        {
+          "Name": "networkprofile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProfile",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRoom",
+      "Resources": [
+        {
+          "Name": "room"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRoomSkillParameter",
+      "Resources": [
+        {
+          "Name": "room"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSkillAuthorization",
+      "Resources": [
+        {
+          "Name": "room"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSkillGroup",
+      "Resources": [
+        {
+          "Name": "skillgroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteUser",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateContactFromAddressBook",
+      "Resources": [
+        {
+          "Name": "addressbook"
+        },
+        {
+          "Name": "contact"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateDeviceFromRoom",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateSkillFromSkillGroup",
+      "Resources": [
+        {
+          "Name": "skillgroup"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateSkillFromUsers",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateSkillGroupFromRoom",
+      "Resources": [
+        {
+          "Name": "room"
+        },
+        {
+          "Name": "skillgroup"
+        }
+      ]
+    },
+    {
+      "Name": "ForgetSmartHomeAppliances",
+      "Resources": [
+        {
+          "Name": "room"
+        }
+      ]
+    },
+    {
+      "Name": "GetAddressBook",
+      "Resources": [
+        {
+          "Name": "addressbook"
+        }
+      ]
+    },
+    {
+      "Name": "GetConferencePreference"
+    },
+    {
+      "Name": "GetConferenceProvider",
+      "Resources": [
+        {
+          "Name": "conferenceprovider"
+        }
+      ]
+    },
+    {
+      "Name": "GetContact",
+      "Resources": [
+        {
+          "Name": "contact"
+        }
+      ]
+    },
+    {
+      "Name": "GetDevice",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "GetGateway",
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "GetGatewayGroup",
+      "Resources": [
+        {
+          "Name": "gatewaygroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetInvitationConfiguration"
+    },
+    {
+      "Name": "GetNetworkProfile",
+      "Resources": [
+        {
+          "Name": "networkprofile"
+        }
+      ]
+    },
+    {
+      "Name": "GetProfile",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "GetRoom",
+      "Resources": [
+        {
+          "Name": "room"
+        }
+      ]
+    },
+    {
+      "Name": "GetRoomSkillParameter",
+      "Resources": [
+        {
+          "Name": "room"
+        }
+      ]
+    },
+    {
+      "Name": "GetSkillGroup",
+      "Resources": [
+        {
+          "Name": "skillgroup"
+        }
+      ]
+    },
+    {
+      "Name": "ListBusinessReportSchedules"
+    },
+    {
+      "Name": "ListConferenceProviders"
+    },
+    {
+      "Name": "ListDeviceEvents",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "ListGatewayGroups"
+    },
+    {
+      "Name": "ListGateways",
+      "Resources": [
+        {
+          "Name": "gatewaygroup"
+        }
+      ]
+    },
+    {
+      "Name": "ListSkills"
+    },
+    {
+      "Name": "ListSkillsStoreCategories"
+    },
+    {
+      "Name": "ListSkillsStoreSkillsByCategory"
+    },
+    {
+      "Name": "ListSmartHomeAppliances",
+      "Resources": [
+        {
+          "Name": "room"
+        }
+      ]
+    },
+    {
+      "Name": "ListTags",
+      "Resources": [
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "room"
+        },
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "PutConferencePreference"
+    },
+    {
+      "Name": "PutDeviceSetupEvents"
+    },
+    {
+      "Name": "PutInvitationConfiguration"
+    },
+    {
+      "Name": "PutRoomSkillParameter",
+      "Resources": [
+        {
+          "Name": "room"
+        }
+      ]
+    },
+    {
+      "Name": "PutSkillAuthorization",
+      "Resources": [
+        {
+          "Name": "room"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterAVSDevice",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "RegisterDevice"
+    },
+    {
+      "Name": "RejectSkill"
+    },
+    {
+      "Name": "ResolveRoom"
+    },
+    {
+      "Name": "RevokeInvitation",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "SearchAddressBooks"
+    },
+    {
+      "Name": "SearchContacts"
+    },
+    {
+      "Name": "SearchDevices"
+    },
+    {
+      "Name": "SearchNetworkProfiles"
+    },
+    {
+      "Name": "SearchProfiles"
+    },
+    {
+      "Name": "SearchRooms"
+    },
+    {
+      "Name": "SearchSkillGroups"
+    },
+    {
+      "Name": "SearchUsers"
+    },
+    {
+      "Name": "SendAnnouncement"
+    },
+    {
+      "Name": "SendInvitation",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "StartDeviceSync"
+    },
+    {
+      "Name": "StartSmartHomeApplianceDiscovery",
+      "Resources": [
+        {
+          "Name": "room"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "room"
+        },
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "Resources": [
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "room"
+        },
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAddressBook",
+      "Resources": [
+        {
+          "Name": "addressbook"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBusinessReportSchedule",
+      "Resources": [
+        {
+          "Name": "schedule"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConferenceProvider",
+      "Resources": [
+        {
+          "Name": "conferenceprovider"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateContact",
+      "Resources": [
+        {
+          "Name": "contact"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDevice",
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGateway",
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGatewayGroup",
+      "Resources": [
+        {
+          "Name": "gatewaygroup"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNetworkProfile",
+      "Resources": [
+        {
+          "Name": "networkprofile"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProfile",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRoom",
+      "Resources": [
+        {
+          "Name": "room"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSkillGroup",
+      "Resources": [
+        {
+          "Name": "skillgroup"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "a4b:amazonId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "a4b:filters_deviceType",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "addressbook",
+      "ARNFormats": [
+        "arn:${Partition}:a4b:${Region}:${Account}:address-book/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "conferenceprovider",
+      "ARNFormats": [
+        "arn:${Partition}:a4b:${Region}:${Account}:conference-provider/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "contact",
+      "ARNFormats": [
+        "arn:${Partition}:a4b:${Region}:${Account}:contact/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "device",
+      "ARNFormats": [
+        "arn:${Partition}:a4b:${Region}:${Account}:device/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "gateway",
+      "ARNFormats": [
+        "arn:${Partition}:a4b:${Region}:${Account}:gateway/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "gatewaygroup",
+      "ARNFormats": [
+        "arn:${Partition}:a4b:${Region}:${Account}:gateway-group/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "networkprofile",
+      "ARNFormats": [
+        "arn:${Partition}:a4b:${Region}:${Account}:network-profile/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "profile",
+      "ARNFormats": [
+        "arn:${Partition}:a4b:${Region}:${Account}:profile/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "room",
+      "ARNFormats": [
+        "arn:${Partition}:a4b:${Region}:${Account}:room/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "schedule",
+      "ARNFormats": [
+        "arn:${Partition}:a4b:${Region}:${Account}:schedule/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "skillgroup",
+      "ARNFormats": [
+        "arn:${Partition}:a4b:${Region}:${Account}:skill-group/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "user",
+      "ARNFormats": [
+        "arn:${Partition}:a4b:${Region}:${Account}:user/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

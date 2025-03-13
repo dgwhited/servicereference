@@ -1,0 +1,193 @@
+{
+  "Name": "arc-zonal-shift",
+  "Actions": [
+    {
+      "Name": "CancelZonalShift",
+      "ActionConditionKeys": [
+        "arc-zonal-shift:ResourceIdentifier",
+        "aws:ResourceTag/${TagKey}",
+        "elasticloadbalancing:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "ALB"
+        },
+        {
+          "Name": "NLB"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePracticeRunConfiguration",
+      "ActionConditionKeys": [
+        "arc-zonal-shift:ResourceIdentifier",
+        "aws:ResourceTag/${TagKey}",
+        "elasticloadbalancing:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "ALB"
+        },
+        {
+          "Name": "NLB"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePracticeRunConfiguration",
+      "ActionConditionKeys": [
+        "arc-zonal-shift:ResourceIdentifier",
+        "aws:ResourceTag/${TagKey}",
+        "elasticloadbalancing:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "ALB"
+        },
+        {
+          "Name": "NLB"
+        }
+      ]
+    },
+    {
+      "Name": "GetAutoshiftObserverNotificationStatus"
+    },
+    {
+      "Name": "GetManagedResource",
+      "ActionConditionKeys": [
+        "arc-zonal-shift:ResourceIdentifier",
+        "aws:ResourceTag/${TagKey}",
+        "elasticloadbalancing:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "ALB"
+        },
+        {
+          "Name": "NLB"
+        }
+      ]
+    },
+    {
+      "Name": "ListAutoshifts"
+    },
+    {
+      "Name": "ListManagedResources"
+    },
+    {
+      "Name": "ListZonalShifts"
+    },
+    {
+      "Name": "StartZonalShift",
+      "ActionConditionKeys": [
+        "arc-zonal-shift:ResourceIdentifier",
+        "aws:ResourceTag/${TagKey}",
+        "elasticloadbalancing:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "ALB"
+        },
+        {
+          "Name": "NLB"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAutoshiftObserverNotificationStatus"
+    },
+    {
+      "Name": "UpdatePracticeRunConfiguration",
+      "ActionConditionKeys": [
+        "arc-zonal-shift:ResourceIdentifier",
+        "aws:ResourceTag/${TagKey}",
+        "elasticloadbalancing:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "ALB"
+        },
+        {
+          "Name": "NLB"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateZonalAutoshiftConfiguration",
+      "ActionConditionKeys": [
+        "arc-zonal-shift:ResourceIdentifier",
+        "aws:ResourceTag/${TagKey}",
+        "elasticloadbalancing:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "ALB"
+        },
+        {
+          "Name": "NLB"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateZonalShift",
+      "ActionConditionKeys": [
+        "arc-zonal-shift:ResourceIdentifier",
+        "aws:ResourceTag/${TagKey}",
+        "elasticloadbalancing:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "ALB"
+        },
+        {
+          "Name": "NLB"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "arc-zonal-shift:ResourceIdentifier",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "elasticloadbalancing:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "ALB",
+      "ARNFormats": [
+        "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:loadbalancer/app/${LoadBalancerName}/${LoadBalancerId}"
+      ],
+      "ConditionKeys": [
+        "arc-zonal-shift:ResourceIdentifier",
+        "aws:ResourceTag/${TagKey}",
+        "elasticloadbalancing:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "NLB",
+      "ARNFormats": [
+        "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:loadbalancer/net/${LoadBalancerName}/${LoadBalancerId}"
+      ],
+      "ConditionKeys": [
+        "arc-zonal-shift:ResourceIdentifier",
+        "aws:ResourceTag/${TagKey}",
+        "elasticloadbalancing:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

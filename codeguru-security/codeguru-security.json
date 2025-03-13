@@ -1,0 +1,139 @@
+{
+  "Name": "codeguru-security",
+  "Actions": [
+    {
+      "Name": "BatchGetFindings",
+      "Resources": [
+        {
+          "Name": "ScanName"
+        }
+      ]
+    },
+    {
+      "Name": "CreateScan",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ScanName"
+        }
+      ]
+    },
+    {
+      "Name": "CreateUploadUrl",
+      "Resources": [
+        {
+          "Name": "ScanName"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteScansByCategory"
+    },
+    {
+      "Name": "GetAccountConfiguration"
+    },
+    {
+      "Name": "GetFindings",
+      "Resources": [
+        {
+          "Name": "ScanName"
+        }
+      ]
+    },
+    {
+      "Name": "GetMetricsSummary"
+    },
+    {
+      "Name": "GetScan",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "ScanName"
+        }
+      ]
+    },
+    {
+      "Name": "ListFindings"
+    },
+    {
+      "Name": "ListFindingsMetrics"
+    },
+    {
+      "Name": "ListScans"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "ScanName"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ScanName"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ScanName"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAccountConfiguration"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "ScanName",
+      "ARNFormats": [
+        "arn:${Partition}:codeguru-security:${Region}:${Account}:scans/${ScanName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

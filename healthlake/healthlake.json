@@ -1,0 +1,263 @@
+{
+  "Name": "healthlake",
+  "Actions": [
+    {
+      "Name": "CancelFHIRExportJobWithDelete",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFHIRDatastore",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateResource",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFHIRDatastore",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResource",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFHIRDatastore",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFHIRExportJob",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFHIRExportJobWithGet",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFHIRImportJob",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "GetCapabilities",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "GetExportedFile",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "GetHistoryByResourceId",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "ListFHIRDatastores"
+    },
+    {
+      "Name": "ListFHIRExportJobs",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "ListFHIRImportJobs",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "ReadResource",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "SearchEverything",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "SearchWithGet",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "SearchWithPost",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "StartFHIRExportJob",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "StartFHIRExportJobWithGet",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "StartFHIRExportJobWithPost",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "StartFHIRImportJob",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateResource",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "VersionReadResource",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "datastore",
+      "ARNFormats": [
+        "arn:${Partition}:healthlake:${Region}:${Account}:datastore/fhir/${DatastoreId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

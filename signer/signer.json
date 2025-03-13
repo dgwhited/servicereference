@@ -1,0 +1,209 @@
+{
+  "Name": "signer",
+  "Actions": [
+    {
+      "Name": "AddProfilePermission",
+      "Resources": [
+        {
+          "Name": "signing-profile"
+        }
+      ]
+    },
+    {
+      "Name": "CancelSigningProfile",
+      "ActionConditionKeys": [
+        "signer:ProfileVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "signing-profile"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSigningJob",
+      "Resources": [
+        {
+          "Name": "signing-job"
+        }
+      ]
+    },
+    {
+      "Name": "GetRevocationStatus",
+      "Resources": [
+        {
+          "Name": "signing-job"
+        },
+        {
+          "Name": "signing-profile"
+        }
+      ]
+    },
+    {
+      "Name": "GetSigningPlatform"
+    },
+    {
+      "Name": "GetSigningProfile",
+      "ActionConditionKeys": [
+        "signer:ProfileVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "signing-profile"
+        }
+      ]
+    },
+    {
+      "Name": "ListProfilePermissions",
+      "Resources": [
+        {
+          "Name": "signing-profile"
+        }
+      ]
+    },
+    {
+      "Name": "ListSigningJobs"
+    },
+    {
+      "Name": "ListSigningPlatforms"
+    },
+    {
+      "Name": "ListSigningProfiles"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "signing-profile"
+        }
+      ]
+    },
+    {
+      "Name": "PutSigningProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "RemoveProfilePermission",
+      "Resources": [
+        {
+          "Name": "signing-profile"
+        }
+      ]
+    },
+    {
+      "Name": "RevokeSignature",
+      "ActionConditionKeys": [
+        "signer:ProfileVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "signing-job"
+        }
+      ]
+    },
+    {
+      "Name": "RevokeSigningProfile",
+      "ActionConditionKeys": [
+        "signer:ProfileVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "signing-profile"
+        }
+      ]
+    },
+    {
+      "Name": "SignPayload",
+      "ActionConditionKeys": [
+        "signer:ProfileVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "signing-profile"
+        }
+      ]
+    },
+    {
+      "Name": "StartSigningJob",
+      "ActionConditionKeys": [
+        "signer:ProfileVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "signing-profile"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "signing-profile"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "signing-profile"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "signer:ProfileVersion",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "signing-job",
+      "ARNFormats": [
+        "arn:${Partition}:signer:${Region}:${Account}:/signing-jobs/${JobId}"
+      ]
+    },
+    {
+      "Name": "signing-profile",
+      "ARNFormats": [
+        "arn:${Partition}:signer:${Region}:${Account}:/signing-profiles/${ProfileName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

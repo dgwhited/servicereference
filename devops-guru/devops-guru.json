@@ -1,0 +1,131 @@
+{
+  "Name": "devops-guru",
+  "Actions": [
+    {
+      "Name": "AddNotificationChannel",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInsight"
+    },
+    {
+      "Name": "DescribeAccountHealth"
+    },
+    {
+      "Name": "DescribeAccountOverview"
+    },
+    {
+      "Name": "DescribeAnomaly"
+    },
+    {
+      "Name": "DescribeEventSourcesConfig"
+    },
+    {
+      "Name": "DescribeFeedback"
+    },
+    {
+      "Name": "DescribeInsight"
+    },
+    {
+      "Name": "DescribeOrganizationHealth"
+    },
+    {
+      "Name": "DescribeOrganizationOverview"
+    },
+    {
+      "Name": "DescribeOrganizationResourceCollectionHealth"
+    },
+    {
+      "Name": "DescribeResourceCollectionHealth"
+    },
+    {
+      "Name": "DescribeServiceIntegration"
+    },
+    {
+      "Name": "GetCostEstimation"
+    },
+    {
+      "Name": "GetResourceCollection"
+    },
+    {
+      "Name": "ListAnomaliesForInsight",
+      "ActionConditionKeys": [
+        "devops-guru:ServiceNames"
+      ]
+    },
+    {
+      "Name": "ListAnomalousLogGroups"
+    },
+    {
+      "Name": "ListEvents"
+    },
+    {
+      "Name": "ListInsights"
+    },
+    {
+      "Name": "ListMonitoredResources"
+    },
+    {
+      "Name": "ListNotificationChannels"
+    },
+    {
+      "Name": "ListOrganizationInsights"
+    },
+    {
+      "Name": "ListRecommendations"
+    },
+    {
+      "Name": "PutFeedback"
+    },
+    {
+      "Name": "RemoveNotificationChannel",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "SearchInsights",
+      "ActionConditionKeys": [
+        "devops-guru:ServiceNames"
+      ]
+    },
+    {
+      "Name": "SearchOrganizationInsights"
+    },
+    {
+      "Name": "StartCostEstimation"
+    },
+    {
+      "Name": "UpdateEventSourcesConfig"
+    },
+    {
+      "Name": "UpdateResourceCollection"
+    },
+    {
+      "Name": "UpdateServiceIntegration"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "devops-guru:ServiceNames",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "topic",
+      "ARNFormats": [
+        "arn:${Partition}:sns:${Region}:${Account}:${TopicName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

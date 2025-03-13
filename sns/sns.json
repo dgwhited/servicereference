@@ -1,0 +1,262 @@
+{
+  "Name": "sns",
+  "Actions": [
+    {
+      "Name": "AddPermission",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "CheckIfPhoneNumberIsOptedOut"
+    },
+    {
+      "Name": "ConfirmSubscription",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePlatformApplication"
+    },
+    {
+      "Name": "CreatePlatformEndpoint"
+    },
+    {
+      "Name": "CreateSMSSandboxPhoneNumber"
+    },
+    {
+      "Name": "CreateTopic",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEndpoint"
+    },
+    {
+      "Name": "DeletePlatformApplication"
+    },
+    {
+      "Name": "DeleteSMSSandboxPhoneNumber"
+    },
+    {
+      "Name": "DeleteTopic",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataProtectionPolicy",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "GetEndpointAttributes"
+    },
+    {
+      "Name": "GetPlatformApplicationAttributes"
+    },
+    {
+      "Name": "GetSMSAttributes"
+    },
+    {
+      "Name": "GetSMSSandboxAccountStatus"
+    },
+    {
+      "Name": "GetSubscriptionAttributes"
+    },
+    {
+      "Name": "GetTopicAttributes",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "ListEndpointsByPlatformApplication"
+    },
+    {
+      "Name": "ListOriginationNumbers"
+    },
+    {
+      "Name": "ListPhoneNumbersOptedOut"
+    },
+    {
+      "Name": "ListPlatformApplications"
+    },
+    {
+      "Name": "ListSMSSandboxPhoneNumbers"
+    },
+    {
+      "Name": "ListSubscriptions"
+    },
+    {
+      "Name": "ListSubscriptionsByTopic",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "ListTopics"
+    },
+    {
+      "Name": "OptInPhoneNumber"
+    },
+    {
+      "Name": "Publish",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "PutDataProtectionPolicy",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "RemovePermission",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "SetEndpointAttributes"
+    },
+    {
+      "Name": "SetPlatformApplicationAttributes"
+    },
+    {
+      "Name": "SetSMSAttributes"
+    },
+    {
+      "Name": "SetSubscriptionAttributes"
+    },
+    {
+      "Name": "SetTopicAttributes",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "Subscribe",
+      "ActionConditionKeys": [
+        "sns:Endpoint",
+        "sns:Protocol"
+      ],
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "Unsubscribe"
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "VerifySMSSandboxPhoneNumber"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "sns:Endpoint",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sns:Protocol",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "topic",
+      "ARNFormats": [
+        "arn:${Partition}:sns:${Region}:${Account}:${TopicName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,2261 @@
+{
+  "Name": "ses",
+  "Actions": [
+    {
+      "Name": "AllowVendedLogDeliveryForResource",
+      "Resources": [
+        {
+          "Name": "mailmanager-ingress-point"
+        },
+        {
+          "Name": "mailmanager-rule-set"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetMetricData",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        },
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "CancelExportJob",
+      "ActionConditionKeys": [
+        "ses:ApiVersion",
+        "ses:ExportSourceType"
+      ],
+      "Resources": [
+        {
+          "Name": "export-job"
+        }
+      ]
+    },
+    {
+      "Name": "CloneReceiptRuleSet",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "CreateAddonInstance",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "ses:AddonSubscriptionArn"
+      ]
+    },
+    {
+      "Name": "CreateAddonSubscription",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateAddressList",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateAddressListImportJob",
+      "Resources": [
+        {
+          "Name": "mailmanager-address-list",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreateArchive",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateConfigurationSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConfigurationSetEventDestination",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConfigurationSetTrackingOptions",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "CreateContact",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "contact-list"
+        }
+      ]
+    },
+    {
+      "Name": "CreateContactList",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "contact-list"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCustomVerificationEmailTemplate",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "custom-verification-email-template"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDedicatedIpPool",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "dedicated-ip-pool"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDeliverabilityTestReport",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEmailIdentity",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEmailIdentityPolicy",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEmailTemplate",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "CreateExportJob",
+      "ActionConditionKeys": [
+        "ses:ApiVersion",
+        "ses:ExportSourceType"
+      ]
+    },
+    {
+      "Name": "CreateImportJob",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "CreateIngressPoint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "ses:MailManagerRuleSetArn",
+        "ses:MailManagerTrafficPolicyArn"
+      ]
+    },
+    {
+      "Name": "CreateMultiRegionEndpoint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "CreateReceiptFilter",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "CreateReceiptRule",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "CreateReceiptRuleSet",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "CreateRelay",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateRuleSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateTemplate",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "CreateTrafficPolicy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteAddonInstance",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "addon-instance"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAddonSubscription",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "addon-subscription"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAddressList",
+      "Resources": [
+        {
+          "Name": "mailmanager-address-list",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DeleteArchive",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "mailmanager-archive"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfigurationSet",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfigurationSetEventDestination",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfigurationSetTrackingOptions",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "DeleteContact",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "contact-list"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteContactList",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "contact-list"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCustomVerificationEmailTemplate",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "custom-verification-email-template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDedicatedIpPool",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "dedicated-ip-pool"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEmailIdentity",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEmailIdentityPolicy",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEmailTemplate",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIdentity",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "DeleteIdentityPolicy",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "DeleteIngressPoint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "mailmanager-ingress-point"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMultiRegionEndpoint",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "multi-region-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteReceiptFilter",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "DeleteReceiptRule",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "DeleteReceiptRuleSet",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "DeleteRelay",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "mailmanager-smtp-relay"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRuleSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "mailmanager-rule-set"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSuppressedDestination",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "DeleteTemplate",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "DeleteTrafficPolicy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "mailmanager-traffic-policy"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteVerifiedEmailAddress",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "DeregisterMemberFromAddressList",
+      "Resources": [
+        {
+          "Name": "mailmanager-address-list",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DescribeActiveReceiptRuleSet",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "DescribeConfigurationSet",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "DescribeReceiptRule",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "DescribeReceiptRuleSet",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "GetAccount",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "GetAccountSendingEnabled",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "GetAddonInstance",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "addon-instance"
+        }
+      ]
+    },
+    {
+      "Name": "GetAddonSubscription",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "addon-subscription"
+        }
+      ]
+    },
+    {
+      "Name": "GetAddressList",
+      "Resources": [
+        {
+          "Name": "mailmanager-address-list",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "GetAddressListImportJob",
+      "Resources": [
+        {
+          "Name": "mailmanager-address-list",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "GetArchive",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "mailmanager-archive"
+        }
+      ]
+    },
+    {
+      "Name": "GetArchiveExport",
+      "Resources": [
+        {
+          "Name": "mailmanager-archive"
+        }
+      ]
+    },
+    {
+      "Name": "GetArchiveMessage",
+      "Resources": [
+        {
+          "Name": "mailmanager-archive"
+        }
+      ]
+    },
+    {
+      "Name": "GetArchiveMessageContent",
+      "Resources": [
+        {
+          "Name": "mailmanager-archive"
+        }
+      ]
+    },
+    {
+      "Name": "GetArchiveSearch",
+      "Resources": [
+        {
+          "Name": "mailmanager-archive"
+        }
+      ]
+    },
+    {
+      "Name": "GetArchiveSearchResults",
+      "Resources": [
+        {
+          "Name": "mailmanager-archive"
+        }
+      ]
+    },
+    {
+      "Name": "GetBlacklistReports",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "GetConfigurationSet",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfigurationSetEventDestinations",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        }
+      ]
+    },
+    {
+      "Name": "GetContact",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "contact-list"
+        }
+      ]
+    },
+    {
+      "Name": "GetContactList",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "contact-list"
+        }
+      ]
+    },
+    {
+      "Name": "GetCustomVerificationEmailTemplate",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "custom-verification-email-template"
+        }
+      ]
+    },
+    {
+      "Name": "GetDedicatedIp",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "GetDedicatedIpPool",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "dedicated-ip-pool"
+        }
+      ]
+    },
+    {
+      "Name": "GetDedicatedIps",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "dedicated-ip-pool"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeliverabilityDashboardOptions",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "GetDeliverabilityTestReport",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "deliverability-test-report"
+        }
+      ]
+    },
+    {
+      "Name": "GetDomainDeliverabilityCampaign",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "GetDomainStatisticsReport",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "GetEmailIdentity",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "GetEmailIdentityPolicies",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "GetEmailTemplate",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "GetExportJob",
+      "ActionConditionKeys": [
+        "ses:ApiVersion",
+        "ses:ExportSourceType"
+      ],
+      "Resources": [
+        {
+          "Name": "export-job"
+        }
+      ]
+    },
+    {
+      "Name": "GetIdentityDkimAttributes",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "GetIdentityMailFromDomainAttributes",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "GetIdentityNotificationAttributes",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "GetIdentityPolicies",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "GetIdentityVerificationAttributes",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "GetImportJob",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "import-job"
+        }
+      ]
+    },
+    {
+      "Name": "GetIngressPoint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "mailmanager-ingress-point"
+        }
+      ]
+    },
+    {
+      "Name": "GetMemberOfAddressList",
+      "Resources": [
+        {
+          "Name": "mailmanager-address-list",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "GetMessageInsights",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "GetMultiRegionEndpoint",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "multi-region-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "GetRelay",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "mailmanager-smtp-relay"
+        }
+      ]
+    },
+    {
+      "Name": "GetRuleSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "mailmanager-rule-set"
+        }
+      ]
+    },
+    {
+      "Name": "GetSendQuota",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "GetSendStatistics",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "GetSuppressedDestination",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "GetTemplate",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "GetTrafficPolicy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "mailmanager-traffic-policy"
+        }
+      ]
+    },
+    {
+      "Name": "ListAddonInstances"
+    },
+    {
+      "Name": "ListAddonSubscriptions"
+    },
+    {
+      "Name": "ListAddressListImportJobs",
+      "Resources": [
+        {
+          "Name": "mailmanager-address-list",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "ListAddressLists"
+    },
+    {
+      "Name": "ListArchiveExports"
+    },
+    {
+      "Name": "ListArchiveSearches"
+    },
+    {
+      "Name": "ListArchives"
+    },
+    {
+      "Name": "ListConfigurationSets",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ListContactLists",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ListContacts",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "contact-list"
+        }
+      ]
+    },
+    {
+      "Name": "ListCustomVerificationEmailTemplates",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ListDedicatedIpPools",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ListDeliverabilityTestReports",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ListDomainDeliverabilityCampaigns",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ListEmailIdentities",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ListEmailTemplates",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ListExportJobs",
+      "ActionConditionKeys": [
+        "ses:ApiVersion",
+        "ses:ExportSourceType"
+      ]
+    },
+    {
+      "Name": "ListIdentities",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ListIdentityPolicies",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ListImportJobs",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ListIngressPoints"
+    },
+    {
+      "Name": "ListMembersOfAddressList",
+      "Resources": [
+        {
+          "Name": "mailmanager-address-list",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "ListMultiRegionEndpoints",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ListReceiptFilters",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ListReceiptRuleSets",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ListRecommendations",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "ListRelays"
+    },
+    {
+      "Name": "ListRuleSets"
+    },
+    {
+      "Name": "ListSuppressedDestinations",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "addon-instance"
+        },
+        {
+          "Name": "addon-subscription"
+        },
+        {
+          "Name": "configuration-set"
+        },
+        {
+          "Name": "contact-list"
+        },
+        {
+          "Name": "dedicated-ip-pool"
+        },
+        {
+          "Name": "deliverability-test-report"
+        },
+        {
+          "Name": "identity"
+        },
+        {
+          "Name": "mailmanager-archive"
+        },
+        {
+          "Name": "mailmanager-ingress-point"
+        },
+        {
+          "Name": "mailmanager-rule-set"
+        },
+        {
+          "Name": "mailmanager-smtp-relay"
+        },
+        {
+          "Name": "mailmanager-traffic-policy"
+        }
+      ],
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ListTemplates",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ListTrafficPolicies"
+    },
+    {
+      "Name": "ListVerifiedEmailAddresses",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "PutAccountDedicatedIpWarmupAttributes",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "PutAccountDetails",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "PutAccountSendingAttributes",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "PutAccountSuppressionAttributes",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "PutAccountVdmAttributes",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "PutConfigurationSetArchivingOptions",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        }
+      ]
+    },
+    {
+      "Name": "PutConfigurationSetDeliveryOptions",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        }
+      ]
+    },
+    {
+      "Name": "PutConfigurationSetReputationOptions",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        }
+      ]
+    },
+    {
+      "Name": "PutConfigurationSetSendingOptions",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        }
+      ]
+    },
+    {
+      "Name": "PutConfigurationSetSuppressionOptions",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        }
+      ]
+    },
+    {
+      "Name": "PutConfigurationSetTrackingOptions",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        }
+      ]
+    },
+    {
+      "Name": "PutConfigurationSetVdmOptions",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        }
+      ]
+    },
+    {
+      "Name": "PutDedicatedIpInPool",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "dedicated-ip-pool"
+        }
+      ]
+    },
+    {
+      "Name": "PutDedicatedIpPoolScalingAttributes",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "dedicated-ip-pool"
+        }
+      ]
+    },
+    {
+      "Name": "PutDedicatedIpWarmupAttributes",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "PutDeliverabilityDashboardOption",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "PutEmailIdentityConfigurationSetAttributes",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        },
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "PutEmailIdentityDkimAttributes",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "PutEmailIdentityDkimSigningAttributes",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "PutEmailIdentityFeedbackAttributes",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "PutEmailIdentityMailFromAttributes",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "PutIdentityPolicy",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "PutSuppressedDestination",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "RegisterMemberToAddressList",
+      "Resources": [
+        {
+          "Name": "mailmanager-address-list",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "ReorderReceiptRuleSet",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "ReplicateEmailIdentityDkimSigningKey",
+      "ActionConditionKeys": [
+        "ses:ReplicaRegion"
+      ],
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "SendBounce",
+      "ActionConditionKeys": [
+        "ses:ApiVersion",
+        "ses:FromAddress"
+      ],
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "SendBulkEmail",
+      "ActionConditionKeys": [
+        "ses:ApiVersion",
+        "ses:MultiRegionEndpointId"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        },
+        {
+          "Name": "identity"
+        },
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "SendBulkTemplatedEmail",
+      "ActionConditionKeys": [
+        "ses:ApiVersion",
+        "ses:FeedbackAddress",
+        "ses:FromAddress",
+        "ses:FromDisplayName",
+        "ses:Recipients"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        },
+        {
+          "Name": "identity"
+        },
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "SendCustomVerificationEmail",
+      "ActionConditionKeys": [
+        "ses:ApiVersion",
+        "ses:FeedbackAddress",
+        "ses:FromAddress",
+        "ses:FromDisplayName",
+        "ses:Recipients"
+      ],
+      "Resources": [
+        {
+          "Name": "custom-verification-email-template"
+        },
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "SendEmail",
+      "ActionConditionKeys": [
+        "ses:ApiVersion",
+        "ses:FeedbackAddress",
+        "ses:FromAddress",
+        "ses:FromDisplayName",
+        "ses:MultiRegionEndpointId",
+        "ses:Recipients"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        },
+        {
+          "Name": "identity"
+        },
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "SendRawEmail",
+      "ActionConditionKeys": [
+        "ses:ApiVersion",
+        "ses:FeedbackAddress",
+        "ses:FromAddress",
+        "ses:FromDisplayName",
+        "ses:Recipients"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        },
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "SendTemplatedEmail",
+      "ActionConditionKeys": [
+        "ses:ApiVersion",
+        "ses:FeedbackAddress",
+        "ses:FromAddress",
+        "ses:FromDisplayName",
+        "ses:Recipients"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        },
+        {
+          "Name": "identity"
+        },
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "SetActiveReceiptRuleSet",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "SetIdentityDkimEnabled",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "SetIdentityFeedbackForwardingEnabled",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "SetIdentityHeadersInNotificationsEnabled",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "SetIdentityMailFromDomain",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "SetIdentityNotificationTopic",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "SetReceiptRulePosition",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "StartAddressListImportJob",
+      "Resources": [
+        {
+          "Name": "mailmanager-address-list",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "StartArchiveExport",
+      "Resources": [
+        {
+          "Name": "mailmanager-archive"
+        }
+      ]
+    },
+    {
+      "Name": "StartArchiveSearch",
+      "Resources": [
+        {
+          "Name": "mailmanager-archive"
+        }
+      ]
+    },
+    {
+      "Name": "StopAddressListImportJob",
+      "Resources": [
+        {
+          "Name": "mailmanager-address-list",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "StopArchiveExport",
+      "Resources": [
+        {
+          "Name": "mailmanager-archive"
+        }
+      ]
+    },
+    {
+      "Name": "StopArchiveSearch",
+      "Resources": [
+        {
+          "Name": "mailmanager-archive"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "addon-instance"
+        },
+        {
+          "Name": "addon-subscription"
+        },
+        {
+          "Name": "configuration-set"
+        },
+        {
+          "Name": "contact-list"
+        },
+        {
+          "Name": "dedicated-ip-pool"
+        },
+        {
+          "Name": "deliverability-test-report"
+        },
+        {
+          "Name": "identity"
+        },
+        {
+          "Name": "mailmanager-address-list"
+        },
+        {
+          "Name": "mailmanager-archive"
+        },
+        {
+          "Name": "mailmanager-ingress-point"
+        },
+        {
+          "Name": "mailmanager-rule-set"
+        },
+        {
+          "Name": "mailmanager-smtp-relay"
+        },
+        {
+          "Name": "mailmanager-traffic-policy"
+        }
+      ]
+    },
+    {
+      "Name": "TestRenderEmailTemplate",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "TestRenderTemplate",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "addon-instance"
+        },
+        {
+          "Name": "addon-subscription"
+        },
+        {
+          "Name": "configuration-set"
+        },
+        {
+          "Name": "contact-list"
+        },
+        {
+          "Name": "dedicated-ip-pool"
+        },
+        {
+          "Name": "deliverability-test-report"
+        },
+        {
+          "Name": "identity"
+        },
+        {
+          "Name": "mailmanager-address-list"
+        },
+        {
+          "Name": "mailmanager-archive"
+        },
+        {
+          "Name": "mailmanager-ingress-point"
+        },
+        {
+          "Name": "mailmanager-rule-set"
+        },
+        {
+          "Name": "mailmanager-smtp-relay"
+        },
+        {
+          "Name": "mailmanager-traffic-policy"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAccountSendingEnabled",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "UpdateArchive",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "mailmanager-archive"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConfigurationSetEventDestination",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConfigurationSetReputationMetricsEnabled",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "UpdateConfigurationSetSendingEnabled",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "UpdateConfigurationSetTrackingOptions",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "UpdateContact",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "contact-list"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateContactList",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "contact-list"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCustomVerificationEmailTemplate",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "custom-verification-email-template"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEmailIdentityPolicy",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "identity"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEmailTemplate",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ],
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIngressPoint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "ses:MailManagerRuleSetArn",
+        "ses:MailManagerTrafficPolicyArn"
+      ],
+      "Resources": [
+        {
+          "Name": "mailmanager-ingress-point"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateReceiptRule",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "UpdateRelay",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "mailmanager-smtp-relay"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRuleSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "mailmanager-rule-set"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTemplate",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "UpdateTrafficPolicy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "mailmanager-traffic-policy"
+        }
+      ]
+    },
+    {
+      "Name": "VerifyDomainDkim",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "VerifyDomainIdentity",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "VerifyEmailAddress",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    },
+    {
+      "Name": "VerifyEmailIdentity",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "ses:AddonSubscriptionArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "ses:ApiVersion",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ses:ExportSourceType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ses:FeedbackAddress",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ses:FromAddress",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ses:FromDisplayName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ses:MailManagerIngressPointType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ses:MailManagerRuleSetArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "ses:MailManagerTrafficPolicyArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "ses:MultiRegionEndpointId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ses:Recipients",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "ses:ReplicaRegion",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "addon-instance",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:addon-instance/${AddonInstanceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "addon-subscription",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:addon-subscription/${AddonSubscriptionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "configuration-set",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:configuration-set/${ConfigurationSetName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "contact-list",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:contact-list/${ContactListName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "custom-verification-email-template",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:custom-verification-email-template/${TemplateName}"
+      ]
+    },
+    {
+      "Name": "dedicated-ip-pool",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:dedicated-ip-pool/${DedicatedIPPool}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "deliverability-test-report",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:deliverability-test-report/${ReportId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "export-job",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:export-job/${ExportJobId}"
+      ]
+    },
+    {
+      "Name": "identity",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:identity/${IdentityName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "import-job",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:import-job/${ImportJobId}"
+      ]
+    },
+    {
+      "Name": "mailmanager-address-list",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:mailmanager-address-list/${AddressListId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "mailmanager-archive",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:mailmanager-archive/${ArchiveId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "mailmanager-ingress-point",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:mailmanager-ingress-point/${IngressPointId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:MailManagerIngressPointType"
+      ]
+    },
+    {
+      "Name": "mailmanager-rule-set",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:mailmanager-rule-set/${RuleSetId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "mailmanager-smtp-relay",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:mailmanager-smtp-relay/${RelayId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "mailmanager-traffic-policy",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:mailmanager-traffic-policy/${TrafficPolicyId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "multi-region-endpoint",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:multi-region-endpoint/${EndpointName}"
+      ]
+    },
+    {
+      "Name": "template",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:template/${TemplateName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

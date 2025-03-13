@@ -1,0 +1,231 @@
+{
+  "Name": "resource-explorer-2",
+  "Actions": [
+    {
+      "Name": "AssociateDefaultView"
+    },
+    {
+      "Name": "BatchGetView"
+    },
+    {
+      "Name": "CreateIndex",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateManagedView"
+    },
+    {
+      "Name": "CreateView",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteIndex",
+      "Resources": [
+        {
+          "Name": "index"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Resources": [
+        {
+          "Name": "view"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteView",
+      "Resources": [
+        {
+          "Name": "view"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateDefaultView"
+    },
+    {
+      "Name": "GetAccountLevelServiceConfiguration"
+    },
+    {
+      "Name": "GetDefaultView"
+    },
+    {
+      "Name": "GetIndex"
+    },
+    {
+      "Name": "GetManagedView",
+      "Resources": [
+        {
+          "Name": "managed-view"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "Resources": [
+        {
+          "Name": "view"
+        }
+      ]
+    },
+    {
+      "Name": "GetView",
+      "Resources": [
+        {
+          "Name": "view"
+        }
+      ]
+    },
+    {
+      "Name": "ListIndexes"
+    },
+    {
+      "Name": "ListIndexesForMembers"
+    },
+    {
+      "Name": "ListManagedViews"
+    },
+    {
+      "Name": "ListSupportedResourceTypes"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "index"
+        },
+        {
+          "Name": "view"
+        }
+      ]
+    },
+    {
+      "Name": "ListViews"
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "Resources": [
+        {
+          "Name": "view"
+        }
+      ]
+    },
+    {
+      "Name": "Search",
+      "ActionConditionKeys": [
+        "resource-explorer-2:Operation"
+      ],
+      "Resources": [
+        {
+          "Name": "view"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "index"
+        },
+        {
+          "Name": "view"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "index"
+        },
+        {
+          "Name": "view"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIndexType",
+      "Resources": [
+        {
+          "Name": "index"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateView",
+      "Resources": [
+        {
+          "Name": "view"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "resource-explorer-2:Operation",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "index",
+      "ARNFormats": [
+        "arn:${Partition}:resource-explorer-2:${Region}:${Account}:index/${IndexUuid}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "managed-view",
+      "ARNFormats": [
+        "arn:${Partition}:resource-explorer-2:${Region}:${Account}:managed-view/${ManagedViewName}/${ManagedViewUuid}"
+      ]
+    },
+    {
+      "Name": "view",
+      "ARNFormats": [
+        "arn:${Partition}:resource-explorer-2:${Region}:${Account}:view/${ViewName}/${ViewUuid}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,142 @@
+{
+  "Name": "snow-device-management",
+  "Actions": [
+    {
+      "Name": "CancelTask",
+      "Resources": [
+        {
+          "Name": "task"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTask",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DescribeDevice",
+      "Resources": [
+        {
+          "Name": "managed-device"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDeviceEc2Instances",
+      "Resources": [
+        {
+          "Name": "managed-device"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeExecution"
+    },
+    {
+      "Name": "DescribeTask",
+      "Resources": [
+        {
+          "Name": "task"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeviceResources",
+      "Resources": [
+        {
+          "Name": "managed-device"
+        }
+      ]
+    },
+    {
+      "Name": "ListDevices"
+    },
+    {
+      "Name": "ListExecutions"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "ListTasks"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "managed-device"
+        },
+        {
+          "Name": "task"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "managed-device"
+        },
+        {
+          "Name": "task"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "managed-device",
+      "ARNFormats": [
+        "arn:${Partition}:snow-device-management:${Region}:${Account}:managed-device/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "task",
+      "ARNFormats": [
+        "arn:${Partition}:snow-device-management:${Region}:${Account}:task/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

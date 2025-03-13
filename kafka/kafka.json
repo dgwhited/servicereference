@@ -1,0 +1,492 @@
+{
+  "Name": "kafka",
+  "Actions": [
+    {
+      "Name": "BatchAssociateScramSecret",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDisassociateScramSecret",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCluster",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "CreateClusterV2",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConfiguration",
+      "Resources": [
+        {
+          "Name": "configuration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateReplicator",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "replicator"
+        }
+      ]
+    },
+    {
+      "Name": "CreateVpcConnection",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "vpc-connection"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteClusterPolicy",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfiguration",
+      "Resources": [
+        {
+          "Name": "configuration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteReplicator",
+      "Resources": [
+        {
+          "Name": "replicator"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteVpcConnection",
+      "Resources": [
+        {
+          "Name": "vpc-connection"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeClusterOperation"
+    },
+    {
+      "Name": "DescribeClusterOperationV2"
+    },
+    {
+      "Name": "DescribeClusterV2",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeConfiguration",
+      "Resources": [
+        {
+          "Name": "configuration"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeConfigurationRevision",
+      "Resources": [
+        {
+          "Name": "configuration"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeReplicator",
+      "Resources": [
+        {
+          "Name": "replicator"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeVpcConnection",
+      "Resources": [
+        {
+          "Name": "vpc-connection"
+        }
+      ]
+    },
+    {
+      "Name": "GetBootstrapBrokers"
+    },
+    {
+      "Name": "GetClusterPolicy",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "GetCompatibleKafkaVersions"
+    },
+    {
+      "Name": "ListClientVpcConnections",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListClusterOperations",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListClusterOperationsV2",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListClusters"
+    },
+    {
+      "Name": "ListClustersV2"
+    },
+    {
+      "Name": "ListConfigurationRevisions",
+      "Resources": [
+        {
+          "Name": "configuration"
+        }
+      ]
+    },
+    {
+      "Name": "ListConfigurations"
+    },
+    {
+      "Name": "ListKafkaVersions"
+    },
+    {
+      "Name": "ListNodes",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListReplicators"
+    },
+    {
+      "Name": "ListScramSecrets",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListVpcConnections"
+    },
+    {
+      "Name": "PutClusterPolicy",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "RebootBroker",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "RejectClientVpcConnection",
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "vpc-connection"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "vpc-connection"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "vpc-connection"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBrokerCount",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBrokerStorage",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBrokerType",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateClusterConfiguration",
+      "Resources": [
+        {
+          "Name": "cluster"
+        },
+        {
+          "Name": "configuration"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateClusterKafkaVersion",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConfiguration",
+      "Resources": [
+        {
+          "Name": "configuration"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConnectivity",
+      "ActionConditionKeys": [
+        "kafka:publicAccessEnabled"
+      ],
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMonitoring",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateReplicationInfo",
+      "Resources": [
+        {
+          "Name": "replicator"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSecurity",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStorage",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "kafka:publicAccessEnabled",
+      "Types": [
+        "Bool"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "cluster",
+      "ARNFormats": [
+        "arn:${Partition}:kafka:${Region}:${Account}:cluster/${ClusterName}/${Uuid}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "configuration",
+      "ARNFormats": [
+        "arn:${Partition}:kafka:${Region}:${Account}:configuration/${ConfigurationName}/${Uuid}"
+      ]
+    },
+    {
+      "Name": "group",
+      "ARNFormats": [
+        "arn:${Partition}:kafka:${Region}:${Account}:group/${ClusterName}/${ClusterUuid}/${GroupName}"
+      ]
+    },
+    {
+      "Name": "replicator",
+      "ARNFormats": [
+        "arn:${Partition}:kafka:${Region}:${Account}:replicator/${ReplicatorName}/${Uuid}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "topic",
+      "ARNFormats": [
+        "arn:${Partition}:kafka:${Region}:${Account}:topic/${ClusterName}/${ClusterUuid}/${TopicName}"
+      ]
+    },
+    {
+      "Name": "transactional-id",
+      "ARNFormats": [
+        "arn:${Partition}:kafka:${Region}:${Account}:transactional-id/${ClusterName}/${ClusterUuid}/${TransactionalId}"
+      ]
+    },
+    {
+      "Name": "vpc-connection",
+      "ARNFormats": [
+        "arn:${Partition}:kafka:${Region}:${VpcOwnerAccount}:vpc-connection/${ClusterOwnerAccount}/${ClusterName}/${Uuid}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

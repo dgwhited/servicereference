@@ -1,0 +1,99 @@
+{
+  "Name": "qdeveloper",
+  "Actions": [
+    {
+      "Name": "ExportArtifact",
+      "Resources": [
+        {
+          "Name": "codeTransformation"
+        }
+      ]
+    },
+    {
+      "Name": "ImportArtifact",
+      "Resources": [
+        {
+          "Name": "codeTransformation"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "codeTransformation"
+        }
+      ]
+    },
+    {
+      "Name": "StartAgentSession",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "codeTransformation"
+        }
+      ]
+    },
+    {
+      "Name": "TransformCode",
+      "Resources": [
+        {
+          "Name": "codeTransformation"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "codeTransformation"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "codeTransformation",
+      "ARNFormats": [
+        "arn:${Partition}:qdeveloper:${Region}:${Account}:codeTransformation/${Identifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,198 @@
+{
+  "Name": "rum",
+  "Actions": [
+    {
+      "Name": "BatchCreateRumMetricDefinitions",
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDeleteRumMetricDefinitions",
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetRumMetricDefinitions",
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAppMonitor",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAppMonitor",
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRumMetricsDestination",
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetAppMonitor",
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetAppMonitorData",
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    },
+    {
+      "Name": "ListAppMonitors"
+    },
+    {
+      "Name": "ListRumMetricsDestinations",
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    },
+    {
+      "Name": "PutRumEvents",
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    },
+    {
+      "Name": "PutRumMetricsDestination",
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAppMonitor",
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRumMetricDefinition",
+      "Resources": [
+        {
+          "Name": "AppMonitorResource"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "AppMonitorResource",
+      "ARNFormats": [
+        "arn:${Partition}:rum:${Region}:${Account}:appmonitor/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,25 @@
+{
+  "Name": "consoleapp",
+  "Actions": [
+    {
+      "Name": "GetDeviceIdentity",
+      "Resources": [
+        {
+          "Name": "DeviceIdentity"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeviceIdentities"
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "DeviceIdentity",
+      "ARNFormats": [
+        "arn:${Partition}:consoleapp::${Account}:device/${DeviceId}/identity/${IdentityId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

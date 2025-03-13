@@ -1,0 +1,299 @@
+{
+  "Name": "appflow",
+  "Actions": [
+    {
+      "Name": "CancelFlowExecutions",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConnectorProfile"
+    },
+    {
+      "Name": "CreateFlow",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteConnectorProfile",
+      "Resources": [
+        {
+          "Name": "connectorprofile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFlow",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeConnector",
+      "Resources": [
+        {
+          "Name": "connector"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeConnectorEntity",
+      "Resources": [
+        {
+          "Name": "connectorprofile"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeConnectorFields",
+      "Resources": [
+        {
+          "Name": "connectorprofile"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeConnectorProfiles"
+    },
+    {
+      "Name": "DescribeConnectors"
+    },
+    {
+      "Name": "DescribeFlow",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFlowExecution",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFlowExecutionRecords",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFlows"
+    },
+    {
+      "Name": "ListConnectorEntities",
+      "Resources": [
+        {
+          "Name": "connectorprofile"
+        }
+      ]
+    },
+    {
+      "Name": "ListConnectorFields",
+      "Resources": [
+        {
+          "Name": "connectorprofile"
+        }
+      ]
+    },
+    {
+      "Name": "ListConnectors",
+      "Resources": [
+        {
+          "Name": "connector"
+        }
+      ]
+    },
+    {
+      "Name": "ListFlows",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterConnector",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "ResetConnectorMetadataCache",
+      "Resources": [
+        {
+          "Name": "connectorprofile"
+        }
+      ]
+    },
+    {
+      "Name": "RunFlow",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "StartFlow",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "StopFlow",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "connector"
+        },
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "UnRegisterConnector",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "connector"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "connector"
+        },
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConnectorProfile",
+      "Resources": [
+        {
+          "Name": "connectorprofile"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConnectorRegistration",
+      "Resources": [
+        {
+          "Name": "connector"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFlow",
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ]
+    },
+    {
+      "Name": "UseConnectorProfile",
+      "Resources": [
+        {
+          "Name": "connectorprofile"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "connector",
+      "ARNFormats": [
+        "arn:${Partition}:appflow:${Region}:${Account}:connector/${ConnectorLabel}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "connectorprofile",
+      "ARNFormats": [
+        "arn:${Partition}:appflow:${Region}:${Account}:connectorprofile/${ProfileName}"
+      ]
+    },
+    {
+      "Name": "flow",
+      "ARNFormats": [
+        "arn:${Partition}:appflow:${Region}:${Account}:flow/${FlowName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

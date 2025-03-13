@@ -1,0 +1,449 @@
+{
+  "Name": "databrew",
+  "Actions": [
+    {
+      "Name": "BatchDeleteRecipeVersion",
+      "Resources": [
+        {
+          "Name": "Recipe"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateProfileJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateProject",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateRecipe",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateRecipeJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateRuleset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateSchedule",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteDataset",
+      "Resources": [
+        {
+          "Name": "Dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteJob",
+      "Resources": [
+        {
+          "Name": "Job"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProject",
+      "Resources": [
+        {
+          "Name": "Project"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRecipeVersion",
+      "Resources": [
+        {
+          "Name": "Recipe"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRuleset",
+      "Resources": [
+        {
+          "Name": "Ruleset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSchedule",
+      "Resources": [
+        {
+          "Name": "Schedule"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDataset",
+      "Resources": [
+        {
+          "Name": "Dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeJob",
+      "Resources": [
+        {
+          "Name": "Job"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeJobRun",
+      "Resources": [
+        {
+          "Name": "Job"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeProject",
+      "Resources": [
+        {
+          "Name": "Project"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRecipe",
+      "Resources": [
+        {
+          "Name": "Recipe"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRuleset",
+      "Resources": [
+        {
+          "Name": "Ruleset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSchedule",
+      "Resources": [
+        {
+          "Name": "Schedule"
+        }
+      ]
+    },
+    {
+      "Name": "ListDatasets"
+    },
+    {
+      "Name": "ListJobRuns",
+      "Resources": [
+        {
+          "Name": "Job"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobs"
+    },
+    {
+      "Name": "ListProjects"
+    },
+    {
+      "Name": "ListRecipeVersions",
+      "Resources": [
+        {
+          "Name": "Recipe"
+        }
+      ]
+    },
+    {
+      "Name": "ListRecipes"
+    },
+    {
+      "Name": "ListRulesets"
+    },
+    {
+      "Name": "ListSchedules"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "Dataset"
+        },
+        {
+          "Name": "Job"
+        },
+        {
+          "Name": "Project"
+        },
+        {
+          "Name": "Recipe"
+        },
+        {
+          "Name": "Ruleset"
+        },
+        {
+          "Name": "Schedule"
+        }
+      ]
+    },
+    {
+      "Name": "PublishRecipe",
+      "Resources": [
+        {
+          "Name": "Recipe"
+        }
+      ]
+    },
+    {
+      "Name": "SendProjectSessionAction",
+      "Resources": [
+        {
+          "Name": "Project"
+        }
+      ]
+    },
+    {
+      "Name": "StartJobRun",
+      "Resources": [
+        {
+          "Name": "Job"
+        }
+      ]
+    },
+    {
+      "Name": "StartProjectSession",
+      "Resources": [
+        {
+          "Name": "Project"
+        }
+      ]
+    },
+    {
+      "Name": "StopJobRun",
+      "Resources": [
+        {
+          "Name": "Job"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Dataset"
+        },
+        {
+          "Name": "Job"
+        },
+        {
+          "Name": "Project"
+        },
+        {
+          "Name": "Recipe"
+        },
+        {
+          "Name": "Ruleset"
+        },
+        {
+          "Name": "Schedule"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Dataset"
+        },
+        {
+          "Name": "Job"
+        },
+        {
+          "Name": "Project"
+        },
+        {
+          "Name": "Recipe"
+        },
+        {
+          "Name": "Ruleset"
+        },
+        {
+          "Name": "Schedule"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataset",
+      "Resources": [
+        {
+          "Name": "Dataset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProfileJob",
+      "Resources": [
+        {
+          "Name": "Job"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProject",
+      "Resources": [
+        {
+          "Name": "Project"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRecipe",
+      "Resources": [
+        {
+          "Name": "Recipe"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRecipeJob",
+      "Resources": [
+        {
+          "Name": "Job"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRuleset",
+      "Resources": [
+        {
+          "Name": "Ruleset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSchedule",
+      "Resources": [
+        {
+          "Name": "Schedule"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Dataset",
+      "ARNFormats": [
+        "arn:${Partition}:databrew:${Region}:${Account}:dataset/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Job",
+      "ARNFormats": [
+        "arn:${Partition}:databrew:${Region}:${Account}:job/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Project",
+      "ARNFormats": [
+        "arn:${Partition}:databrew:${Region}:${Account}:project/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Recipe",
+      "ARNFormats": [
+        "arn:${Partition}:databrew:${Region}:${Account}:recipe/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Ruleset",
+      "ARNFormats": [
+        "arn:${Partition}:databrew:${Region}:${Account}:ruleset/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Schedule",
+      "ARNFormats": [
+        "arn:${Partition}:databrew:${Region}:${Account}:schedule/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

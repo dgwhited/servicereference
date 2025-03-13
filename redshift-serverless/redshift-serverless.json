@@ -1,0 +1,540 @@
+{
+  "Name": "redshift-serverless",
+  "Actions": [
+    {
+      "Name": "ConvertRecoveryPointToSnapshot",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "recoveryPoint"
+        },
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCustomDomainAssociation",
+      "Resources": [
+        {
+          "Name": "workgroup"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEndpointAccess",
+      "Resources": [
+        {
+          "Name": "endpointAccess"
+        }
+      ]
+    },
+    {
+      "Name": "CreateNamespace",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "CreateScheduledAction",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSnapshot",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSnapshotCopyConfiguration",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "CreateUsageLimit"
+    },
+    {
+      "Name": "CreateWorkgroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "workgroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCustomDomainAssociation",
+      "Resources": [
+        {
+          "Name": "workgroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEndpointAccess",
+      "Resources": [
+        {
+          "Name": "endpointAccess"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNamespace",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy"
+    },
+    {
+      "Name": "DeleteScheduledAction"
+    },
+    {
+      "Name": "DeleteSnapshot",
+      "Resources": [
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSnapshotCopyConfiguration"
+    },
+    {
+      "Name": "DeleteUsageLimit"
+    },
+    {
+      "Name": "DeleteWorkgroup",
+      "Resources": [
+        {
+          "Name": "workgroup"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeOneTimeCredit"
+    },
+    {
+      "Name": "GetCredentials",
+      "Resources": [
+        {
+          "Name": "workgroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetCustomDomainAssociation",
+      "Resources": [
+        {
+          "Name": "workgroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetEndpointAccess",
+      "Resources": [
+        {
+          "Name": "endpointAccess"
+        }
+      ]
+    },
+    {
+      "Name": "GetManagedWorkgroup",
+      "Resources": [
+        {
+          "Name": "managed-workgroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetNamespace",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "GetRecoveryPoint",
+      "Resources": [
+        {
+          "Name": "recoveryPoint"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicy"
+    },
+    {
+      "Name": "GetScheduledAction"
+    },
+    {
+      "Name": "GetSnapshot",
+      "Resources": [
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableRestoreStatus"
+    },
+    {
+      "Name": "GetTrack"
+    },
+    {
+      "Name": "GetUsageLimit"
+    },
+    {
+      "Name": "GetWorkgroup",
+      "Resources": [
+        {
+          "Name": "workgroup"
+        }
+      ]
+    },
+    {
+      "Name": "ListCustomDomainAssociations"
+    },
+    {
+      "Name": "ListEndpointAccess",
+      "Resources": [
+        {
+          "Name": "endpointAccess"
+        }
+      ]
+    },
+    {
+      "Name": "ListManagedWorkgroups"
+    },
+    {
+      "Name": "ListNamespaces"
+    },
+    {
+      "Name": "ListRecoveryPoints",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "ListScheduledActions"
+    },
+    {
+      "Name": "ListSnapshotCopyConfigurations",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "ListSnapshots",
+      "Resources": [
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "ListTableRestoreStatus"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "namespace"
+        },
+        {
+          "Name": "workgroup"
+        }
+      ]
+    },
+    {
+      "Name": "ListTracks"
+    },
+    {
+      "Name": "ListUsageLimits"
+    },
+    {
+      "Name": "ListWorkgroups"
+    },
+    {
+      "Name": "PutResourcePolicy"
+    },
+    {
+      "Name": "RestoreFromRecoveryPoint",
+      "Resources": [
+        {
+          "Name": "recoveryPoint"
+        }
+      ]
+    },
+    {
+      "Name": "RestoreFromSnapshot",
+      "Resources": [
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "RestoreTableFromRecoveryPoint",
+      "Resources": [
+        {
+          "Name": "namespace"
+        },
+        {
+          "Name": "recoveryPoint"
+        }
+      ]
+    },
+    {
+      "Name": "RestoreTableFromSnapshot",
+      "Resources": [
+        {
+          "Name": "namespace"
+        },
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "namespace"
+        },
+        {
+          "Name": "recoveryPoint"
+        },
+        {
+          "Name": "snapshot"
+        },
+        {
+          "Name": "workgroup"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "namespace"
+        },
+        {
+          "Name": "recoveryPoint"
+        },
+        {
+          "Name": "snapshot"
+        },
+        {
+          "Name": "workgroup"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCustomDomainAssociation",
+      "Resources": [
+        {
+          "Name": "workgroup"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEndpointAccess",
+      "Resources": [
+        {
+          "Name": "endpointAccess"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNamespace",
+      "Resources": [
+        {
+          "Name": "namespace"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateScheduledAction"
+    },
+    {
+      "Name": "UpdateSnapshot",
+      "Resources": [
+        {
+          "Name": "snapshot"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSnapshotCopyConfiguration"
+    },
+    {
+      "Name": "UpdateUsageLimit"
+    },
+    {
+      "Name": "UpdateWorkgroup",
+      "Resources": [
+        {
+          "Name": "workgroup"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "redshift-serverless:endpointAccessId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "redshift-serverless:managedWorkgroupName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "redshift-serverless:namespaceId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "redshift-serverless:recoveryPointId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "redshift-serverless:snapshotId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "redshift-serverless:tableRestoreRequestId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "redshift-serverless:workgroupId",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "endpointAccess",
+      "ARNFormats": [
+        "arn:${Partition}:redshift-serverless:${Region}:${Account}:managedvpcendpoint/${EndpointAccessId}"
+      ]
+    },
+    {
+      "Name": "managed-workgroup",
+      "ARNFormats": [
+        "arn:${Partition}:redshift-serverless:${Region}:${Account}:managed-workgroup/${ManagedWorkgroupName}"
+      ]
+    },
+    {
+      "Name": "namespace",
+      "ARNFormats": [
+        "arn:${Partition}:redshift-serverless:${Region}:${Account}:namespace/${NamespaceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "recoveryPoint",
+      "ARNFormats": [
+        "arn:${Partition}:redshift-serverless:${Region}:${Account}:recoverypoint/${RecoveryPointId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "snapshot",
+      "ARNFormats": [
+        "arn:${Partition}:redshift-serverless:${Region}:${Account}:snapshot/${SnapshotId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "workgroup",
+      "ARNFormats": [
+        "arn:${Partition}:redshift-serverless:${Region}:${Account}:workgroup/${WorkgroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

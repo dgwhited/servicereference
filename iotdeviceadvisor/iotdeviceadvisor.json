@@ -1,0 +1,162 @@
+{
+  "Name": "iotdeviceadvisor",
+  "Actions": [
+    {
+      "Name": "CreateSuiteDefinition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteSuiteDefinition",
+      "Resources": [
+        {
+          "Name": "Suitedefinition"
+        }
+      ]
+    },
+    {
+      "Name": "GetEndpoint"
+    },
+    {
+      "Name": "GetSuiteDefinition",
+      "Resources": [
+        {
+          "Name": "Suitedefinition"
+        }
+      ]
+    },
+    {
+      "Name": "GetSuiteRun",
+      "Resources": [
+        {
+          "Name": "Suiterun"
+        }
+      ]
+    },
+    {
+      "Name": "GetSuiteRunReport",
+      "Resources": [
+        {
+          "Name": "Suiterun"
+        }
+      ]
+    },
+    {
+      "Name": "ListSuiteDefinitions"
+    },
+    {
+      "Name": "ListSuiteRuns",
+      "Resources": [
+        {
+          "Name": "Suitedefinition"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "Suitedefinition"
+        },
+        {
+          "Name": "Suiterun"
+        }
+      ]
+    },
+    {
+      "Name": "StartSuiteRun",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "StopSuiteRun",
+      "Resources": [
+        {
+          "Name": "Suiterun"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Suitedefinition"
+        },
+        {
+          "Name": "Suiterun"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Suitedefinition"
+        },
+        {
+          "Name": "Suiterun"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSuiteDefinition",
+      "Resources": [
+        {
+          "Name": "Suitedefinition"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Suitedefinition",
+      "ARNFormats": [
+        "arn:${Partition}:iotdeviceadvisor:${Region}:${Account}:suitedefinition/${SuiteDefinitionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Suiterun",
+      "ARNFormats": [
+        "arn:${Partition}:iotdeviceadvisor:${Region}:${Account}:suiterun/${SuiteDefinitionId}/${SuiteRunId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

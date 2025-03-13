@@ -1,0 +1,812 @@
+{
+  "Name": "cloudformation",
+  "Actions": [
+    {
+      "Name": "ActivateOrganizationsAccess"
+    },
+    {
+      "Name": "ActivateType"
+    },
+    {
+      "Name": "BatchDescribeTypeConfigurations"
+    },
+    {
+      "Name": "CancelResourceRequest"
+    },
+    {
+      "Name": "CancelUpdateStack",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "ContinueUpdateRollback",
+      "ActionConditionKeys": [
+        "cloudformation:RoleArn"
+      ],
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "CreateChangeSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cloudformation:ChangeSetName",
+        "cloudformation:ImportResourceTypes",
+        "cloudformation:ResourceTypes",
+        "cloudformation:RoleArn",
+        "cloudformation:StackPolicyUrl",
+        "cloudformation:TemplateUrl"
+      ],
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "CreateGeneratedTemplate"
+    },
+    {
+      "Name": "CreateResource"
+    },
+    {
+      "Name": "CreateStack",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cloudformation:ResourceTypes",
+        "cloudformation:RoleArn",
+        "cloudformation:StackPolicyUrl",
+        "cloudformation:TemplateUrl"
+      ],
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStackInstances",
+      "ActionConditionKeys": [
+        "aws:TagKeys",
+        "cloudformation:TargetRegion"
+      ],
+      "Resources": [
+        {
+          "Name": "stackset"
+        },
+        {
+          "Name": "stackset-target"
+        },
+        {
+          "Name": "type"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStackRefactor",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStackSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cloudformation:RoleArn",
+        "cloudformation:TemplateUrl"
+      ]
+    },
+    {
+      "Name": "CreateUploadBucket"
+    },
+    {
+      "Name": "DeactivateOrganizationsAccess"
+    },
+    {
+      "Name": "DeactivateType"
+    },
+    {
+      "Name": "DeleteChangeSet",
+      "ActionConditionKeys": [
+        "cloudformation:ChangeSetName"
+      ],
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGeneratedTemplate"
+    },
+    {
+      "Name": "DeleteResource"
+    },
+    {
+      "Name": "DeleteStack",
+      "ActionConditionKeys": [
+        "cloudformation:RoleArn"
+      ],
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStackInstances",
+      "ActionConditionKeys": [
+        "cloudformation:TargetRegion"
+      ],
+      "Resources": [
+        {
+          "Name": "stackset"
+        },
+        {
+          "Name": "stackset-target"
+        },
+        {
+          "Name": "type"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStackSet",
+      "Resources": [
+        {
+          "Name": "stackset"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterType"
+    },
+    {
+      "Name": "DescribeAccountLimits"
+    },
+    {
+      "Name": "DescribeChangeSet",
+      "ActionConditionKeys": [
+        "cloudformation:ChangeSetName"
+      ],
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeChangeSetHooks",
+      "ActionConditionKeys": [
+        "cloudformation:ChangeSetName"
+      ],
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeGeneratedTemplate"
+    },
+    {
+      "Name": "DescribeOrganizationsAccess"
+    },
+    {
+      "Name": "DescribePublisher"
+    },
+    {
+      "Name": "DescribeResourceScan"
+    },
+    {
+      "Name": "DescribeStackDriftDetectionStatus"
+    },
+    {
+      "Name": "DescribeStackEvents",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStackInstance",
+      "Resources": [
+        {
+          "Name": "stackset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStackRefactor",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStackResource",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStackResourceDrifts",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStackResources",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStackSet",
+      "Resources": [
+        {
+          "Name": "stackset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStackSetOperation",
+      "Resources": [
+        {
+          "Name": "stackset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStacks",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeType"
+    },
+    {
+      "Name": "DescribeTypeRegistration"
+    },
+    {
+      "Name": "DetectStackDrift",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "DetectStackResourceDrift",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "DetectStackSetDrift",
+      "Resources": [
+        {
+          "Name": "stackset"
+        }
+      ]
+    },
+    {
+      "Name": "EstimateTemplateCost",
+      "ActionConditionKeys": [
+        "cloudformation:TemplateUrl"
+      ]
+    },
+    {
+      "Name": "ExecuteChangeSet",
+      "ActionConditionKeys": [
+        "cloudformation:ChangeSetName"
+      ],
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "ExecuteStackRefactor",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "GetGeneratedTemplate"
+    },
+    {
+      "Name": "GetResource"
+    },
+    {
+      "Name": "GetResourceRequestStatus"
+    },
+    {
+      "Name": "GetStackPolicy",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "GetTemplate",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "GetTemplateSummary",
+      "ActionConditionKeys": [
+        "cloudformation:TemplateUrl"
+      ],
+      "Resources": [
+        {
+          "Name": "stack"
+        },
+        {
+          "Name": "stackset"
+        }
+      ]
+    },
+    {
+      "Name": "ImportStacksToStackSet",
+      "Resources": [
+        {
+          "Name": "stackset"
+        }
+      ]
+    },
+    {
+      "Name": "ListChangeSets",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "ListExports"
+    },
+    {
+      "Name": "ListGeneratedTemplates"
+    },
+    {
+      "Name": "ListHookResults",
+      "ActionConditionKeys": [
+        "cloudformation:ChangeSetName"
+      ],
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "ListImports"
+    },
+    {
+      "Name": "ListResourceRequests"
+    },
+    {
+      "Name": "ListResourceScanRelatedResources"
+    },
+    {
+      "Name": "ListResourceScanResources"
+    },
+    {
+      "Name": "ListResourceScans"
+    },
+    {
+      "Name": "ListResources"
+    },
+    {
+      "Name": "ListStackInstanceResourceDrifts",
+      "Resources": [
+        {
+          "Name": "stackset"
+        }
+      ]
+    },
+    {
+      "Name": "ListStackInstances",
+      "Resources": [
+        {
+          "Name": "stackset"
+        }
+      ]
+    },
+    {
+      "Name": "ListStackRefactorActions",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "ListStackRefactors",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "ListStackResources",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "ListStackSetAutoDeploymentTargets",
+      "Resources": [
+        {
+          "Name": "stackset"
+        }
+      ]
+    },
+    {
+      "Name": "ListStackSetOperationResults",
+      "Resources": [
+        {
+          "Name": "stackset"
+        }
+      ]
+    },
+    {
+      "Name": "ListStackSetOperations",
+      "Resources": [
+        {
+          "Name": "stackset"
+        }
+      ]
+    },
+    {
+      "Name": "ListStackSets"
+    },
+    {
+      "Name": "ListStacks"
+    },
+    {
+      "Name": "ListTypeRegistrations"
+    },
+    {
+      "Name": "ListTypeVersions"
+    },
+    {
+      "Name": "ListTypes"
+    },
+    {
+      "Name": "PublishType"
+    },
+    {
+      "Name": "RecordHandlerProgress",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterPublisher"
+    },
+    {
+      "Name": "RegisterType"
+    },
+    {
+      "Name": "RollbackStack",
+      "ActionConditionKeys": [
+        "cloudformation:RoleArn"
+      ],
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "SetStackPolicy",
+      "ActionConditionKeys": [
+        "cloudformation:StackPolicyUrl"
+      ],
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "SetTypeConfiguration"
+    },
+    {
+      "Name": "SetTypeDefaultVersion"
+    },
+    {
+      "Name": "SignalResource",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "StartResourceScan"
+    },
+    {
+      "Name": "StopStackSetOperation",
+      "Resources": [
+        {
+          "Name": "stackset"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cloudformation:CreateAction"
+      ],
+      "Resources": [
+        {
+          "Name": "changeset"
+        },
+        {
+          "Name": "stack"
+        },
+        {
+          "Name": "stackset"
+        }
+      ]
+    },
+    {
+      "Name": "TestType"
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys",
+        "cloudformation:CreateAction"
+      ],
+      "Resources": [
+        {
+          "Name": "changeset"
+        },
+        {
+          "Name": "stack"
+        },
+        {
+          "Name": "stackset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGeneratedTemplate"
+    },
+    {
+      "Name": "UpdateResource"
+    },
+    {
+      "Name": "UpdateStack",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cloudformation:ResourceTypes",
+        "cloudformation:RoleArn",
+        "cloudformation:StackPolicyUrl",
+        "cloudformation:TemplateUrl"
+      ],
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStackInstances",
+      "ActionConditionKeys": [
+        "cloudformation:TargetRegion"
+      ],
+      "Resources": [
+        {
+          "Name": "stackset"
+        },
+        {
+          "Name": "stackset-target"
+        },
+        {
+          "Name": "type"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStackSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cloudformation:RoleArn",
+        "cloudformation:TargetRegion",
+        "cloudformation:TemplateUrl"
+      ],
+      "Resources": [
+        {
+          "Name": "stackset"
+        },
+        {
+          "Name": "stackset-target"
+        },
+        {
+          "Name": "type"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTerminationProtection",
+      "Resources": [
+        {
+          "Name": "stack"
+        }
+      ]
+    },
+    {
+      "Name": "ValidateTemplate",
+      "ActionConditionKeys": [
+        "cloudformation:TemplateUrl"
+      ]
+    }
+  ],
+  "Version": "v1.1",
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "cloudformation:ChangeSetName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "cloudformation:CreateAction",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "cloudformation:ImportResourceTypes",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "cloudformation:ResourceTypes",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "cloudformation:RoleArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "cloudformation:StackPolicyUrl",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "cloudformation:TargetRegion",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "cloudformation:TemplateUrl",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "changeset",
+      "ARNFormats": [
+        "arn:${Partition}:cloudformation:${Region}:${Account}:changeSet/${ChangeSetName}/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "generatedtemplate",
+      "ARNFormats": [
+        "arn:${Partition}:cloudformation:${Region}:${Account}:generatedTemplate/${Id}"
+      ]
+    },
+    {
+      "Name": "resourcescan",
+      "ARNFormats": [
+        "arn:${Partition}:cloudformation:${Region}:${Account}:resourceScan/${Id}"
+      ]
+    },
+    {
+      "Name": "stack",
+      "ARNFormats": [
+        "arn:${Partition}:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "stackset",
+      "ARNFormats": [
+        "arn:${Partition}:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "stackset-target",
+      "ARNFormats": [
+        "arn:${Partition}:cloudformation:${Region}:${Account}:stackset-target/${StackSetTarget}"
+      ]
+    },
+    {
+      "Name": "type",
+      "ARNFormats": [
+        "arn:${Partition}:cloudformation:${Region}:${Account}:type/resource/${Type}"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "Name": "cur",
+  "Actions": [
+    {
+      "Name": "DeleteReportDefinition",
+      "Resources": [
+        {
+          "Name": "cur"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeReportDefinitions"
+    },
+    {
+      "Name": "GetClassicReport"
+    },
+    {
+      "Name": "GetClassicReportPreferences"
+    },
+    {
+      "Name": "GetUsageReport"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "cur"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyReportDefinition",
+      "Resources": [
+        {
+          "Name": "cur"
+        }
+      ]
+    },
+    {
+      "Name": "PutClassicReportPreferences"
+    },
+    {
+      "Name": "PutReportDefinition",
+      "Resources": [
+        {
+          "Name": "cur"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cur"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cur"
+        }
+      ]
+    },
+    {
+      "Name": "ValidateReportDestination"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "cur",
+      "ARNFormats": [
+        "arn:${Partition}:cur:${Region}:${Account}:definition/${ReportName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

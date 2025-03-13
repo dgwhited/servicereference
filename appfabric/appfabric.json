@@ -1,0 +1,379 @@
+{
+  "Name": "appfabric",
+  "Actions": [
+    {
+      "Name": "BatchGetUserAccessTasks",
+      "Resources": [
+        {
+          "Name": "appbundle"
+        }
+      ]
+    },
+    {
+      "Name": "ConnectAppAuthorization",
+      "Resources": [
+        {
+          "Name": "appauthorization"
+        },
+        {
+          "Name": "appbundle"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAppAuthorization",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "appbundle"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAppBundle",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateIngestion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "appbundle"
+        }
+      ]
+    },
+    {
+      "Name": "CreateIngestionDestination",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "appbundle"
+        },
+        {
+          "Name": "ingestion"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAppAuthorization",
+      "Resources": [
+        {
+          "Name": "appauthorization"
+        },
+        {
+          "Name": "appbundle"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAppBundle",
+      "Resources": [
+        {
+          "Name": "appbundle"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIngestion",
+      "Resources": [
+        {
+          "Name": "appbundle"
+        },
+        {
+          "Name": "ingestion"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIngestionDestination",
+      "Resources": [
+        {
+          "Name": "appbundle"
+        },
+        {
+          "Name": "ingestion"
+        },
+        {
+          "Name": "ingestiondestination"
+        }
+      ]
+    },
+    {
+      "Name": "GetAppAuthorization",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "appauthorization"
+        },
+        {
+          "Name": "appbundle"
+        }
+      ]
+    },
+    {
+      "Name": "GetAppBundle",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "appbundle"
+        }
+      ]
+    },
+    {
+      "Name": "GetIngestion",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "appbundle"
+        },
+        {
+          "Name": "ingestion"
+        }
+      ]
+    },
+    {
+      "Name": "GetIngestionDestination",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "appbundle"
+        },
+        {
+          "Name": "ingestion"
+        },
+        {
+          "Name": "ingestiondestination"
+        }
+      ]
+    },
+    {
+      "Name": "ListAppAuthorizations",
+      "Resources": [
+        {
+          "Name": "appbundle"
+        }
+      ]
+    },
+    {
+      "Name": "ListAppBundles"
+    },
+    {
+      "Name": "ListIngestionDestinations",
+      "Resources": [
+        {
+          "Name": "appbundle"
+        },
+        {
+          "Name": "ingestion"
+        }
+      ]
+    },
+    {
+      "Name": "ListIngestions",
+      "Resources": [
+        {
+          "Name": "appbundle"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "appauthorization"
+        },
+        {
+          "Name": "appbundle"
+        },
+        {
+          "Name": "ingestion"
+        },
+        {
+          "Name": "ingestiondestination"
+        }
+      ]
+    },
+    {
+      "Name": "StartIngestion",
+      "Resources": [
+        {
+          "Name": "appbundle"
+        },
+        {
+          "Name": "ingestion"
+        }
+      ]
+    },
+    {
+      "Name": "StartUserAccessTasks",
+      "Resources": [
+        {
+          "Name": "appbundle"
+        }
+      ]
+    },
+    {
+      "Name": "StopIngestion",
+      "Resources": [
+        {
+          "Name": "appbundle"
+        },
+        {
+          "Name": "ingestion"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "appauthorization"
+        },
+        {
+          "Name": "appbundle"
+        },
+        {
+          "Name": "ingestion"
+        },
+        {
+          "Name": "ingestiondestination"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "appauthorization"
+        },
+        {
+          "Name": "appbundle"
+        },
+        {
+          "Name": "ingestion"
+        },
+        {
+          "Name": "ingestiondestination"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAppAuthorization",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "appauthorization"
+        },
+        {
+          "Name": "appbundle"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIngestionDestination",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "appbundle"
+        },
+        {
+          "Name": "ingestion"
+        },
+        {
+          "Name": "ingestiondestination"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "appauthorization",
+      "ARNFormats": [
+        "arn:${Partition}:appfabric:${Region}:${Account}:appbundle/${AppbundleId}/appauthorization/${AppAuthorizationIdentifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "appbundle",
+      "ARNFormats": [
+        "arn:${Partition}:appfabric:${Region}:${Account}:appbundle/${AppBundleIdentifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ingestion",
+      "ARNFormats": [
+        "arn:${Partition}:appfabric:${Region}:${Account}:appbundle/${AppbundleId}/ingestion/${IngestionIdentifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ingestiondestination",
+      "ARNFormats": [
+        "arn:${Partition}:appfabric:${Region}:${Account}:appbundle/${AppbundleId}/ingestion/${IngestionIdentifier}/ingestiondestination/${IngestionDestinationIdentifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

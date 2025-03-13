@@ -1,0 +1,289 @@
+{
+  "Name": "glacier",
+  "Actions": [
+    {
+      "Name": "AbortMultipartUpload",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "AbortVaultLock",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "AddTagsToVault",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "CompleteMultipartUpload",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "CompleteVaultLock",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "CreateVault",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteArchive",
+      "ActionConditionKeys": [
+        "glacier:ArchiveAgeInDays"
+      ],
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteVault",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteVaultAccessPolicy",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteVaultNotifications",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeJob",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeVault",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataRetrievalPolicy"
+    },
+    {
+      "Name": "GetJobOutput",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "GetVaultAccessPolicy",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "GetVaultLock",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "GetVaultNotifications",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "InitiateJob",
+      "ActionConditionKeys": [
+        "glacier:ArchiveAgeInDays"
+      ],
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "InitiateMultipartUpload",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "InitiateVaultLock",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobs",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "ListMultipartUploads",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "ListParts",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "ListProvisionedCapacity"
+    },
+    {
+      "Name": "ListTagsForVault",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "ListVaults"
+    },
+    {
+      "Name": "PurchaseProvisionedCapacity"
+    },
+    {
+      "Name": "RemoveTagsFromVault",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "SetDataRetrievalPolicy"
+    },
+    {
+      "Name": "SetVaultAccessPolicy",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "SetVaultNotifications",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "UploadArchive",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    },
+    {
+      "Name": "UploadMultipartPart",
+      "Resources": [
+        {
+          "Name": "vault"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "glacier:ArchiveAgeInDays",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "glacier:ResourceTag/",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "vault",
+      "ARNFormats": [
+        "arn:${Partition}:glacier:${Region}:${Account}:vaults/${VaultName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

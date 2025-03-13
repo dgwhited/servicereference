@@ -1,0 +1,272 @@
+{
+  "Name": "outposts",
+  "Actions": [
+    {
+      "Name": "CancelCapacityTask",
+      "Resources": [
+        {
+          "Name": "outpost"
+        }
+      ]
+    },
+    {
+      "Name": "CancelOrder"
+    },
+    {
+      "Name": "CreateOrder",
+      "Resources": [
+        {
+          "Name": "outpost"
+        }
+      ]
+    },
+    {
+      "Name": "CreateOutpost",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "site"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePrivateConnectivityConfig"
+    },
+    {
+      "Name": "CreateSite",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteOutpost",
+      "Resources": [
+        {
+          "Name": "outpost"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSite",
+      "Resources": [
+        {
+          "Name": "site"
+        }
+      ]
+    },
+    {
+      "Name": "GetCapacityTask",
+      "Resources": [
+        {
+          "Name": "outpost"
+        }
+      ]
+    },
+    {
+      "Name": "GetCatalogItem"
+    },
+    {
+      "Name": "GetConnection"
+    },
+    {
+      "Name": "GetOrder"
+    },
+    {
+      "Name": "GetOutpost",
+      "Resources": [
+        {
+          "Name": "outpost"
+        }
+      ]
+    },
+    {
+      "Name": "GetOutpostInstanceTypes",
+      "Resources": [
+        {
+          "Name": "outpost"
+        }
+      ]
+    },
+    {
+      "Name": "GetOutpostSupportedInstanceTypes",
+      "Resources": [
+        {
+          "Name": "outpost"
+        }
+      ]
+    },
+    {
+      "Name": "GetPrivateConnectivityConfig"
+    },
+    {
+      "Name": "GetSite",
+      "Resources": [
+        {
+          "Name": "site"
+        }
+      ]
+    },
+    {
+      "Name": "GetSiteAddress",
+      "Resources": [
+        {
+          "Name": "site"
+        }
+      ]
+    },
+    {
+      "Name": "ListAssetInstances",
+      "Resources": [
+        {
+          "Name": "outpost"
+        }
+      ]
+    },
+    {
+      "Name": "ListAssets"
+    },
+    {
+      "Name": "ListBlockingInstancesForCapacityTask",
+      "Resources": [
+        {
+          "Name": "outpost"
+        }
+      ]
+    },
+    {
+      "Name": "ListCapacityTasks"
+    },
+    {
+      "Name": "ListCatalogItems"
+    },
+    {
+      "Name": "ListOrders"
+    },
+    {
+      "Name": "ListOutposts"
+    },
+    {
+      "Name": "ListSites"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "StartCapacityTask",
+      "Resources": [
+        {
+          "Name": "outpost"
+        }
+      ]
+    },
+    {
+      "Name": "StartConnection"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "outpost"
+        },
+        {
+          "Name": "site"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "outpost"
+        },
+        {
+          "Name": "site"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateOutpost",
+      "Resources": [
+        {
+          "Name": "outpost"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSite",
+      "Resources": [
+        {
+          "Name": "site"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSiteAddress",
+      "Resources": [
+        {
+          "Name": "site"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSiteRackPhysicalProperties",
+      "Resources": [
+        {
+          "Name": "site"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "outpost",
+      "ARNFormats": [
+        "arn:${Partition}:outposts:${Region}:${Account}:outpost/${OutpostId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "site",
+      "ARNFormats": [
+        "arn:${Partition}:outposts:${Region}:${Account}:site/${SiteId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

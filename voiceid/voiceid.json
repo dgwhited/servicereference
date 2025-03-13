@@ -1,0 +1,276 @@
+{
+  "Name": "voiceid",
+  "Actions": [
+    {
+      "Name": "AssociateFraudster",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDomain",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateWatchlist",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDomain",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFraudster",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSpeaker",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWatchlist",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeComplianceConsent"
+    },
+    {
+      "Name": "DescribeDomain",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFraudster",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFraudsterRegistrationJob",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSpeaker",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSpeakerEnrollmentJob",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWatchlist",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateFraudster",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "EvaluateSession",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "ListDomains"
+    },
+    {
+      "Name": "ListFraudsterRegistrationJobs",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "ListFraudsters",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "ListSpeakerEnrollmentJobs",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "ListSpeakers",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "ListWatchlists",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "OptOutSpeaker",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterComplianceConsent"
+    },
+    {
+      "Name": "StartFraudsterRegistrationJob",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "StartSpeakerEnrollmentJob",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDomain",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWatchlist",
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "domain",
+      "ARNFormats": [
+        "arn:${Partition}:voiceid:${Region}:${Account}:domain/${DomainId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

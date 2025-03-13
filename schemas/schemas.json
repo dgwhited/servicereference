@@ -1,0 +1,333 @@
+{
+  "Name": "schemas",
+  "Actions": [
+    {
+      "Name": "CreateDiscoverer",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateRegistry",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSchema",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDiscoverer",
+      "Resources": [
+        {
+          "Name": "discoverer"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRegistry",
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSchema",
+      "Resources": [
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSchemaVersion",
+      "Resources": [
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCodeBinding",
+      "Resources": [
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDiscoverer",
+      "Resources": [
+        {
+          "Name": "discoverer"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRegistry",
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSchema",
+      "Resources": [
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "ExportSchema",
+      "Resources": [
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "GetCodeBindingSource",
+      "Resources": [
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "GetDiscoveredSchema"
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ]
+    },
+    {
+      "Name": "ListDiscoverers",
+      "Resources": [
+        {
+          "Name": "discoverer"
+        }
+      ]
+    },
+    {
+      "Name": "ListRegistries",
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ]
+    },
+    {
+      "Name": "ListSchemaVersions",
+      "Resources": [
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "ListSchemas",
+      "Resources": [
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "discoverer"
+        },
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "PutCodeBinding",
+      "Resources": [
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ]
+    },
+    {
+      "Name": "SearchSchemas",
+      "Resources": [
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "StartDiscoverer",
+      "Resources": [
+        {
+          "Name": "discoverer"
+        }
+      ]
+    },
+    {
+      "Name": "StopDiscoverer",
+      "Resources": [
+        {
+          "Name": "discoverer"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "discoverer"
+        },
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "discoverer"
+        },
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDiscoverer",
+      "Resources": [
+        {
+          "Name": "discoverer"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRegistry",
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSchema",
+      "Resources": [
+        {
+          "Name": "schema"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "discoverer",
+      "ARNFormats": [
+        "arn:${Partition}:schemas:${Region}:${Account}:discoverer/${DiscovererId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "registry",
+      "ARNFormats": [
+        "arn:${Partition}:schemas:${Region}:${Account}:registry/${RegistryName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "schema",
+      "ARNFormats": [
+        "arn:${Partition}:schemas:${Region}:${Account}:schema/${RegistryName}/${SchemaName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

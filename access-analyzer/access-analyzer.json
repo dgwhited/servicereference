@@ -1,0 +1,293 @@
+{
+  "Name": "access-analyzer",
+  "Actions": [
+    {
+      "Name": "ApplyArchiveRule",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "CancelPolicyGeneration"
+    },
+    {
+      "Name": "CheckAccessNotGranted"
+    },
+    {
+      "Name": "CheckNoNewAccess"
+    },
+    {
+      "Name": "CheckNoPublicAccess"
+    },
+    {
+      "Name": "CreateAccessPreview",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAnalyzer",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "CreateArchiveRule",
+      "Resources": [
+        {
+          "Name": "ArchiveRule"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAnalyzer",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteArchiveRule",
+      "Resources": [
+        {
+          "Name": "ArchiveRule"
+        }
+      ]
+    },
+    {
+      "Name": "GenerateFindingRecommendation",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "GetAccessPreview",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "GetAnalyzedResource",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "GetAnalyzer",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "GetArchiveRule",
+      "Resources": [
+        {
+          "Name": "ArchiveRule"
+        }
+      ]
+    },
+    {
+      "Name": "GetFinding",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "GetFindingRecommendation",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "GetFindingsStatistics",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "GetGeneratedPolicy"
+    },
+    {
+      "Name": "ListAccessPreviewFindings",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "ListAccessPreviews",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "ListAnalyzedResources",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "ListAnalyzers"
+    },
+    {
+      "Name": "ListArchiveRules",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "ListFindings",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "ListPolicyGenerations"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "StartPolicyGeneration"
+    },
+    {
+      "Name": "StartResourceScan",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAnalyzer",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateArchiveRule",
+      "Resources": [
+        {
+          "Name": "ArchiveRule"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFindings",
+      "Resources": [
+        {
+          "Name": "Analyzer"
+        }
+      ]
+    },
+    {
+      "Name": "ValidatePolicy"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Analyzer",
+      "ARNFormats": [
+        "arn:${Partition}:access-analyzer:${Region}:${Account}:analyzer/${AnalyzerName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ArchiveRule",
+      "ARNFormats": [
+        "arn:${Partition}:access-analyzer:${Region}:${Account}:analyzer/${AnalyzerName}/archive-rule/${RuleName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,698 @@
+{
+  "Name": "transfer",
+  "Actions": [
+    {
+      "Name": "CreateAccess",
+      "Resources": [
+        {
+          "Name": "server"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAgreement",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "server"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConnector",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateServer",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateUser",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "server"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWebApp",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateWorkflow",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteAccess",
+      "Resources": [
+        {
+          "Name": "server"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAgreement",
+      "Resources": [
+        {
+          "Name": "agreement"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCertificate",
+      "Resources": [
+        {
+          "Name": "certificate"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConnector",
+      "Resources": [
+        {
+          "Name": "connector"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteHostKey",
+      "Resources": [
+        {
+          "Name": "host-key"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProfile",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteServer",
+      "Resources": [
+        {
+          "Name": "server"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSshPublicKey",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteUser",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWebApp",
+      "Resources": [
+        {
+          "Name": "webapp"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWebAppCustomization",
+      "Resources": [
+        {
+          "Name": "webapp"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkflow",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAccess",
+      "Resources": [
+        {
+          "Name": "server"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAgreement",
+      "Resources": [
+        {
+          "Name": "agreement"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCertificate",
+      "Resources": [
+        {
+          "Name": "certificate"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeConnector",
+      "Resources": [
+        {
+          "Name": "connector"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeExecution",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeHostKey",
+      "Resources": [
+        {
+          "Name": "host-key"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeProfile",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSecurityPolicy"
+    },
+    {
+      "Name": "DescribeServer",
+      "Resources": [
+        {
+          "Name": "server"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeUser",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWebApp",
+      "Resources": [
+        {
+          "Name": "webapp"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWebAppCustomization",
+      "Resources": [
+        {
+          "Name": "webapp"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWorkflow",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "ImportCertificate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "ImportHostKey",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "server"
+        }
+      ]
+    },
+    {
+      "Name": "ImportSshPublicKey",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "ListAccesses",
+      "Resources": [
+        {
+          "Name": "server"
+        }
+      ]
+    },
+    {
+      "Name": "ListAgreements",
+      "Resources": [
+        {
+          "Name": "server"
+        }
+      ]
+    },
+    {
+      "Name": "ListCertificates"
+    },
+    {
+      "Name": "ListConnectors"
+    },
+    {
+      "Name": "ListExecutions",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "ListFileTransferResults",
+      "Resources": [
+        {
+          "Name": "connector"
+        }
+      ]
+    },
+    {
+      "Name": "ListHostKeys",
+      "Resources": [
+        {
+          "Name": "server"
+        }
+      ]
+    },
+    {
+      "Name": "ListProfiles"
+    },
+    {
+      "Name": "ListSecurityPolicies"
+    },
+    {
+      "Name": "ListServers"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "agreement"
+        },
+        {
+          "Name": "certificate"
+        },
+        {
+          "Name": "connector"
+        },
+        {
+          "Name": "host-key"
+        },
+        {
+          "Name": "profile"
+        },
+        {
+          "Name": "server"
+        },
+        {
+          "Name": "user"
+        },
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "ListUsers",
+      "Resources": [
+        {
+          "Name": "server"
+        }
+      ]
+    },
+    {
+      "Name": "ListWebApps"
+    },
+    {
+      "Name": "ListWorkflows"
+    },
+    {
+      "Name": "SendWorkflowStepState",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "StartDirectoryListing",
+      "Resources": [
+        {
+          "Name": "connector"
+        }
+      ]
+    },
+    {
+      "Name": "StartFileTransfer",
+      "Resources": [
+        {
+          "Name": "connector"
+        }
+      ]
+    },
+    {
+      "Name": "StartServer",
+      "Resources": [
+        {
+          "Name": "server"
+        }
+      ]
+    },
+    {
+      "Name": "StopServer",
+      "Resources": [
+        {
+          "Name": "server"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "agreement"
+        },
+        {
+          "Name": "certificate"
+        },
+        {
+          "Name": "connector"
+        },
+        {
+          "Name": "host-key"
+        },
+        {
+          "Name": "profile"
+        },
+        {
+          "Name": "server"
+        },
+        {
+          "Name": "user"
+        },
+        {
+          "Name": "webapp"
+        },
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "TestConnection",
+      "Resources": [
+        {
+          "Name": "connector"
+        }
+      ]
+    },
+    {
+      "Name": "TestIdentityProvider",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "agreement"
+        },
+        {
+          "Name": "certificate"
+        },
+        {
+          "Name": "connector"
+        },
+        {
+          "Name": "host-key"
+        },
+        {
+          "Name": "profile"
+        },
+        {
+          "Name": "server"
+        },
+        {
+          "Name": "user"
+        },
+        {
+          "Name": "webapp"
+        },
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAccess"
+    },
+    {
+      "Name": "UpdateAgreement",
+      "Resources": [
+        {
+          "Name": "agreement"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCertificate",
+      "Resources": [
+        {
+          "Name": "certificate"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConnector",
+      "Resources": [
+        {
+          "Name": "connector"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateHostKey",
+      "Resources": [
+        {
+          "Name": "host-key"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProfile",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServer",
+      "Resources": [
+        {
+          "Name": "server"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateUser",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWebApp",
+      "Resources": [
+        {
+          "Name": "webapp"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWebAppCustomization",
+      "Resources": [
+        {
+          "Name": "webapp"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "agreement",
+      "ARNFormats": [
+        "arn:${Partition}:transfer:${Region}:${Account}:agreement/${ServerId}/${AgreementId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "certificate",
+      "ARNFormats": [
+        "arn:${Partition}:transfer:${Region}:${Account}:certificate/${CertificateId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "connector",
+      "ARNFormats": [
+        "arn:${Partition}:transfer:${Region}:${Account}:connector/${ConnectorId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "host-key",
+      "ARNFormats": [
+        "arn:${Partition}:transfer:${Region}:${Account}:host-key/${ServerId}/${HostKeyId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "profile",
+      "ARNFormats": [
+        "arn:${Partition}:transfer:${Region}:${Account}:profile/${ProfileId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "server",
+      "ARNFormats": [
+        "arn:${Partition}:transfer:${Region}:${Account}:server/${ServerId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "user",
+      "ARNFormats": [
+        "arn:${Partition}:transfer:${Region}:${Account}:user/${ServerId}/${UserName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "webapp",
+      "ARNFormats": [
+        "arn:${Partition}:transfer:${Region}:${Account}:webapp/${WebAppId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "workflow",
+      "ARNFormats": [
+        "arn:${Partition}:transfer:${Region}:${Account}:workflow/${WorkflowId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,240 @@
+{
+  "Name": "ecr-public",
+  "Actions": [
+    {
+      "Name": "BatchCheckLayerAvailability",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDeleteImage",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "CompleteLayerUpload",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRepository",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRepository",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRepositoryPolicy",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeImageTags",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeImages",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRegistries",
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRepositories",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "GetAuthorizationToken"
+    },
+    {
+      "Name": "GetRegistryCatalogData",
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ]
+    },
+    {
+      "Name": "GetRepositoryCatalogData",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "GetRepositoryPolicy",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "InitiateLayerUpload",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "PutImage",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "PutRegistryCatalogData",
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ]
+    },
+    {
+      "Name": "PutRepositoryCatalogData",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "SetRepositoryPolicy",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    },
+    {
+      "Name": "UploadLayerPart",
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "ecr-public:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "registry",
+      "ARNFormats": [
+        "arn:${Partition}:ecr-public::${Account}:registry/${RegistryId}"
+      ]
+    },
+    {
+      "Name": "repository",
+      "ARNFormats": [
+        "arn:${Partition}:ecr-public::${Account}:repository/${RepositoryName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ecr-public:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

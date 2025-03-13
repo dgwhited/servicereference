@@ -1,0 +1,433 @@
+{
+  "Name": "dataexchange",
+  "Actions": [
+    {
+      "Name": "AcceptDataGrant",
+      "Resources": [
+        {
+          "Name": "data-grants"
+        }
+      ]
+    },
+    {
+      "Name": "CancelJob",
+      "Resources": [
+        {
+          "Name": "jobs"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAsset",
+      "Resources": [
+        {
+          "Name": "revisions"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataGrant",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateDataSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateEventAction"
+    },
+    {
+      "Name": "CreateJob"
+    },
+    {
+      "Name": "CreateRevision",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "data-sets"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAsset",
+      "Resources": [
+        {
+          "Name": "assets"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataGrant",
+      "Resources": [
+        {
+          "Name": "data-grants"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataSet",
+      "Resources": [
+        {
+          "Name": "data-sets"
+        },
+        {
+          "Name": "entitled-data-sets"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEventAction",
+      "Resources": [
+        {
+          "Name": "event-actions"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRevision",
+      "Resources": [
+        {
+          "Name": "revisions"
+        }
+      ]
+    },
+    {
+      "Name": "GetAsset",
+      "Resources": [
+        {
+          "Name": "assets"
+        },
+        {
+          "Name": "entitled-assets"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataGrant",
+      "Resources": [
+        {
+          "Name": "data-grants"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataSet",
+      "Resources": [
+        {
+          "Name": "data-sets"
+        },
+        {
+          "Name": "entitled-data-sets"
+        }
+      ]
+    },
+    {
+      "Name": "GetEventAction",
+      "Resources": [
+        {
+          "Name": "event-actions"
+        }
+      ]
+    },
+    {
+      "Name": "GetJob",
+      "Resources": [
+        {
+          "Name": "jobs"
+        }
+      ]
+    },
+    {
+      "Name": "GetReceivedDataGrant",
+      "Resources": [
+        {
+          "Name": "data-grants"
+        }
+      ]
+    },
+    {
+      "Name": "GetRevision",
+      "Resources": [
+        {
+          "Name": "entitled-revisions"
+        },
+        {
+          "Name": "revisions"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataGrants"
+    },
+    {
+      "Name": "ListDataSetRevisions",
+      "Resources": [
+        {
+          "Name": "data-sets"
+        },
+        {
+          "Name": "entitled-data-sets"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataSets"
+    },
+    {
+      "Name": "ListEventActions"
+    },
+    {
+      "Name": "ListJobs"
+    },
+    {
+      "Name": "ListReceivedDataGrants"
+    },
+    {
+      "Name": "ListRevisionAssets",
+      "Resources": [
+        {
+          "Name": "entitled-revisions"
+        },
+        {
+          "Name": "revisions"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "data-grants"
+        },
+        {
+          "Name": "data-sets"
+        },
+        {
+          "Name": "revisions"
+        }
+      ]
+    },
+    {
+      "Name": "PublishDataSet",
+      "Resources": [
+        {
+          "Name": "data-sets"
+        }
+      ]
+    },
+    {
+      "Name": "PublishToDataGrant",
+      "Resources": [
+        {
+          "Name": "data-sets"
+        }
+      ]
+    },
+    {
+      "Name": "RevokeRevision",
+      "Resources": [
+        {
+          "Name": "revisions"
+        }
+      ]
+    },
+    {
+      "Name": "SendApiAsset",
+      "Resources": [
+        {
+          "Name": "assets"
+        },
+        {
+          "Name": "entitled-assets"
+        }
+      ]
+    },
+    {
+      "Name": "SendDataSetNotification",
+      "Resources": [
+        {
+          "Name": "data-sets"
+        }
+      ]
+    },
+    {
+      "Name": "StartJob",
+      "Resources": [
+        {
+          "Name": "jobs"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "data-grants"
+        },
+        {
+          "Name": "data-sets"
+        },
+        {
+          "Name": "revisions"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "data-grants"
+        },
+        {
+          "Name": "data-sets"
+        },
+        {
+          "Name": "revisions"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAsset",
+      "Resources": [
+        {
+          "Name": "assets"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataSet",
+      "Resources": [
+        {
+          "Name": "data-sets"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEventAction",
+      "Resources": [
+        {
+          "Name": "event-actions"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRevision",
+      "Resources": [
+        {
+          "Name": "revisions"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "dataexchange:JobType",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "assets",
+      "ARNFormats": [
+        "arn:${Partition}:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}/assets/${AssetId}"
+      ]
+    },
+    {
+      "Name": "data-grants",
+      "ARNFormats": [
+        "arn:${Partition}:dataexchange:${Region}:${Account}:data-grants/${DataGrantId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "data-sets",
+      "ARNFormats": [
+        "arn:${Partition}:dataexchange:${Region}:${Account}:data-sets/${DataSetId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "entitled-assets",
+      "ARNFormats": [
+        "arn:${Partition}:dataexchange:${Region}::data-sets/${DataSetId}/revisions/${RevisionId}/assets/${AssetId}"
+      ]
+    },
+    {
+      "Name": "entitled-data-sets",
+      "ARNFormats": [
+        "arn:${Partition}:dataexchange:${Region}::data-sets/${DataSetId}"
+      ]
+    },
+    {
+      "Name": "entitled-revisions",
+      "ARNFormats": [
+        "arn:${Partition}:dataexchange:${Region}::data-sets/${DataSetId}/revisions/${RevisionId}"
+      ]
+    },
+    {
+      "Name": "event-actions",
+      "ARNFormats": [
+        "arn:${Partition}:dataexchange:${Region}:${Account}:event-actions/${EventActionId}"
+      ]
+    },
+    {
+      "Name": "jobs",
+      "ARNFormats": [
+        "arn:${Partition}:dataexchange:${Region}:${Account}:jobs/${JobId}"
+      ],
+      "ConditionKeys": [
+        "dataexchange:JobType"
+      ]
+    },
+    {
+      "Name": "revisions",
+      "ARNFormats": [
+        "arn:${Partition}:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,144 @@
+{
+  "Name": "networkmonitor",
+  "Actions": [
+    {
+      "Name": "CreateMonitor",
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "CreateProbe"
+    },
+    {
+      "Name": "DeleteMonitor",
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProbe",
+      "Resources": [
+        {
+          "Name": "probe"
+        }
+      ]
+    },
+    {
+      "Name": "GetMonitor",
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "GetProbe",
+      "Resources": [
+        {
+          "Name": "probe"
+        }
+      ]
+    },
+    {
+      "Name": "ListMonitors"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "monitor"
+        },
+        {
+          "Name": "probe"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "Resources": [
+        {
+          "Name": "monitor"
+        },
+        {
+          "Name": "probe"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "monitor"
+        },
+        {
+          "Name": "probe"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMonitor",
+      "Resources": [
+        {
+          "Name": "monitor"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProbe",
+      "Resources": [
+        {
+          "Name": "probe"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "monitor",
+      "ARNFormats": [
+        "arn:${Partition}:networkmonitor:${Region}:${Account}:monitor/${MonitorName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "probe",
+      "ARNFormats": [
+        "arn:${Partition}:networkmonitor:${Region}:${Account}:probe/${ProbeId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

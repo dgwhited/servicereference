@@ -1,0 +1,140 @@
+{
+  "Name": "payments",
+  "Actions": [
+    {
+      "Name": "AcceptFinancingApplicationTerms"
+    },
+    {
+      "Name": "CreateFinancingApplication"
+    },
+    {
+      "Name": "CreatePaymentInstrument",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeletePaymentInstrument"
+    },
+    {
+      "Name": "GetFinancingApplication"
+    },
+    {
+      "Name": "GetFinancingLine"
+    },
+    {
+      "Name": "GetFinancingLineWithdrawal"
+    },
+    {
+      "Name": "GetFinancingOption"
+    },
+    {
+      "Name": "GetPaymentInstrument",
+      "Resources": [
+        {
+          "Name": "payment-instrument"
+        }
+      ]
+    },
+    {
+      "Name": "GetPaymentStatus"
+    },
+    {
+      "Name": "ListFinancingApplications"
+    },
+    {
+      "Name": "ListFinancingLineWithdrawals"
+    },
+    {
+      "Name": "ListFinancingLines"
+    },
+    {
+      "Name": "ListPaymentInstruments"
+    },
+    {
+      "Name": "ListPaymentPreferences"
+    },
+    {
+      "Name": "ListPaymentProgramOptions"
+    },
+    {
+      "Name": "ListPaymentProgramStatus"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "payment-instrument"
+        }
+      ]
+    },
+    {
+      "Name": "MakePayment"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "payment-instrument"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "payment-instrument"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFinancingApplication"
+    },
+    {
+      "Name": "UpdatePaymentInstrument"
+    },
+    {
+      "Name": "UpdatePaymentPreferences"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "payment-instrument",
+      "ARNFormats": [
+        "arn:${Partition}:payments::${Account}:payment-instrument:${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

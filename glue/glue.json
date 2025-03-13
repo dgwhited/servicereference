@@ -1,0 +1,2923 @@
+{
+  "Name": "glue",
+  "Actions": [
+    {
+      "Name": "AuthorizeInboundIntegration",
+      "Resources": [
+        {
+          "Name": "integration"
+        }
+      ]
+    },
+    {
+      "Name": "BatchCreatePartition",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDeleteConnection",
+      "Resources": [
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDeletePartition",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDeleteTable",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDeleteTableVersion",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetBlueprints",
+      "Resources": [
+        {
+          "Name": "blueprint"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetCrawlers",
+      "Resources": [
+        {
+          "Name": "crawler"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetCustomEntityTypes"
+    },
+    {
+      "Name": "BatchGetDevEndpoints",
+      "Resources": [
+        {
+          "Name": "devendpoint"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetJobs",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetPartition",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetStageFiles"
+    },
+    {
+      "Name": "BatchGetTableOptimizer",
+      "Resources": [
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetTriggers",
+      "Resources": [
+        {
+          "Name": "trigger"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetWorkflows",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "BatchStopJobRun",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "BatchUpdatePartition",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "CancelDataQualityRuleRecommendationRun",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        }
+      ]
+    },
+    {
+      "Name": "CancelDataQualityRulesetEvaluationRun",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        }
+      ]
+    },
+    {
+      "Name": "CancelMLTaskRun",
+      "Resources": [
+        {
+          "Name": "mlTransform"
+        }
+      ]
+    },
+    {
+      "Name": "CancelStatement",
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "CheckSchemaVersionValidity"
+    },
+    {
+      "Name": "CreateBlueprint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "blueprint"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCatalog",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "CreateClassifier"
+    },
+    {
+      "Name": "CreateColumnStatisticsTaskSettings",
+      "Resources": [
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConnection",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCrawler",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateCustomEntityType",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateDataQualityRuleset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateDatabase",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDevEndpoint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateInboundIntegration"
+    },
+    {
+      "Name": "CreateIntegration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "integration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateIntegrationResourceProperty",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "CreateIntegrationTableProperties",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "CreateJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "glue:SecurityGroupIds",
+        "glue:SubnetIds",
+        "glue:VpcIds"
+      ],
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMLTransform",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreatePartition",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePartitionIndex",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRegistry",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSchema",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "CreateScript"
+    },
+    {
+      "Name": "CreateSecurityConfiguration"
+    },
+    {
+      "Name": "CreateSession",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "glue:SecurityGroupIds",
+        "glue:SubnetIds",
+        "glue:VpcIds"
+      ],
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTable",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTableOptimizer",
+      "Resources": [
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTrigger",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "trigger"
+        }
+      ]
+    },
+    {
+      "Name": "CreateUsageProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "usageProfile"
+        }
+      ]
+    },
+    {
+      "Name": "CreateUserDefinedFunction",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWorkflow",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBlueprint",
+      "Resources": [
+        {
+          "Name": "blueprint"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCatalog",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteClassifier"
+    },
+    {
+      "Name": "DeleteColumnStatisticsForPartition",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteColumnStatisticsForTable",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteColumnStatisticsTaskSettings",
+      "Resources": [
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConnection",
+      "Resources": [
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCrawler",
+      "Resources": [
+        {
+          "Name": "crawler"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCustomEntityType"
+    },
+    {
+      "Name": "DeleteDataQualityRuleset",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDatabase",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        },
+        {
+          "Name": "userdefinedfunction"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDevEndpoint",
+      "Resources": [
+        {
+          "Name": "devendpoint"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIntegration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "integration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIntegrationTableProperties",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteJob",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMLTransform",
+      "Resources": [
+        {
+          "Name": "mlTransform"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePartition",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePartitionIndex",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRegistry",
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Resources": [
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSchema",
+      "Resources": [
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSchemaVersions",
+      "Resources": [
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSecurityConfiguration"
+    },
+    {
+      "Name": "DeleteSession",
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTable",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTableOptimizer",
+      "Resources": [
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTableVersion",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTrigger",
+      "Resources": [
+        {
+          "Name": "trigger"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteUsageProfile",
+      "Resources": [
+        {
+          "Name": "usageProfile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteUserDefinedFunction",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "userdefinedfunction"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkflow",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterDataPreview"
+    },
+    {
+      "Name": "DescribeConnectionType"
+    },
+    {
+      "Name": "DescribeEntity",
+      "Resources": [
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeInboundIntegrations"
+    },
+    {
+      "Name": "DescribeIntegrations",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "integration"
+        }
+      ]
+    },
+    {
+      "Name": "GetBlueprint",
+      "Resources": [
+        {
+          "Name": "blueprint"
+        }
+      ]
+    },
+    {
+      "Name": "GetBlueprintRun",
+      "Resources": [
+        {
+          "Name": "blueprint"
+        }
+      ]
+    },
+    {
+      "Name": "GetBlueprintRuns",
+      "Resources": [
+        {
+          "Name": "blueprint"
+        }
+      ]
+    },
+    {
+      "Name": "GetCatalog",
+      "ActionConditionKeys": [
+        "glue:EnabledForRedshiftAutoDiscovery"
+      ],
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "GetCatalogImportStatus",
+      "Resources": [
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "GetCatalogs",
+      "ActionConditionKeys": [
+        "glue:EnabledForRedshiftAutoDiscovery"
+      ],
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "GetClassifier"
+    },
+    {
+      "Name": "GetClassifiers"
+    },
+    {
+      "Name": "GetColumnStatisticsForPartition",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "GetColumnStatisticsForTable",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "GetColumnStatisticsTaskRun"
+    },
+    {
+      "Name": "GetColumnStatisticsTaskRuns"
+    },
+    {
+      "Name": "GetColumnStatisticsTaskSettings"
+    },
+    {
+      "Name": "GetCompletion",
+      "Resources": [
+        {
+          "Name": "completion"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnection",
+      "Resources": [
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnections",
+      "Resources": [
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "GetCrawler",
+      "Resources": [
+        {
+          "Name": "crawler"
+        }
+      ]
+    },
+    {
+      "Name": "GetCrawlerMetrics"
+    },
+    {
+      "Name": "GetCrawlers"
+    },
+    {
+      "Name": "GetCustomEntityType"
+    },
+    {
+      "Name": "GetDashboardUrl",
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataCatalogEncryptionSettings",
+      "Resources": [
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataPreviewStatement"
+    },
+    {
+      "Name": "GetDataQualityModel",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        },
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataQualityModelResult",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        },
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataQualityResult",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataQualityRuleRecommendationRun",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataQualityRuleset",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataQualityRulesetEvaluationRun",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        }
+      ]
+    },
+    {
+      "Name": "GetDatabase",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "GetDatabases",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataflowGraph"
+    },
+    {
+      "Name": "GetDevEndpoint",
+      "Resources": [
+        {
+          "Name": "devendpoint"
+        }
+      ]
+    },
+    {
+      "Name": "GetDevEndpoints"
+    },
+    {
+      "Name": "GetEntityRecords",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "connection"
+        }
+      ]
+    },
+    {
+      "Name": "GetEnvironment"
+    },
+    {
+      "Name": "GetExecutors"
+    },
+    {
+      "Name": "GetExecutorsThreads"
+    },
+    {
+      "Name": "GetGeneratedCode"
+    },
+    {
+      "Name": "GetIntegrationResourceProperty",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "GetIntegrationTableProperties",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "GetJob",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "GetJobBookmark"
+    },
+    {
+      "Name": "GetJobRun",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "GetJobRuns",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "GetJobUpgradeAnalysis",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "GetJobs"
+    },
+    {
+      "Name": "GetLogParsingStatus"
+    },
+    {
+      "Name": "GetMLTaskRun",
+      "Resources": [
+        {
+          "Name": "mlTransform"
+        }
+      ]
+    },
+    {
+      "Name": "GetMLTaskRuns",
+      "Resources": [
+        {
+          "Name": "mlTransform"
+        }
+      ]
+    },
+    {
+      "Name": "GetMLTransform",
+      "Resources": [
+        {
+          "Name": "mlTransform"
+        }
+      ]
+    },
+    {
+      "Name": "GetMLTransforms",
+      "Resources": [
+        {
+          "Name": "mlTransform"
+        }
+      ]
+    },
+    {
+      "Name": "GetMapping"
+    },
+    {
+      "Name": "GetNotebookInstanceStatus"
+    },
+    {
+      "Name": "GetPartition",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "GetPartitionIndexes",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "GetPartitions",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "GetPlan"
+    },
+    {
+      "Name": "GetQueries"
+    },
+    {
+      "Name": "GetQuery"
+    },
+    {
+      "Name": "GetRecipeAction"
+    },
+    {
+      "Name": "GetRegistry",
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicies",
+      "Resources": [
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "Resources": [
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "GetSchema",
+      "Resources": [
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "GetSchemaByDefinition",
+      "Resources": [
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "GetSchemaVersion",
+      "Resources": [
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "GetSchemaVersionsDiff",
+      "Resources": [
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "GetSecurityConfiguration"
+    },
+    {
+      "Name": "GetSecurityConfigurations"
+    },
+    {
+      "Name": "GetSession",
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "GetStage"
+    },
+    {
+      "Name": "GetStageAttempt"
+    },
+    {
+      "Name": "GetStageAttemptTaskList"
+    },
+    {
+      "Name": "GetStageAttemptTaskSummary"
+    },
+    {
+      "Name": "GetStageFiles"
+    },
+    {
+      "Name": "GetStages"
+    },
+    {
+      "Name": "GetStatement",
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "GetStorage"
+    },
+    {
+      "Name": "GetStorageUnit"
+    },
+    {
+      "Name": "GetTable",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableOptimizer",
+      "Resources": [
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableVersion",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableVersions",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "GetTables",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "GetTags",
+      "Resources": [
+        {
+          "Name": "blueprint"
+        },
+        {
+          "Name": "crawler"
+        },
+        {
+          "Name": "customEntityType"
+        },
+        {
+          "Name": "devendpoint"
+        },
+        {
+          "Name": "job"
+        },
+        {
+          "Name": "trigger"
+        },
+        {
+          "Name": "usageProfile"
+        },
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "GetTrigger",
+      "Resources": [
+        {
+          "Name": "trigger"
+        }
+      ]
+    },
+    {
+      "Name": "GetTriggers"
+    },
+    {
+      "Name": "GetUsageProfile",
+      "Resources": [
+        {
+          "Name": "usageProfile"
+        }
+      ]
+    },
+    {
+      "Name": "GetUserDefinedFunction",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "userdefinedfunction"
+        }
+      ]
+    },
+    {
+      "Name": "GetUserDefinedFunctions",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "userdefinedfunction"
+        }
+      ]
+    },
+    {
+      "Name": "GetWorkflow",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "GetWorkflowRun",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "GetWorkflowRunProperties",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "GetWorkflowRuns",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "GlueNotebookAuthorize"
+    },
+    {
+      "Name": "GlueNotebookRefreshCredentials"
+    },
+    {
+      "Name": "ImportCatalogToGlue",
+      "Resources": [
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "ListBlueprints"
+    },
+    {
+      "Name": "ListColumnStatisticsTaskRuns"
+    },
+    {
+      "Name": "ListConnectionTypes"
+    },
+    {
+      "Name": "ListCrawlers"
+    },
+    {
+      "Name": "ListCrawls",
+      "Resources": [
+        {
+          "Name": "crawler"
+        }
+      ]
+    },
+    {
+      "Name": "ListCustomEntityTypes"
+    },
+    {
+      "Name": "ListDataQualityResults",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataQualityRuleRecommendationRuns",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataQualityRulesetEvaluationRuns",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataQualityRulesets",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        }
+      ]
+    },
+    {
+      "Name": "ListDevEndpoints"
+    },
+    {
+      "Name": "ListEntities",
+      "Resources": [
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobUpgradeAnalyses",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobs"
+    },
+    {
+      "Name": "ListMLTransforms",
+      "Resources": [
+        {
+          "Name": "mlTransform"
+        }
+      ]
+    },
+    {
+      "Name": "ListRegistries"
+    },
+    {
+      "Name": "ListSchemaVersions",
+      "Resources": [
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "ListSchemas",
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ]
+    },
+    {
+      "Name": "ListSessions"
+    },
+    {
+      "Name": "ListStatements",
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "ListTableOptimizerRuns",
+      "Resources": [
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "ListTriggers"
+    },
+    {
+      "Name": "ListUsageProfiles"
+    },
+    {
+      "Name": "ListWorkflows"
+    },
+    {
+      "Name": "ModifyIntegration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "integration"
+        }
+      ]
+    },
+    {
+      "Name": "NotifyEvent",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "PassConnection",
+      "Resources": [
+        {
+          "Name": "connection"
+        }
+      ]
+    },
+    {
+      "Name": "PublishDataQuality",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        }
+      ]
+    },
+    {
+      "Name": "PutDataCatalogEncryptionSettings",
+      "Resources": [
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "PutDataQualityProfileAnnotation",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        },
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "PutDataQualityStatisticAnnotation",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        },
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "Resources": [
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "PutSchemaVersionMetadata",
+      "Resources": [
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "PutWorkflowRunProperties",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "QuerySchemaVersionMetadata",
+      "Resources": [
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "RefreshOAuth2Tokens",
+      "Resources": [
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterSchemaVersion",
+      "Resources": [
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveSchemaVersionMetadata",
+      "Resources": [
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "RequestLogParsing"
+    },
+    {
+      "Name": "ResetJobBookmark"
+    },
+    {
+      "Name": "ResumeWorkflowRun",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "RunDataPreviewStatement"
+    },
+    {
+      "Name": "RunStatement",
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "SearchTables",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "SendFeedback"
+    },
+    {
+      "Name": "SendRecipeAction"
+    },
+    {
+      "Name": "StartBlueprintRun",
+      "Resources": [
+        {
+          "Name": "blueprint"
+        }
+      ]
+    },
+    {
+      "Name": "StartColumnStatisticsTaskRun",
+      "Resources": [
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "StartColumnStatisticsTaskRunSchedule",
+      "Resources": [
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "StartCompletion"
+    },
+    {
+      "Name": "StartCrawler",
+      "Resources": [
+        {
+          "Name": "crawler"
+        }
+      ]
+    },
+    {
+      "Name": "StartCrawlerSchedule"
+    },
+    {
+      "Name": "StartDataQualityRuleRecommendationRun",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        }
+      ]
+    },
+    {
+      "Name": "StartDataQualityRulesetEvaluationRun",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        }
+      ]
+    },
+    {
+      "Name": "StartExportLabelsTaskRun",
+      "Resources": [
+        {
+          "Name": "mlTransform"
+        }
+      ]
+    },
+    {
+      "Name": "StartImportLabelsTaskRun",
+      "Resources": [
+        {
+          "Name": "mlTransform"
+        }
+      ]
+    },
+    {
+      "Name": "StartJobRun",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "StartJobUpgradeAnalysis",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "StartMLEvaluationTaskRun",
+      "Resources": [
+        {
+          "Name": "mlTransform"
+        }
+      ]
+    },
+    {
+      "Name": "StartMLLabelingSetGenerationTaskRun",
+      "Resources": [
+        {
+          "Name": "mlTransform"
+        }
+      ]
+    },
+    {
+      "Name": "StartNotebook"
+    },
+    {
+      "Name": "StartTrigger",
+      "Resources": [
+        {
+          "Name": "trigger"
+        }
+      ]
+    },
+    {
+      "Name": "StartWorkflowRun",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "StopColumnStatisticsTaskRun",
+      "Resources": [
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "StopColumnStatisticsTaskRunSchedule",
+      "Resources": [
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "StopCrawler",
+      "Resources": [
+        {
+          "Name": "crawler"
+        }
+      ]
+    },
+    {
+      "Name": "StopCrawlerSchedule"
+    },
+    {
+      "Name": "StopJobUpgradeAnalysis",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "StopSession",
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "StopTrigger",
+      "Resources": [
+        {
+          "Name": "trigger"
+        }
+      ]
+    },
+    {
+      "Name": "StopWorkflowRun",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "blueprint"
+        },
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "crawler"
+        },
+        {
+          "Name": "customEntityType"
+        },
+        {
+          "Name": "dataQualityRuleset"
+        },
+        {
+          "Name": "devendpoint"
+        },
+        {
+          "Name": "integration"
+        },
+        {
+          "Name": "job"
+        },
+        {
+          "Name": "mlTransform"
+        },
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        },
+        {
+          "Name": "session"
+        },
+        {
+          "Name": "trigger"
+        },
+        {
+          "Name": "usageProfile"
+        },
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "TerminateNotebook"
+    },
+    {
+      "Name": "TestConnection"
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "blueprint"
+        },
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "crawler"
+        },
+        {
+          "Name": "customEntityType"
+        },
+        {
+          "Name": "dataQualityRuleset"
+        },
+        {
+          "Name": "devendpoint"
+        },
+        {
+          "Name": "integration"
+        },
+        {
+          "Name": "job"
+        },
+        {
+          "Name": "mlTransform"
+        },
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        },
+        {
+          "Name": "session"
+        },
+        {
+          "Name": "trigger"
+        },
+        {
+          "Name": "usageProfile"
+        },
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBlueprint",
+      "Resources": [
+        {
+          "Name": "blueprint"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCatalog",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateClassifier"
+    },
+    {
+      "Name": "UpdateColumnStatisticsForPartition",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateColumnStatisticsForTable",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateColumnStatisticsTaskSettings",
+      "Resources": [
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConnection",
+      "Resources": [
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCrawler",
+      "Resources": [
+        {
+          "Name": "crawler"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCrawlerSchedule"
+    },
+    {
+      "Name": "UpdateDataQualityRuleset",
+      "Resources": [
+        {
+          "Name": "dataQualityRuleset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDatabase",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDevEndpoint",
+      "Resources": [
+        {
+          "Name": "devendpoint"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIntegrationResourceProperty",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIntegrationTableProperties",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateJob",
+      "ActionConditionKeys": [
+        "glue:SecurityGroupIds",
+        "glue:SubnetIds",
+        "glue:VpcIds"
+      ],
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateJobFromSourceControl",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMLTransform",
+      "Resources": [
+        {
+          "Name": "mlTransform"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePartition",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRegistry",
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSchema",
+      "Resources": [
+        {
+          "Name": "registry"
+        },
+        {
+          "Name": "schema"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSourceControlFromJob",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTable",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTableOptimizer",
+      "Resources": [
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTrigger",
+      "Resources": [
+        {
+          "Name": "trigger"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateUsageProfile",
+      "Resources": [
+        {
+          "Name": "usageProfile"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateUserDefinedFunction",
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "userdefinedfunction"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWorkflow",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "UpgradeJob",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "UseGlueStudio"
+    },
+    {
+      "Name": "UseMLTransforms",
+      "Resources": [
+        {
+          "Name": "mlTransform"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "glue:CredentialIssuingService",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "glue:EnabledForRedshiftAutoDiscovery",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
+      "Name": "glue:RoleAssumedBy",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "glue:SecurityGroupIds",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "glue:SubnetIds",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "glue:VpcIds",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "blueprint",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:blueprint/${BlueprintName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "catalog",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:catalog/${CatalogName}"
+      ]
+    },
+    {
+      "Name": "completion",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:completion/${CompletionId}"
+      ]
+    },
+    {
+      "Name": "connection",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:connection/${ConnectionName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "crawler",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:crawler/${CrawlerName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "customEntityType",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:customEntityType/${CustomEntityTypeId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "dataQualityRuleset",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:dataQualityRuleset/${RulesetName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "database",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:database/${DatabaseName}"
+      ]
+    },
+    {
+      "Name": "devendpoint",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:devEndpoint/${DevEndpointName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "integration",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:integration:${IntegrationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "job",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:job/${JobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "mlTransform",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:mlTransform/${TransformId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "registry",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:registry/${RegistryName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "rootcatalog",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:catalog"
+      ]
+    },
+    {
+      "Name": "schema",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:schema/${SchemaName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "session",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:session/${SessionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "table",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}"
+      ]
+    },
+    {
+      "Name": "tableversion",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:tableVersion/${DatabaseName}/${TableName}/${TableVersionName}"
+      ]
+    },
+    {
+      "Name": "trigger",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:trigger/${TriggerName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "usageProfile",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:usageProfile/${UsageProfileId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "userdefinedfunction",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:userDefinedFunction/${DatabaseName}/${UserDefinedFunctionName}"
+      ]
+    },
+    {
+      "Name": "workflow",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:workflow/${WorkflowName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

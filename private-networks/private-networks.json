@@ -1,0 +1,334 @@
+{
+  "Name": "private-networks",
+  "Actions": [
+    {
+      "Name": "AcknowledgeOrderReceipt",
+      "Resources": [
+        {
+          "Name": "order"
+        }
+      ]
+    },
+    {
+      "Name": "ActivateDeviceIdentifier",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device-identifier"
+        }
+      ]
+    },
+    {
+      "Name": "ActivateNetworkSite",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "network-site"
+        },
+        {
+          "Name": "order"
+        }
+      ]
+    },
+    {
+      "Name": "ConfigureAccessPoint",
+      "Resources": [
+        {
+          "Name": "network-resource"
+        }
+      ]
+    },
+    {
+      "Name": "CreateNetwork",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "CreateNetworkSite",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "DeactivateDeviceIdentifier",
+      "Resources": [
+        {
+          "Name": "device-identifier"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNetwork",
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNetworkSite",
+      "Resources": [
+        {
+          "Name": "network-site"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeviceIdentifier",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device-identifier"
+        }
+      ]
+    },
+    {
+      "Name": "GetNetwork",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "GetNetworkResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "network-resource"
+        }
+      ]
+    },
+    {
+      "Name": "GetNetworkSite",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "network-site"
+        }
+      ]
+    },
+    {
+      "Name": "GetOrder",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "order"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeviceIdentifiers",
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "ListNetworkResources",
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "ListNetworkSites",
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "ListNetworks"
+    },
+    {
+      "Name": "ListOrders",
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "Ping"
+    },
+    {
+      "Name": "StartNetworkResourceUpdate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "network-resource"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "device-identifier"
+        },
+        {
+          "Name": "network"
+        },
+        {
+          "Name": "network-resource"
+        },
+        {
+          "Name": "network-site"
+        },
+        {
+          "Name": "order"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "device-identifier"
+        },
+        {
+          "Name": "network"
+        },
+        {
+          "Name": "network-resource"
+        },
+        {
+          "Name": "network-site"
+        },
+        {
+          "Name": "order"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNetworkSite",
+      "Resources": [
+        {
+          "Name": "network-site"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNetworkSitePlan",
+      "Resources": [
+        {
+          "Name": "network-site"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "device-identifier",
+      "ARNFormats": [
+        "arn:${Partition}:private-networks:${Region}:${Account}:device-identifier/${NetworkName}/${DeviceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "network",
+      "ARNFormats": [
+        "arn:${Partition}:private-networks:${Region}:${Account}:network/${NetworkName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "network-resource",
+      "ARNFormats": [
+        "arn:${Partition}:private-networks:${Region}:${Account}:network-resource/${NetworkName}/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "network-site",
+      "ARNFormats": [
+        "arn:${Partition}:private-networks:${Region}:${Account}:network-site/${NetworkName}/${NetworkSiteName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "order",
+      "ARNFormats": [
+        "arn:${Partition}:private-networks:${Region}:${Account}:order/${NetworkName}/${OrderId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

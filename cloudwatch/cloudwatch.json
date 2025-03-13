@@ -1,0 +1,476 @@
+{
+  "Name": "cloudwatch",
+  "Actions": [
+    {
+      "Name": "BatchGetServiceLevelIndicatorReport"
+    },
+    {
+      "Name": "BatchGetServiceLevelObjectiveBudgetReport",
+      "Resources": [
+        {
+          "Name": "slo"
+        }
+      ]
+    },
+    {
+      "Name": "CreateServiceLevelObjective",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteAlarms",
+      "Resources": [
+        {
+          "Name": "alarm"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAnomalyDetector"
+    },
+    {
+      "Name": "DeleteDashboards",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInsightRules",
+      "Resources": [
+        {
+          "Name": "insight-rule"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMetricStream",
+      "Resources": [
+        {
+          "Name": "metric-stream"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteServiceLevelObjective",
+      "Resources": [
+        {
+          "Name": "slo"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAlarmHistory",
+      "Resources": [
+        {
+          "Name": "alarm"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAlarms",
+      "Resources": [
+        {
+          "Name": "alarm"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAlarmsForMetric"
+    },
+    {
+      "Name": "DescribeAnomalyDetectors"
+    },
+    {
+      "Name": "DescribeInsightRules"
+    },
+    {
+      "Name": "DisableAlarmActions",
+      "Resources": [
+        {
+          "Name": "alarm"
+        }
+      ]
+    },
+    {
+      "Name": "DisableInsightRules",
+      "Resources": [
+        {
+          "Name": "insight-rule"
+        }
+      ]
+    },
+    {
+      "Name": "EnableAlarmActions",
+      "Resources": [
+        {
+          "Name": "alarm"
+        }
+      ]
+    },
+    {
+      "Name": "EnableInsightRules",
+      "Resources": [
+        {
+          "Name": "insight-rule"
+        }
+      ]
+    },
+    {
+      "Name": "EnableTopologyDiscovery"
+    },
+    {
+      "Name": "GenerateQuery"
+    },
+    {
+      "Name": "GetDashboard",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "GetInsightRuleReport",
+      "Resources": [
+        {
+          "Name": "insight-rule"
+        }
+      ]
+    },
+    {
+      "Name": "GetMetricData"
+    },
+    {
+      "Name": "GetMetricStatistics"
+    },
+    {
+      "Name": "GetMetricStream",
+      "Resources": [
+        {
+          "Name": "metric-stream"
+        }
+      ]
+    },
+    {
+      "Name": "GetMetricWidgetImage"
+    },
+    {
+      "Name": "GetService",
+      "Resources": [
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "GetServiceData",
+      "Resources": [
+        {
+          "Name": "service"
+        }
+      ]
+    },
+    {
+      "Name": "GetServiceLevelObjective",
+      "Resources": [
+        {
+          "Name": "slo"
+        }
+      ]
+    },
+    {
+      "Name": "GetTopologyDiscoveryStatus"
+    },
+    {
+      "Name": "GetTopologyMap"
+    },
+    {
+      "Name": "Link"
+    },
+    {
+      "Name": "ListDashboards"
+    },
+    {
+      "Name": "ListEntitiesForMetric"
+    },
+    {
+      "Name": "ListManagedInsightRules",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cloudwatch:requestManagedResourceARNs"
+      ]
+    },
+    {
+      "Name": "ListMetricStreams"
+    },
+    {
+      "Name": "ListMetrics"
+    },
+    {
+      "Name": "ListServiceLevelObjectives"
+    },
+    {
+      "Name": "ListServices"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "alarm"
+        },
+        {
+          "Name": "insight-rule"
+        },
+        {
+          "Name": "slo"
+        }
+      ]
+    },
+    {
+      "Name": "PutAnomalyDetector"
+    },
+    {
+      "Name": "PutCompositeAlarm",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cloudwatch:AlarmActions"
+      ],
+      "Resources": [
+        {
+          "Name": "alarm"
+        }
+      ]
+    },
+    {
+      "Name": "PutDashboard",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "PutInsightRule",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cloudwatch:requestInsightRuleLogGroups"
+      ],
+      "Resources": [
+        {
+          "Name": "insight-rule"
+        }
+      ]
+    },
+    {
+      "Name": "PutManagedInsightRules",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cloudwatch:requestManagedResourceARNs"
+      ]
+    },
+    {
+      "Name": "PutMetricAlarm",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cloudwatch:AlarmActions"
+      ],
+      "Resources": [
+        {
+          "Name": "alarm"
+        }
+      ]
+    },
+    {
+      "Name": "PutMetricData",
+      "ActionConditionKeys": [
+        "cloudwatch:namespace"
+      ]
+    },
+    {
+      "Name": "PutMetricStream",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "metric-stream"
+        }
+      ]
+    },
+    {
+      "Name": "SetAlarmState",
+      "Resources": [
+        {
+          "Name": "alarm"
+        }
+      ]
+    },
+    {
+      "Name": "StartMetricStreams",
+      "Resources": [
+        {
+          "Name": "metric-stream"
+        }
+      ]
+    },
+    {
+      "Name": "StopMetricStreams",
+      "Resources": [
+        {
+          "Name": "metric-stream"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "alarm"
+        },
+        {
+          "Name": "insight-rule"
+        },
+        {
+          "Name": "slo"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "alarm"
+        },
+        {
+          "Name": "insight-rule"
+        },
+        {
+          "Name": "slo"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServiceLevelObjective",
+      "Resources": [
+        {
+          "Name": "slo"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "cloudwatch:AlarmActions",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "cloudwatch:namespace",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "cloudwatch:requestInsightRuleLogGroups",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "cloudwatch:requestManagedResourceARNs",
+      "Types": [
+        "ArrayOfARN"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "alarm",
+      "ARNFormats": [
+        "arn:${Partition}:cloudwatch:${Region}:${Account}:alarm:${AlarmName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "dashboard",
+      "ARNFormats": [
+        "arn:${Partition}:cloudwatch::${Account}:dashboard/${DashboardName}"
+      ]
+    },
+    {
+      "Name": "insight-rule",
+      "ARNFormats": [
+        "arn:${Partition}:cloudwatch:${Region}:${Account}:insight-rule/${InsightRuleName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "metric-stream",
+      "ARNFormats": [
+        "arn:${Partition}:cloudwatch:${Region}:${Account}:metric-stream/${MetricStreamName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "service",
+      "ARNFormats": [
+        "arn:${Partition}:cloudwatch:${Region}:${Account}:service/${ServiceName}-${UniqueAttributesHex}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "slo",
+      "ARNFormats": [
+        "arn:${Partition}:cloudwatch:${Region}:${Account}:slo/${SloName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

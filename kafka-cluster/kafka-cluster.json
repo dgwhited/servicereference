@@ -1,0 +1,195 @@
+{
+  "Name": "kafka-cluster",
+  "Actions": [
+    {
+      "Name": "AlterCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "AlterClusterDynamicConfiguration",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "AlterGroup",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "AlterTopic",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "AlterTopicDynamicConfiguration",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "AlterTransactionalId",
+      "Resources": [
+        {
+          "Name": "transactional-id"
+        }
+      ]
+    },
+    {
+      "Name": "Connect",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTopic",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGroup",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTopic",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeClusterDynamicConfiguration",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeGroup",
+      "Resources": [
+        {
+          "Name": "group"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTopic",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTopicDynamicConfiguration",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTransactionalId",
+      "Resources": [
+        {
+          "Name": "transactional-id"
+        }
+      ]
+    },
+    {
+      "Name": "ReadData",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "WriteData",
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ]
+    },
+    {
+      "Name": "WriteDataIdempotently",
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "cluster",
+      "ARNFormats": [
+        "arn:${Partition}:kafka:${Region}:${Account}:cluster/${ClusterName}/${ClusterUuid}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "group",
+      "ARNFormats": [
+        "arn:${Partition}:kafka:${Region}:${Account}:group/${ClusterName}/${ClusterUuid}/${GroupName}"
+      ]
+    },
+    {
+      "Name": "topic",
+      "ARNFormats": [
+        "arn:${Partition}:kafka:${Region}:${Account}:topic/${ClusterName}/${ClusterUuid}/${TopicName}"
+      ]
+    },
+    {
+      "Name": "transactional-id",
+      "ARNFormats": [
+        "arn:${Partition}:kafka:${Region}:${Account}:transactional-id/${ClusterName}/${ClusterUuid}/${TransactionalId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

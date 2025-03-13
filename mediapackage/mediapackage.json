@@ -1,0 +1,214 @@
+{
+  "Name": "mediapackage",
+  "Actions": [
+    {
+      "Name": "ConfigureLogs",
+      "Resources": [
+        {
+          "Name": "channels"
+        }
+      ]
+    },
+    {
+      "Name": "CreateChannel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateHarvestJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateOriginEndpoint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteChannel",
+      "Resources": [
+        {
+          "Name": "channels"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteOriginEndpoint",
+      "Resources": [
+        {
+          "Name": "origin_endpoints"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeChannel",
+      "Resources": [
+        {
+          "Name": "channels"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeHarvestJob",
+      "Resources": [
+        {
+          "Name": "harvest_jobs"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeOriginEndpoint",
+      "Resources": [
+        {
+          "Name": "origin_endpoints"
+        }
+      ]
+    },
+    {
+      "Name": "ListChannels"
+    },
+    {
+      "Name": "ListHarvestJobs"
+    },
+    {
+      "Name": "ListOriginEndpoints"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "channels"
+        },
+        {
+          "Name": "harvest_jobs"
+        },
+        {
+          "Name": "origin_endpoints"
+        }
+      ]
+    },
+    {
+      "Name": "RotateChannelCredentials",
+      "Resources": [
+        {
+          "Name": "channels"
+        }
+      ]
+    },
+    {
+      "Name": "RotateIngestEndpointCredentials",
+      "Resources": [
+        {
+          "Name": "channels"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channels"
+        },
+        {
+          "Name": "harvest_jobs"
+        },
+        {
+          "Name": "origin_endpoints"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channels"
+        },
+        {
+          "Name": "harvest_jobs"
+        },
+        {
+          "Name": "origin_endpoints"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateChannel",
+      "Resources": [
+        {
+          "Name": "channels"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateOriginEndpoint",
+      "Resources": [
+        {
+          "Name": "origin_endpoints"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "channels",
+      "ARNFormats": [
+        "arn:${Partition}:mediapackage:${Region}:${Account}:channels/${ChannelIdentifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "harvest_jobs",
+      "ARNFormats": [
+        "arn:${Partition}:mediapackage:${Region}:${Account}:harvest_jobs/${HarvestJobIdentifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "origin_endpoints",
+      "ARNFormats": [
+        "arn:${Partition}:mediapackage:${Region}:${Account}:origin_endpoints/${OriginEndpointIdentifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

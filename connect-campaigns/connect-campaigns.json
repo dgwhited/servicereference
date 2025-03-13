@@ -1,0 +1,306 @@
+{
+  "Name": "connect-campaigns",
+  "Actions": [
+    {
+      "Name": "CreateCampaign",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCampaign",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCampaignChannelSubtypeConfig",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCampaignCommunicationLimits",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCampaignCommunicationTime",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConnectInstanceConfig"
+    },
+    {
+      "Name": "DeleteConnectInstanceIntegration"
+    },
+    {
+      "Name": "DeleteInstanceOnboardingJob"
+    },
+    {
+      "Name": "DescribeCampaign",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "GetCampaignState",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "GetCampaignStateBatch",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnectInstanceConfig"
+    },
+    {
+      "Name": "GetInstanceOnboardingJobStatus"
+    },
+    {
+      "Name": "ListCampaigns",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ListConnectInstanceIntegrations"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "PauseCampaign",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "PutConnectInstanceIntegration"
+    },
+    {
+      "Name": "PutDialRequestBatch",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "PutOutboundRequestBatch",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "PutProfileOutboundRequestBatch",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "ResumeCampaign",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "StartCampaign",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "StartInstanceOnboardingJob"
+    },
+    {
+      "Name": "StopCampaign",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCampaignChannelSubtypeConfig",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCampaignCommunicationLimits",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCampaignCommunicationTime",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCampaignDialerConfig",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCampaignFlowAssociation",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCampaignName",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCampaignOutboundCallConfig",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCampaignSchedule",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCampaignSource",
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "campaign",
+      "ARNFormats": [
+        "arn:${Partition}:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

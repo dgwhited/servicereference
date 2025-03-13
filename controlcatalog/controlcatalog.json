@@ -1,0 +1,57 @@
+{
+  "Name": "controlcatalog",
+  "Actions": [
+    {
+      "Name": "GetControl",
+      "Resources": [
+        {
+          "Name": "control"
+        }
+      ]
+    },
+    {
+      "Name": "ListCommonControls"
+    },
+    {
+      "Name": "ListControls",
+      "Resources": [
+        {
+          "Name": "control"
+        }
+      ]
+    },
+    {
+      "Name": "ListDomains"
+    },
+    {
+      "Name": "ListObjectives"
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "common-control",
+      "ARNFormats": [
+        "arn:${Partition}:controlcatalog:::common-control/${CommonControlId}"
+      ]
+    },
+    {
+      "Name": "control",
+      "ARNFormats": [
+        "arn:${Partition}:controlcatalog:::control/${ControlId}"
+      ]
+    },
+    {
+      "Name": "domain",
+      "ARNFormats": [
+        "arn:${Partition}:controlcatalog:::domain/${DomainId}"
+      ]
+    },
+    {
+      "Name": "objective",
+      "ARNFormats": [
+        "arn:${Partition}:controlcatalog:::objective/${ObjectiveId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

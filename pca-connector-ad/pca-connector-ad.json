@@ -1,0 +1,273 @@
+{
+  "Name": "pca-connector-ad",
+  "Actions": [
+    {
+      "Name": "CreateConnector",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateDirectoryRegistration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateServicePrincipalName",
+      "Resources": [
+        {
+          "Name": "DirectoryRegistration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTemplate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Connector"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTemplateGroupAccessControlEntry",
+      "Resources": [
+        {
+          "Name": "Template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConnector",
+      "Resources": [
+        {
+          "Name": "Connector"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDirectoryRegistration",
+      "Resources": [
+        {
+          "Name": "DirectoryRegistration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteServicePrincipalName",
+      "Resources": [
+        {
+          "Name": "DirectoryRegistration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTemplate",
+      "Resources": [
+        {
+          "Name": "Template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTemplateGroupAccessControlEntry",
+      "Resources": [
+        {
+          "Name": "Template"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnector",
+      "Resources": [
+        {
+          "Name": "Connector"
+        }
+      ]
+    },
+    {
+      "Name": "GetDirectoryRegistration",
+      "Resources": [
+        {
+          "Name": "DirectoryRegistration"
+        }
+      ]
+    },
+    {
+      "Name": "GetServicePrincipalName",
+      "Resources": [
+        {
+          "Name": "DirectoryRegistration"
+        }
+      ]
+    },
+    {
+      "Name": "GetTemplate",
+      "Resources": [
+        {
+          "Name": "Template"
+        }
+      ]
+    },
+    {
+      "Name": "GetTemplateGroupAccessControlEntry",
+      "Resources": [
+        {
+          "Name": "Template"
+        }
+      ]
+    },
+    {
+      "Name": "ListConnectors"
+    },
+    {
+      "Name": "ListDirectoryRegistrations"
+    },
+    {
+      "Name": "ListServicePrincipalNames",
+      "Resources": [
+        {
+          "Name": "DirectoryRegistration"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "ListTemplateGroupAccessControlEntries",
+      "Resources": [
+        {
+          "Name": "Template"
+        }
+      ]
+    },
+    {
+      "Name": "ListTemplates",
+      "Resources": [
+        {
+          "Name": "Connector"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Connector"
+        },
+        {
+          "Name": "DirectoryRegistration"
+        },
+        {
+          "Name": "Template"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Connector"
+        },
+        {
+          "Name": "DirectoryRegistration"
+        },
+        {
+          "Name": "Template"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTemplate",
+      "Resources": [
+        {
+          "Name": "Template"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTemplateGroupAccessControlEntry",
+      "Resources": [
+        {
+          "Name": "Template"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Connector",
+      "ARNFormats": [
+        "arn:${Partition}:pca-connector-ad:${Region}:${Account}:connector/${ConnectorId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "DirectoryRegistration",
+      "ARNFormats": [
+        "arn:${Partition}:pca-connector-ad:${Region}:${Account}:directory-registration/${DirectoryId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ServicePrincipalName",
+      "ARNFormats": [
+        "arn:${Partition}:pca-connector-ad:${Region}:${Account}:directory-registration/${DirectoryId}"
+      ]
+    },
+    {
+      "Name": "Template",
+      "ARNFormats": [
+        "arn:${Partition}:pca-connector-ad:${Region}:${Account}:connector/${ConnectorId}/template/${TemplateId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "TemplateGroupAccessControlEntry",
+      "ARNFormats": [
+        "arn:${Partition}:pca-connector-ad:${Region}:${Account}:connector/${ConnectorId}/template/${TemplateId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

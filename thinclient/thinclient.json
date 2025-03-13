@@ -1,0 +1,247 @@
+{
+  "Name": "thinclient",
+  "Actions": [
+    {
+      "Name": "CreateEnvironment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteDevice",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEnvironment",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterDevice",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "GetDevice",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeviceDetails",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "GetEnvironment",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "GetSoftwareSet",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "softwareset"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeviceSessions",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "ListDevices"
+    },
+    {
+      "Name": "ListEnvironments"
+    },
+    {
+      "Name": "ListSoftwareSets"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "softwareset"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "softwareset"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "softwareset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDevice",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEnvironment",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSoftwareSet",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "softwareset"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "device",
+      "ARNFormats": [
+        "arn:${Partition}:thinclient:${Region}:${Account}:device/${DeviceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "environment",
+      "ARNFormats": [
+        "arn:${Partition}:thinclient:${Region}:${Account}:environment/${EnvironmentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "softwareset",
+      "ARNFormats": [
+        "arn:${Partition}:thinclient:${Region}:${Account}:softwareset/${SoftwareSetId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,1644 @@
+{
+  "Name": "ssm",
+  "Actions": [
+    {
+      "Name": "AddTagsToResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        },
+        {
+          "Name": "automation-execution"
+        },
+        {
+          "Name": "document"
+        },
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "maintenancewindow"
+        },
+        {
+          "Name": "managed-instance"
+        },
+        {
+          "Name": "opsitem"
+        },
+        {
+          "Name": "opsmetadata"
+        },
+        {
+          "Name": "parameter"
+        },
+        {
+          "Name": "patchbaseline"
+        },
+        {
+          "Name": "task"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateOpsItemRelatedItem",
+      "Resources": [
+        {
+          "Name": "opsitem"
+        }
+      ]
+    },
+    {
+      "Name": "CancelCommand"
+    },
+    {
+      "Name": "CancelMaintenanceWindowExecution",
+      "Resources": [
+        {
+          "Name": "maintenancewindow"
+        }
+      ]
+    },
+    {
+      "Name": "CreateActivation",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateAssociation",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        },
+        {
+          "Name": "document"
+        },
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAssociationBatch",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "document"
+        },
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDocument",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "document"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMaintenanceWindow",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateOpsItem",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateOpsMetadata",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreatePatchBaseline",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateResourceDataSync",
+      "ActionConditionKeys": [
+        "ssm:SyncType"
+      ],
+      "Resources": [
+        {
+          "Name": "resourcedatasync"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteActivation"
+    },
+    {
+      "Name": "DeleteAssociation",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        },
+        {
+          "Name": "document"
+        },
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDocument",
+      "Resources": [
+        {
+          "Name": "document"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInventory"
+    },
+    {
+      "Name": "DeleteMaintenanceWindow",
+      "Resources": [
+        {
+          "Name": "maintenancewindow"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteOpsItem",
+      "Resources": [
+        {
+          "Name": "opsitem"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteOpsMetadata",
+      "Resources": [
+        {
+          "Name": "opsmetadata"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteParameter",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "parameter"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteParameters",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "parameter"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePatchBaseline",
+      "Resources": [
+        {
+          "Name": "patchbaseline"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourceDataSync",
+      "ActionConditionKeys": [
+        "ssm:SyncType"
+      ],
+      "Resources": [
+        {
+          "Name": "resourcedatasync"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Resources": [
+        {
+          "Name": "opsitemgroup"
+        },
+        {
+          "Name": "parameter"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterManagedInstance",
+      "ActionConditionKeys": [
+        "ssm:resourceTag/tag-key"
+      ],
+      "Resources": [
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterPatchBaselineForPatchGroup",
+      "Resources": [
+        {
+          "Name": "patchbaseline"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterTargetFromMaintenanceWindow",
+      "Resources": [
+        {
+          "Name": "maintenancewindow"
+        },
+        {
+          "Name": "windowtarget"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterTaskFromMaintenanceWindow",
+      "Resources": [
+        {
+          "Name": "maintenancewindow"
+        },
+        {
+          "Name": "windowtask"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeActivations"
+    },
+    {
+      "Name": "DescribeAssociation",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        },
+        {
+          "Name": "document"
+        },
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAssociationExecutionTargets",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAssociationExecutions",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAutomationExecutions"
+    },
+    {
+      "Name": "DescribeAutomationStepExecutions",
+      "Resources": [
+        {
+          "Name": "automation-execution"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAvailablePatches"
+    },
+    {
+      "Name": "DescribeDocument",
+      "Resources": [
+        {
+          "Name": "document"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDocumentParameters",
+      "Resources": [
+        {
+          "Name": "document"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDocumentPermission",
+      "Resources": [
+        {
+          "Name": "document"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEffectiveInstanceAssociations",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEffectivePatchesForPatchBaseline",
+      "Resources": [
+        {
+          "Name": "patchbaseline"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeInstanceAssociationsStatus",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeInstanceInformation"
+    },
+    {
+      "Name": "DescribeInstancePatchStates",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ssm:resourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeInstancePatchStatesForPatchGroup"
+    },
+    {
+      "Name": "DescribeInstancePatches",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ssm:resourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeInstanceProperties"
+    },
+    {
+      "Name": "DescribeInventoryDeletions"
+    },
+    {
+      "Name": "DescribeMaintenanceWindowExecutionTaskInvocations"
+    },
+    {
+      "Name": "DescribeMaintenanceWindowExecutionTasks"
+    },
+    {
+      "Name": "DescribeMaintenanceWindowExecutions",
+      "Resources": [
+        {
+          "Name": "maintenancewindow"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMaintenanceWindowSchedule"
+    },
+    {
+      "Name": "DescribeMaintenanceWindowTargets",
+      "Resources": [
+        {
+          "Name": "maintenancewindow"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMaintenanceWindowTasks",
+      "Resources": [
+        {
+          "Name": "maintenancewindow"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMaintenanceWindows"
+    },
+    {
+      "Name": "DescribeMaintenanceWindowsForTarget"
+    },
+    {
+      "Name": "DescribeOpsItems"
+    },
+    {
+      "Name": "DescribeParameters"
+    },
+    {
+      "Name": "DescribePatchBaselines"
+    },
+    {
+      "Name": "DescribePatchGroupState"
+    },
+    {
+      "Name": "DescribePatchGroups"
+    },
+    {
+      "Name": "DescribePatchProperties"
+    },
+    {
+      "Name": "DescribeSessions"
+    },
+    {
+      "Name": "DisassociateOpsItemRelatedItem",
+      "Resources": [
+        {
+          "Name": "opsitem"
+        }
+      ]
+    },
+    {
+      "Name": "ExecuteAPI"
+    },
+    {
+      "Name": "GetAutomationExecution",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "automation-execution"
+        }
+      ]
+    },
+    {
+      "Name": "GetCalendar",
+      "Resources": [
+        {
+          "Name": "document"
+        }
+      ]
+    },
+    {
+      "Name": "GetCalendarState",
+      "Resources": [
+        {
+          "Name": "document"
+        }
+      ]
+    },
+    {
+      "Name": "GetCommandInvocation"
+    },
+    {
+      "Name": "GetConnectionStatus",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ssm:resourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        },
+        {
+          "Name": "task"
+        }
+      ]
+    },
+    {
+      "Name": "GetDefaultPatchBaseline",
+      "Resources": [
+        {
+          "Name": "patchbaseline"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeployablePatchSnapshotForInstance"
+    },
+    {
+      "Name": "GetDocument",
+      "ActionConditionKeys": [
+        "ssm:DocumentCategories"
+      ],
+      "Resources": [
+        {
+          "Name": "document"
+        }
+      ]
+    },
+    {
+      "Name": "GetExecutionPreview"
+    },
+    {
+      "Name": "GetInventory"
+    },
+    {
+      "Name": "GetInventorySchema"
+    },
+    {
+      "Name": "GetMaintenanceWindow",
+      "Resources": [
+        {
+          "Name": "maintenancewindow"
+        }
+      ]
+    },
+    {
+      "Name": "GetMaintenanceWindowExecution"
+    },
+    {
+      "Name": "GetMaintenanceWindowExecutionTask"
+    },
+    {
+      "Name": "GetMaintenanceWindowExecutionTaskInvocation"
+    },
+    {
+      "Name": "GetMaintenanceWindowTask",
+      "Resources": [
+        {
+          "Name": "maintenancewindow"
+        }
+      ]
+    },
+    {
+      "Name": "GetManifest"
+    },
+    {
+      "Name": "GetOpsItem",
+      "Resources": [
+        {
+          "Name": "opsitem"
+        }
+      ]
+    },
+    {
+      "Name": "GetOpsMetadata",
+      "Resources": [
+        {
+          "Name": "opsmetadata"
+        }
+      ]
+    },
+    {
+      "Name": "GetOpsSummary",
+      "Resources": [
+        {
+          "Name": "resourcedatasync"
+        }
+      ]
+    },
+    {
+      "Name": "GetParameter",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "parameter"
+        }
+      ]
+    },
+    {
+      "Name": "GetParameterHistory",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "parameter"
+        }
+      ]
+    },
+    {
+      "Name": "GetParameters",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "parameter"
+        }
+      ]
+    },
+    {
+      "Name": "GetParametersByPath",
+      "ActionConditionKeys": [
+        "ssm:Recursive"
+      ],
+      "Resources": [
+        {
+          "Name": "parameter"
+        }
+      ]
+    },
+    {
+      "Name": "GetPatchBaseline",
+      "Resources": [
+        {
+          "Name": "patchbaseline"
+        }
+      ]
+    },
+    {
+      "Name": "GetPatchBaselineForPatchGroup"
+    },
+    {
+      "Name": "GetResourcePolicies",
+      "Resources": [
+        {
+          "Name": "opsitemgroup"
+        },
+        {
+          "Name": "parameter"
+        }
+      ]
+    },
+    {
+      "Name": "GetServiceSetting",
+      "Resources": [
+        {
+          "Name": "servicesetting"
+        }
+      ]
+    },
+    {
+      "Name": "LabelParameterVersion",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "parameter"
+        }
+      ]
+    },
+    {
+      "Name": "ListAssociationVersions",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        }
+      ]
+    },
+    {
+      "Name": "ListAssociations"
+    },
+    {
+      "Name": "ListCommandInvocations"
+    },
+    {
+      "Name": "ListCommands"
+    },
+    {
+      "Name": "ListComplianceItems"
+    },
+    {
+      "Name": "ListComplianceSummaries"
+    },
+    {
+      "Name": "ListDocumentMetadataHistory",
+      "Resources": [
+        {
+          "Name": "document"
+        }
+      ]
+    },
+    {
+      "Name": "ListDocumentVersions",
+      "Resources": [
+        {
+          "Name": "document"
+        }
+      ]
+    },
+    {
+      "Name": "ListDocuments"
+    },
+    {
+      "Name": "ListInstanceAssociations",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
+      "Name": "ListInventoryEntries"
+    },
+    {
+      "Name": "ListNodes",
+      "Resources": [
+        {
+          "Name": "resourcedatasync"
+        }
+      ]
+    },
+    {
+      "Name": "ListNodesSummary",
+      "Resources": [
+        {
+          "Name": "resourcedatasync"
+        }
+      ]
+    },
+    {
+      "Name": "ListOpsItemEvents"
+    },
+    {
+      "Name": "ListOpsItemRelatedItems"
+    },
+    {
+      "Name": "ListOpsMetadata"
+    },
+    {
+      "Name": "ListResourceComplianceSummaries"
+    },
+    {
+      "Name": "ListResourceDataSync",
+      "ActionConditionKeys": [
+        "ssm:SyncType"
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        },
+        {
+          "Name": "automation-execution"
+        },
+        {
+          "Name": "document"
+        },
+        {
+          "Name": "maintenancewindow"
+        },
+        {
+          "Name": "managed-instance"
+        },
+        {
+          "Name": "opsitem"
+        },
+        {
+          "Name": "opsmetadata"
+        },
+        {
+          "Name": "parameter"
+        },
+        {
+          "Name": "patchbaseline"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyDocumentPermission",
+      "Resources": [
+        {
+          "Name": "document"
+        }
+      ]
+    },
+    {
+      "Name": "PutCalendar",
+      "Resources": [
+        {
+          "Name": "document"
+        }
+      ]
+    },
+    {
+      "Name": "PutComplianceItems",
+      "ActionConditionKeys": [
+        "ec2:SourceInstanceARN",
+        "ssm:SourceInstanceARN"
+      ],
+      "Resources": [
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
+      "Name": "PutConfigurePackageResult"
+    },
+    {
+      "Name": "PutInventory"
+    },
+    {
+      "Name": "PutParameter",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "ssm:Overwrite",
+        "ssm:Policies"
+      ],
+      "Resources": [
+        {
+          "Name": "parameter"
+        }
+      ]
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "Resources": [
+        {
+          "Name": "opsitemgroup"
+        },
+        {
+          "Name": "parameter"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterDefaultPatchBaseline",
+      "Resources": [
+        {
+          "Name": "patchbaseline"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterManagedInstance",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "RegisterPatchBaselineForPatchGroup",
+      "Resources": [
+        {
+          "Name": "patchbaseline"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterTargetWithMaintenanceWindow",
+      "Resources": [
+        {
+          "Name": "maintenancewindow"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterTaskWithMaintenanceWindow",
+      "Resources": [
+        {
+          "Name": "maintenancewindow"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveTagsFromResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        },
+        {
+          "Name": "automation-execution"
+        },
+        {
+          "Name": "document"
+        },
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "maintenancewindow"
+        },
+        {
+          "Name": "managed-instance"
+        },
+        {
+          "Name": "opsitem"
+        },
+        {
+          "Name": "opsmetadata"
+        },
+        {
+          "Name": "parameter"
+        },
+        {
+          "Name": "patchbaseline"
+        },
+        {
+          "Name": "task"
+        }
+      ]
+    },
+    {
+      "Name": "ResetServiceSetting",
+      "Resources": [
+        {
+          "Name": "servicesetting"
+        }
+      ]
+    },
+    {
+      "Name": "ResumeSession",
+      "ActionConditionKeys": [
+        "ssm:resourceTag/aws:ssmmessages:session-id",
+        "ssm:resourceTag/aws:ssmmessages:target-id"
+      ],
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "SendAutomationSignal",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "automation-execution"
+        }
+      ]
+    },
+    {
+      "Name": "SendCommand",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ssm:resourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "bucket"
+        },
+        {
+          "Name": "document"
+        },
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
+      "Name": "StartAssociationsOnce",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        }
+      ]
+    },
+    {
+      "Name": "StartAutomationExecution",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "automation-definition"
+        }
+      ]
+    },
+    {
+      "Name": "StartChangeRequestExecution",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "ssm:AutoApprove"
+      ],
+      "Resources": [
+        {
+          "Name": "automation-definition"
+        }
+      ]
+    },
+    {
+      "Name": "StartExecutionPreview"
+    },
+    {
+      "Name": "StartSession",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ssm:resourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "document"
+        },
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        },
+        {
+          "Name": "task"
+        }
+      ]
+    },
+    {
+      "Name": "StopAutomationExecution",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "automation-execution"
+        }
+      ]
+    },
+    {
+      "Name": "TerminateSession",
+      "ActionConditionKeys": [
+        "ssm:resourceTag/aws:ssmmessages:session-id",
+        "ssm:resourceTag/aws:ssmmessages:target-id"
+      ],
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "UnlabelParameterVersion",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "parameter"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAssociation",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        },
+        {
+          "Name": "document"
+        },
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAssociationStatus",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ec2:SourceInstanceARN",
+        "ssm:SourceInstanceARN"
+      ],
+      "Resources": [
+        {
+          "Name": "document"
+        },
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDocument",
+      "Resources": [
+        {
+          "Name": "document"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDocumentDefaultVersion",
+      "Resources": [
+        {
+          "Name": "document"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDocumentMetadata",
+      "Resources": [
+        {
+          "Name": "document"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInstanceAssociationStatus",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ec2:SourceInstanceARN",
+        "ssm:SourceInstanceARN"
+      ],
+      "Resources": [
+        {
+          "Name": "association"
+        },
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInstanceInformation",
+      "ActionConditionKeys": [
+        "ec2:SourceInstanceARN",
+        "ssm:SourceInstanceARN"
+      ],
+      "Resources": [
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMaintenanceWindow",
+      "Resources": [
+        {
+          "Name": "maintenancewindow"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMaintenanceWindowTarget",
+      "Resources": [
+        {
+          "Name": "maintenancewindow"
+        },
+        {
+          "Name": "windowtarget"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMaintenanceWindowTask",
+      "Resources": [
+        {
+          "Name": "maintenancewindow"
+        },
+        {
+          "Name": "windowtask"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateManagedInstanceRole",
+      "ActionConditionKeys": [
+        "ssm:resourceTag/tag-key"
+      ],
+      "Resources": [
+        {
+          "Name": "iam-role"
+        },
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateOpsItem",
+      "Resources": [
+        {
+          "Name": "opsitem"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateOpsMetadata",
+      "Resources": [
+        {
+          "Name": "opsmetadata"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePatchBaseline",
+      "Resources": [
+        {
+          "Name": "patchbaseline"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateResourceDataSync",
+      "ActionConditionKeys": [
+        "ssm:SyncType"
+      ],
+      "Resources": [
+        {
+          "Name": "resourcedatasync"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServiceSetting",
+      "Resources": [
+        {
+          "Name": "servicesetting"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "ec2:SourceInstanceARN",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "ssm:AutoApprove",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
+      "Name": "ssm:DocumentCategories",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "ssm:Overwrite",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ssm:Policies",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ssm:Recursive",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ssm:SourceInstanceARN",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "ssm:SyncType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ssm:resourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ssm:resourceTag/aws:ssmmessages:session-id",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ssm:resourceTag/aws:ssmmessages:target-id",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ssm:resourceTag/tag-key",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "association",
+      "ARNFormats": [
+        "arn:${Partition}:ssm:${Region}:${Account}:association/${AssociationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "automation-definition",
+      "ARNFormats": [
+        "arn:${Partition}:ssm:${Region}:${Account}:automation-definition/${AutomationDefinitionName}:${VersionId}"
+      ]
+    },
+    {
+      "Name": "automation-execution",
+      "ARNFormats": [
+        "arn:${Partition}:ssm:${Region}:${Account}:automation-execution/${AutomationExecutionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ssm:resourceTag/tag-key"
+      ]
+    },
+    {
+      "Name": "bucket",
+      "ARNFormats": [
+        "arn:${Partition}:s3:::${BucketName}"
+      ]
+    },
+    {
+      "Name": "document",
+      "ARNFormats": [
+        "arn:${Partition}:ssm:${Region}:${Account}:document/${DocumentName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ssm:DocumentCategories",
+        "ssm:resourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "iam-role",
+      "ARNFormats": [
+        "arn:${Partition}:iam::${Account}:role/${RoleName}"
+      ]
+    },
+    {
+      "Name": "instance",
+      "ARNFormats": [
+        "arn:${Partition}:ec2:${Region}:${Account}:instance/${InstanceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ssm:resourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "maintenancewindow",
+      "ARNFormats": [
+        "arn:${Partition}:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ssm:resourceTag/tag-key"
+      ]
+    },
+    {
+      "Name": "managed-instance",
+      "ARNFormats": [
+        "arn:${Partition}:ssm:${Region}:${Account}:managed-instance/${InstanceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ssm:resourceTag/tag-key"
+      ]
+    },
+    {
+      "Name": "managed-instance-inventory",
+      "ARNFormats": [
+        "arn:${Partition}:ssm:${Region}:${Account}:managed-instance-inventory/${InstanceId}"
+      ]
+    },
+    {
+      "Name": "opsitem",
+      "ARNFormats": [
+        "arn:${Partition}:ssm:${Region}:${Account}:opsitem/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "opsitemgroup",
+      "ARNFormats": [
+        "arn:${Partition}:ssm:${Region}:${Account}:opsitemgroup/default"
+      ]
+    },
+    {
+      "Name": "opsmetadata",
+      "ARNFormats": [
+        "arn:${Partition}:ssm:${Region}:${Account}:opsmetadata/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ssm:resourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "parameter",
+      "ARNFormats": [
+        "arn:${Partition}:ssm:${Region}:${Account}:parameter/${ParameterNameWithoutLeadingSlash}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ssm:resourceTag/tag-key"
+      ]
+    },
+    {
+      "Name": "patchbaseline",
+      "ARNFormats": [
+        "arn:${Partition}:ssm:${Region}:${Account}:patchbaseline/${PatchBaselineIdResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ssm:resourceTag/tag-key"
+      ]
+    },
+    {
+      "Name": "resourcedatasync",
+      "ARNFormats": [
+        "arn:${Partition}:ssm:${Region}:${Account}:resource-data-sync/${SyncName}"
+      ]
+    },
+    {
+      "Name": "servicesetting",
+      "ARNFormats": [
+        "arn:${Partition}:ssm:${Region}:${Account}:servicesetting/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "session",
+      "ARNFormats": [
+        "arn:${Partition}:ssm:${Region}:${Account}:session/${SessionId}"
+      ],
+      "ConditionKeys": [
+        "ssm:resourceTag/aws:ssmmessages:session-id",
+        "ssm:resourceTag/aws:ssmmessages:target-id"
+      ]
+    },
+    {
+      "Name": "task",
+      "ARNFormats": [
+        "arn:${Partition}:ecs:${Region}:${Account}:task/${TaskId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "windowtarget",
+      "ARNFormats": [
+        "arn:${Partition}:ssm:${Region}:${Account}:windowtarget/${WindowTargetId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ssm:resourceTag/tag-key"
+      ]
+    },
+    {
+      "Name": "windowtask",
+      "ARNFormats": [
+        "arn:${Partition}:ssm:${Region}:${Account}:windowtask/${WindowTaskId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ssm:resourceTag/tag-key"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

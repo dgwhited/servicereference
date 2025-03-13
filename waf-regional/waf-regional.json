@@ -1,0 +1,734 @@
+{
+  "Name": "waf-regional",
+  "Actions": [
+    {
+      "Name": "AssociateWebACL",
+      "Resources": [
+        {
+          "Name": "loadbalancer/app/"
+        },
+        {
+          "Name": "webacl"
+        }
+      ]
+    },
+    {
+      "Name": "CreateByteMatchSet",
+      "Resources": [
+        {
+          "Name": "bytematchset"
+        }
+      ]
+    },
+    {
+      "Name": "CreateGeoMatchSet",
+      "Resources": [
+        {
+          "Name": "geomatchset"
+        }
+      ]
+    },
+    {
+      "Name": "CreateIPSet",
+      "Resources": [
+        {
+          "Name": "ipset"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRateBasedRule",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ratebasedrule"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRegexMatchSet",
+      "Resources": [
+        {
+          "Name": "regexmatchset"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRegexPatternSet",
+      "Resources": [
+        {
+          "Name": "regexpatternset"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRule",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "rule"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRuleGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "rulegroup"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSizeConstraintSet",
+      "Resources": [
+        {
+          "Name": "sizeconstraintset"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSqlInjectionMatchSet",
+      "Resources": [
+        {
+          "Name": "sqlinjectionmatchset"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWebACL",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "webacl"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWebACLMigrationStack",
+      "Resources": [
+        {
+          "Name": "webacl"
+        }
+      ]
+    },
+    {
+      "Name": "CreateXssMatchSet",
+      "Resources": [
+        {
+          "Name": "xssmatchset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteByteMatchSet",
+      "Resources": [
+        {
+          "Name": "bytematchset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGeoMatchSet",
+      "Resources": [
+        {
+          "Name": "geomatchset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIPSet",
+      "Resources": [
+        {
+          "Name": "ipset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLoggingConfiguration",
+      "Resources": [
+        {
+          "Name": "webacl"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePermissionPolicy",
+      "Resources": [
+        {
+          "Name": "rulegroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRateBasedRule",
+      "Resources": [
+        {
+          "Name": "ratebasedrule"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRegexMatchSet",
+      "Resources": [
+        {
+          "Name": "regexmatchset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRegexPatternSet",
+      "Resources": [
+        {
+          "Name": "regexpatternset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRule",
+      "Resources": [
+        {
+          "Name": "rule"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRuleGroup",
+      "Resources": [
+        {
+          "Name": "rulegroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSizeConstraintSet",
+      "Resources": [
+        {
+          "Name": "sizeconstraintset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSqlInjectionMatchSet",
+      "Resources": [
+        {
+          "Name": "sqlinjectionmatchset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWebACL",
+      "Resources": [
+        {
+          "Name": "webacl"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteXssMatchSet",
+      "Resources": [
+        {
+          "Name": "xssmatchset"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateWebACL",
+      "Resources": [
+        {
+          "Name": "loadbalancer/app/"
+        }
+      ]
+    },
+    {
+      "Name": "GetByteMatchSet",
+      "Resources": [
+        {
+          "Name": "bytematchset"
+        }
+      ]
+    },
+    {
+      "Name": "GetChangeToken"
+    },
+    {
+      "Name": "GetChangeTokenStatus"
+    },
+    {
+      "Name": "GetGeoMatchSet",
+      "Resources": [
+        {
+          "Name": "geomatchset"
+        }
+      ]
+    },
+    {
+      "Name": "GetIPSet",
+      "Resources": [
+        {
+          "Name": "ipset"
+        }
+      ]
+    },
+    {
+      "Name": "GetLoggingConfiguration",
+      "Resources": [
+        {
+          "Name": "webacl"
+        }
+      ]
+    },
+    {
+      "Name": "GetPermissionPolicy",
+      "Resources": [
+        {
+          "Name": "rulegroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetRateBasedRule",
+      "Resources": [
+        {
+          "Name": "ratebasedrule"
+        }
+      ]
+    },
+    {
+      "Name": "GetRateBasedRuleManagedKeys",
+      "Resources": [
+        {
+          "Name": "ratebasedrule"
+        }
+      ]
+    },
+    {
+      "Name": "GetRegexMatchSet",
+      "Resources": [
+        {
+          "Name": "regexmatchset"
+        }
+      ]
+    },
+    {
+      "Name": "GetRegexPatternSet",
+      "Resources": [
+        {
+          "Name": "regexpatternset"
+        }
+      ]
+    },
+    {
+      "Name": "GetRule",
+      "Resources": [
+        {
+          "Name": "rule"
+        }
+      ]
+    },
+    {
+      "Name": "GetRuleGroup",
+      "Resources": [
+        {
+          "Name": "rulegroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetSampledRequests",
+      "Resources": [
+        {
+          "Name": "webacl"
+        }
+      ]
+    },
+    {
+      "Name": "GetSizeConstraintSet",
+      "Resources": [
+        {
+          "Name": "sizeconstraintset"
+        }
+      ]
+    },
+    {
+      "Name": "GetSqlInjectionMatchSet",
+      "Resources": [
+        {
+          "Name": "sqlinjectionmatchset"
+        }
+      ]
+    },
+    {
+      "Name": "GetWebACL",
+      "Resources": [
+        {
+          "Name": "webacl"
+        }
+      ]
+    },
+    {
+      "Name": "GetWebACLForResource",
+      "Resources": [
+        {
+          "Name": "loadbalancer/app/"
+        }
+      ]
+    },
+    {
+      "Name": "GetXssMatchSet",
+      "Resources": [
+        {
+          "Name": "xssmatchset"
+        }
+      ]
+    },
+    {
+      "Name": "ListActivatedRulesInRuleGroup"
+    },
+    {
+      "Name": "ListByteMatchSets"
+    },
+    {
+      "Name": "ListGeoMatchSets"
+    },
+    {
+      "Name": "ListIPSets"
+    },
+    {
+      "Name": "ListLoggingConfigurations"
+    },
+    {
+      "Name": "ListRateBasedRules"
+    },
+    {
+      "Name": "ListRegexMatchSets"
+    },
+    {
+      "Name": "ListRegexPatternSets"
+    },
+    {
+      "Name": "ListResourcesForWebACL",
+      "Resources": [
+        {
+          "Name": "webacl"
+        }
+      ]
+    },
+    {
+      "Name": "ListRuleGroups"
+    },
+    {
+      "Name": "ListRules"
+    },
+    {
+      "Name": "ListSizeConstraintSets"
+    },
+    {
+      "Name": "ListSqlInjectionMatchSets"
+    },
+    {
+      "Name": "ListSubscribedRuleGroups"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "ratebasedrule"
+        },
+        {
+          "Name": "rule"
+        },
+        {
+          "Name": "rulegroup"
+        },
+        {
+          "Name": "webacl"
+        }
+      ]
+    },
+    {
+      "Name": "ListWebACLs"
+    },
+    {
+      "Name": "ListXssMatchSets"
+    },
+    {
+      "Name": "PutLoggingConfiguration",
+      "Resources": [
+        {
+          "Name": "webacl"
+        }
+      ]
+    },
+    {
+      "Name": "PutPermissionPolicy",
+      "Resources": [
+        {
+          "Name": "rulegroup"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ratebasedrule"
+        },
+        {
+          "Name": "rule"
+        },
+        {
+          "Name": "rulegroup"
+        },
+        {
+          "Name": "webacl"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ratebasedrule"
+        },
+        {
+          "Name": "rule"
+        },
+        {
+          "Name": "rulegroup"
+        },
+        {
+          "Name": "webacl"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateByteMatchSet",
+      "Resources": [
+        {
+          "Name": "bytematchset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGeoMatchSet",
+      "Resources": [
+        {
+          "Name": "geomatchset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIPSet",
+      "Resources": [
+        {
+          "Name": "ipset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRateBasedRule",
+      "Resources": [
+        {
+          "Name": "ratebasedrule"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRegexMatchSet",
+      "Resources": [
+        {
+          "Name": "regexmatchset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRegexPatternSet",
+      "Resources": [
+        {
+          "Name": "regexpatternset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRule",
+      "Resources": [
+        {
+          "Name": "rule"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRuleGroup",
+      "Resources": [
+        {
+          "Name": "rulegroup"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSizeConstraintSet",
+      "Resources": [
+        {
+          "Name": "sizeconstraintset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSqlInjectionMatchSet",
+      "Resources": [
+        {
+          "Name": "sqlinjectionmatchset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWebACL",
+      "Resources": [
+        {
+          "Name": "webacl"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateXssMatchSet",
+      "Resources": [
+        {
+          "Name": "xssmatchset"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "bytematchset",
+      "ARNFormats": [
+        "arn:${Partition}:waf-regional:${Region}:${Account}:bytematchset/${Id}"
+      ]
+    },
+    {
+      "Name": "geomatchset",
+      "ARNFormats": [
+        "arn:${Partition}:waf-regional:${Region}:${Account}:geomatchset/${Id}"
+      ]
+    },
+    {
+      "Name": "ipset",
+      "ARNFormats": [
+        "arn:${Partition}:waf-regional:${Region}:${Account}:ipset/${Id}"
+      ]
+    },
+    {
+      "Name": "loadbalancer/app/",
+      "ARNFormats": [
+        "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:loadbalancer/app/${LoadBalancerName}/${LoadBalancerId}"
+      ]
+    },
+    {
+      "Name": "ratebasedrule",
+      "ARNFormats": [
+        "arn:${Partition}:waf-regional:${Region}:${Account}:ratebasedrule/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "regexmatchset",
+      "ARNFormats": [
+        "arn:${Partition}:waf-regional:${Region}:${Account}:regexmatch/${Id}"
+      ]
+    },
+    {
+      "Name": "regexpatternset",
+      "ARNFormats": [
+        "arn:${Partition}:waf-regional:${Region}:${Account}:regexpatternset/${Id}"
+      ]
+    },
+    {
+      "Name": "rule",
+      "ARNFormats": [
+        "arn:${Partition}:waf-regional:${Region}:${Account}:rule/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "rulegroup",
+      "ARNFormats": [
+        "arn:${Partition}:waf-regional:${Region}:${Account}:rulegroup/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "sizeconstraintset",
+      "ARNFormats": [
+        "arn:${Partition}:waf-regional:${Region}:${Account}:sizeconstraintset/${Id}"
+      ]
+    },
+    {
+      "Name": "sqlinjectionmatchset",
+      "ARNFormats": [
+        "arn:${Partition}:waf-regional:${Region}:${Account}:sqlinjectionset/${Id}"
+      ]
+    },
+    {
+      "Name": "webacl",
+      "ARNFormats": [
+        "arn:${Partition}:waf-regional:${Region}:${Account}:webacl/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "xssmatchset",
+      "ARNFormats": [
+        "arn:${Partition}:waf-regional:${Region}:${Account}:xssmatchset/${Id}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

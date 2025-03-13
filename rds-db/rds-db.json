@@ -1,0 +1,22 @@
+{
+  "Name": "rds-db",
+  "Actions": [
+    {
+      "Name": "connect",
+      "Resources": [
+        {
+          "Name": "db-user"
+        }
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "db-user",
+      "ARNFormats": [
+        "arn:${Partition}:rds-db:${Region}:${Account}:dbuser:${DbiResourceId}/${DbUserName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

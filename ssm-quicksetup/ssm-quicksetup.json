@@ -1,0 +1,141 @@
+{
+  "Name": "ssm-quicksetup",
+  "Actions": [
+    {
+      "Name": "CreateConfigurationManager",
+      "Resources": [
+        {
+          "Name": "configuration-manager",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfigurationManager",
+      "Resources": [
+        {
+          "Name": "configuration-manager"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfiguration",
+      "Resources": [
+        {
+          "Name": "configuration-manager"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfigurationManager",
+      "Resources": [
+        {
+          "Name": "configuration-manager"
+        }
+      ]
+    },
+    {
+      "Name": "GetServiceSettings"
+    },
+    {
+      "Name": "ListConfigurationManagers"
+    },
+    {
+      "Name": "ListConfigurations",
+      "Resources": [
+        {
+          "Name": "configuration-manager"
+        }
+      ]
+    },
+    {
+      "Name": "ListQuickSetupTypes"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "configuration-manager"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-manager"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration-manager"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConfigurationDefinition",
+      "Resources": [
+        {
+          "Name": "configuration-manager"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConfigurationManager",
+      "Resources": [
+        {
+          "Name": "configuration-manager"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServiceSettings"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "configuration-manager",
+      "ARNFormats": [
+        "arn:${Partition}:ssm-quicksetup:${Region}:${Account}:configuration-manager/${ConfigurationManagerId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

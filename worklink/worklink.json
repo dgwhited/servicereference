@@ -1,0 +1,318 @@
+{
+  "Name": "worklink",
+  "Actions": [
+    {
+      "Name": "AssociateDomain",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateWebsiteAuthorizationProvider",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateWebsiteCertificateAuthority",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFleet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteFleet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAuditStreamConfiguration",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCompanyNetworkConfiguration",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDevice",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDevicePolicyConfiguration",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDomain",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFleetMetadata",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeIdentityProviderConfiguration",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWebsiteCertificateAuthority",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateDomain",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateWebsiteAuthorizationProvider",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateWebsiteCertificateAuthority",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "ListDevices",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "ListDomains",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "ListFleets"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "ListWebsiteAuthorizationProviders",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "ListWebsiteCertificateAuthorities",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "RestoreDomainAccess",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "RevokeDomainAccess",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "SearchEntity",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "SignOutUser",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAuditStreamConfiguration",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCompanyNetworkConfiguration",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDevicePolicyConfiguration",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDomainMetadata",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFleetMetadata",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIdentityProviderConfiguration",
+      "Resources": [
+        {
+          "Name": "fleet"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "fleet",
+      "ARNFormats": [
+        "arn:${Partition}:worklink::${Account}:fleet/${FleetName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

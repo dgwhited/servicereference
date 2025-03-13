@@ -1,0 +1,360 @@
+{
+  "Name": "iotanalytics",
+  "Actions": [
+    {
+      "Name": "BatchPutMessage",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "CancelPipelineReprocessing",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "CreateChannel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDatasetContent",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDatastore",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePipeline",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataset",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDatasetContent",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDatastore",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDataset",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDatastore",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeLoggingOptions"
+    },
+    {
+      "Name": "DescribePipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "GetDatasetContent",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "ListChannels"
+    },
+    {
+      "Name": "ListDatasetContents",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "ListDatasets"
+    },
+    {
+      "Name": "ListDatastores"
+    },
+    {
+      "Name": "ListPipelines"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "datastore"
+        },
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "PutLoggingOptions"
+    },
+    {
+      "Name": "RunPipelineActivity"
+    },
+    {
+      "Name": "SampleChannelData",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "StartPipelineReprocessing",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "datastore"
+        },
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "datastore"
+        },
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataset",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDatastore",
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "iotanalytics:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "channel",
+      "ARNFormats": [
+        "arn:${Partition}:iotanalytics:${Region}:${Account}:channel/${ChannelName}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "iotanalytics:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "dataset",
+      "ARNFormats": [
+        "arn:${Partition}:iotanalytics:${Region}:${Account}:dataset/${DatasetName}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "iotanalytics:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "datastore",
+      "ARNFormats": [
+        "arn:${Partition}:iotanalytics:${Region}:${Account}:datastore/${DatastoreName}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "iotanalytics:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "pipeline",
+      "ARNFormats": [
+        "arn:${Partition}:iotanalytics:${Region}:${Account}:pipeline/${PipelineName}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "iotanalytics:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

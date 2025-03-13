@@ -1,0 +1,372 @@
+{
+  "Name": "managedblockchain",
+  "Actions": [
+    {
+      "Name": "CreateAccessor",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateMember",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "CreateNetwork",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateNode",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "member"
+        },
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "CreateProposal",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAccessor",
+      "Resources": [
+        {
+          "Name": "accessor"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMember",
+      "Resources": [
+        {
+          "Name": "member"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNode",
+      "Resources": [
+        {
+          "Name": "node"
+        }
+      ]
+    },
+    {
+      "Name": "GET"
+    },
+    {
+      "Name": "GetAccessor",
+      "Resources": [
+        {
+          "Name": "accessor"
+        }
+      ]
+    },
+    {
+      "Name": "GetMember",
+      "Resources": [
+        {
+          "Name": "member"
+        }
+      ]
+    },
+    {
+      "Name": "GetNetwork",
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "GetNode",
+      "Resources": [
+        {
+          "Name": "node"
+        }
+      ]
+    },
+    {
+      "Name": "GetProposal",
+      "Resources": [
+        {
+          "Name": "proposal"
+        }
+      ]
+    },
+    {
+      "Name": "Invoke"
+    },
+    {
+      "Name": "InvokeRpcBitcoinMainnet"
+    },
+    {
+      "Name": "InvokeRpcBitcoinTestnet"
+    },
+    {
+      "Name": "InvokeRpcPolygonMainnet"
+    },
+    {
+      "Name": "InvokeRpcPolygonMumbaiTestnet"
+    },
+    {
+      "Name": "ListAccessors"
+    },
+    {
+      "Name": "ListInvitations"
+    },
+    {
+      "Name": "ListMembers",
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "ListNetworks"
+    },
+    {
+      "Name": "ListNodes",
+      "Resources": [
+        {
+          "Name": "member"
+        },
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "ListProposalVotes",
+      "Resources": [
+        {
+          "Name": "proposal"
+        }
+      ]
+    },
+    {
+      "Name": "ListProposals",
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "accessor"
+        },
+        {
+          "Name": "invitation"
+        },
+        {
+          "Name": "member"
+        },
+        {
+          "Name": "network"
+        },
+        {
+          "Name": "node"
+        },
+        {
+          "Name": "proposal"
+        }
+      ]
+    },
+    {
+      "Name": "POST"
+    },
+    {
+      "Name": "RejectInvitation",
+      "Resources": [
+        {
+          "Name": "invitation"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "accessor"
+        },
+        {
+          "Name": "invitation"
+        },
+        {
+          "Name": "member"
+        },
+        {
+          "Name": "network"
+        },
+        {
+          "Name": "node"
+        },
+        {
+          "Name": "proposal"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "accessor"
+        },
+        {
+          "Name": "invitation"
+        },
+        {
+          "Name": "member"
+        },
+        {
+          "Name": "network"
+        },
+        {
+          "Name": "node"
+        },
+        {
+          "Name": "proposal"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMember",
+      "Resources": [
+        {
+          "Name": "member"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNode",
+      "Resources": [
+        {
+          "Name": "node"
+        }
+      ]
+    },
+    {
+      "Name": "VoteOnProposal",
+      "Resources": [
+        {
+          "Name": "proposal"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "accessor",
+      "ARNFormats": [
+        "arn:${Partition}:managedblockchain:${Region}:${Account}:accessors/${AccessorId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "invitation",
+      "ARNFormats": [
+        "arn:${Partition}:managedblockchain:${Region}:${Account}:invitations/${InvitationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "member",
+      "ARNFormats": [
+        "arn:${Partition}:managedblockchain:${Region}:${Account}:members/${MemberId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "network",
+      "ARNFormats": [
+        "arn:${Partition}:managedblockchain:${Region}::networks/${NetworkId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "node",
+      "ARNFormats": [
+        "arn:${Partition}:managedblockchain:${Region}:${Account}:nodes/${NodeId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "proposal",
+      "ARNFormats": [
+        "arn:${Partition}:managedblockchain:${Region}::proposals/${ProposalId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

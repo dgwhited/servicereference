@@ -1,0 +1,146 @@
+{
+  "Name": "repostspace",
+  "Actions": [
+    {
+      "Name": "BatchAddRole",
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ]
+    },
+    {
+      "Name": "BatchRemoveRole",
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSpace",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteSpace",
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterAdmin",
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ]
+    },
+    {
+      "Name": "GetSpace",
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ]
+    },
+    {
+      "Name": "ListSpaces"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterAdmin",
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ]
+    },
+    {
+      "Name": "SendInvites",
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSpace",
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "space",
+      "ARNFormats": [
+        "arn:${Partition}:repostspace:${Region}:${Account}:space/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

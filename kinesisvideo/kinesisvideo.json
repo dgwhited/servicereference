@@ -1,0 +1,414 @@
+{
+  "Name": "kinesisvideo",
+  "Actions": [
+    {
+      "Name": "ConnectAsMaster",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "ConnectAsViewer",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSignalingChannel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStream",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEdgeConfiguration",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSignalingChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStream",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEdgeConfiguration",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeImageGenerationConfiguration",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMappedResourceConfiguration",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMediaStorageConfiguration",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeNotificationConfiguration",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSignalingChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStream",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "GetClip",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "GetDASHStreamingSessionURL",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataEndpoint",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "GetHLSStreamingSessionURL",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "GetIceServerConfig",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "GetImages",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "GetMedia",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "GetMediaForFragmentList",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "GetSignalingChannelEndpoint",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "JoinStorageSession",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "JoinStorageSessionAsViewer",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "ListEdgeAgentConfigurations"
+    },
+    {
+      "Name": "ListFragments",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "ListSignalingChannels"
+    },
+    {
+      "Name": "ListStreams"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForStream",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "PutMedia",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "SendAlexaOfferToMaster",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "StartEdgeConfigurationUpdate",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "TagStream",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "UntagStream",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataRetention",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateImageGenerationConfiguration",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMediaStorageConfiguration",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNotificationConfiguration",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSignalingChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStream",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "channel",
+      "ARNFormats": [
+        "arn:${Partition}:kinesisvideo:${Region}:${Account}:channel/${ChannelName}/${CreationTime}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "stream",
+      "ARNFormats": [
+        "arn:${Partition}:kinesisvideo:${Region}:${Account}:stream/${StreamName}/${CreationTime}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

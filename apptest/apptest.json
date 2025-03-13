@@ -1,0 +1,252 @@
+{
+  "Name": "apptest",
+  "Actions": [
+    {
+      "Name": "CreateTestCase",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateTestConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateTestSuite",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteTestCase",
+      "Resources": [
+        {
+          "Name": "TestCase"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTestConfiguration",
+      "Resources": [
+        {
+          "Name": "TestConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTestRun",
+      "Resources": [
+        {
+          "Name": "TestRun"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTestSuite",
+      "Resources": [
+        {
+          "Name": "TestSuite"
+        }
+      ]
+    },
+    {
+      "Name": "GetTestCase",
+      "Resources": [
+        {
+          "Name": "TestCase"
+        }
+      ]
+    },
+    {
+      "Name": "GetTestConfiguration",
+      "Resources": [
+        {
+          "Name": "TestConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "GetTestRunStep",
+      "Resources": [
+        {
+          "Name": "TestRun"
+        }
+      ]
+    },
+    {
+      "Name": "GetTestSuite",
+      "Resources": [
+        {
+          "Name": "TestSuite"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "ListTestCases"
+    },
+    {
+      "Name": "ListTestConfigurations"
+    },
+    {
+      "Name": "ListTestRunSteps",
+      "Resources": [
+        {
+          "Name": "TestRun"
+        }
+      ]
+    },
+    {
+      "Name": "ListTestRunTestCases",
+      "Resources": [
+        {
+          "Name": "TestRun"
+        }
+      ]
+    },
+    {
+      "Name": "ListTestRuns"
+    },
+    {
+      "Name": "ListTestSuites"
+    },
+    {
+      "Name": "StartTestRun",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "TestCase"
+        },
+        {
+          "Name": "TestConfiguration"
+        },
+        {
+          "Name": "TestRun"
+        },
+        {
+          "Name": "TestSuite"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "TestCase"
+        },
+        {
+          "Name": "TestConfiguration"
+        },
+        {
+          "Name": "TestRun"
+        },
+        {
+          "Name": "TestSuite"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTestCase",
+      "Resources": [
+        {
+          "Name": "TestCase"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTestConfiguration",
+      "Resources": [
+        {
+          "Name": "TestConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTestSuite",
+      "Resources": [
+        {
+          "Name": "TestSuite"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "TestCase",
+      "ARNFormats": [
+        "arn:${Partition}:apptest:${Region}:${Account}:testcase/${TestCaseId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "TestConfiguration",
+      "ARNFormats": [
+        "arn:${Partition}:apptest:${Region}:${Account}:testconfiguration/${TestConfigurationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "TestRun",
+      "ARNFormats": [
+        "arn:${Partition}:apptest:${Region}:${Account}:testrun/${TestRunId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "TestSuite",
+      "ARNFormats": [
+        "arn:${Partition}:apptest:${Region}:${Account}:testsuite/${TestSuiteId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,388 @@
+{
+  "Name": "ssm-contacts",
+  "Actions": [
+    {
+      "Name": "AcceptPage",
+      "Resources": [
+        {
+          "Name": "page"
+        }
+      ]
+    },
+    {
+      "Name": "ActivateContactChannel",
+      "Resources": [
+        {
+          "Name": "contactchannel"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateContact",
+      "Resources": [
+        {
+          "Name": "contact"
+        }
+      ]
+    },
+    {
+      "Name": "CreateContact",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "contact"
+        }
+      ]
+    },
+    {
+      "Name": "CreateContactChannel",
+      "Resources": [
+        {
+          "Name": "contact"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRotation",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "rotation"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRotationOverride",
+      "Resources": [
+        {
+          "Name": "rotation"
+        }
+      ]
+    },
+    {
+      "Name": "DeactivateContactChannel",
+      "Resources": [
+        {
+          "Name": "contactchannel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteContact",
+      "Resources": [
+        {
+          "Name": "contact"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteContactChannel",
+      "Resources": [
+        {
+          "Name": "contactchannel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRotation",
+      "Resources": [
+        {
+          "Name": "rotation"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRotationOverride",
+      "Resources": [
+        {
+          "Name": "rotation"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEngagement",
+      "Resources": [
+        {
+          "Name": "engagement"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePage",
+      "Resources": [
+        {
+          "Name": "page"
+        }
+      ]
+    },
+    {
+      "Name": "GetContact",
+      "Resources": [
+        {
+          "Name": "contact"
+        }
+      ]
+    },
+    {
+      "Name": "GetContactChannel",
+      "Resources": [
+        {
+          "Name": "contactchannel"
+        }
+      ]
+    },
+    {
+      "Name": "GetContactPolicy",
+      "Resources": [
+        {
+          "Name": "contact"
+        }
+      ]
+    },
+    {
+      "Name": "GetRotation",
+      "Resources": [
+        {
+          "Name": "rotation"
+        }
+      ]
+    },
+    {
+      "Name": "GetRotationOverride",
+      "Resources": [
+        {
+          "Name": "rotation"
+        }
+      ]
+    },
+    {
+      "Name": "ListContactChannels",
+      "Resources": [
+        {
+          "Name": "contact"
+        }
+      ]
+    },
+    {
+      "Name": "ListContacts"
+    },
+    {
+      "Name": "ListEngagements"
+    },
+    {
+      "Name": "ListPageReceipts",
+      "Resources": [
+        {
+          "Name": "page"
+        }
+      ]
+    },
+    {
+      "Name": "ListPageResolutions",
+      "Resources": [
+        {
+          "Name": "page"
+        }
+      ]
+    },
+    {
+      "Name": "ListPagesByContact",
+      "Resources": [
+        {
+          "Name": "contact"
+        }
+      ]
+    },
+    {
+      "Name": "ListPagesByEngagement",
+      "Resources": [
+        {
+          "Name": "engagement"
+        }
+      ]
+    },
+    {
+      "Name": "ListPreviewRotationShifts"
+    },
+    {
+      "Name": "ListRotationOverrides",
+      "Resources": [
+        {
+          "Name": "rotation"
+        }
+      ]
+    },
+    {
+      "Name": "ListRotationShifts",
+      "Resources": [
+        {
+          "Name": "rotation"
+        }
+      ]
+    },
+    {
+      "Name": "ListRotations"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "contact"
+        },
+        {
+          "Name": "rotation"
+        }
+      ]
+    },
+    {
+      "Name": "PutContactPolicy",
+      "Resources": [
+        {
+          "Name": "contact"
+        }
+      ]
+    },
+    {
+      "Name": "SendActivationCode",
+      "Resources": [
+        {
+          "Name": "contactchannel"
+        }
+      ]
+    },
+    {
+      "Name": "StartEngagement",
+      "Resources": [
+        {
+          "Name": "contact"
+        }
+      ]
+    },
+    {
+      "Name": "StopEngagement",
+      "Resources": [
+        {
+          "Name": "engagement"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "contact"
+        },
+        {
+          "Name": "rotation"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "contact"
+        },
+        {
+          "Name": "rotation"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateContact",
+      "Resources": [
+        {
+          "Name": "contact"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateContactChannel",
+      "Resources": [
+        {
+          "Name": "contactchannel"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRotation",
+      "Resources": [
+        {
+          "Name": "rotation"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "contact",
+      "ARNFormats": [
+        "arn:${Partition}:ssm-contacts:${Region}:${Account}:contact/${ContactAlias}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "contactchannel",
+      "ARNFormats": [
+        "arn:${Partition}:ssm-contacts:${Region}:${Account}:contactchannel/${ContactAlias}/${ContactChannelId}"
+      ]
+    },
+    {
+      "Name": "engagement",
+      "ARNFormats": [
+        "arn:${Partition}:ssm-contacts:${Region}:${Account}:engagement/${ContactAlias}/${EngagementId}"
+      ]
+    },
+    {
+      "Name": "page",
+      "ARNFormats": [
+        "arn:${Partition}:ssm-contacts:${Region}:${Account}:page/${ContactAlias}/${PageId}"
+      ]
+    },
+    {
+      "Name": "rotation",
+      "ARNFormats": [
+        "arn:${Partition}:ssm-contacts:${Region}:${Account}:rotation/${RotationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

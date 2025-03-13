@@ -1,0 +1,804 @@
+{
+  "Name": "logs",
+  "Actions": [
+    {
+      "Name": "AssociateKmsKey",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "CancelExportTask"
+    },
+    {
+      "Name": "CreateDelivery",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "delivery"
+        },
+        {
+          "Name": "delivery-destination"
+        },
+        {
+          "Name": "delivery-source"
+        }
+      ]
+    },
+    {
+      "Name": "CreateExportTask",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLogAnomalyDetector",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLogDelivery"
+    },
+    {
+      "Name": "CreateLogGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLogStream",
+      "Resources": [
+        {
+          "Name": "log-stream"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAccountPolicy"
+    },
+    {
+      "Name": "DeleteDataProtectionPolicy",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDelivery",
+      "Resources": [
+        {
+          "Name": "delivery"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeliveryDestination",
+      "Resources": [
+        {
+          "Name": "delivery-destination"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeliveryDestinationPolicy",
+      "Resources": [
+        {
+          "Name": "delivery-destination"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeliverySource",
+      "Resources": [
+        {
+          "Name": "delivery-destination"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDestination",
+      "Resources": [
+        {
+          "Name": "destination"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIndexPolicy"
+    },
+    {
+      "Name": "DeleteIntegration"
+    },
+    {
+      "Name": "DeleteLogAnomalyDetector",
+      "Resources": [
+        {
+          "Name": "anomaly-detector"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLogDelivery"
+    },
+    {
+      "Name": "DeleteLogGroup",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLogStream",
+      "Resources": [
+        {
+          "Name": "log-stream"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMetricFilter",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteQueryDefinition"
+    },
+    {
+      "Name": "DeleteResourcePolicy"
+    },
+    {
+      "Name": "DeleteRetentionPolicy",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSubscriptionFilter",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTransformer",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAccountPolicies"
+    },
+    {
+      "Name": "DescribeConfigurationTemplates"
+    },
+    {
+      "Name": "DescribeDeliveries"
+    },
+    {
+      "Name": "DescribeDeliveryDestinations"
+    },
+    {
+      "Name": "DescribeDeliverySources"
+    },
+    {
+      "Name": "DescribeDestinations"
+    },
+    {
+      "Name": "DescribeExportTasks"
+    },
+    {
+      "Name": "DescribeFieldIndexes"
+    },
+    {
+      "Name": "DescribeIndexPolicies"
+    },
+    {
+      "Name": "DescribeLogGroups"
+    },
+    {
+      "Name": "DescribeLogStreams",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMetricFilters",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeQueries"
+    },
+    {
+      "Name": "DescribeQueryDefinitions"
+    },
+    {
+      "Name": "DescribeResourcePolicies"
+    },
+    {
+      "Name": "DescribeSubscriptionFilters",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateKmsKey",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "FilterLogEvents",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataProtectionPolicy",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetDelivery",
+      "Resources": [
+        {
+          "Name": "delivery"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeliveryDestination",
+      "Resources": [
+        {
+          "Name": "delivery-destination"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeliveryDestinationPolicy",
+      "Resources": [
+        {
+          "Name": "delivery-destination"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeliverySource",
+      "Resources": [
+        {
+          "Name": "delivery-source"
+        }
+      ]
+    },
+    {
+      "Name": "GetIntegration"
+    },
+    {
+      "Name": "GetLogAnomalyDetector",
+      "Resources": [
+        {
+          "Name": "anomaly-detector"
+        }
+      ]
+    },
+    {
+      "Name": "GetLogDelivery"
+    },
+    {
+      "Name": "GetLogEvents",
+      "Resources": [
+        {
+          "Name": "log-stream"
+        }
+      ]
+    },
+    {
+      "Name": "GetLogGroupFields",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetLogRecord",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueryResults",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetTransformer",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "Link"
+    },
+    {
+      "Name": "ListAnomalies",
+      "Resources": [
+        {
+          "Name": "anomaly-detector"
+        }
+      ]
+    },
+    {
+      "Name": "ListEntitiesForLogGroup"
+    },
+    {
+      "Name": "ListIntegrations"
+    },
+    {
+      "Name": "ListLogAnomalyDetectors",
+      "Resources": [
+        {
+          "Name": "anomaly-detector"
+        }
+      ]
+    },
+    {
+      "Name": "ListLogDeliveries"
+    },
+    {
+      "Name": "ListLogGroupsForEntity"
+    },
+    {
+      "Name": "ListLogGroupsForQuery"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "anomaly-detector"
+        },
+        {
+          "Name": "delivery"
+        },
+        {
+          "Name": "delivery-destination"
+        },
+        {
+          "Name": "delivery-source"
+        },
+        {
+          "Name": "destination"
+        },
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsLogGroup",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "PutAccountPolicy"
+    },
+    {
+      "Name": "PutDataProtectionPolicy",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "PutDeliveryDestination",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "logs:DeliveryDestinationResourceArn"
+      ],
+      "Resources": [
+        {
+          "Name": "delivery-destination"
+        }
+      ]
+    },
+    {
+      "Name": "PutDeliveryDestinationPolicy",
+      "Resources": [
+        {
+          "Name": "delivery-destination"
+        }
+      ]
+    },
+    {
+      "Name": "PutDeliverySource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "logs:LogGeneratingResourceArns"
+      ],
+      "Resources": [
+        {
+          "Name": "delivery-source"
+        }
+      ]
+    },
+    {
+      "Name": "PutDestination",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "destination"
+        }
+      ]
+    },
+    {
+      "Name": "PutDestinationPolicy",
+      "Resources": [
+        {
+          "Name": "destination"
+        }
+      ]
+    },
+    {
+      "Name": "PutIndexPolicy"
+    },
+    {
+      "Name": "PutIntegration"
+    },
+    {
+      "Name": "PutLogEvents",
+      "Resources": [
+        {
+          "Name": "log-stream"
+        }
+      ]
+    },
+    {
+      "Name": "PutMetricFilter",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "PutQueryDefinition"
+    },
+    {
+      "Name": "PutResourcePolicy"
+    },
+    {
+      "Name": "PutRetentionPolicy",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "PutSubscriptionFilter",
+      "Resources": [
+        {
+          "Name": "destination"
+        },
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "PutTransformer",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "StartLiveTail",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "StartQuery",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "StopLiveTail"
+    },
+    {
+      "Name": "StopQuery"
+    },
+    {
+      "Name": "TagLogGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "anomaly-detector"
+        },
+        {
+          "Name": "delivery"
+        },
+        {
+          "Name": "delivery-destination"
+        },
+        {
+          "Name": "delivery-source"
+        },
+        {
+          "Name": "destination"
+        },
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "TestMetricFilter"
+    },
+    {
+      "Name": "TestTransformer"
+    },
+    {
+      "Name": "Unmask",
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "UntagLogGroup",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "anomaly-detector"
+        },
+        {
+          "Name": "delivery"
+        },
+        {
+          "Name": "delivery-destination"
+        },
+        {
+          "Name": "delivery-source"
+        },
+        {
+          "Name": "destination"
+        },
+        {
+          "Name": "log-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAnomaly",
+      "Resources": [
+        {
+          "Name": "anomaly-detector"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDeliveryConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "delivery"
+        },
+        {
+          "Name": "delivery-destination"
+        },
+        {
+          "Name": "delivery-source"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLogAnomalyDetector",
+      "Resources": [
+        {
+          "Name": "anomaly-detector"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLogDelivery"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "logs:DeliveryDestinationResourceArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "logs:LogGeneratingResourceArns",
+      "Types": [
+        "ArrayOfARN"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "anomaly-detector",
+      "ARNFormats": [
+        "arn:${Partition}:logs:${Region}:${Account}:anomaly-detector:${DetectorId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "delivery",
+      "ARNFormats": [
+        "arn:${Partition}:logs:${Region}:${Account}:delivery:${DeliveryName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "delivery-destination",
+      "ARNFormats": [
+        "arn:${Partition}:logs:${Region}:${Account}:delivery-destination:${DeliveryDestinationName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "delivery-source",
+      "ARNFormats": [
+        "arn:${Partition}:logs:${Region}:${Account}:delivery-source:${DeliverySourceName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "destination",
+      "ARNFormats": [
+        "arn:${Partition}:logs:${Region}:${Account}:destination:${DestinationName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "log-group",
+      "ARNFormats": [
+        "arn:${Partition}:logs:${Region}:${Account}:log-group:${LogGroupName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "log-stream",
+      "ARNFormats": [
+        "arn:${Partition}:logs:${Region}:${Account}:log-group:${LogGroupName}:log-stream:${LogStreamName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

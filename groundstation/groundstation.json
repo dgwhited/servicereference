@@ -1,0 +1,414 @@
+{
+  "Name": "groundstation",
+  "Actions": [
+    {
+      "Name": "CancelContact",
+      "Resources": [
+        {
+          "Name": "Contact"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConfig",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateDataflowEndpointGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateEphemeris",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateMissionProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteConfig",
+      "Resources": [
+        {
+          "Name": "Config"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataflowEndpointGroup",
+      "Resources": [
+        {
+          "Name": "DataflowEndpointGroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEphemeris",
+      "Resources": [
+        {
+          "Name": "EphemerisItem"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMissionProfile",
+      "Resources": [
+        {
+          "Name": "MissionProfile"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeContact",
+      "Resources": [
+        {
+          "Name": "Contact"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEphemeris",
+      "Resources": [
+        {
+          "Name": "EphemerisItem"
+        }
+      ]
+    },
+    {
+      "Name": "GetAgentConfiguration",
+      "Resources": [
+        {
+          "Name": "Agent"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfig",
+      "Resources": [
+        {
+          "Name": "Config"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataflowEndpointGroup",
+      "Resources": [
+        {
+          "Name": "DataflowEndpointGroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetMinuteUsage"
+    },
+    {
+      "Name": "GetMissionProfile",
+      "Resources": [
+        {
+          "Name": "MissionProfile"
+        }
+      ]
+    },
+    {
+      "Name": "GetSatellite",
+      "Resources": [
+        {
+          "Name": "Satellite"
+        }
+      ]
+    },
+    {
+      "Name": "ListConfigs"
+    },
+    {
+      "Name": "ListContacts"
+    },
+    {
+      "Name": "ListDataflowEndpointGroups"
+    },
+    {
+      "Name": "ListEphemerides"
+    },
+    {
+      "Name": "ListGroundStations"
+    },
+    {
+      "Name": "ListMissionProfiles"
+    },
+    {
+      "Name": "ListSatellites"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "Config"
+        },
+        {
+          "Name": "Contact"
+        },
+        {
+          "Name": "DataflowEndpointGroup"
+        },
+        {
+          "Name": "MissionProfile"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterAgent"
+    },
+    {
+      "Name": "ReserveContact",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Config"
+        },
+        {
+          "Name": "Contact"
+        },
+        {
+          "Name": "DataflowEndpointGroup"
+        },
+        {
+          "Name": "EphemerisItem"
+        },
+        {
+          "Name": "MissionProfile"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Config"
+        },
+        {
+          "Name": "Contact"
+        },
+        {
+          "Name": "DataflowEndpointGroup"
+        },
+        {
+          "Name": "EphemerisItem"
+        },
+        {
+          "Name": "MissionProfile"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgentStatus",
+      "Resources": [
+        {
+          "Name": "Agent"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConfig",
+      "Resources": [
+        {
+          "Name": "Config"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEphemeris",
+      "Resources": [
+        {
+          "Name": "EphemerisItem"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMissionProfile",
+      "Resources": [
+        {
+          "Name": "MissionProfile"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "groundstation:AgentId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "groundstation:ConfigId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "groundstation:ConfigType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "groundstation:ContactId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "groundstation:DataflowEndpointGroupId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "groundstation:EphemerisId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "groundstation:GroundStationId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "groundstation:MissionProfileId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "groundstation:SatelliteId",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Agent",
+      "ARNFormats": [
+        "arn:${Partition}:groundstation:${Region}:${Account}:agent/${AgentId}"
+      ],
+      "ConditionKeys": [
+        "groundstation:AgentId"
+      ]
+    },
+    {
+      "Name": "Config",
+      "ARNFormats": [
+        "arn:${Partition}:groundstation:${Region}:${Account}:config/${ConfigType}/${ConfigId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "groundstation:ConfigId",
+        "groundstation:ConfigType"
+      ]
+    },
+    {
+      "Name": "Contact",
+      "ARNFormats": [
+        "arn:${Partition}:groundstation:${Region}:${Account}:contact/${ContactId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "groundstation:ContactId"
+      ]
+    },
+    {
+      "Name": "DataflowEndpointGroup",
+      "ARNFormats": [
+        "arn:${Partition}:groundstation:${Region}:${Account}:dataflow-endpoint-group/${DataflowEndpointGroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "groundstation:DataflowEndpointGroupId"
+      ]
+    },
+    {
+      "Name": "EphemerisItem",
+      "ARNFormats": [
+        "arn:${Partition}:groundstation:${Region}:${Account}:ephemeris/${EphemerisId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "groundstation:EphemerisId"
+      ]
+    },
+    {
+      "Name": "GroundStationResource",
+      "ARNFormats": [
+        "arn:${Partition}:groundstation:${Region}:${Account}:groundstation:${GroundStationId}"
+      ],
+      "ConditionKeys": [
+        "groundstation:GroundStationId"
+      ]
+    },
+    {
+      "Name": "MissionProfile",
+      "ARNFormats": [
+        "arn:${Partition}:groundstation:${Region}:${Account}:mission-profile/${MissionProfileId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "groundstation:MissionProfileId"
+      ]
+    },
+    {
+      "Name": "Satellite",
+      "ARNFormats": [
+        "arn:${Partition}:groundstation:${Region}:${Account}:satellite/${SatelliteId}"
+      ],
+      "ConditionKeys": [
+        "groundstation:SatelliteId"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

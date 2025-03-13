@@ -1,0 +1,228 @@
+{
+  "Name": "q",
+  "Actions": [
+    {
+      "Name": "AssociateConnectorResource"
+    },
+    {
+      "Name": "CreateAssignment",
+      "ActionConditionKeys": [
+        "identitystore:GroupId",
+        "identitystore:UserId"
+      ],
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAuthGrant"
+    },
+    {
+      "Name": "CreateOAuthAppConnection"
+    },
+    {
+      "Name": "CreatePlugin",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "plugin"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAssignment",
+      "ActionConditionKeys": [
+        "identitystore:GroupId",
+        "identitystore:UserId"
+      ],
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePlugin",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "plugin"
+        }
+      ]
+    },
+    {
+      "Name": "GenerateCodeFromCommands"
+    },
+    {
+      "Name": "GetConnector"
+    },
+    {
+      "Name": "GetConversation"
+    },
+    {
+      "Name": "GetIdentityMetadata"
+    },
+    {
+      "Name": "GetPlugin",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "plugin"
+        }
+      ]
+    },
+    {
+      "Name": "GetTroubleshootingResults"
+    },
+    {
+      "Name": "ListConversations"
+    },
+    {
+      "Name": "ListDashboardMetrics"
+    },
+    {
+      "Name": "ListPluginProviders"
+    },
+    {
+      "Name": "ListPlugins",
+      "Resources": [
+        {
+          "Name": "plugin"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "plugin"
+        }
+      ]
+    },
+    {
+      "Name": "PassRequest"
+    },
+    {
+      "Name": "RejectConnector"
+    },
+    {
+      "Name": "SendEvent"
+    },
+    {
+      "Name": "SendMessage"
+    },
+    {
+      "Name": "StartConversation"
+    },
+    {
+      "Name": "StartTroubleshootingAnalysis"
+    },
+    {
+      "Name": "StartTroubleshootingResolutionExplanation"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "plugin"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "plugin"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAuthGrant"
+    },
+    {
+      "Name": "UpdateOAuthAppConnection"
+    },
+    {
+      "Name": "UpdateTroubleshootingCommandResult"
+    },
+    {
+      "Name": "UsePlugin",
+      "Resources": [
+        {
+          "Name": "plugin"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "identitystore:GroupId",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "identitystore:UserId",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "plugin",
+      "ARNFormats": [
+        "arn:${Partition}:qdeveloper:${Region}:${Account}:plugin/${Identifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "profile",
+      "ARNFormats": [
+        "arn:${Partition}:codewhisperer:${Region}:${Account}:profile/${Identifier}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

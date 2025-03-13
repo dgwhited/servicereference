@@ -1,0 +1,333 @@
+{
+  "Name": "b2bi",
+  "Actions": [
+    {
+      "Name": "CreateCapability",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "transformer"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePartnership",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "capability"
+        },
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "CreateProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateStarterMappingTemplate",
+      "Resources": [
+        {
+          "Name": "transformer"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTransformer",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteCapability",
+      "Resources": [
+        {
+          "Name": "capability"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePartnership",
+      "Resources": [
+        {
+          "Name": "partnership"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProfile",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTransformer",
+      "Resources": [
+        {
+          "Name": "transformer"
+        }
+      ]
+    },
+    {
+      "Name": "GenerateMapping",
+      "Resources": [
+        {
+          "Name": "transformer"
+        }
+      ]
+    },
+    {
+      "Name": "GetCapability",
+      "Resources": [
+        {
+          "Name": "capability"
+        }
+      ]
+    },
+    {
+      "Name": "GetPartnership",
+      "Resources": [
+        {
+          "Name": "partnership"
+        }
+      ]
+    },
+    {
+      "Name": "GetProfile",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "GetTransformer",
+      "Resources": [
+        {
+          "Name": "transformer"
+        }
+      ]
+    },
+    {
+      "Name": "GetTransformerJob",
+      "Resources": [
+        {
+          "Name": "transformer"
+        }
+      ]
+    },
+    {
+      "Name": "ListCapabilities"
+    },
+    {
+      "Name": "ListPartnerships"
+    },
+    {
+      "Name": "ListProfiles"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "capability"
+        },
+        {
+          "Name": "partnership"
+        },
+        {
+          "Name": "profile"
+        },
+        {
+          "Name": "transformer"
+        }
+      ]
+    },
+    {
+      "Name": "ListTransformers"
+    },
+    {
+      "Name": "StartTransformerJob",
+      "Resources": [
+        {
+          "Name": "transformer"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "capability"
+        },
+        {
+          "Name": "partnership"
+        },
+        {
+          "Name": "profile"
+        },
+        {
+          "Name": "transformer"
+        }
+      ]
+    },
+    {
+      "Name": "TestConversion",
+      "Resources": [
+        {
+          "Name": "transformer"
+        }
+      ]
+    },
+    {
+      "Name": "TestMapping",
+      "Resources": [
+        {
+          "Name": "transformer"
+        }
+      ]
+    },
+    {
+      "Name": "TestParsing",
+      "Resources": [
+        {
+          "Name": "transformer"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "capability"
+        },
+        {
+          "Name": "partnership"
+        },
+        {
+          "Name": "profile"
+        },
+        {
+          "Name": "transformer"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCapability",
+      "Resources": [
+        {
+          "Name": "capability"
+        },
+        {
+          "Name": "transformer"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePartnership",
+      "Resources": [
+        {
+          "Name": "capability"
+        },
+        {
+          "Name": "partnership"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProfile",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTransformer",
+      "Resources": [
+        {
+          "Name": "transformer"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "capability",
+      "ARNFormats": [
+        "arn:${Partition}:b2bi:${Region}:${Account}:capability/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "partnership",
+      "ARNFormats": [
+        "arn:${Partition}:b2bi:${Region}:${Account}:partnership/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "profile",
+      "ARNFormats": [
+        "arn:${Partition}:b2bi:${Region}:${Account}:profile/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "transformer",
+      "ARNFormats": [
+        "arn:${Partition}:b2bi:${Region}:${Account}:transformer/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

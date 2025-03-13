@@ -1,0 +1,816 @@
+{
+  "Name": "ivs",
+  "Actions": [
+    {
+      "Name": "BatchGetChannel",
+      "Resources": [
+        {
+          "Name": "Channel"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetStreamKey",
+      "Resources": [
+        {
+          "Name": "Stream-Key"
+        }
+      ]
+    },
+    {
+      "Name": "BatchStartViewerSessionRevocation",
+      "Resources": [
+        {
+          "Name": "Channel"
+        }
+      ]
+    },
+    {
+      "Name": "CreateChannel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Channel"
+        },
+        {
+          "Name": "Stream-Key"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEncoderConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Encoder-Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateIngestConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Ingest-Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateParticipantToken",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Stage"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePlaybackRestrictionPolicy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Playback-Restriction-Policy"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRecordingConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Recording-Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStage",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Stage"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStorageConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Storage-Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStreamKey",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Stream-Key"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteChannel",
+      "Resources": [
+        {
+          "Name": "Channel"
+        },
+        {
+          "Name": "Stream-Key"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEncoderConfiguration",
+      "Resources": [
+        {
+          "Name": "Encoder-Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIngestConfiguration",
+      "Resources": [
+        {
+          "Name": "Ingest-Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePlaybackKeyPair",
+      "Resources": [
+        {
+          "Name": "Playback-Key-Pair"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePlaybackRestrictionPolicy",
+      "Resources": [
+        {
+          "Name": "Playback-Restriction-Policy"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePublicKey",
+      "Resources": [
+        {
+          "Name": "Public-Key"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRecordingConfiguration",
+      "Resources": [
+        {
+          "Name": "Recording-Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStage",
+      "Resources": [
+        {
+          "Name": "Stage"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStorageConfiguration",
+      "Resources": [
+        {
+          "Name": "Storage-Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStreamKey",
+      "Resources": [
+        {
+          "Name": "Stream-Key"
+        }
+      ]
+    },
+    {
+      "Name": "DisconnectParticipant",
+      "Resources": [
+        {
+          "Name": "Stage"
+        }
+      ]
+    },
+    {
+      "Name": "GetChannel",
+      "Resources": [
+        {
+          "Name": "Channel"
+        }
+      ]
+    },
+    {
+      "Name": "GetComposition",
+      "Resources": [
+        {
+          "Name": "Composition"
+        }
+      ]
+    },
+    {
+      "Name": "GetEncoderConfiguration",
+      "Resources": [
+        {
+          "Name": "Encoder-Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "GetIngestConfiguration",
+      "Resources": [
+        {
+          "Name": "Ingest-Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "GetParticipant",
+      "Resources": [
+        {
+          "Name": "Stage"
+        }
+      ]
+    },
+    {
+      "Name": "GetPlaybackKeyPair",
+      "Resources": [
+        {
+          "Name": "Playback-Key-Pair"
+        }
+      ]
+    },
+    {
+      "Name": "GetPlaybackRestrictionPolicy",
+      "Resources": [
+        {
+          "Name": "Playback-Restriction-Policy"
+        }
+      ]
+    },
+    {
+      "Name": "GetPublicKey",
+      "Resources": [
+        {
+          "Name": "Public-Key"
+        }
+      ]
+    },
+    {
+      "Name": "GetRecordingConfiguration",
+      "Resources": [
+        {
+          "Name": "Recording-Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "GetStage",
+      "Resources": [
+        {
+          "Name": "Stage"
+        }
+      ]
+    },
+    {
+      "Name": "GetStageSession",
+      "Resources": [
+        {
+          "Name": "Stage"
+        }
+      ]
+    },
+    {
+      "Name": "GetStorageConfiguration",
+      "Resources": [
+        {
+          "Name": "Storage-Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "GetStream",
+      "Resources": [
+        {
+          "Name": "Channel"
+        }
+      ]
+    },
+    {
+      "Name": "GetStreamKey",
+      "Resources": [
+        {
+          "Name": "Stream-Key"
+        }
+      ]
+    },
+    {
+      "Name": "GetStreamSession",
+      "Resources": [
+        {
+          "Name": "Channel"
+        }
+      ]
+    },
+    {
+      "Name": "ImportPlaybackKeyPair",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Playback-Key-Pair"
+        }
+      ]
+    },
+    {
+      "Name": "ImportPublicKey",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Public-Key"
+        }
+      ]
+    },
+    {
+      "Name": "ListChannels",
+      "Resources": [
+        {
+          "Name": "Channel"
+        }
+      ]
+    },
+    {
+      "Name": "ListCompositions",
+      "Resources": [
+        {
+          "Name": "Encoder-Configuration"
+        },
+        {
+          "Name": "Stage"
+        }
+      ]
+    },
+    {
+      "Name": "ListEncoderConfigurations"
+    },
+    {
+      "Name": "ListIngestConfigurations"
+    },
+    {
+      "Name": "ListParticipantEvents",
+      "Resources": [
+        {
+          "Name": "Stage"
+        }
+      ]
+    },
+    {
+      "Name": "ListParticipants",
+      "Resources": [
+        {
+          "Name": "Stage"
+        }
+      ]
+    },
+    {
+      "Name": "ListPlaybackKeyPairs",
+      "Resources": [
+        {
+          "Name": "Playback-Key-Pair"
+        }
+      ]
+    },
+    {
+      "Name": "ListPlaybackRestrictionPolicies"
+    },
+    {
+      "Name": "ListPublicKeys"
+    },
+    {
+      "Name": "ListRecordingConfigurations",
+      "Resources": [
+        {
+          "Name": "Recording-Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "ListStageSessions",
+      "Resources": [
+        {
+          "Name": "Stage"
+        }
+      ]
+    },
+    {
+      "Name": "ListStages",
+      "Resources": [
+        {
+          "Name": "Stage"
+        }
+      ]
+    },
+    {
+      "Name": "ListStorageConfigurations"
+    },
+    {
+      "Name": "ListStreamKeys",
+      "Resources": [
+        {
+          "Name": "Channel"
+        },
+        {
+          "Name": "Stream-Key"
+        }
+      ]
+    },
+    {
+      "Name": "ListStreamSessions",
+      "Resources": [
+        {
+          "Name": "Channel"
+        }
+      ]
+    },
+    {
+      "Name": "ListStreams",
+      "Resources": [
+        {
+          "Name": "Channel"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Channel"
+        },
+        {
+          "Name": "Composition"
+        },
+        {
+          "Name": "Encoder-Configuration"
+        },
+        {
+          "Name": "Ingest-Configuration"
+        },
+        {
+          "Name": "Playback-Key-Pair"
+        },
+        {
+          "Name": "Playback-Restriction-Policy"
+        },
+        {
+          "Name": "Public-Key"
+        },
+        {
+          "Name": "Recording-Configuration"
+        },
+        {
+          "Name": "Stage"
+        },
+        {
+          "Name": "Storage-Configuration"
+        },
+        {
+          "Name": "Stream-Key"
+        }
+      ]
+    },
+    {
+      "Name": "PutMetadata",
+      "Resources": [
+        {
+          "Name": "Channel"
+        }
+      ]
+    },
+    {
+      "Name": "StartComposition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Channel"
+        },
+        {
+          "Name": "Encoder-Configuration"
+        },
+        {
+          "Name": "Stage"
+        },
+        {
+          "Name": "Storage-Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "StartViewerSessionRevocation",
+      "Resources": [
+        {
+          "Name": "Channel"
+        }
+      ]
+    },
+    {
+      "Name": "StopComposition",
+      "Resources": [
+        {
+          "Name": "Composition"
+        }
+      ]
+    },
+    {
+      "Name": "StopStream",
+      "Resources": [
+        {
+          "Name": "Channel"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Channel"
+        },
+        {
+          "Name": "Composition"
+        },
+        {
+          "Name": "Encoder-Configuration"
+        },
+        {
+          "Name": "Ingest-Configuration"
+        },
+        {
+          "Name": "Playback-Key-Pair"
+        },
+        {
+          "Name": "Playback-Restriction-Policy"
+        },
+        {
+          "Name": "Public-Key"
+        },
+        {
+          "Name": "Recording-Configuration"
+        },
+        {
+          "Name": "Stage"
+        },
+        {
+          "Name": "Storage-Configuration"
+        },
+        {
+          "Name": "Stream-Key"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Channel"
+        },
+        {
+          "Name": "Composition"
+        },
+        {
+          "Name": "Encoder-Configuration"
+        },
+        {
+          "Name": "Ingest-Configuration"
+        },
+        {
+          "Name": "Playback-Key-Pair"
+        },
+        {
+          "Name": "Playback-Restriction-Policy"
+        },
+        {
+          "Name": "Public-Key"
+        },
+        {
+          "Name": "Recording-Configuration"
+        },
+        {
+          "Name": "Stage"
+        },
+        {
+          "Name": "Storage-Configuration"
+        },
+        {
+          "Name": "Stream-Key"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateChannel",
+      "Resources": [
+        {
+          "Name": "Channel"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIngestConfiguration",
+      "Resources": [
+        {
+          "Name": "Ingest-Configuration"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePlaybackRestrictionPolicy",
+      "Resources": [
+        {
+          "Name": "Playback-Restriction-Policy"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStage",
+      "Resources": [
+        {
+          "Name": "Stage"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Channel",
+      "ARNFormats": [
+        "arn:${Partition}:ivs:${Region}:${Account}:channel/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Composition",
+      "ARNFormats": [
+        "arn:${Partition}:ivs:${Region}:${Account}:composition/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Encoder-Configuration",
+      "ARNFormats": [
+        "arn:${Partition}:ivs:${Region}:${Account}:encoder-configuration/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Ingest-Configuration",
+      "ARNFormats": [
+        "arn:${Partition}:ivs:${Region}:${Account}:ingest-configuration/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Playback-Key-Pair",
+      "ARNFormats": [
+        "arn:${Partition}:ivs:${Region}:${Account}:playback-key/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Playback-Restriction-Policy",
+      "ARNFormats": [
+        "arn:${Partition}:ivs:${Region}:${Account}:playback-restriction-policy/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Public-Key",
+      "ARNFormats": [
+        "arn:${Partition}:ivs:${Region}:${Account}:public-key/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Recording-Configuration",
+      "ARNFormats": [
+        "arn:${Partition}:ivs:${Region}:${Account}:recording-configuration/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Stage",
+      "ARNFormats": [
+        "arn:${Partition}:ivs:${Region}:${Account}:stage/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Storage-Configuration",
+      "ARNFormats": [
+        "arn:${Partition}:ivs:${Region}:${Account}:storage-configuration/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Stream-Key",
+      "ARNFormats": [
+        "arn:${Partition}:ivs:${Region}:${Account}:stream-key/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

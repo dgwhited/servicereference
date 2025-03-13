@@ -1,0 +1,195 @@
+{
+  "Name": "ssm-sap",
+  "Actions": [
+    {
+      "Name": "BackupDatabase"
+    },
+    {
+      "Name": "DeleteResourcePermission"
+    },
+    {
+      "Name": "DeregisterApplication",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "GetApplication"
+    },
+    {
+      "Name": "GetComponent",
+      "Resources": [
+        {
+          "Name": "component"
+        }
+      ]
+    },
+    {
+      "Name": "GetDatabase"
+    },
+    {
+      "Name": "GetOperation"
+    },
+    {
+      "Name": "GetResourcePermission"
+    },
+    {
+      "Name": "ListApplications"
+    },
+    {
+      "Name": "ListComponents",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "ListDatabases"
+    },
+    {
+      "Name": "ListOperationEvents"
+    },
+    {
+      "Name": "ListOperations"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "PutResourcePermission"
+    },
+    {
+      "Name": "RegisterApplication",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "RestoreDatabase"
+    },
+    {
+      "Name": "StartApplication",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "StartApplicationRefresh",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "StopApplication",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "component"
+        },
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "component"
+        },
+        {
+          "Name": "database"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateApplicationSettings",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateHANABackupSettings"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "application",
+      "ARNFormats": [
+        "arn:${Partition}:ssm-sap:${Region}:${Account}:${ApplicationType}/${ApplicationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "component",
+      "ARNFormats": [
+        "arn:${Partition}:ssm-sap:${Region}:${Account}:${ApplicationType}/${ApplicationId}/COMPONENT/${ComponentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "database",
+      "ARNFormats": [
+        "arn:${Partition}:ssm-sap:${Region}:${Account}:${ApplicationType}/${ApplicationId}/DB/${DatabaseId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

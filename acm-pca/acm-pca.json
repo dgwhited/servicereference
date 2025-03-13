@@ -1,0 +1,231 @@
+{
+  "Name": "acm-pca",
+  "Actions": [
+    {
+      "Name": "CreateCertificateAuthority",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateCertificateAuthorityAuditReport",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePermission",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCertificateAuthority",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePermission",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePolicy",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCertificateAuthority",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCertificateAuthorityAuditReport",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "GetCertificate",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "GetCertificateAuthorityCertificate",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "GetCertificateAuthorityCsr",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "GetPolicy",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "ImportCertificateAuthorityCertificate",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "IssueCertificate",
+      "ActionConditionKeys": [
+        "acm-pca:TemplateArn"
+      ],
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "ListCertificateAuthorities"
+    },
+    {
+      "Name": "ListPermissions",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "ListTags",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "PutPolicy",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "RestoreCertificateAuthority",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "RevokeCertificate",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "TagCertificateAuthority",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "UntagCertificateAuthority",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCertificateAuthority",
+      "Resources": [
+        {
+          "Name": "certificate-authority"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "acm-pca:TemplateArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "certificate-authority",
+      "ARNFormats": [
+        "arn:${Partition}:acm-pca:${Region}:${Account}:certificate-authority/${CertificateAuthorityId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,1106 @@
+{
+  "Name": "wisdom",
+  "Actions": [
+    {
+      "Name": "ActivateMessageTemplate",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        },
+        {
+          "Name": "MessageTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "AllowVendedLogDeliveryForResource",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAIAgent",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAIAgentVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "AIAgent"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAIGuardrail",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAIGuardrailVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "AIGuardrail"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAIPrompt",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAIPromptVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "AIPrompt"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAssistant",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateAssistantAssociation",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "CreateContent",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "CreateContentAssociation",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Content"
+        },
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "CreateKnowledgeBase",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateMessageTemplate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMessageTemplateAttachment",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        },
+        {
+          "Name": "MessageTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMessageTemplateVersion",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        },
+        {
+          "Name": "MessageTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "CreateQuickResponse",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateSession",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeactivateMessageTemplate",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        },
+        {
+          "Name": "MessageTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAIAgent",
+      "Resources": [
+        {
+          "Name": "AIAgent"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAIAgentVersion",
+      "Resources": [
+        {
+          "Name": "AIAgent"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAIGuardrail",
+      "Resources": [
+        {
+          "Name": "AIGuardrail"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAIGuardrailVersion",
+      "Resources": [
+        {
+          "Name": "AIGuardrail"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAIPrompt",
+      "Resources": [
+        {
+          "Name": "AIPrompt"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAIPromptVersion",
+      "Resources": [
+        {
+          "Name": "AIPrompt"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAssistant",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAssistantAssociation",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        },
+        {
+          "Name": "AssistantAssociation"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteContent",
+      "Resources": [
+        {
+          "Name": "Content"
+        },
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteContentAssociation",
+      "Resources": [
+        {
+          "Name": "Content"
+        },
+        {
+          "Name": "ContentAssociation"
+        },
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteImportJob",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteKnowledgeBase",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMessageTemplate",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        },
+        {
+          "Name": "MessageTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMessageTemplateAttachment",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        },
+        {
+          "Name": "MessageTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteQuickResponse",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        },
+        {
+          "Name": "QuickResponse"
+        }
+      ]
+    },
+    {
+      "Name": "GetAIAgent",
+      "Resources": [
+        {
+          "Name": "AIAgent"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "GetAIGuardrail",
+      "Resources": [
+        {
+          "Name": "AIGuardrail"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "GetAIPrompt",
+      "Resources": [
+        {
+          "Name": "AIPrompt"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "GetAssistant",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "GetAssistantAssociation",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        },
+        {
+          "Name": "AssistantAssociation"
+        }
+      ]
+    },
+    {
+      "Name": "GetContent",
+      "Resources": [
+        {
+          "Name": "Content"
+        },
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "GetContentAssociation",
+      "Resources": [
+        {
+          "Name": "Content"
+        },
+        {
+          "Name": "ContentAssociation"
+        },
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "GetContentSummary",
+      "Resources": [
+        {
+          "Name": "Content"
+        },
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "GetImportJob",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "GetKnowledgeBase",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "GetMessageTemplate",
+      "ActionConditionKeys": [
+        "wisdom:MessageTemplate/RoutingProfileArn"
+      ],
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        },
+        {
+          "Name": "MessageTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "GetNextMessage",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        },
+        {
+          "Name": "Session"
+        }
+      ]
+    },
+    {
+      "Name": "GetQuickResponse",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        },
+        {
+          "Name": "QuickResponse"
+        }
+      ]
+    },
+    {
+      "Name": "GetRecommendations",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "GetSession",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        },
+        {
+          "Name": "Session"
+        }
+      ]
+    },
+    {
+      "Name": "ListAIAgentVersions",
+      "Resources": [
+        {
+          "Name": "AIAgent"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "ListAIAgents",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "ListAIGuardrailVersions",
+      "Resources": [
+        {
+          "Name": "AIGuardrail"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "ListAIGuardrails",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "ListAIPromptVersions",
+      "Resources": [
+        {
+          "Name": "AIPrompt"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "ListAIPrompts",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "ListAssistantAssociations"
+    },
+    {
+      "Name": "ListAssistants"
+    },
+    {
+      "Name": "ListContentAssociations",
+      "Resources": [
+        {
+          "Name": "Content"
+        },
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "ListContents",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "ListImportJobs",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "ListKnowledgeBases"
+    },
+    {
+      "Name": "ListMessageTemplateVersions",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        },
+        {
+          "Name": "MessageTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "ListMessageTemplates",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "ListMessages",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        },
+        {
+          "Name": "Session"
+        }
+      ]
+    },
+    {
+      "Name": "ListQuickResponses",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "NotifyRecommendationsReceived"
+    },
+    {
+      "Name": "PutFeedback",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "QueryAssistant",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveAssistantAIAgent",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveKnowledgeBaseTemplateUri",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "RenderMessageTemplate",
+      "ActionConditionKeys": [
+        "wisdom:MessageTemplate/RoutingProfileArn"
+      ],
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        },
+        {
+          "Name": "MessageTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "SearchContent",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "SearchMessageTemplates",
+      "ActionConditionKeys": [
+        "wisdom:SearchFilter/Qualifier",
+        "wisdom:SearchFilter/RoutingProfileArn"
+      ],
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "SearchQuickResponses",
+      "ActionConditionKeys": [
+        "wisdom:SearchFilter/RoutingProfileArn"
+      ],
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "SearchSessions"
+    },
+    {
+      "Name": "SendMessage",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        },
+        {
+          "Name": "Session"
+        }
+      ]
+    },
+    {
+      "Name": "StartContentUpload",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "StartImportJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Assistant"
+        },
+        {
+          "Name": "AssistantAssociation"
+        },
+        {
+          "Name": "Content"
+        },
+        {
+          "Name": "ContentAssociation"
+        },
+        {
+          "Name": "KnowledgeBase"
+        },
+        {
+          "Name": "MessageTemplate"
+        },
+        {
+          "Name": "QuickResponse"
+        },
+        {
+          "Name": "Session"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Assistant"
+        },
+        {
+          "Name": "AssistantAssociation"
+        },
+        {
+          "Name": "Content"
+        },
+        {
+          "Name": "ContentAssociation"
+        },
+        {
+          "Name": "KnowledgeBase"
+        },
+        {
+          "Name": "MessageTemplate"
+        },
+        {
+          "Name": "QuickResponse"
+        },
+        {
+          "Name": "Session"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAIAgent",
+      "Resources": [
+        {
+          "Name": "AIAgent"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAIGuardrail",
+      "Resources": [
+        {
+          "Name": "AIGuardrail"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAIPrompt",
+      "Resources": [
+        {
+          "Name": "AIPrompt"
+        },
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAssistantAIAgent",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateContent",
+      "Resources": [
+        {
+          "Name": "Content"
+        },
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateKnowledgeBaseTemplateUri",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMessageTemplate",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        },
+        {
+          "Name": "MessageTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMessageTemplateMetadata",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        },
+        {
+          "Name": "MessageTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateQuickResponse",
+      "Resources": [
+        {
+          "Name": "KnowledgeBase"
+        },
+        {
+          "Name": "QuickResponse"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSession",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        },
+        {
+          "Name": "Session"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSessionData",
+      "Resources": [
+        {
+          "Name": "Assistant"
+        },
+        {
+          "Name": "Session"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "wisdom:MessageTemplate/RoutingProfileArn",
+      "Types": [
+        "ArrayOfARN"
+      ]
+    },
+    {
+      "Name": "wisdom:SearchFilter/Qualifier",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "wisdom:SearchFilter/RoutingProfileArn",
+      "Types": [
+        "ARN"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "AIAgent",
+      "ARNFormats": [
+        "arn:${Partition}:wisdom:${Region}:${Account}:ai-agent/${AssistantId}/${AIAgentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "AIGuardrail",
+      "ARNFormats": [
+        "arn:${Partition}:wisdom:${Region}:${Account}:ai-guardrail/${AssistantId}/${AIGuardrailId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "AIPrompt",
+      "ARNFormats": [
+        "arn:${Partition}:wisdom:${Region}:${Account}:ai-prompt/${AssistantId}/${AIPromptId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Assistant",
+      "ARNFormats": [
+        "arn:${Partition}:wisdom:${Region}:${Account}:assistant/${AssistantId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "AssistantAssociation",
+      "ARNFormats": [
+        "arn:${Partition}:wisdom:${Region}:${Account}:association/${AssistantId}/${AssistantAssociationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Content",
+      "ARNFormats": [
+        "arn:${Partition}:wisdom:${Region}:${Account}:content/${KnowledgeBaseId}/${ContentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ContentAssociation",
+      "ARNFormats": [
+        "arn:${Partition}:wisdom:${Region}:${Account}:content-association/${KnowledgeBaseId}/${ContentId}/${ContentAssociationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "KnowledgeBase",
+      "ARNFormats": [
+        "arn:${Partition}:wisdom:${Region}:${Account}:knowledge-base/${KnowledgeBaseId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "MessageTemplate",
+      "ARNFormats": [
+        "arn:${Partition}:wisdom:${Region}:${Account}:message-template/${KnowledgeBaseId}/${MessageTemplateId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "wisdom:MessageTemplate/RoutingProfileArn"
+      ]
+    },
+    {
+      "Name": "QuickResponse",
+      "ARNFormats": [
+        "arn:${Partition}:wisdom:${Region}:${Account}:quick-response/${KnowledgeBaseId}/${QuickResponseId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Session",
+      "ARNFormats": [
+        "arn:${Partition}:wisdom:${Region}:${Account}:session/${AssistantId}/${SessionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

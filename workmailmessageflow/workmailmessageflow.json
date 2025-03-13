@@ -1,0 +1,30 @@
+{
+  "Name": "workmailmessageflow",
+  "Actions": [
+    {
+      "Name": "GetRawMessageContent",
+      "Resources": [
+        {
+          "Name": "RawMessage"
+        }
+      ]
+    },
+    {
+      "Name": "PutRawMessageContent",
+      "Resources": [
+        {
+          "Name": "RawMessage"
+        }
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "RawMessage",
+      "ARNFormats": [
+        "arn:${Partition}:workmailmessageflow:${Region}:${Account}:message/${OrganizationId}/${Context}/${MessageId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

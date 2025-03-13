@@ -1,0 +1,173 @@
+{
+  "Name": "pi",
+  "Actions": [
+    {
+      "Name": "CreatePerformanceAnalysisReport",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "perf-reports-resource"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePerformanceAnalysisReport",
+      "Resources": [
+        {
+          "Name": "perf-reports-resource"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDimensionKeys",
+      "ActionConditionKeys": [
+        "pi:Dimensions"
+      ],
+      "Resources": [
+        {
+          "Name": "metric-resource"
+        }
+      ]
+    },
+    {
+      "Name": "GetDimensionKeyDetails",
+      "ActionConditionKeys": [
+        "pi:Dimensions"
+      ],
+      "Resources": [
+        {
+          "Name": "metric-resource"
+        }
+      ]
+    },
+    {
+      "Name": "GetPerformanceAnalysisReport",
+      "Resources": [
+        {
+          "Name": "perf-reports-resource"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourceMetadata",
+      "Resources": [
+        {
+          "Name": "metric-resource"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourceMetrics",
+      "ActionConditionKeys": [
+        "pi:Dimensions"
+      ],
+      "Resources": [
+        {
+          "Name": "metric-resource"
+        }
+      ]
+    },
+    {
+      "Name": "ListAvailableResourceDimensions",
+      "Resources": [
+        {
+          "Name": "metric-resource"
+        }
+      ]
+    },
+    {
+      "Name": "ListAvailableResourceMetrics",
+      "Resources": [
+        {
+          "Name": "metric-resource"
+        }
+      ]
+    },
+    {
+      "Name": "ListPerformanceAnalysisReports",
+      "Resources": [
+        {
+          "Name": "perf-reports-resource"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "perf-reports-resource"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "perf-reports-resource"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "perf-reports-resource"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "pi:Dimensions",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "metric-resource",
+      "ARNFormats": [
+        "arn:${Partition}:pi:${Region}:${Account}:metrics/${ServiceType}/${Identifier}"
+      ]
+    },
+    {
+      "Name": "perf-reports-resource",
+      "ARNFormats": [
+        "arn:${Partition}:pi:${Region}:${Account}:perf-reports/${ServiceType}/${Identifier}/${ReportId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

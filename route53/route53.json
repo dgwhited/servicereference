@@ -1,0 +1,578 @@
+{
+  "Name": "route53",
+  "Actions": [
+    {
+      "Name": "ActivateKeySigningKey",
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateVPCWithHostedZone",
+      "ActionConditionKeys": [
+        "route53:VPCs"
+      ],
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "ChangeCidrCollection",
+      "Resources": [
+        {
+          "Name": "cidrcollection"
+        }
+      ]
+    },
+    {
+      "Name": "ChangeResourceRecordSets",
+      "ActionConditionKeys": [
+        "route53:ChangeResourceRecordSetsActions",
+        "route53:ChangeResourceRecordSetsNormalizedRecordNames",
+        "route53:ChangeResourceRecordSetsRecordTypes"
+      ],
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "ChangeTagsForResource",
+      "Resources": [
+        {
+          "Name": "healthcheck"
+        },
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCidrCollection"
+    },
+    {
+      "Name": "CreateHealthCheck"
+    },
+    {
+      "Name": "CreateHostedZone",
+      "ActionConditionKeys": [
+        "route53:VPCs"
+      ]
+    },
+    {
+      "Name": "CreateKeySigningKey",
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "CreateQueryLoggingConfig",
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "CreateReusableDelegationSet"
+    },
+    {
+      "Name": "CreateTrafficPolicy"
+    },
+    {
+      "Name": "CreateTrafficPolicyInstance",
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        },
+        {
+          "Name": "trafficpolicy"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTrafficPolicyVersion",
+      "Resources": [
+        {
+          "Name": "trafficpolicy"
+        }
+      ]
+    },
+    {
+      "Name": "CreateVPCAssociationAuthorization",
+      "ActionConditionKeys": [
+        "route53:VPCs"
+      ],
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "DeactivateKeySigningKey",
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCidrCollection",
+      "Resources": [
+        {
+          "Name": "cidrcollection"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteHealthCheck",
+      "Resources": [
+        {
+          "Name": "healthcheck"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteHostedZone",
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteKeySigningKey",
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteQueryLoggingConfig",
+      "Resources": [
+        {
+          "Name": "queryloggingconfig"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteReusableDelegationSet",
+      "Resources": [
+        {
+          "Name": "delegationset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTrafficPolicy",
+      "Resources": [
+        {
+          "Name": "trafficpolicy"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTrafficPolicyInstance",
+      "Resources": [
+        {
+          "Name": "trafficpolicyinstance"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteVPCAssociationAuthorization",
+      "ActionConditionKeys": [
+        "route53:VPCs"
+      ],
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "DisableHostedZoneDNSSEC",
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateVPCFromHostedZone",
+      "ActionConditionKeys": [
+        "route53:VPCs"
+      ],
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "EnableHostedZoneDNSSEC",
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "GetAccountLimit"
+    },
+    {
+      "Name": "GetChange",
+      "Resources": [
+        {
+          "Name": "change"
+        }
+      ]
+    },
+    {
+      "Name": "GetCheckerIpRanges"
+    },
+    {
+      "Name": "GetDNSSEC",
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "GetGeoLocation"
+    },
+    {
+      "Name": "GetHealthCheck",
+      "Resources": [
+        {
+          "Name": "healthcheck"
+        }
+      ]
+    },
+    {
+      "Name": "GetHealthCheckCount"
+    },
+    {
+      "Name": "GetHealthCheckLastFailureReason",
+      "Resources": [
+        {
+          "Name": "healthcheck"
+        }
+      ]
+    },
+    {
+      "Name": "GetHealthCheckStatus",
+      "Resources": [
+        {
+          "Name": "healthcheck"
+        }
+      ]
+    },
+    {
+      "Name": "GetHostedZone",
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "GetHostedZoneCount"
+    },
+    {
+      "Name": "GetHostedZoneLimit",
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueryLoggingConfig",
+      "Resources": [
+        {
+          "Name": "queryloggingconfig"
+        }
+      ]
+    },
+    {
+      "Name": "GetReusableDelegationSet",
+      "Resources": [
+        {
+          "Name": "delegationset"
+        }
+      ]
+    },
+    {
+      "Name": "GetReusableDelegationSetLimit",
+      "Resources": [
+        {
+          "Name": "delegationset"
+        }
+      ]
+    },
+    {
+      "Name": "GetTrafficPolicy",
+      "Resources": [
+        {
+          "Name": "trafficpolicy"
+        }
+      ]
+    },
+    {
+      "Name": "GetTrafficPolicyInstance",
+      "Resources": [
+        {
+          "Name": "trafficpolicyinstance"
+        }
+      ]
+    },
+    {
+      "Name": "GetTrafficPolicyInstanceCount"
+    },
+    {
+      "Name": "ListCidrBlocks",
+      "Resources": [
+        {
+          "Name": "cidrcollection"
+        }
+      ]
+    },
+    {
+      "Name": "ListCidrCollections"
+    },
+    {
+      "Name": "ListCidrLocations",
+      "Resources": [
+        {
+          "Name": "cidrcollection"
+        }
+      ]
+    },
+    {
+      "Name": "ListGeoLocations"
+    },
+    {
+      "Name": "ListHealthChecks"
+    },
+    {
+      "Name": "ListHostedZones"
+    },
+    {
+      "Name": "ListHostedZonesByName"
+    },
+    {
+      "Name": "ListHostedZonesByVPC",
+      "ActionConditionKeys": [
+        "route53:VPCs"
+      ]
+    },
+    {
+      "Name": "ListQueryLoggingConfigs",
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "ListResourceRecordSets",
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "ListReusableDelegationSets"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "healthcheck"
+        },
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResources",
+      "Resources": [
+        {
+          "Name": "healthcheck"
+        },
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "ListTrafficPolicies"
+    },
+    {
+      "Name": "ListTrafficPolicyInstances"
+    },
+    {
+      "Name": "ListTrafficPolicyInstancesByHostedZone",
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "ListTrafficPolicyInstancesByPolicy",
+      "Resources": [
+        {
+          "Name": "trafficpolicy"
+        }
+      ]
+    },
+    {
+      "Name": "ListTrafficPolicyVersions",
+      "Resources": [
+        {
+          "Name": "trafficpolicy"
+        }
+      ]
+    },
+    {
+      "Name": "ListVPCAssociationAuthorizations",
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "TestDNSAnswer"
+    },
+    {
+      "Name": "UpdateHealthCheck",
+      "Resources": [
+        {
+          "Name": "healthcheck"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateHostedZoneComment",
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTrafficPolicyComment",
+      "Resources": [
+        {
+          "Name": "trafficpolicy"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTrafficPolicyInstance",
+      "Resources": [
+        {
+          "Name": "trafficpolicyinstance"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "route53:ChangeResourceRecordSetsActions",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "route53:ChangeResourceRecordSetsNormalizedRecordNames",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "route53:ChangeResourceRecordSetsRecordTypes",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "route53:VPCs",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "change",
+      "ARNFormats": [
+        "arn:${Partition}:route53:::change/${Id}"
+      ]
+    },
+    {
+      "Name": "cidrcollection",
+      "ARNFormats": [
+        "arn:${Partition}:route53:::cidrcollection/${Id}"
+      ]
+    },
+    {
+      "Name": "delegationset",
+      "ARNFormats": [
+        "arn:${Partition}:route53:::delegationset/${Id}"
+      ]
+    },
+    {
+      "Name": "healthcheck",
+      "ARNFormats": [
+        "arn:${Partition}:route53:::healthcheck/${Id}"
+      ]
+    },
+    {
+      "Name": "hostedzone",
+      "ARNFormats": [
+        "arn:${Partition}:route53:::hostedzone/${Id}"
+      ]
+    },
+    {
+      "Name": "queryloggingconfig",
+      "ARNFormats": [
+        "arn:${Partition}:route53:::queryloggingconfig/${Id}"
+      ]
+    },
+    {
+      "Name": "trafficpolicy",
+      "ARNFormats": [
+        "arn:${Partition}:route53:::trafficpolicy/${Id}"
+      ]
+    },
+    {
+      "Name": "trafficpolicyinstance",
+      "ARNFormats": [
+        "arn:${Partition}:route53:::trafficpolicyinstance/${Id}"
+      ]
+    },
+    {
+      "Name": "vpc",
+      "ARNFormats": [
+        "arn:${Partition}:ec2:${Region}:${Account}:vpc/${VpcId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

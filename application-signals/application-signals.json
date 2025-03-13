@@ -1,0 +1,134 @@
+{
+  "Name": "application-signals",
+  "Actions": [
+    {
+      "Name": "BatchGetServiceLevelObjectiveBudgetReport",
+      "Resources": [
+        {
+          "Name": "slo"
+        }
+      ]
+    },
+    {
+      "Name": "CreateServiceLevelObjective",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteServiceLevelObjective",
+      "Resources": [
+        {
+          "Name": "slo"
+        }
+      ]
+    },
+    {
+      "Name": "GetService"
+    },
+    {
+      "Name": "GetServiceLevelObjective",
+      "Resources": [
+        {
+          "Name": "slo"
+        }
+      ]
+    },
+    {
+      "Name": "Link"
+    },
+    {
+      "Name": "ListObservedEntities"
+    },
+    {
+      "Name": "ListServiceDependencies"
+    },
+    {
+      "Name": "ListServiceDependents"
+    },
+    {
+      "Name": "ListServiceLevelObjectives"
+    },
+    {
+      "Name": "ListServiceOperations"
+    },
+    {
+      "Name": "ListServices"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "slo"
+        }
+      ]
+    },
+    {
+      "Name": "StartDiscovery"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "slo"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "slo"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServiceLevelObjective",
+      "Resources": [
+        {
+          "Name": "slo"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "slo",
+      "ARNFormats": [
+        "arn:${Partition}:application-signals:${Region}:${Account}:slo/${SloName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

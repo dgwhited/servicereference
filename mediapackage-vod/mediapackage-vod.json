@@ -1,0 +1,198 @@
+{
+  "Name": "mediapackage-vod",
+  "Actions": [
+    {
+      "Name": "ConfigureLogs",
+      "Resources": [
+        {
+          "Name": "packaging-groups"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAsset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreatePackagingConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreatePackagingGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteAsset",
+      "Resources": [
+        {
+          "Name": "assets"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePackagingConfiguration",
+      "Resources": [
+        {
+          "Name": "packaging-configurations"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePackagingGroup",
+      "Resources": [
+        {
+          "Name": "packaging-groups"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAsset",
+      "Resources": [
+        {
+          "Name": "assets"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePackagingConfiguration",
+      "Resources": [
+        {
+          "Name": "packaging-configurations"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePackagingGroup",
+      "Resources": [
+        {
+          "Name": "packaging-groups"
+        }
+      ]
+    },
+    {
+      "Name": "ListAssets"
+    },
+    {
+      "Name": "ListPackagingConfigurations"
+    },
+    {
+      "Name": "ListPackagingGroups"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "assets"
+        },
+        {
+          "Name": "packaging-configurations"
+        },
+        {
+          "Name": "packaging-groups"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "assets"
+        },
+        {
+          "Name": "packaging-configurations"
+        },
+        {
+          "Name": "packaging-groups"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "assets"
+        },
+        {
+          "Name": "packaging-configurations"
+        },
+        {
+          "Name": "packaging-groups"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePackagingGroup",
+      "Resources": [
+        {
+          "Name": "packaging-groups"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "assets",
+      "ARNFormats": [
+        "arn:${Partition}:mediapackage-vod:${Region}:${Account}:assets/${AssetIdentifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "packaging-configurations",
+      "ARNFormats": [
+        "arn:${Partition}:mediapackage-vod:${Region}:${Account}:packaging-configurations/${PackagingConfigurationIdentifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "packaging-groups",
+      "ARNFormats": [
+        "arn:${Partition}:mediapackage-vod:${Region}:${Account}:packaging-groups/${PackagingGroupIdentifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

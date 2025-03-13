@@ -1,0 +1,278 @@
+{
+  "Name": "machinelearning",
+  "Actions": [
+    {
+      "Name": "AddTags",
+      "Resources": [
+        {
+          "Name": "batchprediction"
+        },
+        {
+          "Name": "datasource"
+        },
+        {
+          "Name": "evaluation"
+        },
+        {
+          "Name": "mlmodel"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBatchPrediction",
+      "Resources": [
+        {
+          "Name": "batchprediction"
+        },
+        {
+          "Name": "datasource"
+        },
+        {
+          "Name": "mlmodel"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataSourceFromRDS",
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataSourceFromRedshift",
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataSourceFromS3",
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEvaluation",
+      "Resources": [
+        {
+          "Name": "datasource"
+        },
+        {
+          "Name": "evaluation"
+        },
+        {
+          "Name": "mlmodel"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMLModel",
+      "Resources": [
+        {
+          "Name": "datasource"
+        },
+        {
+          "Name": "mlmodel"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRealtimeEndpoint",
+      "Resources": [
+        {
+          "Name": "mlmodel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBatchPrediction",
+      "Resources": [
+        {
+          "Name": "batchprediction"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataSource",
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEvaluation",
+      "Resources": [
+        {
+          "Name": "evaluation"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMLModel",
+      "Resources": [
+        {
+          "Name": "mlmodel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRealtimeEndpoint",
+      "Resources": [
+        {
+          "Name": "mlmodel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTags",
+      "Resources": [
+        {
+          "Name": "batchprediction"
+        },
+        {
+          "Name": "datasource"
+        },
+        {
+          "Name": "evaluation"
+        },
+        {
+          "Name": "mlmodel"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeBatchPredictions"
+    },
+    {
+      "Name": "DescribeDataSources"
+    },
+    {
+      "Name": "DescribeEvaluations"
+    },
+    {
+      "Name": "DescribeMLModels"
+    },
+    {
+      "Name": "DescribeTags",
+      "Resources": [
+        {
+          "Name": "batchprediction"
+        },
+        {
+          "Name": "datasource"
+        },
+        {
+          "Name": "evaluation"
+        },
+        {
+          "Name": "mlmodel"
+        }
+      ]
+    },
+    {
+      "Name": "GetBatchPrediction",
+      "Resources": [
+        {
+          "Name": "batchprediction"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataSource",
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "GetEvaluation",
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "GetMLModel",
+      "Resources": [
+        {
+          "Name": "mlmodel"
+        }
+      ]
+    },
+    {
+      "Name": "Predict",
+      "Resources": [
+        {
+          "Name": "mlmodel"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBatchPrediction",
+      "Resources": [
+        {
+          "Name": "batchprediction"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataSource",
+      "Resources": [
+        {
+          "Name": "datasource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEvaluation",
+      "Resources": [
+        {
+          "Name": "evaluation"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMLModel",
+      "Resources": [
+        {
+          "Name": "mlmodel"
+        }
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "batchprediction",
+      "ARNFormats": [
+        "arn:${Partition}:machinelearning:${Region}:${Account}:batchprediction/${BatchPredictionId}"
+      ]
+    },
+    {
+      "Name": "datasource",
+      "ARNFormats": [
+        "arn:${Partition}:machinelearning:${Region}:${Account}:datasource/${DatasourceId}"
+      ]
+    },
+    {
+      "Name": "evaluation",
+      "ARNFormats": [
+        "arn:${Partition}:machinelearning:${Region}:${Account}:evaluation/${EvaluationId}"
+      ]
+    },
+    {
+      "Name": "mlmodel",
+      "ARNFormats": [
+        "arn:${Partition}:machinelearning:${Region}:${Account}:mlmodel/${MlModelId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

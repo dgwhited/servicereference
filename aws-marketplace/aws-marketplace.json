@@ -1,0 +1,392 @@
+{
+  "Name": "aws-marketplace",
+  "Actions": [
+    {
+      "Name": "AcceptAgreementApprovalRequest"
+    },
+    {
+      "Name": "AcceptAgreementRequest"
+    },
+    {
+      "Name": "AssociateProductsWithPrivateMarketplace"
+    },
+    {
+      "Name": "BatchMeterUsage"
+    },
+    {
+      "Name": "CancelAgreement"
+    },
+    {
+      "Name": "CancelAgreementRequest"
+    },
+    {
+      "Name": "CancelChangeSet",
+      "Resources": [
+        {
+          "Name": "ChangeSet"
+        }
+      ]
+    },
+    {
+      "Name": "CompleteTask"
+    },
+    {
+      "Name": "CreateAgreementRequest"
+    },
+    {
+      "Name": "CreatePrivateMarketplaceRequests"
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Resources": [
+        {
+          "Name": "Entity"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAgreement"
+    },
+    {
+      "Name": "DescribeAssessment"
+    },
+    {
+      "Name": "DescribeBuilds"
+    },
+    {
+      "Name": "DescribeChangeSet",
+      "Resources": [
+        {
+          "Name": "ChangeSet"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEntity",
+      "Resources": [
+        {
+          "Name": "Entity"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePrivateMarketplaceRequests"
+    },
+    {
+      "Name": "DescribeProcurementSystemConfiguration"
+    },
+    {
+      "Name": "DescribeTask"
+    },
+    {
+      "Name": "DisassociateProductsFromPrivateMarketplace"
+    },
+    {
+      "Name": "GetAgreementApprovalRequest"
+    },
+    {
+      "Name": "GetAgreementRequest"
+    },
+    {
+      "Name": "GetAgreementTerms"
+    },
+    {
+      "Name": "GetBuyerDashboard",
+      "Resources": [
+        {
+          "Name": "Dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "GetEntitlements"
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "Resources": [
+        {
+          "Name": "Entity"
+        }
+      ]
+    },
+    {
+      "Name": "GetSellerDashboard",
+      "Resources": [
+        {
+          "Name": "SellerDashboard"
+        }
+      ]
+    },
+    {
+      "Name": "ListAgreementApprovalRequests"
+    },
+    {
+      "Name": "ListAgreementCharges"
+    },
+    {
+      "Name": "ListAgreementRequests"
+    },
+    {
+      "Name": "ListAssessments"
+    },
+    {
+      "Name": "ListBuilds"
+    },
+    {
+      "Name": "ListChangeSets"
+    },
+    {
+      "Name": "ListEntities"
+    },
+    {
+      "Name": "ListEntitlementDetails"
+    },
+    {
+      "Name": "ListPrivateListings"
+    },
+    {
+      "Name": "ListPrivateMarketplaceRequests"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "ChangeSet"
+        },
+        {
+          "Name": "DeploymentParameter"
+        },
+        {
+          "Name": "Entity"
+        }
+      ],
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ListTasks"
+    },
+    {
+      "Name": "MeterUsage"
+    },
+    {
+      "Name": "PutDeploymentParameter",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "DeploymentParameter",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "PutProcurementSystemConfiguration"
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "Resources": [
+        {
+          "Name": "Entity"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterUsage"
+    },
+    {
+      "Name": "RejectAgreementApprovalRequest"
+    },
+    {
+      "Name": "ResolveCustomer"
+    },
+    {
+      "Name": "SearchAgreements"
+    },
+    {
+      "Name": "StartBuild"
+    },
+    {
+      "Name": "StartChangeSet",
+      "ActionConditionKeys": [
+        "aws-marketplace:Intent",
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "catalog:ChangeType"
+      ],
+      "Resources": [
+        {
+          "Name": "Entity"
+        }
+      ]
+    },
+    {
+      "Name": "Subscribe"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ChangeSet"
+        },
+        {
+          "Name": "DeploymentParameter",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
+        {
+          "Name": "Entity"
+        }
+      ]
+    },
+    {
+      "Name": "Unsubscribe"
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ChangeSet"
+        },
+        {
+          "Name": "DeploymentParameter",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
+        {
+          "Name": "Entity"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgreementApprovalRequest"
+    },
+    {
+      "Name": "UpdatePurchaseOrders"
+    },
+    {
+      "Name": "UpdateTask"
+    },
+    {
+      "Name": "ViewSubscriptions"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws-marketplace:AgreementType",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "aws-marketplace:Intent",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws-marketplace:PartyType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws-marketplace:ProductId",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "catalog:ChangeType",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Version": "v1.1",
+  "Resources": [
+    {
+      "Name": "ChangeSet",
+      "ARNFormats": [
+        "arn:${Partition}:aws-marketplace:${Region}:${Account}:${Catalog}/ChangeSet/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "catalog:ChangeType"
+      ]
+    },
+    {
+      "Name": "Dashboard",
+      "ARNFormats": [
+        "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/Dashboard/${DashboardName}"
+      ]
+    },
+    {
+      "Name": "DeploymentParameter",
+      "ARNFormats": [
+        "arn:${Partition}:aws-marketplace:${Region}:${Account}:DeploymentParameter:catalogs/${CatalogName}/products/${ProductId}/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "Entity",
+      "ARNFormats": [
+        "arn:${Partition}:aws-marketplace:${Region}:${Account}:${Catalog}/${EntityType}/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "catalog:ChangeType"
+      ]
+    },
+    {
+      "Name": "SellerDashboard",
+      "ARNFormats": [
+        "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/Dashboard/${DashboardName}"
+      ]
+    }
+  ]
+}

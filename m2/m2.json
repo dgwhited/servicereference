@@ -1,0 +1,307 @@
+{
+  "Name": "m2",
+  "Actions": [
+    {
+      "Name": "CancelBatchJobExecution",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "CreateApplication",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateDataSetImportTask",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDeployment",
+      "Resources": [
+        {
+          "Name": "Application"
+        },
+        {
+          "Name": "Environment"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEnvironment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteApplication",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApplicationFromEnvironment",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEnvironment",
+      "Resources": [
+        {
+          "Name": "Environment"
+        }
+      ]
+    },
+    {
+      "Name": "GetApplication",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "GetApplicationVersion",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "GetBatchJobExecution",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataSetDetails",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataSetImportTask",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeployment",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "GetEnvironment",
+      "Resources": [
+        {
+          "Name": "Environment"
+        }
+      ]
+    },
+    {
+      "Name": "GetSignedBluinsightsUrl"
+    },
+    {
+      "Name": "ListApplicationVersions",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplications"
+    },
+    {
+      "Name": "ListBatchJobDefinitions",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "ListBatchJobExecutions",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "ListBatchJobRestartPoints",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataSetImportHistory",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataSets",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeployments",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "ListEngineVersions"
+    },
+    {
+      "Name": "ListEnvironments"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "StartApplication",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "StartBatchJob",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "StopApplication",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        },
+        {
+          "Name": "Environment"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        },
+        {
+          "Name": "Environment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateApplication",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEnvironment",
+      "Resources": [
+        {
+          "Name": "Environment"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Application",
+      "ARNFormats": [
+        "arn:${Partition}:m2:${Region}:${Account}:app/${ApplicationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Environment",
+      "ARNFormats": [
+        "arn:${Partition}:m2:${Region}:${Account}:env/${EnvironmentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

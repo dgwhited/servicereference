@@ -1,0 +1,857 @@
+{
+  "Name": "drs",
+  "Actions": [
+    {
+      "Name": "AssociateFailbackClientToRecoveryInstanceForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateSourceNetworkStack",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "SourceNetworkResource"
+        }
+      ]
+    },
+    {
+      "Name": "BatchCreateVolumeSnapshotGroupForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDeleteSnapshotRequestForDrs"
+    },
+    {
+      "Name": "CreateConvertedSnapshotForDrs",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "CreateExtendedSourceServer",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateLaunchConfigurationTemplate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateRecoveryInstanceForDrs",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "CreateReplicationConfigurationTemplate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateSourceNetwork",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateSourceServerForDrs",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteJob",
+      "Resources": [
+        {
+          "Name": "JobResource"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLaunchAction",
+      "Resources": [
+        {
+          "Name": "LaunchConfigurationTemplateResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLaunchConfigurationTemplate",
+      "Resources": [
+        {
+          "Name": "LaunchConfigurationTemplateResource"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRecoveryInstance",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteReplicationConfigurationTemplate",
+      "Resources": [
+        {
+          "Name": "ReplicationConfigurationTemplateResource"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSourceNetwork",
+      "Resources": [
+        {
+          "Name": "SourceNetworkResource"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSourceServer",
+      "Resources": [
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeJobLogItems",
+      "Resources": [
+        {
+          "Name": "JobResource"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeJobs"
+    },
+    {
+      "Name": "DescribeLaunchConfigurationTemplates"
+    },
+    {
+      "Name": "DescribeRecoveryInstances"
+    },
+    {
+      "Name": "DescribeRecoverySnapshots",
+      "Resources": [
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeReplicationConfigurationTemplates"
+    },
+    {
+      "Name": "DescribeReplicationServerAssociationsForDrs"
+    },
+    {
+      "Name": "DescribeSnapshotRequestsForDrs"
+    },
+    {
+      "Name": "DescribeSourceNetworks"
+    },
+    {
+      "Name": "DescribeSourceServers"
+    },
+    {
+      "Name": "DisconnectRecoveryInstance",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        }
+      ]
+    },
+    {
+      "Name": "DisconnectSourceServer",
+      "Resources": [
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "ExportSourceNetworkCfnTemplate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "SourceNetworkResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetAgentCommandForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetAgentConfirmedResumeInfoForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetAgentInstallationAssetsForDrs"
+    },
+    {
+      "Name": "GetAgentReplicationInfoForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetAgentRuntimeConfigurationForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetAgentSnapshotCreditsForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetChannelCommandsForDrs"
+    },
+    {
+      "Name": "GetFailbackCommandForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetFailbackLaunchRequestedForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetFailbackReplicationConfiguration",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetLaunchConfiguration",
+      "Resources": [
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetReplicationConfiguration",
+      "Resources": [
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetSuggestedFailbackClientDeviceMappingForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        }
+      ]
+    },
+    {
+      "Name": "InitializeService"
+    },
+    {
+      "Name": "IssueAgentCertificateForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "ListExtensibleSourceServers"
+    },
+    {
+      "Name": "ListLaunchActions",
+      "Resources": [
+        {
+          "Name": "LaunchConfigurationTemplateResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "ListStagingAccounts"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "NotifyAgentAuthenticationForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "NotifyAgentConnectedForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "NotifyAgentDisconnectedForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "NotifyAgentReplicationProgressForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "NotifyConsistencyAttainedForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        }
+      ]
+    },
+    {
+      "Name": "NotifyReplicationServerAuthenticationForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        }
+      ]
+    },
+    {
+      "Name": "NotifyVolumeEventForDrs",
+      "Resources": [
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "PutLaunchAction",
+      "Resources": [
+        {
+          "Name": "LaunchConfigurationTemplateResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "RetryDataReplication",
+      "Resources": [
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "ReverseReplication",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        }
+      ]
+    },
+    {
+      "Name": "SendAgentLogsForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "SendAgentMetricsForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "SendChannelCommandResultForDrs"
+    },
+    {
+      "Name": "SendClientLogsForDrs"
+    },
+    {
+      "Name": "SendClientMetricsForDrs"
+    },
+    {
+      "Name": "SendVolumeStatsForDrs",
+      "Resources": [
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "StartFailbackLaunch",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        }
+      ]
+    },
+    {
+      "Name": "StartRecovery",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "StartReplication",
+      "Resources": [
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "StartSourceNetworkRecovery",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "SourceNetworkResource"
+        }
+      ]
+    },
+    {
+      "Name": "StartSourceNetworkReplication",
+      "Resources": [
+        {
+          "Name": "SourceNetworkResource"
+        }
+      ]
+    },
+    {
+      "Name": "StopFailback",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        }
+      ]
+    },
+    {
+      "Name": "StopReplication",
+      "Resources": [
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "StopSourceNetworkReplication",
+      "Resources": [
+        {
+          "Name": "SourceNetworkResource"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "drs:CreateAction"
+      ],
+      "Resources": [
+        {
+          "Name": "JobResource"
+        },
+        {
+          "Name": "LaunchConfigurationTemplateResource"
+        },
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "ReplicationConfigurationTemplateResource"
+        },
+        {
+          "Name": "SourceNetworkResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "TerminateRecoveryInstances",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "JobResource"
+        },
+        {
+          "Name": "LaunchConfigurationTemplateResource"
+        },
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "ReplicationConfigurationTemplateResource"
+        },
+        {
+          "Name": "SourceNetworkResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgentBacklogForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgentConversionInfoForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgentReplicationInfoForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgentReplicationProcessStateForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgentSourcePropertiesForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        },
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFailbackClientDeviceMappingForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFailbackClientLastSeenForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFailbackReplicationConfiguration",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLaunchConfiguration",
+      "Resources": [
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLaunchConfigurationTemplate",
+      "Resources": [
+        {
+          "Name": "LaunchConfigurationTemplateResource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateReplicationCertificateForDrs",
+      "Resources": [
+        {
+          "Name": "RecoveryInstanceResource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateReplicationConfiguration",
+      "Resources": [
+        {
+          "Name": "SourceServerResource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateReplicationConfigurationTemplate",
+      "Resources": [
+        {
+          "Name": "ReplicationConfigurationTemplateResource"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "drs:CreateAction",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "drs:EC2InstanceARN",
+      "Types": [
+        "ARN"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "JobResource",
+      "ARNFormats": [
+        "arn:${Partition}:drs:${Region}:${Account}:job/${JobID}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "LaunchConfigurationTemplateResource",
+      "ARNFormats": [
+        "arn:${Partition}:drs:${Region}:${Account}:launch-configuration-template/${LaunchConfigurationTemplateID}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "RecoveryInstanceResource",
+      "ARNFormats": [
+        "arn:${Partition}:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "drs:EC2InstanceARN"
+      ]
+    },
+    {
+      "Name": "ReplicationConfigurationTemplateResource",
+      "ARNFormats": [
+        "arn:${Partition}:drs:${Region}:${Account}:replication-configuration-template/${ReplicationConfigurationTemplateID}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "SourceNetworkResource",
+      "ARNFormats": [
+        "arn:${Partition}:drs:${Region}:${Account}:source-network/${SourceNetworkID}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "SourceServerResource",
+      "ARNFormats": [
+        "arn:${Partition}:drs:${Region}:${Account}:source-server/${SourceServerID}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

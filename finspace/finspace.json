@@ -1,0 +1,692 @@
+{
+  "Name": "finspace",
+  "Actions": [
+    {
+      "Name": "ConnectKxCluster",
+      "Resources": [
+        {
+          "Name": "kxCluster"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEnvironment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "CreateKxChangeset",
+      "Resources": [
+        {
+          "Name": "kxDatabase"
+        }
+      ]
+    },
+    {
+      "Name": "CreateKxCluster",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "kxCluster"
+        }
+      ]
+    },
+    {
+      "Name": "CreateKxDatabase",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "kxDatabase"
+        }
+      ]
+    },
+    {
+      "Name": "CreateKxDataview",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "kxDataview"
+        }
+      ]
+    },
+    {
+      "Name": "CreateKxEnvironment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateKxScalingGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "kxScalingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "CreateKxUser",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "kxEnvironment"
+        }
+      ]
+    },
+    {
+      "Name": "CreateKxVolume",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "kxVolume"
+        }
+      ]
+    },
+    {
+      "Name": "CreateUser",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEnvironment",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteKxCluster",
+      "Resources": [
+        {
+          "Name": "kxCluster"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteKxClusterNode",
+      "Resources": [
+        {
+          "Name": "kxCluster"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteKxDatabase",
+      "Resources": [
+        {
+          "Name": "kxDatabase"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteKxDataview",
+      "Resources": [
+        {
+          "Name": "kxDataview"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteKxEnvironment",
+      "Resources": [
+        {
+          "Name": "kxEnvironment"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteKxScalingGroup",
+      "Resources": [
+        {
+          "Name": "kxScalingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteKxUser",
+      "Resources": [
+        {
+          "Name": "kxUser"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteKxVolume",
+      "Resources": [
+        {
+          "Name": "kxVolume"
+        }
+      ]
+    },
+    {
+      "Name": "GetEnvironment",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "GetKxChangeset",
+      "Resources": [
+        {
+          "Name": "kxDatabase"
+        }
+      ]
+    },
+    {
+      "Name": "GetKxCluster",
+      "Resources": [
+        {
+          "Name": "kxCluster"
+        }
+      ]
+    },
+    {
+      "Name": "GetKxConnectionString",
+      "Resources": [
+        {
+          "Name": "kxCluster"
+        }
+      ]
+    },
+    {
+      "Name": "GetKxDatabase",
+      "Resources": [
+        {
+          "Name": "kxDatabase"
+        }
+      ]
+    },
+    {
+      "Name": "GetKxDataview",
+      "Resources": [
+        {
+          "Name": "kxDataview"
+        }
+      ]
+    },
+    {
+      "Name": "GetKxEnvironment",
+      "Resources": [
+        {
+          "Name": "kxEnvironment"
+        }
+      ]
+    },
+    {
+      "Name": "GetKxScalingGroup",
+      "Resources": [
+        {
+          "Name": "kxScalingGroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetKxUser",
+      "Resources": [
+        {
+          "Name": "kxUser"
+        }
+      ]
+    },
+    {
+      "Name": "GetKxVolume",
+      "Resources": [
+        {
+          "Name": "kxVolume"
+        }
+      ]
+    },
+    {
+      "Name": "GetLoadSampleDataSetGroupIntoEnvironmentStatus",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "GetUser",
+      "Resources": [
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "ListEnvironments",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "ListKxChangesets",
+      "Resources": [
+        {
+          "Name": "kxDatabase"
+        }
+      ]
+    },
+    {
+      "Name": "ListKxClusterNodes",
+      "Resources": [
+        {
+          "Name": "kxCluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListKxClusters",
+      "Resources": [
+        {
+          "Name": "kxEnvironment"
+        }
+      ]
+    },
+    {
+      "Name": "ListKxDatabases",
+      "Resources": [
+        {
+          "Name": "kxEnvironment"
+        }
+      ]
+    },
+    {
+      "Name": "ListKxDataviews",
+      "Resources": [
+        {
+          "Name": "kxDatabase"
+        }
+      ]
+    },
+    {
+      "Name": "ListKxEnvironments"
+    },
+    {
+      "Name": "ListKxScalingGroups",
+      "Resources": [
+        {
+          "Name": "kxEnvironment"
+        }
+      ]
+    },
+    {
+      "Name": "ListKxUsers",
+      "Resources": [
+        {
+          "Name": "kxEnvironment"
+        }
+      ]
+    },
+    {
+      "Name": "ListKxVolumes",
+      "Resources": [
+        {
+          "Name": "kxEnvironment"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "kxCluster"
+        },
+        {
+          "Name": "kxDatabase"
+        },
+        {
+          "Name": "kxDataview"
+        },
+        {
+          "Name": "kxEnvironment"
+        },
+        {
+          "Name": "kxScalingGroup"
+        },
+        {
+          "Name": "kxUser"
+        },
+        {
+          "Name": "kxVolume"
+        }
+      ]
+    },
+    {
+      "Name": "ListUsers",
+      "Resources": [
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "LoadSampleDataSetGroupIntoEnvironment",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "MountKxDatabase",
+      "Resources": [
+        {
+          "Name": "kxDatabase"
+        }
+      ]
+    },
+    {
+      "Name": "ResetUserPassword",
+      "Resources": [
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "kxCluster"
+        },
+        {
+          "Name": "kxDatabase"
+        },
+        {
+          "Name": "kxDataview"
+        },
+        {
+          "Name": "kxEnvironment"
+        },
+        {
+          "Name": "kxScalingGroup"
+        },
+        {
+          "Name": "kxUser"
+        },
+        {
+          "Name": "kxVolume"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "kxCluster"
+        },
+        {
+          "Name": "kxDatabase"
+        },
+        {
+          "Name": "kxDataview"
+        },
+        {
+          "Name": "kxEnvironment"
+        },
+        {
+          "Name": "kxScalingGroup"
+        },
+        {
+          "Name": "kxUser"
+        },
+        {
+          "Name": "kxVolume"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEnvironment",
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateKxClusterCodeConfiguration",
+      "Resources": [
+        {
+          "Name": "kxCluster"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateKxClusterDatabases",
+      "Resources": [
+        {
+          "Name": "kxCluster"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateKxDatabase",
+      "Resources": [
+        {
+          "Name": "kxDatabase"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateKxDataview",
+      "Resources": [
+        {
+          "Name": "kxDataview"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateKxEnvironment",
+      "Resources": [
+        {
+          "Name": "kxEnvironment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateKxEnvironmentNetwork",
+      "Resources": [
+        {
+          "Name": "kxEnvironment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateKxUser",
+      "Resources": [
+        {
+          "Name": "kxUser"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateKxVolume",
+      "Resources": [
+        {
+          "Name": "kxVolume"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateUser",
+      "Resources": [
+        {
+          "Name": "environment"
+        },
+        {
+          "Name": "user"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "environment",
+      "ARNFormats": [
+        "arn:${Partition}:finspace:${Region}:${Account}:environment/${EnvironmentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "kxCluster",
+      "ARNFormats": [
+        "arn:${Partition}:finspace:${Region}:${Account}:kxEnvironment/${EnvironmentId}/kxCluster/${KxCluster}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "kxDatabase",
+      "ARNFormats": [
+        "arn:${Partition}:finspace:${Region}:${Account}:kxEnvironment/${EnvironmentId}/kxDatabase/${KxDatabase}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "kxDataview",
+      "ARNFormats": [
+        "arn:${Partition}:finspace:${Region}:${Account}:kxEnvironment/${EnvironmentId}/kxDatabase/${KxDatabase}/kxDataview/${KxDataview}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "kxEnvironment",
+      "ARNFormats": [
+        "arn:${Partition}:finspace:${Region}:${Account}:kxEnvironment/${EnvironmentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "kxScalingGroup",
+      "ARNFormats": [
+        "arn:${Partition}:finspace:${Region}:${Account}:kxEnvironment/${EnvironmentId}/kxScalingGroup/${KxScalingGroup}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "kxUser",
+      "ARNFormats": [
+        "arn:${Partition}:finspace:${Region}:${Account}:kxEnvironment/${EnvironmentId}/kxUser/${UserName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "kxVolume",
+      "ARNFormats": [
+        "arn:${Partition}:finspace:${Region}:${Account}:kxEnvironment/${EnvironmentId}/kxVolume/${KxVolume}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "user",
+      "ARNFormats": [
+        "arn:${Partition}:finspace:${Region}:${Account}:user/${UserId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

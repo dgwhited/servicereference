@@ -1,0 +1,139 @@
+{
+  "Name": "firehose",
+  "Actions": [
+    {
+      "Name": "CreateDeliveryStream",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "deliverystream"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeliveryStream",
+      "Resources": [
+        {
+          "Name": "deliverystream"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDeliveryStream",
+      "Resources": [
+        {
+          "Name": "deliverystream"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeliveryStreams"
+    },
+    {
+      "Name": "ListTagsForDeliveryStream",
+      "Resources": [
+        {
+          "Name": "deliverystream"
+        }
+      ]
+    },
+    {
+      "Name": "PutRecord",
+      "Resources": [
+        {
+          "Name": "deliverystream"
+        }
+      ]
+    },
+    {
+      "Name": "PutRecordBatch",
+      "Resources": [
+        {
+          "Name": "deliverystream"
+        }
+      ]
+    },
+    {
+      "Name": "StartDeliveryStreamEncryption",
+      "Resources": [
+        {
+          "Name": "deliverystream"
+        }
+      ]
+    },
+    {
+      "Name": "StopDeliveryStreamEncryption",
+      "Resources": [
+        {
+          "Name": "deliverystream"
+        }
+      ]
+    },
+    {
+      "Name": "TagDeliveryStream",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "deliverystream"
+        }
+      ]
+    },
+    {
+      "Name": "UntagDeliveryStream",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "deliverystream"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDestination",
+      "Resources": [
+        {
+          "Name": "deliverystream"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "deliverystream",
+      "ARNFormats": [
+        "arn:${Partition}:firehose:${Region}:${Account}:deliverystream/${DeliveryStreamName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

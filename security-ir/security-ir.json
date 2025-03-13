@@ -1,0 +1,232 @@
+{
+  "Name": "security-ir",
+  "Actions": [
+    {
+      "Name": "BatchGetMemberAccountDetails",
+      "Resources": [
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "CancelMembership",
+      "Resources": [
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "CloseCase",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCase",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateCaseComment",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMembership",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "GetCase",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "GetCaseAttachmentDownloadUrl",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "GetCaseAttachmentUploadUrl",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "GetMembership",
+      "Resources": [
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "ListCaseEdits",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "ListCases"
+    },
+    {
+      "Name": "ListComments",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "ListMemberships"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "case"
+        },
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "case"
+        },
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "case"
+        },
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCase",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCaseComment",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCaseStatus",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMembership",
+      "Resources": [
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateResolverType",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "case",
+      "ARNFormats": [
+        "arn:${Partition}:security-ir:${Region}:${Account}:case/${CaseId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "membership",
+      "ARNFormats": [
+        "arn:${Partition}:security-ir:${Region}:${Account}:membership/${MembershipId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

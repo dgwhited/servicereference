@@ -1,0 +1,1018 @@
+{
+  "Name": "cleanrooms",
+  "Actions": [
+    {
+      "Name": "BatchGetCollaborationAnalysisTemplate",
+      "Resources": [
+        {
+          "Name": "analysistemplate"
+        },
+        {
+          "Name": "collaboration"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetSchema",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        },
+        {
+          "Name": "configuredtableassociation"
+        },
+        {
+          "Name": "idmappingtable"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetSchemaAnalysisRule",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        },
+        {
+          "Name": "configuredtableassociation"
+        },
+        {
+          "Name": "idmappingtable"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAnalysisTemplate",
+      "Resources": [
+        {
+          "Name": "analysistemplate",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
+        {
+          "Name": "membership",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreateCollaboration",
+      "Resources": [
+        {
+          "Name": "collaboration",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreateConfiguredAudienceModelAssociation",
+      "Resources": [
+        {
+          "Name": "configuredaudiencemodelassociation",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
+        {
+          "Name": "membership",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreateConfiguredTable",
+      "Resources": [
+        {
+          "Name": "configuredtable",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreateConfiguredTableAnalysisRule",
+      "Resources": [
+        {
+          "Name": "configuredtable"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConfiguredTableAssociation",
+      "Resources": [
+        {
+          "Name": "configuredtable",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
+        {
+          "Name": "configuredtableassociation",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
+        {
+          "Name": "membership",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreateConfiguredTableAssociationAnalysisRule",
+      "Resources": [
+        {
+          "Name": "configuredtableassociation",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreateIdMappingTable",
+      "Resources": [
+        {
+          "Name": "idmappingtable",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
+        {
+          "Name": "membership",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreateIdNamespaceAssociation",
+      "Resources": [
+        {
+          "Name": "idnamespaceassociation",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
+        {
+          "Name": "membership",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreateMembership",
+      "Resources": [
+        {
+          "Name": "collaboration",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
+        {
+          "Name": "membership",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreatePrivacyBudgetTemplate",
+      "Resources": [
+        {
+          "Name": "membership",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
+        {
+          "Name": "privacybudgettemplate",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAnalysisTemplate",
+      "Resources": [
+        {
+          "Name": "analysistemplate"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCollaboration",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfiguredAudienceModelAssociation",
+      "Resources": [
+        {
+          "Name": "configuredaudiencemodelassociation"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfiguredTable",
+      "Resources": [
+        {
+          "Name": "configuredtable"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfiguredTableAnalysisRule",
+      "Resources": [
+        {
+          "Name": "configuredtable"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfiguredTableAssociation",
+      "Resources": [
+        {
+          "Name": "configuredtableassociation"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfiguredTableAssociationAnalysisRule",
+      "Resources": [
+        {
+          "Name": "configuredtableassociation"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIdMappingTable",
+      "Resources": [
+        {
+          "Name": "idmappingtable"
+        },
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIdNamespaceAssociation",
+      "Resources": [
+        {
+          "Name": "idnamespaceassociation"
+        },
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMember",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMembership",
+      "Resources": [
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePrivacyBudgetTemplate",
+      "Resources": [
+        {
+          "Name": "privacybudgettemplate"
+        }
+      ]
+    },
+    {
+      "Name": "GetAnalysisTemplate",
+      "Resources": [
+        {
+          "Name": "analysistemplate"
+        }
+      ]
+    },
+    {
+      "Name": "GetCollaboration",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        }
+      ]
+    },
+    {
+      "Name": "GetCollaborationAnalysisTemplate",
+      "Resources": [
+        {
+          "Name": "analysistemplate"
+        },
+        {
+          "Name": "collaboration"
+        }
+      ]
+    },
+    {
+      "Name": "GetCollaborationConfiguredAudienceModelAssociation",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        },
+        {
+          "Name": "configuredaudiencemodelassociation"
+        }
+      ]
+    },
+    {
+      "Name": "GetCollaborationIdNamespaceAssociation",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        },
+        {
+          "Name": "idnamespaceassociation"
+        }
+      ]
+    },
+    {
+      "Name": "GetCollaborationPrivacyBudgetTemplate",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        },
+        {
+          "Name": "privacybudgettemplate"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfiguredAudienceModelAssociation",
+      "Resources": [
+        {
+          "Name": "configuredaudiencemodelassociation"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfiguredTable",
+      "Resources": [
+        {
+          "Name": "configuredtable"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfiguredTableAnalysisRule",
+      "Resources": [
+        {
+          "Name": "configuredtable"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfiguredTableAssociation",
+      "Resources": [
+        {
+          "Name": "configuredtableassociation"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfiguredTableAssociationAnalysisRule",
+      "Resources": [
+        {
+          "Name": "configuredtableassociation"
+        }
+      ]
+    },
+    {
+      "Name": "GetIdMappingTable",
+      "Resources": [
+        {
+          "Name": "idmappingtable"
+        },
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "GetIdNamespaceAssociation",
+      "Resources": [
+        {
+          "Name": "idnamespaceassociation"
+        },
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "GetMembership",
+      "Resources": [
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "GetPrivacyBudgetTemplate",
+      "Resources": [
+        {
+          "Name": "privacybudgettemplate"
+        }
+      ]
+    },
+    {
+      "Name": "GetProtectedQuery",
+      "Resources": [
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "GetSchema",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        },
+        {
+          "Name": "configuredtableassociation"
+        }
+      ]
+    },
+    {
+      "Name": "GetSchemaAnalysisRule",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        },
+        {
+          "Name": "configuredtableassociation"
+        }
+      ]
+    },
+    {
+      "Name": "ListAnalysisTemplates",
+      "Resources": [
+        {
+          "Name": "analysistemplate"
+        },
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "ListCollaborationAnalysisTemplates",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        }
+      ]
+    },
+    {
+      "Name": "ListCollaborationConfiguredAudienceModelAssociations",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        }
+      ]
+    },
+    {
+      "Name": "ListCollaborationIdNamespaceAssociations",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        }
+      ]
+    },
+    {
+      "Name": "ListCollaborationPrivacyBudgetTemplates",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        }
+      ]
+    },
+    {
+      "Name": "ListCollaborationPrivacyBudgets",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        }
+      ]
+    },
+    {
+      "Name": "ListCollaborations"
+    },
+    {
+      "Name": "ListConfiguredAudienceModelAssociations",
+      "Resources": [
+        {
+          "Name": "configuredaudiencemodelassociation"
+        },
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "ListConfiguredTableAssociations",
+      "Resources": [
+        {
+          "Name": "configuredtableassociation"
+        },
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "ListConfiguredTables"
+    },
+    {
+      "Name": "ListIdMappingTables",
+      "Resources": [
+        {
+          "Name": "idmappingtable"
+        },
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "ListIdNamespaceAssociations",
+      "Resources": [
+        {
+          "Name": "idnamespaceassociation"
+        },
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "ListMembers",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        }
+      ]
+    },
+    {
+      "Name": "ListMemberships"
+    },
+    {
+      "Name": "ListPrivacyBudgetTemplates",
+      "Resources": [
+        {
+          "Name": "membership"
+        },
+        {
+          "Name": "privacybudgettemplate"
+        }
+      ]
+    },
+    {
+      "Name": "ListPrivacyBudgets",
+      "Resources": [
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "ListProtectedQueries",
+      "Resources": [
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "ListSchemas",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "analysistemplate"
+        },
+        {
+          "Name": "collaboration"
+        },
+        {
+          "Name": "configuredaudiencemodelassociation"
+        },
+        {
+          "Name": "configuredtable"
+        },
+        {
+          "Name": "configuredtableassociation"
+        },
+        {
+          "Name": "membership"
+        },
+        {
+          "Name": "privacybudgettemplate"
+        }
+      ]
+    },
+    {
+      "Name": "PassCollaboration",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        }
+      ]
+    },
+    {
+      "Name": "PassMembership",
+      "Resources": [
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "PopulateIdMappingTable",
+      "Resources": [
+        {
+          "Name": "idmappingtable"
+        },
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "PreviewPrivacyImpact",
+      "Resources": [
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "StartProtectedQuery",
+      "Resources": [
+        {
+          "Name": "analysistemplate"
+        },
+        {
+          "Name": "configuredtableassociation"
+        },
+        {
+          "Name": "idmappingtable"
+        },
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "analysistemplate"
+        },
+        {
+          "Name": "collaboration"
+        },
+        {
+          "Name": "configuredaudiencemodelassociation"
+        },
+        {
+          "Name": "configuredtable"
+        },
+        {
+          "Name": "configuredtableassociation"
+        },
+        {
+          "Name": "idmappingtable"
+        },
+        {
+          "Name": "idnamespaceassociation"
+        },
+        {
+          "Name": "membership"
+        },
+        {
+          "Name": "privacybudgettemplate"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "analysistemplate"
+        },
+        {
+          "Name": "collaboration"
+        },
+        {
+          "Name": "configuredaudiencemodelassociation"
+        },
+        {
+          "Name": "configuredtable"
+        },
+        {
+          "Name": "configuredtableassociation"
+        },
+        {
+          "Name": "idmappingtable"
+        },
+        {
+          "Name": "idnamespaceassociation"
+        },
+        {
+          "Name": "membership"
+        },
+        {
+          "Name": "privacybudgettemplate"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAnalysisTemplate",
+      "Resources": [
+        {
+          "Name": "analysistemplate"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCollaboration",
+      "Resources": [
+        {
+          "Name": "collaboration"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConfiguredAudienceModelAssociation",
+      "Resources": [
+        {
+          "Name": "configuredaudiencemodelassociation"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConfiguredTable",
+      "Resources": [
+        {
+          "Name": "configuredtable"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConfiguredTableAnalysisRule",
+      "Resources": [
+        {
+          "Name": "configuredtable"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConfiguredTableAssociation",
+      "Resources": [
+        {
+          "Name": "configuredtableassociation"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConfiguredTableAssociationAnalysisRule",
+      "Resources": [
+        {
+          "Name": "configuredtableassociation"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIdMappingTable",
+      "Resources": [
+        {
+          "Name": "idmappingtable"
+        },
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIdNamespaceAssociation",
+      "Resources": [
+        {
+          "Name": "idnamespaceassociation"
+        },
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMembership",
+      "Resources": [
+        {
+          "Name": "membership"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePrivacyBudgetTemplate",
+      "Resources": [
+        {
+          "Name": "privacybudgettemplate"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProtectedQuery",
+      "Resources": [
+        {
+          "Name": "membership"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "analysistemplate",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}/analysistemplate/${AnalysisTemplateId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "collaboration",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms:${Region}:${Account}:collaboration/${CollaborationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "configuredaudiencemodelassociation",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}/configuredaudiencemodelassociation/${ConfiguredAudienceModelAssociationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "configuredtable",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms:${Region}:${Account}:configuredtable/${ConfiguredTableId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "configuredtableassociation",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}/configuredtableassociation/${ConfiguredTableAssociationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "idmappingtable",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}/idmappingtable/${IdMappingTableId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "idnamespaceassociation",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}/idnamespaceassociation/${IdNamespaceAssociationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "membership",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "privacybudgettemplate",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}/privacybudgettemplate/${PrivacyBudgetTemplateId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

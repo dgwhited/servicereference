@@ -1,0 +1,487 @@
+{
+  "Name": "guardduty",
+  "Actions": [
+    {
+      "Name": "AcceptAdministratorInvitation"
+    },
+    {
+      "Name": "AcceptInvitation"
+    },
+    {
+      "Name": "ArchiveFindings"
+    },
+    {
+      "Name": "CreateDetector",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateFilter",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "filter"
+        }
+      ]
+    },
+    {
+      "Name": "CreateIPSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateMalwareProtectionPlan",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateMembers"
+    },
+    {
+      "Name": "CreatePublishingDestination"
+    },
+    {
+      "Name": "CreateSampleFindings"
+    },
+    {
+      "Name": "CreateThreatIntelSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeclineInvitations"
+    },
+    {
+      "Name": "DeleteDetector",
+      "Resources": [
+        {
+          "Name": "detector"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFilter",
+      "Resources": [
+        {
+          "Name": "filter"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIPSet",
+      "Resources": [
+        {
+          "Name": "ipset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInvitations"
+    },
+    {
+      "Name": "DeleteMalwareProtectionPlan",
+      "Resources": [
+        {
+          "Name": "malwareprotectionplan"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMembers"
+    },
+    {
+      "Name": "DeletePublishingDestination",
+      "Resources": [
+        {
+          "Name": "publishingDestination"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteThreatIntelSet",
+      "Resources": [
+        {
+          "Name": "threatintelset"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMalwareScans"
+    },
+    {
+      "Name": "DescribeOrganizationConfiguration"
+    },
+    {
+      "Name": "DescribePublishingDestination",
+      "Resources": [
+        {
+          "Name": "publishingDestination"
+        }
+      ]
+    },
+    {
+      "Name": "DisableOrganizationAdminAccount"
+    },
+    {
+      "Name": "DisassociateFromAdministratorAccount"
+    },
+    {
+      "Name": "DisassociateFromMasterAccount"
+    },
+    {
+      "Name": "DisassociateMembers"
+    },
+    {
+      "Name": "EnableOrganizationAdminAccount"
+    },
+    {
+      "Name": "GetAdministratorAccount"
+    },
+    {
+      "Name": "GetCoverageStatistics",
+      "Resources": [
+        {
+          "Name": "detector"
+        }
+      ]
+    },
+    {
+      "Name": "GetDetector",
+      "Resources": [
+        {
+          "Name": "detector"
+        }
+      ]
+    },
+    {
+      "Name": "GetFilter",
+      "Resources": [
+        {
+          "Name": "filter"
+        }
+      ]
+    },
+    {
+      "Name": "GetFindings"
+    },
+    {
+      "Name": "GetFindingsStatistics"
+    },
+    {
+      "Name": "GetIPSet",
+      "Resources": [
+        {
+          "Name": "ipset"
+        }
+      ]
+    },
+    {
+      "Name": "GetInvitationsCount"
+    },
+    {
+      "Name": "GetMalwareProtectionPlan",
+      "Resources": [
+        {
+          "Name": "malwareprotectionplan"
+        }
+      ]
+    },
+    {
+      "Name": "GetMalwareScanSettings"
+    },
+    {
+      "Name": "GetMasterAccount"
+    },
+    {
+      "Name": "GetMemberDetectors"
+    },
+    {
+      "Name": "GetMembers"
+    },
+    {
+      "Name": "GetOrganizationStatistics"
+    },
+    {
+      "Name": "GetRemainingFreeTrialDays"
+    },
+    {
+      "Name": "GetThreatIntelSet",
+      "Resources": [
+        {
+          "Name": "threatintelset"
+        }
+      ]
+    },
+    {
+      "Name": "GetUsageStatistics"
+    },
+    {
+      "Name": "InviteMembers"
+    },
+    {
+      "Name": "ListCoverage",
+      "Resources": [
+        {
+          "Name": "detector"
+        }
+      ]
+    },
+    {
+      "Name": "ListDetectors"
+    },
+    {
+      "Name": "ListFilters"
+    },
+    {
+      "Name": "ListFindings"
+    },
+    {
+      "Name": "ListIPSets"
+    },
+    {
+      "Name": "ListInvitations"
+    },
+    {
+      "Name": "ListMalwareProtectionPlans"
+    },
+    {
+      "Name": "ListMembers"
+    },
+    {
+      "Name": "ListOrganizationAdminAccounts"
+    },
+    {
+      "Name": "ListPublishingDestinations"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "detector"
+        },
+        {
+          "Name": "filter"
+        },
+        {
+          "Name": "ipset"
+        },
+        {
+          "Name": "malwareprotectionplan"
+        },
+        {
+          "Name": "threatintelset"
+        }
+      ]
+    },
+    {
+      "Name": "ListThreatIntelSets"
+    },
+    {
+      "Name": "SendSecurityTelemetry"
+    },
+    {
+      "Name": "StartMalwareScan"
+    },
+    {
+      "Name": "StartMonitoringMembers"
+    },
+    {
+      "Name": "StopMonitoringMembers"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "detector"
+        },
+        {
+          "Name": "filter"
+        },
+        {
+          "Name": "ipset"
+        },
+        {
+          "Name": "malwareprotectionplan"
+        },
+        {
+          "Name": "threatintelset"
+        }
+      ]
+    },
+    {
+      "Name": "UnarchiveFindings"
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "detector"
+        },
+        {
+          "Name": "filter"
+        },
+        {
+          "Name": "ipset"
+        },
+        {
+          "Name": "malwareprotectionplan"
+        },
+        {
+          "Name": "threatintelset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDetector",
+      "Resources": [
+        {
+          "Name": "detector"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFilter",
+      "Resources": [
+        {
+          "Name": "filter"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFindingsFeedback"
+    },
+    {
+      "Name": "UpdateIPSet",
+      "Resources": [
+        {
+          "Name": "ipset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMalwareProtectionPlan",
+      "Resources": [
+        {
+          "Name": "malwareprotectionplan"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMalwareScanSettings"
+    },
+    {
+      "Name": "UpdateMemberDetectors"
+    },
+    {
+      "Name": "UpdateOrganizationConfiguration"
+    },
+    {
+      "Name": "UpdatePublishingDestination",
+      "Resources": [
+        {
+          "Name": "publishingDestination"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateThreatIntelSet",
+      "Resources": [
+        {
+          "Name": "threatintelset"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "detector",
+      "ARNFormats": [
+        "arn:${Partition}:guardduty:${Region}:${Account}:detector/${DetectorId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "filter",
+      "ARNFormats": [
+        "arn:${Partition}:guardduty:${Region}:${Account}:detector/${DetectorId}/filter/${FilterName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ipset",
+      "ARNFormats": [
+        "arn:${Partition}:guardduty:${Region}:${Account}:detector/${DetectorId}/ipset/${IPSetId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "malwareprotectionplan",
+      "ARNFormats": [
+        "arn:${Partition}:guardduty:${Region}:${Account}:malware-protection-plan/${MalwareProtectionPlanId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "publishingDestination",
+      "ARNFormats": [
+        "arn:${Partition}:guardduty:${Region}:${Account}:detector/${DetectorId}/publishingDestination/${PublishingDestinationId}"
+      ]
+    },
+    {
+      "Name": "threatintelset",
+      "ARNFormats": [
+        "arn:${Partition}:guardduty:${Region}:${Account}:detector/${DetectorId}/threatintelset/${ThreatIntelSetId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

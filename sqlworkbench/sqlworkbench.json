@@ -1,0 +1,605 @@
+{
+  "Name": "sqlworkbench",
+  "Actions": [
+    {
+      "Name": "AssociateConnectionWithChart",
+      "Resources": [
+        {
+          "Name": "chart"
+        },
+        {
+          "Name": "connection"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateConnectionWithTab",
+      "Resources": [
+        {
+          "Name": "connection"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateNotebookWithTab",
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateQueryWithTab",
+      "Resources": [
+        {
+          "Name": "query"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDeleteFolder"
+    },
+    {
+      "Name": "BatchGetNotebookCell",
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAccount"
+    },
+    {
+      "Name": "CreateChart",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "chart"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConnection",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "connection"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFolder"
+    },
+    {
+      "Name": "CreateNotebook",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "CreateNotebookCell",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "CreateNotebookFromVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "CreateNotebookVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSavedQuery",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "query"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteChart",
+      "Resources": [
+        {
+          "Name": "chart"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConnection",
+      "Resources": [
+        {
+          "Name": "connection"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNotebook",
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNotebookCell",
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNotebookVersion",
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteQCustomContext"
+    },
+    {
+      "Name": "DeleteSavedQuery",
+      "Resources": [
+        {
+          "Name": "query"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSqlGenerationContext"
+    },
+    {
+      "Name": "DeleteTab"
+    },
+    {
+      "Name": "DriverExecute",
+      "Resources": [
+        {
+          "Name": "connection"
+        }
+      ]
+    },
+    {
+      "Name": "DuplicateNotebook",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "ExportNotebook",
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "GenerateSession"
+    },
+    {
+      "Name": "GetAccountInfo"
+    },
+    {
+      "Name": "GetAccountSettings"
+    },
+    {
+      "Name": "GetAutocompletionMetadata"
+    },
+    {
+      "Name": "GetAutocompletionResource"
+    },
+    {
+      "Name": "GetChart",
+      "Resources": [
+        {
+          "Name": "chart"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnection",
+      "Resources": [
+        {
+          "Name": "connection"
+        }
+      ]
+    },
+    {
+      "Name": "GetNotebook",
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "GetNotebookVersion",
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "GetQCustomContext"
+    },
+    {
+      "Name": "GetQSqlPromptQuotas"
+    },
+    {
+      "Name": "GetQSqlRecommendations"
+    },
+    {
+      "Name": "GetQueryExecutionHistory"
+    },
+    {
+      "Name": "GetSavedQuery",
+      "Resources": [
+        {
+          "Name": "query"
+        }
+      ]
+    },
+    {
+      "Name": "GetSchemaInference"
+    },
+    {
+      "Name": "GetSqlGenerationContext"
+    },
+    {
+      "Name": "GetSqlRecommendations"
+    },
+    {
+      "Name": "GetUserInfo"
+    },
+    {
+      "Name": "GetUserWorkspaceSettings"
+    },
+    {
+      "Name": "ImportNotebook",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "ListConnections"
+    },
+    {
+      "Name": "ListDatabases"
+    },
+    {
+      "Name": "ListFiles"
+    },
+    {
+      "Name": "ListNotebookVersions",
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "ListNotebooks"
+    },
+    {
+      "Name": "ListQueryExecutionHistory"
+    },
+    {
+      "Name": "ListRedshiftClusters"
+    },
+    {
+      "Name": "ListSampleDatabases"
+    },
+    {
+      "Name": "ListSavedQueryVersions",
+      "Resources": [
+        {
+          "Name": "query"
+        }
+      ]
+    },
+    {
+      "Name": "ListTabs"
+    },
+    {
+      "Name": "ListTaggedResources"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "chart"
+        },
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "notebook"
+        },
+        {
+          "Name": "query"
+        }
+      ]
+    },
+    {
+      "Name": "PassAccountSettings"
+    },
+    {
+      "Name": "PutQCustomContext"
+    },
+    {
+      "Name": "PutSqlGenerationContext"
+    },
+    {
+      "Name": "PutTab"
+    },
+    {
+      "Name": "PutUserWorkspaceSettings"
+    },
+    {
+      "Name": "RestoreNotebookVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "chart"
+        },
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "notebook"
+        },
+        {
+          "Name": "query"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "chart"
+        },
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "notebook"
+        },
+        {
+          "Name": "query"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAccountConnectionSettings"
+    },
+    {
+      "Name": "UpdateAccountExportSettings"
+    },
+    {
+      "Name": "UpdateAccountGeneralSettings"
+    },
+    {
+      "Name": "UpdateAccountQSqlSettings"
+    },
+    {
+      "Name": "UpdateChart",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "chart"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConnection",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "connection"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFileFolder",
+      "Resources": [
+        {
+          "Name": "chart"
+        },
+        {
+          "Name": "query"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFolder"
+    },
+    {
+      "Name": "UpdateNotebook",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNotebookCellContent",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNotebookCellLayout",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "notebook"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSavedQuery",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "query"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "chart",
+      "ARNFormats": [
+        "arn:${Partition}:sqlworkbench:${Region}:${Account}:chart/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "connection",
+      "ARNFormats": [
+        "arn:${Partition}:sqlworkbench:${Region}:${Account}:connection/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "notebook",
+      "ARNFormats": [
+        "arn:${Partition}:sqlworkbench:${Region}:${Account}:notebook/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "query",
+      "ARNFormats": [
+        "arn:${Partition}:sqlworkbench:${Region}:${Account}:query/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,163 @@
+{
+  "Name": "social-messaging",
+  "Actions": [
+    {
+      "Name": "AssociateWhatsAppBusinessAccount",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteWhatsAppMessageMedia",
+      "Resources": [
+        {
+          "Name": "phone-number-id"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateWhatsAppBusinessAccount",
+      "Resources": [
+        {
+          "Name": "waba"
+        }
+      ]
+    },
+    {
+      "Name": "GetLinkedWhatsAppBusinessAccount",
+      "Resources": [
+        {
+          "Name": "waba"
+        }
+      ]
+    },
+    {
+      "Name": "GetLinkedWhatsAppBusinessAccountPhoneNumber",
+      "Resources": [
+        {
+          "Name": "phone-number-id"
+        }
+      ]
+    },
+    {
+      "Name": "GetWhatsAppMessageMedia",
+      "Resources": [
+        {
+          "Name": "phone-number-id"
+        }
+      ]
+    },
+    {
+      "Name": "ListLinkedWhatsAppBusinessAccounts"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "phone-number-id"
+        },
+        {
+          "Name": "waba"
+        }
+      ]
+    },
+    {
+      "Name": "PostWhatsAppMessageMedia",
+      "Resources": [
+        {
+          "Name": "phone-number-id"
+        }
+      ]
+    },
+    {
+      "Name": "PutWhatsAppBusinessAccountEventDestinations",
+      "Resources": [
+        {
+          "Name": "waba"
+        }
+      ]
+    },
+    {
+      "Name": "SendWhatsAppMessage",
+      "Resources": [
+        {
+          "Name": "phone-number-id"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "phone-number-id"
+        },
+        {
+          "Name": "waba"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "phone-number-id"
+        },
+        {
+          "Name": "waba"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "phone-number-id",
+      "ARNFormats": [
+        "arn:${Partition}:social-messaging:${Region}:${Account}:phone-number-id/${OriginationPhoneNumberId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "waba",
+      "ARNFormats": [
+        "arn:${Partition}:social-messaging:${Region}:${Account}:waba/${WabaId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

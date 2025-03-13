@@ -1,0 +1,215 @@
+{
+  "Name": "account",
+  "Actions": [
+    {
+      "Name": "AcceptPrimaryEmailUpdate",
+      "ActionConditionKeys": [
+        "account:EmailTargetDomain"
+      ],
+      "Resources": [
+        {
+          "Name": "accountInOrganization"
+        }
+      ]
+    },
+    {
+      "Name": "CloseAccount",
+      "Resources": [
+        {
+          "Name": "account"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAlternateContact",
+      "ActionConditionKeys": [
+        "account:AlternateContactTypes"
+      ],
+      "Resources": [
+        {
+          "Name": "account"
+        },
+        {
+          "Name": "accountInOrganization"
+        }
+      ]
+    },
+    {
+      "Name": "DisableRegion",
+      "ActionConditionKeys": [
+        "account:TargetRegion"
+      ],
+      "Resources": [
+        {
+          "Name": "account"
+        },
+        {
+          "Name": "accountInOrganization"
+        }
+      ]
+    },
+    {
+      "Name": "EnableRegion",
+      "ActionConditionKeys": [
+        "account:TargetRegion"
+      ],
+      "Resources": [
+        {
+          "Name": "account"
+        },
+        {
+          "Name": "accountInOrganization"
+        }
+      ]
+    },
+    {
+      "Name": "GetAccountInformation",
+      "Resources": [
+        {
+          "Name": "account"
+        }
+      ]
+    },
+    {
+      "Name": "GetAlternateContact",
+      "ActionConditionKeys": [
+        "account:AlternateContactTypes"
+      ],
+      "Resources": [
+        {
+          "Name": "account"
+        },
+        {
+          "Name": "accountInOrganization"
+        }
+      ]
+    },
+    {
+      "Name": "GetContactInformation",
+      "Resources": [
+        {
+          "Name": "account"
+        },
+        {
+          "Name": "accountInOrganization"
+        }
+      ]
+    },
+    {
+      "Name": "GetPrimaryEmail",
+      "Resources": [
+        {
+          "Name": "accountInOrganization"
+        }
+      ]
+    },
+    {
+      "Name": "GetRegionOptStatus",
+      "ActionConditionKeys": [
+        "account:TargetRegion"
+      ],
+      "Resources": [
+        {
+          "Name": "account"
+        },
+        {
+          "Name": "accountInOrganization"
+        }
+      ]
+    },
+    {
+      "Name": "ListRegions",
+      "Resources": [
+        {
+          "Name": "account"
+        },
+        {
+          "Name": "accountInOrganization"
+        }
+      ]
+    },
+    {
+      "Name": "PutAlternateContact",
+      "ActionConditionKeys": [
+        "account:AlternateContactTypes"
+      ],
+      "Resources": [
+        {
+          "Name": "account"
+        },
+        {
+          "Name": "accountInOrganization"
+        }
+      ]
+    },
+    {
+      "Name": "PutContactInformation",
+      "Resources": [
+        {
+          "Name": "account"
+        },
+        {
+          "Name": "accountInOrganization"
+        }
+      ]
+    },
+    {
+      "Name": "StartPrimaryEmailUpdate",
+      "ActionConditionKeys": [
+        "account:EmailTargetDomain"
+      ],
+      "Resources": [
+        {
+          "Name": "accountInOrganization"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "account:AccountResourceOrgPaths",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "account:AccountResourceOrgTags/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "account:AlternateContactTypes",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "account:EmailTargetDomain",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "account:TargetRegion",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "account",
+      "ARNFormats": [
+        "arn:${Partition}:account::${Account}:account"
+      ]
+    },
+    {
+      "Name": "accountInOrganization",
+      "ARNFormats": [
+        "arn:${Partition}:account::${ManagementAccountId}:account/o-${OrganizationId}/${MemberAccountId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

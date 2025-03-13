@@ -1,0 +1,243 @@
+{
+  "Name": "gameliftstreams",
+  "Actions": [
+    {
+      "Name": "AddStreamGroupLocations",
+      "Resources": [
+        {
+          "Name": "stream group"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateApplications",
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "stream group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateApplication",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateStreamGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateStreamSessionConnection",
+      "Resources": [
+        {
+          "Name": "stream group"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApplication",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStreamGroup",
+      "Resources": [
+        {
+          "Name": "stream group"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateApplications",
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "stream group"
+        }
+      ]
+    },
+    {
+      "Name": "ExportStreamSessionFiles",
+      "Resources": [
+        {
+          "Name": "stream group"
+        }
+      ]
+    },
+    {
+      "Name": "GetApplication",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "GetStreamGroup",
+      "Resources": [
+        {
+          "Name": "stream group"
+        }
+      ]
+    },
+    {
+      "Name": "GetStreamSession",
+      "Resources": [
+        {
+          "Name": "stream group"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplications"
+    },
+    {
+      "Name": "ListStreamGroups"
+    },
+    {
+      "Name": "ListStreamSessions",
+      "Resources": [
+        {
+          "Name": "stream group"
+        }
+      ]
+    },
+    {
+      "Name": "ListStreamSessionsByAccount"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "stream group"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveStreamGroupLocations",
+      "Resources": [
+        {
+          "Name": "stream group"
+        }
+      ]
+    },
+    {
+      "Name": "StartStreamSession",
+      "Resources": [
+        {
+          "Name": "stream group"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "stream group"
+        }
+      ]
+    },
+    {
+      "Name": "TerminateStreamSession",
+      "Resources": [
+        {
+          "Name": "stream group"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "stream group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateApplication",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStreamGroup",
+      "Resources": [
+        {
+          "Name": "stream group"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "application",
+      "ARNFormats": [
+        "arn:${Partition}:gameliftstreams:${Region}:${Account}:application/${ApplicationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "stream group",
+      "ARNFormats": [
+        "arn:${Partition}:gameliftstreams:${Region}:${Account}:streamgroup/${StreamGroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

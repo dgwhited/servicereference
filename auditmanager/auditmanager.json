@@ -1,0 +1,441 @@
+{
+  "Name": "auditmanager",
+  "Actions": [
+    {
+      "Name": "AssociateAssessmentReportEvidenceFolder",
+      "Resources": [
+        {
+          "Name": "assessment"
+        }
+      ]
+    },
+    {
+      "Name": "BatchAssociateAssessmentReportEvidence",
+      "Resources": [
+        {
+          "Name": "assessment"
+        }
+      ]
+    },
+    {
+      "Name": "BatchCreateDelegationByAssessment",
+      "Resources": [
+        {
+          "Name": "assessment"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDeleteDelegationByAssessment",
+      "Resources": [
+        {
+          "Name": "assessment"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDisassociateAssessmentReportEvidence",
+      "Resources": [
+        {
+          "Name": "assessment"
+        }
+      ]
+    },
+    {
+      "Name": "BatchImportEvidenceToAssessmentControl",
+      "Resources": [
+        {
+          "Name": "assessmentControlSet"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAssessment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateAssessmentFramework",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateAssessmentReport",
+      "Resources": [
+        {
+          "Name": "assessment"
+        }
+      ]
+    },
+    {
+      "Name": "CreateControl",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteAssessment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "assessment"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAssessmentFramework",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "assessmentFramework"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAssessmentFrameworkShare"
+    },
+    {
+      "Name": "DeleteAssessmentReport",
+      "Resources": [
+        {
+          "Name": "assessment"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteControl",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "control"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterAccount"
+    },
+    {
+      "Name": "DeregisterOrganizationAdminAccount"
+    },
+    {
+      "Name": "DisassociateAssessmentReportEvidenceFolder",
+      "Resources": [
+        {
+          "Name": "assessment"
+        }
+      ]
+    },
+    {
+      "Name": "GetAccountStatus"
+    },
+    {
+      "Name": "GetAssessment",
+      "Resources": [
+        {
+          "Name": "assessment"
+        }
+      ]
+    },
+    {
+      "Name": "GetAssessmentFramework",
+      "Resources": [
+        {
+          "Name": "assessmentFramework"
+        }
+      ]
+    },
+    {
+      "Name": "GetAssessmentReportUrl",
+      "Resources": [
+        {
+          "Name": "assessment"
+        }
+      ]
+    },
+    {
+      "Name": "GetChangeLogs",
+      "Resources": [
+        {
+          "Name": "assessment"
+        }
+      ]
+    },
+    {
+      "Name": "GetControl",
+      "Resources": [
+        {
+          "Name": "control"
+        }
+      ]
+    },
+    {
+      "Name": "GetDelegations"
+    },
+    {
+      "Name": "GetEvidence",
+      "Resources": [
+        {
+          "Name": "assessmentControlSet"
+        }
+      ]
+    },
+    {
+      "Name": "GetEvidenceByEvidenceFolder",
+      "Resources": [
+        {
+          "Name": "assessmentControlSet"
+        }
+      ]
+    },
+    {
+      "Name": "GetEvidenceFileUploadUrl"
+    },
+    {
+      "Name": "GetEvidenceFolder",
+      "Resources": [
+        {
+          "Name": "assessmentControlSet"
+        }
+      ]
+    },
+    {
+      "Name": "GetEvidenceFoldersByAssessment",
+      "Resources": [
+        {
+          "Name": "assessment"
+        }
+      ]
+    },
+    {
+      "Name": "GetEvidenceFoldersByAssessmentControl",
+      "Resources": [
+        {
+          "Name": "assessmentControlSet"
+        }
+      ]
+    },
+    {
+      "Name": "GetInsights"
+    },
+    {
+      "Name": "GetInsightsByAssessment"
+    },
+    {
+      "Name": "GetOrganizationAdminAccount"
+    },
+    {
+      "Name": "GetServicesInScope"
+    },
+    {
+      "Name": "GetSettings"
+    },
+    {
+      "Name": "ListAssessmentControlInsightsByControlDomain"
+    },
+    {
+      "Name": "ListAssessmentFrameworkShareRequests"
+    },
+    {
+      "Name": "ListAssessmentFrameworks"
+    },
+    {
+      "Name": "ListAssessmentReports"
+    },
+    {
+      "Name": "ListAssessments"
+    },
+    {
+      "Name": "ListControlDomainInsights"
+    },
+    {
+      "Name": "ListControlDomainInsightsByAssessment"
+    },
+    {
+      "Name": "ListControlInsightsByControlDomain"
+    },
+    {
+      "Name": "ListControls"
+    },
+    {
+      "Name": "ListKeywordsForDataSource"
+    },
+    {
+      "Name": "ListNotifications"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "assessment"
+        },
+        {
+          "Name": "control"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterAccount"
+    },
+    {
+      "Name": "RegisterOrganizationAdminAccount"
+    },
+    {
+      "Name": "StartAssessmentFrameworkShare",
+      "Resources": [
+        {
+          "Name": "assessmentFramework"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "assessment"
+        },
+        {
+          "Name": "control"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "assessment"
+        },
+        {
+          "Name": "control"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAssessment",
+      "Resources": [
+        {
+          "Name": "assessment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAssessmentControl",
+      "Resources": [
+        {
+          "Name": "assessmentControlSet"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAssessmentControlSetStatus",
+      "Resources": [
+        {
+          "Name": "assessmentControlSet"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAssessmentFramework",
+      "Resources": [
+        {
+          "Name": "assessmentFramework"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAssessmentFrameworkShare"
+    },
+    {
+      "Name": "UpdateAssessmentStatus",
+      "Resources": [
+        {
+          "Name": "assessment"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateControl",
+      "Resources": [
+        {
+          "Name": "control"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSettings"
+    },
+    {
+      "Name": "ValidateAssessmentReportIntegrity"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "assessment",
+      "ARNFormats": [
+        "arn:${Partition}:auditmanager:${Region}:${Account}:assessment/${AssessmentId}"
+      ]
+    },
+    {
+      "Name": "assessmentControlSet",
+      "ARNFormats": [
+        "arn:${Partition}:auditmanager:${Region}:${Account}:assessment/${AssessmentId}/controlSet/${ControlSetId}"
+      ]
+    },
+    {
+      "Name": "assessmentFramework",
+      "ARNFormats": [
+        "arn:${Partition}:auditmanager:${Region}:${Account}:assessmentFramework/${AssessmentFrameworkId}"
+      ]
+    },
+    {
+      "Name": "control",
+      "ARNFormats": [
+        "arn:${Partition}:auditmanager:${Region}:${Account}:control/${ControlId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

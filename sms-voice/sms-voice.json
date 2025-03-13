@@ -1,0 +1,943 @@
+{
+  "Name": "sms-voice",
+  "Actions": [
+    {
+      "Name": "AssociateOriginationIdentity",
+      "Resources": [
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "Pool"
+        },
+        {
+          "Name": "SenderId"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateProtectConfiguration",
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        },
+        {
+          "Name": "ProtectConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConfigurationSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateConfigurationSetEventDestination"
+    },
+    {
+      "Name": "CreateEventDestination",
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        }
+      ]
+    },
+    {
+      "Name": "CreateOptOutList",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreatePool",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "SenderId"
+        }
+      ]
+    },
+    {
+      "Name": "CreateProtectConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateRegistration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateRegistrationAssociation",
+      "Resources": [
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "Registration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRegistrationAttachment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateRegistrationVersion",
+      "Resources": [
+        {
+          "Name": "Registration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateVerifiedDestinationNumber",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteAccountDefaultProtectConfiguration"
+    },
+    {
+      "Name": "DeleteConfigurationSet",
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfigurationSetEventDestination"
+    },
+    {
+      "Name": "DeleteDefaultMessageType",
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDefaultSenderId",
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEventDestination",
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteKeyword",
+      "Resources": [
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "Pool"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMediaMessageSpendLimitOverride"
+    },
+    {
+      "Name": "DeleteOptOutList",
+      "Resources": [
+        {
+          "Name": "OptOutList"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteOptedOutNumber",
+      "Resources": [
+        {
+          "Name": "OptOutList"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePool",
+      "Resources": [
+        {
+          "Name": "Pool"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProtectConfiguration",
+      "Resources": [
+        {
+          "Name": "ProtectConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProtectConfigurationRuleSetNumberOverride",
+      "Resources": [
+        {
+          "Name": "ProtectConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRegistration",
+      "Resources": [
+        {
+          "Name": "Registration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRegistrationAttachment",
+      "Resources": [
+        {
+          "Name": "RegistrationAttachment"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRegistrationFieldValue",
+      "Resources": [
+        {
+          "Name": "Registration"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Resources": [
+        {
+          "Name": "OptOutList"
+        },
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "Pool"
+        },
+        {
+          "Name": "SenderId"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTextMessageSpendLimitOverride"
+    },
+    {
+      "Name": "DeleteVerifiedDestinationNumber",
+      "Resources": [
+        {
+          "Name": "VerifiedDestinationNumber"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteVoiceMessageSpendLimitOverride"
+    },
+    {
+      "Name": "DescribeAccountAttributes"
+    },
+    {
+      "Name": "DescribeAccountLimits"
+    },
+    {
+      "Name": "DescribeConfigurationSets",
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeKeywords",
+      "Resources": [
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "Pool"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeOptOutLists",
+      "Resources": [
+        {
+          "Name": "OptOutList"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeOptedOutNumbers",
+      "Resources": [
+        {
+          "Name": "OptOutList"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePhoneNumbers",
+      "Resources": [
+        {
+          "Name": "PhoneNumber"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePools",
+      "Resources": [
+        {
+          "Name": "Pool"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeProtectConfigurations",
+      "Resources": [
+        {
+          "Name": "ProtectConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRegistrationAttachments",
+      "Resources": [
+        {
+          "Name": "RegistrationAttachment"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRegistrationFieldDefinitions"
+    },
+    {
+      "Name": "DescribeRegistrationFieldValues",
+      "Resources": [
+        {
+          "Name": "Registration"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRegistrationSectionDefinitions"
+    },
+    {
+      "Name": "DescribeRegistrationTypeDefinitions"
+    },
+    {
+      "Name": "DescribeRegistrationVersions",
+      "Resources": [
+        {
+          "Name": "Registration"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRegistrations",
+      "Resources": [
+        {
+          "Name": "Registration"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSenderIds",
+      "Resources": [
+        {
+          "Name": "SenderId"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSpendLimits"
+    },
+    {
+      "Name": "DescribeVerifiedDestinationNumbers",
+      "Resources": [
+        {
+          "Name": "VerifiedDestinationNumber"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateOriginationIdentity",
+      "Resources": [
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "Pool"
+        },
+        {
+          "Name": "SenderId"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateProtectConfiguration",
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        },
+        {
+          "Name": "ProtectConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "DiscardRegistrationVersion",
+      "Resources": [
+        {
+          "Name": "Registration"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfigurationSetEventDestinations"
+    },
+    {
+      "Name": "GetProtectConfigurationCountryRuleSet",
+      "Resources": [
+        {
+          "Name": "ProtectConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "Resources": [
+        {
+          "Name": "OptOutList"
+        },
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "Pool"
+        },
+        {
+          "Name": "SenderId"
+        }
+      ]
+    },
+    {
+      "Name": "ListConfigurationSets"
+    },
+    {
+      "Name": "ListPoolOriginationIdentities",
+      "Resources": [
+        {
+          "Name": "Pool"
+        }
+      ]
+    },
+    {
+      "Name": "ListProtectConfigurationRuleSetNumberOverrides",
+      "Resources": [
+        {
+          "Name": "ProtectConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "ListRegistrationAssociations",
+      "Resources": [
+        {
+          "Name": "Registration"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        },
+        {
+          "Name": "OptOutList"
+        },
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "Pool"
+        },
+        {
+          "Name": "ProtectConfiguration"
+        },
+        {
+          "Name": "Registration"
+        },
+        {
+          "Name": "RegistrationAttachment"
+        },
+        {
+          "Name": "SenderId"
+        },
+        {
+          "Name": "VerifiedDestinationNumber"
+        }
+      ]
+    },
+    {
+      "Name": "PutKeyword",
+      "Resources": [
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "Pool"
+        }
+      ]
+    },
+    {
+      "Name": "PutMessageFeedback",
+      "Resources": [
+        {
+          "Name": "Message"
+        }
+      ]
+    },
+    {
+      "Name": "PutOptedOutNumber",
+      "Resources": [
+        {
+          "Name": "OptOutList"
+        }
+      ]
+    },
+    {
+      "Name": "PutProtectConfigurationRuleSetNumberOverride",
+      "Resources": [
+        {
+          "Name": "ProtectConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "PutRegistrationFieldValue",
+      "Resources": [
+        {
+          "Name": "Registration"
+        }
+      ]
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "Resources": [
+        {
+          "Name": "OptOutList"
+        },
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "Pool"
+        },
+        {
+          "Name": "SenderId"
+        }
+      ]
+    },
+    {
+      "Name": "ReleasePhoneNumber",
+      "Resources": [
+        {
+          "Name": "PhoneNumber"
+        }
+      ]
+    },
+    {
+      "Name": "ReleaseSenderId",
+      "Resources": [
+        {
+          "Name": "SenderId"
+        }
+      ]
+    },
+    {
+      "Name": "RequestPhoneNumber",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Pool"
+        }
+      ]
+    },
+    {
+      "Name": "RequestSenderId",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "SendDestinationNumberVerificationCode",
+      "Resources": [
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "Pool"
+        },
+        {
+          "Name": "SenderId"
+        }
+      ]
+    },
+    {
+      "Name": "SendMediaMessage",
+      "Resources": [
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "Pool"
+        }
+      ]
+    },
+    {
+      "Name": "SendTextMessage",
+      "Resources": [
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "Pool"
+        },
+        {
+          "Name": "SenderId"
+        }
+      ]
+    },
+    {
+      "Name": "SendVoiceMessage",
+      "Resources": [
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "Pool"
+        }
+      ]
+    },
+    {
+      "Name": "SetAccountDefaultProtectConfiguration",
+      "Resources": [
+        {
+          "Name": "ProtectConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "SetDefaultMessageFeedbackEnabled",
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        }
+      ]
+    },
+    {
+      "Name": "SetDefaultMessageType",
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        }
+      ]
+    },
+    {
+      "Name": "SetDefaultSenderId",
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        }
+      ]
+    },
+    {
+      "Name": "SetMediaMessageSpendLimitOverride"
+    },
+    {
+      "Name": "SetTextMessageSpendLimitOverride"
+    },
+    {
+      "Name": "SetVoiceMessageSpendLimitOverride"
+    },
+    {
+      "Name": "SubmitRegistrationVersion",
+      "Resources": [
+        {
+          "Name": "Registration"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        },
+        {
+          "Name": "OptOutList"
+        },
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "Pool"
+        },
+        {
+          "Name": "ProtectConfiguration"
+        },
+        {
+          "Name": "Registration"
+        },
+        {
+          "Name": "RegistrationAttachment"
+        },
+        {
+          "Name": "SenderId"
+        },
+        {
+          "Name": "VerifiedDestinationNumber"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        },
+        {
+          "Name": "OptOutList"
+        },
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "Pool"
+        },
+        {
+          "Name": "ProtectConfiguration"
+        },
+        {
+          "Name": "Registration"
+        },
+        {
+          "Name": "RegistrationAttachment"
+        },
+        {
+          "Name": "SenderId"
+        },
+        {
+          "Name": "VerifiedDestinationNumber"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConfigurationSetEventDestination"
+    },
+    {
+      "Name": "UpdateEventDestination",
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePhoneNumber",
+      "Resources": [
+        {
+          "Name": "PhoneNumber"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePool",
+      "Resources": [
+        {
+          "Name": "Pool"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProtectConfiguration",
+      "Resources": [
+        {
+          "Name": "ProtectConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProtectConfigurationCountryRuleSet",
+      "Resources": [
+        {
+          "Name": "ProtectConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSenderId",
+      "Resources": [
+        {
+          "Name": "SenderId"
+        }
+      ]
+    },
+    {
+      "Name": "VerifyDestinationNumber",
+      "Resources": [
+        {
+          "Name": "VerifiedDestinationNumber"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "ConfigurationSet",
+      "ARNFormats": [
+        "arn:${Partition}:sms-voice:${Region}:${Account}:configuration-set/${ConfigurationSetName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Message",
+      "ARNFormats": [
+        "arn:${Partition}:sms-voice:${Region}:${Account}:message/${MessageId}"
+      ]
+    },
+    {
+      "Name": "OptOutList",
+      "ARNFormats": [
+        "arn:${Partition}:sms-voice:${Region}:${Account}:opt-out-list/${OptOutListName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "PhoneNumber",
+      "ARNFormats": [
+        "arn:${Partition}:sms-voice:${Region}:${Account}:phone-number/${PhoneNumberId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Pool",
+      "ARNFormats": [
+        "arn:${Partition}:sms-voice:${Region}:${Account}:pool/${PoolId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ProtectConfiguration",
+      "ARNFormats": [
+        "arn:${Partition}:sms-voice:${Region}:${Account}:protect-configuration/${ProtectConfigurationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Registration",
+      "ARNFormats": [
+        "arn:${Partition}:sms-voice:${Region}:${Account}:registration/${RegistrationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "RegistrationAttachment",
+      "ARNFormats": [
+        "arn:${Partition}:sms-voice:${Region}:${Account}:registration-attachment/${RegistrationAttachmentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "SenderId",
+      "ARNFormats": [
+        "arn:${Partition}:sms-voice:${Region}:${Account}:sender-id/${SenderId}/${IsoCountryCode}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "VerifiedDestinationNumber",
+      "ARNFormats": [
+        "arn:${Partition}:sms-voice:${Region}:${Account}:verified-destination-number/${VerifiedDestinationNumberId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

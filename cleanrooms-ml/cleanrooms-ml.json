@@ -1,0 +1,786 @@
+{
+  "Name": "cleanrooms-ml",
+  "Actions": [
+    {
+      "Name": "CancelTrainedModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "TrainedModel"
+        }
+      ]
+    },
+    {
+      "Name": "CancelTrainedModelInferenceJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "TrainedModelInferenceJob"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAudienceModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "trainingdataset"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConfiguredAudienceModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "audiencemodel"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConfiguredModelAlgorithm",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateConfiguredModelAlgorithmAssociation",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ConfiguredModelAlgorithm"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMLInputChannel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ConfiguredModelAlgorithmAssociation"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTrainedModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ConfiguredModelAlgorithmAssociation"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTrainingDataset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteAudienceGenerationJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "audiencegenerationjob"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAudienceModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "audiencemodel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfiguredAudienceModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "configuredaudiencemodel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfiguredAudienceModelPolicy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "configuredaudiencemodel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfiguredModelAlgorithm",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ConfiguredModelAlgorithm"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfiguredModelAlgorithmAssociation",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ConfiguredModelAlgorithmAssociation"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMLConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteMLInputChannelData",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "MLInputChannel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTrainedModelOutput",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "TrainedModel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTrainingDataset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "trainingdataset"
+        }
+      ]
+    },
+    {
+      "Name": "GetAudienceGenerationJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "audiencegenerationjob"
+        }
+      ]
+    },
+    {
+      "Name": "GetAudienceModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "audiencemodel"
+        }
+      ]
+    },
+    {
+      "Name": "GetCollaborationConfiguredModelAlgorithmAssociation",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cleanrooms-ml:CollaborationId"
+      ],
+      "Resources": [
+        {
+          "Name": "ConfiguredModelAlgorithmAssociation"
+        }
+      ]
+    },
+    {
+      "Name": "GetCollaborationMLInputChannel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cleanrooms-ml:CollaborationId"
+      ],
+      "Resources": [
+        {
+          "Name": "MLInputChannel"
+        }
+      ]
+    },
+    {
+      "Name": "GetCollaborationTrainedModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cleanrooms-ml:CollaborationId"
+      ],
+      "Resources": [
+        {
+          "Name": "TrainedModel"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfiguredAudienceModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "configuredaudiencemodel"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfiguredAudienceModelPolicy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "configuredaudiencemodel"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfiguredModelAlgorithm",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ConfiguredModelAlgorithm"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfiguredModelAlgorithmAssociation",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ConfiguredModelAlgorithmAssociation"
+        }
+      ]
+    },
+    {
+      "Name": "GetMLConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "GetMLInputChannel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "MLInputChannel"
+        }
+      ]
+    },
+    {
+      "Name": "GetTrainedModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "TrainedModel"
+        }
+      ]
+    },
+    {
+      "Name": "GetTrainedModelInferenceJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "TrainedModelInferenceJob"
+        }
+      ]
+    },
+    {
+      "Name": "GetTrainingDataset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "trainingdataset"
+        }
+      ]
+    },
+    {
+      "Name": "ListAudienceExportJobs",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "audiencegenerationjob"
+        }
+      ]
+    },
+    {
+      "Name": "ListAudienceGenerationJobs",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "configuredaudiencemodel"
+        }
+      ]
+    },
+    {
+      "Name": "ListAudienceModels"
+    },
+    {
+      "Name": "ListCollaborationConfiguredModelAlgorithmAssociations",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cleanrooms-ml:CollaborationId"
+      ]
+    },
+    {
+      "Name": "ListCollaborationMLInputChannels",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cleanrooms-ml:CollaborationId"
+      ]
+    },
+    {
+      "Name": "ListCollaborationTrainedModelExportJobs",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cleanrooms-ml:CollaborationId"
+      ],
+      "Resources": [
+        {
+          "Name": "TrainedModel"
+        }
+      ]
+    },
+    {
+      "Name": "ListCollaborationTrainedModelInferenceJobs",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cleanrooms-ml:CollaborationId"
+      ]
+    },
+    {
+      "Name": "ListCollaborationTrainedModels",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cleanrooms-ml:CollaborationId"
+      ]
+    },
+    {
+      "Name": "ListConfiguredAudienceModels"
+    },
+    {
+      "Name": "ListConfiguredModelAlgorithmAssociations",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "ListConfiguredModelAlgorithms",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "ListMLInputChannels",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "audiencegenerationjob"
+        },
+        {
+          "Name": "audiencemodel"
+        },
+        {
+          "Name": "configuredaudiencemodel"
+        },
+        {
+          "Name": "trainingdataset"
+        }
+      ]
+    },
+    {
+      "Name": "ListTrainedModelInferenceJobs",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "ListTrainedModels",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "ListTrainingDatasets"
+    },
+    {
+      "Name": "PutConfiguredAudienceModelPolicy",
+      "Resources": [
+        {
+          "Name": "configuredaudiencemodel"
+        }
+      ]
+    },
+    {
+      "Name": "PutMLConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "StartAudienceExportJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "audiencegenerationjob"
+        }
+      ]
+    },
+    {
+      "Name": "StartAudienceGenerationJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cleanrooms-ml:CollaborationId"
+      ],
+      "Resources": [
+        {
+          "Name": "configuredaudiencemodel"
+        }
+      ]
+    },
+    {
+      "Name": "StartTrainedModelExportJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "TrainedModel"
+        }
+      ]
+    },
+    {
+      "Name": "StartTrainedModelInferenceJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ConfiguredModelAlgorithmAssociation"
+        },
+        {
+          "Name": "MLInputChannel"
+        },
+        {
+          "Name": "TrainedModel"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ConfiguredModelAlgorithm"
+        },
+        {
+          "Name": "ConfiguredModelAlgorithmAssociation"
+        },
+        {
+          "Name": "MLInputChannel"
+        },
+        {
+          "Name": "TrainedModel"
+        },
+        {
+          "Name": "TrainedModelInferenceJob"
+        },
+        {
+          "Name": "audiencegenerationjob"
+        },
+        {
+          "Name": "audiencemodel"
+        },
+        {
+          "Name": "configuredaudiencemodel"
+        },
+        {
+          "Name": "trainingdataset"
+        }
+      ]
+    },
+    {
+      "Name": "UnTagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "ConfiguredModelAlgorithm"
+        },
+        {
+          "Name": "ConfiguredModelAlgorithmAssociation"
+        },
+        {
+          "Name": "MLInputChannel"
+        },
+        {
+          "Name": "TrainedModel"
+        },
+        {
+          "Name": "TrainedModelInferenceJob"
+        },
+        {
+          "Name": "audiencegenerationjob"
+        },
+        {
+          "Name": "audiencemodel"
+        },
+        {
+          "Name": "configuredaudiencemodel"
+        },
+        {
+          "Name": "trainingdataset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConfiguredAudienceModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "audiencemodel"
+        },
+        {
+          "Name": "configuredaudiencemodel"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "cleanrooms-ml:CollaborationId",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "ConfiguredModelAlgorithm",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms-ml:${Region}:${Account}:configured-model-algorithm/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ConfiguredModelAlgorithmAssociation",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms-ml:${Region}:${Account}:membership/${MembershipId}/configured-model-algorithm-association/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "MLInputChannel",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms-ml:${Region}:${Account}:membership/${MembershipId}/ml-input-channel/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "TrainedModel",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms-ml:${Region}:${Account}:membership/${MembershipId}/trained-model/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "TrainedModelInferenceJob",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms-ml:${Region}:${Account}:membership/${MembershipId}/trained-model-inference-job/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "audiencegenerationjob",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms-ml:${Region}:${Account}:audience-generation-job/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "audiencemodel",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms-ml:${Region}:${Account}:audience-model/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "configuredaudiencemodel",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms-ml:${Region}:${Account}:configured-audience-model/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "trainingdataset",
+      "ARNFormats": [
+        "arn:${Partition}:cleanrooms-ml:${Region}:${Account}:training-dataset/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

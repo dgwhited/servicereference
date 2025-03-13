@@ -1,0 +1,627 @@
+{
+  "Name": "robomaker",
+  "Actions": [
+    {
+      "Name": "BatchDeleteWorlds"
+    },
+    {
+      "Name": "BatchDescribeSimulationJob"
+    },
+    {
+      "Name": "CancelDeploymentJob",
+      "Resources": [
+        {
+          "Name": "deploymentJob"
+        }
+      ]
+    },
+    {
+      "Name": "CancelSimulationJob",
+      "Resources": [
+        {
+          "Name": "simulationJob"
+        }
+      ]
+    },
+    {
+      "Name": "CancelSimulationJobBatch",
+      "Resources": [
+        {
+          "Name": "simulationJobBatch"
+        }
+      ]
+    },
+    {
+      "Name": "CancelWorldExportJob",
+      "Resources": [
+        {
+          "Name": "worldExportJob"
+        }
+      ]
+    },
+    {
+      "Name": "CancelWorldGenerationJob",
+      "Resources": [
+        {
+          "Name": "worldGenerationJob"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDeploymentJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateFleet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateRobot",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateRobotApplication",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateRobotApplicationVersion",
+      "Resources": [
+        {
+          "Name": "robotApplication"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSimulationApplication",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateSimulationApplicationVersion",
+      "Resources": [
+        {
+          "Name": "simulationApplication"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSimulationJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateWorldExportJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "world"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWorldGenerationJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "worldTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWorldTemplate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteFleet",
+      "Resources": [
+        {
+          "Name": "deploymentFleet"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRobot",
+      "Resources": [
+        {
+          "Name": "robot"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRobotApplication",
+      "Resources": [
+        {
+          "Name": "robotApplication"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSimulationApplication",
+      "Resources": [
+        {
+          "Name": "simulationApplication"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorldTemplate",
+      "Resources": [
+        {
+          "Name": "worldTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterRobot",
+      "Resources": [
+        {
+          "Name": "deploymentFleet"
+        },
+        {
+          "Name": "robot"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDeploymentJob",
+      "Resources": [
+        {
+          "Name": "deploymentJob"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFleet",
+      "Resources": [
+        {
+          "Name": "deploymentFleet"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRobot",
+      "Resources": [
+        {
+          "Name": "robot"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRobotApplication",
+      "Resources": [
+        {
+          "Name": "robotApplication"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSimulationApplication",
+      "Resources": [
+        {
+          "Name": "simulationApplication"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSimulationJob",
+      "Resources": [
+        {
+          "Name": "simulationJob"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSimulationJobBatch",
+      "Resources": [
+        {
+          "Name": "simulationJobBatch"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWorld",
+      "Resources": [
+        {
+          "Name": "world"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWorldExportJob",
+      "Resources": [
+        {
+          "Name": "worldExportJob"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWorldGenerationJob",
+      "Resources": [
+        {
+          "Name": "worldGenerationJob"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWorldTemplate",
+      "Resources": [
+        {
+          "Name": "worldTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "GetWorldTemplateBody",
+      "Resources": [
+        {
+          "Name": "worldTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeploymentJobs"
+    },
+    {
+      "Name": "ListFleets"
+    },
+    {
+      "Name": "ListRobotApplications"
+    },
+    {
+      "Name": "ListRobots"
+    },
+    {
+      "Name": "ListSimulationApplications"
+    },
+    {
+      "Name": "ListSimulationJobBatches"
+    },
+    {
+      "Name": "ListSimulationJobs"
+    },
+    {
+      "Name": "ListSupportedAvailabilityZones"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "deploymentFleet"
+        },
+        {
+          "Name": "deploymentJob"
+        },
+        {
+          "Name": "robot"
+        },
+        {
+          "Name": "robotApplication"
+        },
+        {
+          "Name": "simulationApplication"
+        },
+        {
+          "Name": "simulationJob"
+        },
+        {
+          "Name": "simulationJobBatch"
+        },
+        {
+          "Name": "world"
+        },
+        {
+          "Name": "worldExportJob"
+        },
+        {
+          "Name": "worldGenerationJob"
+        },
+        {
+          "Name": "worldTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "ListWorldExportJobs"
+    },
+    {
+      "Name": "ListWorldGenerationJobs"
+    },
+    {
+      "Name": "ListWorldTemplates"
+    },
+    {
+      "Name": "ListWorlds"
+    },
+    {
+      "Name": "RegisterRobot",
+      "Resources": [
+        {
+          "Name": "deploymentFleet"
+        },
+        {
+          "Name": "robot"
+        }
+      ]
+    },
+    {
+      "Name": "RestartSimulationJob",
+      "Resources": [
+        {
+          "Name": "simulationJob"
+        }
+      ]
+    },
+    {
+      "Name": "StartSimulationJobBatch",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "SyncDeploymentJob",
+      "Resources": [
+        {
+          "Name": "deploymentFleet"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "deploymentFleet"
+        },
+        {
+          "Name": "deploymentJob"
+        },
+        {
+          "Name": "robot"
+        },
+        {
+          "Name": "robotApplication"
+        },
+        {
+          "Name": "simulationApplication"
+        },
+        {
+          "Name": "simulationJob"
+        },
+        {
+          "Name": "simulationJobBatch"
+        },
+        {
+          "Name": "world"
+        },
+        {
+          "Name": "worldExportJob"
+        },
+        {
+          "Name": "worldGenerationJob"
+        },
+        {
+          "Name": "worldTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "deploymentFleet"
+        },
+        {
+          "Name": "deploymentJob"
+        },
+        {
+          "Name": "robot"
+        },
+        {
+          "Name": "robotApplication"
+        },
+        {
+          "Name": "simulationApplication"
+        },
+        {
+          "Name": "simulationJob"
+        },
+        {
+          "Name": "simulationJobBatch"
+        },
+        {
+          "Name": "world"
+        },
+        {
+          "Name": "worldExportJob"
+        },
+        {
+          "Name": "worldGenerationJob"
+        },
+        {
+          "Name": "worldTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRobotApplication",
+      "Resources": [
+        {
+          "Name": "robotApplication"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRobotDeployment"
+    },
+    {
+      "Name": "UpdateSimulationApplication",
+      "Resources": [
+        {
+          "Name": "simulationApplication"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWorldTemplate",
+      "Resources": [
+        {
+          "Name": "worldTemplate"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "deploymentFleet",
+      "ARNFormats": [
+        "arn:${Partition}:robomaker:${Region}:${Account}:deployment-fleet/${FleetName}/${CreatedOnEpoch}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "deploymentJob",
+      "ARNFormats": [
+        "arn:${Partition}:robomaker:${Region}:${Account}:deployment-job/${DeploymentJobId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "robot",
+      "ARNFormats": [
+        "arn:${Partition}:robomaker:${Region}:${Account}:robot/${RobotName}/${CreatedOnEpoch}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "robotApplication",
+      "ARNFormats": [
+        "arn:${Partition}:robomaker:${Region}:${Account}:robot-application/${ApplicationName}/${CreatedOnEpoch}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "simulationApplication",
+      "ARNFormats": [
+        "arn:${Partition}:robomaker:${Region}:${Account}:simulation-application/${ApplicationName}/${CreatedOnEpoch}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "simulationJob",
+      "ARNFormats": [
+        "arn:${Partition}:robomaker:${Region}:${Account}:simulation-job/${SimulationJobId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "simulationJobBatch",
+      "ARNFormats": [
+        "arn:${Partition}:robomaker:${Region}:${Account}:simulation-job-batch/${SimulationJobBatchId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "world",
+      "ARNFormats": [
+        "arn:${Partition}:robomaker:${Region}:${Account}:world/${WorldId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "worldExportJob",
+      "ARNFormats": [
+        "arn:${Partition}:robomaker:${Region}:${Account}:world-export-job/${WorldExportJobId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "worldGenerationJob",
+      "ARNFormats": [
+        "arn:${Partition}:robomaker:${Region}:${Account}:world-generation-job/${WorldGenerationJobId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "worldTemplate",
+      "ARNFormats": [
+        "arn:${Partition}:robomaker:${Region}:${Account}:world-template/${WorldTemplateJobId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

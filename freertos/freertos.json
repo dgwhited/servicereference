@@ -1,0 +1,139 @@
+{
+  "Name": "freertos",
+  "Actions": [
+    {
+      "Name": "CreateSoftwareConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSubscription",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteSoftwareConfiguration",
+      "Resources": [
+        {
+          "Name": "configuration"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeHardwarePlatform"
+    },
+    {
+      "Name": "DescribeSoftwareConfiguration",
+      "Resources": [
+        {
+          "Name": "configuration"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSubscription",
+      "Resources": [
+        {
+          "Name": "subscription"
+        }
+      ]
+    },
+    {
+      "Name": "GetEmpPatchUrl"
+    },
+    {
+      "Name": "GetSoftwareURL"
+    },
+    {
+      "Name": "GetSoftwareURLForConfiguration"
+    },
+    {
+      "Name": "GetSubscriptionBillingAmount"
+    },
+    {
+      "Name": "ListFreeRTOSVersions"
+    },
+    {
+      "Name": "ListHardwarePlatforms"
+    },
+    {
+      "Name": "ListHardwareVendors"
+    },
+    {
+      "Name": "ListSoftwareConfigurations"
+    },
+    {
+      "Name": "ListSoftwarePatches"
+    },
+    {
+      "Name": "ListSubscriptionEmails"
+    },
+    {
+      "Name": "ListSubscriptions"
+    },
+    {
+      "Name": "UpdateEmailRecipients"
+    },
+    {
+      "Name": "UpdateSoftwareConfiguration",
+      "Resources": [
+        {
+          "Name": "configuration"
+        }
+      ]
+    },
+    {
+      "Name": "VerifyEmail"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "configuration",
+      "ARNFormats": [
+        "arn:${Partition}:freertos:${Region}:${Account}:configuration/${ConfigurationName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "subscription",
+      "ARNFormats": [
+        "arn:${Partition}:freertos:${Region}:${Account}:subscription/${SubscriptionID}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

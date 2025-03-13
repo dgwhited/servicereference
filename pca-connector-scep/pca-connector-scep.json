@@ -1,0 +1,138 @@
+{
+  "Name": "pca-connector-scep",
+  "Actions": [
+    {
+      "Name": "CreateChallenge",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateConnector",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteChallenge",
+      "Resources": [
+        {
+          "Name": "Challenge"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConnector",
+      "Resources": [
+        {
+          "Name": "Connector"
+        }
+      ]
+    },
+    {
+      "Name": "GetChallengeMetadata",
+      "Resources": [
+        {
+          "Name": "Challenge"
+        }
+      ]
+    },
+    {
+      "Name": "GetChallengePassword",
+      "Resources": [
+        {
+          "Name": "Challenge"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnector",
+      "Resources": [
+        {
+          "Name": "Connector"
+        }
+      ]
+    },
+    {
+      "Name": "ListChallengeMetadata"
+    },
+    {
+      "Name": "ListConnectors"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Challenge"
+        },
+        {
+          "Name": "Connector"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Challenge"
+        },
+        {
+          "Name": "Connector"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Challenge",
+      "ARNFormats": [
+        "arn:${Partition}:pca-connector-scep:${Region}:${Account}:connector/${ConnectorId}/challenge/${ChallengeId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Connector",
+      "ARNFormats": [
+        "arn:${Partition}:pca-connector-scep:${Region}:${Account}:connector/${ConnectorId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

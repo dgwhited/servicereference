@@ -1,0 +1,275 @@
+{
+  "Name": "scn",
+  "Actions": [
+    {
+      "Name": "AssignAdminPermissionsToUser",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBillOfMaterialsImportJob",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataIntegrationFlow",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataLakeDataset",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "CreateInstance",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSSOApplication",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataIntegrationFlow",
+      "Resources": [
+        {
+          "Name": "data-integration-flow"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataLakeDataset",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInstance",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSSOApplication",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeInstance",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "GetBillOfMaterialsImportJob",
+      "Resources": [
+        {
+          "Name": "bill-of-materials-import-job"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataIntegrationFlow",
+      "Resources": [
+        {
+          "Name": "data-integration-flow"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataLakeDataset",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "GetInstance",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "ListAdminUsers",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataIntegrationFlows",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataLakeDatasets",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "ListInstances",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveAdminPermissionsForUser",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "SendDataIntegrationEvent",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataIntegrationFlow",
+      "Resources": [
+        {
+          "Name": "data-integration-flow"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataLakeDataset",
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInstance",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "bill-of-materials-import-job",
+      "ARNFormats": [
+        "arn:${Partition}:scn:${Region}:${Account}:instance/${InstanceId}/bill-of-materials-import-job/${JobId}"
+      ]
+    },
+    {
+      "Name": "data-integration-flow",
+      "ARNFormats": [
+        "arn:${Partition}:scn:${Region}:${Account}:instance/${InstanceId}/data-integration-flows/${FlowName}"
+      ]
+    },
+    {
+      "Name": "dataset",
+      "ARNFormats": [
+        "arn:${Partition}:scn:${Region}:${Account}:instance/${InstanceId}/namespaces/${Namespace}/datasets/${DatasetName}"
+      ]
+    },
+    {
+      "Name": "instance",
+      "ARNFormats": [
+        "arn:${Partition}:scn:${Region}:${Account}:instance/${InstanceId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

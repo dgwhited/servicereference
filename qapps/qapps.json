@@ -1,0 +1,598 @@
+{
+  "Name": "qapps",
+  "Actions": [
+    {
+      "Name": "AssociateLibraryItemReview",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:UserIsAppOwner"
+      ],
+      "Resources": [
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateQAppWithUser",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:UserIsAppOwner"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "BatchCreateCategory",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDeleteCategory",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "BatchUpdateCategory",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "CopyQApp",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:UserIsAppOwner"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLibraryItem",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:UserIsAppOwner"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLibraryItemReview",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:UserIsAppOwner"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePresignedUrl",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:SessionIsShared",
+        "qapps:UserIsAppOwner",
+        "qapps:UserIsSessionModerator"
+      ],
+      "Resources": [
+        {
+          "Name": "qapp"
+        },
+        {
+          "Name": "qapp-session"
+        }
+      ]
+    },
+    {
+      "Name": "CreateQApp",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSubscriptionToken",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLibraryItem",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:UserIsAppOwner"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteQApp",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:UserIsAppOwner"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeQAppPermissions",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:UserIsAppOwner"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateLibraryItemReview",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:UserIsAppOwner"
+      ],
+      "Resources": [
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateQAppFromUser",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:UserIsAppOwner"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "ExportQAppSessionData",
+      "Resources": [
+        {
+          "Name": "qapp-session"
+        }
+      ]
+    },
+    {
+      "Name": "GetLibraryItem",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:UserIsAppOwner"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "GetQApp",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:UserIsAppOwner"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "GetQAppSession",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:SessionIsShared",
+        "qapps:UserIsAppOwner",
+        "qapps:UserIsSessionModerator"
+      ],
+      "Resources": [
+        {
+          "Name": "qapp-session"
+        }
+      ]
+    },
+    {
+      "Name": "GetQAppSessionMetadata",
+      "Resources": [
+        {
+          "Name": "qapp-session"
+        }
+      ]
+    },
+    {
+      "Name": "ImportDocument",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:SessionIsShared",
+        "qapps:UserIsAppOwner",
+        "qapps:UserIsSessionModerator"
+      ],
+      "Resources": [
+        {
+          "Name": "qapp"
+        },
+        {
+          "Name": "qapp-session"
+        }
+      ]
+    },
+    {
+      "Name": "ImportDocumentToQApp",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:UserIsAppOwner"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "ImportDocumentToQAppSession",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:SessionIsShared",
+        "qapps:UserIsAppOwner",
+        "qapps:UserIsSessionModerator"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "qapp-session"
+        }
+      ]
+    },
+    {
+      "Name": "ListCategories",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "ListLibraryItems",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "ListQAppSessionData",
+      "Resources": [
+        {
+          "Name": "qapp-session"
+        }
+      ]
+    },
+    {
+      "Name": "ListQApps",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "qapp"
+        },
+        {
+          "Name": "qapp-session"
+        }
+      ]
+    },
+    {
+      "Name": "PredictProblemStatementFromConversation",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "PredictQApp",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "PredictQAppFromProblemStatement",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "StartQAppSession",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "qapps:AppIsPublished",
+        "qapps:UserIsAppOwner"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "StopQAppSession",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:SessionIsShared",
+        "qapps:UserIsAppOwner",
+        "qapps:UserIsSessionModerator"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "qapp-session"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "qapp"
+        },
+        {
+          "Name": "qapp-session"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "qapp"
+        },
+        {
+          "Name": "qapp-session"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLibraryItem",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:UserIsAppOwner"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLibraryItemMetadata",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished"
+      ],
+      "Resources": [
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateQApp",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:UserIsAppOwner"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateQAppPermissions",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:UserIsAppOwner"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "qapp"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateQAppSession",
+      "ActionConditionKeys": [
+        "qapps:AppIsPublished",
+        "qapps:SessionIsShared",
+        "qapps:UserIsAppOwner",
+        "qapps:UserIsSessionModerator"
+      ],
+      "Resources": [
+        {
+          "Name": "qapp-session"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateQAppSessionMetadata",
+      "Resources": [
+        {
+          "Name": "qapp-session"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "qapps:AppIsPublished",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "qapps:SessionIsShared",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "qapps:UserIsAppOwner",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "qapps:UserIsSessionModerator",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "application",
+      "ARNFormats": [
+        "arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId}"
+      ]
+    },
+    {
+      "Name": "qapp",
+      "ARNFormats": [
+        "arn:${Partition}:qapps:${Region}:${Account}:application/${ApplicationId}/qapp/${AppId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "qapp-session",
+      "ARNFormats": [
+        "arn:${Partition}:qapps:${Region}:${Account}:application/${ApplicationId}/qapp/${AppId}/session/${SessionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

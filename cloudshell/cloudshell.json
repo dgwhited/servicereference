@@ -1,0 +1,117 @@
+{
+  "Name": "cloudshell",
+  "Actions": [
+    {
+      "Name": "ApproveCommand",
+      "Resources": [
+        {
+          "Name": "Environment"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEnvironment",
+      "ActionConditionKeys": [
+        "cloudshell:SecurityGroupIds",
+        "cloudshell:SubnetIds",
+        "cloudshell:VpcIds"
+      ]
+    },
+    {
+      "Name": "CreateSession",
+      "Resources": [
+        {
+          "Name": "Environment"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEnvironment",
+      "Resources": [
+        {
+          "Name": "Environment"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEnvironments"
+    },
+    {
+      "Name": "GetEnvironmentStatus",
+      "Resources": [
+        {
+          "Name": "Environment"
+        }
+      ]
+    },
+    {
+      "Name": "GetFileDownloadUrls",
+      "Resources": [
+        {
+          "Name": "Environment"
+        }
+      ]
+    },
+    {
+      "Name": "GetFileUploadUrls",
+      "Resources": [
+        {
+          "Name": "Environment"
+        }
+      ]
+    },
+    {
+      "Name": "PutCredentials",
+      "Resources": [
+        {
+          "Name": "Environment"
+        }
+      ]
+    },
+    {
+      "Name": "StartEnvironment",
+      "Resources": [
+        {
+          "Name": "Environment"
+        }
+      ]
+    },
+    {
+      "Name": "StopEnvironment",
+      "Resources": [
+        {
+          "Name": "Environment"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "cloudshell:SecurityGroupIds",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "cloudshell:SubnetIds",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "cloudshell:VpcIds",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Environment",
+      "ARNFormats": [
+        "arn:${Partition}:cloudshell:${Region}:${Account}:environment/${EnvironmentId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

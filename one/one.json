@@ -1,0 +1,336 @@
+{
+  "Name": "one",
+  "Actions": [
+    {
+      "Name": "CreateDeviceActivationQrCode",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device-instance"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDeviceConfigurationTemplate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateDeviceInstance",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateDeviceInstanceConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device-instance"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSite",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteAssociatedDevice",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device-instance"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeviceConfigurationTemplate",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device-configuration-template"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeviceInstance",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device-instance"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSite",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "site"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteUser",
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeviceConfigurationTemplate",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device-configuration-template"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeviceInstance",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device-instance"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeviceInstanceConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "configuration"
+        }
+      ]
+    },
+    {
+      "Name": "GetSite",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "site"
+        }
+      ]
+    },
+    {
+      "Name": "GetSiteAddress",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "site"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeviceConfigurationTemplates"
+    },
+    {
+      "Name": "ListDeviceInstances"
+    },
+    {
+      "Name": "ListSites"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device-configuration-template"
+        },
+        {
+          "Name": "device-instance"
+        },
+        {
+          "Name": "site"
+        }
+      ]
+    },
+    {
+      "Name": "ListUsers"
+    },
+    {
+      "Name": "RebootDevice",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device-instance"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "device-configuration-template"
+        },
+        {
+          "Name": "device-instance"
+        },
+        {
+          "Name": "site"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "device-configuration-template"
+        },
+        {
+          "Name": "device-instance"
+        },
+        {
+          "Name": "site"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDeviceConfigurationTemplate",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device-configuration-template"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDeviceInstance",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "device-instance"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSite",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "site"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSiteAddress",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "site"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "configuration",
+      "ARNFormats": [
+        "arn:${Partition}:one:${Region}:${Account}:device-instance/${DeviceInstanceId}/configuration/${Version}"
+      ]
+    },
+    {
+      "Name": "device-configuration-template",
+      "ARNFormats": [
+        "arn:${Partition}:one:${Region}:${Account}:device-configuration-template/${TemplateId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "device-instance",
+      "ARNFormats": [
+        "arn:${Partition}:one:${Region}:${Account}:device-instance/${DeviceInstanceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "site",
+      "ARNFormats": [
+        "arn:${Partition}:one:${Region}:${Account}:site/${SiteId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "user",
+      "ARNFormats": [
+        "arn:${Partition}:one:${Region}:${Account}:user/${UserId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

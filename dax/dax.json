@@ -1,0 +1,219 @@
+{
+  "Name": "dax",
+  "Actions": [
+    {
+      "Name": "BatchGetItem",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "BatchWriteItem",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "ConditionCheckItem",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCluster",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "CreateParameterGroup"
+    },
+    {
+      "Name": "CreateSubnetGroup"
+    },
+    {
+      "Name": "DecreaseReplicationFactor",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCluster",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteItem",
+      "ActionConditionKeys": [
+        "dax:EnclosingOperation"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteParameterGroup"
+    },
+    {
+      "Name": "DeleteSubnetGroup"
+    },
+    {
+      "Name": "DescribeClusters",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDefaultParameters"
+    },
+    {
+      "Name": "DescribeEvents"
+    },
+    {
+      "Name": "DescribeParameterGroups"
+    },
+    {
+      "Name": "DescribeParameters"
+    },
+    {
+      "Name": "DescribeSubnetGroups"
+    },
+    {
+      "Name": "GetItem",
+      "ActionConditionKeys": [
+        "dax:EnclosingOperation"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "IncreaseReplicationFactor",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "ListTags",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "PutItem",
+      "ActionConditionKeys": [
+        "dax:EnclosingOperation"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "Query",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "RebootNode",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "Scan",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCluster",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateItem",
+      "ActionConditionKeys": [
+        "dax:EnclosingOperation"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateParameterGroup"
+    },
+    {
+      "Name": "UpdateSubnetGroup"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "dax:EnclosingOperation",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "application",
+      "ARNFormats": [
+        "arn:${Partition}:dax:${Region}:${Account}:cache/${ClusterName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

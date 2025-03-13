@@ -1,0 +1,294 @@
+{
+  "Name": "identitystore",
+  "Actions": [
+    {
+      "Name": "CreateGroup",
+      "Resources": [
+        {
+          "Name": "Identitystore"
+        }
+      ]
+    },
+    {
+      "Name": "CreateGroupMembership",
+      "Resources": [
+        {
+          "Name": "Group"
+        },
+        {
+          "Name": "Identitystore"
+        },
+        {
+          "Name": "User"
+        }
+      ]
+    },
+    {
+      "Name": "CreateUser",
+      "Resources": [
+        {
+          "Name": "Identitystore"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGroup",
+      "Resources": [
+        {
+          "Name": "Group"
+        },
+        {
+          "Name": "Identitystore"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGroupMembership",
+      "Resources": [
+        {
+          "Name": "Group"
+        },
+        {
+          "Name": "GroupMembership"
+        },
+        {
+          "Name": "Identitystore"
+        },
+        {
+          "Name": "User"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteUser",
+      "Resources": [
+        {
+          "Name": "Identitystore"
+        },
+        {
+          "Name": "User"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeGroup",
+      "Resources": [
+        {
+          "Name": "Group"
+        },
+        {
+          "Name": "Identitystore"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeGroupMembership",
+      "Resources": [
+        {
+          "Name": "Group"
+        },
+        {
+          "Name": "GroupMembership"
+        },
+        {
+          "Name": "Identitystore"
+        },
+        {
+          "Name": "User"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeUser",
+      "Resources": [
+        {
+          "Name": "Identitystore"
+        },
+        {
+          "Name": "User"
+        }
+      ]
+    },
+    {
+      "Name": "GetGroupId",
+      "Resources": [
+        {
+          "Name": "Group"
+        },
+        {
+          "Name": "Identitystore"
+        }
+      ]
+    },
+    {
+      "Name": "GetGroupMembershipId",
+      "Resources": [
+        {
+          "Name": "Group"
+        },
+        {
+          "Name": "GroupMembership"
+        },
+        {
+          "Name": "Identitystore"
+        },
+        {
+          "Name": "User"
+        }
+      ]
+    },
+    {
+      "Name": "GetUserId",
+      "Resources": [
+        {
+          "Name": "Identitystore"
+        },
+        {
+          "Name": "User"
+        }
+      ]
+    },
+    {
+      "Name": "IsMemberInGroups",
+      "Resources": [
+        {
+          "Name": "AllGroupMemberships"
+        },
+        {
+          "Name": "Group"
+        },
+        {
+          "Name": "Identitystore"
+        },
+        {
+          "Name": "User"
+        }
+      ]
+    },
+    {
+      "Name": "ListGroupMemberships",
+      "Resources": [
+        {
+          "Name": "AllGroupMemberships"
+        },
+        {
+          "Name": "Group"
+        },
+        {
+          "Name": "Identitystore"
+        }
+      ]
+    },
+    {
+      "Name": "ListGroupMembershipsForMember",
+      "Resources": [
+        {
+          "Name": "AllGroupMemberships"
+        },
+        {
+          "Name": "Identitystore"
+        },
+        {
+          "Name": "User"
+        }
+      ]
+    },
+    {
+      "Name": "ListGroups",
+      "Resources": [
+        {
+          "Name": "AllGroups"
+        },
+        {
+          "Name": "Identitystore"
+        }
+      ]
+    },
+    {
+      "Name": "ListUsers",
+      "Resources": [
+        {
+          "Name": "AllUsers"
+        },
+        {
+          "Name": "Identitystore"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGroup",
+      "Resources": [
+        {
+          "Name": "Group"
+        },
+        {
+          "Name": "Identitystore"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateUser",
+      "Resources": [
+        {
+          "Name": "Identitystore"
+        },
+        {
+          "Name": "User"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "identitystore:UserId",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "AllGroupMemberships",
+      "ARNFormats": [
+        "arn:${Partition}:identitystore:::membership/*"
+      ]
+    },
+    {
+      "Name": "AllGroups",
+      "ARNFormats": [
+        "arn:${Partition}:identitystore:::group/*"
+      ]
+    },
+    {
+      "Name": "AllUsers",
+      "ARNFormats": [
+        "arn:${Partition}:identitystore:::user/*"
+      ]
+    },
+    {
+      "Name": "Group",
+      "ARNFormats": [
+        "arn:${Partition}:identitystore:::group/${GroupId}"
+      ]
+    },
+    {
+      "Name": "GroupMembership",
+      "ARNFormats": [
+        "arn:${Partition}:identitystore:::membership/${MembershipId}"
+      ]
+    },
+    {
+      "Name": "Identitystore",
+      "ARNFormats": [
+        "arn:${Partition}:identitystore::${Account}:identitystore/${IdentityStoreId}"
+      ]
+    },
+    {
+      "Name": "User",
+      "ARNFormats": [
+        "arn:${Partition}:identitystore:::user/${UserId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

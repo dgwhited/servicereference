@@ -1,0 +1,871 @@
+{
+  "Name": "backup",
+  "Actions": [
+    {
+      "Name": "CancelLegalHold",
+      "Resources": [
+        {
+          "Name": "legalHold"
+        }
+      ]
+    },
+    {
+      "Name": "CopyFromBackupVault",
+      "ActionConditionKeys": [
+        "backup:CopyTargetOrgPaths",
+        "backup:CopyTargets"
+      ],
+      "Resources": [
+        {
+          "Name": "recoveryPoint"
+        }
+      ]
+    },
+    {
+      "Name": "CopyIntoBackupVault",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBackupPlan",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "backupPlan"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBackupSelection",
+      "Resources": [
+        {
+          "Name": "backupPlan"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBackupVault",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFramework",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "framework"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLegalHold",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "legalHold"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLogicallyAirGappedBackupVault",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "backup:MaxRetentionDays",
+        "backup:MinRetentionDays"
+      ],
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "CreateReportPlan",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "backup:FrameworkArns"
+      ],
+      "Resources": [
+        {
+          "Name": "reportPlan"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRestoreTestingPlan",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "restoreTestingPlan"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRestoreTestingSelection",
+      "Resources": [
+        {
+          "Name": "restoreTestingPlan"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBackupPlan",
+      "Resources": [
+        {
+          "Name": "backupPlan"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBackupSelection",
+      "Resources": [
+        {
+          "Name": "backupPlan"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBackupVault",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBackupVaultAccessPolicy",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBackupVaultLockConfiguration",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBackupVaultNotifications",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBackupVaultSharingPolicy",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFramework",
+      "Resources": [
+        {
+          "Name": "framework"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRecoveryPoint",
+      "Resources": [
+        {
+          "Name": "recoveryPoint"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteReportPlan",
+      "Resources": [
+        {
+          "Name": "reportPlan"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRestoreTestingPlan",
+      "Resources": [
+        {
+          "Name": "restoreTestingPlan"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRestoreTestingSelection",
+      "Resources": [
+        {
+          "Name": "restoreTestingPlan"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeBackupJob"
+    },
+    {
+      "Name": "DescribeBackupVault",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCopyJob"
+    },
+    {
+      "Name": "DescribeFramework",
+      "Resources": [
+        {
+          "Name": "framework"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeGlobalSettings"
+    },
+    {
+      "Name": "DescribeProtectedResource"
+    },
+    {
+      "Name": "DescribeRecoveryPoint",
+      "Resources": [
+        {
+          "Name": "recoveryPoint"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRegionSettings"
+    },
+    {
+      "Name": "DescribeReportJob"
+    },
+    {
+      "Name": "DescribeReportPlan",
+      "Resources": [
+        {
+          "Name": "reportPlan"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRestoreJob"
+    },
+    {
+      "Name": "DisassociateRecoveryPoint",
+      "Resources": [
+        {
+          "Name": "recoveryPoint"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateRecoveryPointFromParent",
+      "Resources": [
+        {
+          "Name": "recoveryPoint"
+        }
+      ]
+    },
+    {
+      "Name": "ExportBackupPlanTemplate"
+    },
+    {
+      "Name": "GetBackupPlan",
+      "Resources": [
+        {
+          "Name": "backupPlan"
+        }
+      ]
+    },
+    {
+      "Name": "GetBackupPlanFromJSON"
+    },
+    {
+      "Name": "GetBackupPlanFromTemplate"
+    },
+    {
+      "Name": "GetBackupSelection",
+      "Resources": [
+        {
+          "Name": "backupPlan"
+        }
+      ]
+    },
+    {
+      "Name": "GetBackupVaultAccessPolicy",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "GetBackupVaultNotifications",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "GetBackupVaultSharingPolicy",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "GetLegalHold",
+      "Resources": [
+        {
+          "Name": "legalHold"
+        }
+      ]
+    },
+    {
+      "Name": "GetRecoveryPointIndexDetails",
+      "Resources": [
+        {
+          "Name": "recoveryPoint"
+        }
+      ]
+    },
+    {
+      "Name": "GetRecoveryPointRestoreMetadata",
+      "Resources": [
+        {
+          "Name": "recoveryPoint"
+        }
+      ]
+    },
+    {
+      "Name": "GetRestoreJobMetadata"
+    },
+    {
+      "Name": "GetRestoreTestingInferredMetadata"
+    },
+    {
+      "Name": "GetRestoreTestingPlan",
+      "Resources": [
+        {
+          "Name": "restoreTestingPlan"
+        }
+      ]
+    },
+    {
+      "Name": "GetRestoreTestingSelection",
+      "Resources": [
+        {
+          "Name": "restoreTestingPlan"
+        }
+      ]
+    },
+    {
+      "Name": "GetSupportedResourceTypes"
+    },
+    {
+      "Name": "ListBackupJobSummaries"
+    },
+    {
+      "Name": "ListBackupJobs"
+    },
+    {
+      "Name": "ListBackupPlanTemplates"
+    },
+    {
+      "Name": "ListBackupPlanVersions",
+      "Resources": [
+        {
+          "Name": "backupPlan"
+        }
+      ]
+    },
+    {
+      "Name": "ListBackupPlans"
+    },
+    {
+      "Name": "ListBackupSelections",
+      "Resources": [
+        {
+          "Name": "backupPlan"
+        }
+      ]
+    },
+    {
+      "Name": "ListBackupVaults"
+    },
+    {
+      "Name": "ListCopyJobSummaries"
+    },
+    {
+      "Name": "ListCopyJobs"
+    },
+    {
+      "Name": "ListFrameworks"
+    },
+    {
+      "Name": "ListIndexedRecoveryPoints"
+    },
+    {
+      "Name": "ListIndexedRecoveryPointsForSearch"
+    },
+    {
+      "Name": "ListLegalHolds"
+    },
+    {
+      "Name": "ListProtectedResources"
+    },
+    {
+      "Name": "ListProtectedResourcesByBackupVault",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "ListRecoveryPointsByBackupVault",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "ListRecoveryPointsByLegalHold",
+      "Resources": [
+        {
+          "Name": "legalHold"
+        }
+      ]
+    },
+    {
+      "Name": "ListRecoveryPointsByResource"
+    },
+    {
+      "Name": "ListReportJobs"
+    },
+    {
+      "Name": "ListReportPlans"
+    },
+    {
+      "Name": "ListRestoreJobSummaries"
+    },
+    {
+      "Name": "ListRestoreJobs"
+    },
+    {
+      "Name": "ListRestoreJobsByProtectedResource"
+    },
+    {
+      "Name": "ListRestoreTestingPlans"
+    },
+    {
+      "Name": "ListRestoreTestingSelections",
+      "Resources": [
+        {
+          "Name": "restoreTestingPlan"
+        }
+      ]
+    },
+    {
+      "Name": "ListTags",
+      "Resources": [
+        {
+          "Name": "backupPlan"
+        },
+        {
+          "Name": "backupVault"
+        },
+        {
+          "Name": "framework"
+        },
+        {
+          "Name": "legalHold"
+        },
+        {
+          "Name": "recoveryPoint"
+        },
+        {
+          "Name": "reportPlan"
+        },
+        {
+          "Name": "restoreTestingPlan"
+        }
+      ]
+    },
+    {
+      "Name": "PutBackupVaultAccessPolicy",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "PutBackupVaultLockConfiguration",
+      "ActionConditionKeys": [
+        "backup:ChangeableForDays",
+        "backup:MaxRetentionDays",
+        "backup:MinRetentionDays"
+      ],
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "PutBackupVaultNotifications",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "PutBackupVaultSharingPolicy",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "PutRestoreValidationResult"
+    },
+    {
+      "Name": "SearchRecoveryPoint",
+      "Resources": [
+        {
+          "Name": "recoveryPoint"
+        }
+      ]
+    },
+    {
+      "Name": "StartBackupJob",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
+      "Name": "StartCopyJob",
+      "Resources": [
+        {
+          "Name": "recoveryPoint"
+        }
+      ]
+    },
+    {
+      "Name": "StartReportJob",
+      "Resources": [
+        {
+          "Name": "reportPlan"
+        }
+      ]
+    },
+    {
+      "Name": "StartRestoreJob",
+      "Resources": [
+        {
+          "Name": "recoveryPoint"
+        }
+      ]
+    },
+    {
+      "Name": "StopBackupJob"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "backupPlan"
+        },
+        {
+          "Name": "backupVault"
+        },
+        {
+          "Name": "framework"
+        },
+        {
+          "Name": "legalHold"
+        },
+        {
+          "Name": "recoveryPoint"
+        },
+        {
+          "Name": "reportPlan"
+        },
+        {
+          "Name": "restoreTestingPlan"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "backupPlan"
+        },
+        {
+          "Name": "backupVault"
+        },
+        {
+          "Name": "framework"
+        },
+        {
+          "Name": "legalHold"
+        },
+        {
+          "Name": "recoveryPoint"
+        },
+        {
+          "Name": "reportPlan"
+        },
+        {
+          "Name": "restoreTestingPlan"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBackupPlan",
+      "Resources": [
+        {
+          "Name": "backupPlan"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFramework",
+      "Resources": [
+        {
+          "Name": "framework"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGlobalSettings"
+    },
+    {
+      "Name": "UpdateRecoveryPointIndexSettings",
+      "ActionConditionKeys": [
+        "backup:Index"
+      ],
+      "Resources": [
+        {
+          "Name": "recoveryPoint"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRecoveryPointLifecycle",
+      "Resources": [
+        {
+          "Name": "recoveryPoint"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRegionSettings"
+    },
+    {
+      "Name": "UpdateReportPlan",
+      "ActionConditionKeys": [
+        "backup:FrameworkArns"
+      ],
+      "Resources": [
+        {
+          "Name": "reportPlan"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRestoreTestingPlan",
+      "Resources": [
+        {
+          "Name": "restoreTestingPlan"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRestoreTestingSelection",
+      "Resources": [
+        {
+          "Name": "restoreTestingPlan"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "backup:ChangeableForDays",
+      "Types": [
+        "Numeric"
+      ]
+    },
+    {
+      "Name": "backup:CopyTargetOrgPaths",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "backup:CopyTargets",
+      "Types": [
+        "ArrayOfARN"
+      ]
+    },
+    {
+      "Name": "backup:FrameworkArns",
+      "Types": [
+        "ArrayOfARN"
+      ]
+    },
+    {
+      "Name": "backup:Index",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "backup:MaxRetentionDays",
+      "Types": [
+        "Numeric"
+      ]
+    },
+    {
+      "Name": "backup:MinRetentionDays",
+      "Types": [
+        "Numeric"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "backupPlan",
+      "ARNFormats": [
+        "arn:${Partition}:backup:${Region}:${Account}:backup-plan:${BackupPlanId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "backupVault",
+      "ARNFormats": [
+        "arn:${Partition}:backup:${Region}:${Account}:backup-vault:${BackupVaultName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "framework",
+      "ARNFormats": [
+        "arn:${Partition}:backup:${Region}:${Account}:framework:${FrameworkName}-${FrameworkId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "legalHold",
+      "ARNFormats": [
+        "arn:${Partition}:backup:${Region}:${Account}:legal-hold:${LegalHoldId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "recoveryPoint",
+      "ARNFormats": [
+        "arn:${Partition}:${Vendor}:${Region}:*:${ResourceType}:${RecoveryPointId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "reportPlan",
+      "ARNFormats": [
+        "arn:${Partition}:backup:${Region}:${Account}:report-plan:${ReportPlanName}-${ReportPlanId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "restoreTestingPlan",
+      "ARNFormats": [
+        "arn:${Partition}:backup:${Region}:${Account}:restore-testing-plan:${RestoreTestingPlanName}-${RestoreTestingPlanId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

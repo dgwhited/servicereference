@@ -1,0 +1,301 @@
+{
+  "Name": "detective",
+  "Actions": [
+    {
+      "Name": "AcceptInvitation",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetGraphMemberDatasources",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetMembershipDatasources"
+    },
+    {
+      "Name": "CreateGraph",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateMembers",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGraph",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMembers",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeOrganizationConfiguration",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "DisableOrganizationAdminAccount"
+    },
+    {
+      "Name": "DisassociateMembership",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "EnableOrganizationAdminAccount"
+    },
+    {
+      "Name": "GetFreeTrialEligibility",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "GetGraphIngestState",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "GetInvestigation",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "GetMembers",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "GetPricingInformation"
+    },
+    {
+      "Name": "GetUsageInformation",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "InvokeAssistant",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "ListDatasourcePackages",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "ListGraphs"
+    },
+    {
+      "Name": "ListHighDegreeEntities",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "ListIndicators",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "ListInvestigations",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "ListInvitations"
+    },
+    {
+      "Name": "ListMembers",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "ListOrganizationAdminAccount"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "RejectInvitation",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "SearchGraph",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "StartInvestigation",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "StartMonitoringMember",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDatasourcePackages",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInvestigationState",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateOrganizationConfiguration",
+      "Resources": [
+        {
+          "Name": "Graph"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Graph",
+      "ARNFormats": [
+        "arn:${Partition}:detective:${Region}:${Account}:graph:${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

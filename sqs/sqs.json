@@ -1,0 +1,203 @@
+{
+  "Name": "sqs",
+  "Actions": [
+    {
+      "Name": "AddPermission",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "CancelMessageMoveTask",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "ChangeMessageVisibility",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "CreateQueue",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMessage",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteQueue",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueueAttributes",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueueUrl",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeadLetterSourceQueues",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "ListMessageMoveTasks",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "ListQueueTags",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "ListQueues"
+    },
+    {
+      "Name": "PurgeQueue",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "ReceiveMessage",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "RemovePermission",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "SendMessage",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "SetQueueAttributes",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "StartMessageMoveTask",
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "TagQueue",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    },
+    {
+      "Name": "UntagQueue",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "queue",
+      "ARNFormats": [
+        "arn:${Partition}:sqs:${Region}:${Account}:${QueueName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

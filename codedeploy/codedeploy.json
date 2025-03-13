@@ -1,0 +1,396 @@
+{
+  "Name": "codedeploy",
+  "Actions": [
+    {
+      "Name": "AddTagsToOnPremisesInstances",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetApplicationRevisions",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetApplications",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetDeploymentGroups",
+      "Resources": [
+        {
+          "Name": "deploymentgroup"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetDeploymentInstances",
+      "Resources": [
+        {
+          "Name": "deploymentgroup"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetDeploymentTargets"
+    },
+    {
+      "Name": "BatchGetDeployments",
+      "Resources": [
+        {
+          "Name": "deploymentgroup"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetOnPremisesInstances",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "ContinueDeployment"
+    },
+    {
+      "Name": "CreateApplication",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCloudFormationDeployment"
+    },
+    {
+      "Name": "CreateDeployment",
+      "Resources": [
+        {
+          "Name": "deploymentgroup"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDeploymentConfig",
+      "Resources": [
+        {
+          "Name": "deploymentconfig"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDeploymentGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "deploymentgroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApplication",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeploymentConfig",
+      "Resources": [
+        {
+          "Name": "deploymentconfig"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeploymentGroup",
+      "Resources": [
+        {
+          "Name": "deploymentgroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGitHubAccountToken"
+    },
+    {
+      "Name": "DeleteResourcesByExternalId"
+    },
+    {
+      "Name": "DeregisterOnPremisesInstance",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "GetApplication",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "GetApplicationRevision",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeployment",
+      "Resources": [
+        {
+          "Name": "deploymentgroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeploymentConfig",
+      "Resources": [
+        {
+          "Name": "deploymentconfig"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeploymentGroup",
+      "Resources": [
+        {
+          "Name": "deploymentgroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeploymentInstance",
+      "Resources": [
+        {
+          "Name": "deploymentgroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeploymentTarget"
+    },
+    {
+      "Name": "GetOnPremisesInstance",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplicationRevisions",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplications"
+    },
+    {
+      "Name": "ListDeploymentConfigs"
+    },
+    {
+      "Name": "ListDeploymentGroups",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeploymentInstances",
+      "Resources": [
+        {
+          "Name": "deploymentgroup"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeploymentTargets"
+    },
+    {
+      "Name": "ListDeployments",
+      "Resources": [
+        {
+          "Name": "deploymentgroup"
+        }
+      ]
+    },
+    {
+      "Name": "ListGitHubAccountTokenNames"
+    },
+    {
+      "Name": "ListOnPremisesInstances"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "deploymentgroup"
+        }
+      ]
+    },
+    {
+      "Name": "PutLifecycleEventHookExecutionStatus"
+    },
+    {
+      "Name": "RegisterApplicationRevision",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterOnPremisesInstance",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveTagsFromOnPremisesInstances",
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ]
+    },
+    {
+      "Name": "SkipWaitTimeForInstanceTermination"
+    },
+    {
+      "Name": "StopDeployment"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "deploymentgroup"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "deploymentgroup"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateApplication",
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDeploymentGroup",
+      "Resources": [
+        {
+          "Name": "deploymentgroup"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "application",
+      "ARNFormats": [
+        "arn:${Partition}:codedeploy:${Region}:${Account}:application:${ApplicationName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "deploymentconfig",
+      "ARNFormats": [
+        "arn:${Partition}:codedeploy:${Region}:${Account}:deploymentconfig:${DeploymentConfigurationName}"
+      ]
+    },
+    {
+      "Name": "deploymentgroup",
+      "ARNFormats": [
+        "arn:${Partition}:codedeploy:${Region}:${Account}:deploymentgroup:${ApplicationName}/${DeploymentGroupName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "instance",
+      "ARNFormats": [
+        "arn:${Partition}:codedeploy:${Region}:${Account}:instance:${InstanceName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,128 @@
+{
+  "Name": "identity-sync",
+  "Actions": [
+    {
+      "Name": "AllowVendedLogDeliveryForResource",
+      "Resources": [
+        {
+          "Name": "SyncProfileResource"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSyncFilter",
+      "Resources": [
+        {
+          "Name": "SyncProfileResource"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSyncProfile"
+    },
+    {
+      "Name": "CreateSyncTarget",
+      "Resources": [
+        {
+          "Name": "SyncProfileResource"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSyncFilter",
+      "Resources": [
+        {
+          "Name": "SyncProfileResource"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSyncProfile",
+      "Resources": [
+        {
+          "Name": "SyncProfileResource"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSyncTarget",
+      "Resources": [
+        {
+          "Name": "SyncProfileResource"
+        },
+        {
+          "Name": "SyncTargetResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetSyncProfile",
+      "Resources": [
+        {
+          "Name": "SyncProfileResource"
+        }
+      ]
+    },
+    {
+      "Name": "GetSyncTarget",
+      "Resources": [
+        {
+          "Name": "SyncProfileResource"
+        },
+        {
+          "Name": "SyncTargetResource"
+        }
+      ]
+    },
+    {
+      "Name": "ListSyncFilters",
+      "Resources": [
+        {
+          "Name": "SyncProfileResource"
+        }
+      ]
+    },
+    {
+      "Name": "StartSync",
+      "Resources": [
+        {
+          "Name": "SyncProfileResource"
+        }
+      ]
+    },
+    {
+      "Name": "StopSync",
+      "Resources": [
+        {
+          "Name": "SyncProfileResource"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSyncTarget",
+      "Resources": [
+        {
+          "Name": "SyncProfileResource"
+        },
+        {
+          "Name": "SyncTargetResource"
+        }
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "SyncProfileResource",
+      "ARNFormats": [
+        "arn:${Partition}:identity-sync:${Region}:${Account}:profile/${SyncProfileName}"
+      ]
+    },
+    {
+      "Name": "SyncTargetResource",
+      "ARNFormats": [
+        "arn:${Partition}:identity-sync:${Region}:${Account}:target/${SyncProfileName}/${SyncTargetName}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

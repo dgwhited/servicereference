@@ -1,0 +1,135 @@
+{
+  "Name": "elastictranscoder",
+  "Actions": [
+    {
+      "Name": "CancelJob",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "CreateJob",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        },
+        {
+          "Name": "preset"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePipeline"
+    },
+    {
+      "Name": "CreatePreset"
+    },
+    {
+      "Name": "DeletePipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePreset",
+      "Resources": [
+        {
+          "Name": "preset"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobsByPipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobsByStatus"
+    },
+    {
+      "Name": "ListPipelines"
+    },
+    {
+      "Name": "ListPresets"
+    },
+    {
+      "Name": "ReadJob",
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ]
+    },
+    {
+      "Name": "ReadPipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "ReadPreset",
+      "Resources": [
+        {
+          "Name": "preset"
+        }
+      ]
+    },
+    {
+      "Name": "TestRole"
+    },
+    {
+      "Name": "UpdatePipeline",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePipelineNotifications",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePipelineStatus",
+      "Resources": [
+        {
+          "Name": "pipeline"
+        }
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "job",
+      "ARNFormats": [
+        "arn:${Partition}:elastictranscoder:${Region}:${Account}:job/${JobId}"
+      ]
+    },
+    {
+      "Name": "pipeline",
+      "ARNFormats": [
+        "arn:${Partition}:elastictranscoder:${Region}:${Account}:pipeline/${PipelineId}"
+      ]
+    },
+    {
+      "Name": "preset",
+      "ARNFormats": [
+        "arn:${Partition}:elastictranscoder:${Region}:${Account}:preset/${PresetId}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,883 @@
+{
+  "Name": "servicecatalog",
+  "Actions": [
+    {
+      "Name": "AcceptPortfolioShare",
+      "Resources": [
+        {
+          "Name": "Portfolio"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateAttributeGroup",
+      "Resources": [
+        {
+          "Name": "Application"
+        },
+        {
+          "Name": "AttributeGroup"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateBudgetWithResource"
+    },
+    {
+      "Name": "AssociatePrincipalWithPortfolio",
+      "Resources": [
+        {
+          "Name": "Portfolio"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateProductWithPortfolio"
+    },
+    {
+      "Name": "AssociateResource",
+      "ActionConditionKeys": [
+        "servicecatalog:Resource",
+        "servicecatalog:ResourceType"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateServiceActionWithProvisioningArtifact",
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateTagOptionWithResource",
+      "Resources": [
+        {
+          "Name": "Portfolio"
+        },
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "BatchAssociateServiceActionWithProvisioningArtifact"
+    },
+    {
+      "Name": "BatchDisassociateServiceActionFromProvisioningArtifact"
+    },
+    {
+      "Name": "CopyProduct"
+    },
+    {
+      "Name": "CreateApplication",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAttributeGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "AttributeGroup"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConstraint",
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePortfolio",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Portfolio"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePortfolioShare",
+      "Resources": [
+        {
+          "Name": "Portfolio"
+        }
+      ]
+    },
+    {
+      "Name": "CreateProduct",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "CreateProvisionedProductPlan",
+      "ActionConditionKeys": [
+        "servicecatalog:accountLevel",
+        "servicecatalog:roleLevel",
+        "servicecatalog:userLevel"
+      ]
+    },
+    {
+      "Name": "CreateProvisioningArtifact",
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "CreateServiceAction"
+    },
+    {
+      "Name": "CreateTagOption"
+    },
+    {
+      "Name": "DeleteApplication",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAttributeGroup",
+      "Resources": [
+        {
+          "Name": "AttributeGroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConstraint"
+    },
+    {
+      "Name": "DeletePortfolio",
+      "Resources": [
+        {
+          "Name": "Portfolio"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePortfolioShare",
+      "Resources": [
+        {
+          "Name": "Portfolio"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProduct",
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProvisionedProductPlan",
+      "ActionConditionKeys": [
+        "servicecatalog:accountLevel",
+        "servicecatalog:roleLevel",
+        "servicecatalog:userLevel"
+      ]
+    },
+    {
+      "Name": "DeleteProvisioningArtifact",
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Resources": [
+        {
+          "Name": "Application"
+        },
+        {
+          "Name": "AttributeGroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteServiceAction"
+    },
+    {
+      "Name": "DeleteTagOption"
+    },
+    {
+      "Name": "DescribeConstraint"
+    },
+    {
+      "Name": "DescribeCopyProductStatus"
+    },
+    {
+      "Name": "DescribePortfolio",
+      "Resources": [
+        {
+          "Name": "Portfolio"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePortfolioShareStatus"
+    },
+    {
+      "Name": "DescribePortfolioShares",
+      "Resources": [
+        {
+          "Name": "Portfolio"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeProduct",
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeProductAsAdmin",
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeProductView"
+    },
+    {
+      "Name": "DescribeProvisionedProduct",
+      "ActionConditionKeys": [
+        "servicecatalog:accountLevel",
+        "servicecatalog:roleLevel",
+        "servicecatalog:userLevel"
+      ]
+    },
+    {
+      "Name": "DescribeProvisionedProductPlan",
+      "ActionConditionKeys": [
+        "servicecatalog:accountLevel",
+        "servicecatalog:roleLevel",
+        "servicecatalog:userLevel"
+      ]
+    },
+    {
+      "Name": "DescribeProvisioningArtifact",
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeProvisioningParameters",
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRecord",
+      "ActionConditionKeys": [
+        "servicecatalog:accountLevel",
+        "servicecatalog:roleLevel",
+        "servicecatalog:userLevel"
+      ]
+    },
+    {
+      "Name": "DescribeServiceAction"
+    },
+    {
+      "Name": "DescribeServiceActionExecutionParameters",
+      "ActionConditionKeys": [
+        "servicecatalog:accountLevel",
+        "servicecatalog:roleLevel",
+        "servicecatalog:userLevel"
+      ]
+    },
+    {
+      "Name": "DescribeTagOption"
+    },
+    {
+      "Name": "DisableAWSOrganizationsAccess"
+    },
+    {
+      "Name": "DisassociateAttributeGroup",
+      "Resources": [
+        {
+          "Name": "Application"
+        },
+        {
+          "Name": "AttributeGroup"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateBudgetFromResource"
+    },
+    {
+      "Name": "DisassociatePrincipalFromPortfolio",
+      "Resources": [
+        {
+          "Name": "Portfolio"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateProductFromPortfolio"
+    },
+    {
+      "Name": "DisassociateResource",
+      "ActionConditionKeys": [
+        "servicecatalog:Resource",
+        "servicecatalog:ResourceType"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateServiceActionFromProvisioningArtifact",
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateTagOptionFromResource",
+      "Resources": [
+        {
+          "Name": "Portfolio"
+        },
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "EnableAWSOrganizationsAccess"
+    },
+    {
+      "Name": "ExecuteProvisionedProductPlan",
+      "ActionConditionKeys": [
+        "servicecatalog:accountLevel",
+        "servicecatalog:roleLevel",
+        "servicecatalog:userLevel"
+      ]
+    },
+    {
+      "Name": "ExecuteProvisionedProductServiceAction",
+      "ActionConditionKeys": [
+        "servicecatalog:accountLevel",
+        "servicecatalog:roleLevel",
+        "servicecatalog:userLevel"
+      ]
+    },
+    {
+      "Name": "GetAWSOrganizationsAccessStatus"
+    },
+    {
+      "Name": "GetApplication",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "GetAssociatedResource",
+      "ActionConditionKeys": [
+        "servicecatalog:Resource",
+        "servicecatalog:ResourceType"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "GetAttributeGroup",
+      "Resources": [
+        {
+          "Name": "AttributeGroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfiguration"
+    },
+    {
+      "Name": "GetProvisionedProductOutputs"
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "Resources": [
+        {
+          "Name": "Application"
+        },
+        {
+          "Name": "AttributeGroup"
+        }
+      ]
+    },
+    {
+      "Name": "ImportAsProvisionedProduct",
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "ListAcceptedPortfolioShares"
+    },
+    {
+      "Name": "ListApplications"
+    },
+    {
+      "Name": "ListAssociatedAttributeGroups",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "ListAssociatedResources",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "ListAttributeGroups"
+    },
+    {
+      "Name": "ListAttributeGroupsForApplication",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "ListBudgetsForResource"
+    },
+    {
+      "Name": "ListConstraintsForPortfolio"
+    },
+    {
+      "Name": "ListLaunchPaths",
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "ListOrganizationPortfolioAccess"
+    },
+    {
+      "Name": "ListPortfolioAccess",
+      "Resources": [
+        {
+          "Name": "Portfolio"
+        }
+      ]
+    },
+    {
+      "Name": "ListPortfolios"
+    },
+    {
+      "Name": "ListPortfoliosForProduct",
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "ListPrincipalsForPortfolio",
+      "Resources": [
+        {
+          "Name": "Portfolio"
+        }
+      ]
+    },
+    {
+      "Name": "ListProvisionedProductPlans",
+      "ActionConditionKeys": [
+        "servicecatalog:accountLevel",
+        "servicecatalog:roleLevel",
+        "servicecatalog:userLevel"
+      ]
+    },
+    {
+      "Name": "ListProvisioningArtifacts",
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "ListProvisioningArtifactsForServiceAction"
+    },
+    {
+      "Name": "ListRecordHistory",
+      "ActionConditionKeys": [
+        "servicecatalog:accountLevel",
+        "servicecatalog:roleLevel",
+        "servicecatalog:userLevel"
+      ]
+    },
+    {
+      "Name": "ListResourcesForTagOption"
+    },
+    {
+      "Name": "ListServiceActions"
+    },
+    {
+      "Name": "ListServiceActionsForProvisioningArtifact",
+      "ActionConditionKeys": [
+        "servicecatalog:accountLevel",
+        "servicecatalog:roleLevel",
+        "servicecatalog:userLevel"
+      ],
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "ListStackInstancesForProvisionedProduct",
+      "ActionConditionKeys": [
+        "servicecatalog:accountLevel",
+        "servicecatalog:roleLevel",
+        "servicecatalog:userLevel"
+      ]
+    },
+    {
+      "Name": "ListTagOptions"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "Application"
+        },
+        {
+          "Name": "AttributeGroup"
+        }
+      ]
+    },
+    {
+      "Name": "NotifyProvisionProductEngineWorkflowResult"
+    },
+    {
+      "Name": "NotifyTerminateProvisionedProductEngineWorkflowResult"
+    },
+    {
+      "Name": "NotifyUpdateProvisionedProductEngineWorkflowResult"
+    },
+    {
+      "Name": "ProvisionProduct",
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "PutConfiguration"
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "Resources": [
+        {
+          "Name": "Application"
+        },
+        {
+          "Name": "AttributeGroup"
+        }
+      ]
+    },
+    {
+      "Name": "RejectPortfolioShare",
+      "Resources": [
+        {
+          "Name": "Portfolio"
+        }
+      ]
+    },
+    {
+      "Name": "ScanProvisionedProducts",
+      "ActionConditionKeys": [
+        "servicecatalog:accountLevel",
+        "servicecatalog:roleLevel",
+        "servicecatalog:userLevel"
+      ]
+    },
+    {
+      "Name": "SearchProducts"
+    },
+    {
+      "Name": "SearchProductsAsAdmin"
+    },
+    {
+      "Name": "SearchProvisionedProducts",
+      "ActionConditionKeys": [
+        "servicecatalog:accountLevel",
+        "servicecatalog:roleLevel",
+        "servicecatalog:userLevel"
+      ]
+    },
+    {
+      "Name": "SyncResource"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        },
+        {
+          "Name": "AttributeGroup"
+        }
+      ]
+    },
+    {
+      "Name": "TerminateProvisionedProduct",
+      "ActionConditionKeys": [
+        "servicecatalog:accountLevel",
+        "servicecatalog:roleLevel",
+        "servicecatalog:userLevel"
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Application"
+        },
+        {
+          "Name": "AttributeGroup"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateApplication",
+      "Resources": [
+        {
+          "Name": "Application"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAttributeGroup",
+      "Resources": [
+        {
+          "Name": "AttributeGroup"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConstraint"
+    },
+    {
+      "Name": "UpdatePortfolio",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Portfolio"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePortfolioShare",
+      "Resources": [
+        {
+          "Name": "Portfolio"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProduct",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProvisionedProduct",
+      "ActionConditionKeys": [
+        "servicecatalog:accountLevel",
+        "servicecatalog:roleLevel",
+        "servicecatalog:userLevel"
+      ]
+    },
+    {
+      "Name": "UpdateProvisionedProductProperties"
+    },
+    {
+      "Name": "UpdateProvisioningArtifact",
+      "Resources": [
+        {
+          "Name": "Product"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServiceAction"
+    },
+    {
+      "Name": "UpdateTagOption"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "servicecatalog:Resource",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "servicecatalog:ResourceType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "servicecatalog:accountLevel",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "servicecatalog:roleLevel",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "servicecatalog:userLevel",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Application",
+      "ARNFormats": [
+        "arn:${Partition}:servicecatalog:${Region}:${Account}:/applications/${ApplicationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "AttributeGroup",
+      "ARNFormats": [
+        "arn:${Partition}:servicecatalog:${Region}:${Account}:/attribute-groups/${AttributeGroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Portfolio",
+      "ARNFormats": [
+        "arn:${Partition}:catalog:${Region}:${Account}:portfolio/${PortfolioId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Product",
+      "ARNFormats": [
+        "arn:${Partition}:catalog:${Region}:${Account}:product/${ProductId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

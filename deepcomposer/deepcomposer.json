@@ -1,0 +1,226 @@
+{
+  "Name": "deepcomposer",
+  "Actions": [
+    {
+      "Name": "AssociateCoupon"
+    },
+    {
+      "Name": "CreateAudio",
+      "Resources": [
+        {
+          "Name": "audio"
+        }
+      ]
+    },
+    {
+      "Name": "CreateComposition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "composition"
+        }
+      ]
+    },
+    {
+      "Name": "CreateModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteComposition",
+      "Resources": [
+        {
+          "Name": "composition"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteModel",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "GetComposition",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "composition"
+        }
+      ]
+    },
+    {
+      "Name": "GetModel",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "GetSampleModel",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "ListCompositions",
+      "Resources": [
+        {
+          "Name": "composition"
+        }
+      ]
+    },
+    {
+      "Name": "ListModels",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "ListSampleModels",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "composition"
+        },
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "ListTrainingTopics",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "composition"
+        },
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "composition"
+        },
+        {
+          "Name": "model"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateComposition",
+      "Resources": [
+        {
+          "Name": "composition"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateModel",
+      "Resources": [
+        {
+          "Name": "model"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "audio",
+      "ARNFormats": [
+        "arn:${Partition}:deepcomposer:${Region}:${Account}:audio/${AudioId}"
+      ]
+    },
+    {
+      "Name": "composition",
+      "ARNFormats": [
+        "arn:${Partition}:deepcomposer:${Region}:${Account}:composition/${CompositionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "model",
+      "ARNFormats": [
+        "arn:${Partition}:deepcomposer:${Region}:${Account}:model/${ModelId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

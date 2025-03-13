@@ -1,0 +1,161 @@
+{
+  "Name": "simspaceweaver",
+  "Actions": [
+    {
+      "Name": "CreateSnapshot",
+      "Resources": [
+        {
+          "Name": "Simulation"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApp",
+      "Resources": [
+        {
+          "Name": "Simulation"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSimulation",
+      "Resources": [
+        {
+          "Name": "Simulation"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeApp",
+      "Resources": [
+        {
+          "Name": "Simulation"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSimulation",
+      "Resources": [
+        {
+          "Name": "Simulation"
+        }
+      ]
+    },
+    {
+      "Name": "ListApps",
+      "Resources": [
+        {
+          "Name": "Simulation"
+        }
+      ]
+    },
+    {
+      "Name": "ListSimulations"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "StartApp",
+      "Resources": [
+        {
+          "Name": "Simulation"
+        }
+      ]
+    },
+    {
+      "Name": "StartClock",
+      "Resources": [
+        {
+          "Name": "Simulation"
+        }
+      ]
+    },
+    {
+      "Name": "StartSimulation",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "StopApp",
+      "Resources": [
+        {
+          "Name": "Simulation"
+        }
+      ]
+    },
+    {
+      "Name": "StopClock",
+      "Resources": [
+        {
+          "Name": "Simulation"
+        }
+      ]
+    },
+    {
+      "Name": "StopSimulation",
+      "Resources": [
+        {
+          "Name": "Simulation"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Simulation"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Simulation"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "Simulation",
+      "ARNFormats": [
+        "arn:${Partition}:simspaceweaver:${Region}:${Account}:simulation/${SimulationName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

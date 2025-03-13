@@ -1,0 +1,30 @@
+{
+  "Name": "geo-maps",
+  "Actions": [
+    {
+      "Name": "GetStaticMap",
+      "Resources": [
+        {
+          "Name": "provider"
+        }
+      ]
+    },
+    {
+      "Name": "GetTile",
+      "Resources": [
+        {
+          "Name": "provider"
+        }
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "provider",
+      "ARNFormats": [
+        "arn:${Partition}:geo-maps:${Region}::provider/default"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

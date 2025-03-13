@@ -1,0 +1,329 @@
+{
+  "Name": "route53-recovery-readiness",
+  "Actions": [
+    {
+      "Name": "CreateCell",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cell"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCrossAccountAuthorization"
+    },
+    {
+      "Name": "CreateReadinessCheck",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "readinesscheck"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRecoveryGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "recoverygroup"
+        }
+      ]
+    },
+    {
+      "Name": "CreateResourceSet",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "resourceset"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCell",
+      "Resources": [
+        {
+          "Name": "cell"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCrossAccountAuthorization"
+    },
+    {
+      "Name": "DeleteReadinessCheck",
+      "Resources": [
+        {
+          "Name": "readinesscheck"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRecoveryGroup",
+      "Resources": [
+        {
+          "Name": "recoverygroup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourceSet",
+      "Resources": [
+        {
+          "Name": "resourceset"
+        }
+      ]
+    },
+    {
+      "Name": "GetArchitectureRecommendations",
+      "Resources": [
+        {
+          "Name": "recoverygroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetCell",
+      "Resources": [
+        {
+          "Name": "cell"
+        }
+      ]
+    },
+    {
+      "Name": "GetCellReadinessSummary",
+      "Resources": [
+        {
+          "Name": "cell"
+        }
+      ]
+    },
+    {
+      "Name": "GetReadinessCheck",
+      "Resources": [
+        {
+          "Name": "readinesscheck"
+        }
+      ]
+    },
+    {
+      "Name": "GetReadinessCheckResourceStatus",
+      "Resources": [
+        {
+          "Name": "readinesscheck"
+        }
+      ]
+    },
+    {
+      "Name": "GetReadinessCheckStatus",
+      "Resources": [
+        {
+          "Name": "readinesscheck"
+        }
+      ]
+    },
+    {
+      "Name": "GetRecoveryGroup",
+      "Resources": [
+        {
+          "Name": "recoverygroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetRecoveryGroupReadinessSummary",
+      "Resources": [
+        {
+          "Name": "recoverygroup"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourceSet",
+      "Resources": [
+        {
+          "Name": "resourceset"
+        }
+      ]
+    },
+    {
+      "Name": "ListCells"
+    },
+    {
+      "Name": "ListCrossAccountAuthorizations"
+    },
+    {
+      "Name": "ListReadinessChecks"
+    },
+    {
+      "Name": "ListRecoveryGroups"
+    },
+    {
+      "Name": "ListResourceSets"
+    },
+    {
+      "Name": "ListRules"
+    },
+    {
+      "Name": "ListTagsForResources"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cell"
+        },
+        {
+          "Name": "readinesscheck"
+        },
+        {
+          "Name": "recoverygroup"
+        },
+        {
+          "Name": "resourceset"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cell"
+        },
+        {
+          "Name": "readinesscheck"
+        },
+        {
+          "Name": "recoverygroup"
+        },
+        {
+          "Name": "resourceset"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCell",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "cell"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateReadinessCheck",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "readinesscheck"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRecoveryGroup",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "recoverygroup"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateResourceSet",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "resourceset"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "cell",
+      "ARNFormats": [
+        "arn:${Partition}:route53-recovery-readiness::${Account}:cell/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "readinesscheck",
+      "ARNFormats": [
+        "arn:${Partition}:route53-recovery-readiness::${Account}:readiness-check/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "recoverygroup",
+      "ARNFormats": [
+        "arn:${Partition}:route53-recovery-readiness::${Account}:recovery-group/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "resourceset",
+      "ARNFormats": [
+        "arn:${Partition}:route53-recovery-readiness::${Account}:resource-set/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

@@ -1,0 +1,110 @@
+{
+  "Name": "kendra-ranking",
+  "Actions": [
+    {
+      "Name": "CreateRescoreExecutionPlan",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteRescoreExecutionPlan",
+      "Resources": [
+        {
+          "Name": "rescore-execution-plan"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeRescoreExecutionPlan",
+      "Resources": [
+        {
+          "Name": "rescore-execution-plan"
+        }
+      ]
+    },
+    {
+      "Name": "ListRescoreExecutionPlans"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "rescore-execution-plan"
+        }
+      ]
+    },
+    {
+      "Name": "Rescore",
+      "Resources": [
+        {
+          "Name": "rescore-execution-plan"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "rescore-execution-plan"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "rescore-execution-plan"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRescoreExecutionPlan",
+      "Resources": [
+        {
+          "Name": "rescore-execution-plan"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "rescore-execution-plan",
+      "ARNFormats": [
+        "arn:${Partition}:kendra-ranking:${Region}:${Account}:rescore-execution-plan/${RescoreExecutionPlanId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

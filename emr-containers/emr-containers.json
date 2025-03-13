@@ -1,0 +1,305 @@
+{
+  "Name": "emr-containers",
+  "Actions": [
+    {
+      "Name": "CancelJobRun",
+      "Resources": [
+        {
+          "Name": "jobRun"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCertificate"
+    },
+    {
+      "Name": "CreateJobTemplate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateManagedEndpoint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "emr-containers:ExecutionRoleArn"
+      ],
+      "Resources": [
+        {
+          "Name": "virtualCluster"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSecurityConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateVirtualCluster",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteJobTemplate",
+      "Resources": [
+        {
+          "Name": "jobTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteManagedEndpoint",
+      "Resources": [
+        {
+          "Name": "managedEndpoint"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteVirtualCluster",
+      "Resources": [
+        {
+          "Name": "virtualCluster"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeJobRun",
+      "Resources": [
+        {
+          "Name": "jobRun"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeJobTemplate",
+      "Resources": [
+        {
+          "Name": "jobTemplate"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeManagedEndpoint",
+      "Resources": [
+        {
+          "Name": "managedEndpoint"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSecurityConfiguration",
+      "Resources": [
+        {
+          "Name": "securityConfiguration"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeVirtualCluster",
+      "Resources": [
+        {
+          "Name": "virtualCluster"
+        }
+      ]
+    },
+    {
+      "Name": "GetManagedEndpointSessionCredentials",
+      "Resources": [
+        {
+          "Name": "managedEndpoint"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobRuns",
+      "Resources": [
+        {
+          "Name": "virtualCluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobTemplates"
+    },
+    {
+      "Name": "ListManagedEndpoints",
+      "Resources": [
+        {
+          "Name": "virtualCluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListSecurityConfigurations"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "jobRun"
+        },
+        {
+          "Name": "jobTemplate"
+        },
+        {
+          "Name": "managedEndpoint"
+        },
+        {
+          "Name": "virtualCluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListVirtualClusters"
+    },
+    {
+      "Name": "StartJobRun",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "emr-containers:ExecutionRoleArn",
+        "emr-containers:JobTemplateArn"
+      ],
+      "Resources": [
+        {
+          "Name": "virtualCluster"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "jobRun"
+        },
+        {
+          "Name": "jobTemplate"
+        },
+        {
+          "Name": "managedEndpoint"
+        },
+        {
+          "Name": "virtualCluster"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "jobRun"
+        },
+        {
+          "Name": "jobTemplate"
+        },
+        {
+          "Name": "managedEndpoint"
+        },
+        {
+          "Name": "virtualCluster"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "emr-containers:ExecutionRoleArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "emr-containers:JobTemplateArn",
+      "Types": [
+        "ARN"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "certificate",
+      "ARNFormats": [
+        "arn:${Partition}:emr-containers:${Region}:${Account}:/certificates/${CertificateId}"
+      ]
+    },
+    {
+      "Name": "jobRun",
+      "ARNFormats": [
+        "arn:${Partition}:emr-containers:${Region}:${Account}:/virtualclusters/${VirtualClusterId}/jobruns/${JobRunId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "jobTemplate",
+      "ARNFormats": [
+        "arn:${Partition}:emr-containers:${Region}:${Account}:/jobtemplates/${JobTemplateId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "managedEndpoint",
+      "ARNFormats": [
+        "arn:${Partition}:emr-containers:${Region}:${Account}:/virtualclusters/${VirtualClusterId}/endpoints/${EndpointId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "securityConfiguration",
+      "ARNFormats": [
+        "arn:${Partition}:emr-containers:${Region}:${Account}:/securityconfigurations/${SecurityConfigurationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "virtualCluster",
+      "ARNFormats": [
+        "arn:${Partition}:emr-containers:${Region}:${Account}:/virtualclusters/${VirtualClusterId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

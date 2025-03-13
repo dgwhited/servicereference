@@ -1,0 +1,565 @@
+{
+  "Name": "cloudtrail",
+  "Actions": [
+    {
+      "Name": "AddTags",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "dashboard"
+        },
+        {
+          "Name": "eventdatastore"
+        },
+        {
+          "Name": "trail"
+        }
+      ]
+    },
+    {
+      "Name": "CancelQuery",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "CreateChannel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDashboard",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEventDataStore",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "CreateServiceLinkedChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTrail",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "trail"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDashboard",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEventDataStore",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "dashboard"
+        },
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteServiceLinkedChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTrail",
+      "Resources": [
+        {
+          "Name": "trail"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterOrganizationDelegatedAdmin"
+    },
+    {
+      "Name": "DescribeQuery",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTrails"
+    },
+    {
+      "Name": "DisableFederation",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "EnableFederation",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "GenerateQuery",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "GenerateQueryResultsSummary",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "GetChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "GetDashboard",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "GetEventDataStore",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "GetEventDataStoreData",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "GetEventSelectors",
+      "Resources": [
+        {
+          "Name": "trail"
+        }
+      ]
+    },
+    {
+      "Name": "GetImport"
+    },
+    {
+      "Name": "GetInsightSelectors",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        },
+        {
+          "Name": "trail"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueryResults",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "dashboard"
+        },
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "GetServiceLinkedChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "GetTrail",
+      "Resources": [
+        {
+          "Name": "trail"
+        }
+      ]
+    },
+    {
+      "Name": "GetTrailStatus",
+      "Resources": [
+        {
+          "Name": "trail"
+        }
+      ]
+    },
+    {
+      "Name": "ListChannels"
+    },
+    {
+      "Name": "ListDashboards"
+    },
+    {
+      "Name": "ListEventDataStores"
+    },
+    {
+      "Name": "ListImportFailures"
+    },
+    {
+      "Name": "ListImports"
+    },
+    {
+      "Name": "ListPublicKeys"
+    },
+    {
+      "Name": "ListQueries",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "ListServiceLinkedChannels"
+    },
+    {
+      "Name": "ListTags",
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "dashboard"
+        },
+        {
+          "Name": "eventdatastore"
+        },
+        {
+          "Name": "trail"
+        }
+      ]
+    },
+    {
+      "Name": "ListTrails"
+    },
+    {
+      "Name": "LookupEvents"
+    },
+    {
+      "Name": "PutEventSelectors",
+      "Resources": [
+        {
+          "Name": "trail"
+        }
+      ]
+    },
+    {
+      "Name": "PutInsightSelectors",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        },
+        {
+          "Name": "trail"
+        }
+      ]
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "dashboard"
+        },
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterOrganizationDelegatedAdmin"
+    },
+    {
+      "Name": "RemoveTags",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "channel"
+        },
+        {
+          "Name": "dashboard"
+        },
+        {
+          "Name": "eventdatastore"
+        },
+        {
+          "Name": "trail"
+        }
+      ]
+    },
+    {
+      "Name": "RestoreEventDataStore",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "SearchSampleQueries"
+    },
+    {
+      "Name": "StartDashboardRefresh",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "StartEventDataStoreIngestion",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "StartImport"
+    },
+    {
+      "Name": "StartLogging",
+      "Resources": [
+        {
+          "Name": "trail"
+        }
+      ]
+    },
+    {
+      "Name": "StartQuery",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "StopEventDataStoreIngestion",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "StopImport"
+    },
+    {
+      "Name": "StopLogging",
+      "Resources": [
+        {
+          "Name": "trail"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDashboard",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEventDataStore",
+      "Resources": [
+        {
+          "Name": "eventdatastore"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServiceLinkedChannel",
+      "Resources": [
+        {
+          "Name": "channel"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTrail",
+      "Resources": [
+        {
+          "Name": "trail"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "channel",
+      "ARNFormats": [
+        "arn:${Partition}:cloudtrail:${Region}:${Account}:channel/${ChannelId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "dashboard",
+      "ARNFormats": [
+        "arn:${Partition}:cloudtrail:${Region}:${Account}:dashboard/${DashboardName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "eventdatastore",
+      "ARNFormats": [
+        "arn:${Partition}:cloudtrail:${Region}:${Account}:eventdatastore/${EventDataStoreId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "trail",
+      "ARNFormats": [
+        "arn:${Partition}:cloudtrail:${Region}:${Account}:trail/${TrailName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

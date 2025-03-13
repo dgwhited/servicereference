@@ -1,0 +1,748 @@
+{
+  "Name": "dynamodb",
+  "Actions": [
+    {
+      "Name": "BatchGetItem",
+      "ActionConditionKeys": [
+        "dynamodb:Attributes",
+        "dynamodb:LeadingKeys",
+        "dynamodb:ReturnConsumedCapacity",
+        "dynamodb:Select"
+      ],
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "BatchWriteItem",
+      "ActionConditionKeys": [
+        "dynamodb:Attributes",
+        "dynamodb:LeadingKeys",
+        "dynamodb:ReturnConsumedCapacity"
+      ],
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "ConditionCheckItem",
+      "ActionConditionKeys": [
+        "dynamodb:Attributes",
+        "dynamodb:LeadingKeys",
+        "dynamodb:ReturnConsumedCapacity",
+        "dynamodb:ReturnValues"
+      ],
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBackup",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "CreateGlobalTable",
+      "Resources": [
+        {
+          "Name": "global-table"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTable",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTableReplica",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBackup",
+      "Resources": [
+        {
+          "Name": "backup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteItem",
+      "ActionConditionKeys": [
+        "dynamodb:Attributes",
+        "dynamodb:EnclosingOperation",
+        "dynamodb:LeadingKeys",
+        "dynamodb:ReturnConsumedCapacity",
+        "dynamodb:ReturnValues"
+      ],
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Resources": [
+        {
+          "Name": "stream"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTable",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTableReplica",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeBackup",
+      "Resources": [
+        {
+          "Name": "backup"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeContinuousBackups",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeContributorInsights",
+      "Resources": [
+        {
+          "Name": "index"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEndpoints"
+    },
+    {
+      "Name": "DescribeExport",
+      "Resources": [
+        {
+          "Name": "export"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeGlobalTable",
+      "Resources": [
+        {
+          "Name": "global-table"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeGlobalTableSettings",
+      "Resources": [
+        {
+          "Name": "global-table"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeImport",
+      "Resources": [
+        {
+          "Name": "import"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeKinesisStreamingDestination",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeLimits"
+    },
+    {
+      "Name": "DescribeReservedCapacity"
+    },
+    {
+      "Name": "DescribeReservedCapacityOfferings"
+    },
+    {
+      "Name": "DescribeStream",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTable",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTableReplicaAutoScaling",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTimeToLive",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "DisableKinesisStreamingDestination",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "EnableKinesisStreamingDestination",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "ExportTableToPointInTime",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "GetAbacStatus"
+    },
+    {
+      "Name": "GetItem",
+      "ActionConditionKeys": [
+        "dynamodb:Attributes",
+        "dynamodb:EnclosingOperation",
+        "dynamodb:LeadingKeys",
+        "dynamodb:ReturnConsumedCapacity",
+        "dynamodb:Select"
+      ],
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "GetRecords",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "Resources": [
+        {
+          "Name": "stream"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "GetShardIterator",
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "ImportTable",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "ListBackups"
+    },
+    {
+      "Name": "ListContributorInsights"
+    },
+    {
+      "Name": "ListExports"
+    },
+    {
+      "Name": "ListGlobalTables"
+    },
+    {
+      "Name": "ListImports"
+    },
+    {
+      "Name": "ListStreams"
+    },
+    {
+      "Name": "ListTables"
+    },
+    {
+      "Name": "ListTagsOfResource",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "PartiQLDelete",
+      "ActionConditionKeys": [
+        "dynamodb:Attributes",
+        "dynamodb:EnclosingOperation",
+        "dynamodb:LeadingKeys",
+        "dynamodb:ReturnValues"
+      ],
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "PartiQLInsert",
+      "ActionConditionKeys": [
+        "dynamodb:Attributes",
+        "dynamodb:EnclosingOperation",
+        "dynamodb:LeadingKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "PartiQLSelect",
+      "ActionConditionKeys": [
+        "dynamodb:Attributes",
+        "dynamodb:EnclosingOperation",
+        "dynamodb:FullTableScan",
+        "dynamodb:LeadingKeys",
+        "dynamodb:Select"
+      ],
+      "Resources": [
+        {
+          "Name": "index"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "PartiQLUpdate",
+      "ActionConditionKeys": [
+        "dynamodb:Attributes",
+        "dynamodb:EnclosingOperation",
+        "dynamodb:LeadingKeys",
+        "dynamodb:ReturnValues"
+      ],
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "PurchaseReservedCapacityOfferings"
+    },
+    {
+      "Name": "PutItem",
+      "ActionConditionKeys": [
+        "dynamodb:Attributes",
+        "dynamodb:EnclosingOperation",
+        "dynamodb:LeadingKeys",
+        "dynamodb:ReturnConsumedCapacity",
+        "dynamodb:ReturnValues"
+      ],
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "Resources": [
+        {
+          "Name": "stream"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "Query",
+      "ActionConditionKeys": [
+        "dynamodb:Attributes",
+        "dynamodb:LeadingKeys",
+        "dynamodb:ReturnConsumedCapacity",
+        "dynamodb:ReturnValues",
+        "dynamodb:Select"
+      ],
+      "Resources": [
+        {
+          "Name": "index"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "RestoreTableFromAwsBackup",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "RestoreTableFromBackup",
+      "Resources": [
+        {
+          "Name": "backup"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "RestoreTableToPointInTime",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "Scan",
+      "ActionConditionKeys": [
+        "dynamodb:Attributes",
+        "dynamodb:ReturnConsumedCapacity",
+        "dynamodb:ReturnValues",
+        "dynamodb:Select"
+      ],
+      "Resources": [
+        {
+          "Name": "index"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "StartAwsBackupJob",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAbacStatus"
+    },
+    {
+      "Name": "UpdateContinuousBackups",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateContributorInsights",
+      "Resources": [
+        {
+          "Name": "index"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGlobalTable",
+      "Resources": [
+        {
+          "Name": "global-table"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGlobalTableSettings",
+      "Resources": [
+        {
+          "Name": "global-table"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGlobalTableVersion",
+      "Resources": [
+        {
+          "Name": "global-table"
+        },
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateItem",
+      "ActionConditionKeys": [
+        "dynamodb:Attributes",
+        "dynamodb:EnclosingOperation",
+        "dynamodb:LeadingKeys",
+        "dynamodb:ReturnConsumedCapacity",
+        "dynamodb:ReturnValues"
+      ],
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateKinesisStreamingDestination",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTable",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTableReplicaAutoScaling",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTimeToLive",
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "dynamodb:Attributes",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "dynamodb:EnclosingOperation",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "dynamodb:FullTableScan",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
+      "Name": "dynamodb:LeadingKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "dynamodb:ReturnConsumedCapacity",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "dynamodb:ReturnValues",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "dynamodb:Select",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "backup",
+      "ARNFormats": [
+        "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/backup/${BackupName}"
+      ]
+    },
+    {
+      "Name": "export",
+      "ARNFormats": [
+        "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/export/${ExportName}"
+      ]
+    },
+    {
+      "Name": "global-table",
+      "ARNFormats": [
+        "arn:${Partition}:dynamodb::${Account}:global-table/${GlobalTableName}"
+      ]
+    },
+    {
+      "Name": "import",
+      "ARNFormats": [
+        "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/import/${ImportName}"
+      ]
+    },
+    {
+      "Name": "index",
+      "ARNFormats": [
+        "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/index/${IndexName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "stream",
+      "ARNFormats": [
+        "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/stream/${StreamLabel}"
+      ]
+    },
+    {
+      "Name": "table",
+      "ARNFormats": [
+        "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

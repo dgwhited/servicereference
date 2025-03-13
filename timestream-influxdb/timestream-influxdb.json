@@ -1,0 +1,219 @@
+{
+  "Name": "timestream-influxdb",
+  "Actions": [
+    {
+      "Name": "CreateDbCluster",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "db-parameter-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDbInstance",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "db-parameter-group"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDbParameterGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteDbCluster",
+      "Resources": [
+        {
+          "Name": "db-cluster"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDbInstance",
+      "Resources": [
+        {
+          "Name": "db-instance"
+        }
+      ]
+    },
+    {
+      "Name": "GetDbCluster",
+      "Resources": [
+        {
+          "Name": "db-cluster"
+        }
+      ]
+    },
+    {
+      "Name": "GetDbInstance",
+      "Resources": [
+        {
+          "Name": "db-instance"
+        }
+      ]
+    },
+    {
+      "Name": "GetDbParameterGroup",
+      "Resources": [
+        {
+          "Name": "db-parameter-group"
+        }
+      ]
+    },
+    {
+      "Name": "ListDbClusters"
+    },
+    {
+      "Name": "ListDbInstances"
+    },
+    {
+      "Name": "ListDbInstancesForCluster",
+      "Resources": [
+        {
+          "Name": "db-cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListDbParameterGroups"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "db-cluster"
+        },
+        {
+          "Name": "db-instance"
+        },
+        {
+          "Name": "db-parameter-group"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "db-cluster"
+        },
+        {
+          "Name": "db-instance"
+        },
+        {
+          "Name": "db-parameter-group"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "db-cluster"
+        },
+        {
+          "Name": "db-instance"
+        },
+        {
+          "Name": "db-parameter-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDbCluster",
+      "Resources": [
+        {
+          "Name": "db-cluster"
+        },
+        {
+          "Name": "db-parameter-group"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDbInstance",
+      "Resources": [
+        {
+          "Name": "db-instance"
+        },
+        {
+          "Name": "db-parameter-group"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "db-cluster",
+      "ARNFormats": [
+        "arn:${Partition}:timestream-influxdb:${Region}:${Account}:db-cluster/${DbClusterId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "db-instance",
+      "ARNFormats": [
+        "arn:${Partition}:timestream-influxdb:${Region}:${Account}:db-instance/${DbInstanceIdentifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "db-parameter-group",
+      "ARNFormats": [
+        "arn:${Partition}:timestream-influxdb:${Region}:${Account}:db-parameter-group/${DbParameterGroupIdentifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

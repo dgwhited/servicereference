@@ -1,0 +1,159 @@
+{
+  "Name": "elemental-support-cases",
+  "Actions": [
+    {
+      "Name": "AddCaseComment",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "CheckCasePermission"
+    },
+    {
+      "Name": "CompleteMultipartUpload",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCase",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateS3CLIUploadCommand",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "CreateS3DownloadUrl",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "GetCase",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "GetCasePermission"
+    },
+    {
+      "Name": "GetCases"
+    },
+    {
+      "Name": "GetUICache"
+    },
+    {
+      "Name": "ListTagsForCase",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "StartMultipartUpload",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "TagCase",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "UntagCase",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCase",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCaseStatus",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMultipartUpload",
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "case",
+      "ARNFormats": [
+        "arn:${Partition}:elemental-support-cases::${Account}:case/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

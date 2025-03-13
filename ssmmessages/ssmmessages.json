@@ -1,0 +1,36 @@
+{
+  "Name": "ssmmessages",
+  "Actions": [
+    {
+      "Name": "CreateControlChannel",
+      "ActionConditionKeys": [
+        "ec2:SourceInstanceARN",
+        "ssm:SourceInstanceARN"
+      ]
+    },
+    {
+      "Name": "CreateDataChannel"
+    },
+    {
+      "Name": "OpenControlChannel"
+    },
+    {
+      "Name": "OpenDataChannel"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "ec2:SourceInstanceARN",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "ssm:SourceInstanceARN",
+      "Types": [
+        "ARN"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}

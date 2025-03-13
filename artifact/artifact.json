@@ -1,0 +1,152 @@
+{
+  "Name": "artifact",
+  "Actions": [
+    {
+      "Name": "AcceptAgreement",
+      "Resources": [
+        {
+          "Name": "agreement"
+        }
+      ]
+    },
+    {
+      "Name": "AcceptNdaForAgreement",
+      "Resources": [
+        {
+          "Name": "agreement"
+        }
+      ]
+    },
+    {
+      "Name": "DownloadAgreement",
+      "Resources": [
+        {
+          "Name": "agreement"
+        },
+        {
+          "Name": "customer-agreement"
+        }
+      ]
+    },
+    {
+      "Name": "Get",
+      "Resources": [
+        {
+          "Name": "report-package"
+        }
+      ]
+    },
+    {
+      "Name": "GetAccountSettings"
+    },
+    {
+      "Name": "GetAgreement",
+      "Resources": [
+        {
+          "Name": "agreement"
+        }
+      ]
+    },
+    {
+      "Name": "GetCustomerAgreement",
+      "Resources": [
+        {
+          "Name": "customer-agreement"
+        }
+      ]
+    },
+    {
+      "Name": "GetNdaForAgreement",
+      "Resources": [
+        {
+          "Name": "agreement"
+        }
+      ]
+    },
+    {
+      "Name": "GetReport",
+      "Resources": [
+        {
+          "Name": "report"
+        }
+      ]
+    },
+    {
+      "Name": "GetReportMetadata",
+      "Resources": [
+        {
+          "Name": "report"
+        }
+      ]
+    },
+    {
+      "Name": "GetTermForReport",
+      "Resources": [
+        {
+          "Name": "report"
+        }
+      ]
+    },
+    {
+      "Name": "ListAgreements"
+    },
+    {
+      "Name": "ListCustomerAgreements"
+    },
+    {
+      "Name": "ListReports"
+    },
+    {
+      "Name": "PutAccountSettings"
+    },
+    {
+      "Name": "TerminateAgreement",
+      "Resources": [
+        {
+          "Name": "customer-agreement"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "artifact:ReportCategory",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "artifact:ReportSeries",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "agreement",
+      "ARNFormats": [
+        "arn:${Partition}:artifact:::agreement/*"
+      ]
+    },
+    {
+      "Name": "customer-agreement",
+      "ARNFormats": [
+        "arn:${Partition}:artifact::${Account}:customer-agreement/*"
+      ]
+    },
+    {
+      "Name": "report",
+      "ARNFormats": [
+        "arn:${Partition}:artifact:${Region}::report/${ReportId}:${Version}"
+      ]
+    },
+    {
+      "Name": "report-package",
+      "ARNFormats": [
+        "arn:${Partition}:artifact:::report-package/*"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}
