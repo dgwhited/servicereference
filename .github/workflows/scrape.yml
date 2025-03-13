@@ -31,7 +31,7 @@ jobs:
       - name: Check for changes
         id: git-check
         run: |
-          git add -A
+          git add .
           if git diff --staged --quiet; then
             echo "changes=false" >> $GITHUB_OUTPUT
             echo "No changes detected"
@@ -46,7 +46,7 @@ jobs:
           fi
 
       - name: Commit Changes
-        if: steps.changes.outputs.changes == 'true'
+        if: steps.git-check.outputs.changes == 'true'
         run: |
           git config --global user.email "${EMAIL}"
           git config --global user.name "${NAME}"
@@ -95,5 +95,5 @@ jobs:
         with:
           name: AWS Service References Update ${{ github.run_id }}
           tag_name: release-${{ github.run_number }}-${{ github.run_attempt }}
-          body_path: CHANGELOG.md
+          body_path: changelog.md
           generate_release_notes: true
