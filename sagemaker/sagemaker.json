@@ -367,7 +367,10 @@
       "Name": "CreateCluster",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "sagemaker:InstanceTypes",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
       ],
       "Resources": [
         {
@@ -3397,6 +3400,11 @@
     },
     {
       "Name": "UpdateCluster",
+      "ActionConditionKeys": [
+        "sagemaker:InstanceTypes",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
       "Resources": [
         {
           "Name": "cluster"
