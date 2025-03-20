@@ -56,7 +56,12 @@
       "Name": "CreateDataSource"
     },
     {
-      "Name": "CreateDomainName"
+      "Name": "CreateDomainName",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "Name": "CreateFunction"
@@ -108,6 +113,9 @@
     },
     {
       "Name": "DeleteDomainName",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Resources": [
         {
           "Name": "domain"
@@ -235,6 +243,9 @@
     },
     {
       "Name": "GetDomainName",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Resources": [
         {
           "Name": "domain"
@@ -316,7 +327,10 @@
       "Name": "ListDataSources"
     },
     {
-      "Name": "ListDomainNames"
+      "Name": "ListDomainNames",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
     },
     {
       "Name": "ListFunctions"
@@ -344,6 +358,9 @@
         },
         {
           "Name": "channelNamespace"
+        },
+        {
+          "Name": "domain"
         },
         {
           "Name": "graphqlapi"
@@ -405,6 +422,9 @@
           "Name": "channelNamespace"
         },
         {
+          "Name": "domain"
+        },
+        {
           "Name": "graphqlapi"
         }
       ]
@@ -421,6 +441,9 @@
         },
         {
           "Name": "channelNamespace"
+        },
+        {
+          "Name": "domain"
         },
         {
           "Name": "graphqlapi"
@@ -460,6 +483,9 @@
     },
     {
       "Name": "UpdateDomainName",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Resources": [
         {
           "Name": "domain"
@@ -550,6 +576,9 @@
       "Name": "domain",
       "ARNFormats": [
         "arn:${Partition}:appsync:${Region}:${Account}:domainnames/${DomainName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
