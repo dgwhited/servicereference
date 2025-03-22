@@ -169,7 +169,6 @@
     {
       "Name": "UntagResource",
       "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Resources": [
@@ -181,6 +180,14 @@
         },
         {
           "Name": "safetyrule"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCluster",
+      "Resources": [
+        {
+          "Name": "cluster"
         }
       ]
     },
