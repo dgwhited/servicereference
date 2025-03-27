@@ -183,7 +183,11 @@
       ]
     },
     {
-      "Name": "CreateDirectConnectGateway"
+      "Name": "CreateDirectConnectGateway",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "Name": "CreateDirectConnectGatewayAssociation",
@@ -449,6 +453,9 @@
       "Name": "DescribeTags",
       "Resources": [
         {
+          "Name": "dx-gateway"
+        },
+        {
           "Name": "dxcon"
         },
         {
@@ -530,6 +537,9 @@
       ],
       "Resources": [
         {
+          "Name": "dx-gateway"
+        },
+        {
           "Name": "dxcon"
         },
         {
@@ -546,6 +556,9 @@
         "aws:TagKeys"
       ],
       "Resources": [
+        {
+          "Name": "dx-gateway"
+        },
         {
           "Name": "dxcon"
         },
@@ -618,6 +631,9 @@
       "Name": "dx-gateway",
       "ARNFormats": [
         "arn:${Partition}:directconnect::${Account}:dx-gateway/${DirectConnectGatewayId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
