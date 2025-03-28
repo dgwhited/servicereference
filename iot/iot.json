@@ -90,7 +90,15 @@
       ]
     },
     {
-      "Name": "AttachThingPrincipal"
+      "Name": "AttachThingPrincipal",
+      "ActionConditionKeys": [
+        "iot:thingArn"
+      ],
+      "Resources": [
+        {
+          "Name": "cert"
+        }
+      ]
     },
     {
       "Name": "CancelAuditMitigationActionsTask"
@@ -1099,7 +1107,15 @@
       ]
     },
     {
-      "Name": "DetachThingPrincipal"
+      "Name": "DetachThingPrincipal",
+      "ActionConditionKeys": [
+        "iot:thingArn"
+      ],
+      "Resources": [
+        {
+          "Name": "cert"
+        }
+      ]
     },
     {
       "Name": "DisableTopicRule",
@@ -1462,7 +1478,20 @@
       "Name": "ListPrincipalPolicies"
     },
     {
-      "Name": "ListPrincipalThings"
+      "Name": "ListPrincipalThings",
+      "Resources": [
+        {
+          "Name": "cert"
+        }
+      ]
+    },
+    {
+      "Name": "ListPrincipalThingsV2",
+      "Resources": [
+        {
+          "Name": "cert"
+        }
+      ]
     },
     {
       "Name": "ListProvisioningTemplateVersions",
@@ -1619,7 +1648,20 @@
       ]
     },
     {
-      "Name": "ListThingPrincipals"
+      "Name": "ListThingPrincipals",
+      "Resources": [
+        {
+          "Name": "thing"
+        }
+      ]
+    },
+    {
+      "Name": "ListThingPrincipalsV2",
+      "Resources": [
+        {
+          "Name": "thing"
+        }
+      ]
     },
     {
       "Name": "ListThingRegistrationTaskReports"
@@ -2353,6 +2395,12 @@
       "Name": "iot:TunnelDestinationService",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "iot:thingArn",
+      "Types": [
+        "ARN"
       ]
     }
   ],
