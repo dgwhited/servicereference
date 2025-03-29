@@ -5,6 +5,9 @@
       "Name": "AssociateWebACL",
       "Resources": [
         {
+          "Name": "amplify-app"
+        },
+        {
           "Name": "apigateway"
         },
         {
@@ -182,6 +185,9 @@
       "Name": "DisassociateWebACL",
       "Resources": [
         {
+          "Name": "amplify-app"
+        },
+        {
           "Name": "apigateway"
         },
         {
@@ -305,6 +311,9 @@
       "Name": "GetWebACLForResource",
       "Resources": [
         {
+          "Name": "amplify-app"
+        },
+        {
           "Name": "apigateway"
         },
         {
@@ -357,6 +366,9 @@
     {
       "Name": "ListResourcesForWebACL",
       "Resources": [
+        {
+          "Name": "amplify-app"
+        },
         {
           "Name": "apprunner"
         },
@@ -582,6 +594,12 @@
     }
   ],
   "Resources": [
+    {
+      "Name": "amplify-app",
+      "ARNFormats": [
+        "arn:${Partition}:amplify:${Region}:${Account}:apps/${AppId}"
+      ]
+    },
     {
       "Name": "apigateway",
       "ARNFormats": [
