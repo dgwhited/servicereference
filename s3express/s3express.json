@@ -2,6 +2,25 @@
   "Name": "s3express",
   "Actions": [
     {
+      "Name": "CreateAccessPoint",
+      "ActionConditionKeys": [
+        "s3express:AccessPointNetworkOrigin",
+        "s3express:DataAccessPointAccount",
+        "s3express:DataAccessPointArn",
+        "s3express:LocationName",
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Resources": [
+        {
+          "Name": "accesspoint"
+        }
+      ]
+    },
+    {
       "Name": "CreateBucket",
       "ActionConditionKeys": [
         "s3express:LocationName",
@@ -20,6 +39,7 @@
     {
       "Name": "CreateSession",
       "ActionConditionKeys": [
+        "s3express:AllAccessRestrictedToLocalZoneGroup",
         "s3express:ResourceAccount",
         "s3express:SessionMode",
         "s3express:TlsVersion",
@@ -33,6 +53,60 @@
       "Resources": [
         {
           "Name": "bucket"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAccessPoint",
+      "ActionConditionKeys": [
+        "s3express:AccessPointNetworkOrigin",
+        "s3express:DataAccessPointAccount",
+        "s3express:DataAccessPointArn",
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Resources": [
+        {
+          "Name": "accesspoint"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAccessPointPolicy",
+      "ActionConditionKeys": [
+        "s3express:AccessPointNetworkOrigin",
+        "s3express:DataAccessPointAccount",
+        "s3express:DataAccessPointArn",
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Resources": [
+        {
+          "Name": "accesspoint"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAccessPointScope",
+      "ActionConditionKeys": [
+        "s3express:AccessPointNetworkOrigin",
+        "s3express:DataAccessPointAccount",
+        "s3express:DataAccessPointArn",
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Resources": [
+        {
+          "Name": "accesspoint"
         }
       ]
     },
@@ -63,6 +137,55 @@
       "Resources": [
         {
           "Name": "bucket"
+        }
+      ]
+    },
+    {
+      "Name": "GetAccessPoint",
+      "ActionConditionKeys": [
+        "s3express:AccessPointNetworkOrigin",
+        "s3express:DataAccessPointAccount",
+        "s3express:DataAccessPointArn",
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ]
+    },
+    {
+      "Name": "GetAccessPointPolicy",
+      "ActionConditionKeys": [
+        "s3express:AccessPointNetworkOrigin",
+        "s3express:DataAccessPointAccount",
+        "s3express:DataAccessPointArn",
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Resources": [
+        {
+          "Name": "accesspoint"
+        }
+      ]
+    },
+    {
+      "Name": "GetAccessPointScope",
+      "ActionConditionKeys": [
+        "s3express:AccessPointNetworkOrigin",
+        "s3express:DataAccessPointAccount",
+        "s3express:DataAccessPointArn",
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Resources": [
+        {
+          "Name": "accesspoint"
         }
       ]
     },
@@ -112,6 +235,16 @@
       ]
     },
     {
+      "Name": "ListAccessPointsForDirectoryBuckets",
+      "ActionConditionKeys": [
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ]
+    },
+    {
       "Name": "ListAllMyDirectoryBuckets",
       "ActionConditionKeys": [
         "s3express:ResourceAccount",
@@ -119,6 +252,42 @@
         "s3express:authType",
         "s3express:signatureversion",
         "s3express:x-amz-content-sha256"
+      ]
+    },
+    {
+      "Name": "PutAccessPointPolicy",
+      "ActionConditionKeys": [
+        "s3express:AccessPointNetworkOrigin",
+        "s3express:DataAccessPointAccount",
+        "s3express:DataAccessPointArn",
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Resources": [
+        {
+          "Name": "accesspoint"
+        }
+      ]
+    },
+    {
+      "Name": "PutAccessPointScope",
+      "ActionConditionKeys": [
+        "s3express:AccessPointNetworkOrigin",
+        "s3express:DataAccessPointAccount",
+        "s3express:DataAccessPointArn",
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Resources": [
+        {
+          "Name": "accesspoint"
+        }
       ]
     },
     {
@@ -169,15 +338,39 @@
   ],
   "ConditionKeys": [
     {
+      "Name": "s3express:AccessPointNetworkOrigin",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "s3express:AllAccessRestrictedToLocalZoneGroup",
       "Types": [
         "String"
       ]
     },
     {
+      "Name": "s3express:DataAccessPointAccount",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "s3express:DataAccessPointArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
       "Name": "s3express:LocationName",
       "Types": [
         "String"
+      ]
+    },
+    {
+      "Name": "s3express:Permissions",
+      "Types": [
+        "ArrayOfString"
       ]
     },
     {
@@ -236,6 +429,12 @@
     }
   ],
   "Resources": [
+    {
+      "Name": "accesspoint",
+      "ARNFormats": [
+        "arn:${Partition}:s3express:${Region}:${Account}:accesspoint/${AccessPointName}"
+      ]
+    },
     {
       "Name": "bucket",
       "ARNFormats": [
