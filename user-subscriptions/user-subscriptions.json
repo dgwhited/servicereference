@@ -2,7 +2,10 @@
   "Name": "user-subscriptions",
   "Actions": [
     {
-      "Name": "CreateClaim"
+      "Name": "CreateClaim",
+      "ActionConditionKeys": [
+        "user-subscriptions:CreateForSelf"
+      ]
     },
     {
       "Name": "DeleteClaim"
@@ -18,6 +21,14 @@
     },
     {
       "Name": "UpdateClaim"
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "user-subscriptions:CreateForSelf",
+      "Types": [
+        "Bool"
+      ]
     }
   ],
   "Version": "v1.1"
