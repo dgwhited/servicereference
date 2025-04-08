@@ -26,6 +26,14 @@
       ]
     },
     {
+      "Name": "BatchGetCommandExecutions",
+      "Resources": [
+        {
+          "Name": "sandbox"
+        }
+      ]
+    },
+    {
       "Name": "BatchGetFleets",
       "Resources": [
         {
@@ -54,6 +62,14 @@
       "Resources": [
         {
           "Name": "report-group"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetSandboxes",
+      "Resources": [
+        {
+          "Name": "project"
         }
       ]
     },
@@ -259,6 +275,14 @@
       ]
     },
     {
+      "Name": "ListCommandExecutionsForSandbox",
+      "Resources": [
+        {
+          "Name": "sandbox"
+        }
+      ]
+    },
+    {
       "Name": "ListConnectedOAuthAccounts"
     },
     {
@@ -286,6 +310,17 @@
     },
     {
       "Name": "ListRepositories"
+    },
+    {
+      "Name": "ListSandboxes"
+    },
+    {
+      "Name": "ListSandboxesForProject",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
     },
     {
       "Name": "ListSharedProjects"
@@ -343,6 +378,30 @@
       ]
     },
     {
+      "Name": "StartCommandExecution",
+      "Resources": [
+        {
+          "Name": "sandbox"
+        }
+      ]
+    },
+    {
+      "Name": "StartSandbox",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "StartSandboxConnection",
+      "Resources": [
+        {
+          "Name": "sandbox"
+        }
+      ]
+    },
+    {
       "Name": "StopBuild",
       "Resources": [
         {
@@ -352,6 +411,14 @@
     },
     {
       "Name": "StopBuildBatch",
+      "Resources": [
+        {
+          "Name": "project"
+        }
+      ]
+    },
+    {
+      "Name": "StopSandbox",
       "Resources": [
         {
           "Name": "project"
@@ -496,6 +563,12 @@
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "sandbox",
+      "ARNFormats": [
+        "arn:${Partition}:codebuild:${Region}:${Account}:sandbox/${SandboxId}"
       ]
     }
   ],
