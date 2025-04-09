@@ -17,5 +17,25 @@
       "Name": "StartTeamDeployment"
     }
   ],
+  "Resources": [
+    {
+      "Name": "application",
+      "ARNFormats": [
+        "arn:${Partition}:appstudio:${Region}:${Account}:application/${ApplicationId}"
+      ]
+    },
+    {
+      "Name": "connector",
+      "ARNFormats": [
+        "arn:${Partition}:appstudio:${Region}:${Account}:connector/${ConnectionId}"
+      ]
+    },
+    {
+      "Name": "instance",
+      "ARNFormats": [
+        "arn:${Partition}:appstudio:${Region}:${Account}:instance/${InstanceId}"
+      ]
+    }
+  ],
   "Version": "v1.1"
 }
