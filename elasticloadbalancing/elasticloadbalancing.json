@@ -36,6 +36,9 @@
           "Name": "listener/app"
         },
         {
+          "Name": "listener/gwy"
+        },
+        {
           "Name": "listener/net"
         },
         {
@@ -43,6 +46,9 @@
         },
         {
           "Name": "loadbalancer/app/"
+        },
+        {
+          "Name": "loadbalancer/gwy/"
         },
         {
           "Name": "loadbalancer/net/"
@@ -144,6 +150,9 @@
           "Name": "loadbalancer/app/"
         },
         {
+          "Name": "loadbalancer/gwy/"
+        },
+        {
           "Name": "loadbalancer/net/"
         }
       ]
@@ -166,6 +175,9 @@
         },
         {
           "Name": "loadbalancer/app/"
+        },
+        {
+          "Name": "loadbalancer/gwy/"
         },
         {
           "Name": "loadbalancer/net/"
@@ -254,6 +266,9 @@
           "Name": "listener/app"
         },
         {
+          "Name": "listener/gwy"
+        },
+        {
           "Name": "listener/net"
         }
       ]
@@ -270,6 +285,9 @@
         },
         {
           "Name": "loadbalancer/app/"
+        },
+        {
+          "Name": "loadbalancer/gwy/"
         },
         {
           "Name": "loadbalancer/net/"
@@ -515,6 +533,9 @@
           "Name": "loadbalancer/app/"
         },
         {
+          "Name": "loadbalancer/gwy/"
+        },
+        {
           "Name": "loadbalancer/net/"
         }
       ]
@@ -544,6 +565,9 @@
           "Name": "listener/app"
         },
         {
+          "Name": "listener/gwy"
+        },
+        {
           "Name": "listener/net"
         }
       ]
@@ -557,6 +581,9 @@
       "Resources": [
         {
           "Name": "listener/app"
+        },
+        {
+          "Name": "listener/gwy"
         },
         {
           "Name": "listener/net"
@@ -575,6 +602,9 @@
         },
         {
           "Name": "loadbalancer/app/"
+        },
+        {
+          "Name": "loadbalancer/gwy/"
         },
         {
           "Name": "loadbalancer/net/"
@@ -690,6 +720,9 @@
           "Name": "listener/app"
         },
         {
+          "Name": "listener/gwy"
+        },
+        {
           "Name": "listener/net"
         },
         {
@@ -697,6 +730,9 @@
         },
         {
           "Name": "loadbalancer/app/"
+        },
+        {
+          "Name": "loadbalancer/gwy/"
         },
         {
           "Name": "loadbalancer/net/"
@@ -730,6 +766,9 @@
       "Resources": [
         {
           "Name": "loadbalancer/app/"
+        },
+        {
+          "Name": "loadbalancer/gwy/"
         },
         {
           "Name": "loadbalancer/net/"
@@ -810,6 +849,9 @@
       "Resources": [
         {
           "Name": "loadbalancer/app/"
+        },
+        {
+          "Name": "loadbalancer/gwy/"
         },
         {
           "Name": "loadbalancer/net/"
@@ -921,6 +963,16 @@
       ]
     },
     {
+      "Name": "listener/gwy",
+      "ARNFormats": [
+        "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:listener/gwy/${LoadBalancerName}/${LoadBalancerId}/${ListenerId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "elasticloadbalancing:ResourceTag/${TagKey}"
+      ]
+    },
+    {
       "Name": "listener/net",
       "ARNFormats": [
         "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:listener/net/${LoadBalancerName}/${LoadBalancerId}/${ListenerId}"
@@ -944,6 +996,16 @@
       "Name": "loadbalancer/app/",
       "ARNFormats": [
         "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:loadbalancer/app/${LoadBalancerName}/${LoadBalancerId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "elasticloadbalancing:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "loadbalancer/gwy/",
+      "ARNFormats": [
+        "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:loadbalancer/gwy/${LoadBalancerName}/${LoadBalancerId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}",
