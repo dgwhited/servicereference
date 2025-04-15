@@ -52,6 +52,7 @@
       "Name": "CreatePreset",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
     },
@@ -59,6 +60,7 @@
       "Name": "CreateQueue",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
     },
@@ -151,6 +153,9 @@
       "Name": "ListTagsForResource",
       "Resources": [
         {
+          "Name": "Job"
+        },
+        {
           "Name": "JobTemplate"
         },
         {
@@ -186,6 +191,9 @@
       ],
       "Resources": [
         {
+          "Name": "Job"
+        },
+        {
           "Name": "JobTemplate"
         },
         {
@@ -202,6 +210,9 @@
         "aws:TagKeys"
       ],
       "Resources": [
+        {
+          "Name": "Job"
+        },
         {
           "Name": "JobTemplate"
         },
