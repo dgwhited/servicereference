@@ -12,6 +12,8 @@
     {
       "Name": "CreateTable",
       "ActionConditionKeys": [
+        "s3tables:KMSKeyArn",
+        "s3tables:SSEAlgorithm",
         "s3tables:namespace"
       ],
       "Resources": [
@@ -22,6 +24,10 @@
     },
     {
       "Name": "CreateTableBucket",
+      "ActionConditionKeys": [
+        "s3tables:KMSKeyArn",
+        "s3tables:SSEAlgorithm"
+      ],
       "Resources": [
         {
           "Name": "TableBucket"
@@ -53,6 +59,14 @@
     },
     {
       "Name": "DeleteTableBucket",
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTableBucketEncryption",
       "Resources": [
         {
           "Name": "TableBucket"
@@ -111,6 +125,14 @@
       ]
     },
     {
+      "Name": "GetTableBucketEncryption",
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ]
+    },
+    {
       "Name": "GetTableBucketMaintenanceConfiguration",
       "Resources": [
         {
@@ -128,6 +150,18 @@
     },
     {
       "Name": "GetTableData",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableEncryption",
       "ActionConditionKeys": [
         "s3tables:namespace",
         "s3tables:tableName"
@@ -209,6 +243,18 @@
       ]
     },
     {
+      "Name": "PutTableBucketEncryption",
+      "ActionConditionKeys": [
+        "s3tables:KMSKeyArn",
+        "s3tables:SSEAlgorithm"
+      ],
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ]
+    },
+    {
       "Name": "PutTableBucketMaintenanceConfiguration",
       "Resources": [
         {
@@ -229,6 +275,19 @@
       "ActionConditionKeys": [
         "s3tables:namespace",
         "s3tables:tableName"
+      ],
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ]
+    },
+    {
+      "Name": "PutTableEncryption",
+      "ActionConditionKeys": [
+        "s3tables:KMSKeyArn",
+        "s3tables:SSEAlgorithm",
+        "s3tables:namespace"
       ],
       "Resources": [
         {
@@ -263,7 +322,8 @@
     {
       "Name": "RenameTable",
       "ActionConditionKeys": [
-        "s3tables:namespace"
+        "s3tables:namespace",
+        "s3tables:tableName"
       ],
       "Resources": [
         {
@@ -285,6 +345,18 @@
     }
   ],
   "ConditionKeys": [
+    {
+      "Name": "s3tables:KMSKeyArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "s3tables:SSEAlgorithm",
+      "Types": [
+        "String"
+      ]
+    },
     {
       "Name": "s3tables:namespace",
       "Types": [
