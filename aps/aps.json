@@ -191,6 +191,17 @@
       ]
     },
     {
+      "Name": "DescribeWorkspaceConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
       "Name": "GetAlertManagerSilence",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -466,6 +477,17 @@
     },
     {
       "Name": "UpdateWorkspaceAlias",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWorkspaceConfiguration",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
