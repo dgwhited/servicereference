@@ -115,6 +115,18 @@
       ]
     },
     {
+      "Name": "CreateWorkflowVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
       "Name": "DeleteAnnotationStore",
       "Resources": [
         {
@@ -206,6 +218,17 @@
     {
       "Name": "DeleteWorkflow",
       "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkflowVersion",
+      "Resources": [
+        {
+          "Name": "WorkflowVersion"
+        },
         {
           "Name": "workflow"
         }
@@ -388,6 +411,17 @@
       ]
     },
     {
+      "Name": "GetWorkflowVersion",
+      "Resources": [
+        {
+          "Name": "WorkflowVersion"
+        },
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
       "Name": "ListAnnotationImportJobs"
     },
     {
@@ -501,6 +535,14 @@
       "Name": "ListVariantStores"
     },
     {
+      "Name": "ListWorkflowVersions",
+      "Resources": [
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
       "Name": "ListWorkflows"
     },
     {
@@ -600,6 +642,9 @@
           "Name": "VariantStore"
         },
         {
+          "Name": "WorkflowVersion"
+        },
+        {
           "Name": "readSet"
         },
         {
@@ -639,6 +684,9 @@
         },
         {
           "Name": "VariantStore"
+        },
+        {
+          "Name": "WorkflowVersion"
         },
         {
           "Name": "readSet"
@@ -723,6 +771,17 @@
       ]
     },
     {
+      "Name": "UpdateWorkflowVersion",
+      "Resources": [
+        {
+          "Name": "WorkflowVersion"
+        },
+        {
+          "Name": "workflow"
+        }
+      ]
+    },
+    {
       "Name": "UploadReadSetPart",
       "Resources": [
         {
@@ -786,6 +845,15 @@
       "Name": "VariantStore",
       "ARNFormats": [
         "arn:${Partition}:omics:${Region}:${Account}:variantStore/${VariantStoreName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "WorkflowVersion",
+      "ARNFormats": [
+        "arn:${Partition}:omics:${Region}:${Account}:workflow/${Id}/version/${VersionName}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
