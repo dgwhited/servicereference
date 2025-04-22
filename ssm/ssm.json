@@ -115,7 +115,8 @@
       "Name": "CreateDocument",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "ssm:DocumentType"
       ],
       "Resources": [
         {
@@ -187,6 +188,9 @@
     },
     {
       "Name": "DeleteDocument",
+      "ActionConditionKeys": [
+        "ssm:DocumentType"
+      ],
       "Resources": [
         {
           "Name": "document"
@@ -374,6 +378,9 @@
     },
     {
       "Name": "DescribeDocument",
+      "ActionConditionKeys": [
+        "ssm:DocumentType"
+      ],
       "Resources": [
         {
           "Name": "document"
@@ -390,6 +397,9 @@
     },
     {
       "Name": "DescribeDocumentPermission",
+      "ActionConditionKeys": [
+        "ssm:DocumentType"
+      ],
       "Resources": [
         {
           "Name": "document"
@@ -607,7 +617,8 @@
     {
       "Name": "GetDocument",
       "ActionConditionKeys": [
-        "ssm:DocumentCategories"
+        "ssm:DocumentCategories",
+        "ssm:DocumentType"
       ],
       "Resources": [
         {
@@ -789,6 +800,9 @@
     },
     {
       "Name": "ListDocumentMetadataHistory",
+      "ActionConditionKeys": [
+        "ssm:DocumentType"
+      ],
       "Resources": [
         {
           "Name": "document"
@@ -797,6 +811,9 @@
     },
     {
       "Name": "ListDocumentVersions",
+      "ActionConditionKeys": [
+        "ssm:DocumentType"
+      ],
       "Resources": [
         {
           "Name": "document"
@@ -894,6 +911,9 @@
     },
     {
       "Name": "ModifyDocumentPermission",
+      "ActionConditionKeys": [
+        "ssm:DocumentType"
+      ],
       "Resources": [
         {
           "Name": "document"
@@ -1107,6 +1127,9 @@
       "Resources": [
         {
           "Name": "automation-definition"
+        },
+        {
+          "Name": "document"
         }
       ]
     },
@@ -1120,6 +1143,9 @@
       "Resources": [
         {
           "Name": "automation-definition"
+        },
+        {
+          "Name": "document"
         }
       ]
     },
@@ -1222,6 +1248,9 @@
     },
     {
       "Name": "UpdateDocument",
+      "ActionConditionKeys": [
+        "ssm:DocumentType"
+      ],
       "Resources": [
         {
           "Name": "document"
@@ -1230,6 +1259,9 @@
     },
     {
       "Name": "UpdateDocumentDefaultVersion",
+      "ActionConditionKeys": [
+        "ssm:DocumentType"
+      ],
       "Resources": [
         {
           "Name": "document"
@@ -1238,6 +1270,9 @@
     },
     {
       "Name": "UpdateDocumentMetadata",
+      "ActionConditionKeys": [
+        "ssm:DocumentType"
+      ],
       "Resources": [
         {
           "Name": "document"
@@ -1404,6 +1439,12 @@
       ]
     },
     {
+      "Name": "ssm:DocumentType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "ssm:Overwrite",
       "Types": [
         "String"
@@ -1498,6 +1539,7 @@
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}",
         "ssm:DocumentCategories",
+        "ssm:DocumentType",
         "ssm:resourceTag/${TagKey}"
       ]
     },

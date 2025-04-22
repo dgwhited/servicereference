@@ -652,6 +652,12 @@
       ]
     },
     {
+      "Name": "apigateway:Request/CognitoUserPoolProviderArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
       "Name": "apigateway:Request/DisableExecuteApiEndpoint",
       "Types": [
         "Bool"
@@ -733,6 +739,12 @@
       "Name": "apigateway:Resource/AuthorizerUri",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "apigateway:Resource/CognitoUserPoolProviderArn",
+      "Types": [
+        "ARN"
       ]
     },
     {
@@ -890,8 +902,10 @@
       "ConditionKeys": [
         "apigateway:Request/AuthorizerType",
         "apigateway:Request/AuthorizerUri",
+        "apigateway:Request/CognitoUserPoolProviderArn",
         "apigateway:Resource/AuthorizerType",
         "apigateway:Resource/AuthorizerUri",
+        "apigateway:Resource/CognitoUserPoolProviderArn",
         "aws:ResourceTag/${TagKey}"
       ]
     },
@@ -904,6 +918,7 @@
       "ConditionKeys": [
         "apigateway:Request/AuthorizerType",
         "apigateway:Request/AuthorizerUri",
+        "apigateway:Request/CognitoUserPoolProviderArn",
         "aws:ResourceTag/${TagKey}"
       ]
     },
