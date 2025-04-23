@@ -522,6 +522,26 @@
       ]
     },
     {
+      "Name": "StopServiceDeployment",
+      "Resources": [
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ecs:cluster"
+          ]
+        },
+        {
+          "Name": "service-deployment",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ecs:cluster",
+            "ecs:service"
+          ]
+        }
+      ]
+    },
+    {
       "Name": "StopTask",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",

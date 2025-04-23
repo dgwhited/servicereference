@@ -49,6 +49,7 @@
       "Name": "CreateAccount",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
     },
@@ -56,6 +57,7 @@
       "Name": "CreateGovCloudAccount",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
     },
@@ -81,6 +83,7 @@
       "Name": "CreatePolicy",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "organizations:PolicyType"
       ]
@@ -445,7 +448,10 @@
           "Name": "organizationalunit"
         },
         {
-          "Name": "policy"
+          "Name": "policy",
+          "ConditionKeys": [
+            "organizations:PolicyType"
+          ]
         },
         {
           "Name": "resourcepolicy"
