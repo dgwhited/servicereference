@@ -5,6 +5,7 @@
       "Name": "CreateConnector",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
     },
@@ -12,6 +13,7 @@
       "Name": "CreateDirectoryRegistration",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
     },
@@ -27,6 +29,7 @@
       "Name": "CreateTemplate",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Resources": [
@@ -248,24 +251,12 @@
       ]
     },
     {
-      "Name": "ServicePrincipalName",
-      "ARNFormats": [
-        "arn:${Partition}:pca-connector-ad:${Region}:${Account}:directory-registration/${DirectoryId}"
-      ]
-    },
-    {
       "Name": "Template",
       "ARNFormats": [
         "arn:${Partition}:pca-connector-ad:${Region}:${Account}:connector/${ConnectorId}/template/${TemplateId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
-      ]
-    },
-    {
-      "Name": "TemplateGroupAccessControlEntry",
-      "ARNFormats": [
-        "arn:${Partition}:pca-connector-ad:${Region}:${Account}:connector/${ConnectorId}/template/${TemplateId}"
       ]
     }
   ],
