@@ -5,6 +5,7 @@
       "Name": "CreateCertificateAuthority",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
     },
@@ -177,7 +178,10 @@
       ],
       "Resources": [
         {
-          "Name": "certificate-authority"
+          "Name": "certificate-authority",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}"
+          ]
         }
       ]
     },
