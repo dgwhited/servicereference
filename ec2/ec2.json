@@ -582,6 +582,32 @@
       ]
     },
     {
+      "Name": "AssociateRouteServer",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "route-server",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "vpc",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:Ipv4IpamPoolId",
+            "ec2:Ipv6IpamPoolId",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:Tenancy",
+            "ec2:VpcID"
+          ]
+        }
+      ]
+    },
+    {
       "Name": "AssociateRouteTable",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -1331,7 +1357,20 @@
           "ConditionKeys": [
             "aws:RequestTag/${TagKey}",
             "aws:TagKeys",
-            "ec2:CapacityReservationFleet"
+            "ec2:AvailabilityZone",
+            "ec2:AvailabilityZoneId",
+            "ec2:CapacityReservationFleet",
+            "ec2:EbsOptimized",
+            "ec2:EndDate",
+            "ec2:EndDateType",
+            "ec2:EphemeralStorage",
+            "ec2:InstanceCount",
+            "ec2:InstanceMatchCriteria",
+            "ec2:InstancePlatform",
+            "ec2:InstanceType",
+            "ec2:OutpostArn",
+            "ec2:PlacementGroup",
+            "ec2:Tenancy"
           ]
         }
       ]
@@ -2591,6 +2630,78 @@
             "ec2:ResourceTag/${TagKey}",
             "ec2:RouteTableID",
             "ec2:Vpc"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreateRouteServer",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "route-server",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreateRouteServerEndpoint",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "route-server",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "route-server-endpoint",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:AvailabilityZone"
+          ]
+        },
+        {
+          "Name": "subnet",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:AvailabilityZone",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:SubnetID",
+            "ec2:Vpc"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreateRouteServerPeer",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "route-server-endpoint",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:AvailabilityZone",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "route-server-peer",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:AvailabilityZone"
           ]
         }
       ]
@@ -5222,6 +5333,53 @@
       ]
     },
     {
+      "Name": "DeleteRouteServer",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "route-server",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRouteServerEndpoint",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "route-server-endpoint",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:AvailabilityZone",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRouteServerPeer",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "route-server-peer",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:AvailabilityZone",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
       "Name": "DeleteRouteTable",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -6776,30 +6934,6 @@
       "Name": "DescribeCapacityBlockExtensionHistory",
       "ActionConditionKeys": [
         "ec2:Region"
-      ],
-      "Resources": [
-        {
-          "Name": "capacity-reservation",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}",
-            "ec2:AvailabilityZone",
-            "ec2:CapacityReservationFleet",
-            "ec2:CreateDate",
-            "ec2:DestinationCapacityReservationId",
-            "ec2:EbsOptimized",
-            "ec2:EndDate",
-            "ec2:EndDateType",
-            "ec2:InstanceCount",
-            "ec2:InstanceMatchCriteria",
-            "ec2:InstancePlatform",
-            "ec2:InstanceType",
-            "ec2:OutpostArn",
-            "ec2:PlacementGroup",
-            "ec2:ResourceTag/${TagKey}",
-            "ec2:SourceCapacityReservationId",
-            "ec2:Tenancy"
-          ]
-        }
       ]
     },
     {
@@ -6908,21 +7042,6 @@
       "Name": "DescribeClientVpnEndpoints",
       "ActionConditionKeys": [
         "ec2:Region"
-      ],
-      "Resources": [
-        {
-          "Name": "client-vpn-endpoint",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}",
-            "ec2:ClientRootCertificateChainArn",
-            "ec2:CloudwatchLogGroupArn",
-            "ec2:CloudwatchLogStreamArn",
-            "ec2:DirectoryArn",
-            "ec2:ResourceTag/${TagKey}",
-            "ec2:SamlProviderArn",
-            "ec2:ServerCertificateArn"
-          ]
-        }
       ]
     },
     {
@@ -7517,6 +7636,24 @@
       ]
     },
     {
+      "Name": "DescribeRouteServerEndpoints",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ]
+    },
+    {
+      "Name": "DescribeRouteServerPeers",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ]
+    },
+    {
+      "Name": "DescribeRouteServers",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ]
+    },
+    {
       "Name": "DescribeRouteTables",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -7895,17 +8032,6 @@
       "Name": "DescribeVpcEndpointAssociations",
       "ActionConditionKeys": [
         "ec2:Region"
-      ],
-      "Resources": [
-        {
-          "Name": "vpc-endpoint",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}",
-            "ec2:ResourceTag/${TagKey}",
-            "ec2:VpceServiceName",
-            "ec2:VpceServiceOwner"
-          ]
-        }
       ]
     },
     {
@@ -8334,6 +8460,30 @@
       ]
     },
     {
+      "Name": "DisableRouteServerPropagation",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "route-server",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "route-table",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:RouteTableID",
+            "ec2:Vpc"
+          ]
+        }
+      ]
+    },
+    {
       "Name": "DisableSerialConsoleAccess",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -8634,6 +8784,32 @@
             "ec2:ResourceTag/${TagKey}",
             "ec2:Subnet",
             "ec2:Vpc"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateRouteServer",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "route-server",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "vpc",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:Ipv4IpamPoolId",
+            "ec2:Ipv6IpamPoolId",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:Tenancy",
+            "ec2:VpcID"
           ]
         }
       ]
@@ -9022,6 +9198,30 @@
       "Name": "EnableReachabilityAnalyzerOrganizationSharing",
       "ActionConditionKeys": [
         "ec2:Region"
+      ]
+    },
+    {
+      "Name": "EnableRouteServerPropagation",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "route-server",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "route-table",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:RouteTableID",
+            "ec2:Vpc"
+          ]
+        }
       ]
     },
     {
@@ -9786,6 +9986,60 @@
         },
         {
           "Name": "verified-access-group",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "GetRouteServerAssociations",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "route-server",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "GetRouteServerPropagations",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "route-server",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "route-table",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:RouteTableID",
+            "ec2:Vpc"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "GetRouteServerRoutingDatabase",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "route-server",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
             "ec2:ResourceTag/${TagKey}"
@@ -11127,6 +11381,21 @@
             "ec2:ReservedInstancesOfferingType",
             "ec2:ResourceTag/${TagKey}",
             "ec2:Tenancy"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "ModifyRouteServer",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "route-server",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
           ]
         }
       ]
@@ -13892,6 +14161,12 @@
       ]
     },
     {
+      "Name": "ec2:AvailabilityZoneId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "ec2:CapacityReservationFleet",
       "Types": [
         "ARN"
@@ -13991,6 +14266,12 @@
       "Name": "ec2:EndDateType",
       "Types": [
         "String"
+      ]
+    },
+    {
+      "Name": "ec2:EphemeralStorage",
+      "Types": [
+        "Bool"
       ]
     },
     {
@@ -14625,12 +14906,14 @@
         "ec2:Attribute",
         "ec2:Attribute/${AttributeName}",
         "ec2:AvailabilityZone",
+        "ec2:AvailabilityZoneId",
         "ec2:CapacityReservationFleet",
         "ec2:CreateDate",
         "ec2:DestinationCapacityReservationId",
         "ec2:EbsOptimized",
         "ec2:EndDate",
         "ec2:EndDateType",
+        "ec2:EphemeralStorage",
         "ec2:InstanceCount",
         "ec2:InstanceMatchCriteria",
         "ec2:InstancePlatform",
@@ -15439,6 +15722,47 @@
       "Name": "role",
       "ARNFormats": [
         "arn:${Partition}:iam::${Account}:role/${RoleNameWithPath}"
+      ]
+    },
+    {
+      "Name": "route-server",
+      "ARNFormats": [
+        "arn:${Partition}:ec2:${Region}:${Account}:route-server/${RouteServerId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ec2:Region",
+        "ec2:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "route-server-endpoint",
+      "ARNFormats": [
+        "arn:${Partition}:ec2:${Region}:${Account}:route-server-endpoint/${RouteServerEndpointId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ec2:AvailabilityZone",
+        "ec2:Region",
+        "ec2:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "route-server-peer",
+      "ARNFormats": [
+        "arn:${Partition}:ec2:${Region}:${Account}:route-server-peer/${RouteServerPeerId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ec2:AvailabilityZone",
+        "ec2:Region",
+        "ec2:ResourceTag/${TagKey}"
       ]
     },
     {
