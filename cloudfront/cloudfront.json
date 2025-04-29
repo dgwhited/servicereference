@@ -18,6 +18,22 @@
       ]
     },
     {
+      "Name": "AssociateDistributionTenantWebACL",
+      "Resources": [
+        {
+          "Name": "distribution-tenant"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateDistributionWebACL",
+      "Resources": [
+        {
+          "Name": "distribution"
+        }
+      ]
+    },
+    {
       "Name": "CopyDistribution",
       "Resources": [
         {
@@ -54,6 +70,13 @@
       ]
     },
     {
+      "Name": "CreateConnectionGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
       "Name": "CreateContinuousDeploymentPolicy",
       "Resources": [
         {
@@ -67,6 +90,13 @@
         {
           "Name": "distribution"
         }
+      ]
+    },
+    {
+      "Name": "CreateDistributionTenant",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
       ]
     },
     {
@@ -88,6 +118,14 @@
       "Resources": [
         {
           "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "CreateInvalidationForDistributionTenant",
+      "Resources": [
+        {
+          "Name": "distribution-tenant"
         }
       ]
     },
@@ -190,6 +228,14 @@
       ]
     },
     {
+      "Name": "DeleteConnectionGroup",
+      "Resources": [
+        {
+          "Name": "connection-group"
+        }
+      ]
+    },
+    {
       "Name": "DeleteContinuousDeploymentPolicy",
       "Resources": [
         {
@@ -202,6 +248,14 @@
       "Resources": [
         {
           "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDistributionTenant",
+      "Resources": [
+        {
+          "Name": "distribution-tenant"
         }
       ]
     },
@@ -311,6 +365,22 @@
       ]
     },
     {
+      "Name": "DisassociateDistributionTenantWebACL",
+      "Resources": [
+        {
+          "Name": "distribution-tenant"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateDistributionWebACL",
+      "Resources": [
+        {
+          "Name": "distribution"
+        }
+      ]
+    },
+    {
       "Name": "GetAnycastIpList",
       "Resources": [
         {
@@ -351,6 +421,22 @@
       ]
     },
     {
+      "Name": "GetConnectionGroup",
+      "Resources": [
+        {
+          "Name": "connection-group"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnectionGroupByRoutingEndpoint",
+      "Resources": [
+        {
+          "Name": "connection-group"
+        }
+      ]
+    },
+    {
       "Name": "GetContinuousDeploymentPolicy",
       "Resources": [
         {
@@ -379,6 +465,22 @@
       "Resources": [
         {
           "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "GetDistributionTenant",
+      "Resources": [
+        {
+          "Name": "distribution-tenant"
+        }
+      ]
+    },
+    {
+      "Name": "GetDistributionTenantByDomain",
+      "Resources": [
+        {
+          "Name": "distribution-tenant"
         }
       ]
     },
@@ -431,10 +533,26 @@
       ]
     },
     {
+      "Name": "GetInvalidationForDistributionTenant",
+      "Resources": [
+        {
+          "Name": "distribution-tenant"
+        }
+      ]
+    },
+    {
       "Name": "GetKeyGroup"
     },
     {
       "Name": "GetKeyGroupConfig"
+    },
+    {
+      "Name": "GetManagedCertificateDetails",
+      "Resources": [
+        {
+          "Name": "distribution-tenant"
+        }
+      ]
     },
     {
       "Name": "GetMonitoringSubscription"
@@ -546,7 +664,16 @@
       ]
     },
     {
+      "Name": "ListConnectionGroups"
+    },
+    {
       "Name": "ListContinuousDeploymentPolicies"
+    },
+    {
+      "Name": "ListDistributionTenants"
+    },
+    {
+      "Name": "ListDistributionTenantsByCustomization"
     },
     {
       "Name": "ListDistributions"
@@ -556,6 +683,9 @@
     },
     {
       "Name": "ListDistributionsByCachePolicyId"
+    },
+    {
+      "Name": "ListDistributionsByConnectionMode"
     },
     {
       "Name": "ListDistributionsByKeyGroup"
@@ -579,6 +709,17 @@
       "Name": "ListDistributionsByWebACLId"
     },
     {
+      "Name": "ListDomainConflicts",
+      "Resources": [
+        {
+          "Name": "distribution"
+        },
+        {
+          "Name": "distribution-tenant"
+        }
+      ]
+    },
+    {
       "Name": "ListFieldLevelEncryptionConfigs"
     },
     {
@@ -592,6 +733,14 @@
       "Resources": [
         {
           "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "ListInvalidationsForDistributionTenant",
+      "Resources": [
+        {
+          "Name": "distribution-tenant"
         }
       ]
     },
@@ -632,7 +781,13 @@
           "Name": "anycast-ip-list"
         },
         {
+          "Name": "connection-group"
+        },
+        {
           "Name": "distribution"
+        },
+        {
+          "Name": "distribution-tenant"
         },
         {
           "Name": "vpcorigin"
@@ -664,7 +819,13 @@
           "Name": "anycast-ip-list"
         },
         {
+          "Name": "connection-group"
+        },
+        {
           "Name": "distribution"
+        },
+        {
+          "Name": "distribution-tenant"
         },
         {
           "Name": "streaming-distribution"
@@ -692,7 +853,13 @@
           "Name": "anycast-ip-list"
         },
         {
+          "Name": "connection-group"
+        },
+        {
           "Name": "distribution"
+        },
+        {
+          "Name": "distribution-tenant"
         },
         {
           "Name": "streaming-distribution"
@@ -719,6 +886,14 @@
       ]
     },
     {
+      "Name": "UpdateConnectionGroup",
+      "Resources": [
+        {
+          "Name": "connection-group"
+        }
+      ]
+    },
+    {
       "Name": "UpdateContinuousDeploymentPolicy",
       "Resources": [
         {
@@ -735,10 +910,29 @@
       ]
     },
     {
+      "Name": "UpdateDistributionTenant",
+      "Resources": [
+        {
+          "Name": "distribution-tenant"
+        }
+      ]
+    },
+    {
       "Name": "UpdateDistributionWithStagingConfig",
       "Resources": [
         {
           "Name": "distribution"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDomainAssociation",
+      "Resources": [
+        {
+          "Name": "distribution"
+        },
+        {
+          "Name": "distribution-tenant"
         }
       ]
     },
@@ -825,6 +1019,14 @@
           "Name": "vpcorigin"
         }
       ]
+    },
+    {
+      "Name": "VerifyDnsConfiguration",
+      "Resources": [
+        {
+          "Name": "distribution-tenant"
+        }
+      ]
     }
   ],
   "ConditionKeys": [
@@ -864,6 +1066,15 @@
       ]
     },
     {
+      "Name": "connection-group",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:connection-group/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
       "Name": "continuous-deployment-policy",
       "ARNFormats": [
         "arn:${Partition}:cloudfront::${Account}:continuous-deployment-policy/${Id}"
@@ -873,6 +1084,15 @@
       "Name": "distribution",
       "ARNFormats": [
         "arn:${Partition}:cloudfront::${Account}:distribution/${DistributionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "distribution-tenant",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:distribution-tenant/${Id}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
