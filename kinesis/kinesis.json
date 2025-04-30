@@ -42,7 +42,10 @@
       "Name": "DeleteResourcePolicy",
       "Resources": [
         {
-          "Name": "consumer"
+          "Name": "consumer",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
           "Name": "stream",
@@ -67,7 +70,10 @@
       "Name": "DeregisterStreamConsumer",
       "Resources": [
         {
-          "Name": "consumer"
+          "Name": "consumer",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ]
     },
@@ -89,7 +95,10 @@
       "Name": "DescribeStreamConsumer",
       "Resources": [
         {
-          "Name": "consumer"
+          "Name": "consumer",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ]
     },
@@ -125,7 +134,10 @@
       "Name": "GetResourcePolicy",
       "Resources": [
         {
-          "Name": "consumer"
+          "Name": "consumer",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
           "Name": "stream",
@@ -183,6 +195,23 @@
       "Name": "ListStreams"
     },
     {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "consumer",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
       "Name": "ListTagsForStream",
       "Resources": [
         {
@@ -230,7 +259,10 @@
       "Name": "PutResourcePolicy",
       "Resources": [
         {
-          "Name": "consumer"
+          "Name": "consumer",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
           "Name": "stream",
@@ -246,7 +278,9 @@
         {
           "Name": "stream",
           "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}"
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
           ]
         }
       ]
@@ -306,7 +340,50 @@
       "Name": "SubscribeToShard",
       "Resources": [
         {
-          "Name": "consumer"
+          "Name": "consumer",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "Resources": [
+        {
+          "Name": "consumer",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "Resources": [
+        {
+          "Name": "consumer",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
         }
       ]
     },

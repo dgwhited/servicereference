@@ -269,6 +269,9 @@
       "Name": "DeleteResourcePolicy",
       "Resources": [
         {
+          "Name": "document"
+        },
+        {
           "Name": "opsitemgroup"
         },
         {
@@ -556,6 +559,14 @@
       "Name": "ExecuteAPI"
     },
     {
+      "Name": "GetAccessToken",
+      "Resources": [
+        {
+          "Name": "opsitem"
+        }
+      ]
+    },
+    {
       "Name": "GetAutomationExecution",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -745,6 +756,9 @@
     {
       "Name": "GetResourcePolicies",
       "Resources": [
+        {
+          "Name": "document"
+        },
         {
           "Name": "opsitemgroup"
         },
@@ -967,6 +981,9 @@
       "Name": "PutResourcePolicy",
       "Resources": [
         {
+          "Name": "document"
+        },
+        {
           "Name": "opsitemgroup"
         },
         {
@@ -1108,6 +1125,21 @@
       ]
     },
     {
+      "Name": "StartAccessRequest",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "managed-instance"
+        }
+      ]
+    },
+    {
       "Name": "StartAssociationsOnce",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -1156,6 +1188,7 @@
       "Name": "StartSession",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
+        "ssm:AccessRequestId",
         "ssm:resourceTag/${TagKey}"
       ],
       "Resources": [
@@ -1424,6 +1457,12 @@
       "Name": "ec2:SourceInstanceARN",
       "Types": [
         "ARN"
+      ]
+    },
+    {
+      "Name": "ssm:AccessRequestId",
+      "Types": [
+        "String"
       ]
     },
     {
