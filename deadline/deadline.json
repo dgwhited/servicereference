@@ -228,6 +228,10 @@
     },
     {
       "Name": "CreateWorker",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Resources": [
         {
           "Name": "worker"
@@ -798,6 +802,9 @@
     },
     {
       "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "deadline:CalledAction"
+      ],
       "Resources": [
         {
           "Name": "farm"
@@ -810,6 +817,9 @@
         },
         {
           "Name": "queue"
+        },
+        {
+          "Name": "worker"
         }
       ]
     },
@@ -890,7 +900,8 @@
       "Name": "TagResource",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "deadline:CalledAction"
       ],
       "Resources": [
         {
@@ -904,6 +915,9 @@
         },
         {
           "Name": "queue"
+        },
+        {
+          "Name": "worker"
         }
       ]
     },
@@ -924,6 +938,9 @@
         },
         {
           "Name": "queue"
+        },
+        {
+          "Name": "worker"
         }
       ]
     },
@@ -1088,6 +1105,12 @@
       ]
     },
     {
+      "Name": "deadline:CalledAction",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "deadline:FarmMembershipLevels",
       "Types": [
         "ArrayOfString"
@@ -1210,6 +1233,7 @@
         "arn:${Partition}:deadline:${Region}:${Account}:farm/${FarmId}/fleet/${FleetId}/worker/${WorkerId}"
       ],
       "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "deadline:FarmMembershipLevels",
         "deadline:FleetMembershipLevels"
       ]
