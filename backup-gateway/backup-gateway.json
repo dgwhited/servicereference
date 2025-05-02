@@ -253,7 +253,7 @@
     {
       "Name": "gateway",
       "ARNFormats": [
-        "arn:${Partition}:backup-gateway::${Account}:gateway/${GatewayId}"
+        "arn:${Partition}:backup-gateway:${Region}:${Account}:gateway/${GatewayId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -262,7 +262,7 @@
     {
       "Name": "hypervisor",
       "ARNFormats": [
-        "arn:${Partition}:backup-gateway::${Account}:hypervisor/${HypervisorId}"
+        "arn:${Partition}:backup-gateway:${Region}:${Account}:hypervisor/${HypervisorId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -271,7 +271,7 @@
     {
       "Name": "virtualmachine",
       "ARNFormats": [
-        "arn:${Partition}:backup-gateway::${Account}:vm/${VirtualmachineId}"
+        "arn:${Partition}:backup-gateway:${Region}:${Account}:vm/${VirtualmachineId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
