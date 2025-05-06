@@ -18,7 +18,12 @@
       ]
     },
     {
-      "Name": "CreatePolicyStore"
+      "Name": "CreatePolicyStore",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "Name": "CreatePolicyTemplate",
@@ -144,7 +149,38 @@
       ]
     },
     {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "policy-store"
+        }
+      ]
+    },
+    {
       "Name": "PutSchema",
+      "Resources": [
+        {
+          "Name": "policy-store"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "policy-store"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
       "Resources": [
         {
           "Name": "policy-store"
@@ -184,11 +220,34 @@
       ]
     }
   ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "policy-store",
       "ARNFormats": [
         "arn:${Partition}:verifiedpermissions::${Account}:policy-store/${PolicyStoreId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     }
   ],
