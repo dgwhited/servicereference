@@ -165,6 +165,18 @@
       ]
     },
     {
+      "Name": "StartCanaryDryRun",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "canary"
+        }
+      ]
+    },
+    {
       "Name": "StopCanary",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
