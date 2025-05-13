@@ -1340,8 +1340,14 @@
           "ConditionKeys": [
             "aws:RequestTag/${TagKey}",
             "aws:TagKeys",
+            "ec2:Encrypted",
             "ec2:OutpostArn",
-            "ec2:SnapshotID"
+            "ec2:Owner",
+            "ec2:ParentSnapshot",
+            "ec2:ParentVolume",
+            "ec2:SnapshotID",
+            "ec2:SnapshotTime",
+            "ec2:VolumeSize"
           ]
         }
       ]
@@ -2226,6 +2232,57 @@
             "ec2:ResourceTag/${TagKey}",
             "ec2:Tenancy",
             "ec2:VpcID"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreateLocalGatewayVirtualInterface",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "local-gateway-virtual-interface",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
+        {
+          "Name": "local-gateway-virtual-interface-group",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "outpost-lag",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "CreateLocalGatewayVirtualInterfaceGroup",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "local-gateway",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "local-gateway-virtual-interface-group",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
           ]
         }
       ]
@@ -5083,6 +5140,36 @@
       ]
     },
     {
+      "Name": "DeleteLocalGatewayVirtualInterface",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "local-gateway-virtual-interface",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLocalGatewayVirtualInterfaceGroup",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "local-gateway-virtual-interface-group",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
       "Name": "DeleteManagedPrefixList",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -7576,6 +7663,12 @@
       ]
     },
     {
+      "Name": "DescribeOutpostLags",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ]
+    },
+    {
       "Name": "DescribePlacementGroups",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -7702,6 +7795,12 @@
     },
     {
       "Name": "DescribeSecurityGroups",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ]
+    },
+    {
+      "Name": "DescribeServiceLinkVirtualInterfaces",
       "ActionConditionKeys": [
         "ec2:Region"
       ]
@@ -15655,6 +15754,19 @@
       ]
     },
     {
+      "Name": "outpost-lag",
+      "ARNFormats": [
+        "arn:${Partition}:ec2:${Region}:${Account}:outpost-lag/${OutpostLagId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ec2:Region",
+        "ec2:ResourceTag/${TagKey}"
+      ]
+    },
+    {
       "Name": "placement-group",
       "ARNFormats": [
         "arn:${Partition}:ec2:${Region}:${Account}:placement-group/${PlacementGroupName}"
@@ -15832,6 +15944,7 @@
         "ec2:Location",
         "ec2:OutpostArn",
         "ec2:Owner",
+        "ec2:ParentSnapshot",
         "ec2:ParentVolume",
         "ec2:Region",
         "ec2:Remove/group",
