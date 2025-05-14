@@ -25,6 +25,10 @@
     },
     {
       "Name": "CreateGrant",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Resources": [
         {
           "Name": "license"
@@ -40,7 +44,11 @@
       ]
     },
     {
-      "Name": "CreateLicense"
+      "Name": "CreateLicense",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "Name": "CreateLicenseConfiguration",
@@ -228,7 +236,16 @@
       "Name": "ListTagsForResource",
       "Resources": [
         {
+          "Name": "grant"
+        },
+        {
+          "Name": "license"
+        },
+        {
           "Name": "license-configuration"
+        },
+        {
+          "Name": "report-generator"
         }
       ]
     },
@@ -259,15 +276,36 @@
       ],
       "Resources": [
         {
+          "Name": "grant"
+        },
+        {
+          "Name": "license"
+        },
+        {
           "Name": "license-configuration"
+        },
+        {
+          "Name": "report-generator"
         }
       ]
     },
     {
       "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
       "Resources": [
         {
+          "Name": "grant"
+        },
+        {
+          "Name": "license"
+        },
+        {
           "Name": "license-configuration"
+        },
+        {
+          "Name": "report-generator"
         }
       ]
     },
@@ -307,6 +345,12 @@
       ]
     },
     {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "aws:TagKeys",
       "Types": [
         "ArrayOfString"
@@ -324,12 +368,18 @@
       "Name": "grant",
       "ARNFormats": [
         "arn:${Partition}:license-manager::${Account}:grant:${GrantId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "license",
       "ARNFormats": [
         "arn:${Partition}:license-manager::${Account}:license:${LicenseId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -338,6 +388,7 @@
         "arn:${Partition}:license-manager:${Region}:${Account}:license-configuration:${LicenseConfigurationId}"
       ],
       "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "license-manager:ResourceTag/${TagKey}"
       ]
     },
@@ -347,6 +398,7 @@
         "arn:${Partition}:license-manager:${Region}:${Account}:report-generator:${ReportGeneratorId}"
       ],
       "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "license-manager:ResourceTag/${TagKey}"
       ]
     }
