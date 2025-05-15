@@ -1,0 +1,50 @@
+{
+  "Name": "transform",
+  "Actions": [
+    {
+      "Name": "AssociateConnectorResource"
+    },
+    {
+      "Name": "CreateProfile",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteProfile",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnector"
+    },
+    {
+      "Name": "ListProfiles"
+    },
+    {
+      "Name": "RejectConnector"
+    },
+    {
+      "Name": "UpdateProfile",
+      "Resources": [
+        {
+          "Name": "profile"
+        }
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "profile",
+      "ARNFormats": [
+        "arn:${Partition}:transform:${Region}:${Account}:profile/${Identifier}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}
