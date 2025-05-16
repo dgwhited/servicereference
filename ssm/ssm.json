@@ -1189,6 +1189,7 @@
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
         "ssm:AccessRequestId",
+        "ssm:SessionDocumentAccessCheck",
         "ssm:resourceTag/${TagKey}"
       ],
       "Resources": [
@@ -1499,6 +1500,12 @@
       "Name": "ssm:Recursive",
       "Types": [
         "String"
+      ]
+    },
+    {
+      "Name": "ssm:SessionDocumentAccessCheck",
+      "Types": [
+        "Bool"
       ]
     },
     {
