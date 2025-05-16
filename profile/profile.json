@@ -56,6 +56,21 @@
       ]
     },
     {
+      "Name": "CreateDomainLayout",
+      "Resources": [
+        {
+          "Name": "domains"
+        },
+        {
+          "Name": "layouts",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
       "Name": "CreateEventStream",
       "Resources": [
         {
@@ -166,6 +181,17 @@
       "Resources": [
         {
           "Name": "domains"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDomainLayout",
+      "Resources": [
+        {
+          "Name": "domains"
+        },
+        {
+          "Name": "layouts"
         }
       ]
     },
@@ -302,6 +328,17 @@
       "Resources": [
         {
           "Name": "domains"
+        }
+      ]
+    },
+    {
+      "Name": "GetDomainLayout",
+      "Resources": [
+        {
+          "Name": "domains"
+        },
+        {
+          "Name": "layouts"
         }
       ]
     },
@@ -454,6 +491,14 @@
     },
     {
       "Name": "ListCalculatedAttributesForProfile",
+      "Resources": [
+        {
+          "Name": "domains"
+        }
+      ]
+    },
+    {
+      "Name": "ListDomainLayouts",
       "Resources": [
         {
           "Name": "domains"
@@ -704,6 +749,17 @@
       ]
     },
     {
+      "Name": "UpdateDomainLayout",
+      "Resources": [
+        {
+          "Name": "domains"
+        },
+        {
+          "Name": "layouts"
+        }
+      ]
+    },
+    {
       "Name": "UpdateEventTrigger",
       "Resources": [
         {
@@ -784,6 +840,15 @@
       "Name": "integrations",
       "ARNFormats": [
         "arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}/integrations/${Uri}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "layouts",
+      "ARNFormats": [
+        "arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}/layouts/${LayoutDefinitionName}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
