@@ -14,7 +14,10 @@
       ]
     },
     {
-      "Name": "BatchGetCollection"
+      "Name": "BatchGetCollection",
+      "ActionConditionKeys": [
+        "aoss:collection"
+      ]
     },
     {
       "Name": "BatchGetEffectiveLifecyclePolicy"
@@ -36,6 +39,7 @@
       "Name": "CreateCollection",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
     },
