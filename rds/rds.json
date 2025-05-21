@@ -533,6 +533,7 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys",
+        "rds:ManageMasterUserPassword",
         "rds:TenantDatabaseName"
       ],
       "Resources": [
@@ -1410,6 +1411,7 @@
     {
       "Name": "ModifyTenantDatabase",
       "ActionConditionKeys": [
+        "rds:ManageMasterUserPassword",
         "rds:TenantDatabaseName"
       ],
       "Resources": [
@@ -1696,6 +1698,7 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys",
         "rds:BackupTarget",
+        "rds:ManageMasterUserPassword",
         "rds:req-tag/${TagKey}"
       ],
       "Resources": [
@@ -1751,6 +1754,7 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys",
         "rds:BackupTarget",
+        "rds:ManageMasterUserPassword",
         "rds:req-tag/${TagKey}"
       ],
       "Resources": [
