@@ -346,6 +346,22 @@
       "Name": "ListClusters"
     },
     {
+      "Name": "ListDashboardData",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
+      "Name": "ListDashboardResources",
+      "Resources": [
+        {
+          "Name": "dashboard"
+        }
+      ]
+    },
+    {
       "Name": "ListEksAnywhereSubscriptions"
     },
     {
@@ -396,6 +412,9 @@
         },
         {
           "Name": "cluster"
+        },
+        {
+          "Name": "dashboard"
         },
         {
           "Name": "eks-anywhere-subscription"
@@ -449,6 +468,9 @@
           "Name": "cluster"
         },
         {
+          "Name": "dashboard"
+        },
+        {
           "Name": "eks-anywhere-subscription"
         },
         {
@@ -479,6 +501,9 @@
         },
         {
           "Name": "cluster"
+        },
+        {
+          "Name": "dashboard"
         },
         {
           "Name": "eks-anywhere-subscription"
@@ -728,6 +753,15 @@
       "Name": "cluster",
       "ARNFormats": [
         "arn:${Partition}:eks:${Region}:${Account}:cluster/${ClusterName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "dashboard",
+      "ARNFormats": [
+        "arn:${Partition}:eks:${Region}:${Account}:dashboard/${DashboardName}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

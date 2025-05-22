@@ -82,7 +82,11 @@
       ]
     },
     {
-      "Name": "CreateBlueprint"
+      "Name": "CreateBlueprint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "Name": "CreateBlueprintVersion",
@@ -94,6 +98,10 @@
     },
     {
       "Name": "CreateDataAutomationProject",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Resources": [
         {
           "Name": "blueprint"
@@ -919,6 +927,10 @@
     },
     {
       "Name": "InvokeDataAutomationAsync",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Resources": [
         {
           "Name": "blueprint"
@@ -940,7 +952,10 @@
       ]
     },
     {
-      "Name": "InvokeInlineAgent"
+      "Name": "InvokeInlineAgent",
+      "ActionConditionKeys": [
+        "bedrock:InlineAgentName"
+      ]
     },
     {
       "Name": "InvokeModel",
@@ -1800,6 +1815,9 @@
       "Name": "blueprint",
       "ARNFormats": [
         "arn:${Partition}:bedrock:${Region}:${Account}:blueprint/${BlueprintId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -1815,6 +1833,9 @@
       "Name": "data-automation-invocation-job",
       "ARNFormats": [
         "arn:${Partition}:bedrock:${Region}:${Account}:data-automation-invocation/${JobId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -1827,6 +1848,9 @@
       "Name": "data-automation-project",
       "ARNFormats": [
         "arn:${Partition}:bedrock:${Region}:${Account}:data-automation-project/${ProjectId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {

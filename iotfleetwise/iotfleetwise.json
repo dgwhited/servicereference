@@ -13,42 +13,6 @@
       ]
     },
     {
-      "Name": "BatchCreateVehicle",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
-      "Resources": [
-        {
-          "Name": "decodermanifest"
-        },
-        {
-          "Name": "modelmanifest"
-        },
-        {
-          "Name": "vehicle"
-        }
-      ]
-    },
-    {
-      "Name": "BatchUpdateVehicle",
-      "ActionConditionKeys": [
-        "iotfleetwise:UpdateToDecoderManifestArn",
-        "iotfleetwise:UpdateToModelManifestArn"
-      ],
-      "Resources": [
-        {
-          "Name": "decodermanifest"
-        },
-        {
-          "Name": "modelmanifest"
-        },
-        {
-          "Name": "vehicle"
-        }
-      ]
-    },
-    {
       "Name": "CreateCampaign",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
