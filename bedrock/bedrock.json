@@ -14,6 +14,9 @@
       "Resources": [
         {
           "Name": "guardrail"
+        },
+        {
+          "Name": "guardrail-profile"
         }
       ]
     },
@@ -172,6 +175,11 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "guardrail-profile"
+        }
       ]
     },
     {
@@ -705,6 +713,20 @@
       ]
     },
     {
+      "Name": "GetExecutionFlowSnapshot",
+      "Resources": [
+        {
+          "Name": "flow"
+        },
+        {
+          "Name": "flow-alias"
+        },
+        {
+          "Name": "flow-execution"
+        }
+      ]
+    },
+    {
       "Name": "GetFlow",
       "Resources": [
         {
@@ -717,6 +739,20 @@
       "Resources": [
         {
           "Name": "flow-alias"
+        }
+      ]
+    },
+    {
+      "Name": "GetFlowExecution",
+      "Resources": [
+        {
+          "Name": "flow"
+        },
+        {
+          "Name": "flow-alias"
+        },
+        {
+          "Name": "flow-execution"
         }
       ]
     },
@@ -1115,6 +1151,31 @@
       ]
     },
     {
+      "Name": "ListFlowExecutionEvents",
+      "Resources": [
+        {
+          "Name": "flow"
+        },
+        {
+          "Name": "flow-alias"
+        },
+        {
+          "Name": "flow-execution"
+        }
+      ]
+    },
+    {
+      "Name": "ListFlowExecutions",
+      "Resources": [
+        {
+          "Name": "flow"
+        },
+        {
+          "Name": "flow-alias"
+        }
+      ]
+    },
+    {
       "Name": "ListFlowVersions",
       "Resources": [
         {
@@ -1374,6 +1435,17 @@
       "Name": "RetrieveAndGenerate"
     },
     {
+      "Name": "StartFlowExecution",
+      "Resources": [
+        {
+          "Name": "flow"
+        },
+        {
+          "Name": "flow-alias"
+        }
+      ]
+    },
+    {
       "Name": "StartIngestionJob",
       "Resources": [
         {
@@ -1386,6 +1458,20 @@
       "Resources": [
         {
           "Name": "evaluation-job"
+        }
+      ]
+    },
+    {
+      "Name": "StopFlowExecution",
+      "Resources": [
+        {
+          "Name": "flow"
+        },
+        {
+          "Name": "flow-alias"
+        },
+        {
+          "Name": "flow-execution"
         }
       ]
     },
@@ -1665,6 +1751,9 @@
       "Resources": [
         {
           "Name": "guardrail"
+        },
+        {
+          "Name": "guardrail-profile"
         }
       ]
     },
@@ -1887,6 +1976,12 @@
       ]
     },
     {
+      "Name": "flow-execution",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:flow/${FlowId}/alias/${FlowAliasId}/execution/${FlowExecutionId}"
+      ]
+    },
+    {
       "Name": "foundation-model",
       "ARNFormats": [
         "arn:${Partition}:bedrock:${Region}::foundation-model/${ResourceId}"
@@ -1899,6 +1994,12 @@
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "guardrail-profile",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:guardrail-profile/${ResourceId}"
       ]
     },
     {

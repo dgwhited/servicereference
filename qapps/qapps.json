@@ -98,23 +98,6 @@
       ]
     },
     {
-      "Name": "CreatePresignedUrl",
-      "ActionConditionKeys": [
-        "qapps:AppIsPublished",
-        "qapps:SessionIsShared",
-        "qapps:UserIsAppOwner",
-        "qapps:UserIsSessionModerator"
-      ],
-      "Resources": [
-        {
-          "Name": "qapp"
-        },
-        {
-          "Name": "qapp-session"
-        }
-      ]
-    },
-    {
       "Name": "CreateQApp",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -277,38 +260,6 @@
       "Resources": [
         {
           "Name": "qapp"
-        },
-        {
-          "Name": "qapp-session"
-        }
-      ]
-    },
-    {
-      "Name": "ImportDocumentToQApp",
-      "ActionConditionKeys": [
-        "qapps:AppIsPublished",
-        "qapps:UserIsAppOwner"
-      ],
-      "Resources": [
-        {
-          "Name": "application"
-        },
-        {
-          "Name": "qapp"
-        }
-      ]
-    },
-    {
-      "Name": "ImportDocumentToQAppSession",
-      "ActionConditionKeys": [
-        "qapps:AppIsPublished",
-        "qapps:SessionIsShared",
-        "qapps:UserIsAppOwner",
-        "qapps:UserIsSessionModerator"
-      ],
-      "Resources": [
-        {
-          "Name": "application"
         },
         {
           "Name": "qapp-session"
