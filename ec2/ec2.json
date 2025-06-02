@@ -53,6 +53,19 @@
       "Name": "AcceptReservedInstancesExchangeQuote",
       "ActionConditionKeys": [
         "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "reserved-instances",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:AvailabilityZone",
+            "ec2:InstanceType",
+            "ec2:ReservedInstancesOfferingType",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:Tenancy"
+          ]
+        }
       ]
     },
     {
@@ -695,6 +708,7 @@
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
             "ec2:AvailabilityZone",
+            "ec2:Ipv6IpamPoolId",
             "ec2:ResourceTag/${TagKey}",
             "ec2:SubnetID",
             "ec2:Vpc"
@@ -1345,6 +1359,7 @@
             "ec2:Owner",
             "ec2:ParentSnapshot",
             "ec2:ParentVolume",
+            "ec2:ProductCode",
             "ec2:SnapshotID",
             "ec2:SnapshotTime",
             "ec2:VolumeSize"
@@ -1593,6 +1608,41 @@
       "Name": "CreateDefaultVpc",
       "ActionConditionKeys": [
         "ec2:Region"
+      ]
+    },
+    {
+      "Name": "CreateDelegateMacVolumeOwnershipTask",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "instance",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:AvailabilityZone",
+            "ec2:EbsOptimized",
+            "ec2:InstanceAutoRecovery",
+            "ec2:InstanceBandwidthWeighting",
+            "ec2:InstanceMarketType",
+            "ec2:InstanceMetadataTags",
+            "ec2:InstanceProfile",
+            "ec2:InstanceType",
+            "ec2:MetadataHttpEndpoint",
+            "ec2:MetadataHttpPutResponseHopLimit",
+            "ec2:MetadataHttpTokens",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:RootDeviceType",
+            "ec2:Tenancy"
+          ]
+        },
+        {
+          "Name": "mac-modification-task",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
       ]
     },
     {
@@ -2288,6 +2338,41 @@
       ]
     },
     {
+      "Name": "CreateMacSystemIntegrityProtectionModificationTask",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "instance",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:AvailabilityZone",
+            "ec2:EbsOptimized",
+            "ec2:InstanceAutoRecovery",
+            "ec2:InstanceBandwidthWeighting",
+            "ec2:InstanceMarketType",
+            "ec2:InstanceMetadataTags",
+            "ec2:InstanceProfile",
+            "ec2:InstanceType",
+            "ec2:MetadataHttpEndpoint",
+            "ec2:MetadataHttpPutResponseHopLimit",
+            "ec2:MetadataHttpTokens",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:RootDeviceType",
+            "ec2:Tenancy"
+          ]
+        },
+        {
+          "Name": "mac-modification-task",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ]
+    },
+    {
       "Name": "CreateManagedPrefixList",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -2944,6 +3029,8 @@
           "ConditionKeys": [
             "aws:RequestTag/${TagKey}",
             "aws:TagKeys",
+            "ec2:Ipv4IpamPoolId",
+            "ec2:Ipv6IpamPoolId",
             "ec2:SubnetID"
           ]
         },
@@ -2962,6 +3049,18 @@
       "Name": "CreateSubnetCidrReservation",
       "ActionConditionKeys": [
         "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "subnet",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:AvailabilityZone",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:SubnetID",
+            "ec2:Vpc"
+          ]
+        }
       ]
     },
     {
@@ -3487,6 +3586,33 @@
             "ec2:ReservedInstancesOfferingType",
             "ec2:ResourceTag/${TagKey}",
             "ec2:Tenancy"
+          ]
+        },
+        {
+          "Name": "route-server",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "route-server-endpoint",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "route-server-peer",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
           ]
         },
         {
@@ -4514,7 +4640,9 @@
             "aws:RequestTag/${TagKey}",
             "aws:TagKeys",
             "ec2:VpceServiceName",
-            "ec2:VpceServiceOwner"
+            "ec2:VpceServiceOwner",
+            "ec2:vpceMultiRegion",
+            "ec2:vpceServiceRegion"
           ]
         }
       ]
@@ -5369,6 +5497,18 @@
       "Name": "DeleteQueuedReservedInstances",
       "ActionConditionKeys": [
         "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "reserved-instances",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:InstanceType",
+            "ec2:ReservedInstancesOfferingType",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:Tenancy"
+          ]
+        }
       ]
     },
     {
@@ -6011,6 +6151,33 @@
         },
         {
           "Name": "reserved-instances",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "route-server",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "route-server-endpoint",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "route-server-peer",
           "ConditionKeys": [
             "aws:RequestTag/${TagKey}",
             "aws:ResourceTag/${TagKey}",
@@ -6762,7 +6929,9 @@
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
             "ec2:ResourceTag/${TagKey}",
-            "ec2:VpceServiceName"
+            "ec2:VpceServiceName",
+            "ec2:vpceMultiRegion",
+            "ec2:vpceServiceRegion"
           ]
         }
       ]
@@ -7592,6 +7761,12 @@
     },
     {
       "Name": "DescribeMacHosts",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ]
+    },
+    {
+      "Name": "DescribeMacModificationTasks",
       "ActionConditionKeys": [
         "ec2:Region"
       ]
@@ -9560,6 +9735,15 @@
       "Name": "GetAssociatedIpv6PoolCidrs",
       "ActionConditionKeys": [
         "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "ipv6pool-ec2",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
       ]
     },
     {
@@ -10059,6 +10243,19 @@
       "Name": "GetReservedInstancesExchangeQuote",
       "ActionConditionKeys": [
         "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "reserved-instances",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:AvailabilityZone",
+            "ec2:InstanceType",
+            "ec2:ReservedInstancesOfferingType",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:Tenancy"
+          ]
+        }
       ]
     },
     {
@@ -11042,6 +11239,8 @@
           "Name": "instance-event-window",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
+            "ec2:Attribute",
+            "ec2:Attribute/${AttributeName}",
             "ec2:ResourceTag/${TagKey}"
           ]
         }
@@ -11271,6 +11470,8 @@
           "Name": "ipam-resource-discovery",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
+            "ec2:Attribute",
+            "ec2:Attribute/${AttributeName}",
             "ec2:ResourceTag/${TagKey}"
           ]
         }
@@ -11321,6 +11522,7 @@
           "Name": "local-gateway-route-table",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
+            "ec2:Attribute/${AttributeName}",
             "ec2:ResourceTag/${TagKey}"
           ]
         },
@@ -11459,6 +11661,26 @@
             "ec2:ResourceTag/${TagKey}",
             "ec2:RootDeviceType",
             "ec2:Tenancy"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "ModifyPublicIpDnsNameOptions",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "network-interface",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:Attribute",
+            "ec2:Attribute/${AttributeName}",
+            "ec2:AvailabilityZone",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:Subnet",
+            "ec2:Vpc"
           ]
         }
       ]
@@ -11818,6 +12040,7 @@
           "Name": "verified-access-endpoint",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
+            "ec2:Attribute/${AttributeName}",
             "ec2:ResourceTag/${TagKey}"
           ]
         },
@@ -11840,6 +12063,7 @@
           "Name": "verified-access-endpoint",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
+            "ec2:Attribute/${AttributeName}",
             "ec2:ResourceTag/${TagKey}"
           ]
         }
@@ -11855,6 +12079,8 @@
           "Name": "verified-access-group",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
+            "ec2:Attribute",
+            "ec2:Attribute/${AttributeName}",
             "ec2:ResourceTag/${TagKey}"
           ]
         },
@@ -11877,6 +12103,7 @@
           "Name": "verified-access-group",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
+            "ec2:Attribute/${AttributeName}",
             "ec2:ResourceTag/${TagKey}"
           ]
         }
@@ -11892,6 +12119,8 @@
           "Name": "verified-access-instance",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
+            "ec2:Attribute",
+            "ec2:Attribute/${AttributeName}",
             "ec2:ResourceTag/${TagKey}"
           ]
         }
@@ -11907,6 +12136,7 @@
           "Name": "verified-access-instance",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
+            "ec2:Attribute/${AttributeName}",
             "ec2:ResourceTag/${TagKey}"
           ]
         }
@@ -11922,6 +12152,8 @@
           "Name": "verified-access-trust-provider",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
+            "ec2:Attribute",
+            "ec2:Attribute/${AttributeName}",
             "ec2:ResourceTag/${TagKey}"
           ]
         }
@@ -12008,6 +12240,8 @@
           "Name": "vpc-block-public-access-exclusion",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
+            "ec2:Attribute",
+            "ec2:Attribute/${AttributeName}",
             "ec2:ResourceTag/${TagKey}"
           ]
         }
@@ -12058,7 +12292,9 @@
             "aws:ResourceTag/${TagKey}",
             "ec2:Attribute",
             "ec2:Attribute/${AttributeName}",
-            "ec2:ResourceTag/${TagKey}"
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:vpceMultiRegion",
+            "ec2:vpceServiceRegion"
           ]
         }
       ]
@@ -15398,6 +15634,8 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "ec2:Attribute",
+        "ec2:Attribute/${AttributeName}",
         "ec2:Region",
         "ec2:ResourceTag/${TagKey}"
       ]
@@ -15470,6 +15708,8 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "ec2:Attribute",
+        "ec2:Attribute/${AttributeName}",
         "ec2:Region",
         "ec2:ResourceTag/${TagKey}"
       ]
@@ -15591,6 +15831,7 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "ec2:Attribute/${AttributeName}",
         "ec2:Region",
         "ec2:ResourceTag/${TagKey}"
       ]
@@ -15638,6 +15879,19 @@
       "Name": "local-gateway-virtual-interface-group",
       "ARNFormats": [
         "arn:${Partition}:ec2:${Region}:${Account}:local-gateway-virtual-interface-group/${LocalGatewayVirtualInterfaceGroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ec2:Region",
+        "ec2:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "mac-modification-task",
+      "ARNFormats": [
+        "arn:${Partition}:ec2:${Region}:${Account}:mac-modification-task/${MacModificationTaskId}"
       ],
       "ConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -15946,6 +16200,7 @@
         "ec2:Owner",
         "ec2:ParentSnapshot",
         "ec2:ParentVolume",
+        "ec2:ProductCode",
         "ec2:Region",
         "ec2:Remove/group",
         "ec2:Remove/userId",
@@ -15999,6 +16254,8 @@
         "ec2:Attribute",
         "ec2:Attribute/${AttributeName}",
         "ec2:AvailabilityZone",
+        "ec2:Ipv4IpamPoolId",
+        "ec2:Ipv6IpamPoolId",
         "ec2:IsLaunchTemplateResource",
         "ec2:LaunchTemplate",
         "ec2:Region",
@@ -16191,6 +16448,7 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "ec2:Attribute/${AttributeName}",
         "ec2:Region",
         "ec2:ResourceTag/${TagKey}"
       ]
@@ -16217,6 +16475,8 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "ec2:Attribute",
+        "ec2:Attribute/${AttributeName}",
         "ec2:Region",
         "ec2:ResourceTag/${TagKey}"
       ]
@@ -16230,6 +16490,8 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "ec2:Attribute",
+        "ec2:Attribute/${AttributeName}",
         "ec2:Region",
         "ec2:ResourceTag/${TagKey}"
       ]
@@ -16256,6 +16518,8 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "ec2:Attribute",
+        "ec2:Attribute/${AttributeName}",
         "ec2:Region",
         "ec2:ResourceTag/${TagKey}"
       ]
@@ -16315,6 +16579,8 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "ec2:Attribute",
+        "ec2:Attribute/${AttributeName}",
         "ec2:Region",
         "ec2:ResourceTag/${TagKey}"
       ]
@@ -16333,7 +16599,9 @@
         "ec2:Region",
         "ec2:ResourceTag/${TagKey}",
         "ec2:VpceServiceName",
-        "ec2:VpceServiceOwner"
+        "ec2:VpceServiceOwner",
+        "ec2:vpceMultiRegion",
+        "ec2:vpceServiceRegion"
       ]
     },
     {
