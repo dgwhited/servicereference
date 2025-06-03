@@ -405,6 +405,14 @@
       ]
     },
     {
+      "Name": "ListParticipantReplicas",
+      "Resources": [
+        {
+          "Name": "Stage"
+        }
+      ]
+    },
+    {
       "Name": "ListParticipants",
       "Resources": [
         {
@@ -552,6 +560,18 @@
       ]
     },
     {
+      "Name": "StartParticipantReplication",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "Stage"
+        }
+      ]
+    },
+    {
       "Name": "StartViewerSessionRevocation",
       "Resources": [
         {
@@ -564,6 +584,14 @@
       "Resources": [
         {
           "Name": "Composition"
+        }
+      ]
+    },
+    {
+      "Name": "StopParticipantReplication",
+      "Resources": [
+        {
+          "Name": "Stage"
         }
       ]
     },
