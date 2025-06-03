@@ -80,7 +80,11 @@
       ]
     },
     {
-      "Name": "CreateNetworkMigrationDefinition"
+      "Name": "CreateNetworkMigrationDefinition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "Name": "CreateReplicationConfigurationTemplate",
@@ -656,7 +660,11 @@
       ]
     },
     {
-      "Name": "StartExport"
+      "Name": "StartExport",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "Name": "StartImport"
@@ -742,6 +750,12 @@
         },
         {
           "Name": "ConnectorResource"
+        },
+        {
+          "Name": "ExportResource"
+        },
+        {
+          "Name": "ImportResource"
         },
         {
           "Name": "JobResource"
