@@ -9715,6 +9715,20 @@
       ]
     },
     {
+      "Name": "GetActiveVpnTunnelStatus",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Resources": [
+        {
+          "Name": "vpn-connection",
+          "ConditionKeys": [
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ]
+    },
+    {
       "Name": "GetAllowedImagesSettings",
       "ActionConditionKeys": [
         "ec2:Region"
