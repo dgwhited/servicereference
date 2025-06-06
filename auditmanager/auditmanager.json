@@ -22,6 +22,9 @@
       "Resources": [
         {
           "Name": "assessment"
+        },
+        {
+          "Name": "assessmentControlSet"
         }
       ]
     },
@@ -30,6 +33,9 @@
       "Resources": [
         {
           "Name": "assessment"
+        },
+        {
+          "Name": "assessmentControlSet"
         }
       ]
     },
@@ -53,6 +59,7 @@
       "Name": "CreateAssessment",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
     },
@@ -60,6 +67,7 @@
       "Name": "CreateAssessmentFramework",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
     },
@@ -75,6 +83,7 @@
       "Name": "CreateControl",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
     },
@@ -312,6 +321,9 @@
           "Name": "assessment"
         },
         {
+          "Name": "assessmentFramework"
+        },
+        {
           "Name": "control"
         }
       ]
@@ -323,10 +335,22 @@
       ],
       "Resources": [
         {
-          "Name": "assessment"
+          "Name": "assessment",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
-          "Name": "control"
+          "Name": "assessmentFramework",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "control",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ]
     },
@@ -363,7 +387,12 @@
       ]
     },
     {
-      "Name": "UpdateAssessmentFrameworkShare"
+      "Name": "UpdateAssessmentFrameworkShare",
+      "Resources": [
+        {
+          "Name": "assessmentFramework"
+        }
+      ]
     },
     {
       "Name": "UpdateAssessmentStatus",
@@ -413,6 +442,9 @@
       "Name": "assessment",
       "ARNFormats": [
         "arn:${Partition}:auditmanager:${Region}:${Account}:assessment/${AssessmentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -425,6 +457,9 @@
       "Name": "assessmentFramework",
       "ARNFormats": [
         "arn:${Partition}:auditmanager:${Region}:${Account}:assessmentFramework/${AssessmentFrameworkId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {

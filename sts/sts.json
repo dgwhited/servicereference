@@ -130,6 +130,9 @@
       ],
       "Resources": [
         {
+          "Name": "federated-user"
+        },
+        {
           "Name": "user"
         }
       ]
@@ -528,6 +531,12 @@
       "Name": "context-provider",
       "ARNFormats": [
         "arn:${Partition}:iam::aws:contextProvider/${ContextProviderName}"
+      ]
+    },
+    {
+      "Name": "federated-user",
+      "ARNFormats": [
+        "arn:${Partition}:sts::${Account}:federated-user/${FederatedUserName}"
       ]
     },
     {
