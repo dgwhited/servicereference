@@ -13,7 +13,8 @@
       "Name": "CreateCluster",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "dsql:WitnessRegion"
       ],
       "Resources": [
         {
@@ -98,6 +99,9 @@
     },
     {
       "Name": "PutWitnessRegion",
+      "ActionConditionKeys": [
+        "dsql:WitnessRegion"
+      ],
       "Resources": [
         {
           "Name": "Cluster"
@@ -169,6 +173,9 @@
     },
     {
       "Name": "UpdateCluster",
+      "ActionConditionKeys": [
+        "dsql:WitnessRegion"
+      ],
       "Resources": [
         {
           "Name": "Cluster"
