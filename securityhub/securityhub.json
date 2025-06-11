@@ -88,16 +88,28 @@
     {
       "Name": "BatchUpdateFindings",
       "ActionConditionKeys": [
-        "securityhub:ASFFSyntaxPath/${ASFFSyntaxPath}"
+        "securityhub:ASFFSyntaxPath/${ASFFSyntaxPath}",
+        "securityhub:OCSFSyntaxPath/${OCSFSyntaxPath}"
       ],
       "Resources": [
         {
           "Name": "hub"
+        },
+        {
+          "Name": "hubv2"
         }
       ]
     },
     {
       "Name": "BatchUpdateStandardsControlAssociations"
+    },
+    {
+      "Name": "ConnectorRegistrationsV2",
+      "Resources": [
+        {
+          "Name": "connectorv2"
+        }
+      ]
     },
     {
       "Name": "CreateActionTarget",
@@ -108,6 +120,9 @@
       ]
     },
     {
+      "Name": "CreateAggregatorV2"
+    },
+    {
       "Name": "CreateAutomationRule",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -115,7 +130,21 @@
       ]
     },
     {
+      "Name": "CreateAutomationRuleV2",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
       "Name": "CreateConfigurationPolicy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "CreateConnectorV2",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
@@ -141,6 +170,17 @@
       ]
     },
     {
+      "Name": "CreateTicketV2",
+      "Resources": [
+        {
+          "Name": "hub"
+        },
+        {
+          "Name": "hubv2"
+        }
+      ]
+    },
+    {
       "Name": "DeclineInvitations",
       "Resources": [
         {
@@ -157,10 +197,34 @@
       ]
     },
     {
+      "Name": "DeleteAggregatorV2",
+      "Resources": [
+        {
+          "Name": "aggregatorv2"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAutomationRuleV2",
+      "Resources": [
+        {
+          "Name": "automation-rulev2"
+        }
+      ]
+    },
+    {
       "Name": "DeleteConfigurationPolicy",
       "Resources": [
         {
           "Name": "configuration-policy"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConnectorV2",
+      "Resources": [
+        {
+          "Name": "connectorv2"
         }
       ]
     },
@@ -229,6 +293,17 @@
       ]
     },
     {
+      "Name": "DescribeProductsV2",
+      "Resources": [
+        {
+          "Name": "hubv2"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSecurityHubV2"
+    },
+    {
       "Name": "DescribeStandards",
       "Resources": [
         {
@@ -267,6 +342,9 @@
           "Name": "hub"
         }
       ]
+    },
+    {
+      "Name": "DisableSecurityHubV2"
     },
     {
       "Name": "DisassociateFromAdministratorAccount",
@@ -321,10 +399,20 @@
       ]
     },
     {
+      "Name": "EnableSecurityHubV2",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
       "Name": "GetAdhocInsightResults",
       "Resources": [
         {
           "Name": "hub"
+        },
+        {
+          "Name": "hubv2"
         }
       ]
     },
@@ -333,6 +421,22 @@
       "Resources": [
         {
           "Name": "hub"
+        }
+      ]
+    },
+    {
+      "Name": "GetAggregatorV2",
+      "Resources": [
+        {
+          "Name": "aggregatorv2"
+        }
+      ]
+    },
+    {
+      "Name": "GetAutomationRuleV2",
+      "Resources": [
+        {
+          "Name": "automation-rulev2"
         }
       ]
     },
@@ -346,6 +450,14 @@
     },
     {
       "Name": "GetConfigurationPolicyAssociation"
+    },
+    {
+      "Name": "GetConnectorV2",
+      "Resources": [
+        {
+          "Name": "connectorv2"
+        }
+      ]
     },
     {
       "Name": "GetControlFindingSummary",
@@ -384,6 +496,9 @@
       "Resources": [
         {
           "Name": "hub"
+        },
+        {
+          "Name": "hubv2"
         }
       ]
     },
@@ -452,6 +567,22 @@
       ]
     },
     {
+      "Name": "GetResourceStatisticsV2",
+      "Resources": [
+        {
+          "Name": "hubv2"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcesV2",
+      "Resources": [
+        {
+          "Name": "hubv2"
+        }
+      ]
+    },
+    {
       "Name": "GetSecurityControlDefinition"
     },
     {
@@ -471,13 +602,22 @@
       ]
     },
     {
+      "Name": "ListAggregatorV2s"
+    },
+    {
       "Name": "ListAutomationRules"
+    },
+    {
+      "Name": "ListAutomationRulesV2"
     },
     {
       "Name": "ListConfigurationPolicies"
     },
     {
       "Name": "ListConfigurationPolicyAssociations"
+    },
+    {
+      "Name": "ListConnectorsV2"
     },
     {
       "Name": "ListControlEvaluationSummaries",
@@ -581,10 +721,19 @@
           "Name": "automation-rule"
         },
         {
+          "Name": "automation-rulev2"
+        },
+        {
           "Name": "configuration-policy"
         },
         {
+          "Name": "connectorv2"
+        },
+        {
           "Name": "hub"
+        },
+        {
+          "Name": "hubv2"
         }
       ]
     },
@@ -595,10 +744,19 @@
           "Name": "automation-rule"
         },
         {
+          "Name": "automation-rulev2"
+        },
+        {
           "Name": "configuration-policy"
         },
         {
+          "Name": "connectorv2"
+        },
+        {
           "Name": "hub"
+        },
+        {
+          "Name": "hubv2"
         }
       ]
     },
@@ -611,10 +769,34 @@
       ]
     },
     {
+      "Name": "UpdateAggregatorV2",
+      "Resources": [
+        {
+          "Name": "aggregatorv2"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAutomationRuleV2",
+      "Resources": [
+        {
+          "Name": "automation-rulev2"
+        }
+      ]
+    },
+    {
       "Name": "UpdateConfigurationPolicy",
       "Resources": [
         {
           "Name": "configuration-policy"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConnectorV2",
+      "Resources": [
+        {
+          "Name": "connectorv2"
         }
       ]
     },
@@ -696,6 +878,12 @@
       ]
     },
     {
+      "Name": "securityhub:OCSFSyntaxPath/${OCSFSyntaxPath}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "securityhub:TargetAccount",
       "Types": [
         "String"
@@ -704,15 +892,39 @@
   ],
   "Resources": [
     {
+      "Name": "aggregatorv2",
+      "ARNFormats": [
+        "arn:${Partition}:securityhub:${Region}:${Account}:aggregatorv2/${AggregatorV2Id}"
+      ]
+    },
+    {
       "Name": "automation-rule",
       "ARNFormats": [
         "arn:${Partition}:securityhub:${Region}:${Account}:automation-rule/${AutomationRuleId}"
       ]
     },
     {
+      "Name": "automation-rulev2",
+      "ARNFormats": [
+        "arn:${Partition}:securityhub:${Region}:${Account}:automation-rulev2/${AutomationRuleV2Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
       "Name": "configuration-policy",
       "ARNFormats": [
         "arn:${Partition}:securityhub:${Region}:${Account}:configuration-policy/${ConfigurationPolicyId}"
+      ]
+    },
+    {
+      "Name": "connectorv2",
+      "ARNFormats": [
+        "arn:${Partition}:securityhub:${Region}:${Account}:connectorv2/${ConnectorV2Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -725,6 +937,15 @@
       "Name": "hub",
       "ARNFormats": [
         "arn:${Partition}:securityhub:${Region}:${Account}:hub/default"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "hubv2",
+      "ARNFormats": [
+        "arn:${Partition}:securityhub:${Region}:${Account}:hubv2/${HubV2Id}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

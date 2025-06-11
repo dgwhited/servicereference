@@ -1,0 +1,136 @@
+{
+  "Name": "workspaces-instances",
+  "Actions": [
+    {
+      "Name": "AssociateVolume",
+      "Resources": [
+        {
+          "Name": "WorkspaceInstanceId"
+        }
+      ]
+    },
+    {
+      "Name": "CreateVolume"
+    },
+    {
+      "Name": "CreateWorkspaceInstance",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "DeleteVolume",
+      "Resources": [
+        {
+          "Name": "VolumeId"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkspaceInstance",
+      "Resources": [
+        {
+          "Name": "WorkspaceInstanceId"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateVolume",
+      "Resources": [
+        {
+          "Name": "WorkspaceInstanceId"
+        }
+      ]
+    },
+    {
+      "Name": "GetWorkspaceInstance",
+      "Resources": [
+        {
+          "Name": "WorkspaceInstanceId"
+        }
+      ]
+    },
+    {
+      "Name": "ListInstanceTypes"
+    },
+    {
+      "Name": "ListRegions"
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Resources": [
+        {
+          "Name": "WorkspaceInstanceId"
+        }
+      ]
+    },
+    {
+      "Name": "ListWorkspaceInstances"
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "WorkspaceInstanceId"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "WorkspaceInstanceId"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "VolumeId",
+      "ARNFormats": [
+        "arn:${Partition}:ec2:${Region}:${Account}:volume/${VolumeId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "WorkspaceInstanceId",
+      "ARNFormats": [
+        "arn:${Partition}:workspaces-instances:${Region}:${Account}:workspaceinstance/${WorkspaceInstanceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}
