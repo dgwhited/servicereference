@@ -18,7 +18,10 @@
       ],
       "Resources": [
         {
-          "Name": "cluster"
+          "Name": "cluster",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ]
     },
@@ -93,12 +96,12 @@
     },
     {
       "Name": "DeleteCluster",
-      "ActionConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
-      ],
       "Resources": [
         {
-          "Name": "cluster"
+          "Name": "cluster",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ]
     },
@@ -140,12 +143,12 @@
     },
     {
       "Name": "DeregisterContainerInstance",
-      "ActionConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
-      ],
       "Resources": [
         {
-          "Name": "cluster"
+          "Name": "cluster",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ]
     },
@@ -165,12 +168,12 @@
     },
     {
       "Name": "DescribeClusters",
-      "ActionConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
-      ],
       "Resources": [
         {
-          "Name": "cluster"
+          "Name": "cluster",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ]
     },
@@ -303,12 +306,12 @@
     },
     {
       "Name": "ListAttributes",
-      "ActionConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
-      ],
       "Resources": [
         {
-          "Name": "cluster"
+          "Name": "cluster",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ]
     },
@@ -317,12 +320,12 @@
     },
     {
       "Name": "ListContainerInstances",
-      "ActionConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
-      ],
       "Resources": [
         {
-          "Name": "cluster"
+          "Name": "cluster",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ]
     },
@@ -435,12 +438,14 @@
     {
       "Name": "PutClusterCapacityProviders",
       "ActionConditionKeys": [
-        "aws:ResourceTag/${TagKey}",
         "ecs:capacity-provider"
       ],
       "Resources": [
         {
-          "Name": "cluster"
+          "Name": "cluster",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ]
     },
@@ -448,12 +453,14 @@
       "Name": "RegisterContainerInstance",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Resources": [
         {
-          "Name": "cluster"
+          "Name": "cluster",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ]
     },
@@ -555,34 +562,34 @@
     },
     {
       "Name": "SubmitAttachmentStateChanges",
-      "ActionConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
-      ],
       "Resources": [
         {
-          "Name": "cluster"
+          "Name": "cluster",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ]
     },
     {
       "Name": "SubmitContainerStateChange",
-      "ActionConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
-      ],
       "Resources": [
         {
-          "Name": "cluster"
+          "Name": "cluster",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ]
     },
     {
       "Name": "SubmitTaskStateChange",
-      "ActionConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
-      ],
       "Resources": [
         {
-          "Name": "cluster"
+          "Name": "cluster",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ]
     },
@@ -662,23 +669,25 @@
     {
       "Name": "UpdateCluster",
       "ActionConditionKeys": [
-        "aws:ResourceTag/${TagKey}",
         "ecs:fargate-ephemeral-storage-kms-key"
       ],
       "Resources": [
         {
-          "Name": "cluster"
+          "Name": "cluster",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ]
     },
     {
       "Name": "UpdateClusterSettings",
-      "ActionConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
-      ],
       "Resources": [
         {
-          "Name": "cluster"
+          "Name": "cluster",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ]
     },
