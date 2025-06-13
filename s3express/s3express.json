@@ -40,6 +40,7 @@
       "Name": "CreateSession",
       "ActionConditionKeys": [
         "s3express:AllAccessRestrictedToLocalZoneGroup",
+        "s3express:Permissions",
         "s3express:ResourceAccount",
         "s3express:SessionMode",
         "s3express:TlsVersion",
@@ -51,6 +52,12 @@
         "s3express:x-amz-server-side-encryption-aws-kms-key-id"
       ],
       "Resources": [
+        {
+          "Name": "accesspoint",
+          "ConditionKeys": [
+            "s3express:Permissions"
+          ]
+        },
         {
           "Name": "bucket"
         }

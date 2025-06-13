@@ -24,6 +24,7 @@
       "Name": "CreateOutpost",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Resources": [
@@ -33,12 +34,18 @@
       ]
     },
     {
-      "Name": "CreatePrivateConnectivityConfig"
+      "Name": "CreatePrivateConnectivityConfig",
+      "Resources": [
+        {
+          "Name": "outpost"
+        }
+      ]
     },
     {
       "Name": "CreateSite",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
     },
@@ -100,7 +107,12 @@
       ]
     },
     {
-      "Name": "GetPrivateConnectivityConfig"
+      "Name": "GetPrivateConnectivityConfig",
+      "Resources": [
+        {
+          "Name": "outpost"
+        }
+      ]
     },
     {
       "Name": "GetSite",
@@ -127,7 +139,12 @@
       ]
     },
     {
-      "Name": "ListAssets"
+      "Name": "ListAssets",
+      "Resources": [
+        {
+          "Name": "outpost"
+        }
+      ]
     },
     {
       "Name": "ListBlockingInstancesForCapacityTask",
