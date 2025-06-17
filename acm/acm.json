@@ -31,6 +31,9 @@
     },
     {
       "Name": "ExportCertificate",
+      "ActionConditionKeys": [
+        "acm:DomainNames"
+      ],
       "Resources": [
         {
           "Name": "certificate"
@@ -108,6 +111,17 @@
     },
     {
       "Name": "ResendValidationEmail",
+      "Resources": [
+        {
+          "Name": "certificate"
+        }
+      ]
+    },
+    {
+      "Name": "RevokeCertificate",
+      "ActionConditionKeys": [
+        "acm:DomainNames"
+      ],
       "Resources": [
         {
           "Name": "certificate"
