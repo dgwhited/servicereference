@@ -2,6 +2,17 @@
   "Name": "backup",
   "Actions": [
     {
+      "Name": "AssociateBackupVaultMpaApprovalTeam",
+      "ActionConditionKeys": [
+        "backup:MpaApprovalTeamArn"
+      ],
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
       "Name": "CancelLegalHold",
       "Resources": [
         {
@@ -112,6 +123,18 @@
       "Resources": [
         {
           "Name": "reportPlan"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRestoreAccessBackupVault",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "backupVault"
         }
       ]
     },
@@ -283,6 +306,14 @@
     },
     {
       "Name": "DescribeRestoreJob"
+    },
+    {
+      "Name": "DisassociateBackupVaultMpaApprovalTeam",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
     },
     {
       "Name": "DisassociateRecoveryPoint",
@@ -484,6 +515,14 @@
       "Name": "ListReportPlans"
     },
     {
+      "Name": "ListRestoreAccessBackupVaults",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
+    },
+    {
       "Name": "ListRestoreJobSummaries"
     },
     {
@@ -568,6 +607,14 @@
     },
     {
       "Name": "PutRestoreValidationResult"
+    },
+    {
+      "Name": "RevokeRestoreAccessBackupVault",
+      "Resources": [
+        {
+          "Name": "backupVault"
+        }
+      ]
     },
     {
       "Name": "SearchRecoveryPoint",
@@ -799,6 +846,12 @@
       "Name": "backup:MinRetentionDays",
       "Types": [
         "Numeric"
+      ]
+    },
+    {
+      "Name": "backup:MpaApprovalTeamArn",
+      "Types": [
+        "ARN"
       ]
     }
   ],
