@@ -1,0 +1,246 @@
+{
+  "Name": "mpa",
+  "Actions": [
+    {
+      "Name": "CancelSession",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "mpa:ProtectedResourceAccount",
+        "mpa:RequestedOperation"
+      ],
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "CreateApprovalTeam",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "approval-team"
+        }
+      ]
+    },
+    {
+      "Name": "CreateIdentitySource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Resources": [
+        {
+          "Name": "identity-source"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIdentitySource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "identity-source"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInactiveApprovalTeamVersion",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "approval-team"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy"
+    },
+    {
+      "Name": "GetApprovalTeam",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "approval-team"
+        }
+      ]
+    },
+    {
+      "Name": "GetIdentitySource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "identity-source"
+        }
+      ]
+    },
+    {
+      "Name": "GetPolicyVersion"
+    },
+    {
+      "Name": "GetResourcePolicy"
+    },
+    {
+      "Name": "GetSession",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "mpa:ProtectedResourceAccount",
+        "mpa:RequestedOperation"
+      ],
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "ListApprovalTeams"
+    },
+    {
+      "Name": "ListIdentitySources"
+    },
+    {
+      "Name": "ListPolicies"
+    },
+    {
+      "Name": "ListPolicyVersions"
+    },
+    {
+      "Name": "ListResourcePolicies"
+    },
+    {
+      "Name": "ListSessions"
+    },
+    {
+      "Name": "ListTagsForResource"
+    },
+    {
+      "Name": "PutResourcePolicy"
+    },
+    {
+      "Name": "StartActiveApprovalTeamDeletion",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "approval-team"
+        }
+      ]
+    },
+    {
+      "Name": "StartSession",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "mpa:ProtectedResourceAccount",
+        "mpa:RequestedOperation"
+      ],
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "Name": "UpdateApprovalTeam",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Resources": [
+        {
+          "Name": "approval-team"
+        }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "mpa:ProtectedResourceAccount",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "mpa:RequestedOperation",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "approval-team",
+      "ARNFormats": [
+        "arn:${Partition}:mpa:${Region}:${Account}:approval-team/${Arn}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "identity-source",
+      "ARNFormats": [
+        "arn:${Partition}:mpa:${Region}:${Account}:identity-source/${IdentitySourceArn}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "session",
+      "ARNFormats": [
+        "arn:${Partition}:mpa:${Region}:${Account}:session/${SessionArn}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.1"
+}
