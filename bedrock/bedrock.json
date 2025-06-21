@@ -54,6 +54,9 @@
       ]
     },
     {
+      "Name": "CallWithBearerToken"
+    },
+    {
       "Name": "CreateAgent",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -97,6 +100,13 @@
         {
           "Name": "blueprint"
         }
+      ]
+    },
+    {
+      "Name": "CreateCustomModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
       ]
     },
     {
