@@ -11640,6 +11640,15 @@
             "ec2:SecurityGroupID",
             "ec2:Vpc"
           ]
+        },
+        {
+          "Name": "subnet",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:AvailabilityZone",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:Vpc"
+          ]
         }
       ]
     },
@@ -16169,8 +16178,6 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
-        "ec2:Attribute",
-        "ec2:Attribute/${AttributeName}",
         "ec2:IsLaunchTemplateResource",
         "ec2:LaunchTemplate",
         "ec2:Region",
