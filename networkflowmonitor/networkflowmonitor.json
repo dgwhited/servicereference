@@ -7,6 +7,14 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "monitor"
@@ -18,10 +26,26 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeleteMonitor",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "monitor"
@@ -30,6 +54,14 @@
     },
     {
       "Name": "DeleteScope",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "scope"
@@ -38,6 +70,14 @@
     },
     {
       "Name": "GetMonitor",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "monitor"
@@ -46,6 +86,14 @@
     },
     {
       "Name": "GetQueryResultsMonitorTopContributors",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "monitor"
@@ -54,6 +102,14 @@
     },
     {
       "Name": "GetQueryResultsWorkloadInsightsTopContributors",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "scope"
@@ -62,6 +118,14 @@
     },
     {
       "Name": "GetQueryResultsWorkloadInsightsTopContributorsData",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "scope"
@@ -70,6 +134,14 @@
     },
     {
       "Name": "GetQueryStatusMonitorTopContributors",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "monitor"
@@ -78,6 +150,14 @@
     },
     {
       "Name": "GetQueryStatusWorkloadInsightsTopContributors",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "scope"
@@ -86,6 +166,14 @@
     },
     {
       "Name": "GetQueryStatusWorkloadInsightsTopContributorsData",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "scope"
@@ -94,6 +182,14 @@
     },
     {
       "Name": "GetScope",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "scope"
@@ -101,13 +197,37 @@
       ]
     },
     {
-      "Name": "ListMonitors"
+      "Name": "ListMonitors",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListScopes"
+      "Name": "ListScopes",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListTagsForResource",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "monitor"
@@ -118,10 +238,26 @@
       ]
     },
     {
-      "Name": "Publish"
+      "Name": "Publish",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "StartQueryMonitorTopContributors",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "monitor"
@@ -130,6 +266,14 @@
     },
     {
       "Name": "StartQueryWorkloadInsightsTopContributors",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "scope"
@@ -138,6 +282,14 @@
     },
     {
       "Name": "StartQueryWorkloadInsightsTopContributorsData",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "scope"
@@ -146,6 +298,14 @@
     },
     {
       "Name": "StopQueryMonitorTopContributors",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "monitor"
@@ -154,6 +314,14 @@
     },
     {
       "Name": "StopQueryWorkloadInsightsTopContributors",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "scope"
@@ -162,6 +330,14 @@
     },
     {
       "Name": "StopQueryWorkloadInsightsTopContributorsData",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "scope"
@@ -174,6 +350,14 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "monitor"
@@ -188,6 +372,14 @@
       "ActionConditionKeys": [
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "monitor"
@@ -199,6 +391,14 @@
     },
     {
       "Name": "UpdateMonitor",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "monitor"
@@ -207,6 +407,14 @@
     },
     {
       "Name": "UpdateScope",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "scope"
@@ -254,5 +462,5 @@
       ]
     }
   ],
-  "Version": "v1.1"
+  "Version": "v1.2"
 }

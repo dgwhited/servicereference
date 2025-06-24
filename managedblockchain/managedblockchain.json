@@ -6,7 +6,15 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateMember",
@@ -14,6 +22,14 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "network"
@@ -25,7 +41,15 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateNode",
@@ -33,6 +57,14 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "member"
@@ -48,6 +80,14 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "network"
@@ -56,6 +96,14 @@
     },
     {
       "Name": "DeleteAccessor",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "accessor"
@@ -64,6 +112,14 @@
     },
     {
       "Name": "DeleteMember",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "member"
@@ -72,6 +128,14 @@
     },
     {
       "Name": "DeleteNode",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "node"
@@ -79,10 +143,26 @@
       ]
     },
     {
-      "Name": "GET"
+      "Name": "GET",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "GetAccessor",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "accessor"
@@ -91,6 +171,14 @@
     },
     {
       "Name": "GetMember",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "member"
@@ -99,6 +187,14 @@
     },
     {
       "Name": "GetNetwork",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "network"
@@ -107,6 +203,14 @@
     },
     {
       "Name": "GetNode",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "node"
@@ -115,6 +219,14 @@
     },
     {
       "Name": "GetProposal",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "proposal"
@@ -122,28 +234,92 @@
       ]
     },
     {
-      "Name": "Invoke"
+      "Name": "Invoke",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "InvokeRpcBitcoinMainnet"
+      "Name": "InvokeRpcBitcoinMainnet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "InvokeRpcBitcoinTestnet"
+      "Name": "InvokeRpcBitcoinTestnet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "InvokeRpcPolygonMainnet"
+      "Name": "InvokeRpcPolygonMainnet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "InvokeRpcPolygonMumbaiTestnet"
+      "Name": "InvokeRpcPolygonMumbaiTestnet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListAccessors"
+      "Name": "ListAccessors",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListInvitations"
+      "Name": "ListInvitations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListMembers",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "network"
@@ -151,10 +327,26 @@
       ]
     },
     {
-      "Name": "ListNetworks"
+      "Name": "ListNetworks",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListNodes",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "member"
@@ -166,6 +358,14 @@
     },
     {
       "Name": "ListProposalVotes",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "proposal"
@@ -174,6 +374,14 @@
     },
     {
       "Name": "ListProposals",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "network"
@@ -182,6 +390,14 @@
     },
     {
       "Name": "ListTagsForResource",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "accessor"
@@ -204,10 +420,26 @@
       ]
     },
     {
-      "Name": "POST"
+      "Name": "POST",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "RejectInvitation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "invitation"
@@ -220,6 +452,14 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "accessor"
@@ -246,6 +486,14 @@
       "ActionConditionKeys": [
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "accessor"
@@ -269,6 +517,14 @@
     },
     {
       "Name": "UpdateMember",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "member"
@@ -277,6 +533,14 @@
     },
     {
       "Name": "UpdateNode",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "node"
@@ -285,6 +549,14 @@
     },
     {
       "Name": "VoteOnProposal",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "proposal"
@@ -368,5 +640,5 @@
       ]
     }
   ],
-  "Version": "v1.1"
+  "Version": "v1.2"
 }

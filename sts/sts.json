@@ -24,6 +24,14 @@
         "www.amazon.com:app_id",
         "www.amazon.com:user_id"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "role"
@@ -71,6 +79,14 @@
         "sts:SourceIdentity",
         "sts:TransitiveTagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "role"
@@ -96,6 +112,14 @@
         "www.amazon.com:app_id",
         "www.amazon.com:user_id"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "role"
@@ -107,6 +131,14 @@
       "ActionConditionKeys": [
         "sts:TaskPolicyArn"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "root-user"
@@ -114,13 +146,37 @@
       ]
     },
     {
-      "Name": "DecodeAuthorizationMessage"
+      "Name": "DecodeAuthorizationMessage",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "GetAccessKeyInfo"
+      "Name": "GetAccessKeyInfo",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "GetCallerIdentity"
+      "Name": "GetCallerIdentity",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetFederationToken",
@@ -128,6 +184,14 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "federated-user"
@@ -142,10 +206,26 @@
       "ActionConditionKeys": [
         "sts:AWSServiceName",
         "sts:DurationSeconds"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "GetSessionToken"
+      "Name": "GetSessionToken",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "SetContext",
@@ -153,6 +233,14 @@
         "sts:RequestContext/${ContextKey}",
         "sts:RequestContextProviders"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "role"
@@ -167,6 +255,14 @@
       "ActionConditionKeys": [
         "sts:SourceIdentity"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "role"
@@ -184,6 +280,14 @@
         "saml:aud",
         "sts:TransitiveTagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "role"
@@ -568,5 +672,5 @@
       ]
     }
   ],
-  "Version": "v1.1"
+  "Version": "v1.2"
 }

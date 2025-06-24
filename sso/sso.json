@@ -2,13 +2,37 @@
   "Name": "sso",
   "Actions": [
     {
-      "Name": "AssociateDirectory"
+      "Name": "AssociateDirectory",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "AssociateProfile"
+      "Name": "AssociateProfile",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "AttachCustomerManagedPolicyReferenceToPermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -20,6 +44,14 @@
     },
     {
       "Name": "AttachManagedPolicyToPermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -31,6 +63,14 @@
     },
     {
       "Name": "CreateAccountAssignment",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Account"
@@ -49,6 +89,14 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "ApplicationProvider"
@@ -63,6 +111,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -70,10 +126,26 @@
       ]
     },
     {
-      "Name": "CreateApplicationInstance"
+      "Name": "CreateApplicationInstance",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "CreateApplicationInstanceCertificate"
+      "Name": "CreateApplicationInstanceCertificate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateInstance",
@@ -81,6 +153,14 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -89,6 +169,14 @@
     },
     {
       "Name": "CreateInstanceAccessControlAttributeConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -96,7 +184,15 @@
       ]
     },
     {
-      "Name": "CreateManagedApplicationInstance"
+      "Name": "CreateManagedApplicationInstance",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreatePermissionSet",
@@ -104,6 +200,14 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -114,10 +218,26 @@
       ]
     },
     {
-      "Name": "CreateProfile"
+      "Name": "CreateProfile",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "CreateTrust"
+      "Name": "CreateTrust",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateTrustedTokenIssuer",
@@ -125,6 +245,14 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -133,6 +261,14 @@
     },
     {
       "Name": "DeleteAccountAssignment",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Account"
@@ -150,6 +286,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -161,6 +305,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -172,6 +324,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -183,6 +343,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -194,6 +362,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -201,13 +377,37 @@
       ]
     },
     {
-      "Name": "DeleteApplicationInstance"
+      "Name": "DeleteApplicationInstance",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "DeleteApplicationInstanceCertificate"
+      "Name": "DeleteApplicationInstanceCertificate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeleteInlinePolicyFromPermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -219,6 +419,14 @@
     },
     {
       "Name": "DeleteInstance",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -227,6 +435,14 @@
     },
     {
       "Name": "DeleteInstanceAccessControlAttributeConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -234,10 +450,26 @@
       ]
     },
     {
-      "Name": "DeleteManagedApplicationInstance"
+      "Name": "DeleteManagedApplicationInstance",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeletePermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -249,6 +481,14 @@
     },
     {
       "Name": "DeletePermissionsBoundaryFromPermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -259,13 +499,37 @@
       ]
     },
     {
-      "Name": "DeletePermissionsPolicy"
+      "Name": "DeletePermissionsPolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "DeleteProfile"
+      "Name": "DeleteProfile",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeleteTrustedTokenIssuer",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "TrustedTokenIssuer"
@@ -274,6 +538,14 @@
     },
     {
       "Name": "DescribeAccountAssignmentCreationStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -282,6 +554,14 @@
     },
     {
       "Name": "DescribeAccountAssignmentDeletionStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -293,6 +573,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -304,6 +592,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -312,6 +608,14 @@
     },
     {
       "Name": "DescribeApplicationProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "ApplicationProvider"
@@ -319,10 +623,26 @@
       ]
     },
     {
-      "Name": "DescribeDirectories"
+      "Name": "DescribeDirectories",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "DescribeInstance",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -331,6 +651,14 @@
     },
     {
       "Name": "DescribeInstanceAccessControlAttributeConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -339,6 +667,14 @@
     },
     {
       "Name": "DescribePermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -350,6 +686,14 @@
     },
     {
       "Name": "DescribePermissionSetProvisioningStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -357,13 +701,37 @@
       ]
     },
     {
-      "Name": "DescribePermissionsPolicies"
+      "Name": "DescribePermissionsPolicies",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "DescribeRegisteredRegions"
+      "Name": "DescribeRegisteredRegions",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "DescribeTrustedTokenIssuer",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "TrustedTokenIssuer"
@@ -371,10 +739,26 @@
       ]
     },
     {
-      "Name": "DescribeTrusts"
+      "Name": "DescribeTrusts",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "DetachCustomerManagedPolicyReferenceFromPermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -386,6 +770,14 @@
     },
     {
       "Name": "DetachManagedPolicyFromPermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -396,16 +788,40 @@
       ]
     },
     {
-      "Name": "DisassociateDirectory"
+      "Name": "DisassociateDirectory",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "DisassociateProfile"
+      "Name": "DisassociateProfile",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "GetApplicationAccessScope",
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -417,6 +833,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -428,6 +852,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -439,6 +871,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -446,13 +886,37 @@
       ]
     },
     {
-      "Name": "GetApplicationInstance"
+      "Name": "GetApplicationInstance",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "GetApplicationTemplate"
+      "Name": "GetApplicationTemplate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetInlinePolicyForPermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -463,16 +927,48 @@
       ]
     },
     {
-      "Name": "GetManagedApplicationInstance"
+      "Name": "GetManagedApplicationInstance",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "GetMfaDeviceManagementForDirectory"
+      "Name": "GetMfaDeviceManagementForDirectory",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "GetPermissionSet"
+      "Name": "GetPermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetPermissionsBoundaryForPermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -483,28 +979,92 @@
       ]
     },
     {
-      "Name": "GetPermissionsPolicy"
+      "Name": "GetPermissionsPolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "GetProfile"
+      "Name": "GetProfile",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "GetSSOStatus"
+      "Name": "GetSSOStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "GetSharedSsoConfiguration"
+      "Name": "GetSharedSsoConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "GetSsoConfiguration"
+      "Name": "GetSsoConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "GetTrust"
+      "Name": "GetTrust",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ImportApplicationInstanceServiceProviderMetadata"
+      "Name": "ImportApplicationInstanceServiceProviderMetadata",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "ListAccountAssignmentCreationStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -513,6 +1073,14 @@
     },
     {
       "Name": "ListAccountAssignmentDeletionStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -521,6 +1089,14 @@
     },
     {
       "Name": "ListAccountAssignments",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Account"
@@ -535,6 +1111,14 @@
     },
     {
       "Name": "ListAccountAssignmentsForPrincipal",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -543,6 +1127,14 @@
     },
     {
       "Name": "ListAccountsForProvisionedPermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -557,6 +1149,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -568,6 +1168,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -579,6 +1187,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -590,6 +1206,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -601,6 +1225,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -608,13 +1240,37 @@
       ]
     },
     {
-      "Name": "ListApplicationInstanceCertificates"
+      "Name": "ListApplicationInstanceCertificates",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListApplicationInstances"
+      "Name": "ListApplicationInstances",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListApplicationProviders",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "ApplicationProvider"
@@ -622,13 +1278,37 @@
       ]
     },
     {
-      "Name": "ListApplicationTemplates"
+      "Name": "ListApplicationTemplates",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListApplications"
+      "Name": "ListApplications",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListCustomerManagedPolicyReferencesInPermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -639,13 +1319,37 @@
       ]
     },
     {
-      "Name": "ListDirectoryAssociations"
+      "Name": "ListDirectoryAssociations",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListInstances"
+      "Name": "ListInstances",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListManagedPoliciesInPermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -657,6 +1361,14 @@
     },
     {
       "Name": "ListPermissionSetProvisioningStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -665,6 +1377,14 @@
     },
     {
       "Name": "ListPermissionSets",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -673,6 +1393,14 @@
     },
     {
       "Name": "ListPermissionSetsProvisionedToAccount",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Account"
@@ -683,13 +1411,37 @@
       ]
     },
     {
-      "Name": "ListProfileAssociations"
+      "Name": "ListProfileAssociations",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListProfiles"
+      "Name": "ListProfiles",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListTagsForResource",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -707,6 +1459,14 @@
     },
     {
       "Name": "ListTrustedTokenIssuers",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -715,6 +1475,14 @@
     },
     {
       "Name": "ProvisionPermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Account"
@@ -732,6 +1500,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -743,6 +1519,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -754,6 +1538,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -765,6 +1557,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -773,6 +1573,14 @@
     },
     {
       "Name": "PutInlinePolicyToPermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -783,10 +1591,26 @@
       ]
     },
     {
-      "Name": "PutMfaDeviceManagementForDirectory"
+      "Name": "PutMfaDeviceManagementForDirectory",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "PutPermissionsBoundaryToPermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -797,16 +1621,48 @@
       ]
     },
     {
-      "Name": "PutPermissionsPolicy"
+      "Name": "PutPermissionsPolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "SearchGroups"
+      "Name": "SearchGroups",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "SearchUsers"
+      "Name": "SearchUsers",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "StartSSO"
+      "Name": "StartSSO",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "TagResource",
@@ -814,6 +1670,14 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -834,6 +1698,14 @@
       "ActionConditionKeys": [
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -854,6 +1726,14 @@
       "ActionConditionKeys": [
         "sso:ApplicationAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Application"
@@ -861,31 +1741,103 @@
       ]
     },
     {
-      "Name": "UpdateApplicationInstanceActiveCertificate"
+      "Name": "UpdateApplicationInstanceActiveCertificate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "UpdateApplicationInstanceDisplayData"
+      "Name": "UpdateApplicationInstanceDisplayData",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "UpdateApplicationInstanceResponseConfiguration"
+      "Name": "UpdateApplicationInstanceResponseConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "UpdateApplicationInstanceResponseSchemaConfiguration"
+      "Name": "UpdateApplicationInstanceResponseSchemaConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "UpdateApplicationInstanceSecurityConfiguration"
+      "Name": "UpdateApplicationInstanceSecurityConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "UpdateApplicationInstanceServiceProviderConfiguration"
+      "Name": "UpdateApplicationInstanceServiceProviderConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "UpdateApplicationInstanceStatus"
+      "Name": "UpdateApplicationInstanceStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "UpdateDirectoryAssociation"
+      "Name": "UpdateDirectoryAssociation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "UpdateInstance",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -894,6 +1846,14 @@
     },
     {
       "Name": "UpdateInstanceAccessControlAttributeConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -901,10 +1861,26 @@
       ]
     },
     {
-      "Name": "UpdateManagedApplicationInstanceStatus"
+      "Name": "UpdateManagedApplicationInstanceStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "UpdatePermissionSet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "Instance"
@@ -915,16 +1891,48 @@
       ]
     },
     {
-      "Name": "UpdateProfile"
+      "Name": "UpdateProfile",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "UpdateSSOConfiguration"
+      "Name": "UpdateSSOConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "UpdateTrust"
+      "Name": "UpdateTrust",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "UpdateTrustedTokenIssuer",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "TrustedTokenIssuer"
@@ -1009,5 +2017,5 @@
       ]
     }
   ],
-  "Version": "v1.1"
+  "Version": "v1.2"
 }

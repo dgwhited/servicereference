@@ -6,7 +6,15 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateCluster",
@@ -16,6 +24,14 @@
         "ecs:capacity-provider",
         "ecs:fargate-ephemeral-storage-kms-key"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "cluster",
@@ -44,6 +60,14 @@
         "ecs:task-definition",
         "ecs:task-memory"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "service",
@@ -63,13 +87,29 @@
         "ecs:cluster",
         "ecs:service",
         "ecs:task-definition"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeleteAccountSetting",
       "ActionConditionKeys": [
         "ecs:account-setting"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeleteAttributes",
@@ -77,6 +117,14 @@
         "aws:ResourceTag/${TagKey}",
         "ecs:cluster"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "container-instance"
@@ -88,6 +136,14 @@
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "capacity-provider"
@@ -96,6 +152,14 @@
     },
     {
       "Name": "DeleteCluster",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "cluster",
@@ -111,6 +175,14 @@
         "aws:ResourceTag/${TagKey}",
         "ecs:cluster"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "service"
@@ -122,6 +194,14 @@
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "task-definition"
@@ -135,6 +215,14 @@
         "ecs:cluster",
         "ecs:service"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "task-set"
@@ -143,6 +231,14 @@
     },
     {
       "Name": "DeregisterContainerInstance",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "cluster",
@@ -153,13 +249,29 @@
       ]
     },
     {
-      "Name": "DeregisterTaskDefinition"
+      "Name": "DeregisterTaskDefinition",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DescribeCapacityProviders",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "capacity-provider"
@@ -168,6 +280,14 @@
     },
     {
       "Name": "DescribeClusters",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "cluster",
@@ -183,6 +303,14 @@
         "aws:ResourceTag/${TagKey}",
         "ecs:cluster"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "container-instance"
@@ -191,6 +319,14 @@
     },
     {
       "Name": "DescribeServiceDeployments",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "service",
@@ -211,6 +347,14 @@
     },
     {
       "Name": "DescribeServiceRevisions",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "service",
@@ -235,6 +379,14 @@
         "aws:ResourceTag/${TagKey}",
         "ecs:cluster"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "service"
@@ -242,7 +394,15 @@
       ]
     },
     {
-      "Name": "DescribeTaskDefinition"
+      "Name": "DescribeTaskDefinition",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "DescribeTaskSets",
@@ -251,6 +411,14 @@
         "ecs:cluster",
         "ecs:service"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "task-set"
@@ -263,6 +431,14 @@
         "aws:ResourceTag/${TagKey}",
         "ecs:cluster"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "task"
@@ -270,7 +446,15 @@
       ]
     },
     {
-      "Name": "DiscoverPollEndpoint"
+      "Name": "DiscoverPollEndpoint",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "ExecuteCommand",
@@ -280,6 +464,14 @@
         "ecs:container-name",
         "ecs:task"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "cluster"
@@ -295,6 +487,14 @@
         "aws:ResourceTag/${TagKey}",
         "ecs:cluster"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "task"
@@ -302,10 +502,26 @@
       ]
     },
     {
-      "Name": "ListAccountSettings"
+      "Name": "ListAccountSettings",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListAttributes",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "cluster",
@@ -316,10 +532,26 @@
       ]
     },
     {
-      "Name": "ListClusters"
+      "Name": "ListClusters",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListContainerInstances",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "cluster",
@@ -331,6 +563,14 @@
     },
     {
       "Name": "ListServiceDeployments",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "service",
@@ -345,19 +585,43 @@
       "Name": "ListServices",
       "ActionConditionKeys": [
         "ecs:cluster"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListServicesByNamespace",
       "ActionConditionKeys": [
         "ecs:namespace"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListTagsForResource",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "capacity-provider"
@@ -383,10 +647,26 @@
       ]
     },
     {
-      "Name": "ListTaskDefinitionFamilies"
+      "Name": "ListTaskDefinitionFamilies",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListTaskDefinitions"
+      "Name": "ListTaskDefinitions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListTasks",
@@ -394,6 +674,14 @@
         "aws:ResourceTag/${TagKey}",
         "ecs:cluster"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "container-instance"
@@ -405,6 +693,14 @@
       "ActionConditionKeys": [
         "ecs:cluster"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "container-instance"
@@ -415,13 +711,29 @@
       "Name": "PutAccountSetting",
       "ActionConditionKeys": [
         "ecs:account-setting"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "PutAccountSettingDefault",
       "ActionConditionKeys": [
         "ecs:account-setting"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "PutAttributes",
@@ -429,6 +741,14 @@
         "aws:ResourceTag/${TagKey}",
         "ecs:cluster"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "container-instance"
@@ -440,6 +760,14 @@
       "ActionConditionKeys": [
         "ecs:capacity-provider"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "cluster",
@@ -455,6 +783,14 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "cluster",
@@ -474,6 +810,14 @@
         "ecs:task-cpu",
         "ecs:task-memory"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "task-definition",
@@ -494,6 +838,14 @@
         "ecs:enable-ebs-volumes",
         "ecs:enable-execute-command"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "task-definition"
@@ -511,6 +863,14 @@
         "ecs:enable-ebs-volumes",
         "ecs:enable-execute-command"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "task-definition"
@@ -522,6 +882,14 @@
       "ActionConditionKeys": [
         "ecs:cluster"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "container-instance"
@@ -530,6 +898,14 @@
     },
     {
       "Name": "StopServiceDeployment",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "service",
@@ -554,6 +930,14 @@
         "aws:ResourceTag/${TagKey}",
         "ecs:cluster"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "task"
@@ -562,6 +946,14 @@
     },
     {
       "Name": "SubmitAttachmentStateChanges",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "cluster",
@@ -573,6 +965,14 @@
     },
     {
       "Name": "SubmitContainerStateChange",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "cluster",
@@ -584,6 +984,14 @@
     },
     {
       "Name": "SubmitTaskStateChange",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "cluster",
@@ -601,6 +1009,14 @@
         "aws:TagKeys",
         "ecs:CreateAction"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "capacity-provider"
@@ -631,6 +1047,14 @@
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "capacity-provider"
@@ -660,6 +1084,14 @@
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "capacity-provider"
@@ -671,6 +1103,14 @@
       "ActionConditionKeys": [
         "ecs:fargate-ephemeral-storage-kms-key"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "cluster",
@@ -682,6 +1122,14 @@
     },
     {
       "Name": "UpdateClusterSettings",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "cluster",
@@ -697,6 +1145,14 @@
         "aws:ResourceTag/${TagKey}",
         "ecs:cluster"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "container-instance"
@@ -709,6 +1165,14 @@
         "aws:ResourceTag/${TagKey}",
         "ecs:cluster"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "container-instance"
@@ -732,6 +1196,14 @@
         "ecs:task-definition",
         "ecs:task-memory"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "service",
@@ -748,6 +1220,14 @@
         "aws:ResourceTag/${TagKey}",
         "ecs:cluster"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "service"
@@ -760,6 +1240,14 @@
         "aws:ResourceTag/${TagKey}",
         "ecs:cluster"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "task"
@@ -773,6 +1261,14 @@
         "ecs:cluster",
         "ecs:service"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "task-set"
@@ -1038,5 +1534,5 @@
       ]
     }
   ],
-  "Version": "v1.1"
+  "Version": "v1.2"
 }

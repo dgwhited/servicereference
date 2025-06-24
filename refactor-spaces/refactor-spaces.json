@@ -8,14 +8,30 @@
         "aws:TagKeys",
         "refactor-spaces:ApplicationCreatedByAccount",
         "refactor-spaces:CreatedByAccountIds"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateEnvironment",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateRoute",
@@ -27,7 +43,15 @@
         "refactor-spaces:RouteCreatedByAccount",
         "refactor-spaces:ServiceCreatedByAccount",
         "refactor-spaces:SourcePath"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateService",
@@ -37,7 +61,15 @@
         "refactor-spaces:ApplicationCreatedByAccount",
         "refactor-spaces:CreatedByAccountIds",
         "refactor-spaces:ServiceCreatedByAccount"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeleteApplication",
@@ -46,6 +78,14 @@
         "refactor-spaces:ApplicationCreatedByAccount",
         "refactor-spaces:CreatedByAccountIds"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "application"
@@ -57,6 +97,14 @@
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "environment"
@@ -64,7 +112,15 @@
       ]
     },
     {
-      "Name": "DeleteResourcePolicy"
+      "Name": "DeleteResourcePolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeleteRoute",
@@ -76,6 +132,14 @@
         "refactor-spaces:ServiceCreatedByAccount",
         "refactor-spaces:SourcePath"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "route"
@@ -90,6 +154,14 @@
         "refactor-spaces:CreatedByAccountIds",
         "refactor-spaces:ServiceCreatedByAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "service"
@@ -103,6 +175,14 @@
         "refactor-spaces:ApplicationCreatedByAccount",
         "refactor-spaces:CreatedByAccountIds"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "application"
@@ -114,6 +194,14 @@
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "environment"
@@ -121,7 +209,15 @@
       ]
     },
     {
-      "Name": "GetResourcePolicy"
+      "Name": "GetResourcePolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetRoute",
@@ -133,6 +229,14 @@
         "refactor-spaces:ServiceCreatedByAccount",
         "refactor-spaces:SourcePath"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "route"
@@ -147,6 +251,14 @@
         "refactor-spaces:CreatedByAccountIds",
         "refactor-spaces:ServiceCreatedByAccount"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "service"
@@ -155,6 +267,14 @@
     },
     {
       "Name": "ListApplications",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "application"
@@ -163,6 +283,14 @@
     },
     {
       "Name": "ListEnvironmentVpcs",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "environment"
@@ -170,10 +298,26 @@
       ]
     },
     {
-      "Name": "ListEnvironments"
+      "Name": "ListEnvironments",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListRoutes",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "route"
@@ -182,6 +326,14 @@
     },
     {
       "Name": "ListServices",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "environment"
@@ -189,10 +341,26 @@
       ]
     },
     {
-      "Name": "ListTagsForResource"
+      "Name": "ListTagsForResource",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "PutResourcePolicy"
+      "Name": "PutResourcePolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "TagResource",
@@ -206,6 +374,14 @@
         "refactor-spaces:ServiceCreatedByAccount",
         "refactor-spaces:SourcePath"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "application"
@@ -233,6 +409,14 @@
         "refactor-spaces:ServiceCreatedByAccount",
         "refactor-spaces:SourcePath"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "application"
@@ -258,6 +442,14 @@
         "refactor-spaces:ServiceCreatedByAccount",
         "refactor-spaces:SourcePath"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "route"
@@ -363,5 +555,5 @@
       ]
     }
   ],
-  "Version": "v1.1"
+  "Version": "v1.2"
 }

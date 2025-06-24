@@ -7,10 +7,26 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateCertificateAuthorityAuditReport",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -19,6 +35,14 @@
     },
     {
       "Name": "CreatePermission",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -27,6 +51,14 @@
     },
     {
       "Name": "DeleteCertificateAuthority",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -35,6 +67,14 @@
     },
     {
       "Name": "DeletePermission",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -43,6 +83,14 @@
     },
     {
       "Name": "DeletePolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -51,6 +99,14 @@
     },
     {
       "Name": "DescribeCertificateAuthority",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -59,6 +115,14 @@
     },
     {
       "Name": "DescribeCertificateAuthorityAuditReport",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -67,6 +131,14 @@
     },
     {
       "Name": "GetCertificate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -75,6 +147,14 @@
     },
     {
       "Name": "GetCertificateAuthorityCertificate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -83,6 +163,14 @@
     },
     {
       "Name": "GetCertificateAuthorityCsr",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -91,6 +179,14 @@
     },
     {
       "Name": "GetPolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -99,6 +195,14 @@
     },
     {
       "Name": "ImportCertificateAuthorityCertificate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -110,6 +214,14 @@
       "ActionConditionKeys": [
         "acm-pca:TemplateArn"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -117,10 +229,26 @@
       ]
     },
     {
-      "Name": "ListCertificateAuthorities"
+      "Name": "ListCertificateAuthorities",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListPermissions",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -129,6 +257,14 @@
     },
     {
       "Name": "ListTags",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -137,6 +273,14 @@
     },
     {
       "Name": "PutPolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -145,6 +289,14 @@
     },
     {
       "Name": "RestoreCertificateAuthority",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -153,6 +305,14 @@
     },
     {
       "Name": "RevokeCertificate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -165,6 +325,14 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -176,6 +344,14 @@
       "ActionConditionKeys": [
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority",
@@ -187,6 +363,14 @@
     },
     {
       "Name": "UpdateCertificateAuthority",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "certificate-authority"
@@ -231,5 +415,5 @@
       ]
     }
   ],
-  "Version": "v1.1"
+  "Version": "v1.2"
 }

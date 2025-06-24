@@ -2,58 +2,194 @@
   "Name": "servicequotas",
   "Actions": [
     {
-      "Name": "AssociateServiceQuotaTemplate"
+      "Name": "AssociateServiceQuotaTemplate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "CreateSupportCase"
+      "Name": "CreateSupportCase",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "DeleteServiceQuotaIncreaseRequestFromTemplate"
+      "Name": "DeleteServiceQuotaIncreaseRequestFromTemplate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "DisassociateServiceQuotaTemplate"
+      "Name": "DisassociateServiceQuotaTemplate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
-      "Name": "GetAWSDefaultServiceQuota"
+      "Name": "GetAWSDefaultServiceQuota",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "GetAssociationForServiceQuotaTemplate"
+      "Name": "GetAssociationForServiceQuotaTemplate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "GetRequestedServiceQuotaChange"
+      "Name": "GetRequestedServiceQuotaChange",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "GetServiceQuota"
+      "Name": "GetServiceQuota",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "GetServiceQuotaIncreaseRequestFromTemplate"
+      "Name": "GetServiceQuotaIncreaseRequestFromTemplate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListAWSDefaultServiceQuotas"
+      "Name": "ListAWSDefaultServiceQuotas",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListRequestedServiceQuotaChangeHistory"
+      "Name": "ListRequestedServiceQuotaChangeHistory",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListRequestedServiceQuotaChangeHistoryByQuota"
+      "Name": "ListRequestedServiceQuotaChangeHistoryByQuota",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListServiceQuotaIncreaseRequestsInTemplate"
+      "Name": "ListServiceQuotaIncreaseRequestsInTemplate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListServiceQuotas"
+      "Name": "ListServiceQuotas",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListServices"
+      "Name": "ListServices",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListTagsForResource"
+      "Name": "ListTagsForResource",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "PutServiceQuotaIncreaseRequestIntoTemplate",
       "ActionConditionKeys": [
         "servicequotas:service"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "quota"
@@ -65,6 +201,14 @@
       "ActionConditionKeys": [
         "servicequotas:service"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "quota"
@@ -76,13 +220,29 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "UntagResource",
       "ActionConditionKeys": [
         "aws:TagKeys"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      }
     }
   ],
   "ConditionKeys": [
@@ -119,5 +279,5 @@
       ]
     }
   ],
-  "Version": "v1.1"
+  "Version": "v1.2"
 }

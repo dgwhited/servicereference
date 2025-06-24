@@ -6,6 +6,14 @@
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "SecurityProfile"
@@ -17,6 +25,14 @@
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "SecurityProfile"
@@ -29,7 +45,15 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateSecurityProfile",
@@ -37,13 +61,29 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeactivateSecurityProfile",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "SecurityProfile"
@@ -55,6 +95,14 @@
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "DataSource"
@@ -66,6 +114,14 @@
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "SecurityProfile"
@@ -77,6 +133,14 @@
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "DataSource"
@@ -85,6 +149,14 @@
     },
     {
       "Name": "GetEntitledSecurityProfileSnapshot",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "SecurityProfile"
@@ -92,13 +164,29 @@
       ]
     },
     {
-      "Name": "GetProfileAccessTerms"
+      "Name": "GetProfileAccessTerms",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetSecurityProfile",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "SecurityProfile"
@@ -110,6 +198,14 @@
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "SecurityProfile"
@@ -117,10 +213,26 @@
       ]
     },
     {
-      "Name": "ListDataSources"
+      "Name": "ListDataSources",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListEntitledSecurityProfileSnapshots",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "SecurityProfile"
@@ -128,13 +240,29 @@
       ]
     },
     {
-      "Name": "ListEntitledSecurityProfiles"
+      "Name": "ListEntitledSecurityProfiles",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListSecurityProfileSnapshots",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "SecurityProfile"
@@ -142,13 +270,29 @@
       ]
     },
     {
-      "Name": "ListSecurityProfiles"
+      "Name": "ListSecurityProfiles",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListTagsForResource",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "DataSource"
@@ -165,6 +309,14 @@
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "DataSource"
@@ -180,6 +332,14 @@
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "DataSource"
@@ -194,6 +354,14 @@
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "DataSource"
@@ -205,6 +373,14 @@
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "SecurityProfile"
@@ -216,6 +392,14 @@
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "SecurityProfile"
@@ -227,6 +411,14 @@
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "SecurityProfile"
@@ -278,5 +470,5 @@
       ]
     }
   ],
-  "Version": "v1.1"
+  "Version": "v1.2"
 }

@@ -3,6 +3,14 @@
   "Actions": [
     {
       "Name": "AllowVendedLogDeliveryForResource",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-ingress-point"
@@ -18,6 +26,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -33,6 +49,14 @@
         "ses:ApiVersion",
         "ses:ExportSourceType"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "export-job"
@@ -43,7 +67,15 @@
       "Name": "CloneReceiptRuleSet",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateAddonInstance",
@@ -51,24 +83,56 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys",
         "ses:AddonSubscriptionArn"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateAddonSubscription",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateAddressList",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateAddressListImportJob",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-address-list",
@@ -83,7 +147,15 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateConfigurationSet",
@@ -92,6 +164,14 @@
         "aws:TagKeys",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -110,6 +190,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -120,7 +208,15 @@
       "Name": "CreateConfigurationSetTrackingOptions",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateContact",
@@ -128,6 +224,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "contact-list"
@@ -141,6 +245,14 @@
         "aws:TagKeys",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "contact-list"
@@ -152,6 +264,14 @@
       "ActionConditionKeys": [
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "custom-verification-email-template"
@@ -165,6 +285,14 @@
         "aws:TagKeys",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "dedicated-ip-pool"
@@ -178,6 +306,14 @@
         "aws:TagKeys",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "identity"
@@ -191,6 +327,14 @@
         "aws:TagKeys",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "identity"
@@ -203,6 +347,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "identity"
@@ -214,6 +366,14 @@
       "ActionConditionKeys": [
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "template"
@@ -225,13 +385,29 @@
       "ActionConditionKeys": [
         "ses:ApiVersion",
         "ses:ExportSourceType"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateImportJob",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateIngressPoint",
@@ -240,7 +416,15 @@
         "aws:TagKeys",
         "ses:MailManagerRuleSetArn",
         "ses:MailManagerTrafficPolicyArn"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateMultiRegionEndpoint",
@@ -248,58 +432,130 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys",
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateReceiptFilter",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateReceiptRule",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateReceiptRuleSet",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateRelay",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateRuleSet",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateTemplate",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "CreateTrafficPolicy",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeleteAddonInstance",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "addon-instance"
@@ -311,6 +567,14 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "addon-subscription"
@@ -319,6 +583,14 @@
     },
     {
       "Name": "DeleteAddressList",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-address-list",
@@ -333,6 +605,14 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-archive"
@@ -345,6 +625,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -357,6 +645,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -367,7 +663,15 @@
       "Name": "DeleteConfigurationSetTrackingOptions",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeleteContact",
@@ -375,6 +679,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "contact-list"
@@ -387,6 +699,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "contact-list"
@@ -398,6 +718,14 @@
       "ActionConditionKeys": [
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "custom-verification-email-template"
@@ -410,6 +738,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "dedicated-ip-pool"
@@ -422,6 +758,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "identity"
@@ -434,6 +778,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "identity"
@@ -445,6 +797,14 @@
       "ActionConditionKeys": [
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "template"
@@ -455,19 +815,43 @@
       "Name": "DeleteIdentity",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeleteIdentityPolicy",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeleteIngressPoint",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-ingress-point"
@@ -480,6 +864,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "multi-region-endpoint"
@@ -490,25 +882,57 @@
       "Name": "DeleteReceiptFilter",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeleteReceiptRule",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeleteReceiptRuleSet",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeleteRelay",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-smtp-relay"
@@ -520,6 +944,14 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-rule-set"
@@ -530,19 +962,43 @@
       "Name": "DeleteSuppressedDestination",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeleteTemplate",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeleteTrafficPolicy",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-traffic-policy"
@@ -553,10 +1009,26 @@
       "Name": "DeleteVerifiedEmailAddress",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "DeregisterMemberFromAddressList",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-address-list",
@@ -570,43 +1042,99 @@
       "Name": "DescribeActiveReceiptRuleSet",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "DescribeConfigurationSet",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "DescribeReceiptRule",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "DescribeReceiptRuleSet",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetAccount",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetAccountSendingEnabled",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetAddonInstance",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "addon-instance"
@@ -618,6 +1146,14 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "addon-subscription"
@@ -626,6 +1162,14 @@
     },
     {
       "Name": "GetAddressList",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-address-list",
@@ -637,6 +1181,14 @@
     },
     {
       "Name": "GetAddressListImportJob",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-address-list",
@@ -651,6 +1203,14 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-archive"
@@ -659,6 +1219,14 @@
     },
     {
       "Name": "GetArchiveExport",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-archive"
@@ -667,6 +1235,14 @@
     },
     {
       "Name": "GetArchiveMessage",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-archive"
@@ -675,6 +1251,14 @@
     },
     {
       "Name": "GetArchiveMessageContent",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-archive"
@@ -683,6 +1267,14 @@
     },
     {
       "Name": "GetArchiveSearch",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-archive"
@@ -691,6 +1283,14 @@
     },
     {
       "Name": "GetArchiveSearchResults",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-archive"
@@ -701,7 +1301,15 @@
       "Name": "GetBlacklistReports",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetConfigurationSet",
@@ -709,6 +1317,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -721,6 +1337,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -733,6 +1357,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "contact-list"
@@ -744,6 +1376,14 @@
       "ActionConditionKeys": [
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "contact-list"
@@ -755,6 +1395,14 @@
       "ActionConditionKeys": [
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "custom-verification-email-template"
@@ -765,7 +1413,15 @@
       "Name": "GetDedicatedIp",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetDedicatedIpPool",
@@ -773,6 +1429,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "dedicated-ip-pool"
@@ -785,6 +1449,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "dedicated-ip-pool"
@@ -795,7 +1467,15 @@
       "Name": "GetDeliverabilityDashboardOptions",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetDeliverabilityTestReport",
@@ -803,6 +1483,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "deliverability-test-report"
@@ -813,7 +1501,15 @@
       "Name": "GetDomainDeliverabilityCampaign",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetDomainStatisticsReport",
@@ -821,6 +1517,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "identity"
@@ -833,6 +1537,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "identity"
@@ -845,6 +1557,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "identity"
@@ -856,6 +1576,14 @@
       "ActionConditionKeys": [
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "template"
@@ -868,6 +1596,14 @@
         "ses:ApiVersion",
         "ses:ExportSourceType"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "export-job"
@@ -878,37 +1614,85 @@
       "Name": "GetIdentityDkimAttributes",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetIdentityMailFromDomainAttributes",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetIdentityNotificationAttributes",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetIdentityPolicies",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetIdentityVerificationAttributes",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetImportJob",
       "ActionConditionKeys": [
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "import-job"
@@ -920,6 +1704,14 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-ingress-point"
@@ -928,6 +1720,14 @@
     },
     {
       "Name": "GetMemberOfAddressList",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-address-list",
@@ -941,7 +1741,15 @@
       "Name": "GetMessageInsights",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetMultiRegionEndpoint",
@@ -949,6 +1757,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "multi-region-endpoint"
@@ -960,6 +1776,14 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-smtp-relay"
@@ -971,6 +1795,14 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-rule-set"
@@ -981,31 +1813,71 @@
       "Name": "GetSendQuota",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetSendStatistics",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetSuppressedDestination",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetTemplate",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetTrafficPolicy",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-traffic-policy"
@@ -1013,13 +1885,37 @@
       ]
     },
     {
-      "Name": "ListAddonInstances"
+      "Name": "ListAddonInstances",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListAddonSubscriptions"
+      "Name": "ListAddonSubscriptions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListAddressListImportJobs",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-address-list",
@@ -1030,34 +1926,90 @@
       ]
     },
     {
-      "Name": "ListAddressLists"
+      "Name": "ListAddressLists",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListArchiveExports"
+      "Name": "ListArchiveExports",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListArchiveSearches"
+      "Name": "ListArchiveSearches",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListArchives"
+      "Name": "ListArchives",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListConfigurationSets",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListContactLists",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListContacts",
       "ActionConditionKeys": [
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "contact-list"
@@ -1068,68 +2020,164 @@
       "Name": "ListCustomVerificationEmailTemplates",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListDedicatedIpPools",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListDeliverabilityTestReports",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListDomainDeliverabilityCampaigns",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListEmailIdentities",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListEmailTemplates",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListExportJobs",
       "ActionConditionKeys": [
         "ses:ApiVersion",
         "ses:ExportSourceType"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListIdentities",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListIdentityPolicies",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListImportJobs",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListIngressPoints"
+      "Name": "ListIngressPoints",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListMembersOfAddressList",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-address-list",
@@ -1143,19 +2191,43 @@
       "Name": "ListMultiRegionEndpoints",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListReceiptFilters",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListReceiptRuleSets",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListRecommendations",
@@ -1163,6 +2235,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "identity"
@@ -1170,19 +2250,51 @@
       ]
     },
     {
-      "Name": "ListRelays"
+      "Name": "ListRelays",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListRuleSets"
+      "Name": "ListRuleSets",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListSuppressedDestinations",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListTagsForResource",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "addon-instance"
@@ -1229,46 +2341,110 @@
       "Name": "ListTemplates",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
-      "Name": "ListTrafficPolicies"
+      "Name": "ListTrafficPolicies",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "ListVerifiedEmailAddresses",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "PutAccountDedicatedIpWarmupAttributes",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "PutAccountDetails",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "PutAccountSendingAttributes",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "PutAccountSuppressionAttributes",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "PutAccountVdmAttributes",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "PutConfigurationSetArchivingOptions",
@@ -1276,6 +2452,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -1291,6 +2475,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -1306,6 +2498,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -1318,6 +2518,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -1330,6 +2538,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -1342,6 +2558,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -1354,6 +2578,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -1366,6 +2598,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "dedicated-ip-pool"
@@ -1378,6 +2618,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "dedicated-ip-pool"
@@ -1388,13 +2636,29 @@
       "Name": "PutDedicatedIpWarmupAttributes",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "PutDeliverabilityDashboardOption",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "PutEmailIdentityConfigurationSetAttributes",
@@ -1402,6 +2666,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -1417,6 +2689,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "identity"
@@ -1429,6 +2709,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "identity"
@@ -1441,6 +2729,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "identity"
@@ -1453,6 +2749,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "identity"
@@ -1463,16 +2767,40 @@
       "Name": "PutIdentityPolicy",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "PutSuppressedDestination",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "RegisterMemberToAddressList",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-address-list",
@@ -1486,13 +2814,29 @@
       "Name": "ReorderReceiptRuleSet",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "ReplicateEmailIdentityDkimSigningKey",
       "ActionConditionKeys": [
         "ses:ReplicaRegion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "identity"
@@ -1505,6 +2849,14 @@
         "ses:ApiVersion",
         "ses:FromAddress"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "identity"
@@ -1517,6 +2869,14 @@
         "ses:ApiVersion",
         "ses:MultiRegionEndpointId"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -1538,6 +2898,14 @@
         "ses:FromDisplayName",
         "ses:Recipients"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -1559,6 +2927,14 @@
         "ses:FromDisplayName",
         "ses:Recipients"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "custom-verification-email-template"
@@ -1578,6 +2954,14 @@
         "ses:MultiRegionEndpointId",
         "ses:Recipients"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -1599,6 +2983,14 @@
         "ses:FromDisplayName",
         "ses:Recipients"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -1617,6 +3009,14 @@
         "ses:FromDisplayName",
         "ses:Recipients"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -1633,46 +3033,110 @@
       "Name": "SetActiveReceiptRuleSet",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "SetIdentityDkimEnabled",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "SetIdentityFeedbackForwardingEnabled",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "SetIdentityHeadersInNotificationsEnabled",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "SetIdentityMailFromDomain",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "SetIdentityNotificationTopic",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "SetReceiptRulePosition",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "StartAddressListImportJob",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-address-list",
@@ -1684,6 +3148,14 @@
     },
     {
       "Name": "StartArchiveExport",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-archive"
@@ -1692,6 +3164,14 @@
     },
     {
       "Name": "StartArchiveSearch",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-archive"
@@ -1700,6 +3180,14 @@
     },
     {
       "Name": "StopAddressListImportJob",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-address-list",
@@ -1711,6 +3199,14 @@
     },
     {
       "Name": "StopArchiveExport",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-archive"
@@ -1719,6 +3215,14 @@
     },
     {
       "Name": "StopArchiveSearch",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-archive"
@@ -1732,6 +3236,14 @@
         "aws:TagKeys",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "addon-instance"
@@ -1779,6 +3291,14 @@
       "ActionConditionKeys": [
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "template"
@@ -1789,7 +3309,15 @@
       "Name": "TestRenderTemplate",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "UntagResource",
@@ -1797,6 +3325,14 @@
         "aws:TagKeys",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "addon-instance"
@@ -1843,13 +3379,29 @@
       "Name": "UpdateAccountSendingEnabled",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "UpdateArchive",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-archive"
@@ -1862,6 +3414,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "configuration-set"
@@ -1872,19 +3432,43 @@
       "Name": "UpdateConfigurationSetReputationMetricsEnabled",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "UpdateConfigurationSetSendingEnabled",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "UpdateConfigurationSetTrackingOptions",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "UpdateContact",
@@ -1892,6 +3476,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "contact-list"
@@ -1904,6 +3496,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "contact-list"
@@ -1915,6 +3515,14 @@
       "ActionConditionKeys": [
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "custom-verification-email-template"
@@ -1927,6 +3535,14 @@
         "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "identity"
@@ -1938,6 +3554,14 @@
       "ActionConditionKeys": [
         "ses:ApiVersion"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "template"
@@ -1951,6 +3575,14 @@
         "ses:MailManagerRuleSetArn",
         "ses:MailManagerTrafficPolicyArn"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-ingress-point"
@@ -1961,13 +3593,29 @@
       "Name": "UpdateReceiptRule",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "UpdateRelay",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-smtp-relay"
@@ -1979,6 +3627,14 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-rule-set"
@@ -1989,13 +3645,29 @@
       "Name": "UpdateTemplate",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "UpdateTrafficPolicy",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "mailmanager-traffic-policy"
@@ -2006,25 +3678,57 @@
       "Name": "VerifyDomainDkim",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "VerifyDomainIdentity",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "VerifyEmailAddress",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     },
     {
       "Name": "VerifyEmailIdentity",
       "ActionConditionKeys": [
         "ses:ApiVersion"
-      ]
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
     }
   ],
   "ConditionKeys": [
@@ -2269,5 +3973,5 @@
       ]
     }
   ],
-  "Version": "v1.1"
+  "Version": "v1.2"
 }

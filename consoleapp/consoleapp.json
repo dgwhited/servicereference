@@ -3,6 +3,14 @@
   "Actions": [
     {
       "Name": "GetDeviceIdentity",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "DeviceIdentity"
@@ -10,7 +18,15 @@
       ]
     },
     {
-      "Name": "ListDeviceIdentities"
+      "Name": "ListDeviceIdentities",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     }
   ],
   "Resources": [
@@ -21,5 +37,5 @@
       ]
     }
   ],
-  "Version": "v1.1"
+  "Version": "v1.2"
 }
