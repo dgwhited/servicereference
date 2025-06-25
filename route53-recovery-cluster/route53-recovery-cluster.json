@@ -3,6 +3,14 @@
   "Actions": [
     {
       "Name": "GetRoutingControlState",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "Resources": [
         {
           "Name": "routingcontrol"
@@ -10,13 +18,29 @@
       ]
     },
     {
-      "Name": "ListRoutingControls"
+      "Name": "ListRoutingControls",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "UpdateRoutingControlState",
       "ActionConditionKeys": [
         "route53-recovery-cluster:AllowSafetyRulesOverrides"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "routingcontrol"
@@ -28,6 +52,14 @@
       "ActionConditionKeys": [
         "route53-recovery-cluster:AllowSafetyRulesOverrides"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
           "Name": "routingcontrol"
@@ -51,5 +83,5 @@
       ]
     }
   ],
-  "Version": "v1.1"
+  "Version": "v1.2"
 }
