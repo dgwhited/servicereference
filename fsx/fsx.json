@@ -105,6 +105,22 @@
       ]
     },
     {
+      "Name": "CreateAndAttachS3AccessPoint",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "volume"
+        }
+      ]
+    },
+    {
       "Name": "CreateBackup",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -583,6 +599,17 @@
       }
     },
     {
+      "Name": "DescribeS3AccessPointAttachments",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
       "Name": "DescribeSharedVpcConfiguration",
       "Annotations": {
         "Properties": {
@@ -623,6 +650,17 @@
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "DetachAndDeleteS3AccessPoint",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
         }
       }
     },
