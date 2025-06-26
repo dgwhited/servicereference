@@ -191,6 +191,26 @@
     },
     {
       "Name": "CreateDataAccessor",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataAccessorWithTti",
       "Annotations": {
         "Properties": {
           "IsList": false,
