@@ -2,7 +2,48 @@
   "Name": "iotmanagedintegrations",
   "Actions": [
     {
+      "Name": "CreateAccountAssociation",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "CreateCloudConnector",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "CreateConnectorDestination",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
       "Name": "CreateCredentialLocker",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -36,6 +77,10 @@
     },
     {
       "Name": "CreateManagedThing",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -43,7 +88,12 @@
           "IsTaggingOnly": false,
           "IsWrite": true
         }
-      }
+      },
+      "Resources": [
+        {
+          "Name": "credential-locker"
+        }
+      ]
     },
     {
       "Name": "CreateNotificationConfiguration",
@@ -58,6 +108,10 @@
     },
     {
       "Name": "CreateOtaTask",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -80,6 +134,48 @@
     },
     {
       "Name": "CreateProvisioningProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "DeleteAccountAssociation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "account-association"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCloudConnector",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "DeleteConnectorDestination",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -101,7 +197,7 @@
       },
       "Resources": [
         {
-          "Name": "CredentialLockerResource"
+          "Name": "credential-locker"
         }
       ]
     },
@@ -139,7 +235,7 @@
       },
       "Resources": [
         {
-          "Name": "ManagedThingResource"
+          "Name": "managed-thing"
         }
       ]
     },
@@ -166,7 +262,7 @@
       },
       "Resources": [
         {
-          "Name": "OtaTaskResource"
+          "Name": "ota-task"
         }
       ]
     },
@@ -193,9 +289,66 @@
       },
       "Resources": [
         {
-          "Name": "ProvisioningProfileResource"
+          "Name": "provisioning-profile"
         }
       ]
+    },
+    {
+      "Name": "DeregisterAccountAssociation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "account-association"
+        },
+        {
+          "Name": "managed-thing"
+        }
+      ]
+    },
+    {
+      "Name": "GetAccountAssociation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "account-association"
+        }
+      ]
+    },
+    {
+      "Name": "GetCloudConnector",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "GetConnectorDestination",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
     },
     {
       "Name": "GetCredentialLocker",
@@ -209,7 +362,7 @@
       },
       "Resources": [
         {
-          "Name": "CredentialLockerResource"
+          "Name": "credential-locker"
         }
       ]
     },
@@ -291,7 +444,7 @@
       },
       "Resources": [
         {
-          "Name": "ManagedThingResource"
+          "Name": "managed-thing"
         }
       ]
     },
@@ -307,7 +460,7 @@
       },
       "Resources": [
         {
-          "Name": "ManagedThingResource"
+          "Name": "managed-thing"
         }
       ]
     },
@@ -323,7 +476,7 @@
       },
       "Resources": [
         {
-          "Name": "ManagedThingResource"
+          "Name": "managed-thing"
         }
       ]
     },
@@ -339,7 +492,7 @@
       },
       "Resources": [
         {
-          "Name": "ManagedThingResource"
+          "Name": "managed-thing"
         }
       ]
     },
@@ -355,7 +508,7 @@
       },
       "Resources": [
         {
-          "Name": "ManagedThingResource"
+          "Name": "managed-thing"
         }
       ]
     },
@@ -382,7 +535,7 @@
       },
       "Resources": [
         {
-          "Name": "OtaTaskResource"
+          "Name": "ota-task"
         }
       ]
     },
@@ -409,7 +562,7 @@
       },
       "Resources": [
         {
-          "Name": "ProvisioningProfileResource"
+          "Name": "provisioning-profile"
         }
       ]
     },
@@ -429,6 +582,39 @@
       "Annotations": {
         "Properties": {
           "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListAccountAssociations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListCloudConnectors",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListConnectorDestinations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -458,7 +644,40 @@
       }
     },
     {
+      "Name": "ListDeviceDiscoveries",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListDiscoveredDevices",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
       "Name": "ListEventLogConfigurations",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListManagedThingAccountAssociations",
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -480,7 +699,7 @@
       },
       "Resources": [
         {
-          "Name": "ManagedThingResource"
+          "Name": "managed-thing"
         }
       ]
     },
@@ -499,7 +718,7 @@
       "Name": "ListNotificationConfigurations",
       "Annotations": {
         "Properties": {
-          "IsList": true,
+          "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -510,7 +729,7 @@
       "Name": "ListOtaTaskConfigurations",
       "Annotations": {
         "Properties": {
-          "IsList": true,
+          "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -529,7 +748,7 @@
       },
       "Resources": [
         {
-          "Name": "OtaTaskResource"
+          "Name": "ota-task"
         }
       ]
     },
@@ -567,6 +786,37 @@
       }
     },
     {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "account-association"
+        },
+        {
+          "Name": "credential-locker"
+        },
+        {
+          "Name": "managed-thing"
+        },
+        {
+          "Name": "ota-task"
+        },
+        {
+          "Name": "provisioning-profile"
+        }
+      ]
+    },
+    {
       "Name": "PutDefaultEncryptionConfiguration",
       "Annotations": {
         "Properties": {
@@ -600,6 +850,25 @@
       }
     },
     {
+      "Name": "RegisterAccountAssociation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "account-association"
+        },
+        {
+          "Name": "managed-thing"
+        }
+      ]
+    },
+    {
       "Name": "RegisterCustomEndpoint",
       "Annotations": {
         "Properties": {
@@ -622,7 +891,7 @@
       }
     },
     {
-      "Name": "SendManagedThingCommand",
+      "Name": "SendConnectorEvent",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -633,7 +902,153 @@
       }
     },
     {
+      "Name": "SendManagedThingCommand",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "account-association"
+        },
+        {
+          "Name": "managed-thing"
+        }
+      ]
+    },
+    {
+      "Name": "StartAccountAssociationRefresh",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "account-association"
+        }
+      ]
+    },
+    {
       "Name": "StartDeviceDiscovery",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "account-association"
+        },
+        {
+          "Name": "managed-thing"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "account-association"
+        },
+        {
+          "Name": "credential-locker"
+        },
+        {
+          "Name": "managed-thing"
+        },
+        {
+          "Name": "ota-task"
+        },
+        {
+          "Name": "provisioning-profile"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "account-association"
+        },
+        {
+          "Name": "credential-locker"
+        },
+        {
+          "Name": "managed-thing"
+        },
+        {
+          "Name": "ota-task"
+        },
+        {
+          "Name": "provisioning-profile"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAccountAssociation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "account-association"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCloudConnector",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "UpdateConnectorDestination",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -677,7 +1092,10 @@
       },
       "Resources": [
         {
-          "Name": "ManagedThingResource"
+          "Name": "credential-locker"
+        },
+        {
+          "Name": "managed-thing"
         }
       ]
     },
@@ -704,34 +1122,75 @@
       },
       "Resources": [
         {
-          "Name": "OtaTaskResource"
+          "Name": "ota-task"
         }
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
       ]
     }
   ],
   "Resources": [
     {
-      "Name": "CredentialLockerResource",
+      "Name": "account-association",
+      "ARNFormats": [
+        "arn:${Partition}:iotmanagedintegrations:${Region}:${Account}:account-association/${AccountAssociationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "credential-locker",
       "ARNFormats": [
         "arn:${Partition}:iotmanagedintegrations:${Region}:${Account}:credential-locker/${Identifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
-      "Name": "ManagedThingResource",
+      "Name": "managed-thing",
       "ARNFormats": [
         "arn:${Partition}:iotmanagedintegrations:${Region}:${Account}:managed-thing/${Identifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
-      "Name": "OtaTaskResource",
+      "Name": "ota-task",
       "ARNFormats": [
         "arn:${Partition}:iotmanagedintegrations:${Region}:${Account}:ota-task/${Identifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
-      "Name": "ProvisioningProfileResource",
+      "Name": "provisioning-profile",
       "ARNFormats": [
         "arn:${Partition}:iotmanagedintegrations:${Region}:${Account}:provisioning-profile/${Identifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     }
   ],
