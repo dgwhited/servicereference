@@ -2,6 +2,22 @@
   "Name": "elasticmapreduce",
   "Actions": [
     {
+      "Name": "AccessAllEventLogs",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ]
+    },
+    {
       "Name": "AddInstanceFleet",
       "Annotations": {
         "Properties": {
