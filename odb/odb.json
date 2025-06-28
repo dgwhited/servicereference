@@ -1,8 +1,8 @@
 {
-  "Name": "rekognition",
+  "Name": "odb",
   "Actions": [
     {
-      "Name": "AssociateFaces",
+      "Name": "AcceptMarketplaceRegistration",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -10,26 +10,10 @@
           "IsTaggingOnly": false,
           "IsWrite": true
         }
-      },
-      "Resources": [
-        {
-          "Name": "collection"
-        }
-      ]
-    },
-    {
-      "Name": "CompareFaces",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
       }
     },
     {
-      "Name": "CopyProjectVersion",
+      "Name": "CreateCloudAutonomousVmCluster",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
@@ -44,15 +28,15 @@
       },
       "Resources": [
         {
-          "Name": "project"
+          "Name": "cloud-exadata-infrastructure"
         },
         {
-          "Name": "projectversion"
+          "Name": "odb-network"
         }
       ]
     },
     {
-      "Name": "CreateCollection",
+      "Name": "CreateCloudExadataInfrastructure",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
@@ -67,7 +51,7 @@
       }
     },
     {
-      "Name": "CreateDataset",
+      "Name": "CreateCloudVmCluster",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
@@ -82,12 +66,15 @@
       },
       "Resources": [
         {
-          "Name": "project"
+          "Name": "cloud-exadata-infrastructure"
+        },
+        {
+          "Name": "odb-network"
         }
       ]
     },
     {
-      "Name": "CreateFaceLivenessSession",
+      "Name": "CreateDbNode",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -95,10 +82,15 @@
           "IsTaggingOnly": false,
           "IsWrite": true
         }
-      }
+      },
+      "Resources": [
+        {
+          "Name": "db-node"
+        }
+      ]
     },
     {
-      "Name": "CreateProject",
+      "Name": "CreateOdbNetwork",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
@@ -113,7 +105,7 @@
       }
     },
     {
-      "Name": "CreateProjectVersion",
+      "Name": "CreateOdbPeeringConnection",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
@@ -128,16 +120,12 @@
       },
       "Resources": [
         {
-          "Name": "project"
+          "Name": "odb-network"
         }
       ]
     },
     {
-      "Name": "CreateStreamProcessor",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
+      "Name": "CreateOutboundIntegration",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -148,12 +136,15 @@
       },
       "Resources": [
         {
-          "Name": "collection"
+          "Name": "cloud-autonomous-vm-cluster"
+        },
+        {
+          "Name": "cloud-vm-cluster"
         }
       ]
     },
     {
-      "Name": "CreateUser",
+      "Name": "DeleteCloudAutonomousVmCluster",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -164,12 +155,12 @@
       },
       "Resources": [
         {
-          "Name": "collection"
+          "Name": "cloud-autonomous-vm-cluster"
         }
       ]
     },
     {
-      "Name": "DeleteCollection",
+      "Name": "DeleteCloudExadataInfrastructure",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -180,12 +171,12 @@
       },
       "Resources": [
         {
-          "Name": "collection"
+          "Name": "cloud-exadata-infrastructure"
         }
       ]
     },
     {
-      "Name": "DeleteDataset",
+      "Name": "DeleteCloudVmCluster",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -196,12 +187,12 @@
       },
       "Resources": [
         {
-          "Name": "dataset"
+          "Name": "cloud-vm-cluster"
         }
       ]
     },
     {
-      "Name": "DeleteFaces",
+      "Name": "DeleteDbNode",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -212,12 +203,12 @@
       },
       "Resources": [
         {
-          "Name": "collection"
+          "Name": "db-node"
         }
       ]
     },
     {
-      "Name": "DeleteProject",
+      "Name": "DeleteOdbNetwork",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -228,12 +219,12 @@
       },
       "Resources": [
         {
-          "Name": "project"
+          "Name": "odb-network"
         }
       ]
     },
     {
-      "Name": "DeleteProjectPolicy",
+      "Name": "DeleteOdbPeeringConnection",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -244,12 +235,12 @@
       },
       "Resources": [
         {
-          "Name": "project"
+          "Name": "odb-peering-connection"
         }
       ]
     },
     {
-      "Name": "DeleteProjectVersion",
+      "Name": "DeleteResourcePolicy",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -260,12 +251,157 @@
       },
       "Resources": [
         {
-          "Name": "projectversion"
+          "Name": "cloud-exadata-infrastructure"
+        },
+        {
+          "Name": "odb-network"
         }
       ]
     },
     {
-      "Name": "DeleteStreamProcessor",
+      "Name": "GetCloudAutonomousVmCluster",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cloud-autonomous-vm-cluster"
+        }
+      ]
+    },
+    {
+      "Name": "GetCloudExadataInfrastructure",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cloud-exadata-infrastructure"
+        }
+      ]
+    },
+    {
+      "Name": "GetCloudExadataInfrastructureUnallocatedResources",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cloud-exadata-infrastructure"
+        }
+      ]
+    },
+    {
+      "Name": "GetCloudVmCluster",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cloud-vm-cluster"
+        }
+      ]
+    },
+    {
+      "Name": "GetDbNode",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cloud-vm-cluster"
+        },
+        {
+          "Name": "db-node"
+        }
+      ]
+    },
+    {
+      "Name": "GetDbServer",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cloud-exadata-infrastructure"
+        }
+      ]
+    },
+    {
+      "Name": "GetOciOnboardingStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "GetOdbNetwork",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "odb-network"
+        }
+      ]
+    },
+    {
+      "Name": "GetOdbPeeringConnection",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "odb-peering-connection"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicy",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -276,12 +412,15 @@
       },
       "Resources": [
         {
-          "Name": "streamprocessor"
+          "Name": "cloud-exadata-infrastructure"
+        },
+        {
+          "Name": "odb-network"
         }
       ]
     },
     {
-      "Name": "DeleteUser",
+      "Name": "InitializeService",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -289,15 +428,10 @@
           "IsTaggingOnly": false,
           "IsWrite": true
         }
-      },
-      "Resources": [
-        {
-          "Name": "collection"
-        }
-      ]
+      }
     },
     {
-      "Name": "DescribeCollection",
+      "Name": "ListAutonomousVirtualMachines",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -308,15 +442,15 @@
       },
       "Resources": [
         {
-          "Name": "collection"
+          "Name": "cloud-autonomous-vm-cluster"
         }
       ]
     },
     {
-      "Name": "DescribeDataset",
+      "Name": "ListCloudAutonomousVmClusters",
       "Annotations": {
         "Properties": {
-          "IsList": false,
+          "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -324,386 +458,12 @@
       },
       "Resources": [
         {
-          "Name": "dataset"
+          "Name": "cloud-exadata-infrastructure"
         }
       ]
     },
     {
-      "Name": "DescribeProjectVersions",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "project"
-        }
-      ]
-    },
-    {
-      "Name": "DescribeProjects",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "DescribeStreamProcessor",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "streamprocessor"
-        }
-      ]
-    },
-    {
-      "Name": "DetectCustomLabels",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "projectversion"
-        }
-      ]
-    },
-    {
-      "Name": "DetectFaces",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "DetectLabels",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "DetectModerationLabels",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "projectversion"
-        }
-      ]
-    },
-    {
-      "Name": "DetectProtectiveEquipment",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "DetectText",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "DisassociateFaces",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "collection"
-        }
-      ]
-    },
-    {
-      "Name": "DistributeDatasetEntries",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "dataset"
-        }
-      ]
-    },
-    {
-      "Name": "GetCelebrityInfo",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "GetCelebrityRecognition",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "GetContentModeration",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "GetFaceDetection",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "GetFaceLivenessSessionResults",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "GetFaceSearch",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "GetLabelDetection",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "GetMediaAnalysisJob",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "GetPersonTracking",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "GetSegmentDetection",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "GetTextDetection",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "IndexFaces",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "collection"
-        }
-      ]
-    },
-    {
-      "Name": "ListCollections",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "ListDatasetEntries",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "dataset"
-        }
-      ]
-    },
-    {
-      "Name": "ListDatasetLabels",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "dataset"
-        }
-      ]
-    },
-    {
-      "Name": "ListFaces",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "collection"
-        }
-      ]
-    },
-    {
-      "Name": "ListMediaAnalysisJobs",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "ListProjectPolicies",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "project"
-        }
-      ]
-    },
-    {
-      "Name": "ListStreamProcessors",
+      "Name": "ListCloudExadataInfrastructures",
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -714,7 +474,118 @@
       }
     },
     {
+      "Name": "ListCloudVmClusters",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cloud-exadata-infrastructure"
+        }
+      ]
+    },
+    {
+      "Name": "ListDbNodes",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cloud-vm-cluster"
+        }
+      ]
+    },
+    {
+      "Name": "ListDbServers",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cloud-exadata-infrastructure"
+        }
+      ]
+    },
+    {
+      "Name": "ListDbSystemShapes",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListGiVersions",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListOdbNetworks",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListOdbPeeringConnections",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "odb-network"
+        }
+      ]
+    },
+    {
+      "Name": "ListSystemVersions",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
       "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -725,24 +596,46 @@
       },
       "Resources": [
         {
-          "Name": "collection"
+          "Name": "cloud-autonomous-vm-cluster"
         },
         {
-          "Name": "dataset"
+          "Name": "cloud-exadata-infrastructure"
         },
         {
-          "Name": "project"
+          "Name": "cloud-vm-cluster"
         },
         {
-          "Name": "projectversion"
+          "Name": "db-node"
         },
         {
-          "Name": "streamprocessor"
+          "Name": "odb-network"
+        },
+        {
+          "Name": "odb-peering-connection"
         }
       ]
     },
     {
-      "Name": "ListUsers",
+      "Name": "PutResourcePolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cloud-exadata-infrastructure"
+        },
+        {
+          "Name": "odb-network"
+        }
+      ]
+    },
+    {
+      "Name": "RebootDbNode",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -753,39 +646,15 @@
       },
       "Resources": [
         {
-          "Name": "collection"
-        }
-      ]
-    },
-    {
-      "Name": "PutProjectPolicy",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
+          "Name": "cloud-vm-cluster"
+        },
         {
-          "Name": "project"
+          "Name": "db-node"
         }
       ]
     },
     {
-      "Name": "RecognizeCelebrities",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      }
-    },
-    {
-      "Name": "SearchFaces",
+      "Name": "StartDbNode",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -796,12 +665,15 @@
       },
       "Resources": [
         {
-          "Name": "collection"
+          "Name": "cloud-vm-cluster"
+        },
+        {
+          "Name": "db-node"
         }
       ]
     },
     {
-      "Name": "SearchFacesByImage",
+      "Name": "StopDbNode",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -812,223 +684,7 @@
       },
       "Resources": [
         {
-          "Name": "collection"
-        }
-      ]
-    },
-    {
-      "Name": "SearchUsers",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "collection"
-        }
-      ]
-    },
-    {
-      "Name": "SearchUsersByImage",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "collection"
-        }
-      ]
-    },
-    {
-      "Name": "StartCelebrityRecognition",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      }
-    },
-    {
-      "Name": "StartContentModeration",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      }
-    },
-    {
-      "Name": "StartFaceDetection",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      }
-    },
-    {
-      "Name": "StartFaceLivenessSession",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      }
-    },
-    {
-      "Name": "StartFaceSearch",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "collection"
-        }
-      ]
-    },
-    {
-      "Name": "StartLabelDetection",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      }
-    },
-    {
-      "Name": "StartMediaAnalysisJob",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "projectversion"
-        }
-      ]
-    },
-    {
-      "Name": "StartPersonTracking",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      }
-    },
-    {
-      "Name": "StartProjectVersion",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "projectversion"
-        }
-      ]
-    },
-    {
-      "Name": "StartSegmentDetection",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      }
-    },
-    {
-      "Name": "StartStreamProcessor",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "streamprocessor"
-        }
-      ]
-    },
-    {
-      "Name": "StartTextDetection",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      }
-    },
-    {
-      "Name": "StopProjectVersion",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "projectversion"
-        }
-      ]
-    },
-    {
-      "Name": "StopStreamProcessor",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "streamprocessor"
+          "Name": "cloud-vm-cluster"
         }
       ]
     },
@@ -1036,6 +692,7 @@
       "Name": "TagResource",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -1048,25 +705,29 @@
       },
       "Resources": [
         {
-          "Name": "collection"
+          "Name": "cloud-autonomous-vm-cluster"
         },
         {
-          "Name": "dataset"
+          "Name": "cloud-exadata-infrastructure"
         },
         {
-          "Name": "project"
+          "Name": "cloud-vm-cluster"
         },
         {
-          "Name": "projectversion"
+          "Name": "db-node"
         },
         {
-          "Name": "streamprocessor"
+          "Name": "odb-network"
+        },
+        {
+          "Name": "odb-peering-connection"
         }
       ]
     },
     {
       "Name": "UntagResource",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -1079,24 +740,27 @@
       },
       "Resources": [
         {
-          "Name": "collection"
+          "Name": "cloud-autonomous-vm-cluster"
         },
         {
-          "Name": "dataset"
+          "Name": "cloud-exadata-infrastructure"
         },
         {
-          "Name": "project"
+          "Name": "cloud-vm-cluster"
         },
         {
-          "Name": "projectversion"
+          "Name": "db-node"
         },
         {
-          "Name": "streamprocessor"
+          "Name": "odb-network"
+        },
+        {
+          "Name": "odb-peering-connection"
         }
       ]
     },
     {
-      "Name": "UpdateDatasetEntries",
+      "Name": "UpdateCloudExadataInfrastructure",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1107,12 +771,12 @@
       },
       "Resources": [
         {
-          "Name": "dataset"
+          "Name": "cloud-exadata-infrastructure"
         }
       ]
     },
     {
-      "Name": "UpdateStreamProcessor",
+      "Name": "UpdateOdbNetwork",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1123,7 +787,7 @@
       },
       "Resources": [
         {
-          "Name": "streamprocessor"
+          "Name": "odb-network"
         }
       ]
     }
@@ -1150,45 +814,54 @@
   ],
   "Resources": [
     {
-      "Name": "collection",
+      "Name": "cloud-autonomous-vm-cluster",
       "ARNFormats": [
-        "arn:${Partition}:rekognition:${Region}:${Account}:collection/${CollectionId}"
+        "arn:${Partition}:odb:${Region}:${Account}:cloud-autonomous-vm-cluster/${CloudAutonomousVmClusterId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ]
     },
     {
-      "Name": "dataset",
+      "Name": "cloud-exadata-infrastructure",
       "ARNFormats": [
-        "arn:${Partition}:rekognition:${Region}:${Account}:project/${ProjectName}/dataset/${DatasetType}/${CreationTimestamp}"
+        "arn:${Partition}:odb:${Region}:${Account}:cloud-exadata-infrastructure/${CloudExadataInfrastructureId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ]
     },
     {
-      "Name": "project",
+      "Name": "cloud-vm-cluster",
       "ARNFormats": [
-        "arn:${Partition}:rekognition:${Region}:${Account}:project/${ProjectName}/${CreationTimestamp}"
+        "arn:${Partition}:odb:${Region}:${Account}:cloud-vm-cluster/${CloudVmClusterId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ]
     },
     {
-      "Name": "projectversion",
+      "Name": "db-node",
       "ARNFormats": [
-        "arn:${Partition}:rekognition:${Region}:${Account}:project/${ProjectName}/version/${VersionName}/${CreationTimestamp}"
+        "arn:${Partition}:odb:${Region}:${Account}:db-node/${DbNodeId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ]
     },
     {
-      "Name": "streamprocessor",
+      "Name": "odb-network",
       "ARNFormats": [
-        "arn:${Partition}:rekognition:${Region}:${Account}:streamprocessor/${StreamprocessorId}"
+        "arn:${Partition}:odb:${Region}:${Account}:odb-network/${OdbNetworkId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "odb-peering-connection",
+      "ARNFormats": [
+        "arn:${Partition}:odb:${Region}:${Account}:odb-peering-connection/${OdbPeeringConnectionId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

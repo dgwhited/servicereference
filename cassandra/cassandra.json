@@ -132,6 +132,65 @@
       ]
     },
     {
+      "Name": "GetRecords",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "GetShardIterator",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "GetStream",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ]
+    },
+    {
+      "Name": "ListStreams",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
       "Name": "Modify",
       "Annotations": {
         "Properties": {
@@ -269,6 +328,9 @@
           "Name": "keyspace"
         },
         {
+          "Name": "stream"
+        },
+        {
           "Name": "table"
         }
       ]
@@ -311,6 +373,9 @@
       "Resources": [
         {
           "Name": "keyspace"
+        },
+        {
+          "Name": "stream"
         },
         {
           "Name": "table"
@@ -359,6 +424,15 @@
       "Name": "keyspace",
       "ARNFormats": [
         "arn:${Partition}:cassandra:${Region}:${Account}:/keyspace/${KeyspaceName}/"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "stream",
+      "ARNFormats": [
+        "arn:${Partition}:cassandra:${Region}:${Account}:/keyspace/${KeyspaceName}/table/${TableName}/stream/${StreamLabel}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
