@@ -37,6 +37,31 @@
       ]
     },
     {
+      "Name": "CreateRoutingRule",
+      "ActionConditionKeys": [
+        "apigateway:Request/ConditionBasePaths",
+        "apigateway:Request/Priority",
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RoutingRule",
+          "ConditionKeys": [
+            "apigateway:Request/ConditionBasePaths",
+            "apigateway:Request/Priority"
+          ]
+        }
+      ]
+    },
+    {
       "Name": "DELETE",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -155,6 +180,31 @@
         },
         {
           "Name": "VpcLink"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRoutingRule",
+      "ActionConditionKeys": [
+        "apigateway:Resource/ConditionBasePaths",
+        "apigateway:Resource/Priority",
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RoutingRule",
+          "ConditionKeys": [
+            "apigateway:Resource/ConditionBasePaths",
+            "apigateway:Resource/Priority"
+          ]
         }
       ]
     },
@@ -354,6 +404,44 @@
         },
         {
           "Name": "VpcLinks"
+        }
+      ]
+    },
+    {
+      "Name": "GetRoutingRule",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RoutingRule"
+        }
+      ]
+    },
+    {
+      "Name": "ListRoutingRule",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RoutingRule"
         }
       ]
     },
@@ -710,6 +798,35 @@
           "Name": "RestApis"
         }
       ]
+    },
+    {
+      "Name": "UpdateRoutingRule",
+      "ActionConditionKeys": [
+        "apigateway:Request/ConditionBasePaths",
+        "apigateway:Request/Priority",
+        "apigateway:Resource/ConditionBasePaths",
+        "apigateway:Resource/Priority",
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RoutingRule",
+          "ConditionKeys": [
+            "apigateway:Request/ConditionBasePaths",
+            "apigateway:Request/Priority",
+            "apigateway:Resource/ConditionBasePaths",
+            "apigateway:Resource/Priority"
+          ]
+        }
+      ]
     }
   ],
   "ConditionKeys": [
@@ -762,6 +879,12 @@
       ]
     },
     {
+      "Name": "apigateway:Request/ConditionBasePaths",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
       "Name": "apigateway:Request/DisableExecuteApiEndpoint",
       "Types": [
         "Bool"
@@ -792,9 +915,21 @@
       ]
     },
     {
+      "Name": "apigateway:Request/Priority",
+      "Types": [
+        "Numeric"
+      ]
+    },
+    {
       "Name": "apigateway:Request/RouteAuthorizationType",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "apigateway:Request/RoutingMode",
+      "Types": [
+        "String"
       ]
     },
     {
@@ -852,6 +987,12 @@
       ]
     },
     {
+      "Name": "apigateway:Resource/ConditionBasePaths",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
       "Name": "apigateway:Resource/DisableExecuteApiEndpoint",
       "Types": [
         "Bool"
@@ -876,9 +1017,21 @@
       ]
     },
     {
+      "Name": "apigateway:Resource/Priority",
+      "Types": [
+        "Numeric"
+      ]
+    },
+    {
       "Name": "apigateway:Resource/RouteAuthorizationType",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "apigateway:Resource/RoutingMode",
+      "Types": [
+        "String"
       ]
     },
     {
@@ -1150,6 +1303,7 @@
         "apigateway:Resource/EndpointType",
         "apigateway:Resource/MtlsTrustStoreUri",
         "apigateway:Resource/MtlsTrustStoreVersion",
+        "apigateway:Resource/RoutingMode",
         "apigateway:Resource/SecurityPolicy",
         "aws:ResourceTag/${TagKey}"
       ]
@@ -1181,6 +1335,7 @@
         "apigateway:Request/MtlsTrustStoreUri",
         "apigateway:Request/MtlsTrustStoreVersion",
         "apigateway:Request/SecurityPolicy",
+        "apigateway:Resource/RoutingMode",
         "aws:ResourceTag/${TagKey}"
       ]
     },
@@ -1326,6 +1481,7 @@
       "ConditionKeys": [
         "apigateway:Request/EndpointType",
         "apigateway:Resource/EndpointType",
+        "apigateway:Resource/RoutingMode",
         "aws:ResourceTag/${TagKey}"
       ]
     },
@@ -1461,6 +1617,17 @@
       "ConditionKeys": [
         "apigateway:Request/ApiKeyRequired",
         "apigateway:Request/RouteAuthorizationType",
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "RoutingRule",
+      "ARNFormats": [
+        "arn:${Partition}:apigateway:${Region}:${Account}:/domainnames/${DomainName}/routingrules/${RoutingRuleId}"
+      ],
+      "ConditionKeys": [
+        "apigateway:Resource/ConditionBasePaths",
+        "apigateway:Resource/Priority",
         "aws:ResourceTag/${TagKey}"
       ]
     },

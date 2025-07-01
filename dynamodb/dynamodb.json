@@ -102,6 +102,22 @@
       ]
     },
     {
+      "Name": "CreateGlobalTableWitness",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "table"
+        }
+      ]
+    },
+    {
       "Name": "CreateTable",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -150,6 +166,22 @@
       "Resources": [
         {
           "Name": "backup"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGlobalTableWitness",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "table"
         }
       ]
     },
