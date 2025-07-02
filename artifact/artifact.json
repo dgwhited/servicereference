@@ -34,41 +34,6 @@
       ]
     },
     {
-      "Name": "DownloadAgreement",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "agreement"
-        },
-        {
-          "Name": "customer-agreement"
-        }
-      ]
-    },
-    {
-      "Name": "Get",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "report-package"
-        }
-      ]
-    },
-    {
       "Name": "GetAccountSettings",
       "Annotations": {
         "Properties": {
@@ -267,12 +232,10 @@
       "Name": "report",
       "ARNFormats": [
         "arn:${Partition}:artifact:${Region}::report/${ReportId}:${Version}"
-      ]
-    },
-    {
-      "Name": "report-package",
-      "ARNFormats": [
-        "arn:${Partition}:artifact:::report-package/*"
+      ],
+      "ConditionKeys": [
+        "artifact:ReportCategory",
+        "artifact:ReportSeries"
       ]
     }
   ],
