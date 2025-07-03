@@ -1906,6 +1906,9 @@
     },
     {
       "Name": "PutInventory",
+      "ActionConditionKeys": [
+        "ssm:InventoryTypeName"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -2730,6 +2733,12 @@
       "Name": "ssm:DocumentType",
       "Types": [
         "String"
+      ]
+    },
+    {
+      "Name": "ssm:InventoryTypeName",
+      "Types": [
+        "ArrayOfString"
       ]
     },
     {

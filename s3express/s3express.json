@@ -31,6 +31,8 @@
     {
       "Name": "CreateBucket",
       "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
         "s3express:LocationName",
         "s3express:ResourceAccount",
         "s3express:TlsVersion",
@@ -230,7 +232,12 @@
           "IsTaggingOnly": false,
           "IsWrite": false
         }
-      }
+      },
+      "Resources": [
+        {
+          "Name": "accesspoint"
+        }
+      ]
     },
     {
       "Name": "GetAccessPointPolicy",
@@ -390,6 +397,29 @@
       }
     },
     {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ]
+    },
+    {
       "Name": "PutAccessPointPolicy",
       "ActionConditionKeys": [
         "s3express:AccessPointNetworkOrigin",
@@ -509,9 +539,76 @@
           "Name": "bucket"
         }
       ]
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys",
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ]
     }
   ],
   "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
     {
       "Name": "s3express:AccessPointNetworkOrigin",
       "Types": [
@@ -520,6 +617,12 @@
     },
     {
       "Name": "s3express:AllAccessRestrictedToLocalZoneGroup",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "s3express:BucketTag/${TagKey}",
       "Types": [
         "String"
       ]
@@ -614,6 +717,10 @@
       "Name": "bucket",
       "ARNFormats": [
         "arn:${Partition}:s3express:${Region}:${Account}:bucket/${BucketName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3express:BucketTag/${TagKey}"
       ]
     }
   ],

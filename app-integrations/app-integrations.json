@@ -82,6 +82,22 @@
       ]
     },
     {
+      "Name": "CreateDataIntegrationSchedule",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-integration"
+        }
+      ]
+    },
+    {
       "Name": "CreateEventIntegration",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -265,6 +281,38 @@
       ]
     },
     {
+      "Name": "GetDataIntegrationExecution",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-integration"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataIntegrationSchedule",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-integration"
+        }
+      ]
+    },
+    {
       "Name": "GetEventIntegration",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -315,6 +363,38 @@
           "IsWrite": false
         }
       }
+    },
+    {
+      "Name": "ListDataIntegrationExecutions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-integration"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataIntegrationSchedules",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-integration"
+        }
+      ]
     },
     {
       "Name": "ListDataIntegrations",
@@ -377,6 +457,22 @@
         },
         {
           "Name": "event-integration-association"
+        }
+      ]
+    },
+    {
+      "Name": "StartDataIntegrationExecution",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-integration"
         }
       ]
     },
@@ -505,6 +601,22 @@
       "Resources": [
         {
           "Name": "data-integration-association"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataIntegrationSchedule",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-integration"
         }
       ]
     },

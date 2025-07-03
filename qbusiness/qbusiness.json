@@ -190,6 +190,26 @@
       }
     },
     {
+      "Name": "CreateChatResponseConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
       "Name": "CreateDataAccessor",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -440,6 +460,25 @@
       "Resources": [
         {
           "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteChatResponseConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "chat-response-configuration"
         }
       ]
     },
@@ -695,6 +734,25 @@
       ]
     },
     {
+      "Name": "GetChatResponseConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "chat-response-configuration"
+        }
+      ]
+    },
+    {
       "Name": "GetDataAccessor",
       "Annotations": {
         "Properties": {
@@ -926,6 +984,22 @@
     },
     {
       "Name": "ListAttachments",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "ListChatResponseConfigurations",
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -1203,6 +1277,9 @@
           "Name": "application"
         },
         {
+          "Name": "chat-response-configuration"
+        },
+        {
           "Name": "data-accessor"
         },
         {
@@ -1412,6 +1489,9 @@
           "Name": "application"
         },
         {
+          "Name": "chat-response-configuration"
+        },
+        {
           "Name": "data-accessor"
         },
         {
@@ -1450,6 +1530,9 @@
       "Resources": [
         {
           "Name": "application"
+        },
+        {
+          "Name": "chat-response-configuration"
         },
         {
           "Name": "data-accessor"
@@ -1503,6 +1586,25 @@
       "Resources": [
         {
           "Name": "application"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateChatResponseConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "chat-response-configuration"
         }
       ]
     },
@@ -1715,6 +1817,15 @@
       "Name": "application",
       "ARNFormats": [
         "arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "chat-response-configuration",
+      "ARNFormats": [
+        "arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId}/chat-response-configuration/${ChatResponseConfigurationId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
