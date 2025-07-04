@@ -160,6 +160,25 @@
       ]
     },
     {
+      "Name": "DescribeAttackContributors",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "attack"
+        },
+        {
+          "Name": "protection-group"
+        }
+      ]
+    },
+    {
       "Name": "DescribeAttackStatistics",
       "Annotations": {
         "Properties": {
@@ -327,6 +346,17 @@
       }
     },
     {
+      "Name": "GetGlobalThreatData",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
       "Name": "GetSubscriptionState",
       "Annotations": {
         "Properties": {
@@ -347,6 +377,22 @@
           "IsWrite": false
         }
       }
+    },
+    {
+      "Name": "ListMitigations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "attack"
+        }
+      ]
     },
     {
       "Name": "ListProtectionGroups",
