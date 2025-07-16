@@ -1,0 +1,1272 @@
+{
+  "Name": "bedrock-agentcore",
+  "Actions": [
+    {
+      "Name": "AllowVendedLogDeliveryForResource",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "memory"
+        }
+      ]
+    },
+    {
+      "Name": "ConnectBrowserAutomationStream",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ConnectBrowserLiveViewStream",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "CreateAgentRuntime",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "CreateAgentRuntimeEndpoint",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "CreateApiKeyCredentialProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "CreateBrowser",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "CreateCodeInterpreter",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "CreateEvent",
+      "ActionConditionKeys": [
+        "bedrock-agentcore:actorId",
+        "bedrock-agentcore:sessionId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "memory"
+        }
+      ]
+    },
+    {
+      "Name": "CreateGateway",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "CreateGatewayTarget",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMemory",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "CreateOauth2CredentialProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "CreateWorkloadIdentity",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "DeleteAgentRuntime",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "runtime"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAgentRuntimeEndpoint",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "runtime"
+        },
+        {
+          "Name": "runtime-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApiKeyCredentialProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "DeleteBrowser",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "browser-custom"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCodeInterpreter",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "code-interpreter-custom"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEvent",
+      "ActionConditionKeys": [
+        "bedrock-agentcore:actorId",
+        "bedrock-agentcore:sessionId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "memory"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGateway",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGatewayTarget",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMemory",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "memory"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMemoryRecord",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "memory"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteOauth2CredentialProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "DeleteWorkloadIdentity",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "GetAgentRuntime",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "runtime"
+        }
+      ]
+    },
+    {
+      "Name": "GetAgentRuntimeEndpoint",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "runtime"
+        },
+        {
+          "Name": "runtime-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "GetApiKeyCredentialProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "GetBrowser",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "browser-custom"
+        }
+      ]
+    },
+    {
+      "Name": "GetBrowserSession",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "browser"
+        },
+        {
+          "Name": "browser-custom"
+        }
+      ]
+    },
+    {
+      "Name": "GetCodeInterpreter",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "code-interpreter-custom"
+        }
+      ]
+    },
+    {
+      "Name": "GetCodeInterpreterSession",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "code-interpreter"
+        },
+        {
+          "Name": "code-interpreter-custom"
+        }
+      ]
+    },
+    {
+      "Name": "GetEvent",
+      "ActionConditionKeys": [
+        "bedrock-agentcore:actorId",
+        "bedrock-agentcore:sessionId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "memory"
+        }
+      ]
+    },
+    {
+      "Name": "GetGateway",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "GetGatewayTarget",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "GetMemory",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "memory"
+        }
+      ]
+    },
+    {
+      "Name": "GetMemoryRecord",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "memory"
+        }
+      ]
+    },
+    {
+      "Name": "GetOauth2CredentialProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "GetResourceApiKey",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "GetResourceOauth2Token",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "GetTokenVault",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "GetWorkloadAccessToken",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "GetWorkloadAccessTokenForJWT",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "GetWorkloadAccessTokenForUserId",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "GetWorkloadIdentity",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "InvokeAgentRuntimeEndpoint",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "runtime"
+        },
+        {
+          "Name": "runtime-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "InvokeCodeInterpreter",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "code-interpreter"
+        },
+        {
+          "Name": "code-interpreter-custom"
+        }
+      ]
+    },
+    {
+      "Name": "ListActors",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "memory"
+        }
+      ]
+    },
+    {
+      "Name": "ListAgentRuntimeEndpoints",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListAgentRuntimeVersions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListAgentRuntimes",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListApiKeyCredentialProviders",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListBrowserSessions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListBrowsers",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListCodeInterpreterSessions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "code-interpreter"
+        },
+        {
+          "Name": "code-interpreter-custom"
+        }
+      ]
+    },
+    {
+      "Name": "ListCodeInterpreters",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListEvents",
+      "ActionConditionKeys": [
+        "bedrock-agentcore:actorId",
+        "bedrock-agentcore:sessionId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "memory"
+        }
+      ]
+    },
+    {
+      "Name": "ListGatewayTargets",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "ListGateways",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListMemories",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListMemoryRecords",
+      "ActionConditionKeys": [
+        "bedrock-agentcore:namespace",
+        "bedrock-agentcore:strategyId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "memory"
+        }
+      ]
+    },
+    {
+      "Name": "ListOauth2CredentialProviders",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "ListSessions",
+      "ActionConditionKeys": [
+        "bedrock-agentcore:actorId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "memory"
+        }
+      ]
+    },
+    {
+      "Name": "ListWorkloadIdentities",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "RetrieveMemoryRecords",
+      "ActionConditionKeys": [
+        "bedrock-agentcore:namespace",
+        "bedrock-agentcore:strategyId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "memory"
+        }
+      ]
+    },
+    {
+      "Name": "SetTokenVaultCMK",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "StartBrowserSession",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "browser"
+        },
+        {
+          "Name": "browser-custom"
+        }
+      ]
+    },
+    {
+      "Name": "StartCodeInterpreterSession",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "code-interpreter"
+        },
+        {
+          "Name": "code-interpreter-custom"
+        }
+      ]
+    },
+    {
+      "Name": "StopBrowserSession",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "browser"
+        },
+        {
+          "Name": "browser-custom"
+        }
+      ]
+    },
+    {
+      "Name": "StopCodeInterpreterSession",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "code-interpreter"
+        },
+        {
+          "Name": "code-interpreter-custom"
+        }
+      ]
+    },
+    {
+      "Name": "SynchronizeGatewayTargets",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgentRuntime",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "runtime"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgentRuntimeEndpoint",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "runtime"
+        },
+        {
+          "Name": "runtime-endpoint"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateApiKeyCredentialProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "UpdateBrowserStream",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "browser"
+        },
+        {
+          "Name": "browser-custom"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGateway",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGatewayTarget",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMemory",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "memory"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateOauth2CredentialProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    },
+    {
+      "Name": "UpdateWorkloadIdentity",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      }
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "bedrock-agentcore:actorId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "bedrock-agentcore:namespace",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "bedrock-agentcore:sessionId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "bedrock-agentcore:strategyId",
+      "Types": [
+        "String"
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "apikeycredentialprovider",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:token-vault/${TokenVaultId}/apikeycredentialprovider/${Name}"
+      ]
+    },
+    {
+      "Name": "browser",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:aws:browser/${BrowserId}"
+      ]
+    },
+    {
+      "Name": "browser-custom",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:browser-custom/${BrowserId}"
+      ]
+    },
+    {
+      "Name": "code-interpreter",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:aws:code-interpreter/${CodeInterpreterId}"
+      ]
+    },
+    {
+      "Name": "code-interpreter-custom",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:code-interpreter-custom/${CodeInterpreterId}"
+      ]
+    },
+    {
+      "Name": "gateway",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:gateway/${GatewayId}"
+      ]
+    },
+    {
+      "Name": "memory",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:memory/${MemoryId}"
+      ]
+    },
+    {
+      "Name": "oauth2credentialprovider",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:token-vault/${TokenVaultId}/oauth2credentialprovider/${Name}"
+      ]
+    },
+    {
+      "Name": "runtime",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:runtime/${RuntimeId}"
+      ]
+    },
+    {
+      "Name": "runtime-endpoint",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:runtime/${RuntimeId}/runtime-endpoint/${Name}"
+      ]
+    },
+    {
+      "Name": "workload-identity",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:workload-identity-directory/${DirectoryId}/workload-identity/${WorkloadIdentityName}"
+      ]
+    }
+  ],
+  "Version": "v1.2"
+}
