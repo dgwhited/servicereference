@@ -4107,6 +4107,54 @@
       ]
     },
     {
+      "Name": "UpdateBucketMetadataInventoryTableConfiguration",
+      "ActionConditionKeys": [
+        "s3:ResourceAccount",
+        "s3:TlsVersion",
+        "s3:authType",
+        "s3:signatureAge",
+        "s3:signatureversion",
+        "s3:x-amz-content-sha256"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBucketMetadataJournalTableConfiguration",
+      "ActionConditionKeys": [
+        "s3:ResourceAccount",
+        "s3:TlsVersion",
+        "s3:authType",
+        "s3:signatureAge",
+        "s3:signatureversion",
+        "s3:x-amz-content-sha256"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ]
+    },
+    {
       "Name": "UpdateJobPriority",
       "ActionConditionKeys": [
         "s3:ExistingJobOperation",
