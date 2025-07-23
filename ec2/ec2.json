@@ -1363,6 +1363,7 @@
             "ec2:ParentSnapshot",
             "ec2:ResourceTag/${TagKey}",
             "ec2:VolumeID",
+            "ec2:VolumeInitializationRate",
             "ec2:VolumeIops",
             "ec2:VolumeSize",
             "ec2:VolumeThroughput",
@@ -3619,7 +3620,8 @@
           "ConditionKeys": [
             "aws:RequestTag/${TagKey}",
             "aws:TagKeys",
-            "ec2:VolumeID"
+            "ec2:VolumeID",
+            "ec2:VolumeInitializationRate"
           ]
         }
       ]
@@ -3885,6 +3887,7 @@
             "ec2:Encrypted",
             "ec2:ResourceTag/${TagKey}",
             "ec2:VolumeID",
+            "ec2:VolumeInitializationRate",
             "ec2:VolumeIops",
             "ec2:VolumeSize",
             "ec2:VolumeThroughput",
@@ -3945,6 +3948,7 @@
             "ec2:Encrypted",
             "ec2:ResourceTag/${TagKey}",
             "ec2:VolumeID",
+            "ec2:VolumeInitializationRate",
             "ec2:VolumeIops",
             "ec2:VolumeSize",
             "ec2:VolumeThroughput",
@@ -4078,6 +4082,15 @@
         }
       },
       "Resources": [
+        {
+          "Name": "capacity-block",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
         {
           "Name": "capacity-reservation",
           "ConditionKeys": [
@@ -4879,6 +4892,7 @@
             "ec2:ParentSnapshot",
             "ec2:ResourceTag/${TagKey}",
             "ec2:VolumeID",
+            "ec2:VolumeInitializationRate",
             "ec2:VolumeIops",
             "ec2:VolumeSize",
             "ec2:VolumeThroughput",
@@ -5688,6 +5702,7 @@
             "ec2:KmsKeyId",
             "ec2:ParentSnapshot",
             "ec2:VolumeID",
+            "ec2:VolumeInitializationRate",
             "ec2:VolumeIops",
             "ec2:VolumeSize",
             "ec2:VolumeThroughput",
@@ -7380,6 +7395,15 @@
       },
       "Resources": [
         {
+          "Name": "capacity-block",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
           "Name": "capacity-reservation",
           "ConditionKeys": [
             "aws:RequestTag/${TagKey}",
@@ -8677,6 +8701,7 @@
             "ec2:ParentSnapshot",
             "ec2:ResourceTag/${TagKey}",
             "ec2:VolumeID",
+            "ec2:VolumeInitializationRate",
             "ec2:VolumeIops",
             "ec2:VolumeSize",
             "ec2:VolumeThroughput",
@@ -9288,6 +9313,34 @@
     },
     {
       "Name": "DescribeCapacityBlockOfferings",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "DescribeCapacityBlockStatus",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      }
+    },
+    {
+      "Name": "DescribeCapacityBlocks",
       "ActionConditionKeys": [
         "ec2:Region"
       ],
@@ -11411,6 +11464,7 @@
             "ec2:ParentSnapshot",
             "ec2:ResourceTag/${TagKey}",
             "ec2:VolumeID",
+            "ec2:VolumeInitializationRate",
             "ec2:VolumeIops",
             "ec2:VolumeSize",
             "ec2:VolumeThroughput",
@@ -11919,6 +11973,7 @@
             "ec2:ParentSnapshot",
             "ec2:ResourceTag/${TagKey}",
             "ec2:VolumeID",
+            "ec2:VolumeInitializationRate",
             "ec2:VolumeIops",
             "ec2:VolumeSize",
             "ec2:VolumeThroughput",
@@ -15626,6 +15681,7 @@
             "ec2:ParentSnapshot",
             "ec2:ResourceTag/${TagKey}",
             "ec2:VolumeID",
+            "ec2:VolumeInitializationRate",
             "ec2:VolumeIops",
             "ec2:VolumeSize",
             "ec2:VolumeThroughput",
@@ -17072,6 +17128,7 @@
             "ec2:ParentSnapshot",
             "ec2:ResourceTag/${TagKey}",
             "ec2:VolumeID",
+            "ec2:VolumeInitializationRate",
             "ec2:VolumeIops",
             "ec2:VolumeSize",
             "ec2:VolumeThroughput",
@@ -17106,6 +17163,7 @@
             "ec2:ParentSnapshot",
             "ec2:ResourceTag/${TagKey}",
             "ec2:VolumeID",
+            "ec2:VolumeInitializationRate",
             "ec2:VolumeIops",
             "ec2:VolumeSize",
             "ec2:VolumeThroughput",
@@ -19406,6 +19464,7 @@
             "ec2:ManagedResourceOperator",
             "ec2:ParentSnapshot",
             "ec2:VolumeID",
+            "ec2:VolumeInitializationRate",
             "ec2:VolumeIops",
             "ec2:VolumeSize",
             "ec2:VolumeThroughput",
@@ -20747,6 +20806,12 @@
       ]
     },
     {
+      "Name": "ec2:VolumeInitializationRate",
+      "Types": [
+        "Numeric"
+      ]
+    },
+    {
       "Name": "ec2:VolumeIops",
       "Types": [
         "Numeric"
@@ -20868,6 +20933,21 @@
     }
   ],
   "Resources": [
+    {
+      "Name": "capacity-block",
+      "ARNFormats": [
+        "arn:${Partition}:ec2:${Region}:${Account}:capacity-block/${CapacityBlockId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ec2:Attribute",
+        "ec2:Attribute/${AttributeName}",
+        "ec2:Region",
+        "ec2:ResourceTag/${TagKey}"
+      ]
+    },
     {
       "Name": "capacity-reservation",
       "ARNFormats": [
@@ -22182,6 +22262,7 @@
         "ec2:Region",
         "ec2:ResourceTag/${TagKey}",
         "ec2:VolumeID",
+        "ec2:VolumeInitializationRate",
         "ec2:VolumeIops",
         "ec2:VolumeSize",
         "ec2:VolumeThroughput",
