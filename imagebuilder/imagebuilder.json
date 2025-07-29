@@ -43,6 +43,10 @@
     },
     {
       "Name": "CreateComponent",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -53,11 +57,7 @@
       },
       "Resources": [
         {
-          "Name": "component",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "component"
         }
       ],
       "SupportedBy": {
@@ -67,6 +67,10 @@
     },
     {
       "Name": "CreateContainerRecipe",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -77,11 +81,7 @@
       },
       "Resources": [
         {
-          "Name": "containerRecipe",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "containerRecipe"
         }
       ],
       "SupportedBy": {
@@ -91,6 +91,10 @@
     },
     {
       "Name": "CreateDistributionConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -101,11 +105,7 @@
       },
       "Resources": [
         {
-          "Name": "distributionConfiguration",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "distributionConfiguration"
         }
       ],
       "SupportedBy": {
@@ -115,6 +115,10 @@
     },
     {
       "Name": "CreateImage",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -125,11 +129,7 @@
       },
       "Resources": [
         {
-          "Name": "image",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "image"
         }
       ],
       "SupportedBy": {
@@ -139,6 +139,10 @@
     },
     {
       "Name": "CreateImagePipeline",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -149,11 +153,7 @@
       },
       "Resources": [
         {
-          "Name": "imagePipeline",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "imagePipeline"
         }
       ],
       "SupportedBy": {
@@ -163,6 +163,10 @@
     },
     {
       "Name": "CreateImageRecipe",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -173,11 +177,7 @@
       },
       "Resources": [
         {
-          "Name": "imageRecipe",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "imageRecipe"
         }
       ],
       "SupportedBy": {
@@ -187,6 +187,14 @@
     },
     {
       "Name": "CreateInfrastructureConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "imagebuilder:CreatedResourceTag/${TagKey}",
+        "imagebuilder:CreatedResourceTagKeys",
+        "imagebuilder:Ec2MetadataHttpTokens",
+        "imagebuilder:StatusTopicArn"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -197,15 +205,7 @@
       },
       "Resources": [
         {
-          "Name": "infrastructureConfiguration",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:TagKeys",
-            "imagebuilder:CreatedResourceTag/<key>",
-            "imagebuilder:CreatedResourceTagKeys",
-            "imagebuilder:Ec2MetadataHttpTokens",
-            "imagebuilder:StatusTopicArn"
-          ]
+          "Name": "infrastructureConfiguration"
         }
       ],
       "SupportedBy": {
@@ -215,6 +215,11 @@
     },
     {
       "Name": "CreateLifecyclePolicy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "imagebuilder:LifecyclePolicyResourceType"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -225,12 +230,7 @@
       },
       "Resources": [
         {
-          "Name": "lifecyclePolicy",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:TagKeys",
-            "imagebuilder:LifecyclePolicyResourceType"
-          ]
+          "Name": "lifecyclePolicy"
         }
       ],
       "SupportedBy": {
@@ -240,6 +240,10 @@
     },
     {
       "Name": "CreateWorkflow",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -250,11 +254,7 @@
       },
       "Resources": [
         {
-          "Name": "workflow",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "workflow"
         }
       ],
       "SupportedBy": {
@@ -554,10 +554,7 @@
       },
       "Resources": [
         {
-          "Name": "image",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}"
-          ]
+          "Name": "image"
         }
       ],
       "SupportedBy": {
@@ -787,6 +784,10 @@
     },
     {
       "Name": "ImportComponent",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -797,11 +798,7 @@
       },
       "Resources": [
         {
-          "Name": "component",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "component"
         }
       ],
       "SupportedBy": {
@@ -811,6 +808,10 @@
     },
     {
       "Name": "ImportDiskImage",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -821,11 +822,7 @@
       },
       "Resources": [
         {
-          "Name": "imageVersion",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "imageVersion"
         }
       ],
       "SupportedBy": {
@@ -835,6 +832,10 @@
     },
     {
       "Name": "ImportVmImage",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -845,11 +846,7 @@
       },
       "Resources": [
         {
-          "Name": "imageVersion",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "imageVersion"
         }
       ],
       "SupportedBy": {
@@ -869,7 +866,7 @@
       },
       "Resources": [
         {
-          "Name": "componentVersion"
+          "Name": "allComponentBuildVersions"
         }
       ],
       "SupportedBy": {
@@ -934,7 +931,7 @@
       },
       "Resources": [
         {
-          "Name": "imageVersion"
+          "Name": "allImageBuildVersions"
         }
       ],
       "SupportedBy": {
@@ -954,10 +951,7 @@
       },
       "Resources": [
         {
-          "Name": "image",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}"
-          ]
+          "Name": "image"
         }
       ],
       "SupportedBy": {
@@ -1161,58 +1155,31 @@
       },
       "Resources": [
         {
-          "Name": "component",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}"
-          ]
+          "Name": "component"
         },
         {
-          "Name": "containerRecipe",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}"
-          ]
+          "Name": "containerRecipe"
         },
         {
-          "Name": "distributionConfiguration",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}"
-          ]
+          "Name": "distributionConfiguration"
         },
         {
-          "Name": "image",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}"
-          ]
+          "Name": "image"
         },
         {
-          "Name": "imagePipeline",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}"
-          ]
+          "Name": "imagePipeline"
         },
         {
-          "Name": "imageRecipe",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}"
-          ]
+          "Name": "imageRecipe"
         },
         {
-          "Name": "infrastructureConfiguration",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}"
-          ]
+          "Name": "infrastructureConfiguration"
         },
         {
-          "Name": "lifecyclePolicy",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}"
-          ]
+          "Name": "lifecyclePolicy"
         },
         {
-          "Name": "workflow",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}"
-          ]
+          "Name": "workflow"
         }
       ],
       "SupportedBy": {
@@ -1247,7 +1214,7 @@
       },
       "Resources": [
         {
-          "Name": "workflowVersion"
+          "Name": "allWorkflowBuildVersions"
         }
       ],
       "SupportedBy": {
@@ -1455,6 +1422,10 @@
     },
     {
       "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1465,76 +1436,31 @@
       },
       "Resources": [
         {
-          "Name": "component",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "component"
         },
         {
-          "Name": "containerRecipe",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "containerRecipe"
         },
         {
-          "Name": "distributionConfiguration",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "distributionConfiguration"
         },
         {
-          "Name": "image",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "image"
         },
         {
-          "Name": "imagePipeline",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "imagePipeline"
         },
         {
-          "Name": "imageRecipe",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "imageRecipe"
         },
         {
-          "Name": "infrastructureConfiguration",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "infrastructureConfiguration"
         },
         {
-          "Name": "lifecyclePolicy",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "lifecyclePolicy"
         },
         {
-          "Name": "workflow",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "workflow"
         }
       ],
       "SupportedBy": {
@@ -1544,6 +1470,9 @@
     },
     {
       "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1554,67 +1483,31 @@
       },
       "Resources": [
         {
-          "Name": "component",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "component"
         },
         {
-          "Name": "containerRecipe",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "containerRecipe"
         },
         {
-          "Name": "distributionConfiguration",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "distributionConfiguration"
         },
         {
-          "Name": "image",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "image"
         },
         {
-          "Name": "imagePipeline",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "imagePipeline"
         },
         {
-          "Name": "imageRecipe",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "imageRecipe"
         },
         {
-          "Name": "infrastructureConfiguration",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "infrastructureConfiguration"
         },
         {
-          "Name": "lifecyclePolicy",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "lifecyclePolicy"
         },
         {
-          "Name": "workflow",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "workflow"
         }
       ],
       "SupportedBy": {
@@ -1664,6 +1557,12 @@
     },
     {
       "Name": "UpdateInfrastructureConfiguration",
+      "ActionConditionKeys": [
+        "imagebuilder:CreatedResourceTag/${TagKey}",
+        "imagebuilder:CreatedResourceTagKeys",
+        "imagebuilder:Ec2MetadataHttpTokens",
+        "imagebuilder:StatusTopicArn"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1674,14 +1573,7 @@
       },
       "Resources": [
         {
-          "Name": "infrastructureConfiguration",
-          "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}",
-            "imagebuilder:CreatedResourceTag/<key>",
-            "imagebuilder:CreatedResourceTagKeys",
-            "imagebuilder:Ec2MetadataHttpTokens",
-            "imagebuilder:StatusTopicArn"
-          ]
+          "Name": "infrastructureConfiguration"
         }
       ],
       "SupportedBy": {
@@ -1691,6 +1583,9 @@
     },
     {
       "Name": "UpdateLifecyclePolicy",
+      "ActionConditionKeys": [
+        "imagebuilder:LifecyclePolicyResourceType"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1701,10 +1596,7 @@
       },
       "Resources": [
         {
-          "Name": "lifecyclePolicy",
-          "ConditionKeys": [
-            "imagebuilder:LifecyclePolicyResourceType"
-          ]
+          "Name": "lifecyclePolicy"
         }
       ],
       "SupportedBy": {
@@ -1733,7 +1625,7 @@
       ]
     },
     {
-      "Name": "imagebuilder:CreatedResourceTag/<key>",
+      "Name": "imagebuilder:CreatedResourceTag/${TagKey}",
       "Types": [
         "String"
       ]
@@ -1765,18 +1657,27 @@
   ],
   "Resources": [
     {
-      "Name": "component",
+      "Name": "allComponentBuildVersions",
       "ARNFormats": [
-        "arn:${Partition}:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}/${ComponentBuildVersion}"
-      ],
-      "ConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
+        "arn:${Partition}:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}/*"
       ]
     },
     {
-      "Name": "componentVersion",
+      "Name": "allImageBuildVersions",
       "ARNFormats": [
-        "arn:${Partition}:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}"
+        "arn:${Partition}:imagebuilder:${Region}:${Account}:image/${ImageName}/${ImageVersion}/*"
+      ]
+    },
+    {
+      "Name": "allWorkflowBuildVersions",
+      "ARNFormats": [
+        "arn:${Partition}:imagebuilder:${Region}:${Account}:workflow/${WorkflowType}/${WorkflowName}/${WorkflowVersion}/*"
+      ]
+    },
+    {
+      "Name": "component",
+      "ARNFormats": [
+        "arn:${Partition}:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}/${ComponentBuildVersion}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -1846,12 +1747,6 @@
       ]
     },
     {
-      "Name": "kmsKey",
-      "ARNFormats": [
-        "arn:${Partition}:kms:${Region}:${Account}:key/${KeyId}"
-      ]
-    },
-    {
       "Name": "lifecycleExecution",
       "ARNFormats": [
         "arn:${Partition}:imagebuilder:${Region}:${Account}:lifecycle-execution/${LifecycleExecutionId}"
@@ -1885,15 +1780,6 @@
       "Name": "workflowStepExecution",
       "ARNFormats": [
         "arn:${Partition}:imagebuilder:${Region}:${Account}:workflow-step-execution/${WorkflowStepExecutionId}"
-      ]
-    },
-    {
-      "Name": "workflowVersion",
-      "ARNFormats": [
-        "arn:${Partition}:imagebuilder:${Region}:${Account}:workflow/${WorkflowType}/${WorkflowName}/${WorkflowVersion}"
-      ],
-      "ConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
       ]
     }
   ],

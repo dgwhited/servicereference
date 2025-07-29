@@ -282,6 +282,33 @@
       }
     },
     {
+      "Name": "CreateComputationModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "asset-model"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateDashboard",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -467,6 +494,26 @@
       }
     },
     {
+      "Name": "DeleteComputationModel",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "computation-model"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteDashboard",
       "Annotations": {
         "Properties": {
@@ -622,6 +669,9 @@
       "Resources": [
         {
           "Name": "asset"
+        },
+        {
+          "Name": "computation-model"
         }
       ],
       "SupportedBy": {
@@ -745,6 +795,49 @@
       }
     },
     {
+      "Name": "DescribeComputationModel",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "computation-model"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeComputationModelExecutionSummary",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "computation-model"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeDashboard",
       "Annotations": {
         "Properties": {
@@ -797,6 +890,21 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DescribeExecution",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1007,6 +1115,9 @@
       "Resources": [
         {
           "Name": "asset"
+        },
+        {
+          "Name": "computation-model"
         }
       ],
       "SupportedBy": {
@@ -1172,6 +1283,9 @@
       "Resources": [
         {
           "Name": "asset"
+        },
+        {
+          "Name": "computation-model"
         }
       ],
       "SupportedBy": {
@@ -1350,6 +1464,64 @@
       }
     },
     {
+      "Name": "ListComputationModelDataBindingUsages",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "asset-model"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListComputationModelResolveToResources",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "computation-model"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListComputationModels",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListDashboards",
       "Annotations": {
         "Properties": {
@@ -1382,6 +1554,29 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListExecutions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "computation-model"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1476,6 +1671,9 @@
         },
         {
           "Name": "asset-model"
+        },
+        {
+          "Name": "computation-model"
         },
         {
           "Name": "dashboard"
@@ -1591,6 +1789,9 @@
           "Name": "asset-model"
         },
         {
+          "Name": "computation-model"
+        },
+        {
           "Name": "dashboard"
         },
         {
@@ -1636,6 +1837,9 @@
         },
         {
           "Name": "asset-model"
+        },
+        {
+          "Name": "computation-model"
         },
         {
           "Name": "dashboard"
@@ -1779,6 +1983,32 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "UpdateComputationModel",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "asset"
+        },
+        {
+          "Name": "asset-model"
+        },
+        {
+          "Name": "computation-model"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2005,6 +2235,15 @@
       "Name": "asset-model",
       "ARNFormats": [
         "arn:${Partition}:iotsitewise:${Region}:${Account}:asset-model/${AssetModelId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "computation-model",
+      "ARNFormats": [
+        "arn:${Partition}:iotsitewise:${Region}:${Account}:computation-model/${ComputationModelId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
