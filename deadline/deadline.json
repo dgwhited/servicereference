@@ -374,6 +374,10 @@
     },
     {
       "Name": "CreateMonitor",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1880,6 +1884,9 @@
           "Name": "license-endpoint"
         },
         {
+          "Name": "monitor"
+        },
+        {
           "Name": "queue"
         },
         {
@@ -2086,6 +2093,9 @@
           "Name": "license-endpoint"
         },
         {
+          "Name": "monitor"
+        },
+        {
           "Name": "queue"
         },
         {
@@ -2119,6 +2129,9 @@
         },
         {
           "Name": "license-endpoint"
+        },
+        {
+          "Name": "monitor"
         },
         {
           "Name": "queue"
@@ -2594,6 +2607,9 @@
       "Name": "monitor",
       "ARNFormats": [
         "arn:${Partition}:deadline:${Region}:${Account}:monitor/${MonitorId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
