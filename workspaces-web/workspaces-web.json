@@ -94,6 +94,29 @@
       }
     },
     {
+      "Name": "AssociateSessionLogger",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "portal"
+        },
+        {
+          "Name": "sessionLogger"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "AssociateTrustStore",
       "Annotations": {
         "Properties": {
@@ -267,6 +290,25 @@
     },
     {
       "Name": "CreatePortal",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateSessionLogger",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
@@ -465,6 +507,26 @@
       }
     },
     {
+      "Name": "DeleteSessionLogger",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "sessionLogger"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteTrustStore",
       "Annotations": {
         "Properties": {
@@ -586,6 +648,26 @@
     },
     {
       "Name": "DisassociateNetworkSettings",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "portal"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DisassociateSessionLogger",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -845,6 +927,26 @@
       }
     },
     {
+      "Name": "GetSessionLogger",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "sessionLogger"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetTrustStore",
       "Annotations": {
         "Properties": {
@@ -1020,6 +1122,21 @@
       }
     },
     {
+      "Name": "ListSessionLoggers",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListSessions",
       "Annotations": {
         "Properties": {
@@ -1148,6 +1265,9 @@
           "Name": "portal"
         },
         {
+          "Name": "sessionLogger"
+        },
+        {
           "Name": "trustStore"
         },
         {
@@ -1193,6 +1313,9 @@
         },
         {
           "Name": "portal"
+        },
+        {
+          "Name": "sessionLogger"
         },
         {
           "Name": "trustStore"
@@ -1333,6 +1456,26 @@
       }
     },
     {
+      "Name": "UpdateSessionLogger",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "sessionLogger"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateTrustStore",
       "Annotations": {
         "Properties": {
@@ -1463,6 +1606,15 @@
       "Name": "portal",
       "ARNFormats": [
         "arn:${Partition}:workspaces-web:${Region}:${Account}:portal/${PortalId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "sessionLogger",
+      "ARNFormats": [
+        "arn:${Partition}:workspaces-web:${Region}:${Account}:sessionLogger/${SessionLoggerId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

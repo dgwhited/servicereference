@@ -4,6 +4,8 @@
     {
       "Name": "CreateAccessPoint",
       "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
         "s3express:AccessPointNetworkOrigin",
         "s3express:DataAccessPointAccount",
         "s3express:DataAccessPointArn",
@@ -479,6 +481,9 @@
       },
       "Resources": [
         {
+          "Name": "accesspoint"
+        },
+        {
           "Name": "bucket"
         }
       ],
@@ -649,6 +654,9 @@
       },
       "Resources": [
         {
+          "Name": "accesspoint"
+        },
+        {
           "Name": "bucket"
         }
       ],
@@ -676,6 +684,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "accesspoint"
+        },
         {
           "Name": "bucket"
         }
@@ -707,6 +718,12 @@
     },
     {
       "Name": "s3express:AccessPointNetworkOrigin",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "s3express:AccessPointTag/${TagKey}",
       "Types": [
         "String"
       ]
@@ -807,6 +824,10 @@
       "Name": "accesspoint",
       "ARNFormats": [
         "arn:${Partition}:s3express:${Region}:${Account}:accesspoint/${AccessPointName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3express:AccessPointTag/${TagKey}"
       ]
     },
     {
