@@ -649,6 +649,65 @@
       }
     },
     {
+      "Name": "CreateTenant",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "ses:ApiVersion"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "tenant"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateTenantResourceAssociation",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "ses:ApiVersion"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        },
+        {
+          "Name": "identity"
+        },
+        {
+          "Name": "template"
+        },
+        {
+          "Name": "tenant"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateTrafficPolicy",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -1208,6 +1267,63 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteTenant",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "tenant"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteTenantResourceAssociation",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        },
+        {
+          "Name": "identity"
+        },
+        {
+          "Name": "template"
+        },
+        {
+          "Name": "tenant"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2203,6 +2319,30 @@
       }
     },
     {
+      "Name": "GetReputationEntity",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "tenant"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetRuleSet",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
@@ -2295,6 +2435,30 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "GetTenant",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "tenant"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2805,6 +2969,60 @@
       }
     },
     {
+      "Name": "ListReputationEntities",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "tenant"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListResourceTenants",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "configuration-set"
+        },
+        {
+          "Name": "identity"
+        },
+        {
+          "Name": "template"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListRuleSets",
       "Annotations": {
         "Properties": {
@@ -2883,6 +3101,9 @@
         },
         {
           "Name": "mailmanager-traffic-policy"
+        },
+        {
+          "Name": "tenant"
         }
       ],
       "SupportedBy": {
@@ -2909,6 +3130,48 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListTenantResources",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "tenant"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListTenants",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -3543,7 +3806,8 @@
       "Name": "SendBulkEmail",
       "ActionConditionKeys": [
         "ses:ApiVersion",
-        "ses:MultiRegionEndpointId"
+        "ses:MultiRegionEndpointId",
+        "ses:TenantName"
       ],
       "Annotations": {
         "Properties": {
@@ -3640,7 +3904,8 @@
         "ses:FromAddress",
         "ses:FromDisplayName",
         "ses:MultiRegionEndpointId",
-        "ses:Recipients"
+        "ses:Recipients",
+        "ses:TenantName"
       ],
       "Annotations": {
         "Properties": {
@@ -4035,6 +4300,9 @@
         },
         {
           "Name": "mailmanager-traffic-policy"
+        },
+        {
+          "Name": "tenant"
         }
       ],
       "SupportedBy": {
@@ -4136,6 +4404,9 @@
         },
         {
           "Name": "mailmanager-traffic-policy"
+        },
+        {
+          "Name": "tenant"
         }
       ],
       "SupportedBy": {
@@ -4447,6 +4718,57 @@
       }
     },
     {
+      "Name": "UpdateReputationEntityCustomerManagedStatus",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "tenant"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateReputationEntityPolicy",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ses:ApiVersion"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "reputation-policy"
+        },
+        {
+          "Name": "tenant"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateRuleSet",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}"
@@ -4673,6 +4995,12 @@
       "Types": [
         "ArrayOfString"
       ]
+    },
+    {
+      "Name": "ses:TenantName",
+      "Types": [
+        "String"
+      ]
     }
   ],
   "Resources": [
@@ -4819,9 +5147,24 @@
       ]
     },
     {
+      "Name": "reputation-policy",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:aws:reputation-policy/${ReputationPolicyName}"
+      ]
+    },
+    {
       "Name": "template",
       "ARNFormats": [
         "arn:${Partition}:ses:${Region}:${Account}:template/${TemplateName}"
+      ]
+    },
+    {
+      "Name": "tenant",
+      "ARNFormats": [
+        "arn:${Partition}:ses:${Region}:${Account}:tenant/${TenantName}/${TenantId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     }
   ],
