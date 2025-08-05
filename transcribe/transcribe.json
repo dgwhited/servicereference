@@ -5,6 +5,7 @@
       "Name": "CreateCallAnalyticsCategory",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -24,6 +25,7 @@
       "Name": "CreateLanguageModel",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -43,6 +45,7 @@
       "Name": "CreateMedicalVocabulary",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -62,6 +65,7 @@
       "Name": "CreateVocabulary",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -81,6 +85,7 @@
       "Name": "CreateVocabularyFilter",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -676,6 +681,7 @@
       "Name": "StartMedicalScribeJob",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "transcribe:OutputBucketName",
         "transcribe:OutputEncryptionKMSKeyId"
@@ -742,6 +748,7 @@
       "Name": "StartMedicalTranscriptionJob",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "transcribe:OutputBucketName",
         "transcribe:OutputEncryptionKMSKeyId",
@@ -794,6 +801,7 @@
       "Name": "StartTranscriptionJob",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "transcribe:OutputBucketName",
         "transcribe:OutputEncryptionKMSKeyId",
@@ -816,7 +824,11 @@
       "Name": "TagResource",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "transcribe:OutputBucketName",
+        "transcribe:OutputEncryptionKMSKeyId",
+        "transcribe:OutputKey"
       ],
       "Annotations": {
         "Properties": {

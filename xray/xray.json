@@ -119,6 +119,9 @@
     },
     {
       "Name": "DeleteResourcePolicy",
+      "ActionConditionKeys": [
+        "xray:ResourcePolicyName"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -518,6 +521,9 @@
     },
     {
       "Name": "PutResourcePolicy",
+      "ActionConditionKeys": [
+        "xray:ResourcePolicyName"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -722,6 +728,9 @@
     },
     {
       "Name": "UpdateTraceSegmentDestination",
+      "ActionConditionKeys": [
+        "xray:TraceSegmentDestination"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -753,6 +762,18 @@
       "Name": "aws:TagKeys",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "xray:ResourcePolicyName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "xray:TraceSegmentDestination",
+      "Types": [
+        "String"
       ]
     }
   ],

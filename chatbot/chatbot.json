@@ -3,6 +3,9 @@
   "Actions": [
     {
       "Name": "AssociateToConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -26,6 +29,10 @@
     },
     {
       "Name": "CreateChimeWebhookConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -41,6 +48,10 @@
     },
     {
       "Name": "CreateCustomAction",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -56,6 +67,10 @@
     },
     {
       "Name": "CreateMicrosoftTeamsChannelConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -71,6 +86,10 @@
     },
     {
       "Name": "CreateSlackChannelConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -86,6 +105,9 @@
     },
     {
       "Name": "DeleteChimeWebhookConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -106,6 +128,9 @@
     },
     {
       "Name": "DeleteCustomAction",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -126,6 +151,9 @@
     },
     {
       "Name": "DeleteMicrosoftTeamsChannelConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -176,6 +204,9 @@
     },
     {
       "Name": "DeleteSlackChannelConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -301,6 +332,9 @@
     },
     {
       "Name": "DisassociateFromConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -339,6 +373,9 @@
     },
     {
       "Name": "GetCustomAction",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -359,6 +396,9 @@
     },
     {
       "Name": "GetMicrosoftTeamsChannelConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -529,6 +569,10 @@
     },
     {
       "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -537,6 +581,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "ChatbotConfiguration"
+        },
+        {
+          "Name": "custom-action"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -544,6 +596,9 @@
     },
     {
       "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -552,6 +607,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "ChatbotConfiguration"
+        },
+        {
+          "Name": "custom-action"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -574,6 +637,9 @@
     },
     {
       "Name": "UpdateChimeWebhookConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -594,6 +660,9 @@
     },
     {
       "Name": "UpdateCustomAction",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -614,6 +683,9 @@
     },
     {
       "Name": "UpdateMicrosoftTeamsChannelConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -634,6 +706,9 @@
     },
     {
       "Name": "UpdateSlackChannelConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -653,17 +728,43 @@
       }
     }
   ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "ChatbotConfiguration",
       "ARNFormats": [
         "arn:${Partition}:chatbot::${Account}:chat-configuration/${ConfigurationType}/${ChatbotConfigurationName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "custom-action",
       "ARNFormats": [
         "arn:${Partition}:chatbot::${Account}:custom-action/${ActionName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     }
   ],
