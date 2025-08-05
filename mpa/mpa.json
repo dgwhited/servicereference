@@ -505,7 +505,7 @@
     {
       "Name": "approval-team",
       "ARNFormats": [
-        "arn:${Partition}:mpa:${Region}:${Account}:approval-team/${Arn}"
+        "arn:${Partition}:mpa:${Region}:${Account}:approval-team/${ApprovalTeamId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -514,7 +514,7 @@
     {
       "Name": "identity-source",
       "ARNFormats": [
-        "arn:${Partition}:mpa:${Region}:${Account}:identity-source/${IdentitySourceArn}"
+        "arn:${Partition}:mpa:${Region}:${Account}:identity-source/${IdentitySourceId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -523,7 +523,7 @@
     {
       "Name": "session",
       "ARNFormats": [
-        "arn:${Partition}:mpa:${Region}:${Account}:session/${SessionArn}"
+        "arn:${Partition}:mpa:${Region}:${Account}:session/${SessionId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
