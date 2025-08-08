@@ -5,7 +5,8 @@
       "Name": "CreateAccountAssociation",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "iotmanagedintegrations:connectorDestinationId"
       ],
       "Annotations": {
         "Properties": {
@@ -37,6 +38,9 @@
     },
     {
       "Name": "CreateConnectorDestination",
+      "ActionConditionKeys": [
+        "iotmanagedintegrations:cloudConnectorId"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -213,6 +217,9 @@
     },
     {
       "Name": "DeleteCloudConnector",
+      "ActionConditionKeys": [
+        "iotmanagedintegrations:cloudConnectorId"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1338,6 +1345,9 @@
     },
     {
       "Name": "UpdateCloudConnector",
+      "ActionConditionKeys": [
+        "iotmanagedintegrations:cloudConnectorId"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1472,6 +1482,18 @@
       "Name": "aws:TagKeys",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "iotmanagedintegrations:cloudConnectorId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "iotmanagedintegrations:connectorDestinationId",
+      "Types": [
+        "String"
       ]
     }
   ],
