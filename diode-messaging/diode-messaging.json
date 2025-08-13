@@ -1,28 +1,11 @@
 {
-  "Name": "security-ir",
+  "Name": "diode-messaging",
   "Actions": [
     {
-      "Name": "BatchGetMemberAccountDetails",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "membership"
-        }
+      "Name": "AcceptAccountMapping",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "CancelMembership",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -33,7 +16,7 @@
       },
       "Resources": [
         {
-          "Name": "membership"
+          "Name": "mapping"
         }
       ],
       "SupportedBy": {
@@ -42,7 +25,10 @@
       }
     },
     {
-      "Name": "CloseCase",
+      "Name": "AssociateRequestingFlow",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -53,7 +39,10 @@
       },
       "Resources": [
         {
-          "Name": "case"
+          "Name": "mapping"
+        },
+        {
+          "Name": "requestingFlow"
         }
       ],
       "SupportedBy": {
@@ -62,7 +51,33 @@
       }
     },
     {
-      "Name": "CreateCase",
+      "Name": "AssociateRespondingFlow",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "mapping"
+        },
+        {
+          "Name": "respondingFlow"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateAccountMapping",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
@@ -75,38 +90,13 @@
           "IsWrite": true
         }
       },
-      "Resources": [
-        {
-          "Name": "case"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
     {
-      "Name": "CreateCaseComment",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "case"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "CreateMembership",
+      "Name": "CreateRequestingFlow",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
@@ -119,58 +109,35 @@
           "IsWrite": true
         }
       },
-      "Resources": [
-        {
-          "Name": "membership"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
     {
-      "Name": "GetCase",
+      "Name": "CreateRespondingFlow",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
-          "IsWrite": false
+          "IsWrite": true
         }
       },
-      "Resources": [
-        {
-          "Name": "case"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
     {
-      "Name": "GetCaseAttachmentDownloadUrl",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "case"
-        }
+      "Name": "DeleteAccountMapping",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "GetCaseAttachmentUploadUrl",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -181,7 +148,7 @@
       },
       "Resources": [
         {
-          "Name": "case"
+          "Name": "mapping"
         }
       ],
       "SupportedBy": {
@@ -190,7 +157,108 @@
       }
     },
     {
-      "Name": "GetMembership",
+      "Name": "DeleteRequestingFlow",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "requestingFlow"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteRespondingFlow",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "respondingFlow"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DisassociateRequestingFlow",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "mapping"
+        },
+        {
+          "Name": "requestingFlow"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DisassociateRespondingFlow",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "mapping"
+        },
+        {
+          "Name": "respondingFlow"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetAccountMapping",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -201,7 +269,7 @@
       },
       "Resources": [
         {
-          "Name": "membership"
+          "Name": "mapping"
         }
       ],
       "SupportedBy": {
@@ -210,7 +278,10 @@
       }
     },
     {
-      "Name": "ListCaseEdits",
+      "Name": "GetAccountMappingPin",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -221,7 +292,7 @@
       },
       "Resources": [
         {
-          "Name": "case"
+          "Name": "mapping"
         }
       ],
       "SupportedBy": {
@@ -230,7 +301,53 @@
       }
     },
     {
-      "Name": "ListCases",
+      "Name": "GetRequestingFlow",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "requestingFlow"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetRespondingFlow",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "respondingFlow"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListAccountMappings",
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -245,27 +362,37 @@
       }
     },
     {
-      "Name": "ListComments",
+      "Name": "ListArtifacts",
       "Annotations": {
         "Properties": {
-          "IsList": false,
+          "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
         }
       },
-      "Resources": [
-        {
-          "Name": "case"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
     {
-      "Name": "ListMemberships",
+      "Name": "ListRequestingFlows",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListRespondingFlows",
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -282,8 +409,7 @@
     {
       "Name": "ListTagsForResource",
       "ActionConditionKeys": [
-        "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:ResourceTag/${TagKey}"
       ],
       "Annotations": {
         "Properties": {
@@ -295,10 +421,36 @@
       },
       "Resources": [
         {
-          "Name": "case"
+          "Name": "mapping"
         },
         {
-          "Name": "membership"
+          "Name": "requestingFlow"
+        },
+        {
+          "Name": "respondingFlow"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "RejectAccountMapping",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "mapping"
         }
       ],
       "SupportedBy": {
@@ -323,10 +475,13 @@
       },
       "Resources": [
         {
-          "Name": "case"
+          "Name": "mapping"
         },
         {
-          "Name": "membership"
+          "Name": "requestingFlow"
+        },
+        {
+          "Name": "respondingFlow"
         }
       ],
       "SupportedBy": {
@@ -350,10 +505,13 @@
       },
       "Resources": [
         {
-          "Name": "case"
+          "Name": "mapping"
         },
         {
-          "Name": "membership"
+          "Name": "requestingFlow"
+        },
+        {
+          "Name": "respondingFlow"
         }
       ],
       "SupportedBy": {
@@ -362,7 +520,10 @@
       }
     },
     {
-      "Name": "UpdateCase",
+      "Name": "UpdateRequestingFlow",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -373,7 +534,7 @@
       },
       "Resources": [
         {
-          "Name": "case"
+          "Name": "requestingFlow"
         }
       ],
       "SupportedBy": {
@@ -382,7 +543,10 @@
       }
     },
     {
-      "Name": "UpdateCaseComment",
+      "Name": "UpdateRespondingFlow",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -393,67 +557,7 @@
       },
       "Resources": [
         {
-          "Name": "case"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "UpdateCaseStatus",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "case"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "UpdateMembership",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "membership"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "UpdateResolverType",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "case"
+          "Name": "respondingFlow"
         }
       ],
       "SupportedBy": {
@@ -484,18 +588,27 @@
   ],
   "Resources": [
     {
-      "Name": "case",
+      "Name": "mapping",
       "ARNFormats": [
-        "arn:${Partition}:security-ir:${Region}:${Account}:case/${CaseId}"
+        "arn:${Partition}:diode-messaging:${Region}:${Account}:mapping/${MappingId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ]
     },
     {
-      "Name": "membership",
+      "Name": "requestingFlow",
       "ARNFormats": [
-        "arn:${Partition}:security-ir:${Region}:${Account}:membership/${MembershipId}"
+        "arn:${Partition}:diode-messaging:${Region}:${Account}:requesting-flow/${RequestingFlowId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "respondingFlow",
+      "ARNFormats": [
+        "arn:${Partition}:diode-messaging:${Region}:${Account}:responding-flow/${RespondingFlowId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
