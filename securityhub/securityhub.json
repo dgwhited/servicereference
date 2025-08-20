@@ -1894,6 +1894,9 @@
       },
       "Resources": [
         {
+          "Name": "aggregatorv2"
+        },
+        {
           "Name": "automation-rule"
         },
         {
@@ -1928,6 +1931,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "aggregatorv2"
+        },
         {
           "Name": "automation-rule"
         },
@@ -2231,12 +2237,18 @@
       "Name": "aggregatorv2",
       "ARNFormats": [
         "arn:${Partition}:securityhub:${Region}:${Account}:aggregatorv2/${AggregatorV2Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "automation-rule",
       "ARNFormats": [
         "arn:${Partition}:securityhub:${Region}:${Account}:automation-rule/${AutomationRuleId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -2252,6 +2264,9 @@
       "Name": "configuration-policy",
       "ARNFormats": [
         "arn:${Partition}:securityhub:${Region}:${Account}:configuration-policy/${ConfigurationPolicyId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
