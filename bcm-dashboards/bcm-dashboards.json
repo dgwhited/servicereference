@@ -93,11 +93,15 @@
     },
     {
       "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
           "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
+          "IsTaggingOnly": true,
           "IsWrite": true
         }
       },
@@ -108,11 +112,14 @@
     },
     {
       "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
           "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
+          "IsTaggingOnly": true,
           "IsWrite": true
         }
       },
@@ -135,6 +142,20 @@
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
     }
   ],
   "Version": "v1.3"
