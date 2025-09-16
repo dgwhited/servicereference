@@ -1047,6 +1047,24 @@
       }
     },
     {
+      "Name": "ListAllHookResults",
+      "ActionConditionKeys": [
+        "cloudformation:TypeArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListChangeSets",
       "Annotations": {
         "Properties": {
@@ -1941,6 +1959,12 @@
       "Name": "cloudformation:TemplateUrl",
       "Types": [
         "String"
+      ]
+    },
+    {
+      "Name": "cloudformation:TypeArn",
+      "Types": [
+        "ARN"
       ]
     }
   ],
