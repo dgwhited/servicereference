@@ -311,6 +311,7 @@
         {
           "Name": "autoScalingGroup",
           "ConditionKeys": [
+            "autoscaling:ForceDelete",
             "autoscaling:ResourceTag/${TagKey}",
             "aws:ResourceTag/${TagKey}"
           ]
@@ -1430,6 +1431,12 @@
       "Name": "autoscaling:CapacityReservationResourceGroupArns",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "autoscaling:ForceDelete",
+      "Types": [
+        "Bool"
       ]
     },
     {
