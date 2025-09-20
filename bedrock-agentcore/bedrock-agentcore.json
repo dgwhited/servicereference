@@ -53,6 +53,10 @@
     },
     {
       "Name": "CreateAgentRuntime",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -68,6 +72,10 @@
     },
     {
       "Name": "CreateAgentRuntimeEndpoint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -76,6 +84,11 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "runtime"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -106,6 +119,10 @@
     },
     {
       "Name": "CreateBrowser",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -121,6 +138,10 @@
     },
     {
       "Name": "CreateCodeInterpreter",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1306,6 +1327,35 @@
       }
     },
     {
+      "Name": "ListTagsForResource",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "browser-custom"
+        },
+        {
+          "Name": "code-interpreter-custom"
+        },
+        {
+          "Name": "runtime"
+        },
+        {
+          "Name": "runtime-endpoint"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListWorkloadIdentities",
       "Annotations": {
         "Properties": {
@@ -1477,6 +1527,71 @@
       "Resources": [
         {
           "Name": "gateway"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "browser-custom"
+        },
+        {
+          "Name": "code-interpreter-custom"
+        },
+        {
+          "Name": "runtime"
+        },
+        {
+          "Name": "runtime-endpoint"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "browser-custom"
+        },
+        {
+          "Name": "code-interpreter-custom"
+        },
+        {
+          "Name": "runtime"
+        },
+        {
+          "Name": "runtime-endpoint"
         }
       ],
       "SupportedBy": {
@@ -1682,6 +1797,24 @@
   ],
   "ConditionKeys": [
     {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
       "Name": "bedrock-agentcore:actorId",
       "Types": [
         "String"
@@ -1723,6 +1856,9 @@
       "Name": "browser-custom",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:browser-custom/${BrowserId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -1735,6 +1871,9 @@
       "Name": "code-interpreter-custom",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:code-interpreter-custom/${CodeInterpreterId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -1759,12 +1898,18 @@
       "Name": "runtime",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:runtime/${RuntimeId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "runtime-endpoint",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:runtime/${RuntimeId}/runtime-endpoint/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
