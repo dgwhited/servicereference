@@ -164,7 +164,12 @@
           "Name": "model-explainability-job-definition"
         },
         {
-          "Name": "model-package"
+          "Name": "model-package",
+          "ConditionKeys": [
+            "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}",
+            "sagemaker:CurrentModelLifeCycleStage",
+            "sagemaker:CurrentModelLifeCycleStageStatus"
+          ]
         },
         {
           "Name": "model-package-group"
@@ -321,7 +326,12 @@
       },
       "Resources": [
         {
-          "Name": "model-package"
+          "Name": "model-package",
+          "ConditionKeys": [
+            "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}",
+            "sagemaker:CurrentModelLifeCycleStage",
+            "sagemaker:CurrentModelLifeCycleStageStatus"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1534,7 +1544,12 @@
       },
       "Resources": [
         {
-          "Name": "model-package"
+          "Name": "model-package",
+          "ConditionKeys": [
+            "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}",
+            "sagemaker:CurrentModelLifeCycleStage",
+            "sagemaker:CurrentModelLifeCycleStageStatus"
+          ]
         },
         {
           "Name": "model-package-group"
@@ -3012,7 +3027,12 @@
       },
       "Resources": [
         {
-          "Name": "model-package"
+          "Name": "model-package",
+          "ConditionKeys": [
+            "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}",
+            "sagemaker:CurrentModelLifeCycleStage",
+            "sagemaker:CurrentModelLifeCycleStageStatus"
+          ]
         }
       ],
       "SupportedBy": {
@@ -3428,7 +3448,12 @@
           "Name": "model-explainability-job-definition"
         },
         {
-          "Name": "model-package"
+          "Name": "model-package",
+          "ConditionKeys": [
+            "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}",
+            "sagemaker:CurrentModelLifeCycleStage",
+            "sagemaker:CurrentModelLifeCycleStageStatus"
+          ]
         },
         {
           "Name": "model-package-group"
@@ -4563,7 +4588,12 @@
       },
       "Resources": [
         {
-          "Name": "model-package"
+          "Name": "model-package",
+          "ConditionKeys": [
+            "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}",
+            "sagemaker:CurrentModelLifeCycleStage",
+            "sagemaker:CurrentModelLifeCycleStageStatus"
+          ]
         }
       ],
       "SupportedBy": {
@@ -6788,7 +6818,12 @@
           "Name": "model-explainability-job-definition"
         },
         {
-          "Name": "model-package"
+          "Name": "model-package",
+          "ConditionKeys": [
+            "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}",
+            "sagemaker:CurrentModelLifeCycleStage",
+            "sagemaker:CurrentModelLifeCycleStageStatus"
+          ]
         },
         {
           "Name": "model-package-group"
@@ -8404,7 +8439,12 @@
       },
       "Resources": [
         {
-          "Name": "model-package"
+          "Name": "model-package",
+          "ConditionKeys": [
+            "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}",
+            "sagemaker:CurrentModelLifeCycleStage",
+            "sagemaker:CurrentModelLifeCycleStageStatus"
+          ]
         }
       ],
       "SupportedBy": {
@@ -8829,6 +8869,24 @@
     },
     {
       "Name": "sagemaker:AppNetworkAccessType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:CurrentModelLifeCycleStage",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "sagemaker:CurrentModelLifeCycleStageStatus",
       "Types": [
         "String"
       ]
@@ -9439,6 +9497,10 @@
       "Name": "image-version",
       "ARNFormats": [
         "arn:${Partition}:sagemaker:${Region}:${Account}:image-version/${ImageName}/${Version}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -9558,6 +9620,9 @@
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}",
+        "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}",
+        "sagemaker:CurrentModelLifeCycleStage",
+        "sagemaker:CurrentModelLifeCycleStageStatus",
         "sagemaker:ResourceTag/${TagKey}"
       ]
     },
