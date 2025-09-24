@@ -941,6 +941,9 @@
     },
     {
       "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "organizations:PolicyType"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -1091,7 +1094,8 @@
       "Name": "TagResource",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "organizations:PolicyType"
       ],
       "Annotations": {
         "Properties": {
@@ -1129,7 +1133,8 @@
     {
       "Name": "UntagResource",
       "ActionConditionKeys": [
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "organizations:PolicyType"
       ],
       "Annotations": {
         "Properties": {

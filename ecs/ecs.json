@@ -942,6 +942,37 @@
       }
     },
     {
+      "Name": "PutSystemLogEvents",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cluster",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "container-instance",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ecs:capacity-provider",
+            "ecs:cluster"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "RegisterContainerInstance",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
