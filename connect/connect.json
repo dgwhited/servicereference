@@ -114,6 +114,37 @@
       }
     },
     {
+      "Name": "AssociateContactWithUser",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId",
+        "connect:PreferredUserArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "contact"
+        },
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "user"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "AssociateCustomerProfilesDomain",
       "Annotations": {
         "Properties": {
@@ -4196,6 +4227,30 @@
       }
     },
     {
+      "Name": "ListRoutingProfileManualAssignmentQueues",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "routing-profile"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListRoutingProfileQueues",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
@@ -4934,7 +4989,9 @@
     {
       "Name": "SearchContacts",
       "ActionConditionKeys": [
+        "connect:Channel",
         "connect:InstanceId",
+        "connect:PreferredUserArn",
         "connect:SearchContactsByContactAnalysis"
       ],
       "Annotations": {
@@ -7416,6 +7473,12 @@
       "Name": "connect:MonitorCapabilities",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "connect:PreferredUserArn",
+      "Types": [
+        "ARN"
       ]
     },
     {

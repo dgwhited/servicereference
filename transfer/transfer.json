@@ -25,6 +25,7 @@
       "Name": "CreateAgreement",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -49,7 +50,9 @@
       "Name": "CreateConnector",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "transfer:RequestConnectorProtocol"
       ],
       "Annotations": {
         "Properties": {
@@ -68,6 +71,7 @@
       "Name": "CreateProfile",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -87,7 +91,11 @@
       "Name": "CreateServer",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "transfer:RequestServerDomain",
+        "transfer:RequestServerEndpointType",
+        "transfer:RequestServerProtocols"
       ],
       "Annotations": {
         "Properties": {
@@ -106,6 +114,7 @@
       "Name": "CreateUser",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -130,6 +139,7 @@
       "Name": "CreateWebApp",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -149,6 +159,7 @@
       "Name": "CreateWorkflow",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -663,6 +674,7 @@
       "Name": "ImportCertificate",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -682,6 +694,7 @@
       "Name": "ImportHostKey",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -1380,6 +1393,10 @@
     },
     {
       "Name": "UpdateServer",
+      "ActionConditionKeys": [
+        "transfer:RequestServerEndpointType",
+        "transfer:RequestServerProtocols"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1474,6 +1491,30 @@
     },
     {
       "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "transfer:RequestConnectorProtocol",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "transfer:RequestServerDomain",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "transfer:RequestServerEndpointType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "transfer:RequestServerProtocols",
       "Types": [
         "ArrayOfString"
       ]
