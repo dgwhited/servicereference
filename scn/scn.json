@@ -43,6 +43,10 @@
     },
     {
       "Name": "CreateDataIntegrationFlow",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -63,6 +67,10 @@
     },
     {
       "Name": "CreateDataLakeDataset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -83,6 +91,10 @@
     },
     {
       "Name": "CreateDataLakeNamespace",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -103,6 +115,10 @@
     },
     {
       "Name": "CreateInstance",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -760,24 +776,36 @@
       "Name": "data-integration-flow",
       "ARNFormats": [
         "arn:${Partition}:scn:${Region}:${Account}:instance/${InstanceId}/data-integration-flows/${FlowName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "dataset",
       "ARNFormats": [
         "arn:${Partition}:scn:${Region}:${Account}:instance/${InstanceId}/namespaces/${Namespace}/datasets/${DatasetName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "instance",
       "ARNFormats": [
         "arn:${Partition}:scn:${Region}:${Account}:instance/${InstanceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "namespace",
       "ARNFormats": [
         "arn:${Partition}:scn:${Region}:${Account}:instance/${InstanceId}/namespaces/${Namespace}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     }
   ],

@@ -5,7 +5,8 @@
       "Name": "CreateCapacityProvider",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "ecs:propagate-tags"
       ],
       "Annotations": {
         "Properties": {
@@ -15,6 +16,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "capacity-provider",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -108,6 +117,11 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "task-set"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -1325,7 +1339,8 @@
     {
       "Name": "UpdateCapacityProvider",
       "ActionConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
+        "aws:ResourceTag/${TagKey}",
+        "ecs:propagate-tags"
       ],
       "Annotations": {
         "Properties": {
