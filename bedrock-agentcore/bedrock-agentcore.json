@@ -181,6 +181,10 @@
     },
     {
       "Name": "CreateGateway",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1344,6 +1348,9 @@
           "Name": "code-interpreter-custom"
         },
         {
+          "Name": "gateway"
+        },
+        {
           "Name": "runtime"
         },
         {
@@ -1556,6 +1563,9 @@
           "Name": "code-interpreter-custom"
         },
         {
+          "Name": "gateway"
+        },
+        {
           "Name": "runtime"
         },
         {
@@ -1586,6 +1596,9 @@
         },
         {
           "Name": "code-interpreter-custom"
+        },
+        {
+          "Name": "gateway"
         },
         {
           "Name": "runtime"
@@ -1880,6 +1893,9 @@
       "Name": "gateway",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:gateway/${GatewayId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
