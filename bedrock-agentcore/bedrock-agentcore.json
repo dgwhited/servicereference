@@ -22,6 +22,72 @@
       }
     },
     {
+      "Name": "BatchCreateMemoryRecords",
+      "ActionConditionKeys": [
+        "bedrock-agentcore:namespace"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "memory"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "BatchDeleteMemoryRecords",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "memory"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "BatchUpdateMemoryRecords",
+      "ActionConditionKeys": [
+        "bedrock-agentcore:namespace"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "memory"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ConnectBrowserAutomationStream",
       "Annotations": {
         "Properties": {
@@ -220,6 +286,10 @@
     },
     {
       "Name": "CreateMemory",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -528,6 +598,29 @@
         },
         {
           "Name": "workload-identity-directory"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetAgentCard",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "runtime"
+        },
+        {
+          "Name": "runtime-endpoint"
         }
       ],
       "SupportedBy": {
@@ -1351,6 +1444,9 @@
           "Name": "gateway"
         },
         {
+          "Name": "memory"
+        },
+        {
           "Name": "runtime"
         },
         {
@@ -1522,6 +1618,29 @@
       }
     },
     {
+      "Name": "StopRuntimeSession",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "runtime"
+        },
+        {
+          "Name": "runtime-endpoint"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "SynchronizeGatewayTargets",
       "Annotations": {
         "Properties": {
@@ -1566,6 +1685,9 @@
           "Name": "gateway"
         },
         {
+          "Name": "memory"
+        },
+        {
           "Name": "runtime"
         },
         {
@@ -1599,6 +1721,9 @@
         },
         {
           "Name": "gateway"
+        },
+        {
+          "Name": "memory"
         },
         {
           "Name": "runtime"
@@ -1902,6 +2027,9 @@
       "Name": "memory",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:memory/${MemoryId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
