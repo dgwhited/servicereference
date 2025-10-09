@@ -1124,6 +1124,26 @@
       }
     },
     {
+      "Name": "InvokeGateway",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListActors",
       "Annotations": {
         "Properties": {
@@ -1950,6 +1970,12 @@
       "Name": "aws:TagKeys",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "bedrock-agentcore:GatewayAuthorizerType",
+      "Types": [
+        "String"
       ]
     },
     {
