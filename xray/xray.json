@@ -539,6 +539,9 @@
     },
     {
       "Name": "PutSpans",
+      "ActionConditionKeys": [
+        "logs:LogGeneratingResourceArns"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -584,6 +587,9 @@
     },
     {
       "Name": "PutTraceSegments",
+      "ActionConditionKeys": [
+        "logs:LogGeneratingResourceArns"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -762,6 +768,12 @@
       "Name": "aws:TagKeys",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "logs:LogGeneratingResourceArns",
+      "Types": [
+        "ArrayOfARN"
       ]
     },
     {
