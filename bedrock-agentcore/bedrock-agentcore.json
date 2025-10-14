@@ -88,6 +88,43 @@
       }
     },
     {
+      "Name": "CompleteResourceTokenAuth",
+      "ActionConditionKeys": [
+        "bedrock-agentcore:InboundJwtClaim/aud",
+        "bedrock-agentcore:InboundJwtClaim/client_id",
+        "bedrock-agentcore:InboundJwtClaim/iss",
+        "bedrock-agentcore:InboundJwtClaim/scope",
+        "bedrock-agentcore:InboundJwtClaim/sub",
+        "bedrock-agentcore:userid"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "oauth2credentialprovider"
+        },
+        {
+          "Name": "token-vault"
+        },
+        {
+          "Name": "workload-identity"
+        },
+        {
+          "Name": "workload-identity-directory"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ConnectBrowserAutomationStream",
       "Annotations": {
         "Properties": {
@@ -162,6 +199,10 @@
     },
     {
       "Name": "CreateApiKeyCredentialProvider",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -305,6 +346,10 @@
     },
     {
       "Name": "CreateOauth2CredentialProvider",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -328,6 +373,10 @@
     },
     {
       "Name": "CreateWorkloadIdentity",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1010,6 +1059,13 @@
     },
     {
       "Name": "GetWorkloadAccessTokenForJWT",
+      "ActionConditionKeys": [
+        "bedrock-agentcore:InboundJwtClaim/aud",
+        "bedrock-agentcore:InboundJwtClaim/client_id",
+        "bedrock-agentcore:InboundJwtClaim/iss",
+        "bedrock-agentcore:InboundJwtClaim/scope",
+        "bedrock-agentcore:InboundJwtClaim/sub"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1033,6 +1089,9 @@
     },
     {
       "Name": "GetWorkloadAccessTokenForUserId",
+      "ActionConditionKeys": [
+        "bedrock-agentcore:userid"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1478,6 +1537,9 @@
       },
       "Resources": [
         {
+          "Name": "apikeycredentialprovider"
+        },
+        {
           "Name": "browser-custom"
         },
         {
@@ -1490,10 +1552,22 @@
           "Name": "memory"
         },
         {
+          "Name": "oauth2credentialprovider"
+        },
+        {
           "Name": "runtime"
         },
         {
           "Name": "runtime-endpoint"
+        },
+        {
+          "Name": "token-vault"
+        },
+        {
+          "Name": "workload-identity"
+        },
+        {
+          "Name": "workload-identity-directory"
         }
       ],
       "SupportedBy": {
@@ -1719,6 +1793,9 @@
       },
       "Resources": [
         {
+          "Name": "apikeycredentialprovider"
+        },
+        {
           "Name": "browser-custom"
         },
         {
@@ -1731,10 +1808,22 @@
           "Name": "memory"
         },
         {
+          "Name": "oauth2credentialprovider"
+        },
+        {
           "Name": "runtime"
         },
         {
           "Name": "runtime-endpoint"
+        },
+        {
+          "Name": "token-vault"
+        },
+        {
+          "Name": "workload-identity"
+        },
+        {
+          "Name": "workload-identity-directory"
         }
       ],
       "SupportedBy": {
@@ -1757,6 +1846,9 @@
       },
       "Resources": [
         {
+          "Name": "apikeycredentialprovider"
+        },
+        {
           "Name": "browser-custom"
         },
         {
@@ -1769,10 +1861,22 @@
           "Name": "memory"
         },
         {
+          "Name": "oauth2credentialprovider"
+        },
+        {
           "Name": "runtime"
         },
         {
           "Name": "runtime-endpoint"
+        },
+        {
+          "Name": "token-vault"
+        },
+        {
+          "Name": "workload-identity"
+        },
+        {
+          "Name": "workload-identity-directory"
         }
       ],
       "SupportedBy": {
@@ -2002,6 +2106,36 @@
       ]
     },
     {
+      "Name": "bedrock-agentcore:InboundJwtClaim/aud",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "bedrock-agentcore:InboundJwtClaim/client_id",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "bedrock-agentcore:InboundJwtClaim/iss",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "bedrock-agentcore:InboundJwtClaim/scope",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "bedrock-agentcore:InboundJwtClaim/sub",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "bedrock-agentcore:actorId",
       "Types": [
         "String"
@@ -2024,6 +2158,12 @@
       "Types": [
         "String"
       ]
+    },
+    {
+      "Name": "bedrock-agentcore:userid",
+      "Types": [
+        "String"
+      ]
     }
   ],
   "Resources": [
@@ -2031,6 +2171,9 @@
       "Name": "apikeycredentialprovider",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:token-vault/${TokenVaultId}/apikeycredentialprovider/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -2085,6 +2228,9 @@
       "Name": "oauth2credentialprovider",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:token-vault/${TokenVaultId}/oauth2credentialprovider/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -2109,18 +2255,27 @@
       "Name": "token-vault",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:token-vault/${TokenVaultId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "workload-identity",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:workload-identity-directory/${DirectoryId}/workload-identity/${WorkloadIdentityName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "workload-identity-directory",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:workload-identity-directory/${DirectoryId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     }
   ],
