@@ -200,6 +200,10 @@
     },
     {
       "Name": "CreateDeployment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -216,11 +220,7 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
-      },
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ]
+      }
     },
     {
       "Name": "CreateDeviceDefinition",

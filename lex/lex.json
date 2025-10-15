@@ -2585,6 +2585,10 @@
     },
     {
       "Name": "StartImport",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -2593,14 +2597,6 @@
           "IsWrite": true
         }
       },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": true,
-        "IAM Action Last Accessed": true
-      },
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
       "Resources": [
         {
           "Name": "bot"
@@ -2611,7 +2607,11 @@
         {
           "Name": "test set"
         }
-      ]
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": true,
+        "IAM Action Last Accessed": true
+      }
     },
     {
       "Name": "StartMigration",

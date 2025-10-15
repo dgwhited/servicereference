@@ -194,7 +194,11 @@
       },
       "Resources": [
         {
-          "Name": "association"
+          "Name": "association",
+          "ConditionKeys": [
+            "fsx:NfsDataRepositoryAuthenticationEnabled",
+            "fsx:NfsDataRepositoryEncryptionInTransitEnabled"
+          ]
         },
         {
           "Name": "file-system"
@@ -1041,7 +1045,11 @@
       },
       "Resources": [
         {
-          "Name": "association"
+          "Name": "association",
+          "ConditionKeys": [
+            "fsx:NfsDataRepositoryAuthenticationEnabled",
+            "fsx:NfsDataRepositoryEncryptionInTransitEnabled"
+          ]
         },
         {
           "Name": "backup"
@@ -1062,7 +1070,11 @@
           "Name": "task"
         },
         {
-          "Name": "volume"
+          "Name": "volume",
+          "ConditionKeys": [
+            "fsx:ParentVolumeId",
+            "fsx:StorageVirtualMachineId"
+          ]
         }
       ],
       "SupportedBy": {
