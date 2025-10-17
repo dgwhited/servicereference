@@ -226,6 +226,9 @@
       },
       "Resources": [
         {
+          "Name": "metric-resource"
+        },
+        {
           "Name": "perf-reports-resource"
         }
       ],
@@ -313,6 +316,9 @@
       "Name": "metric-resource",
       "ARNFormats": [
         "arn:${Partition}:pi:${Region}:${Account}:metrics/${ServiceType}/${Identifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
