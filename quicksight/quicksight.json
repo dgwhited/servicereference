@@ -311,6 +311,10 @@
     },
     {
       "Name": "CreateEmailCustomizationTemplate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -3308,6 +3312,9 @@
           "Name": "datasource"
         },
         {
+          "Name": "emailCustomizationTemplate"
+        },
+        {
           "Name": "flow"
         },
         {
@@ -4137,6 +4144,9 @@
           "Name": "datasource"
         },
         {
+          "Name": "emailCustomizationTemplate"
+        },
+        {
           "Name": "flow"
         },
         {
@@ -4235,6 +4245,9 @@
         },
         {
           "Name": "datasource"
+        },
+        {
+          "Name": "emailCustomizationTemplate"
         },
         {
           "Name": "flow"
@@ -5477,6 +5490,9 @@
       "Name": "emailCustomizationTemplate",
       "ARNFormats": [
         "arn:${Partition}:quicksight:${Region}:${Account}:email-customization-template/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
