@@ -33,6 +33,8 @@
       "ActionConditionKeys": [
         "vpc-lattice-svcs:Port",
         "vpc-lattice-svcs:RequestHeader/${HeaderName}",
+        "vpc-lattice-svcs:RequestMethod",
+        "vpc-lattice-svcs:RequestPath",
         "vpc-lattice-svcs:RequestQueryString/${QueryStringKey}",
         "vpc-lattice-svcs:ServiceArn",
         "vpc-lattice-svcs:ServiceNetworkArn",
@@ -73,6 +75,12 @@
     },
     {
       "Name": "vpc-lattice-svcs:RequestMethod",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "vpc-lattice-svcs:RequestPath",
       "Types": [
         "String"
       ]
