@@ -9357,6 +9357,15 @@
         {
           "Name": "CreateAlgorithm",
           "Service": "sagemaker"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "sagemaker.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [
@@ -9494,6 +9503,11 @@
         },
         {
           "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "sagemaker.amazonaws.com"
+            ]
+          },
           "Service": "iam"
         }
       ],
@@ -9588,6 +9602,12 @@
     },
     {
       "Name": "CreateContext",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateContext",
+          "Service": "sagemaker"
+        }
+      ],
       "SDK": [
         {
           "Name": "sagemaker",

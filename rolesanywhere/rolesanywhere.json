@@ -622,6 +622,25 @@
   "Operations": [
     {
       "Name": "CreateProfile",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateProfile",
+          "Service": "rolesanywhere"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "rolesanywhere.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "rolesanywhere"
+        }
+      ],
       "SDK": [
         {
           "Name": "rolesanywhere",
@@ -632,6 +651,16 @@
     },
     {
       "Name": "CreateTrustAnchor",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateTrustAnchor",
+          "Service": "rolesanywhere"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "rolesanywhere"
+        }
+      ],
       "SDK": [
         {
           "Name": "rolesanywhere",
@@ -672,6 +701,12 @@
     },
     {
       "Name": "DeleteTrustAnchor",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteTrustAnchor",
+          "Service": "rolesanywhere"
+        }
+      ],
       "SDK": [
         {
           "Name": "rolesanywhere",
@@ -732,6 +767,12 @@
     },
     {
       "Name": "EnableTrustAnchor",
+      "AuthorizedActions": [
+        {
+          "Name": "EnableTrustAnchor",
+          "Service": "rolesanywhere"
+        }
+      ],
       "SDK": [
         {
           "Name": "rolesanywhere",
@@ -742,6 +783,12 @@
     },
     {
       "Name": "GetCrl",
+      "AuthorizedActions": [
+        {
+          "Name": "GetCrl",
+          "Service": "rolesanywhere"
+        }
+      ],
       "SDK": [
         {
           "Name": "rolesanywhere",
@@ -768,6 +815,12 @@
     },
     {
       "Name": "GetSubject",
+      "AuthorizedActions": [
+        {
+          "Name": "GetSubject",
+          "Service": "rolesanywhere"
+        }
+      ],
       "SDK": [
         {
           "Name": "rolesanywhere",
@@ -836,6 +889,12 @@
     },
     {
       "Name": "ListSubjects",
+      "AuthorizedActions": [
+        {
+          "Name": "ListSubjects",
+          "Service": "rolesanywhere"
+        }
+      ],
       "SDK": [
         {
           "Name": "rolesanywhere",
@@ -928,6 +987,12 @@
     },
     {
       "Name": "UpdateCrl",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateCrl",
+          "Service": "rolesanywhere"
+        }
+      ],
       "SDK": [
         {
           "Name": "rolesanywhere",
@@ -938,6 +1003,21 @@
     },
     {
       "Name": "UpdateProfile",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "rolesanywhere.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateProfile",
+          "Service": "rolesanywhere"
+        }
+      ],
       "SDK": [
         {
           "Name": "rolesanywhere",
