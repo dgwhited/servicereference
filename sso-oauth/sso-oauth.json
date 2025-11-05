@@ -62,6 +62,54 @@
       }
     }
   ],
+  "Operations": [
+    {
+      "Name": "CreateToken",
+      "SDK": [
+        {
+          "Name": "sso-oidc",
+          "Method": "create_token",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTokenWithIAM",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateTokenWithIAM",
+          "Service": "sso-oauth"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sso-oidc",
+          "Method": "create_token_with_iam",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterClient",
+      "SDK": [
+        {
+          "Name": "sso-oidc",
+          "Method": "register_client",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartDeviceAuthorization",
+      "SDK": [
+        {
+          "Name": "sso-oidc",
+          "Method": "start_device_authorization",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "Application",
@@ -70,5 +118,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

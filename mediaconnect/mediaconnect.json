@@ -43,6 +43,10 @@
     },
     {
       "Name": "AddFlowMediaStreams",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -58,6 +62,10 @@
     },
     {
       "Name": "AddFlowOutputs",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -73,6 +81,10 @@
     },
     {
       "Name": "AddFlowSources",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -88,6 +100,10 @@
     },
     {
       "Name": "AddFlowVpcInterfaces",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -118,6 +134,10 @@
     },
     {
       "Name": "CreateFlow",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -373,6 +393,10 @@
     },
     {
       "Name": "GrantFlowEntitlements",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -708,6 +732,10 @@
     },
     {
       "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -716,6 +744,20 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Entitlement"
+        },
+        {
+          "Name": "Flow"
+        },
+        {
+          "Name": "Output"
+        },
+        {
+          "Name": "Source"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": false
@@ -723,6 +765,9 @@
     },
     {
       "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -731,6 +776,20 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Entitlement"
+        },
+        {
+          "Name": "Flow"
+        },
+        {
+          "Name": "Output"
+        },
+        {
+          "Name": "Source"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": false
@@ -912,6 +971,922 @@
       }
     }
   ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Operations": [
+    {
+      "Name": "AddBridgeOutputs",
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "add_bridge_outputs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "AddBridgeSources",
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "add_bridge_sources",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "AddFlowMediaStreams",
+      "AuthorizedActions": [
+        {
+          "Name": "AddFlowMediaStreams",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "add_flow_media_streams",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "AddFlowOutputs",
+      "AuthorizedActions": [
+        {
+          "Name": "AddFlowOutputs",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "mediaconnect.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "add_flow_outputs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "AddFlowSources",
+      "AuthorizedActions": [
+        {
+          "Name": "AddFlowSources",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "mediaconnect.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "add_flow_sources",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "AddFlowVpcInterfaces",
+      "AuthorizedActions": [
+        {
+          "Name": "AddFlowVpcInterfaces",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "mediaconnect.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "add_flow_vpc_interfaces",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBridge",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateBridge",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "create_bridge",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFlow",
+      "AuthorizedActions": [
+        {
+          "Name": "AddFlowMediaStreams",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "AddFlowOutputs",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "AddFlowSources",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "AddFlowVpcInterfaces",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "CreateFlow",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "GrantFlowEntitlements",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "mediaconnect.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "create_flow",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateGateway",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateGateway",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "create_gateway",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBridge",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteBridge",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "delete_bridge",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFlow",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteFlow",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "RemoveFlowOutput",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "RemoveFlowSource",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "RemoveFlowVpcInterface",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "RevokeFlowEntitlement",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "delete_flow",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGateway",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteGateway",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "delete_gateway",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterGatewayInstance",
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "deregister_gateway_instance",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeBridge",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeBridge",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "describe_bridge",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFlow",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeFlow",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "describe_flow",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFlowSourceMetadata",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeFlowSourceMetadata",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "describe_flow_source_metadata",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFlowSourceThumbnail",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeFlowSourceThumbnail",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "describe_flow_source_thumbnail",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeGateway",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeGateway",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "describe_gateway",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeGatewayInstance",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeGatewayInstance",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "describe_gateway_instance",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeOffering",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeOffering",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "describe_offering",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeReservation",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeReservation",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "describe_reservation",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GrantFlowEntitlements",
+      "AuthorizedActions": [
+        {
+          "Name": "GrantFlowEntitlements",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "mediaconnect.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "grant_flow_entitlements",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListBridges",
+      "AuthorizedActions": [
+        {
+          "Name": "ListBridges",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "list_bridges",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListEntitlements",
+      "AuthorizedActions": [
+        {
+          "Name": "ListEntitlements",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "list_entitlements",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListFlows",
+      "AuthorizedActions": [
+        {
+          "Name": "ListFlows",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "list_flows",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListGatewayInstances",
+      "AuthorizedActions": [
+        {
+          "Name": "ListGatewayInstances",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "list_gateway_instances",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListGateways",
+      "AuthorizedActions": [
+        {
+          "Name": "ListGateways",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "list_gateways",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListOfferings",
+      "AuthorizedActions": [
+        {
+          "Name": "ListOfferings",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "list_offerings",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListReservations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListReservations",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "list_reservations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PurchaseOffering",
+      "AuthorizedActions": [
+        {
+          "Name": "PurchaseOffering",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "purchase_offering",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveBridgeOutput",
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "remove_bridge_output",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveBridgeSource",
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "remove_bridge_source",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveFlowMediaStream",
+      "AuthorizedActions": [
+        {
+          "Name": "RemoveFlowMediaStream",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "remove_flow_media_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveFlowOutput",
+      "AuthorizedActions": [
+        {
+          "Name": "RemoveFlowOutput",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "remove_flow_output",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveFlowSource",
+      "AuthorizedActions": [
+        {
+          "Name": "RemoveFlowSource",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "remove_flow_source",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveFlowVpcInterface",
+      "AuthorizedActions": [
+        {
+          "Name": "RemoveFlowVpcInterface",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "remove_flow_vpc_interface",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RevokeFlowEntitlement",
+      "AuthorizedActions": [
+        {
+          "Name": "RevokeFlowEntitlement",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "revoke_flow_entitlement",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartFlow",
+      "AuthorizedActions": [
+        {
+          "Name": "StartFlow",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "start_flow",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StopFlow",
+      "AuthorizedActions": [
+        {
+          "Name": "StopFlow",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "stop_flow",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBridge",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateBridge",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "update_bridge",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBridgeOutput",
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "update_bridge_output",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBridgeSource",
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "update_bridge_source",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBridgeState",
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "update_bridge_state",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFlow",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateFlow",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "update_flow",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFlowEntitlement",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "mediaconnect.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateFlowEntitlement",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "update_flow_entitlement",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFlowMediaStream",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateFlowMediaStream",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "update_flow_media_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFlowOutput",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "mediaconnect.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateFlowOutput",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "update_flow_output",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFlowSource",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "mediaconnect.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateFlowSource",
+          "Service": "mediaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "update_flow_source",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGatewayInstance",
+      "SDK": [
+        {
+          "Name": "mediaconnect",
+          "Method": "update_gateway_instance",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "Bridge",
@@ -923,12 +1898,18 @@
       "Name": "Entitlement",
       "ARNFormats": [
         "arn:${Partition}:mediaconnect:${Region}:${Account}:entitlement:${FlowId}:${EntitlementName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "Flow",
       "ARNFormats": [
         "arn:${Partition}:mediaconnect:${Region}:${Account}:flow:${FlowId}:${FlowName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -947,14 +1928,20 @@
       "Name": "Output",
       "ARNFormats": [
         "arn:${Partition}:mediaconnect:${Region}:${Account}:output:${OutputId}:${OutputName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "Source",
       "ARNFormats": [
         "arn:${Partition}:mediaconnect:${Region}:${Account}:source:${SourceId}:${SourceName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

@@ -416,6 +416,293 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CancelJobRun",
+      "AuthorizedActions": [
+        {
+          "Name": "CancelJobRun",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "cancel_job_run",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateApplication",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateApplication",
+          "Service": "emr-serverless"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "create_application",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApplication",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteApplication",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "delete_application",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetApplication",
+      "AuthorizedActions": [
+        {
+          "Name": "GetApplication",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "get_application",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetDashboardForJobRun",
+      "AuthorizedActions": [
+        {
+          "Name": "AccessSystemProfileLogs",
+          "Service": "emr-serverless"
+        },
+        {
+          "Name": "GetDashboardForJobRun",
+          "Service": "emr-serverless"
+        },
+        {
+          "Name": "GetDatabases",
+          "Service": "glue"
+        },
+        {
+          "Name": "SearchTables",
+          "Service": "glue"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "get_dashboard_for_job_run",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetJobRun",
+      "AuthorizedActions": [
+        {
+          "Name": "GetJobRun",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "get_job_run",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplications",
+      "AuthorizedActions": [
+        {
+          "Name": "ListApplications",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "list_applications",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobRunAttempts",
+      "AuthorizedActions": [
+        {
+          "Name": "ListJobRunAttempts",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "list_job_run_attempts",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobRuns",
+      "AuthorizedActions": [
+        {
+          "Name": "ListJobRuns",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "list_job_runs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartApplication",
+      "AuthorizedActions": [
+        {
+          "Name": "StartApplication",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "start_application",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartJobRun",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "emr-serverless.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "StartJobRun",
+          "Service": "emr-serverless"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "start_job_run",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StopApplication",
+      "AuthorizedActions": [
+        {
+          "Name": "StopApplication",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "stop_application",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateApplication",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateApplication",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "update_application",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "application",
@@ -436,5 +723,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

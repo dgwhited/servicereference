@@ -839,6 +839,647 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CreateActivity",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateActivity",
+          "Service": "states"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "create_activity",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStateMachine",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateStateMachine",
+          "Service": "states"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "states.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "PublishStateMachineVersion",
+          "Service": "states"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "create_state_machine",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStateMachineAlias",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateStateMachineAlias",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "create_state_machine_alias",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteActivity",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteActivity",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "delete_activity",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStateMachine",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteStateMachine",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "delete_state_machine",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStateMachineAlias",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteStateMachineAlias",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "delete_state_machine_alias",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStateMachineVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteStateMachineVersion",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "delete_state_machine_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeActivity",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeActivity",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "describe_activity",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeExecution",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeExecution",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "describe_execution",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMapRun",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeMapRun",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "describe_map_run",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStateMachine",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeStateMachine",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "describe_state_machine",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStateMachineAlias",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeStateMachineAlias",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "describe_state_machine_alias",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStateMachineForExecution",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeStateMachineForExecution",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "describe_state_machine_for_execution",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetActivityTask",
+      "AuthorizedActions": [
+        {
+          "Name": "GetActivityTask",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "get_activity_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetExecutionHistory",
+      "AuthorizedActions": [
+        {
+          "Name": "GetExecutionHistory",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "get_execution_history",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListActivities",
+      "AuthorizedActions": [
+        {
+          "Name": "ListActivities",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "list_activities",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListExecutions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListExecutions",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "list_executions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListMapRuns",
+      "AuthorizedActions": [
+        {
+          "Name": "ListMapRuns",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "list_map_runs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListStateMachineAliases",
+      "AuthorizedActions": [
+        {
+          "Name": "ListStateMachineAliases",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "list_state_machine_aliases",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListStateMachineVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListStateMachineVersions",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "list_state_machine_versions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListStateMachines",
+      "AuthorizedActions": [
+        {
+          "Name": "ListStateMachines",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "list_state_machines",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PublishStateMachineVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "PublishStateMachineVersion",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "publish_state_machine_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RedriveExecution",
+      "AuthorizedActions": [
+        {
+          "Name": "RedriveExecution",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "redrive_execution",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SendTaskFailure",
+      "AuthorizedActions": [
+        {
+          "Name": "SendTaskFailure",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "send_task_failure",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SendTaskHeartbeat",
+      "AuthorizedActions": [
+        {
+          "Name": "SendTaskHeartbeat",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "send_task_heartbeat",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SendTaskSuccess",
+      "AuthorizedActions": [
+        {
+          "Name": "SendTaskSuccess",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "send_task_success",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartExecution",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeExecution",
+          "Service": "states"
+        },
+        {
+          "Name": "StartExecution",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "start_execution",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartSyncExecution",
+      "AuthorizedActions": [
+        {
+          "Name": "StartSyncExecution",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "start_sync_execution",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StopExecution",
+      "AuthorizedActions": [
+        {
+          "Name": "StopExecution",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "stop_execution",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TestState",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "states.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TestState",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "test_state",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMapRun",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateMapRun",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "update_map_run",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStateMachine",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "states.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "PublishStateMachineVersion",
+          "Service": "states"
+        },
+        {
+          "Name": "UpdateStateMachine",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "update_state_machine",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStateMachineAlias",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateStateMachineAlias",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "update_state_machine_alias",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ValidateStateMachineDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "ValidateStateMachineDefinition",
+          "Service": "states"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "stepfunctions",
+          "Method": "validate_state_machine_definition",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "activity",
@@ -910,5 +1551,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

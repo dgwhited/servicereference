@@ -150,6 +150,21 @@
       }
     },
     {
+      "Name": "DescribeAccountSettings",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeLimits",
       "Annotations": {
         "Properties": {
@@ -804,6 +819,21 @@
       }
     },
     {
+      "Name": "UpdateAccountSettings",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateMaxRecordSize",
       "Annotations": {
         "Properties": {
@@ -855,6 +885,29 @@
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
       }
+    },
+    {
+      "Name": "UpdateStreamWarmThroughput",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
     }
   ],
   "ConditionKeys": [
@@ -895,6 +948,634 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "AddTagsToStream",
+      "AuthorizedActions": [
+        {
+          "Name": "AddTagsToStream",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "add_tags_to_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStream",
+      "AuthorizedActions": [
+        {
+          "Name": "AddTagsToStream",
+          "Service": "kinesis"
+        },
+        {
+          "Name": "CreateStream",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "create_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DecreaseStreamRetentionPeriod",
+      "AuthorizedActions": [
+        {
+          "Name": "DecreaseStreamRetentionPeriod",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "decrease_stream_retention_period",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteResourcePolicy",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "delete_resource_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStream",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteStream",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "delete_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterStreamConsumer",
+      "AuthorizedActions": [
+        {
+          "Name": "DeregisterStreamConsumer",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "deregister_stream_consumer",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAccountSettings",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeAccountSettings",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "describe_account_settings",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeLimits",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeLimits",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "describe_limits",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStream",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeStream",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "describe_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStreamConsumer",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeStreamConsumer",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "describe_stream_consumer",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStreamSummary",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeStreamSummary",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "describe_stream_summary",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DisableEnhancedMonitoring",
+      "AuthorizedActions": [
+        {
+          "Name": "DisableEnhancedMonitoring",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "disable_enhanced_monitoring",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "EnableEnhancedMonitoring",
+      "AuthorizedActions": [
+        {
+          "Name": "EnableEnhancedMonitoring",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "enable_enhanced_monitoring",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetRecords",
+      "AuthorizedActions": [
+        {
+          "Name": "GetRecords",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "get_records",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "GetResourcePolicy",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "get_resource_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetShardIterator",
+      "AuthorizedActions": [
+        {
+          "Name": "GetShardIterator",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "get_shard_iterator",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "IncreaseStreamRetentionPeriod",
+      "AuthorizedActions": [
+        {
+          "Name": "IncreaseStreamRetentionPeriod",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "increase_stream_retention_period",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListShards",
+      "AuthorizedActions": [
+        {
+          "Name": "ListShards",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "list_shards",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListStreamConsumers",
+      "AuthorizedActions": [
+        {
+          "Name": "ListStreamConsumers",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "list_stream_consumers",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListStreams",
+      "AuthorizedActions": [
+        {
+          "Name": "ListStreams",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "list_streams",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForStream",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForStream",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "list_tags_for_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "MergeShards",
+      "AuthorizedActions": [
+        {
+          "Name": "MergeShards",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "merge_shards",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutRecord",
+      "AuthorizedActions": [
+        {
+          "Name": "PutRecord",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "put_record",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutRecords",
+      "AuthorizedActions": [
+        {
+          "Name": "PutRecords",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "put_records",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "PutResourcePolicy",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "put_resource_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterStreamConsumer",
+      "AuthorizedActions": [
+        {
+          "Name": "RegisterStreamConsumer",
+          "Service": "kinesis"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "register_stream_consumer",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveTagsFromStream",
+      "AuthorizedActions": [
+        {
+          "Name": "RemoveTagsFromStream",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "remove_tags_from_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SplitShard",
+      "AuthorizedActions": [
+        {
+          "Name": "SplitShard",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "split_shard",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartStreamEncryption",
+      "AuthorizedActions": [
+        {
+          "Name": "StartStreamEncryption",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "start_stream_encryption",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StopStreamEncryption",
+      "AuthorizedActions": [
+        {
+          "Name": "StopStreamEncryption",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "stop_stream_encryption",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SubscribeToShard",
+      "AuthorizedActions": [
+        {
+          "Name": "SubscribeToShard",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "subscribe_to_shard",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAccountSettings",
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "update_account_settings",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMaxRecordSize",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateMaxRecordSize",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "update_max_record_size",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateShardCount",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateShardCount",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "update_shard_count",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStreamMode",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateStreamMode",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "update_stream_mode",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStreamWarmThroughput",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateStreamWarmThroughput",
+          "Service": "kinesis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesis",
+          "Method": "update_stream_warm_throughput",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "consumer",
@@ -921,5 +1602,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

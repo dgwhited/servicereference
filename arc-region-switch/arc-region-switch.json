@@ -478,6 +478,338 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "ApprovePlanExecutionStep",
+      "AuthorizedActions": [
+        {
+          "Name": "ApprovePlanExecutionStep",
+          "Service": "arc-region-switch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "approve_plan_execution_step",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CancelPlanExecution",
+      "AuthorizedActions": [
+        {
+          "Name": "CancelPlanExecution",
+          "Service": "arc-region-switch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "cancel_plan_execution",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePlan",
+      "AuthorizedActions": [
+        {
+          "Name": "CreatePlan",
+          "Service": "arc-region-switch"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "arc-region-switch.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "create_plan",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePlan",
+      "AuthorizedActions": [
+        {
+          "Name": "DeletePlan",
+          "Service": "arc-region-switch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "delete_plan",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPlan",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPlan",
+          "Service": "arc-region-switch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "get_plan",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPlanEvaluationStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPlanEvaluationStatus",
+          "Service": "arc-region-switch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "get_plan_evaluation_status",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPlanExecution",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPlanExecution",
+          "Service": "arc-region-switch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "get_plan_execution",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPlanInRegion",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPlanInRegion",
+          "Service": "arc-region-switch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "get_plan_in_region",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPlanExecutionEvents",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPlanExecutionEvents",
+          "Service": "arc-region-switch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "list_plan_execution_events",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPlanExecutions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPlanExecutions",
+          "Service": "arc-region-switch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "list_plan_executions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPlans",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPlans",
+          "Service": "arc-region-switch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "list_plans",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPlansInRegion",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPlansInRegion",
+          "Service": "arc-region-switch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "list_plans_in_region",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListRoute53HealthChecks",
+      "AuthorizedActions": [
+        {
+          "Name": "ListRoute53HealthChecks",
+          "Service": "arc-region-switch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "list_route53_health_checks",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "arc-region-switch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartPlanExecution",
+      "AuthorizedActions": [
+        {
+          "Name": "StartPlanExecution",
+          "Service": "arc-region-switch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "start_plan_execution",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePlan",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPlan",
+          "Service": "arc-region-switch"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "arc-region-switch.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdatePlan",
+          "Service": "arc-region-switch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "update_plan",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePlanExecution",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdatePlanExecution",
+          "Service": "arc-region-switch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "update_plan_execution",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePlanExecutionStep",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdatePlanExecutionStep",
+          "Service": "arc-region-switch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "arc-region-switch",
+          "Method": "update_plan_execution_step",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "plan",
@@ -489,5 +821,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

@@ -877,6 +877,744 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "AcknowledgeJob",
+      "AuthorizedActions": [
+        {
+          "Name": "AcknowledgeJob",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "acknowledge_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "AcknowledgeThirdPartyJob",
+      "AuthorizedActions": [
+        {
+          "Name": "AcknowledgeThirdPartyJob",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "acknowledge_third_party_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCustomActionType",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateCustomActionType",
+          "Service": "codepipeline"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "create_custom_action_type",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "CreatePipeline",
+          "Service": "codepipeline"
+        },
+        {
+          "Name": "PassConnection",
+          "Service": "codestar-connections"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "codepipeline.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "create_pipeline",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCustomActionType",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteCustomActionType",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "delete_custom_action_type",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "DeletePipeline",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "delete_pipeline",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWebhook",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteWebhook",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "delete_webhook",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterWebhookWithThirdParty",
+      "AuthorizedActions": [
+        {
+          "Name": "DeregisterWebhookWithThirdParty",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "deregister_webhook_with_third_party",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DisableStageTransition",
+      "AuthorizedActions": [
+        {
+          "Name": "DisableStageTransition",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "disable_stage_transition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "EnableStageTransition",
+      "AuthorizedActions": [
+        {
+          "Name": "EnableStageTransition",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "enable_stage_transition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetActionType",
+      "AuthorizedActions": [
+        {
+          "Name": "GetActionType",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "get_action_type",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetJobDetails",
+      "AuthorizedActions": [
+        {
+          "Name": "GetJobDetails",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "get_job_details",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPipeline",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "get_pipeline",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPipelineExecution",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPipelineExecution",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "get_pipeline_execution",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPipelineState",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPipelineState",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "get_pipeline_state",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetThirdPartyJobDetails",
+      "AuthorizedActions": [
+        {
+          "Name": "GetThirdPartyJobDetails",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "get_third_party_job_details",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListActionExecutions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListActionExecutions",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "list_action_executions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListActionTypes",
+      "AuthorizedActions": [
+        {
+          "Name": "ListActionTypes",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "list_action_types",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeployActionExecutionTargets",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDeployActionExecutionTargets",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "list_deploy_action_execution_targets",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPipelineExecutions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPipelineExecutions",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "list_pipeline_executions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPipelines",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPipelines",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "list_pipelines",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListRuleExecutions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListRuleExecutions",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "list_rule_executions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListRuleTypes",
+      "AuthorizedActions": [
+        {
+          "Name": "ListRuleTypes",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "list_rule_types",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListWebhooks",
+      "AuthorizedActions": [
+        {
+          "Name": "ListWebhooks",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "list_webhooks",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "OverrideStageCondition",
+      "AuthorizedActions": [
+        {
+          "Name": "OverrideStageCondition",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "override_stage_condition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PollForJobs",
+      "AuthorizedActions": [
+        {
+          "Name": "PollForJobs",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "poll_for_jobs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PollForThirdPartyJobs",
+      "AuthorizedActions": [
+        {
+          "Name": "PollForThirdPartyJobs",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "poll_for_third_party_jobs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutActionRevision",
+      "AuthorizedActions": [
+        {
+          "Name": "PutActionRevision",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "put_action_revision",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutApprovalResult",
+      "AuthorizedActions": [
+        {
+          "Name": "PutApprovalResult",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "put_approval_result",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutJobFailureResult",
+      "AuthorizedActions": [
+        {
+          "Name": "PutJobFailureResult",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "put_job_failure_result",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutJobSuccessResult",
+      "AuthorizedActions": [
+        {
+          "Name": "PutJobSuccessResult",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "put_job_success_result",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutThirdPartyJobFailureResult",
+      "AuthorizedActions": [
+        {
+          "Name": "PutThirdPartyJobFailureResult",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "put_third_party_job_failure_result",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutThirdPartyJobSuccessResult",
+      "AuthorizedActions": [
+        {
+          "Name": "PutThirdPartyJobSuccessResult",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "put_third_party_job_success_result",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutWebhook",
+      "AuthorizedActions": [
+        {
+          "Name": "PutWebhook",
+          "Service": "codepipeline"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "put_webhook",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterWebhookWithThirdParty",
+      "AuthorizedActions": [
+        {
+          "Name": "RegisterWebhookWithThirdParty",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "register_webhook_with_third_party",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RetryStageExecution",
+      "AuthorizedActions": [
+        {
+          "Name": "RetryStageExecution",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "retry_stage_execution",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RollbackStage",
+      "AuthorizedActions": [
+        {
+          "Name": "RollbackStage",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "rollback_stage",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartPipelineExecution",
+      "AuthorizedActions": [
+        {
+          "Name": "StartPipelineExecution",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "start_pipeline_execution",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StopPipelineExecution",
+      "AuthorizedActions": [
+        {
+          "Name": "StopPipelineExecution",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "stop_pipeline_execution",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateActionType",
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "update_action_type",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "PassConnection",
+          "Service": "codestar-connections"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "codepipeline.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdatePipeline",
+          "Service": "codepipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codepipeline",
+          "Method": "update_pipeline",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "action",
@@ -924,5 +1662,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

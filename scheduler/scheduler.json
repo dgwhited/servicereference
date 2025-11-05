@@ -286,6 +286,226 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CreateSchedule",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateSchedule",
+          "Service": "scheduler"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "scheduler.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "scheduler",
+          "Method": "create_schedule",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateScheduleGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateScheduleGroup",
+          "Service": "scheduler"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "scheduler"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "scheduler",
+          "Method": "create_schedule_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSchedule",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteSchedule",
+          "Service": "scheduler"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "scheduler",
+          "Method": "delete_schedule",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteScheduleGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteSchedule",
+          "Service": "scheduler"
+        },
+        {
+          "Name": "DeleteScheduleGroup",
+          "Service": "scheduler"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "scheduler",
+          "Method": "delete_schedule_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetSchedule",
+      "AuthorizedActions": [
+        {
+          "Name": "GetSchedule",
+          "Service": "scheduler"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "scheduler",
+          "Method": "get_schedule",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetScheduleGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "GetScheduleGroup",
+          "Service": "scheduler"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "scheduler",
+          "Method": "get_schedule_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListScheduleGroups",
+      "AuthorizedActions": [
+        {
+          "Name": "ListScheduleGroups",
+          "Service": "scheduler"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "scheduler",
+          "Method": "list_schedule_groups",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListSchedules",
+      "AuthorizedActions": [
+        {
+          "Name": "ListSchedules",
+          "Service": "scheduler"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "scheduler",
+          "Method": "list_schedules",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "scheduler"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "scheduler",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "scheduler"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "scheduler",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "scheduler"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "scheduler",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSchedule",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "scheduler.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateSchedule",
+          "Service": "scheduler"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "scheduler",
+          "Method": "update_schedule",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "schedule",
@@ -303,5 +523,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

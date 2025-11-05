@@ -183,6 +183,158 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CreateLifecyclePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateLifecyclePolicy",
+          "Service": "dlm"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "dlm.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "dlm"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "dlm",
+          "Method": "create_lifecycle_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLifecyclePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteLifecyclePolicy",
+          "Service": "dlm"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "dlm",
+          "Method": "delete_lifecycle_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetLifecyclePolicies",
+      "AuthorizedActions": [
+        {
+          "Name": "GetLifecyclePolicies",
+          "Service": "dlm"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "dlm",
+          "Method": "get_lifecycle_policies",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetLifecyclePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "GetLifecyclePolicy",
+          "Service": "dlm"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "dlm",
+          "Method": "get_lifecycle_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "dlm"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "dlm",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "dlm"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "dlm",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "dlm"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "dlm",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLifecyclePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "dlm.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateLifecyclePolicy",
+          "Service": "dlm"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "dlm",
+          "Method": "update_lifecycle_policy",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "policy",
@@ -194,5 +346,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

@@ -2336,6 +2336,1801 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "AssociateRoleToGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "AssociateRoleToGroup",
+          "Service": "greengrass"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "greengrass.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "associate_role_to_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateServiceRoleToAccount",
+      "AuthorizedActions": [
+        {
+          "Name": "AssociateServiceRoleToAccount",
+          "Service": "greengrass"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "greengrass.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "associate_service_role_to_account",
+          "Package": "Boto3"
+        },
+        {
+          "Name": "greengrassv2",
+          "Method": "associate_service_role_to_account",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "BatchAssociateClientDeviceWithCoreDevice",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchAssociateClientDeviceWithCoreDevice",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "batch_associate_client_device_with_core_device",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDisassociateClientDeviceFromCoreDevice",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchDisassociateClientDeviceFromCoreDevice",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "batch_disassociate_client_device_from_core_device",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CancelDeployment",
+      "AuthorizedActions": [
+        {
+          "Name": "CancelDeployment",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "cancel_deployment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateComponentVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateComponentVersion",
+          "Service": "greengrass"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "create_component_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConnectorDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateConnectorDefinition",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_connector_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConnectorDefinitionVersion",
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_connector_definition_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCoreDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateCoreDefinition",
+          "Service": "greengrass"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_core_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCoreDefinitionVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateCoreDefinitionVersion",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_core_definition_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDeployment",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDeployment",
+          "Service": "greengrass"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_deployment",
+          "Package": "Boto3"
+        },
+        {
+          "Name": "greengrassv2",
+          "Method": "create_deployment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDeviceDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDeviceDefinition",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_device_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDeviceDefinitionVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDeviceDefinitionVersion",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_device_definition_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFunctionDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateFunctionDefinition",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_function_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFunctionDefinitionVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateFunctionDefinitionVersion",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_function_definition_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateGroup",
+          "Service": "greengrass"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateGroupCertificateAuthority",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateGroupCertificateAuthority",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_group_certificate_authority",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateGroupVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateGroupVersion",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_group_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLoggerDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateLoggerDefinition",
+          "Service": "greengrass"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_logger_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateLoggerDefinitionVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateLoggerDefinitionVersion",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_logger_definition_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateResourceDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateResourceDefinition",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_resource_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateResourceDefinitionVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateResourceDefinitionVersion",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_resource_definition_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSoftwareUpdateJob",
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_software_update_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSubscriptionDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateSubscriptionDefinition",
+          "Service": "greengrass"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_subscription_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSubscriptionDefinitionVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateSubscriptionDefinitionVersion",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "create_subscription_definition_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteComponent",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteComponent",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "delete_component",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConnectorDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteConnectorDefinition",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "delete_connector_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCoreDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteCoreDefinition",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "delete_core_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCoreDevice",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteCoreDevice",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "delete_core_device",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeployment",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteDeployment",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "delete_deployment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeviceDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteDeviceDefinition",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "delete_device_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFunctionDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteFunctionDefinition",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "delete_function_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteGroup",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "delete_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteLoggerDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteLoggerDefinition",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "delete_logger_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourceDefinition",
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "delete_resource_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSubscriptionDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteSubscriptionDefinition",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "delete_subscription_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeComponent",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeComponent",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "describe_component",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateRoleFromGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "DisassociateRoleFromGroup",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "disassociate_role_from_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateServiceRoleFromAccount",
+      "AuthorizedActions": [
+        {
+          "Name": "DisassociateServiceRoleFromAccount",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "disassociate_service_role_from_account",
+          "Package": "Boto3"
+        },
+        {
+          "Name": "greengrassv2",
+          "Method": "disassociate_service_role_from_account",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetAssociatedRole",
+      "AuthorizedActions": [
+        {
+          "Name": "GetAssociatedRole",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_associated_role",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetBulkDeploymentStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "GetBulkDeploymentStatus",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_bulk_deployment_status",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetComponent",
+      "AuthorizedActions": [
+        {
+          "Name": "GetComponent",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "get_component",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetComponentVersionArtifact",
+      "AuthorizedActions": [
+        {
+          "Name": "GetComponentVersionArtifact",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "get_component_version_artifact",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnectivityInfo",
+      "AuthorizedActions": [
+        {
+          "Name": "GetConnectivityInfo",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_connectivity_info",
+          "Package": "Boto3"
+        },
+        {
+          "Name": "greengrassv2",
+          "Method": "get_connectivity_info",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnectorDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "GetConnectorDefinition",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_connector_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnectorDefinitionVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "GetConnectorDefinitionVersion",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_connector_definition_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetCoreDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "GetCoreDefinition",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_core_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetCoreDefinitionVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "GetCoreDefinitionVersion",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_core_definition_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetCoreDevice",
+      "AuthorizedActions": [
+        {
+          "Name": "GetCoreDevice",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "get_core_device",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeployment",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDeployment",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "get_deployment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeploymentStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDeploymentStatus",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_deployment_status",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeviceDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDeviceDefinition",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_device_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeviceDefinitionVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDeviceDefinitionVersion",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_device_definition_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetFunctionDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "GetFunctionDefinition",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_function_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetFunctionDefinitionVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "GetFunctionDefinitionVersion",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_function_definition_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "GetGroup",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetGroupCertificateAuthority",
+      "AuthorizedActions": [
+        {
+          "Name": "GetGroupCertificateAuthority",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_group_certificate_authority",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetGroupCertificateConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetGroupCertificateConfiguration",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_group_certificate_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetGroupVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "GetGroupVersion",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_group_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetLoggerDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "GetLoggerDefinition",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_logger_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetLoggerDefinitionVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "GetLoggerDefinitionVersion",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_logger_definition_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourceDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "GetResourceDefinition",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_resource_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourceDefinitionVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "GetResourceDefinitionVersion",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_resource_definition_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetServiceRoleForAccount",
+      "AuthorizedActions": [
+        {
+          "Name": "GetServiceRoleForAccount",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_service_role_for_account",
+          "Package": "Boto3"
+        },
+        {
+          "Name": "greengrassv2",
+          "Method": "get_service_role_for_account",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetSubscriptionDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "GetSubscriptionDefinition",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_subscription_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetSubscriptionDefinitionVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "GetSubscriptionDefinitionVersion",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_subscription_definition_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetThingRuntimeConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetThingRuntimeConfiguration",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "get_thing_runtime_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListBulkDeploymentDetailedReports",
+      "AuthorizedActions": [
+        {
+          "Name": "ListBulkDeploymentDetailedReports",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_bulk_deployment_detailed_reports",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListBulkDeployments",
+      "AuthorizedActions": [
+        {
+          "Name": "ListBulkDeployments",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_bulk_deployments",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListClientDevicesAssociatedWithCoreDevice",
+      "AuthorizedActions": [
+        {
+          "Name": "ListClientDevicesAssociatedWithCoreDevice",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "list_client_devices_associated_with_core_device",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListComponentVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListComponentVersions",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "list_component_versions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListComponents",
+      "AuthorizedActions": [
+        {
+          "Name": "ListComponents",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "list_components",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListConnectorDefinitionVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListConnectorDefinitionVersions",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_connector_definition_versions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListConnectorDefinitions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListConnectorDefinitions",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_connector_definitions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListCoreDefinitionVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListCoreDefinitionVersions",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_core_definition_versions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListCoreDefinitions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListCoreDefinitions",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_core_definitions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListCoreDevices",
+      "AuthorizedActions": [
+        {
+          "Name": "ListCoreDevices",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "list_core_devices",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeployments",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDeployments",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_deployments",
+          "Package": "Boto3"
+        },
+        {
+          "Name": "greengrassv2",
+          "Method": "list_deployments",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeviceDefinitionVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDeviceDefinitionVersions",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_device_definition_versions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeviceDefinitions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDeviceDefinitions",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_device_definitions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListEffectiveDeployments",
+      "AuthorizedActions": [
+        {
+          "Name": "ListEffectiveDeployments",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "list_effective_deployments",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListFunctionDefinitionVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListFunctionDefinitionVersions",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_function_definition_versions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListFunctionDefinitions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListFunctionDefinitions",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_function_definitions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListGroupCertificateAuthorities",
+      "AuthorizedActions": [
+        {
+          "Name": "ListGroupCertificateAuthorities",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_group_certificate_authorities",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListGroupVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListGroupVersions",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_group_versions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListGroups",
+      "AuthorizedActions": [
+        {
+          "Name": "ListGroups",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_groups",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListInstalledComponents",
+      "AuthorizedActions": [
+        {
+          "Name": "ListInstalledComponents",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "list_installed_components",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListLoggerDefinitionVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListLoggerDefinitionVersions",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_logger_definition_versions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListLoggerDefinitions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListLoggerDefinitions",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_logger_definitions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListResourceDefinitionVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListResourceDefinitionVersions",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_resource_definition_versions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListResourceDefinitions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListResourceDefinitions",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_resource_definitions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListSubscriptionDefinitionVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListSubscriptionDefinitionVersions",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_subscription_definition_versions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListSubscriptionDefinitions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListSubscriptionDefinitions",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_subscription_definitions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        },
+        {
+          "Name": "greengrassv2",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ResetDeployments",
+      "AuthorizedActions": [
+        {
+          "Name": "ResetDeployments",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "reset_deployments",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ResolveComponentCandidates",
+      "SDK": [
+        {
+          "Name": "greengrassv2",
+          "Method": "resolve_component_candidates",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartBulkDeployment",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "greengrass.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "StartBulkDeployment",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "start_bulk_deployment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StopBulkDeployment",
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "stop_bulk_deployment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        },
+        {
+          "Name": "greengrassv2",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        },
+        {
+          "Name": "greengrassv2",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConnectivityInfo",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateConnectivityInfo",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "update_connectivity_info",
+          "Package": "Boto3"
+        },
+        {
+          "Name": "greengrassv2",
+          "Method": "update_connectivity_info",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConnectorDefinition",
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "update_connector_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCoreDefinition",
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "update_core_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDeviceDefinition",
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "update_device_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFunctionDefinition",
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "update_function_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGroup",
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "update_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGroupCertificateConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateGroupCertificateConfiguration",
+          "Service": "greengrass"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "update_group_certificate_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateLoggerDefinition",
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "update_logger_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateResourceDefinition",
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "update_resource_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSubscriptionDefinition",
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "update_subscription_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateThingRuntimeConfiguration",
+      "SDK": [
+        {
+          "Name": "greengrass",
+          "Method": "update_thing_runtime_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "bulkDeployment",
@@ -2528,5 +4323,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

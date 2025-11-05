@@ -477,6 +477,342 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CreateCluster",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateCluster",
+          "Service": "pcs"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "create_cluster",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateComputeNodeGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateComputeNodeGroup",
+          "Service": "pcs"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ec2.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "create_compute_node_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateQueue",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateQueue",
+          "Service": "pcs"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "create_queue",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCluster",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteCluster",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "delete_cluster",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteComputeNodeGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteComputeNodeGroup",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "delete_compute_node_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteQueue",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteQueue",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "delete_queue",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetCluster",
+      "AuthorizedActions": [
+        {
+          "Name": "GetCluster",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "get_cluster",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetComputeNodeGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "GetComputeNodeGroup",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "get_compute_node_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetQueue",
+      "AuthorizedActions": [
+        {
+          "Name": "GetQueue",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "get_queue",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListClusters",
+      "AuthorizedActions": [
+        {
+          "Name": "ListClusters",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "list_clusters",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListComputeNodeGroups",
+      "AuthorizedActions": [
+        {
+          "Name": "ListComputeNodeGroups",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "list_compute_node_groups",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListQueues",
+      "AuthorizedActions": [
+        {
+          "Name": "ListQueues",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "list_queues",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterComputeNodeGroupInstance",
+      "AuthorizedActions": [
+        {
+          "Name": "RegisterComputeNodeGroupInstance",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "register_compute_node_group_instance",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCluster",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateCluster",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "update_cluster",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateComputeNodeGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ec2.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateComputeNodeGroup",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "update_compute_node_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateQueue",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateQueue",
+          "Service": "pcs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pcs",
+          "Method": "update_queue",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "cluster",
@@ -506,5 +842,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

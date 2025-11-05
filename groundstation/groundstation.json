@@ -726,6 +726,549 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CancelContact",
+      "AuthorizedActions": [
+        {
+          "Name": "CancelContact",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "cancel_contact",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConfig",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateConfig",
+          "Service": "groundstation"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "create_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataflowEndpointGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDataflowEndpointGroup",
+          "Service": "groundstation"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "groundstation.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "create_dataflow_endpoint_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEphemeris",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateEphemeris",
+          "Service": "groundstation"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "create_ephemeris",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMissionProfile",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateMissionProfile",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "create_mission_profile",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfig",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteConfig",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "delete_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataflowEndpointGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteDataflowEndpointGroup",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "delete_dataflow_endpoint_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEphemeris",
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "delete_ephemeris",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMissionProfile",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteMissionProfile",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "delete_mission_profile",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeContact",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeContact",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "describe_contact",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEphemeris",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeEphemeris",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "describe_ephemeris",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetAgentConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetAgentConfiguration",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "get_agent_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfig",
+      "AuthorizedActions": [
+        {
+          "Name": "GetConfig",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "get_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataflowEndpointGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDataflowEndpointGroup",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "get_dataflow_endpoint_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetMinuteUsage",
+      "AuthorizedActions": [
+        {
+          "Name": "GetMinuteUsage",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "get_minute_usage",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetMissionProfile",
+      "AuthorizedActions": [
+        {
+          "Name": "GetMissionProfile",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "get_mission_profile",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetSatellite",
+      "AuthorizedActions": [
+        {
+          "Name": "GetSatellite",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "get_satellite",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListConfigs",
+      "AuthorizedActions": [
+        {
+          "Name": "ListConfigs",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "list_configs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListContacts",
+      "AuthorizedActions": [
+        {
+          "Name": "ListContacts",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "list_contacts",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataflowEndpointGroups",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDataflowEndpointGroups",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "list_dataflow_endpoint_groups",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListEphemerides",
+      "AuthorizedActions": [
+        {
+          "Name": "ListEphemerides",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "list_ephemerides",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListGroundStations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListGroundStations",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "list_ground_stations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListMissionProfiles",
+      "AuthorizedActions": [
+        {
+          "Name": "ListMissionProfiles",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "list_mission_profiles",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListSatellites",
+      "AuthorizedActions": [
+        {
+          "Name": "ListSatellites",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "list_satellites",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterAgent",
+      "AuthorizedActions": [
+        {
+          "Name": "RegisterAgent",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "register_agent",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ReserveContact",
+      "AuthorizedActions": [
+        {
+          "Name": "ReserveContact",
+          "Service": "groundstation"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "reserve_contact",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgentStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateAgentStatus",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "update_agent_status",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConfig",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateConfig",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "update_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEphemeris",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateEphemeris",
+          "Service": "groundstation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "update_ephemeris",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMissionProfile",
+      "SDK": [
+        {
+          "Name": "groundstation",
+          "Method": "update_mission_profile",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "Agent",
@@ -806,5 +1349,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

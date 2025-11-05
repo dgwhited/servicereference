@@ -612,6 +612,528 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CreateAwsLogSource",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateAwsLogSource",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "create_aws_log_source",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCustomLogSource",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateCustomLogSource",
+          "Service": "securitylake"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "glue.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "create_custom_log_source",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataLake",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDataLake",
+          "Service": "securitylake"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "lambda.amazonaws.com",
+              "s3.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "create_data_lake",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataLakeExceptionSubscription",
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "create_data_lake_exception_subscription",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataLakeOrganizationConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDataLakeOrganizationConfiguration",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "create_data_lake_organization_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSubscriber",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateSubscriber",
+          "Service": "securitylake"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "create_subscriber",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSubscriberNotification",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateSubscriberNotification",
+          "Service": "securitylake"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "events.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "create_subscriber_notification",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAwsLogSource",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteAwsLogSource",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "delete_aws_log_source",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCustomLogSource",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteCustomLogSource",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "delete_custom_log_source",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataLake",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteDataLake",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "delete_data_lake",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataLakeExceptionSubscription",
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "delete_data_lake_exception_subscription",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataLakeOrganizationConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteDataLakeOrganizationConfiguration",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "delete_data_lake_organization_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSubscriber",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteSubscriber",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "delete_subscriber",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSubscriberNotification",
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "delete_subscriber_notification",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterDataLakeDelegatedAdministrator",
+      "AuthorizedActions": [
+        {
+          "Name": "DeregisterDataLakeDelegatedAdministrator",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "deregister_data_lake_delegated_administrator",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataLakeExceptionSubscription",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDataLakeExceptionSubscription",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "get_data_lake_exception_subscription",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataLakeOrganizationConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDataLakeOrganizationConfiguration",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "get_data_lake_organization_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataLakeSources",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDataLakeSources",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "get_data_lake_sources",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetSubscriber",
+      "AuthorizedActions": [
+        {
+          "Name": "GetSubscriber",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "get_subscriber",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataLakeExceptions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDataLakeExceptions",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "list_data_lake_exceptions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataLakes",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDataLakes",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "list_data_lakes",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListLogSources",
+      "AuthorizedActions": [
+        {
+          "Name": "ListLogSources",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "list_log_sources",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListSubscribers",
+      "AuthorizedActions": [
+        {
+          "Name": "ListSubscribers",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "list_subscribers",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterDataLakeDelegatedAdministrator",
+      "AuthorizedActions": [
+        {
+          "Name": "RegisterDataLakeDelegatedAdministrator",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "register_data_lake_delegated_administrator",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataLake",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "s3.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateDataLake",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "update_data_lake",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataLakeExceptionSubscription",
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "update_data_lake_exception_subscription",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSubscriber",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateSubscriber",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "update_subscriber",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSubscriberNotification",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "events.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateSubscriberNotification",
+          "Service": "securitylake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securitylake",
+          "Method": "update_subscriber_notification",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "data-lake",
@@ -634,5 +1156,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

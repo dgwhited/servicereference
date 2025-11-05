@@ -107,5 +107,91 @@
       }
     }
   ],
-  "Version": "v1.3"
+  "Operations": [
+    {
+      "Name": "GetAccountActivity",
+      "AuthorizedActions": [
+        {
+          "Name": "GetAccountActivity",
+          "Service": "freetier"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "freetier",
+          "Method": "get_account_activity",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetAccountPlanState",
+      "AuthorizedActions": [
+        {
+          "Name": "GetAccountPlanState",
+          "Service": "freetier"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "freetier",
+          "Method": "get_account_plan_state",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetFreeTierUsage",
+      "AuthorizedActions": [
+        {
+          "Name": "GetFreeTierUsage",
+          "Service": "freetier"
+        },
+        {
+          "Name": "ViewBilling",
+          "Service": "aws-portal"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "freetier",
+          "Method": "get_free_tier_usage",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListAccountActivities",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAccountActivities",
+          "Service": "freetier"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "freetier",
+          "Method": "list_account_activities",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpgradeAccountPlan",
+      "AuthorizedActions": [
+        {
+          "Name": "UpgradeAccountPlan",
+          "Service": "freetier"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "freetier",
+          "Method": "upgrade_account_plan",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
+  "Version": "v1.4"
 }

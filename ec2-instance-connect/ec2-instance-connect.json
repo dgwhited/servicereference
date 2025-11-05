@@ -113,6 +113,40 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "SendSSHPublicKey",
+      "AuthorizedActions": [
+        {
+          "Name": "SendSSHPublicKey",
+          "Service": "ec2-instance-connect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ec2-instance-connect",
+          "Method": "send_ssh_public_key",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SendSerialConsoleSSHPublicKey",
+      "AuthorizedActions": [
+        {
+          "Name": "SendSerialConsoleSSHPublicKey",
+          "Service": "ec2-instance-connect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ec2-instance-connect",
+          "Method": "send_serial_console_ssh_public_key",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "instance",
@@ -135,5 +169,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

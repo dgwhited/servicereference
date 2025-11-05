@@ -268,6 +268,222 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CreateDeliveryStream",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDeliveryStream",
+          "Service": "firehose"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "firehose.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagDeliveryStream",
+          "Service": "firehose"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "firehose",
+          "Method": "create_delivery_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeliveryStream",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteDeliveryStream",
+          "Service": "firehose"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "firehose",
+          "Method": "delete_delivery_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDeliveryStream",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeDeliveryStream",
+          "Service": "firehose"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "firehose",
+          "Method": "describe_delivery_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeliveryStreams",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDeliveryStreams",
+          "Service": "firehose"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "firehose",
+          "Method": "list_delivery_streams",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForDeliveryStream",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForDeliveryStream",
+          "Service": "firehose"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "firehose",
+          "Method": "list_tags_for_delivery_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutRecord",
+      "AuthorizedActions": [
+        {
+          "Name": "PutRecord",
+          "Service": "firehose"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "firehose",
+          "Method": "put_record",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutRecordBatch",
+      "AuthorizedActions": [
+        {
+          "Name": "PutRecordBatch",
+          "Service": "firehose"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "firehose",
+          "Method": "put_record_batch",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartDeliveryStreamEncryption",
+      "AuthorizedActions": [
+        {
+          "Name": "StartDeliveryStreamEncryption",
+          "Service": "firehose"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "firehose",
+          "Method": "start_delivery_stream_encryption",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StopDeliveryStreamEncryption",
+      "AuthorizedActions": [
+        {
+          "Name": "StopDeliveryStreamEncryption",
+          "Service": "firehose"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "firehose",
+          "Method": "stop_delivery_stream_encryption",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagDeliveryStream",
+      "AuthorizedActions": [
+        {
+          "Name": "TagDeliveryStream",
+          "Service": "firehose"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "firehose",
+          "Method": "tag_delivery_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagDeliveryStream",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagDeliveryStream",
+          "Service": "firehose"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "firehose",
+          "Method": "untag_delivery_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDestination",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "firehose.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateDestination",
+          "Service": "firehose"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "firehose",
+          "Method": "update_destination",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "deliverystream",
@@ -279,5 +495,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

@@ -283,6 +283,222 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CreateCliToken",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateCliToken",
+          "Service": "airflow"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mwaa",
+          "Method": "create_cli_token",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEnvironment",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateEnvironment",
+          "Service": "airflow"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "airflow.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "airflow"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mwaa",
+          "Method": "create_environment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWebLoginToken",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateWebLoginToken",
+          "Service": "airflow"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mwaa",
+          "Method": "create_web_login_token",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEnvironment",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteEnvironment",
+          "Service": "airflow"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mwaa",
+          "Method": "delete_environment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetEnvironment",
+      "AuthorizedActions": [
+        {
+          "Name": "GetEnvironment",
+          "Service": "airflow"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mwaa",
+          "Method": "get_environment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "InvokeRestApi",
+      "AuthorizedActions": [
+        {
+          "Name": "InvokeRestApi",
+          "Service": "airflow"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mwaa",
+          "Method": "invoke_rest_api",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListEnvironments",
+      "AuthorizedActions": [
+        {
+          "Name": "ListEnvironments",
+          "Service": "airflow"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mwaa",
+          "Method": "list_environments",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "airflow"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mwaa",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PublishMetrics",
+      "AuthorizedActions": [
+        {
+          "Name": "PublishMetrics",
+          "Service": "airflow"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mwaa",
+          "Method": "publish_metrics",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "airflow"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mwaa",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "airflow"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mwaa",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEnvironment",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "airflow.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateEnvironment",
+          "Service": "airflow"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mwaa",
+          "Method": "update_environment",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "environment",
@@ -297,5 +513,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

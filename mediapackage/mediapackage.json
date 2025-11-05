@@ -409,6 +409,341 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "ConfigureLogs",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateChannel",
+          "Service": "mediapackage"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "configure_logs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateChannel",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateChannel",
+          "Service": "mediapackage"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "mediapackage"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "create_channel",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateHarvestJob",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateHarvestJob",
+          "Service": "mediapackage"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "mediapackage.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "create_harvest_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateOriginEndpoint",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateOriginEndpoint",
+          "Service": "mediapackage"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "mediapackage.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "mediapackage"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "create_origin_endpoint",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteChannel",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteChannel",
+          "Service": "mediapackage"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "delete_channel",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteOriginEndpoint",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteOriginEndpoint",
+          "Service": "mediapackage"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "delete_origin_endpoint",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeChannel",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeChannel",
+          "Service": "mediapackage"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "describe_channel",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeHarvestJob",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeHarvestJob",
+          "Service": "mediapackage"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "describe_harvest_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeOriginEndpoint",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeOriginEndpoint",
+          "Service": "mediapackage"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "describe_origin_endpoint",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListChannels",
+      "AuthorizedActions": [
+        {
+          "Name": "ListChannels",
+          "Service": "mediapackage"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "list_channels",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListHarvestJobs",
+      "AuthorizedActions": [
+        {
+          "Name": "ListHarvestJobs",
+          "Service": "mediapackage"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "list_harvest_jobs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListOriginEndpoints",
+      "AuthorizedActions": [
+        {
+          "Name": "ListOriginEndpoints",
+          "Service": "mediapackage"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "list_origin_endpoints",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "mediapackage"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RotateChannelCredentials",
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "rotate_channel_credentials",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RotateIngestEndpointCredentials",
+      "AuthorizedActions": [
+        {
+          "Name": "RotateIngestEndpointCredentials",
+          "Service": "mediapackage"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "rotate_ingest_endpoint_credentials",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "mediapackage"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "mediapackage"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateChannel",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateChannel",
+          "Service": "mediapackage"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "update_channel",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateOriginEndpoint",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "mediapackage.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateOriginEndpoint",
+          "Service": "mediapackage"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "mediapackage",
+          "Method": "update_origin_endpoint",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "channels",
@@ -438,5 +773,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

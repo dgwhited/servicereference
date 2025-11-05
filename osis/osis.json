@@ -467,6 +467,367 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CreatePipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "CreatePipeline",
+          "Service": "osis"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "osis-pipelines.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "create_pipeline",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePipelineEndpoint",
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "create_pipeline_endpoint",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "DeletePipeline",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "delete_pipeline",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePipelineEndpoint",
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "delete_pipeline_endpoint",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteResourcePolicy",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "delete_resource_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPipeline",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "get_pipeline",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPipelineBlueprint",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPipelineBlueprint",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "get_pipeline_blueprint",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPipelineChangeProgress",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPipelineChangeProgress",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "get_pipeline_change_progress",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "GetResourcePolicy",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "get_resource_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPipelineBlueprints",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPipelineBlueprints",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "list_pipeline_blueprints",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPipelineEndpointConnections",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPipelineEndpointConnections",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "list_pipeline_endpoint_connections",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPipelineEndpoints",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPipelineEndpoints",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "list_pipeline_endpoints",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPipelines",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPipelines",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "list_pipelines",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "put_resource_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RevokePipelineEndpointConnections",
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "revoke_pipeline_endpoint_connections",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartPipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "StartPipeline",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "start_pipeline",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StopPipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "StopPipeline",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "stop_pipeline",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "osis-pipelines.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdatePipeline",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "update_pipeline",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ValidatePipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "osis-pipelines.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "ValidatePipeline",
+          "Service": "osis"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "osis",
+          "Method": "validate_pipeline",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "pipeline",
@@ -493,5 +854,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

@@ -410,6 +410,321 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CreateConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateConnector",
+          "Service": "kafkaconnect"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "kafkaconnect.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "create_connector",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCustomPlugin",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateCustomPlugin",
+          "Service": "kafkaconnect"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "create_custom_plugin",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWorkerConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateWorkerConfiguration",
+          "Service": "kafkaconnect"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "create_worker_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteConnector",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "delete_connector",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCustomPlugin",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteCustomPlugin",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "delete_custom_plugin",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkerConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteWorkerConfiguration",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "delete_worker_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeConnector",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "describe_connector",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeConnectorOperation",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeConnector",
+          "Service": "kafkaconnect"
+        },
+        {
+          "Name": "DescribeConnectorOperation",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "describe_connector_operation",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCustomPlugin",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeCustomPlugin",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "describe_custom_plugin",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWorkerConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeWorkerConfiguration",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "describe_worker_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListConnectorOperations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListConnectorOperations",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "list_connector_operations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListConnectors",
+      "AuthorizedActions": [
+        {
+          "Name": "ListConnectors",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "list_connectors",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListCustomPlugins",
+      "AuthorizedActions": [
+        {
+          "Name": "ListCustomPlugins",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "list_custom_plugins",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListWorkerConfigurations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListWorkerConfigurations",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "list_worker_configurations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateConnector",
+          "Service": "kafkaconnect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafkaconnect",
+          "Method": "update_connector",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "connector",
@@ -448,5 +763,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

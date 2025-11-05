@@ -860,6 +860,585 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CreateConnection",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateConnection",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "CreateConnection",
+          "Service": "codestar-connections"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "create_connection",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateHost",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateHost",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "CreateHost",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "create_host",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRepositoryLink",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateRepositoryLink",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "CreateRepositoryLink",
+          "Service": "codestar-connections"
+        },
+        {
+          "Name": "PassConnection",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "PassConnection",
+          "Service": "codestar-connections"
+        },
+        {
+          "Name": "UseConnection",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "UseConnection",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "create_repository_link",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSyncConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateSyncConfiguration",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "CreateSyncConfiguration",
+          "Service": "codestar-connections"
+        },
+        {
+          "Name": "PassRepository",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "PassRepository",
+          "Service": "codestar-connections"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "cloudformation.sync.codeconnections.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "create_sync_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConnection",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteConnection",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "DeleteConnection",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "delete_connection",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteHost",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteHost",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "DeleteHost",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "delete_host",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRepositoryLink",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteRepositoryLink",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "DeleteRepositoryLink",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "delete_repository_link",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSyncConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteSyncConfiguration",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "DeleteSyncConfiguration",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "delete_sync_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnection",
+      "AuthorizedActions": [
+        {
+          "Name": "GetConnection",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "GetConnection",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "get_connection",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetHost",
+      "AuthorizedActions": [
+        {
+          "Name": "GetHost",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "GetHost",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "get_host",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetRepositoryLink",
+      "AuthorizedActions": [
+        {
+          "Name": "GetRepositoryLink",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "GetRepositoryLink",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "get_repository_link",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetRepositorySyncStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "GetRepositorySyncStatus",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "GetRepositorySyncStatus",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "get_repository_sync_status",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourceSyncStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "GetResourceSyncStatus",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "GetResourceSyncStatus",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "get_resource_sync_status",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetSyncBlockerSummary",
+      "AuthorizedActions": [
+        {
+          "Name": "GetSyncBlockerSummary",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "GetSyncBlockerSummary",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "get_sync_blocker_summary",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetSyncConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetSyncConfiguration",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "GetSyncConfiguration",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "get_sync_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListConnections",
+      "AuthorizedActions": [
+        {
+          "Name": "ListConnections",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "ListConnections",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "list_connections",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListHosts",
+      "AuthorizedActions": [
+        {
+          "Name": "ListHosts",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "ListHosts",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "list_hosts",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListRepositoryLinks",
+      "AuthorizedActions": [
+        {
+          "Name": "ListRepositoryLinks",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "ListRepositoryLinks",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "list_repository_links",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListRepositorySyncDefinitions",
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "list_repository_sync_definitions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListSyncConfigurations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListSyncConfigurations",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "ListSyncConfigurations",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "list_sync_configurations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "ListTagsForResource",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "UntagResource",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateHost",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateHost",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "UpdateHost",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "update_host",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRepositoryLink",
+      "AuthorizedActions": [
+        {
+          "Name": "PassConnection",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "PassConnection",
+          "Service": "codestar-connections"
+        },
+        {
+          "Name": "UpdateRepositoryLink",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "UpdateRepositoryLink",
+          "Service": "codestar-connections"
+        },
+        {
+          "Name": "UseConnection",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "UseConnection",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "update_repository_link",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSyncBlocker",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateSyncBlocker",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "UpdateSyncBlocker",
+          "Service": "codestar-connections"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "update_sync_blocker",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSyncConfiguration",
+      "SDK": [
+        {
+          "Name": "codestar-connections",
+          "Method": "update_sync_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "Connection",
@@ -889,5 +1468,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

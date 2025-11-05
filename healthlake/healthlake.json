@@ -764,6 +764,238 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CreateFHIRDatastore",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateFHIRDatastore",
+          "Service": "healthlake"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "healthlake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "healthlake",
+          "Method": "create_fhir_datastore",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFHIRDatastore",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteFHIRDatastore",
+          "Service": "healthlake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "healthlake",
+          "Method": "delete_fhir_datastore",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFHIRDatastore",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeFHIRDatastore",
+          "Service": "healthlake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "healthlake",
+          "Method": "describe_fhir_datastore",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFHIRExportJob",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeFHIRExportJob",
+          "Service": "healthlake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "healthlake",
+          "Method": "describe_fhir_export_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFHIRImportJob",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeFHIRImportJob",
+          "Service": "healthlake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "healthlake",
+          "Method": "describe_fhir_import_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListFHIRDatastores",
+      "AuthorizedActions": [
+        {
+          "Name": "ListFHIRDatastores",
+          "Service": "healthlake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "healthlake",
+          "Method": "list_fhir_datastores",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListFHIRExportJobs",
+      "AuthorizedActions": [
+        {
+          "Name": "ListFHIRExportJobs",
+          "Service": "healthlake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "healthlake",
+          "Method": "list_fhir_export_jobs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListFHIRImportJobs",
+      "AuthorizedActions": [
+        {
+          "Name": "ListFHIRImportJobs",
+          "Service": "healthlake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "healthlake",
+          "Method": "list_fhir_import_jobs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "healthlake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "healthlake",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartFHIRExportJob",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "healthlake.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "StartFHIRExportJob",
+          "Service": "healthlake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "healthlake",
+          "Method": "start_fhir_export_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartFHIRImportJob",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "healthlake.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "StartFHIRImportJob",
+          "Service": "healthlake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "healthlake",
+          "Method": "start_fhir_import_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "healthlake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "healthlake",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "healthlake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "healthlake",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "datastore",
@@ -775,5 +1007,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

@@ -679,6 +679,200 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CreateInvestigationGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateInvestigationGroup",
+          "Service": "aiops"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "aiops.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "aiops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "aiops",
+          "Method": "create_investigation_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInvestigationGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteInvestigationGroup",
+          "Service": "aiops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "aiops",
+          "Method": "delete_investigation_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteInvestigationGroupPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteInvestigationGroupPolicy",
+          "Service": "aiops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "aiops",
+          "Method": "delete_investigation_group_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetInvestigationGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "GetInvestigationGroup",
+          "Service": "aiops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "aiops",
+          "Method": "get_investigation_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetInvestigationGroupPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "GetInvestigationGroupPolicy",
+          "Service": "aiops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "aiops",
+          "Method": "get_investigation_group_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListInvestigationGroups",
+      "AuthorizedActions": [
+        {
+          "Name": "ListInvestigationGroups",
+          "Service": "aiops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "aiops",
+          "Method": "list_investigation_groups",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "aiops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "aiops",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutInvestigationGroupPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "PutInvestigationGroupPolicy",
+          "Service": "aiops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "aiops",
+          "Method": "put_investigation_group_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "SDK": [
+        {
+          "Name": "aiops",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "aiops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "aiops",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateInvestigationGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "aiops.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateInvestigationGroup",
+          "Service": "aiops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "aiops",
+          "Method": "update_investigation_group",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "investigation-group",
@@ -690,5 +884,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

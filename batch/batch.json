@@ -987,6 +987,693 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CancelJob",
+      "AuthorizedActions": [
+        {
+          "Name": "CancelJob",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "cancel_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateComputeEnvironment",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateComputeEnvironment",
+          "Service": "batch"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "batch.amazonaws.com",
+              "ec2.amazonaws.com",
+              "spotfleet.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "create_compute_environment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConsumableResource",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateConsumableResource",
+          "Service": "batch"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "create_consumable_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateJobQueue",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateJobQueue",
+          "Service": "batch"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "create_job_queue",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSchedulingPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateSchedulingPolicy",
+          "Service": "batch"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "create_scheduling_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateServiceEnvironment",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateServiceEnvironment",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "create_service_environment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteComputeEnvironment",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteComputeEnvironment",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "delete_compute_environment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConsumableResource",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteConsumableResource",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "delete_consumable_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteJobQueue",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteJobQueue",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "delete_job_queue",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSchedulingPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteSchedulingPolicy",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "delete_scheduling_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteServiceEnvironment",
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "delete_service_environment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterJobDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "DeregisterJobDefinition",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "deregister_job_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeComputeEnvironments",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeComputeEnvironments",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "describe_compute_environments",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeConsumableResource",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeConsumableResource",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "describe_consumable_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeJobDefinitions",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeJobDefinitions",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "describe_job_definitions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeJobQueues",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeJobQueues",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "describe_job_queues",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeJobs",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeJobs",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "describe_jobs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSchedulingPolicies",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeSchedulingPolicies",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "describe_scheduling_policies",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeServiceEnvironments",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeServiceEnvironments",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "describe_service_environments",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeServiceJob",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeServiceJob",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "describe_service_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetJobQueueSnapshot",
+      "AuthorizedActions": [
+        {
+          "Name": "GetJobQueueSnapshot",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "get_job_queue_snapshot",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListConsumableResources",
+      "AuthorizedActions": [
+        {
+          "Name": "ListConsumableResources",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "list_consumable_resources",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobs",
+      "AuthorizedActions": [
+        {
+          "Name": "ListJobs",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "list_jobs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobsByConsumableResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListJobsByConsumableResource",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "list_jobs_by_consumable_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListSchedulingPolicies",
+      "AuthorizedActions": [
+        {
+          "Name": "ListSchedulingPolicies",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "list_scheduling_policies",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListServiceJobs",
+      "AuthorizedActions": [
+        {
+          "Name": "ListServiceJobs",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "list_service_jobs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterJobDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ecs-tasks.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "RegisterJobDefinition",
+          "Service": "batch"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "register_job_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SubmitJob",
+      "AuthorizedActions": [
+        {
+          "Name": "SubmitJob",
+          "Service": "batch"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "submit_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SubmitServiceJob",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "sagemaker.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "SubmitServiceJob",
+          "Service": "batch"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "submit_service_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TerminateJob",
+      "AuthorizedActions": [
+        {
+          "Name": "TerminateJob",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "terminate_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TerminateServiceJob",
+      "AuthorizedActions": [
+        {
+          "Name": "TerminateServiceJob",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "terminate_service_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateComputeEnvironment",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "batch.amazonaws.com",
+              "ec2.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateComputeEnvironment",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "update_compute_environment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConsumableResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateConsumableResource",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "update_consumable_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateJobQueue",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateJobQueue",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "update_job_queue",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSchedulingPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateSchedulingPolicy",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "update_scheduling_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServiceEnvironment",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateServiceEnvironment",
+          "Service": "batch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "batch",
+          "Method": "update_service_environment",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "compute-environment",
@@ -1067,5 +1754,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

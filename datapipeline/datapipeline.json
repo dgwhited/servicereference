@@ -499,6 +499,349 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "ActivatePipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "ActivatePipeline",
+          "Service": "datapipeline"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "datapipeline.amazonaws.com",
+              "ec2.amazonaws.com",
+              "elasticmapreduce.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "activate_pipeline",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "AddTags",
+      "AuthorizedActions": [
+        {
+          "Name": "AddTags",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "add_tags",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "AddTags",
+          "Service": "datapipeline"
+        },
+        {
+          "Name": "CreatePipeline",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "create_pipeline",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeactivatePipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "DeactivatePipeline",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "deactivate_pipeline",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "DeletePipeline",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "delete_pipeline",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeObjects",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeObjects",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "describe_objects",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePipelines",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribePipelines",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "describe_pipelines",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "EvaluateExpression",
+      "AuthorizedActions": [
+        {
+          "Name": "EvaluateExpression",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "evaluate_expression",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPipelineDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPipelineDefinition",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "get_pipeline_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPipelines",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPipelines",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "list_pipelines",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PollForTask",
+      "AuthorizedActions": [
+        {
+          "Name": "PollForTask",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "poll_for_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutPipelineDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "datapipeline.amazonaws.com",
+              "ec2.amazonaws.com",
+              "elasticmapreduce.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "PutPipelineDefinition",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "put_pipeline_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "QueryObjects",
+      "AuthorizedActions": [
+        {
+          "Name": "QueryObjects",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "query_objects",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RemoveTags",
+      "AuthorizedActions": [
+        {
+          "Name": "RemoveTags",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "remove_tags",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ReportTaskProgress",
+      "AuthorizedActions": [
+        {
+          "Name": "ReportTaskProgress",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "report_task_progress",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ReportTaskRunnerHeartbeat",
+      "AuthorizedActions": [
+        {
+          "Name": "ReportTaskRunnerHeartbeat",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "report_task_runner_heartbeat",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SetStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "SetStatus",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "set_status",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SetTaskStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "SetTaskStatus",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "set_task_status",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ValidatePipelineDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "datapipeline.amazonaws.com",
+              "ec2.amazonaws.com",
+              "elasticmapreduce.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "ValidatePipelineDefinition",
+          "Service": "datapipeline"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "datapipeline",
+          "Method": "validate_pipeline_definition",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "pipeline",
@@ -510,5 +853,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

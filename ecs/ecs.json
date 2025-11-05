@@ -1734,6 +1734,1081 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CreateCapacityProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateCapacityProvider",
+          "Service": "ecs"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ecs.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "PutClusterCapacityProviders",
+          "Service": "ecs"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "create_capacity_provider",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCluster",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateCluster",
+          "Service": "ecs"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "create_cluster",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateService",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateService",
+          "Service": "ecs"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ecs-tasks.amazonaws.com",
+              "ecs.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "create_service",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTaskSet",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateTaskSet",
+          "Service": "ecs"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ecs-tasks.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "create_task_set",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAccountSetting",
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "delete_account_setting",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAttributes",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteAttributes",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "delete_attributes",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCapacityProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteCapacityProvider",
+          "Service": "ecs"
+        },
+        {
+          "Name": "PutClusterCapacityProviders",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "delete_capacity_provider",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCluster",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteCluster",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "delete_cluster",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteService",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteService",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "delete_service",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTaskDefinitions",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteTaskDefinitions",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "delete_task_definitions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTaskSet",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteTaskSet",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "delete_task_set",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterContainerInstance",
+      "AuthorizedActions": [
+        {
+          "Name": "DeregisterContainerInstance",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "deregister_container_instance",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterTaskDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "DeregisterTaskDefinition",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "deregister_task_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCapacityProviders",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeCapacityProviders",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "describe_capacity_providers",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeClusters",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeClusters",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "describe_clusters",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeContainerInstances",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeContainerInstances",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "describe_container_instances",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeServiceDeployments",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeServiceDeployments",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "describe_service_deployments",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeServiceRevisions",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeServiceRevisions",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "describe_service_revisions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeServices",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeServices",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "describe_services",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTaskDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeTaskDefinition",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "describe_task_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTaskSets",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeTaskSets",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "describe_task_sets",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTasks",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeTasks",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "describe_tasks",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DiscoverPollEndpoint",
+      "AuthorizedActions": [
+        {
+          "Name": "DiscoverPollEndpoint",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "discover_poll_endpoint",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ExecuteCommand",
+      "AuthorizedActions": [
+        {
+          "Name": "ExecuteCommand",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "execute_command",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetTaskProtection",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTaskProtection",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "get_task_protection",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListAccountSettings",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAccountSettings",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "list_account_settings",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListAttributes",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAttributes",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "list_attributes",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListClusters",
+      "AuthorizedActions": [
+        {
+          "Name": "ListClusters",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "list_clusters",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListContainerInstances",
+      "AuthorizedActions": [
+        {
+          "Name": "ListContainerInstances",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "list_container_instances",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListServiceDeployments",
+      "AuthorizedActions": [
+        {
+          "Name": "ListServiceDeployments",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "list_service_deployments",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListServices",
+      "AuthorizedActions": [
+        {
+          "Name": "ListServices",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "list_services",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListServicesByNamespace",
+      "AuthorizedActions": [
+        {
+          "Name": "ListServicesByNamespace",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "list_services_by_namespace",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTaskDefinitionFamilies",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTaskDefinitionFamilies",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "list_task_definition_families",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTaskDefinitions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTaskDefinitions",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "list_task_definitions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTasks",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTasks",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "list_tasks",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutAccountSetting",
+      "AuthorizedActions": [
+        {
+          "Name": "PutAccountSetting",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "put_account_setting",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutAccountSettingDefault",
+      "AuthorizedActions": [
+        {
+          "Name": "PutAccountSettingDefault",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "put_account_setting_default",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutAttributes",
+      "AuthorizedActions": [
+        {
+          "Name": "PutAttributes",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "put_attributes",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutClusterCapacityProviders",
+      "AuthorizedActions": [
+        {
+          "Name": "PutClusterCapacityProviders",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "put_cluster_capacity_providers",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterContainerInstance",
+      "AuthorizedActions": [
+        {
+          "Name": "RegisterContainerInstance",
+          "Service": "ecs"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "register_container_instance",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterTaskDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ecs-tasks.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "RegisterTaskDefinition",
+          "Service": "ecs"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "register_task_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RunTask",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ecs-tasks.amazonaws.com",
+              "ecs.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "RunTask",
+          "Service": "ecs"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "run_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartTask",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ecs-tasks.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "StartTask",
+          "Service": "ecs"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "start_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StopServiceDeployment",
+      "AuthorizedActions": [
+        {
+          "Name": "StopServiceDeployment",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "stop_service_deployment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StopTask",
+      "AuthorizedActions": [
+        {
+          "Name": "StopTask",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "stop_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SubmitAttachmentStateChanges",
+      "AuthorizedActions": [
+        {
+          "Name": "SubmitAttachmentStateChanges",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "submit_attachment_state_changes",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SubmitContainerStateChange",
+      "AuthorizedActions": [
+        {
+          "Name": "SubmitContainerStateChange",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "submit_container_state_change",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SubmitTaskStateChange",
+      "AuthorizedActions": [
+        {
+          "Name": "SubmitTaskStateChange",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "submit_task_state_change",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCapacityProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ecs.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "PutClusterCapacityProviders",
+          "Service": "ecs"
+        },
+        {
+          "Name": "UpdateCapacityProvider",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "update_capacity_provider",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCluster",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateCluster",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "update_cluster",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateClusterSettings",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateClusterSettings",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "update_cluster_settings",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateContainerAgent",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateContainerAgent",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "update_container_agent",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateContainerInstancesState",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateContainerInstancesState",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "update_container_instances_state",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateService",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ecs-tasks.amazonaws.com",
+              "ecs.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateService",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "update_service",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateServicePrimaryTaskSet",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateServicePrimaryTaskSet",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "update_service_primary_task_set",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTaskProtection",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateTaskProtection",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "update_task_protection",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTaskSet",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateTaskSet",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "update_task_set",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "capacity-provider",
@@ -1828,5 +2903,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

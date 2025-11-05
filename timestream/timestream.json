@@ -734,6 +734,554 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CancelQuery",
+      "AuthorizedActions": [
+        {
+          "Name": "CancelQuery",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-query",
+          "Method": "cancel_query",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBatchLoadTask",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateBatchLoadTask",
+          "Service": "timestream"
+        },
+        {
+          "Name": "WriteRecords",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-write",
+          "Method": "create_batch_load_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDatabase",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDatabase",
+          "Service": "timestream"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-write",
+          "Method": "create_database",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateScheduledQuery",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateScheduledQuery",
+          "Service": "timestream"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "timestream.ap-northeast-1.amazonaws.com",
+              "timestream.us-east-1.amazonaws.com",
+              "timestream.us-east-2.amazonaws.com",
+              "timestream.us-west-2.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-query",
+          "Method": "create_scheduled_query",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTable",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateTable",
+          "Service": "timestream"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-write",
+          "Method": "create_table",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDatabase",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteDatabase",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-write",
+          "Method": "delete_database",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteScheduledQuery",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteScheduledQuery",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-query",
+          "Method": "delete_scheduled_query",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTable",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteTable",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-write",
+          "Method": "delete_table",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAccountSettings",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeAccountSettings",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-query",
+          "Method": "describe_account_settings",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeBatchLoadTask",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeBatchLoadTask",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-write",
+          "Method": "describe_batch_load_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDatabase",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeDatabase",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-write",
+          "Method": "describe_database",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeEndpoints",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeEndpoints",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-query",
+          "Method": "describe_endpoints",
+          "Package": "Boto3"
+        },
+        {
+          "Name": "timestream-write",
+          "Method": "describe_endpoints",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeScheduledQuery",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeScheduledQuery",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-query",
+          "Method": "describe_scheduled_query",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTable",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeTable",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-write",
+          "Method": "describe_table",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ExecuteScheduledQuery",
+      "AuthorizedActions": [
+        {
+          "Name": "ExecuteScheduledQuery",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-query",
+          "Method": "execute_scheduled_query",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListBatchLoadTasks",
+      "AuthorizedActions": [
+        {
+          "Name": "ListBatchLoadTasks",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-write",
+          "Method": "list_batch_load_tasks",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDatabases",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDatabases",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-write",
+          "Method": "list_databases",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListScheduledQueries",
+      "AuthorizedActions": [
+        {
+          "Name": "ListScheduledQueries",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-query",
+          "Method": "list_scheduled_queries",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTables",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTables",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-write",
+          "Method": "list_tables",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-query",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        },
+        {
+          "Name": "timestream-write",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PrepareQuery",
+      "AuthorizedActions": [
+        {
+          "Name": "Select",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-query",
+          "Method": "prepare_query",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "Query",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeTable",
+          "Service": "timestream"
+        },
+        {
+          "Name": "ListDatabases",
+          "Service": "timestream"
+        },
+        {
+          "Name": "ListMeasures",
+          "Service": "timestream"
+        },
+        {
+          "Name": "ListTables",
+          "Service": "timestream"
+        },
+        {
+          "Name": "Select",
+          "Service": "timestream"
+        },
+        {
+          "Name": "SelectValues",
+          "Service": "timestream"
+        },
+        {
+          "Name": "Unload",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-query",
+          "Method": "query",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ResumeBatchLoadTask",
+      "SDK": [
+        {
+          "Name": "timestream-write",
+          "Method": "resume_batch_load_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-query",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        },
+        {
+          "Name": "timestream-write",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-query",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        },
+        {
+          "Name": "timestream-write",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAccountSettings",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateAccountSettings",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-query",
+          "Method": "update_account_settings",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDatabase",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateDatabase",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-write",
+          "Method": "update_database",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateScheduledQuery",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateScheduledQuery",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-query",
+          "Method": "update_scheduled_query",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTable",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateTable",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-write",
+          "Method": "update_table",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "WriteRecords",
+      "AuthorizedActions": [
+        {
+          "Name": "WriteRecords",
+          "Service": "timestream"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-write",
+          "Method": "write_records",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "database",
@@ -763,5 +1311,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

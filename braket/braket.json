@@ -323,6 +323,233 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CancelJob",
+      "AuthorizedActions": [
+        {
+          "Name": "CancelJob",
+          "Service": "braket"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "braket",
+          "Method": "cancel_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CancelQuantumTask",
+      "AuthorizedActions": [
+        {
+          "Name": "CancelQuantumTask",
+          "Service": "braket"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "braket",
+          "Method": "cancel_quantum_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateJob",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateJob",
+          "Service": "braket"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "braket.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "braket"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "braket",
+          "Method": "create_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateQuantumTask",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateQuantumTask",
+          "Service": "braket"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "braket"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "braket",
+          "Method": "create_quantum_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetDevice",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDevice",
+          "Service": "braket"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "braket",
+          "Method": "get_device",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetJob",
+      "AuthorizedActions": [
+        {
+          "Name": "GetJob",
+          "Service": "braket"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "braket",
+          "Method": "get_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetQuantumTask",
+      "AuthorizedActions": [
+        {
+          "Name": "GetQuantumTask",
+          "Service": "braket"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "braket",
+          "Method": "get_quantum_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "braket"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "braket",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SearchDevices",
+      "AuthorizedActions": [
+        {
+          "Name": "SearchDevices",
+          "Service": "braket"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "braket",
+          "Method": "search_devices",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SearchJobs",
+      "AuthorizedActions": [
+        {
+          "Name": "SearchJobs",
+          "Service": "braket"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "braket",
+          "Method": "search_jobs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SearchQuantumTasks",
+      "AuthorizedActions": [
+        {
+          "Name": "SearchQuantumTasks",
+          "Service": "braket"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "braket",
+          "Method": "search_quantum_tasks",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "braket"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "braket",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "braket"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "braket",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "job",
@@ -343,5 +570,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

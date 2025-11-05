@@ -523,6 +523,428 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "AssociateLicense",
+      "AuthorizedActions": [
+        {
+          "Name": "AssociateLicense",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "associate_license",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWorkspace",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateWorkspace",
+          "Service": "grafana"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "grafana.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "create_workspace",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWorkspaceApiKey",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateWorkspaceApiKey",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "create_workspace_api_key",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWorkspaceServiceAccount",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateWorkspaceServiceAccount",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "create_workspace_service_account",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateWorkspaceServiceAccountToken",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateWorkspaceServiceAccountToken",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "create_workspace_service_account_token",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkspace",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteWorkspace",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "delete_workspace",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkspaceApiKey",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteWorkspaceApiKey",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "delete_workspace_api_key",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkspaceServiceAccount",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteWorkspaceServiceAccount",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "delete_workspace_service_account",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteWorkspaceServiceAccountToken",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteWorkspaceServiceAccountToken",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "delete_workspace_service_account_token",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWorkspace",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeWorkspace",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "describe_workspace",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWorkspaceAuthentication",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeWorkspaceAuthentication",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "describe_workspace_authentication",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeWorkspaceConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeWorkspaceConfiguration",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "describe_workspace_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateLicense",
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "disassociate_license",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPermissions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPermissions",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "list_permissions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeWorkspace",
+          "Service": "grafana"
+        },
+        {
+          "Name": "ListVersions",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "list_versions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListWorkspaceServiceAccountTokens",
+      "AuthorizedActions": [
+        {
+          "Name": "ListWorkspaceServiceAccountTokens",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "list_workspace_service_account_tokens",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListWorkspaceServiceAccounts",
+      "AuthorizedActions": [
+        {
+          "Name": "ListWorkspaceServiceAccounts",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "list_workspace_service_accounts",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListWorkspaces",
+      "AuthorizedActions": [
+        {
+          "Name": "ListWorkspaces",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "list_workspaces",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePermissions",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdatePermissions",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "update_permissions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWorkspace",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "grafana.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateWorkspace",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "update_workspace",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWorkspaceAuthentication",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateWorkspaceAuthentication",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "update_workspace_authentication",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateWorkspaceConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateWorkspaceConfiguration",
+          "Service": "grafana"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "grafana",
+          "Method": "update_workspace_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "workspace",
@@ -534,5 +956,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

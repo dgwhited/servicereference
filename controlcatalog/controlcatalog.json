@@ -102,6 +102,112 @@
       }
     }
   ],
+  "Operations": [
+    {
+      "Name": "GetControl",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeGuardrail",
+          "Service": "controltower"
+        },
+        {
+          "Name": "GetControl",
+          "Service": "controlcatalog"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "controlcatalog",
+          "Method": "get_control",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListCommonControls",
+      "AuthorizedActions": [
+        {
+          "Name": "ListCommonControls",
+          "Service": "controlcatalog"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "controlcatalog",
+          "Method": "list_common_controls",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListControlMappings",
+      "AuthorizedActions": [
+        {
+          "Name": "ListControlMappings",
+          "Service": "controlcatalog"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "controlcatalog",
+          "Method": "list_control_mappings",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListControls",
+      "AuthorizedActions": [
+        {
+          "Name": "ListControls",
+          "Service": "controlcatalog"
+        },
+        {
+          "Name": "ListGuardrails",
+          "Service": "controltower"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "controlcatalog",
+          "Method": "list_controls",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDomains",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDomains",
+          "Service": "controlcatalog"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "controlcatalog",
+          "Method": "list_domains",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListObjectives",
+      "AuthorizedActions": [
+        {
+          "Name": "ListObjectives",
+          "Service": "controlcatalog"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "controlcatalog",
+          "Method": "list_objectives",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "common-control",
@@ -128,5 +234,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

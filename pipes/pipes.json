@@ -249,6 +249,190 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CreatePipe",
+      "AuthorizedActions": [
+        {
+          "Name": "CreatePipe",
+          "Service": "pipes"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "pipes.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "pipes"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pipes",
+          "Method": "create_pipe",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePipe",
+      "AuthorizedActions": [
+        {
+          "Name": "DeletePipe",
+          "Service": "pipes"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pipes",
+          "Method": "delete_pipe",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePipe",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribePipe",
+          "Service": "pipes"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pipes",
+          "Method": "describe_pipe",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPipes",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPipes",
+          "Service": "pipes"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pipes",
+          "Method": "list_pipes",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "pipes"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pipes",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartPipe",
+      "AuthorizedActions": [
+        {
+          "Name": "StartPipe",
+          "Service": "pipes"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pipes",
+          "Method": "start_pipe",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StopPipe",
+      "AuthorizedActions": [
+        {
+          "Name": "StopPipe",
+          "Service": "pipes"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pipes",
+          "Method": "stop_pipe",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "pipes"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pipes",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "pipes"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pipes",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePipe",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "pipes.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdatePipe",
+          "Service": "pipes"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "pipes",
+          "Method": "update_pipe",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "pipe",
@@ -260,5 +444,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }

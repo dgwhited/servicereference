@@ -842,6 +842,515 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CreateAccessPoint",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateAccessPoint",
+          "Service": "elasticfilesystem"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "create_access_point",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFileSystem",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateFileSystem",
+          "Service": "elasticfilesystem"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "create_file_system",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMountTarget",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateMountTarget",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "create_mount_target",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateReplicationConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateReplicationConfiguration",
+          "Service": "elasticfilesystem"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "elasticfilesystem.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "create_replication_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTags",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateTags",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "create_tags",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAccessPoint",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteAccessPoint",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "delete_access_point",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFileSystem",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteFileSystem",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "delete_file_system",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFileSystemPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteFileSystemPolicy",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "delete_file_system_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMountTarget",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteMountTarget",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "delete_mount_target",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteReplicationConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteReplicationConfiguration",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "delete_replication_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTags",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteTags",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "delete_tags",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAccessPoints",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeAccessPoints",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "describe_access_points",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAccountPreferences",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeAccountPreferences",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "describe_account_preferences",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeBackupPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeBackupPolicy",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "describe_backup_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFileSystemPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeFileSystemPolicy",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "describe_file_system_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeFileSystems",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeFileSystems",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "describe_file_systems",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeLifecycleConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeLifecycleConfiguration",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "describe_lifecycle_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMountTargetSecurityGroups",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeMountTargetSecurityGroups",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "describe_mount_target_security_groups",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMountTargets",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeMountTargets",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "describe_mount_targets",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeReplicationConfigurations",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeReplicationConfigurations",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "describe_replication_configurations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTags",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeTags",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "describe_tags",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ModifyMountTargetSecurityGroups",
+      "AuthorizedActions": [
+        {
+          "Name": "ModifyMountTargetSecurityGroups",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "modify_mount_target_security_groups",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutAccountPreferences",
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "put_account_preferences",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutBackupPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "PutBackupPolicy",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "put_backup_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutFileSystemPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "PutFileSystemPolicy",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "put_file_system_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutLifecycleConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "PutLifecycleConfiguration",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "put_lifecycle_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFileSystem",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateFileSystem",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "update_file_system",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFileSystemProtection",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateFileSystemProtection",
+          "Service": "elasticfilesystem"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "efs",
+          "Method": "update_file_system_protection",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "access-point",
@@ -862,5 +1371,5 @@
       ]
     }
   ],
-  "Version": "v1.3"
+  "Version": "v1.4"
 }
