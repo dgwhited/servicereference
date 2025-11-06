@@ -188,6 +188,30 @@
       }
     },
     {
+      "Name": "AssociateEmailAddressAlias",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "email-address"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "AssociateFlow",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
@@ -2846,6 +2870,30 @@
       ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DisassociateEmailAddressAlias",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "email-address"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
@@ -5922,6 +5970,9 @@
           "Name": "customer-managed-view"
         },
         {
+          "Name": "email-address"
+        },
+        {
           "Name": "evaluation-form"
         },
         {
@@ -6067,6 +6118,9 @@
         },
         {
           "Name": "customer-managed-view"
+        },
+        {
+          "Name": "email-address"
         },
         {
           "Name": "evaluation-form"

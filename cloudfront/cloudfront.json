@@ -115,11 +115,6 @@
           "IsWrite": true
         }
       },
-      "Resources": [
-        {
-          "Name": "anycast-ip-list"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -135,11 +130,6 @@
           "IsWrite": true
         }
       },
-      "Resources": [
-        {
-          "Name": "cache-policy"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -155,11 +145,6 @@
           "IsWrite": true
         }
       },
-      "Resources": [
-        {
-          "Name": "origin-access-identity"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -194,11 +179,6 @@
           "IsWrite": true
         }
       },
-      "Resources": [
-        {
-          "Name": "continuous-deployment-policy"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -214,11 +194,6 @@
           "IsWrite": true
         }
       },
-      "Resources": [
-        {
-          "Name": "distribution"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": false
@@ -283,11 +258,6 @@
           "IsWrite": true
         }
       },
-      "Resources": [
-        {
-          "Name": "function"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -408,11 +378,6 @@
           "IsWrite": true
         }
       },
-      "Resources": [
-        {
-          "Name": "origin-request-policy"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -443,11 +408,6 @@
           "IsWrite": true
         }
       },
-      "Resources": [
-        {
-          "Name": "realtime-log-config"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -463,11 +423,6 @@
           "IsWrite": true
         }
       },
-      "Resources": [
-        {
-          "Name": "response-headers-policy"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -498,11 +453,6 @@
           "IsWrite": true
         }
       },
-      "Resources": [
-        {
-          "Name": "streaming-distribution"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -522,11 +472,6 @@
           "IsWrite": true
         }
       },
-      "Resources": [
-        {
-          "Name": "streaming-distribution"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -874,6 +819,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "vpcorigin"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1609,6 +1574,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "vpcorigin"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2357,6 +2342,26 @@
       }
     },
     {
+      "Name": "PutResourcePolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "vpcorigin"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "TagResource",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -2450,6 +2455,26 @@
       ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateAnycastIpList",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "anycast-ip-list"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
@@ -3648,6 +3673,16 @@
       ]
     },
     {
+      "Name": "DeleteResourcePolicy",
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "delete_resource_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteResponseHeadersPolicy",
       "AuthorizedActions": [
         {
@@ -4266,6 +4301,16 @@
       ]
     },
     {
+      "Name": "GetResourcePolicy",
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "get_resource_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetResponseHeadersPolicy",
       "AuthorizedActions": [
         {
@@ -4569,6 +4614,16 @@
         {
           "Name": "cloudfront",
           "Method": "list_distributions_by_origin_request_policy_id",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDistributionsByOwnedResource",
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "list_distributions_by_owned_resource",
           "Package": "Boto3"
         }
       ]
@@ -4918,6 +4973,16 @@
       ]
     },
     {
+      "Name": "PutResourcePolicy",
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "put_resource_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "TagResource",
       "AuthorizedActions": [
         {
@@ -4961,6 +5026,16 @@
         {
           "Name": "cloudfront",
           "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAnycastIpList",
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "update_anycast_ip_list",
           "Package": "Boto3"
         }
       ]
