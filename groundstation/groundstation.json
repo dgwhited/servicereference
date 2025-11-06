@@ -828,6 +828,19 @@
         {
           "Name": "CreateMissionProfile",
           "Service": "groundstation"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "groundstation.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "groundstation"
         }
       ],
       "SDK": [
