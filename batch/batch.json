@@ -71,6 +71,10 @@
     },
     {
       "Name": "CreateJobQueue",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -84,11 +88,7 @@
           "Name": "compute-environment"
         },
         {
-          "Name": "job-queue",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:TagKeys"
-          ]
+          "Name": "job-queue"
         },
         {
           "Name": "scheduling-policy"
@@ -569,7 +569,10 @@
           "Name": "consumable-resource"
         },
         {
-          "Name": "job-definition"
+          "Name": "job-definition",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -579,6 +582,10 @@
     },
     {
       "Name": "SubmitJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -594,8 +601,6 @@
         {
           "Name": "job",
           "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:TagKeys",
             "batch:EKSImage",
             "batch:EKSNamespace",
             "batch:ShareIdentifier"
@@ -603,6 +608,9 @@
         },
         {
           "Name": "job-definition"
+        },
+        {
+          "Name": "job-definition-revision"
         },
         {
           "Name": "job-queue"
@@ -615,6 +623,10 @@
     },
     {
       "Name": "SubmitServiceJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -630,8 +642,6 @@
         {
           "Name": "service-job",
           "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:TagKeys",
             "batch:ShareIdentifier"
           ]
         }

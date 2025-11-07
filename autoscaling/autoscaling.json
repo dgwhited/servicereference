@@ -207,6 +207,7 @@
       "ActionConditionKeys": [
         "autoscaling:CapacityReservationIds",
         "autoscaling:CapacityReservationResourceGroupArns",
+        "autoscaling:ImageId",
         "autoscaling:InstanceTypes",
         "autoscaling:LaunchConfigurationName",
         "autoscaling:LaunchTemplateVersionSpecified",
@@ -1339,6 +1340,9 @@
     },
     {
       "Name": "StartInstanceRefresh",
+      "ActionConditionKeys": [
+        "autoscaling:ImageId"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1414,6 +1418,7 @@
       "ActionConditionKeys": [
         "autoscaling:CapacityReservationIds",
         "autoscaling:CapacityReservationResourceGroupArns",
+        "autoscaling:ImageId",
         "autoscaling:InstanceTypes",
         "autoscaling:LaunchConfigurationName",
         "autoscaling:LaunchTemplateVersionSpecified",
