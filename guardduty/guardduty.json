@@ -147,6 +147,11 @@
     },
     {
       "Name": "CreatePublishingDestination",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1082,6 +1087,9 @@
           "Name": "malwareprotectionplan"
         },
         {
+          "Name": "publishingDestination"
+        },
+        {
           "Name": "threatentityset"
         },
         {
@@ -1229,6 +1237,9 @@
           "Name": "malwareprotectionplan"
         },
         {
+          "Name": "publishingDestination"
+        },
+        {
           "Name": "threatentityset"
         },
         {
@@ -1283,6 +1294,9 @@
         },
         {
           "Name": "malwareprotectionplan"
+        },
+        {
+          "Name": "publishingDestination"
         },
         {
           "Name": "threatentityset"
@@ -2968,7 +2982,10 @@
     {
       "Name": "publishingDestination",
       "ARNFormats": [
-        "arn:${Partition}:guardduty:${Region}:${Account}:detector/${DetectorId}/publishingDestination/${PublishingDestinationId}"
+        "arn:${Partition}:guardduty:${Region}:${Account}:detector/${DetectorId}/publishingdestination/${PublishingDestinationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {

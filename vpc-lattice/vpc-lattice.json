@@ -106,6 +106,9 @@
       },
       "Resources": [
         {
+          "Name": "DomainVerification"
+        },
+        {
           "Name": "ResourceConfiguration"
         },
         {
@@ -286,6 +289,8 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys",
+        "vpc-lattice:PrivateDnsPreference",
+        "vpc-lattice:PrivateDnsSpecifiedDomains",
         "vpc-lattice:SecurityGroupIds",
         "vpc-lattice:ServiceNetworkArn",
         "vpc-lattice:VpcId"
@@ -395,6 +400,29 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteDomainVerification",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "DomainVerification"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -747,6 +775,29 @@
       }
     },
     {
+      "Name": "GetDomainVerification",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "DomainVerification"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetListener",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -1019,6 +1070,21 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListDomainVerifications",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1318,6 +1384,31 @@
       }
     },
     {
+      "Name": "StartDomainVerification",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "vpc-lattice:DomainName"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "DomainVerification"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "TagResource",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -1335,6 +1426,9 @@
       "Resources": [
         {
           "Name": "AccessLogSubscription"
+        },
+        {
+          "Name": "DomainVerification"
         },
         {
           "Name": "Listener"
@@ -1391,6 +1485,9 @@
       "Resources": [
         {
           "Name": "AccessLogSubscription"
+        },
+        {
+          "Name": "DomainVerification"
         },
         {
           "Name": "Listener"
@@ -1671,6 +1768,24 @@
       "Name": "vpc-lattice:AuthType",
       "Types": [
         "String"
+      ]
+    },
+    {
+      "Name": "vpc-lattice:DomainName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "vpc-lattice:PrivateDnsPreference",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "vpc-lattice:PrivateDnsSpecifiedDomains",
+      "Types": [
+        "ArrayOfString"
       ]
     },
     {
@@ -2000,6 +2115,16 @@
       ]
     },
     {
+      "Name": "DeleteDomainVerification",
+      "SDK": [
+        {
+          "Name": "vpc-lattice",
+          "Method": "delete_domain_verification",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteListener",
       "AuthorizedActions": [
         {
@@ -2240,6 +2365,22 @@
       ]
     },
     {
+      "Name": "GetDomainVerification",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDomainVerification",
+          "Service": "vpc-lattice"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "vpc-lattice",
+          "Method": "get_domain_verification",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetListener",
       "AuthorizedActions": [
         {
@@ -2427,6 +2568,22 @@
         {
           "Name": "vpc-lattice",
           "Method": "list_access_log_subscriptions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDomainVerifications",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDomainVerifications",
+          "Service": "vpc-lattice"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "vpc-lattice",
+          "Method": "list_domain_verifications",
           "Package": "Boto3"
         }
       ]
@@ -2704,6 +2861,22 @@
       ]
     },
     {
+      "Name": "StartDomainVerification",
+      "AuthorizedActions": [
+        {
+          "Name": "StartDomainVerification",
+          "Service": "vpc-lattice"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "vpc-lattice",
+          "Method": "start_domain_verification",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "TagResource",
       "AuthorizedActions": [
         {
@@ -2893,6 +3066,18 @@
       ]
     },
     {
+      "Name": "DomainVerification",
+      "ARNFormats": [
+        "arn:${Partition}:vpc-lattice:${Region}:${Account}:domainverification/${DomainVerificationId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "vpc-lattice:DomainName"
+      ]
+    },
+    {
       "Name": "Listener",
       "ARNFormats": [
         "arn:${Partition}:vpc-lattice:${Region}:${Account}:service/${ServiceId}/listener/${ListenerId}"
@@ -3012,6 +3197,8 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "vpc-lattice:PrivateDnsPreference",
+        "vpc-lattice:PrivateDnsSpecifiedDomains",
         "vpc-lattice:SecurityGroupIds",
         "vpc-lattice:ServiceNetworkArn",
         "vpc-lattice:VpcId"
