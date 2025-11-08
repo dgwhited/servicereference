@@ -10129,6 +10129,15 @@
       "Name": "UpdateEncryptionConfiguration",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "iot.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "UpdateEncryptionConfiguration",
           "Service": "iot"
         }
