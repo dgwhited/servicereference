@@ -973,6 +973,26 @@
       }
     },
     {
+      "Name": "UpdateRebalancing",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateReplicationInfo",
       "Annotations": {
         "Properties": {
@@ -1869,6 +1889,16 @@
         {
           "Name": "kafka",
           "Method": "update_monitoring",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRebalancing",
+      "SDK": [
+        {
+          "Name": "kafka",
+          "Method": "update_rebalancing",
           "Package": "Boto3"
         }
       ]

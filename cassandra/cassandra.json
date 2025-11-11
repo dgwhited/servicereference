@@ -506,6 +506,20 @@
   "Operations": [
     {
       "Name": "CreateKeyspace",
+      "AuthorizedActions": [
+        {
+          "Name": "Create",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "CreateMultiRegionResource",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
@@ -516,6 +530,20 @@
     },
     {
       "Name": "CreateTable",
+      "AuthorizedActions": [
+        {
+          "Name": "Create",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "CreateMultiRegionResource",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
@@ -526,6 +554,16 @@
     },
     {
       "Name": "CreateType",
+      "AuthorizedActions": [
+        {
+          "Name": "Create",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "CreateMultiRegionResource",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
@@ -536,6 +574,16 @@
     },
     {
       "Name": "DeleteKeyspace",
+      "AuthorizedActions": [
+        {
+          "Name": "Drop",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "DropMultiRegionResource",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
@@ -546,6 +594,16 @@
     },
     {
       "Name": "DeleteTable",
+      "AuthorizedActions": [
+        {
+          "Name": "Drop",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "DropMultiRegionResource",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
@@ -556,6 +614,16 @@
     },
     {
       "Name": "DeleteType",
+      "AuthorizedActions": [
+        {
+          "Name": "Drop",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "DropMultiRegionResource",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
@@ -566,6 +634,12 @@
     },
     {
       "Name": "GetKeyspace",
+      "AuthorizedActions": [
+        {
+          "Name": "Select",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
@@ -624,6 +698,12 @@
     },
     {
       "Name": "GetTable",
+      "AuthorizedActions": [
+        {
+          "Name": "Select",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
@@ -634,6 +714,24 @@
     },
     {
       "Name": "GetTableAutoScalingSettings",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeScalableTargets",
+          "Service": "application-autoscaling"
+        },
+        {
+          "Name": "DescribeScalingPolicies",
+          "Service": "application-autoscaling"
+        },
+        {
+          "Name": "Select",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "SelectMultiRegionResource",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
@@ -644,6 +742,12 @@
     },
     {
       "Name": "GetType",
+      "AuthorizedActions": [
+        {
+          "Name": "Select",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
@@ -654,6 +758,12 @@
     },
     {
       "Name": "ListKeyspaces",
+      "AuthorizedActions": [
+        {
+          "Name": "Select",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
@@ -680,6 +790,12 @@
     },
     {
       "Name": "ListTables",
+      "AuthorizedActions": [
+        {
+          "Name": "Select",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
@@ -700,6 +816,12 @@
     },
     {
       "Name": "ListTypes",
+      "AuthorizedActions": [
+        {
+          "Name": "Select",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
@@ -710,6 +832,20 @@
     },
     {
       "Name": "RestoreTable",
+      "AuthorizedActions": [
+        {
+          "Name": "Restore",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "RestoreMultiRegionTable",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "Select",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
@@ -720,6 +856,24 @@
     },
     {
       "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "Alter",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "AlterMultiRegionResource",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "TagMultiRegionResource",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
@@ -730,6 +884,24 @@
     },
     {
       "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "Alter",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "AlterMultiRegionResource",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "UnTagMultiRegionResource",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "UntagResource",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
@@ -740,6 +912,68 @@
     },
     {
       "Name": "UpdateKeyspace",
+      "AuthorizedActions": [
+        {
+          "Name": "Alter",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "AlterMultiRegionResource",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "Create",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "CreateMultiRegionResource",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "DescribeScalableTargets",
+          "Service": "application-autoscaling"
+        },
+        {
+          "Name": "DescribeScalableTargets",
+          "Service": "application-autoscaling"
+        },
+        {
+          "Name": "DescribeScalingPolicies",
+          "Service": "application-autoscaling"
+        },
+        {
+          "Name": "Modify",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "ModifyMultiRegionResource",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "PutScalingPolicy",
+          "Service": "application-autoscaling"
+        },
+        {
+          "Name": "RegisterScalableTarget",
+          "Service": "application-autoscaling"
+        },
+        {
+          "Name": "Select",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "SelectMultiRegionResource",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "TagMultiRegionResource",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
@@ -750,6 +984,16 @@
     },
     {
       "Name": "UpdateTable",
+      "AuthorizedActions": [
+        {
+          "Name": "Alter",
+          "Service": "cassandra"
+        },
+        {
+          "Name": "AlterMultiRegionResource",
+          "Service": "cassandra"
+        }
+      ],
       "SDK": [
         {
           "Name": "keyspaces",
