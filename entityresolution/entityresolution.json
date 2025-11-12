@@ -853,6 +853,15 @@
         {
           "Name": "CreateIdNamespace",
           "Service": "entityresolution"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "entityresolution.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [
@@ -1386,6 +1395,12 @@
     },
     {
       "Name": "UpdateIdNamespace",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateIdNamespace",
+          "Service": "entityresolution"
+        }
+      ],
       "SDK": [
         {
           "Name": "entityresolution",

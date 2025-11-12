@@ -1430,6 +1430,33 @@
     },
     {
       "Name": "UpdateSyncConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRepository",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "PassRepository",
+          "Service": "codestar-connections"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "cloudformation.sync.codeconnections.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateSyncConfiguration",
+          "Service": "codeconnections"
+        },
+        {
+          "Name": "UpdateSyncConfiguration",
+          "Service": "codestar-connections"
+        }
+      ],
       "SDK": [
         {
           "Name": "codestar-connections",
