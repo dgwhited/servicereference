@@ -5404,6 +5404,33 @@
       }
     },
     {
+      "Name": "SendOutboundChatMessage",
+      "ActionConditionKeys": [
+        "connect:InstanceId",
+        "connect:Subtype"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "phone-number"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "SendOutboundEmail",
       "ActionConditionKeys": [
         "connect:InstanceId"
