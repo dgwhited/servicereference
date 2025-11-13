@@ -903,6 +903,10 @@
         {
           "Name": "CreateSchemaMapping",
           "Service": "entityresolution"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "entityresolution"
         }
       ],
       "SDK": [
@@ -931,6 +935,12 @@
     },
     {
       "Name": "DeleteIdNamespace",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteIdNamespace",
+          "Service": "entityresolution"
+        }
+      ],
       "SDK": [
         {
           "Name": "entityresolution",
@@ -1396,6 +1406,15 @@
     {
       "Name": "UpdateIdNamespace",
       "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "entityresolution.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
         {
           "Name": "UpdateIdNamespace",
           "Service": "entityresolution"
