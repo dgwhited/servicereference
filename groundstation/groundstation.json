@@ -238,6 +238,26 @@
       }
     },
     {
+      "Name": "GetAgentTaskResponseUrl",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Agent"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetConfig",
       "Annotations": {
         "Properties": {
@@ -959,6 +979,12 @@
     },
     {
       "Name": "GetAgentTaskResponseUrl",
+      "AuthorizedActions": [
+        {
+          "Name": "GetAgentTaskResponseUrl",
+          "Service": "groundstation"
+        }
+      ],
       "SDK": [
         {
           "Name": "groundstation",
