@@ -764,6 +764,29 @@
       }
     },
     {
+      "Name": "GetResourceDashboard",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "session"
+        },
+        {
+          "Name": "workgroup"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetSession",
       "Annotations": {
         "Properties": {
@@ -775,12 +798,38 @@
       },
       "Resources": [
         {
+          "Name": "session"
+        },
+        {
           "Name": "workgroup"
         }
       ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "GetSessionEndpoint",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "session"
+        },
+        {
+          "Name": "workgroup"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -794,6 +843,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "session"
+        },
         {
           "Name": "workgroup"
         }
@@ -1166,6 +1218,9 @@
           "Name": "datacatalog"
         },
         {
+          "Name": "session"
+        },
+        {
           "Name": "workgroup"
         }
       ],
@@ -1269,6 +1324,10 @@
     },
     {
       "Name": "StartSession",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1278,6 +1337,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "session"
+        },
         {
           "Name": "workgroup"
         }
@@ -1349,6 +1411,9 @@
           "Name": "datacatalog"
         },
         {
+          "Name": "session"
+        },
+        {
           "Name": "workgroup"
         }
       ],
@@ -1368,6 +1433,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "session"
+        },
         {
           "Name": "workgroup"
         }
@@ -1396,6 +1464,9 @@
         },
         {
           "Name": "datacatalog"
+        },
+        {
+          "Name": "session"
         },
         {
           "Name": "workgroup"
@@ -2701,6 +2772,15 @@
       "Name": "datacatalog",
       "ARNFormats": [
         "arn:${Partition}:athena:${Region}:${Account}:datacatalog/${DataCatalogName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "session",
+      "ARNFormats": [
+        "arn:${Partition}:athena:${Region}:${Account}:workgroup/${WorkGroupName}/session/${SessionId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

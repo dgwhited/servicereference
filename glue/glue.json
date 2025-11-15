@@ -557,6 +557,7 @@
     {
       "Name": "CreateCatalog",
       "ActionConditionKeys": [
+        "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {
@@ -706,6 +707,7 @@
     {
       "Name": "CreateDatabase",
       "ActionConditionKeys": [
+        "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {
@@ -1087,6 +1089,7 @@
     {
       "Name": "CreateTable",
       "ActionConditionKeys": [
+        "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {
@@ -1266,6 +1269,7 @@
     {
       "Name": "DeleteCatalog",
       "ActionConditionKeys": [
+        "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {
@@ -1478,6 +1482,7 @@
     {
       "Name": "DeleteDatabase",
       "ActionConditionKeys": [
+        "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {
@@ -1822,6 +1827,7 @@
     {
       "Name": "DeleteTable",
       "ActionConditionKeys": [
+        "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {
@@ -2093,6 +2099,33 @@
       }
     },
     {
+      "Name": "FederateAuthorization",
+      "ActionConditionKeys": [
+        "glue:EnabledForRedshiftAutoDiscovery",
+        "glue:FederatedAuthorizationSource"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "rootcatalog"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetBlueprint",
       "Annotations": {
         "Properties": {
@@ -2156,6 +2189,7 @@
       "Name": "GetCatalog",
       "ActionConditionKeys": [
         "glue:EnabledForRedshiftAutoDiscovery",
+        "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {
@@ -2206,6 +2240,7 @@
       "Name": "GetCatalogs",
       "ActionConditionKeys": [
         "glue:EnabledForRedshiftAutoDiscovery",
+        "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {
@@ -2689,6 +2724,7 @@
     {
       "Name": "GetDatabase",
       "ActionConditionKeys": [
+        "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {
@@ -2718,6 +2754,7 @@
     {
       "Name": "GetDatabases",
       "ActionConditionKeys": [
+        "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {
@@ -3680,6 +3717,7 @@
     {
       "Name": "GetTable",
       "ActionConditionKeys": [
+        "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {
@@ -3802,6 +3840,7 @@
     {
       "Name": "GetTables",
       "ActionConditionKeys": [
+        "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {
@@ -3962,6 +4001,7 @@
     {
       "Name": "GetUserDefinedFunctions",
       "ActionConditionKeys": [
+        "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {
@@ -5697,6 +5737,7 @@
     {
       "Name": "UpdateCatalog",
       "ActionConditionKeys": [
+        "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {
@@ -6185,6 +6226,7 @@
     {
       "Name": "UpdateTable",
       "ActionConditionKeys": [
+        "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {
@@ -6417,6 +6459,12 @@
       "Name": "glue:EnabledForRedshiftAutoDiscovery",
       "Types": [
         "Bool"
+      ]
+    },
+    {
+      "Name": "glue:FederatedAuthorizationSource",
+      "Types": [
+        "String"
       ]
     },
     {
