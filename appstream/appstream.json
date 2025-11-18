@@ -100,6 +100,29 @@
       }
     },
     {
+      "Name": "AssociateSoftwareToImageBuilder",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "image-builder"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "BatchAssociateUserStack",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -296,6 +319,24 @@
       }
     },
     {
+      "Name": "CreateExportImageTask",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateFleet",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -370,6 +411,25 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "CreateImportedImage",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -776,14 +836,6 @@
           "IsWrite": false
         }
       },
-      "Resources": [
-        {
-          "Name": "app-block"
-        },
-        {
-          "Name": "app-block-builder"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -820,6 +872,21 @@
       }
     },
     {
+      "Name": "DescribeAppLicenseUsage",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeApplicationFleetAssociations",
       "Annotations": {
         "Properties": {
@@ -829,14 +896,6 @@
           "IsWrite": false
         }
       },
-      "Resources": [
-        {
-          "Name": "application"
-        },
-        {
-          "Name": "fleet"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -981,6 +1040,29 @@
       }
     },
     {
+      "Name": "DescribeSoftwareAssociations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "image"
+        },
+        {
+          "Name": "image-builder"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeStacks",
       "Annotations": {
         "Properties": {
@@ -1040,11 +1122,6 @@
           "IsWrite": false
         }
       },
-      "Resources": [
-        {
-          "Name": "stack"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -1179,6 +1256,29 @@
       }
     },
     {
+      "Name": "DisassociateSoftwareFromImageBuilder",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "image-builder"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "EnableUser",
       "Annotations": {
         "Properties": {
@@ -1206,6 +1306,21 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "GetExportImageTask",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1266,6 +1381,21 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListExportImageTasks",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1350,6 +1480,29 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "StartSoftwareDeploymentToImageBuilder",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "image-builder"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1927,6 +2080,16 @@
       ]
     },
     {
+      "Name": "CreateExportImageTask",
+      "SDK": [
+        {
+          "Name": "appstream",
+          "Method": "create_export_image_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateFleet",
       "AuthorizedActions": [
         {
@@ -1996,6 +2159,16 @@
         {
           "Name": "appstream",
           "Method": "create_image_builder_streaming_url",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateImportedImage",
+      "SDK": [
+        {
+          "Name": "appstream",
+          "Method": "create_imported_image",
           "Package": "Boto3"
         }
       ]
@@ -2697,6 +2870,16 @@
       ]
     },
     {
+      "Name": "GetExportImageTask",
+      "SDK": [
+        {
+          "Name": "appstream",
+          "Method": "get_export_image_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListAssociatedFleets",
       "AuthorizedActions": [
         {
@@ -2740,6 +2923,16 @@
         {
           "Name": "appstream",
           "Method": "list_entitled_applications",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListExportImageTasks",
+      "SDK": [
+        {
+          "Name": "appstream",
+          "Method": "list_export_image_tasks",
           "Package": "Boto3"
         }
       ]
