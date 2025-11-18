@@ -1708,6 +1708,15 @@
           "Service": "personalize"
         },
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "personalize.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "TagResource",
           "Service": "personalize"
         }
@@ -2676,6 +2685,12 @@
     },
     {
       "Name": "PutActionInteractions",
+      "AuthorizedActions": [
+        {
+          "Name": "PutActionInteractions",
+          "Service": "personalize"
+        }
+      ],
       "SDK": [
         {
           "Name": "personalize-events",
@@ -2686,6 +2701,12 @@
     },
     {
       "Name": "PutActions",
+      "AuthorizedActions": [
+        {
+          "Name": "PutActions",
+          "Service": "personalize"
+        }
+      ],
       "SDK": [
         {
           "Name": "personalize-events",
@@ -2808,6 +2829,12 @@
     },
     {
       "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "personalize"
+        }
+      ],
       "SDK": [
         {
           "Name": "personalize",

@@ -1038,6 +1038,10 @@
         {
           "Name": "CreateMedicalVocabulary",
           "Service": "transcribe"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "transcribe"
         }
       ],
       "SDK": [
@@ -1054,6 +1058,15 @@
         {
           "Name": "CreateVocabulary",
           "Service": "transcribe"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "transcribe.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         },
         {
           "Name": "TagResource",
@@ -1670,6 +1683,12 @@
     },
     {
       "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "transcribe"
+        }
+      ],
       "SDK": [
         {
           "Name": "transcribe",
@@ -1738,6 +1757,15 @@
     {
       "Name": "UpdateVocabularyFilter",
       "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "transcribe.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
         {
           "Name": "UpdateVocabularyFilter",
           "Service": "transcribe"

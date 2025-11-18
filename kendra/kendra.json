@@ -1612,6 +1612,12 @@
     },
     {
       "Name": "ClearQuerySuggestions",
+      "AuthorizedActions": [
+        {
+          "Name": "ClearQuerySuggestions",
+          "Service": "kendra"
+        }
+      ],
       "SDK": [
         {
           "Name": "kendra",
@@ -1762,6 +1768,25 @@
     },
     {
       "Name": "CreateQuerySuggestionsBlockList",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateQuerySuggestionsBlockList",
+          "Service": "kendra"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "kendra.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "kendra"
+        }
+      ],
       "SDK": [
         {
           "Name": "kendra",
@@ -1785,6 +1810,10 @@
             ]
           },
           "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "kendra"
         }
       ],
       "SDK": [
@@ -1797,6 +1826,12 @@
     },
     {
       "Name": "DeleteAccessControlConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteAccessControlConfiguration",
+          "Service": "kendra"
+        }
+      ],
       "SDK": [
         {
           "Name": "kendra",
@@ -1887,6 +1922,12 @@
     },
     {
       "Name": "DeleteQuerySuggestionsBlockList",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteQuerySuggestionsBlockList",
+          "Service": "kendra"
+        }
+      ],
       "SDK": [
         {
           "Name": "kendra",
@@ -1913,6 +1954,12 @@
     },
     {
       "Name": "DescribeAccessControlConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeAccessControlConfiguration",
+          "Service": "kendra"
+        }
+      ],
       "SDK": [
         {
           "Name": "kendra",
@@ -2574,6 +2621,21 @@
     },
     {
       "Name": "UpdateQuerySuggestionsBlockList",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "kendra.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateQuerySuggestionsBlockList",
+          "Service": "kendra"
+        }
+      ],
       "SDK": [
         {
           "Name": "kendra",
@@ -2601,6 +2663,15 @@
     {
       "Name": "UpdateThesaurus",
       "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "kendra.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
         {
           "Name": "UpdateThesaurus",
           "Service": "kendra"

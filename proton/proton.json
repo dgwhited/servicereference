@@ -2376,6 +2376,12 @@
     },
     {
       "Name": "CancelEnvironmentDeployment",
+      "AuthorizedActions": [
+        {
+          "Name": "CancelEnvironmentDeployment",
+          "Service": "proton"
+        }
+      ],
       "SDK": [
         {
           "Name": "proton",
@@ -2421,6 +2427,10 @@
       "AuthorizedActions": [
         {
           "Name": "CreateComponent",
+          "Service": "proton"
+        },
+        {
+          "Name": "TagResource",
           "Service": "proton"
         }
       ],
@@ -2470,6 +2480,11 @@
         },
         {
           "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "proton.amazonaws.com"
+            ]
+          },
           "Service": "iam"
         },
         {
@@ -2490,6 +2505,10 @@
       "AuthorizedActions": [
         {
           "Name": "CreateEnvironmentTemplate",
+          "Service": "proton"
+        },
+        {
+          "Name": "TagResource",
           "Service": "proton"
         }
       ],
@@ -2876,6 +2895,10 @@
     {
       "Name": "GetDeployment",
       "AuthorizedActions": [
+        {
+          "Name": "GetComponent",
+          "Service": "proton"
+        },
         {
           "Name": "GetDeployment",
           "Service": "proton"
@@ -3543,6 +3566,12 @@
     },
     {
       "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "proton"
+        }
+      ],
       "SDK": [
         {
           "Name": "proton",
@@ -3553,6 +3582,21 @@
     },
     {
       "Name": "UpdateAccountSettings",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "proton.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateAccountSettings",
+          "Service": "proton"
+        }
+      ],
       "SDK": [
         {
           "Name": "proton",
@@ -3604,6 +3648,21 @@
     },
     {
       "Name": "UpdateEnvironmentAccountConnection",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "proton.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateEnvironmentAccountConnection",
+          "Service": "proton"
+        }
+      ],
       "SDK": [
         {
           "Name": "proton",
@@ -3614,6 +3673,12 @@
     },
     {
       "Name": "UpdateEnvironmentTemplate",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateEnvironmentTemplate",
+          "Service": "proton"
+        }
+      ],
       "SDK": [
         {
           "Name": "proton",

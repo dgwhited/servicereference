@@ -1482,6 +1482,10 @@
             ]
           },
           "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "cleanrooms-ml"
         }
       ],
       "SDK": [
@@ -1556,6 +1560,10 @@
             ]
           },
           "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "cleanrooms-ml"
         }
       ],
       "SDK": [
@@ -1571,6 +1579,10 @@
       "AuthorizedActions": [
         {
           "Name": "CreateTrainedModel",
+          "Service": "cleanrooms-ml"
+        },
+        {
+          "Name": "TagResource",
           "Service": "cleanrooms-ml"
         }
       ],
@@ -1597,6 +1609,10 @@
             ]
           },
           "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "cleanrooms-ml"
         }
       ],
       "SDK": [
@@ -1753,6 +1769,12 @@
     },
     {
       "Name": "DeleteTrainingDataset",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteTrainingDataset",
+          "Service": "cleanrooms-ml"
+        }
+      ],
       "SDK": [
         {
           "Name": "cleanroomsml",
@@ -2329,6 +2351,10 @@
         {
           "Name": "StartAudienceGenerationJob",
           "Service": "cleanrooms-ml"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "cleanrooms-ml"
         }
       ],
       "SDK": [
@@ -2361,6 +2387,10 @@
         {
           "Name": "StartTrainedModelInferenceJob",
           "Service": "cleanrooms-ml"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "cleanrooms-ml"
         }
       ],
       "SDK": [
@@ -2389,6 +2419,12 @@
     },
     {
       "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UnTagResource",
+          "Service": "cleanrooms-ml"
+        }
+      ],
       "SDK": [
         {
           "Name": "cleanroomsml",
@@ -2400,6 +2436,15 @@
     {
       "Name": "UpdateConfiguredAudienceModel",
       "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "cleanrooms-ml.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
         {
           "Name": "UpdateConfiguredAudienceModel",
           "Service": "cleanrooms-ml"

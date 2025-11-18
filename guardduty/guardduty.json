@@ -1761,6 +1761,10 @@
         {
           "Name": "CreateThreatEntitySet",
           "Service": "guardduty"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "guardduty"
         }
       ],
       "SDK": [
@@ -2661,6 +2665,12 @@
     },
     {
       "Name": "SendObjectMalwareScan",
+      "AuthorizedActions": [
+        {
+          "Name": "SendObjectMalwareScan",
+          "Service": "guardduty"
+        }
+      ],
       "SDK": [
         {
           "Name": "guardduty",
@@ -2672,6 +2682,15 @@
     {
       "Name": "StartMalwareScan",
       "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "malware-protection.guardduty.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
         {
           "Name": "StartMalwareScan",
           "Service": "guardduty"

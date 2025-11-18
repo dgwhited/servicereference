@@ -453,6 +453,11 @@
         },
         {
           "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "mediapackage-vod.amazonaws.com"
+            ]
+          },
           "Service": "iam"
         },
         {
@@ -646,6 +651,12 @@
     },
     {
       "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "mediapackage-vod"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediapackage-vod",

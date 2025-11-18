@@ -1849,6 +1849,12 @@
     },
     {
       "Name": "DeleteAccountSetting",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteAccountSetting",
+          "Service": "ecs"
+        }
+      ],
       "SDK": [
         {
           "Name": "ecs",
@@ -2507,7 +2513,8 @@
           "Name": "PassRole",
           "Context": {
             "iam:PassedToService": [
-              "ecs-tasks.amazonaws.com"
+              "ecs-tasks.amazonaws.com",
+              "ecs.amazonaws.com"
             ]
           },
           "Service": "iam"

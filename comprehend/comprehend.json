@@ -2061,6 +2061,12 @@
     },
     {
       "Name": "CreateDataset",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDataset",
+          "Service": "comprehend"
+        }
+      ],
       "SDK": [
         {
           "Name": "comprehend",
@@ -2251,6 +2257,12 @@
     },
     {
       "Name": "DeleteResourcePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteResourcePolicy",
+          "Service": "comprehend"
+        }
+      ],
       "SDK": [
         {
           "Name": "comprehend",
@@ -2261,6 +2273,12 @@
     },
     {
       "Name": "DescribeDataset",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeDataset",
+          "Service": "comprehend"
+        }
+      ],
       "SDK": [
         {
           "Name": "comprehend",
@@ -2399,6 +2417,12 @@
     },
     {
       "Name": "DescribeFlywheelIteration",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeFlywheelIteration",
+          "Service": "comprehend"
+        }
+      ],
       "SDK": [
         {
           "Name": "comprehend",
@@ -2950,6 +2974,12 @@
     },
     {
       "Name": "PutResourcePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "PutResourcePolicy",
+          "Service": "comprehend"
+        }
+      ],
       "SDK": [
         {
           "Name": "comprehend",
@@ -3001,6 +3031,10 @@
         },
         {
           "Name": "StartDominantLanguageDetectionJob",
+          "Service": "comprehend"
+        },
+        {
+          "Name": "TagResource",
           "Service": "comprehend"
         }
       ],
@@ -3188,6 +3222,10 @@
         {
           "Name": "StartTargetedSentimentDetectionJob",
           "Service": "comprehend"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "comprehend"
         }
       ],
       "SDK": [
@@ -3261,6 +3299,12 @@
     },
     {
       "Name": "StopEventsDetectionJob",
+      "AuthorizedActions": [
+        {
+          "Name": "StopEventsDetectionJob",
+          "Service": "comprehend"
+        }
+      ],
       "SDK": [
         {
           "Name": "comprehend",
@@ -3319,6 +3363,12 @@
     },
     {
       "Name": "StopTargetedSentimentDetectionJob",
+      "AuthorizedActions": [
+        {
+          "Name": "StopTargetedSentimentDetectionJob",
+          "Service": "comprehend"
+        }
+      ],
       "SDK": [
         {
           "Name": "comprehend",
@@ -3394,6 +3444,15 @@
     {
       "Name": "UpdateEndpoint",
       "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "comprehend.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
         {
           "Name": "UpdateEndpoint",
           "Service": "comprehend"

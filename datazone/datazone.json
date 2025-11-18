@@ -3534,6 +3534,12 @@
     },
     {
       "Name": "CancelMetadataGenerationRun",
+      "AuthorizedActions": [
+        {
+          "Name": "CancelMetadataGenerationRun",
+          "Service": "datazone"
+        }
+      ],
       "SDK": [
         {
           "Name": "datazone",
@@ -3564,6 +3570,15 @@
         {
           "Name": "CreateAccountPool",
           "Service": "datazone"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "datazone.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [
@@ -4489,6 +4504,12 @@
     },
     {
       "Name": "DisassociateGovernedTerms",
+      "AuthorizedActions": [
+        {
+          "Name": "DisassociateGovernedTerms",
+          "Service": "datazone"
+        }
+      ],
       "SDK": [
         {
           "Name": "datazone",
@@ -5870,6 +5891,15 @@
       "Name": "UpdateAccountPool",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "datazone.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "UpdateAccountPool",
           "Service": "datazone"
         }
@@ -5917,6 +5947,15 @@
     {
       "Name": "UpdateDataSource",
       "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "datazone.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
         {
           "Name": "UpdateDataSource",
           "Service": "datazone"
@@ -6133,6 +6172,12 @@
     },
     {
       "Name": "UpdateSubscriptionGrantStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateSubscriptionGrantStatus",
+          "Service": "datazone"
+        }
+      ],
       "SDK": [
         {
           "Name": "datazone",

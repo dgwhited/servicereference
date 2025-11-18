@@ -331,6 +331,25 @@
   "Operations": [
     {
       "Name": "CreateWorkflow",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateWorkflow",
+          "Service": "airflow-serverless"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "airflow-serverless.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "airflow-serverless"
+        }
+      ],
       "SDK": [
         {
           "Name": "mwaa-serverless",
@@ -357,6 +376,12 @@
     },
     {
       "Name": "GetTaskInstance",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTaskInstance",
+          "Service": "airflow-serverless"
+        }
+      ],
       "SDK": [
         {
           "Name": "mwaa-serverless",
@@ -383,6 +408,12 @@
     },
     {
       "Name": "GetWorkflowRun",
+      "AuthorizedActions": [
+        {
+          "Name": "GetWorkflowRun",
+          "Service": "airflow-serverless"
+        }
+      ],
       "SDK": [
         {
           "Name": "mwaa-serverless",
@@ -393,6 +424,12 @@
     },
     {
       "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "airflow-serverless"
+        }
+      ],
       "SDK": [
         {
           "Name": "mwaa-serverless",
@@ -403,6 +440,12 @@
     },
     {
       "Name": "ListTaskInstances",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTaskInstances",
+          "Service": "airflow-serverless"
+        }
+      ],
       "SDK": [
         {
           "Name": "mwaa-serverless",
@@ -413,6 +456,12 @@
     },
     {
       "Name": "ListWorkflowRuns",
+      "AuthorizedActions": [
+        {
+          "Name": "ListWorkflowRuns",
+          "Service": "airflow-serverless"
+        }
+      ],
       "SDK": [
         {
           "Name": "mwaa-serverless",
@@ -423,6 +472,12 @@
     },
     {
       "Name": "ListWorkflowVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListWorkflowVersions",
+          "Service": "airflow-serverless"
+        }
+      ],
       "SDK": [
         {
           "Name": "mwaa-serverless",
@@ -449,6 +504,12 @@
     },
     {
       "Name": "StartWorkflowRun",
+      "AuthorizedActions": [
+        {
+          "Name": "StartWorkflowRun",
+          "Service": "airflow-serverless"
+        }
+      ],
       "SDK": [
         {
           "Name": "mwaa-serverless",
@@ -459,6 +520,12 @@
     },
     {
       "Name": "StopWorkflowRun",
+      "AuthorizedActions": [
+        {
+          "Name": "StopWorkflowRun",
+          "Service": "airflow-serverless"
+        }
+      ],
       "SDK": [
         {
           "Name": "mwaa-serverless",
@@ -469,6 +536,12 @@
     },
     {
       "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "airflow-serverless"
+        }
+      ],
       "SDK": [
         {
           "Name": "mwaa-serverless",
@@ -479,6 +552,12 @@
     },
     {
       "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "airflow-serverless"
+        }
+      ],
       "SDK": [
         {
           "Name": "mwaa-serverless",
@@ -489,6 +568,21 @@
     },
     {
       "Name": "UpdateWorkflow",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "airflow-serverless.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateWorkflow",
+          "Service": "airflow-serverless"
+        }
+      ],
       "SDK": [
         {
           "Name": "mwaa-serverless",

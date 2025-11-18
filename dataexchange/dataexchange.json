@@ -992,6 +992,15 @@
         {
           "Name": "CreateJob",
           "Service": "dataexchange"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "dataexchange.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [

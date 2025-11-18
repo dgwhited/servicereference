@@ -2544,7 +2544,24 @@
       "Name": "StartSession",
       "AuthorizedActions": [
         {
+          "Name": "ListTagsForResource",
+          "Service": "athena"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "athena.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "StartSession",
+          "Service": "athena"
+        },
+        {
+          "Name": "TagResource",
           "Service": "athena"
         }
       ],
