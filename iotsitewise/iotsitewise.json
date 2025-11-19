@@ -3448,6 +3448,12 @@
     },
     {
       "Name": "PutDefaultEncryptionConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "PutDefaultEncryptionConfiguration",
+          "Service": "iotsitewise"
+        }
+      ],
       "SDK": [
         {
           "Name": "iotsitewise",
@@ -3468,6 +3474,21 @@
     },
     {
       "Name": "PutStorageConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "iotsitewise.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "PutStorageConfiguration",
+          "Service": "iotsitewise"
+        }
+      ],
       "SDK": [
         {
           "Name": "iotsitewise",

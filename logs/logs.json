@@ -170,6 +170,30 @@
       }
     },
     {
+      "Name": "CreateScheduledQuery",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "scheduled-query"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteAccountPolicy",
       "Annotations": {
         "Properties": {
@@ -477,6 +501,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteScheduledQuery",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "scheduled-query"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1045,6 +1089,46 @@
       }
     },
     {
+      "Name": "GetScheduledQuery",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "scheduled-query"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetScheduledQueryHistory",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "scheduled-query"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetTransformer",
       "Annotations": {
         "Properties": {
@@ -1207,6 +1291,21 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListScheduledQueries",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1702,6 +1801,9 @@
         },
         {
           "Name": "log-group"
+        },
+        {
+          "Name": "scheduled-query"
         }
       ],
       "SupportedBy": {
@@ -1813,6 +1915,9 @@
         },
         {
           "Name": "log-group"
+        },
+        {
+          "Name": "scheduled-query"
         }
       ],
       "SupportedBy": {
@@ -1900,6 +2005,26 @@
           "IsWrite": true
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateScheduledQuery",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "scheduled-query"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -2069,6 +2194,21 @@
     },
     {
       "Name": "CreateScheduledQuery",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateScheduledQuery",
+          "Service": "logs"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "logs.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "logs",
@@ -2351,6 +2491,12 @@
     },
     {
       "Name": "DeleteScheduledQuery",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteScheduledQuery",
+          "Service": "logs"
+        }
+      ],
       "SDK": [
         {
           "Name": "logs",
@@ -3019,6 +3165,12 @@
     },
     {
       "Name": "ListScheduledQueries",
+      "AuthorizedActions": [
+        {
+          "Name": "ListScheduledQueries",
+          "Service": "logs"
+        }
+      ],
       "SDK": [
         {
           "Name": "logs",
@@ -3627,6 +3779,15 @@
       "Name": "log-stream",
       "ARNFormats": [
         "arn:${Partition}:logs:${Region}:${Account}:log-group:${LogGroupName}:log-stream:${LogStreamName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "scheduled-query",
+      "ARNFormats": [
+        "arn:${Partition}:logs:${Region}:${Account}:scheduled-query:${ScheduledQueryId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

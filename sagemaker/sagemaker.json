@@ -9514,6 +9514,10 @@
       "Name": "CreateCluster",
       "AuthorizedActions": [
         {
+          "Name": "AddTags",
+          "Service": "sagemaker"
+        },
+        {
           "Name": "CreateCluster",
           "Service": "sagemaker"
         },
@@ -9623,6 +9627,10 @@
     {
       "Name": "CreateContext",
       "AuthorizedActions": [
+        {
+          "Name": "AddTags",
+          "Service": "sagemaker"
+        },
         {
           "Name": "CreateContext",
           "Service": "sagemaker"
@@ -10447,6 +10455,10 @@
       "Name": "CreatePartnerApp",
       "AuthorizedActions": [
         {
+          "Name": "AddTags",
+          "Service": "sagemaker"
+        },
+        {
           "Name": "CreatePartnerApp",
           "Service": "sagemaker"
         },
@@ -10600,6 +10612,15 @@
         {
           "Name": "CreateProject",
           "Service": "sagemaker"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "sagemaker.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [
@@ -10846,6 +10867,12 @@
     },
     {
       "Name": "DeleteAlgorithm",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteAlgorithm",
+          "Service": "sagemaker"
+        }
+      ],
       "SDK": [
         {
           "Name": "sagemaker",
@@ -15104,6 +15131,12 @@
     },
     {
       "Name": "UpdateCodeRepository",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateCodeRepository",
+          "Service": "sagemaker"
+        }
+      ],
       "SDK": [
         {
           "Name": "sagemaker",
@@ -15647,6 +15680,12 @@
     },
     {
       "Name": "UpdateTrainingJob",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateTrainingJob",
+          "Service": "sagemaker"
+        }
+      ],
       "SDK": [
         {
           "Name": "sagemaker",

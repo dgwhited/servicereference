@@ -449,6 +449,12 @@
   "Operations": [
     {
       "Name": "DeleteEarthObservationJob",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteEarthObservationJob",
+          "Service": "sagemaker-geospatial"
+        }
+      ],
       "SDK": [
         {
           "Name": "sagemaker-geospatial",
@@ -459,6 +465,12 @@
     },
     {
       "Name": "DeleteVectorEnrichmentJob",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteVectorEnrichmentJob",
+          "Service": "sagemaker-geospatial"
+        }
+      ],
       "SDK": [
         {
           "Name": "sagemaker-geospatial",
@@ -498,6 +510,15 @@
         {
           "Name": "ExportVectorEnrichmentJob",
           "Service": "sagemaker-geospatial"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "sagemaker-geospatial.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [
@@ -567,6 +588,12 @@
     },
     {
       "Name": "GetVectorEnrichmentJob",
+      "AuthorizedActions": [
+        {
+          "Name": "GetVectorEnrichmentJob",
+          "Service": "sagemaker-geospatial"
+        }
+      ],
       "SDK": [
         {
           "Name": "sagemaker-geospatial",
@@ -670,6 +697,10 @@
         {
           "Name": "StartEarthObservationJob",
           "Service": "sagemaker-geospatial"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "sagemaker-geospatial"
         }
       ],
       "SDK": [
@@ -684,7 +715,20 @@
       "Name": "StartVectorEnrichmentJob",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "sagemaker-geospatial.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "StartVectorEnrichmentJob",
+          "Service": "sagemaker-geospatial"
+        },
+        {
+          "Name": "TagResource",
           "Service": "sagemaker-geospatial"
         }
       ],
@@ -714,6 +758,12 @@
     },
     {
       "Name": "StopVectorEnrichmentJob",
+      "AuthorizedActions": [
+        {
+          "Name": "StopVectorEnrichmentJob",
+          "Service": "sagemaker-geospatial"
+        }
+      ],
       "SDK": [
         {
           "Name": "sagemaker-geospatial",
@@ -740,6 +790,12 @@
     },
     {
       "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "sagemaker-geospatial"
+        }
+      ],
       "SDK": [
         {
           "Name": "sagemaker-geospatial",

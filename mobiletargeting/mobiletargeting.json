@@ -2785,6 +2785,15 @@
         {
           "Name": "CreateRecommenderConfiguration",
           "Service": "mobiletargeting"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "mobiletargeting.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [
@@ -4505,6 +4514,15 @@
     {
       "Name": "UpdateRecommenderConfiguration",
       "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "mobiletargeting.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
         {
           "Name": "UpdateRecommenderConfiguration",
           "Service": "mobiletargeting"

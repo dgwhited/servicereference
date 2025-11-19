@@ -535,6 +535,21 @@
     },
     {
       "Name": "TestRole",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "elastictranscoder.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TestRole",
+          "Service": "elastictranscoder"
+        }
+      ],
       "SDK": [
         {
           "Name": "elastictranscoder",

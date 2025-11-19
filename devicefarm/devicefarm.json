@@ -1665,6 +1665,15 @@
         {
           "Name": "CreateProject",
           "Service": "devicefarm"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "devicefarm.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [
@@ -2623,6 +2632,15 @@
       "Name": "ScheduleRun",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "devicefarm.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "ScheduleRun",
           "Service": "devicefarm"
         }
@@ -2782,6 +2800,15 @@
     {
       "Name": "UpdateProject",
       "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "devicefarm.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
         {
           "Name": "UpdateProject",
           "Service": "devicefarm"

@@ -3569,7 +3569,20 @@
           "Service": "ssm"
         },
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ssm.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "SendCommand",
+          "Service": "ssm"
+        },
+        {
+          "Name": "StartAutomationExecution",
           "Service": "ssm"
         }
       ],
@@ -4053,6 +4066,15 @@
         {
           "Name": "DescribeAutomationStepExecutions",
           "Service": "ssm"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ssm.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [
@@ -4533,6 +4555,15 @@
         {
           "Name": "GetAutomationExecution",
           "Service": "ssm"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ssm.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [

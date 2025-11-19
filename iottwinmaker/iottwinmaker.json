@@ -952,6 +952,12 @@
     },
     {
       "Name": "CancelMetadataTransferJob",
+      "AuthorizedActions": [
+        {
+          "Name": "CancelMetadataTransferJob",
+          "Service": "iottwinmaker"
+        }
+      ],
       "SDK": [
         {
           "Name": "iottwinmaker",
@@ -1018,6 +1024,16 @@
     },
     {
       "Name": "CreateScene",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateScene",
+          "Service": "iottwinmaker"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "iottwinmaker"
+        }
+      ],
       "SDK": [
         {
           "Name": "iottwinmaker",
@@ -1028,6 +1044,25 @@
     },
     {
       "Name": "CreateSyncJob",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateSyncJob",
+          "Service": "iottwinmaker"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "iottwinmaker.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "iottwinmaker"
+        }
+      ],
       "SDK": [
         {
           "Name": "iottwinmaker",
@@ -1115,6 +1150,12 @@
     },
     {
       "Name": "DeleteSyncJob",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteSyncJob",
+          "Service": "iottwinmaker"
+        }
+      ],
       "SDK": [
         {
           "Name": "iottwinmaker",
@@ -1477,6 +1518,12 @@
     },
     {
       "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "iottwinmaker"
+        }
+      ],
       "SDK": [
         {
           "Name": "iottwinmaker",

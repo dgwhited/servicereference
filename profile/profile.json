@@ -2365,6 +2365,10 @@
         {
           "Name": "CreateCalculatedAttributeDefinition",
           "Service": "profile"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "profile"
         }
       ],
       "SDK": [
@@ -2380,6 +2384,10 @@
       "AuthorizedActions": [
         {
           "Name": "CreateDomain",
+          "Service": "profile"
+        },
+        {
+          "Name": "TagResource",
           "Service": "profile"
         }
       ],
@@ -2397,6 +2405,10 @@
         {
           "Name": "CreateDomainLayout",
           "Service": "profile"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "profile"
         }
       ],
       "SDK": [
@@ -2409,6 +2421,16 @@
     },
     {
       "Name": "CreateEventStream",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateEventStream",
+          "Service": "profile"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "profile"
+        }
+      ],
       "SDK": [
         {
           "Name": "customer-profiles",
@@ -2423,6 +2445,10 @@
         {
           "Name": "CreateEventTrigger",
           "Service": "profile"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "profile"
         }
       ],
       "SDK": [
@@ -2435,6 +2461,21 @@
     },
     {
       "Name": "CreateIntegrationWorkflow",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateIntegrationWorkflow",
+          "Service": "profile"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "profile.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "customer-profiles",
@@ -2586,6 +2627,12 @@
     },
     {
       "Name": "DeleteEventStream",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteEventStream",
+          "Service": "profile"
+        }
+      ],
       "SDK": [
         {
           "Name": "customer-profiles",
@@ -2708,6 +2755,12 @@
     },
     {
       "Name": "DeleteWorkflow",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteWorkflow",
+          "Service": "profile"
+        }
+      ],
       "SDK": [
         {
           "Name": "customer-profiles",
@@ -2734,6 +2787,12 @@
     },
     {
       "Name": "GetAutoMergingPreview",
+      "AuthorizedActions": [
+        {
+          "Name": "GetAutoMergingPreview",
+          "Service": "profile"
+        }
+      ],
       "SDK": [
         {
           "Name": "customer-profiles",
@@ -2888,6 +2947,12 @@
     },
     {
       "Name": "GetProfileHistoryRecord",
+      "AuthorizedActions": [
+        {
+          "Name": "GetProfileHistoryRecord",
+          "Service": "profile"
+        }
+      ],
       "SDK": [
         {
           "Name": "customer-profiles",
@@ -2994,6 +3059,12 @@
     },
     {
       "Name": "GetSimilarProfiles",
+      "AuthorizedActions": [
+        {
+          "Name": "GetSimilarProfiles",
+          "Service": "profile"
+        }
+      ],
       "SDK": [
         {
           "Name": "customer-profiles",
@@ -3244,6 +3315,12 @@
     },
     {
       "Name": "ListProfileHistoryRecords",
+      "AuthorizedActions": [
+        {
+          "Name": "ListProfileHistoryRecords",
+          "Service": "profile"
+        }
+      ],
       "SDK": [
         {
           "Name": "customer-profiles",
@@ -3438,6 +3515,10 @@
         {
           "Name": "PutProfileObjectType",
           "Service": "profile"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "profile"
         }
       ],
       "SDK": [
@@ -3482,6 +3563,12 @@
     },
     {
       "Name": "StopUploadJob",
+      "AuthorizedActions": [
+        {
+          "Name": "StopUploadJob",
+          "Service": "profile"
+        }
+      ],
       "SDK": [
         {
           "Name": "customer-profiles",
@@ -3524,6 +3611,12 @@
     },
     {
       "Name": "UpdateCalculatedAttributeDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateCalculatedAttributeDefinition",
+          "Service": "profile"
+        }
+      ],
       "SDK": [
         {
           "Name": "customer-profiles",
