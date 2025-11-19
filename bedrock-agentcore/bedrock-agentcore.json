@@ -329,7 +329,8 @@
       "Name": "CreateMemory",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "bedrock-agentcore:KmsKeyArn"
       ],
       "Annotations": {
         "Properties": {
@@ -2131,6 +2132,12 @@
     },
     {
       "Name": "bedrock-agentcore:InboundJwtClaim/sub",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "bedrock-agentcore:KmsKeyArn",
       "Types": [
         "String"
       ]

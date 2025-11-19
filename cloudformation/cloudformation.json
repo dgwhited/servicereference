@@ -510,6 +510,29 @@
       }
     },
     {
+      "Name": "DescribeEvents",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "changeset"
+        },
+        {
+          "Name": "stack"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeGeneratedTemplate",
       "Annotations": {
         "Properties": {
@@ -1988,6 +2011,20 @@
   "Operations": [
     {
       "Name": "ActivateOrganizationsAccess",
+      "AuthorizedActions": [
+        {
+          "Name": "ActivateOrganizationsAccess",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "CreateServiceLinkedRole",
+          "Service": "iam"
+        },
+        {
+          "Name": "GetRole",
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -1998,6 +2035,21 @@
     },
     {
       "Name": "ActivateType",
+      "AuthorizedActions": [
+        {
+          "Name": "ActivateType",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "resources.cloudformation.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2008,6 +2060,12 @@
     },
     {
       "Name": "BatchDescribeTypeConfigurations",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchDescribeTypeConfigurations",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2018,6 +2076,12 @@
     },
     {
       "Name": "CancelResourceRequest",
+      "AuthorizedActions": [
+        {
+          "Name": "CancelResourceRequest",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudcontrol",
@@ -2028,6 +2092,12 @@
     },
     {
       "Name": "CancelUpdateStack",
+      "AuthorizedActions": [
+        {
+          "Name": "CancelUpdateStack",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2038,6 +2108,21 @@
     },
     {
       "Name": "ContinueUpdateRollback",
+      "AuthorizedActions": [
+        {
+          "Name": "ContinueUpdateRollback",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "cloudformation.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2048,6 +2133,29 @@
     },
     {
       "Name": "CreateChangeSet",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateChangeSet",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "cloudformation.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "UntagResource",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2058,6 +2166,12 @@
     },
     {
       "Name": "CreateGeneratedTemplate",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateGeneratedTemplate",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2068,6 +2182,21 @@
     },
     {
       "Name": "CreateResource",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateResource",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "cloudformation.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudcontrol",
@@ -2078,6 +2207,25 @@
     },
     {
       "Name": "CreateStack",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateStack",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "cloudformation.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2088,6 +2236,12 @@
     },
     {
       "Name": "CreateStackInstances",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateStackInstances",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2098,6 +2252,12 @@
     },
     {
       "Name": "CreateStackRefactor",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateStackRefactor",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2108,6 +2268,25 @@
     },
     {
       "Name": "CreateStackSet",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateStackSet",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "cloudformation.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2118,6 +2297,12 @@
     },
     {
       "Name": "DeactivateOrganizationsAccess",
+      "AuthorizedActions": [
+        {
+          "Name": "DeactivateOrganizationsAccess",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2128,6 +2313,12 @@
     },
     {
       "Name": "DeactivateType",
+      "AuthorizedActions": [
+        {
+          "Name": "DeactivateType",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2138,6 +2329,12 @@
     },
     {
       "Name": "DeleteChangeSet",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteChangeSet",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2148,6 +2345,12 @@
     },
     {
       "Name": "DeleteGeneratedTemplate",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteGeneratedTemplate",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2158,6 +2361,21 @@
     },
     {
       "Name": "DeleteResource",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteResource",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "cloudformation.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudcontrol",
@@ -2168,6 +2386,21 @@
     },
     {
       "Name": "DeleteStack",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteStack",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "cloudformation.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2178,6 +2411,12 @@
     },
     {
       "Name": "DeleteStackInstances",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteStackInstances",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2188,6 +2427,12 @@
     },
     {
       "Name": "DeleteStackSet",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteStackSet",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2198,6 +2443,12 @@
     },
     {
       "Name": "DeregisterType",
+      "AuthorizedActions": [
+        {
+          "Name": "DeregisterType",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2208,6 +2459,12 @@
     },
     {
       "Name": "DescribeAccountLimits",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeAccountLimits",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2218,6 +2475,12 @@
     },
     {
       "Name": "DescribeChangeSet",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeChangeSet",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2228,6 +2491,12 @@
     },
     {
       "Name": "DescribeChangeSetHooks",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeChangeSetHooks",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2237,7 +2506,29 @@
       ]
     },
     {
+      "Name": "DescribeEvents",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeEvents",
+          "Service": "cloudformation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudformation",
+          "Method": "describe_events",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DescribeGeneratedTemplate",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeGeneratedTemplate",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2248,6 +2539,12 @@
     },
     {
       "Name": "DescribeOrganizationsAccess",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeOrganizationsAccess",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2258,6 +2555,12 @@
     },
     {
       "Name": "DescribePublisher",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribePublisher",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2268,6 +2571,12 @@
     },
     {
       "Name": "DescribeResourceScan",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeResourceScan",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2278,6 +2587,12 @@
     },
     {
       "Name": "DescribeStackDriftDetectionStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeStackDriftDetectionStatus",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2288,6 +2603,12 @@
     },
     {
       "Name": "DescribeStackEvents",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeStackEvents",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2298,6 +2619,12 @@
     },
     {
       "Name": "DescribeStackInstance",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeStackInstance",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2308,6 +2635,12 @@
     },
     {
       "Name": "DescribeStackRefactor",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeStackRefactor",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2318,6 +2651,12 @@
     },
     {
       "Name": "DescribeStackResource",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeStackResource",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2328,6 +2667,12 @@
     },
     {
       "Name": "DescribeStackResourceDrifts",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeStackResourceDrifts",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2338,6 +2683,12 @@
     },
     {
       "Name": "DescribeStackResources",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeStackResources",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2348,6 +2699,12 @@
     },
     {
       "Name": "DescribeStackSet",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeStackSet",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2358,6 +2715,12 @@
     },
     {
       "Name": "DescribeStackSetOperation",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeStackSetOperation",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2368,6 +2731,16 @@
     },
     {
       "Name": "DescribeStacks",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeStacks",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "ListStacks",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2378,6 +2751,12 @@
     },
     {
       "Name": "DescribeType",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeType",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2388,6 +2767,12 @@
     },
     {
       "Name": "DescribeTypeRegistration",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeTypeRegistration",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2398,6 +2783,16 @@
     },
     {
       "Name": "DetectStackDrift",
+      "AuthorizedActions": [
+        {
+          "Name": "DetectStackDrift",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "DetectStackResourceDrift",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2408,6 +2803,12 @@
     },
     {
       "Name": "DetectStackResourceDrift",
+      "AuthorizedActions": [
+        {
+          "Name": "DetectStackResourceDrift",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2418,6 +2819,12 @@
     },
     {
       "Name": "DetectStackSetDrift",
+      "AuthorizedActions": [
+        {
+          "Name": "DetectStackSetDrift",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2428,6 +2835,12 @@
     },
     {
       "Name": "EstimateTemplateCost",
+      "AuthorizedActions": [
+        {
+          "Name": "EstimateTemplateCost",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2438,6 +2851,20 @@
     },
     {
       "Name": "ExecuteChangeSet",
+      "AuthorizedActions": [
+        {
+          "Name": "ExecuteChangeSet",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "UntagResource",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2448,6 +2875,12 @@
     },
     {
       "Name": "ExecuteStackRefactor",
+      "AuthorizedActions": [
+        {
+          "Name": "ExecuteStackRefactor",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2458,6 +2891,12 @@
     },
     {
       "Name": "GetGeneratedTemplate",
+      "AuthorizedActions": [
+        {
+          "Name": "GetGeneratedTemplate",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2468,6 +2907,12 @@
     },
     {
       "Name": "GetHookResult",
+      "AuthorizedActions": [
+        {
+          "Name": "GetHookResult",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2478,6 +2923,21 @@
     },
     {
       "Name": "GetResource",
+      "AuthorizedActions": [
+        {
+          "Name": "GetResource",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "cloudformation.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudcontrol",
@@ -2488,6 +2948,12 @@
     },
     {
       "Name": "GetResourceRequestStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "GetResourceRequestStatus",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudcontrol",
@@ -2498,6 +2964,12 @@
     },
     {
       "Name": "GetStackPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "GetStackPolicy",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2508,6 +2980,12 @@
     },
     {
       "Name": "GetTemplate",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTemplate",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2518,6 +2996,12 @@
     },
     {
       "Name": "GetTemplateSummary",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTemplateSummary",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2528,6 +3012,12 @@
     },
     {
       "Name": "ImportStacksToStackSet",
+      "AuthorizedActions": [
+        {
+          "Name": "ImportStacksToStackSet",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2538,6 +3028,12 @@
     },
     {
       "Name": "ListChangeSets",
+      "AuthorizedActions": [
+        {
+          "Name": "ListChangeSets",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2548,6 +3044,12 @@
     },
     {
       "Name": "ListExports",
+      "AuthorizedActions": [
+        {
+          "Name": "ListExports",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2558,6 +3060,12 @@
     },
     {
       "Name": "ListGeneratedTemplates",
+      "AuthorizedActions": [
+        {
+          "Name": "ListGeneratedTemplates",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2568,6 +3076,16 @@
     },
     {
       "Name": "ListHookResults",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAllHookResults",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "ListHookResults",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2578,6 +3096,12 @@
     },
     {
       "Name": "ListImports",
+      "AuthorizedActions": [
+        {
+          "Name": "ListImports",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2588,6 +3112,12 @@
     },
     {
       "Name": "ListResourceRequests",
+      "AuthorizedActions": [
+        {
+          "Name": "ListResourceRequests",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudcontrol",
@@ -2598,6 +3128,12 @@
     },
     {
       "Name": "ListResourceScanRelatedResources",
+      "AuthorizedActions": [
+        {
+          "Name": "ListResourceScanRelatedResources",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2608,6 +3144,12 @@
     },
     {
       "Name": "ListResourceScanResources",
+      "AuthorizedActions": [
+        {
+          "Name": "ListResourceScanResources",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2618,6 +3160,12 @@
     },
     {
       "Name": "ListResourceScans",
+      "AuthorizedActions": [
+        {
+          "Name": "ListResourceScans",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2628,6 +3176,12 @@
     },
     {
       "Name": "ListResources",
+      "AuthorizedActions": [
+        {
+          "Name": "ListResources",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudcontrol",
@@ -2638,6 +3192,12 @@
     },
     {
       "Name": "ListStackInstanceResourceDrifts",
+      "AuthorizedActions": [
+        {
+          "Name": "ListStackInstanceResourceDrifts",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2648,6 +3208,12 @@
     },
     {
       "Name": "ListStackInstances",
+      "AuthorizedActions": [
+        {
+          "Name": "ListStackInstances",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2658,6 +3224,12 @@
     },
     {
       "Name": "ListStackRefactorActions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListStackRefactorActions",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2668,6 +3240,12 @@
     },
     {
       "Name": "ListStackRefactors",
+      "AuthorizedActions": [
+        {
+          "Name": "ListStackRefactors",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2678,6 +3256,12 @@
     },
     {
       "Name": "ListStackResources",
+      "AuthorizedActions": [
+        {
+          "Name": "ListStackResources",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2688,6 +3272,12 @@
     },
     {
       "Name": "ListStackSetAutoDeploymentTargets",
+      "AuthorizedActions": [
+        {
+          "Name": "ListStackSetAutoDeploymentTargets",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2698,6 +3288,12 @@
     },
     {
       "Name": "ListStackSetOperationResults",
+      "AuthorizedActions": [
+        {
+          "Name": "ListStackSetOperationResults",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2708,6 +3304,12 @@
     },
     {
       "Name": "ListStackSetOperations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListStackSetOperations",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2718,6 +3320,12 @@
     },
     {
       "Name": "ListStackSets",
+      "AuthorizedActions": [
+        {
+          "Name": "ListStackSets",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2728,6 +3336,12 @@
     },
     {
       "Name": "ListStacks",
+      "AuthorizedActions": [
+        {
+          "Name": "ListStacks",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2738,6 +3352,12 @@
     },
     {
       "Name": "ListTypeRegistrations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTypeRegistrations",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2748,6 +3368,12 @@
     },
     {
       "Name": "ListTypeVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTypeVersions",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2758,6 +3384,12 @@
     },
     {
       "Name": "ListTypes",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTypes",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2768,6 +3400,12 @@
     },
     {
       "Name": "PublishType",
+      "AuthorizedActions": [
+        {
+          "Name": "PublishType",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2778,6 +3416,12 @@
     },
     {
       "Name": "RecordHandlerProgress",
+      "AuthorizedActions": [
+        {
+          "Name": "RecordHandlerProgress",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2788,6 +3432,12 @@
     },
     {
       "Name": "RegisterPublisher",
+      "AuthorizedActions": [
+        {
+          "Name": "RegisterPublisher",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2798,6 +3448,21 @@
     },
     {
       "Name": "RegisterType",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "resources.cloudformation.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "RegisterType",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2808,6 +3473,21 @@
     },
     {
       "Name": "RollbackStack",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "cloudformation.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "RollbackStack",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2818,6 +3498,12 @@
     },
     {
       "Name": "SetStackPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "SetStackPolicy",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2828,6 +3514,12 @@
     },
     {
       "Name": "SetTypeConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "SetTypeConfiguration",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2838,6 +3530,12 @@
     },
     {
       "Name": "SetTypeDefaultVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "SetTypeDefaultVersion",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2848,6 +3546,12 @@
     },
     {
       "Name": "SignalResource",
+      "AuthorizedActions": [
+        {
+          "Name": "SignalResource",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2858,6 +3562,12 @@
     },
     {
       "Name": "StartResourceScan",
+      "AuthorizedActions": [
+        {
+          "Name": "StartResourceScan",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2868,6 +3578,12 @@
     },
     {
       "Name": "StopStackSetOperation",
+      "AuthorizedActions": [
+        {
+          "Name": "StopStackSetOperation",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2878,6 +3594,12 @@
     },
     {
       "Name": "TestType",
+      "AuthorizedActions": [
+        {
+          "Name": "TestType",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2888,6 +3610,12 @@
     },
     {
       "Name": "UpdateGeneratedTemplate",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateGeneratedTemplate",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2898,6 +3626,21 @@
     },
     {
       "Name": "UpdateResource",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "cloudformation.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateResource",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudcontrol",
@@ -2908,6 +3651,33 @@
     },
     {
       "Name": "UpdateStack",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "cloudformation.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "SetStackPolicy",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "UntagResource",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "UpdateStack",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2918,6 +3688,12 @@
     },
     {
       "Name": "UpdateStackInstances",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateStackInstances",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2928,6 +3704,29 @@
     },
     {
       "Name": "UpdateStackSet",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "cloudformation.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "UntagResource",
+          "Service": "cloudformation"
+        },
+        {
+          "Name": "UpdateStackSet",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2938,6 +3737,12 @@
     },
     {
       "Name": "UpdateTerminationProtection",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateTerminationProtection",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",
@@ -2948,6 +3753,12 @@
     },
     {
       "Name": "ValidateTemplate",
+      "AuthorizedActions": [
+        {
+          "Name": "ValidateTemplate",
+          "Service": "cloudformation"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudformation",

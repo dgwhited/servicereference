@@ -391,6 +391,46 @@
       }
     },
     {
+      "Name": "DescribeTopic",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeTopicPartitions",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "topic"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeVpcConnection",
       "Annotations": {
         "Properties": {
@@ -672,6 +712,26 @@
       ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListTopics",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
@@ -1414,6 +1474,54 @@
       ]
     },
     {
+      "Name": "DescribeTopic",
+      "AuthorizedActions": [
+        {
+          "Name": "Connect",
+          "Service": "kafka-cluster"
+        },
+        {
+          "Name": "DescribeTopic",
+          "Service": "kafka-cluster"
+        },
+        {
+          "Name": "DescribeTopicDynamicConfiguration",
+          "Service": "kafka-cluster"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafka",
+          "Method": "describe_topic",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeTopicPartitions",
+      "AuthorizedActions": [
+        {
+          "Name": "Connect",
+          "Service": "kafka-cluster"
+        },
+        {
+          "Name": "DescribeTopic",
+          "Service": "kafka-cluster"
+        },
+        {
+          "Name": "DescribeTopicDynamicConfiguration",
+          "Service": "kafka-cluster"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafka",
+          "Method": "describe_topic_partitions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DescribeVpcConnection",
       "AuthorizedActions": [
         {
@@ -1665,6 +1773,26 @@
         {
           "Name": "kafka",
           "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTopics",
+      "AuthorizedActions": [
+        {
+          "Name": "Connect",
+          "Service": "kafka-cluster"
+        },
+        {
+          "Name": "DescribeTopic",
+          "Service": "kafka-cluster"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafka",
+          "Method": "list_topics",
           "Package": "Boto3"
         }
       ]

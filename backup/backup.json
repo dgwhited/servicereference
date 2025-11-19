@@ -327,6 +327,30 @@
       }
     },
     {
+      "Name": "CreateTieringConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "tieringConfiguration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteBackupPlan",
       "Annotations": {
         "Properties": {
@@ -564,6 +588,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteTieringConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "tieringConfiguration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1102,6 +1146,26 @@
       }
     },
     {
+      "Name": "GetTieringConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "tieringConfiguration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListBackupJobSummaries",
       "Annotations": {
         "Properties": {
@@ -1557,10 +1621,28 @@
         },
         {
           "Name": "restoreTestingPlan"
+        },
+        {
+          "Name": "tieringConfiguration"
         }
       ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListTieringConfigurations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
@@ -1834,6 +1916,9 @@
         },
         {
           "Name": "restoreTestingPlan"
+        },
+        {
+          "Name": "tieringConfiguration"
         }
       ],
       "SupportedBy": {
@@ -1875,6 +1960,9 @@
         },
         {
           "Name": "restoreTestingPlan"
+        },
+        {
+          "Name": "tieringConfiguration"
         }
       ],
       "SupportedBy": {
@@ -2056,6 +2144,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "UpdateTieringConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "tieringConfiguration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     }
   ],
@@ -2367,6 +2475,16 @@
       ]
     },
     {
+      "Name": "CreateTieringConfiguration",
+      "SDK": [
+        {
+          "Name": "backup",
+          "Method": "create_tiering_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteBackupPlan",
       "AuthorizedActions": [
         {
@@ -2526,6 +2644,22 @@
         {
           "Name": "backup",
           "Method": "delete_restore_testing_selection",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTieringConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteTieringConfiguration",
+          "Service": "backup"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "backup",
+          "Method": "delete_tiering_configuration",
           "Package": "Boto3"
         }
       ]
@@ -2983,6 +3117,22 @@
       ]
     },
     {
+      "Name": "GetTieringConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTieringConfiguration",
+          "Service": "backup"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "backup",
+          "Method": "get_tiering_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListBackupJobSummaries",
       "AuthorizedActions": [
         {
@@ -3399,6 +3549,22 @@
       ]
     },
     {
+      "Name": "ListTieringConfigurations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTieringConfigurations",
+          "Service": "backup"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "backup",
+          "Method": "list_tiering_configurations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "PutBackupVaultAccessPolicy",
       "AuthorizedActions": [
         {
@@ -3754,6 +3920,16 @@
           "Package": "Boto3"
         }
       ]
+    },
+    {
+      "Name": "UpdateTieringConfiguration",
+      "SDK": [
+        {
+          "Name": "backup",
+          "Method": "update_tiering_configuration",
+          "Package": "Boto3"
+        }
+      ]
     }
   ],
   "Resources": [
@@ -3815,6 +3991,15 @@
       "Name": "restoreTestingPlan",
       "ARNFormats": [
         "arn:${Partition}:backup:${Region}:${Account}:restore-testing-plan:${RestoreTestingPlanName}-${RestoreTestingPlanId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "tieringConfiguration",
+      "ARNFormats": [
+        "arn:${Partition}:backup:${Region}:${Account}:tiering-configuration:${TieringConfigurationName}-${TieringConfigurationId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
