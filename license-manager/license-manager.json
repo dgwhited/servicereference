@@ -135,6 +135,49 @@
       }
     },
     {
+      "Name": "CreateLicenseAssetGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "license-asset-ruleset"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateLicenseAssetRuleset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateLicenseConfiguration",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -268,6 +311,46 @@
       }
     },
     {
+      "Name": "DeleteLicenseAssetGroup",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "license-asset-group"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteLicenseAssetRuleset",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "license-asset-ruleset"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteLicenseConfiguration",
       "Annotations": {
         "Properties": {
@@ -393,6 +476,46 @@
       }
     },
     {
+      "Name": "GetLicenseAssetGroup",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "license-asset-group"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetLicenseAssetRuleset",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "license-asset-ruleset"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetLicenseConfiguration",
       "Annotations": {
         "Properties": {
@@ -483,6 +606,26 @@
       }
     },
     {
+      "Name": "ListAssetsForLicenseAssetGroup",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "license-asset-group"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListAssociationsForLicenseConfiguration",
       "Annotations": {
         "Properties": {
@@ -538,10 +681,65 @@
       }
     },
     {
+      "Name": "ListLicenseAssetGroups",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "license-asset-group"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListLicenseAssetRulesets",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "license-asset-ruleset"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListLicenseConfigurations",
       "Annotations": {
         "Properties": {
-          "IsList": false,
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListLicenseConfigurationsForOrganization",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -730,6 +928,12 @@
           "Name": "license"
         },
         {
+          "Name": "license-asset-group"
+        },
+        {
+          "Name": "license-asset-ruleset"
+        },
+        {
           "Name": "license-configuration"
         },
         {
@@ -818,6 +1022,12 @@
           "Name": "license"
         },
         {
+          "Name": "license-asset-group"
+        },
+        {
+          "Name": "license-asset-ruleset"
+        },
+        {
           "Name": "license-configuration"
         },
         {
@@ -850,10 +1060,59 @@
           "Name": "license"
         },
         {
+          "Name": "license-asset-group"
+        },
+        {
+          "Name": "license-asset-ruleset"
+        },
+        {
           "Name": "license-configuration"
         },
         {
           "Name": "report-generator"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateLicenseAssetGroup",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "license-asset-group"
+        },
+        {
+          "Name": "license-asset-ruleset"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateLicenseAssetRuleset",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "license-asset-ruleset"
         }
       ],
       "SupportedBy": {
@@ -1795,6 +2054,24 @@
       "Name": "license",
       "ARNFormats": [
         "arn:${Partition}:license-manager::${Account}:license:${LicenseId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "license-asset-group",
+      "ARNFormats": [
+        "arn:${Partition}:license-manager:${Region}:${Account}:license-asset-group:${LicenseAssetGroupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "license-asset-ruleset",
+      "ARNFormats": [
+        "arn:${Partition}:license-manager:${Region}:${Account}:license-asset-ruleset:${LicenseAssetRulesetId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

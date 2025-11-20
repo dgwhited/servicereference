@@ -729,6 +729,21 @@
       }
     },
     {
+      "Name": "GetMalwareScan",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetMalwareScanSettings",
       "Annotations": {
         "Properties": {
@@ -1016,6 +1031,21 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListMalwareScans",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2264,6 +2294,22 @@
       ]
     },
     {
+      "Name": "GetMalwareScan",
+      "AuthorizedActions": [
+        {
+          "Name": "GetMalwareScan",
+          "Service": "guardduty"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "guardduty",
+          "Method": "get_malware_scan",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetMalwareScanSettings",
       "AuthorizedActions": [
         {
@@ -2547,6 +2593,22 @@
         {
           "Name": "guardduty",
           "Method": "list_malware_protection_plans",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListMalwareScans",
+      "AuthorizedActions": [
+        {
+          "Name": "ListMalwareScans",
+          "Service": "guardduty"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "guardduty",
+          "Method": "list_malware_scans",
           "Package": "Boto3"
         }
       ]

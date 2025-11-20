@@ -464,6 +464,30 @@
       }
     },
     {
+      "Name": "DescribeResponsibilityTransfer",
+      "ActionConditionKeys": [
+        "organizations:TransferDirection",
+        "organizations:TransferType"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "responsibilitytransfer"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DetachPolicy",
       "ActionConditionKeys": [
         "organizations:PolicyType"
@@ -614,6 +638,29 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "InviteOrganizationToTransferResponsibility",
+      "ActionConditionKeys": [
+        "organizations:TransferType"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "account"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -832,6 +879,25 @@
       }
     },
     {
+      "Name": "ListInboundResponsibilityTransfers",
+      "ActionConditionKeys": [
+        "organizations:TransferDirection",
+        "organizations:TransferType"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListOrganizationalUnitsForParent",
       "Annotations": {
         "Properties": {
@@ -852,6 +918,25 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListOutboundResponsibilityTransfers",
+      "ActionConditionKeys": [
+        "organizations:TransferDirection",
+        "organizations:TransferType"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -964,6 +1049,9 @@
         },
         {
           "Name": "resourcepolicy"
+        },
+        {
+          "Name": "responsibilitytransfer"
         },
         {
           "Name": "root"
@@ -1122,11 +1210,42 @@
           "Name": "resourcepolicy"
         },
         {
+          "Name": "responsibilitytransfer",
+          "ConditionKeys": [
+            "organizations:TransferDirection",
+            "organizations:TransferType"
+          ]
+        },
+        {
           "Name": "root"
         }
       ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "TerminateResponsibilityTransfer",
+      "ActionConditionKeys": [
+        "organizations:TransferDirection",
+        "organizations:TransferType"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "responsibilitytransfer"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
@@ -1156,6 +1275,13 @@
         },
         {
           "Name": "resourcepolicy"
+        },
+        {
+          "Name": "responsibilitytransfer",
+          "ConditionKeys": [
+            "organizations:TransferDirection",
+            "organizations:TransferType"
+          ]
         },
         {
           "Name": "root"
@@ -1208,6 +1334,30 @@
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
       }
+    },
+    {
+      "Name": "UpdateResponsibilityTransfer",
+      "ActionConditionKeys": [
+        "organizations:TransferDirection",
+        "organizations:TransferType"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "responsibilitytransfer"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
     }
   ],
   "ConditionKeys": [
@@ -1237,6 +1387,18 @@
     },
     {
       "Name": "organizations:ServicePrincipal",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "organizations:TransferDirection",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "organizations:TransferType",
       "Types": [
         "String"
       ]
@@ -2230,6 +2392,15 @@
       "Name": "resourcepolicy",
       "ARNFormats": [
         "arn:${Partition}:organizations::${Account}:resourcepolicy/o-${OrganizationId}/rp-${ResourcePolicyId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "responsibilitytransfer",
+      "ARNFormats": [
+        "arn:${Partition}:organizations::${Account}:transfer/o-${OrganizationId}/${TransferType}/${TransferDirection}/rt-${ResponsibilityTransferId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

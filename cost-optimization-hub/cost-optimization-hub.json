@@ -32,6 +32,21 @@
       }
     },
     {
+      "Name": "ListEfficiencyMetrics",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListEnrollmentStatuses",
       "Annotations": {
         "Properties": {
@@ -136,6 +151,22 @@
         {
           "Name": "cost-optimization-hub",
           "Method": "get_recommendation",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListEfficiencyMetrics",
+      "AuthorizedActions": [
+        {
+          "Name": "ListEfficiencyMetrics",
+          "Service": "cost-optimization-hub"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cost-optimization-hub",
+          "Method": "list_efficiency_metrics",
           "Package": "Boto3"
         }
       ]

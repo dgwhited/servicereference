@@ -4901,6 +4901,39 @@
       }
     },
     {
+      "Name": "RenameTable",
+      "ActionConditionKeys": [
+        "glue:FederatedAuthorizationSource",
+        "glue:LakeFormationPermissions"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "rootcatalog"
+        },
+        {
+          "Name": "table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "RequestLogParsing",
       "Annotations": {
         "Properties": {
@@ -5950,6 +5983,7 @@
     {
       "Name": "UpdateDatabase",
       "ActionConditionKeys": [
+        "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {

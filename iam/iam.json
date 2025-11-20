@@ -2,6 +2,26 @@
   "Name": "iam",
   "Actions": [
     {
+      "Name": "AcceptDelegationRequest",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "delegation-request"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "AddClientIDToOpenIDConnectProvider",
       "Annotations": {
         "Properties": {
@@ -59,6 +79,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "AssociateDelegationRequest",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "delegation-request"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -185,6 +225,31 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "CreateDelegationRequest",
+      "ActionConditionKeys": [
+        "iam:DelegationDuration",
+        "iam:NotificationChannel",
+        "iam:TemplateArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "delegation-request"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -691,6 +756,9 @@
     },
     {
       "Name": "DeleteRole",
+      "ActionConditionKeys": [
+        "iam:PermissionsBoundary"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1069,6 +1137,21 @@
       }
     },
     {
+      "Name": "DisableOutboundWebIdentityFederation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "EnableMFADevice",
       "ActionConditionKeys": [
         "iam:FIDO-FIPS-140-2-certification",
@@ -1122,6 +1205,21 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "EnableOutboundWebIdentityFederation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1358,6 +1456,26 @@
       }
     },
     {
+      "Name": "GetDelegationRequest",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "delegation-request"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetGroup",
       "Annotations": {
         "Properties": {
@@ -1395,6 +1513,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "GetHumanReadableSummary",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "delegation-request"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1493,6 +1631,21 @@
       }
     },
     {
+      "Name": "GetOutboundWebIdentityFederationInfo",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetPolicy",
       "Annotations": {
         "Properties": {
@@ -1534,6 +1687,9 @@
     },
     {
       "Name": "GetRole",
+      "ActionConditionKeys": [
+        "iam:PermissionsBoundary"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1830,6 +1986,24 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListDelegationRequests",
+      "ActionConditionKeys": [
+        "iam:DelegationRequestOwner"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2540,6 +2714,26 @@
       }
     },
     {
+      "Name": "RejectDelegationRequest",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "delegation-request"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "RemoveClientIDFromOpenIDConnectProvider",
       "Annotations": {
         "Properties": {
@@ -2640,6 +2834,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "SendDelegationToken",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "delegation-request"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -3176,6 +3390,9 @@
     },
     {
       "Name": "UpdateAssumeRolePolicy",
+      "ActionConditionKeys": [
+        "iam:PermissionsBoundary"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -3271,6 +3488,9 @@
     },
     {
       "Name": "UpdateRole",
+      "ActionConditionKeys": [
+        "iam:PermissionsBoundary"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -3291,6 +3511,9 @@
     },
     {
       "Name": "UpdateRoleDescription",
+      "ActionConditionKeys": [
+        "iam:PermissionsBoundary"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -3544,6 +3767,18 @@
       ]
     },
     {
+      "Name": "iam:DelegationDuration",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "iam:DelegationRequestOwner",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
       "Name": "iam:FIDO-FIPS-140-2-certification",
       "Types": [
         "String"
@@ -3557,6 +3792,12 @@
     },
     {
       "Name": "iam:FIDO-certification",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "iam:NotificationChannel",
       "Types": [
         "String"
       ]
@@ -3608,11 +3849,23 @@
       "Types": [
         "String"
       ]
+    },
+    {
+      "Name": "iam:TemplateArn",
+      "Types": [
+        "ARN"
+      ]
     }
   ],
   "Operations": [
     {
       "Name": "AcceptDelegationRequest",
+      "AuthorizedActions": [
+        {
+          "Name": "AcceptDelegationRequest",
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "iam",
@@ -3680,6 +3933,12 @@
     },
     {
       "Name": "AssociateDelegationRequest",
+      "AuthorizedActions": [
+        {
+          "Name": "AssociateDelegationRequest",
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "iam",
@@ -3786,6 +4045,12 @@
     },
     {
       "Name": "CreateDelegationRequest",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDelegationRequest",
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "iam",
@@ -4475,6 +4740,22 @@
       ]
     },
     {
+      "Name": "DisableOutboundWebIdentityFederation",
+      "AuthorizedActions": [
+        {
+          "Name": "DisableOutboundWebIdentityFederation",
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "iam",
+          "Method": "disable_outbound_web_identity_federation",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "EnableMFADevice",
       "AuthorizedActions": [
         {
@@ -4506,6 +4787,22 @@
         {
           "Name": "iam",
           "Method": "enable_organizations_root_sessions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "EnableOutboundWebIdentityFederation",
+      "AuthorizedActions": [
+        {
+          "Name": "EnableOutboundWebIdentityFederation",
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "iam",
+          "Method": "enable_outbound_web_identity_federation",
           "Package": "Boto3"
         }
       ]
@@ -4672,6 +4969,12 @@
     },
     {
       "Name": "GetDelegationRequest",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDelegationRequest",
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "iam",
@@ -4682,6 +4985,12 @@
     },
     {
       "Name": "GetGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "GetGroup",
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "iam",
@@ -4708,6 +5017,12 @@
     },
     {
       "Name": "GetHumanReadableSummary",
+      "AuthorizedActions": [
+        {
+          "Name": "GetHumanReadableSummary",
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "iam",
@@ -4792,6 +5107,22 @@
         {
           "Name": "iam",
           "Method": "get_organizations_access_report",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetOutboundWebIdentityFederationInfo",
+      "AuthorizedActions": [
+        {
+          "Name": "GetOutboundWebIdentityFederationInfo",
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "iam",
+          "Method": "get_outbound_web_identity_federation_info",
           "Package": "Boto3"
         }
       ]
@@ -4962,6 +5293,12 @@
     },
     {
       "Name": "GetUser",
+      "AuthorizedActions": [
+        {
+          "Name": "GetUser",
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "iam",
@@ -5068,6 +5405,12 @@
     },
     {
       "Name": "ListDelegationRequests",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDelegationRequests",
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "iam",
@@ -5110,6 +5453,12 @@
     },
     {
       "Name": "ListGroups",
+      "AuthorizedActions": [
+        {
+          "Name": "ListGroups",
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "iam",
@@ -5514,6 +5863,12 @@
     },
     {
       "Name": "ListUsers",
+      "AuthorizedActions": [
+        {
+          "Name": "ListUsers",
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "iam",
@@ -5620,6 +5975,12 @@
     },
     {
       "Name": "RejectDelegationRequest",
+      "AuthorizedActions": [
+        {
+          "Name": "RejectDelegationRequest",
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "iam",
@@ -5710,6 +6071,12 @@
     },
     {
       "Name": "SendDelegationToken",
+      "AuthorizedActions": [
+        {
+          "Name": "SendDelegationToken",
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "iam",
@@ -6336,6 +6703,15 @@
       "Name": "assumed-role",
       "ARNFormats": [
         "arn:${Partition}:iam::${Account}:assumed-role/${RoleName}/${RoleSessionName}"
+      ]
+    },
+    {
+      "Name": "delegation-request",
+      "ARNFormats": [
+        "arn:${Partition}:iam::${Account}:delegation-request/${DelegationRequestId}"
+      ],
+      "ConditionKeys": [
+        "iam:DelegationRequestOwner"
       ]
     },
     {
