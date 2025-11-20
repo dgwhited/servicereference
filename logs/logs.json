@@ -3045,6 +3045,12 @@
     },
     {
       "Name": "GetScheduledQuery",
+      "AuthorizedActions": [
+        {
+          "Name": "GetScheduledQuery",
+          "Service": "logs"
+        }
+      ],
       "SDK": [
         {
           "Name": "logs",
@@ -3055,6 +3061,12 @@
     },
     {
       "Name": "GetScheduledQueryHistory",
+      "AuthorizedActions": [
+        {
+          "Name": "GetScheduledQueryHistory",
+          "Service": "logs"
+        }
+      ],
       "SDK": [
         {
           "Name": "logs",
@@ -3711,6 +3723,21 @@
     },
     {
       "Name": "UpdateScheduledQuery",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "logs.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateScheduledQuery",
+          "Service": "logs"
+        }
+      ],
       "SDK": [
         {
           "Name": "logs",

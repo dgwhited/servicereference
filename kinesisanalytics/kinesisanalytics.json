@@ -705,6 +705,15 @@
         {
           "Name": "AddApplicationCloudWatchLoggingOption",
           "Service": "kinesisanalytics"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "kinesisanalytics.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [

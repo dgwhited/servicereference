@@ -519,6 +519,10 @@
           "Service": "arc-region-switch"
         },
         {
+          "Name": "GetPlan",
+          "Service": "arc-region-switch"
+        },
+        {
           "Name": "PassRole",
           "Context": {
             "iam:PassedToService": [
@@ -526,6 +530,10 @@
             ]
           },
           "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "arc-region-switch"
         }
       ],
       "SDK": [
@@ -740,6 +748,12 @@
     },
     {
       "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "arc-region-switch"
+        }
+      ],
       "SDK": [
         {
           "Name": "arc-region-switch",
