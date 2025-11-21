@@ -97,6 +97,46 @@
       }
     },
     {
+      "Name": "CreateSpendingLimit",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteSpendingLimit",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetDevice",
       "Annotations": {
         "Properties": {
@@ -197,6 +237,9 @@
         },
         {
           "Name": "quantum-task"
+        },
+        {
+          "Name": "spending-limit"
         }
       ],
       "SupportedBy": {
@@ -250,6 +293,21 @@
       }
     },
     {
+      "Name": "SearchSpendingLimits",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "TagResource",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -269,6 +327,9 @@
         },
         {
           "Name": "quantum-task"
+        },
+        {
+          "Name": "spending-limit"
         }
       ],
       "SupportedBy": {
@@ -295,10 +356,33 @@
         },
         {
           "Name": "quantum-task"
+        },
+        {
+          "Name": "spending-limit"
         }
       ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateSpendingLimit",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     }
@@ -401,6 +485,42 @@
         {
           "Name": "braket",
           "Method": "create_quantum_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSpendingLimit",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateSpendingLimit",
+          "Service": "braket"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "braket"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "braket",
+          "Method": "create_spending_limit",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSpendingLimit",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteSpendingLimit",
+          "Service": "braket"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "braket",
+          "Method": "delete_spending_limit",
           "Package": "Boto3"
         }
       ]
@@ -518,6 +638,22 @@
       ]
     },
     {
+      "Name": "SearchSpendingLimits",
+      "AuthorizedActions": [
+        {
+          "Name": "SearchSpendingLimits",
+          "Service": "braket"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "braket",
+          "Method": "search_spending_limits",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "TagResource",
       "AuthorizedActions": [
         {
@@ -548,6 +684,22 @@
           "Package": "Boto3"
         }
       ]
+    },
+    {
+      "Name": "UpdateSpendingLimit",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateSpendingLimit",
+          "Service": "braket"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "braket",
+          "Method": "update_spending_limit",
+          "Package": "Boto3"
+        }
+      ]
     }
   ],
   "Resources": [
@@ -564,6 +716,15 @@
       "Name": "quantum-task",
       "ARNFormats": [
         "arn:${Partition}:braket:${Region}:${Account}:quantum-task/${RandomId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "spending-limit",
+      "ARNFormats": [
+        "arn:${Partition}:braket:${Region}:${Account}:spending-limit/${RandomId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

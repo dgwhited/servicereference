@@ -161,6 +161,21 @@
       }
     },
     {
+      "Name": "ListEntityEvents",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListGroupingAttributeDefinitions",
       "Annotations": {
         "Properties": {
@@ -575,6 +590,26 @@
         {
           "Name": "application-signals",
           "Method": "list_audit_findings",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListEntityEvents",
+      "AuthorizedActions": [
+        {
+          "Name": "ListEntityEvents",
+          "Service": "application-signals"
+        },
+        {
+          "Name": "LookupEvents",
+          "Service": "cloudtrail"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "application-signals",
+          "Method": "list_entity_events",
           "Package": "Boto3"
         }
       ]

@@ -482,6 +482,9 @@
       "Resources": [
         {
           "Name": "eventdatastore"
+        },
+        {
+          "Name": "trail"
         }
       ],
       "SupportedBy": {
@@ -769,6 +772,26 @@
       }
     },
     {
+      "Name": "ListInsightsData",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "trail"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListPublicKeys",
       "Annotations": {
         "Properties": {
@@ -890,6 +913,9 @@
       "Resources": [
         {
           "Name": "eventdatastore"
+        },
+        {
+          "Name": "trail"
         }
       ],
       "SupportedBy": {
@@ -1892,6 +1918,12 @@
     },
     {
       "Name": "ListInsightsData",
+      "AuthorizedActions": [
+        {
+          "Name": "ListInsightsData",
+          "Service": "cloudtrail"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudtrail",
@@ -1903,6 +1935,10 @@
     {
       "Name": "ListInsightsMetricData",
       "AuthorizedActions": [
+        {
+          "Name": "ListInsightsData",
+          "Service": "cloudtrail"
+        },
         {
           "Name": "LookupEvents",
           "Service": "cloudtrail"

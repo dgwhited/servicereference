@@ -2778,6 +2778,32 @@
       }
     },
     {
+      "Name": "InvokeDataAutomation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "blueprint"
+        },
+        {
+          "Name": "data-automation-profile"
+        },
+        {
+          "Name": "data-automation-project"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "InvokeDataAutomationAsync",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -7295,6 +7321,22 @@
         {
           "Name": "bedrock-agent-runtime",
           "Method": "invoke_agent",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "InvokeDataAutomation",
+      "AuthorizedActions": [
+        {
+          "Name": "InvokeDataAutomation",
+          "Service": "bedrock"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-data-automation-runtime",
+          "Method": "invoke_data_automation",
           "Package": "Boto3"
         }
       ]

@@ -443,6 +443,30 @@
       }
     },
     {
+      "Name": "DistributeImage",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "image"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetComponent",
       "Annotations": {
         "Properties": {
@@ -1358,6 +1382,26 @@
       }
     },
     {
+      "Name": "RetryImage",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "image"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "SendWorkflowStepAction",
       "Annotations": {
         "Properties": {
@@ -2122,6 +2166,39 @@
       ]
     },
     {
+      "Name": "DistributeImage",
+      "AuthorizedActions": [
+        {
+          "Name": "DistributeImage",
+          "Service": "imagebuilder"
+        },
+        {
+          "Name": "GetDistributionConfiguration",
+          "Service": "imagebuilder"
+        },
+        {
+          "Name": "GetImage",
+          "Service": "imagebuilder"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "imagebuilder.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "imagebuilder",
+          "Method": "distribute_image",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetComponent",
       "AuthorizedActions": [
         {
@@ -2874,6 +2951,22 @@
         {
           "Name": "imagebuilder",
           "Method": "put_image_recipe_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RetryImage",
+      "AuthorizedActions": [
+        {
+          "Name": "RetryImage",
+          "Service": "imagebuilder"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "imagebuilder",
+          "Method": "retry_image",
           "Package": "Boto3"
         }
       ]

@@ -1902,6 +1902,43 @@
       ]
     },
     {
+      "Name": "CreateExpressGatewayService",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateCluster",
+          "Service": "ecs"
+        },
+        {
+          "Name": "CreateExpressGatewayService",
+          "Service": "ecs"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ecs.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "RegisterTaskDefinition",
+          "Service": "ecs"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "create_express_gateway_service",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateService",
       "AuthorizedActions": [
         {
@@ -2024,6 +2061,22 @@
         {
           "Name": "ecs",
           "Method": "delete_cluster",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteExpressGatewayService",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteExpressGatewayService",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "delete_express_gateway_service",
           "Package": "Boto3"
         }
       ]
@@ -2152,6 +2205,22 @@
         {
           "Name": "ecs",
           "Method": "describe_container_instances",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeExpressGatewayService",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeExpressGatewayService",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "describe_express_gateway_service",
           "Package": "Boto3"
         }
       ]
@@ -2850,6 +2919,35 @@
         {
           "Name": "ecs",
           "Method": "update_container_instances_state",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateExpressGatewayService",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ecs.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "RegisterTaskDefinition",
+          "Service": "ecs"
+        },
+        {
+          "Name": "UpdateExpressGatewayService",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "update_express_gateway_service",
           "Package": "Boto3"
         }
       ]

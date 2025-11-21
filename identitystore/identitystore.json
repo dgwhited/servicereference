@@ -3,6 +3,10 @@
   "Actions": [
     {
       "Name": "CreateGroup",
+      "ActionConditionKeys": [
+        "identitystore:GroupExternalIdIssuers",
+        "identitystore:PrimaryRegion"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -23,6 +27,9 @@
     },
     {
       "Name": "CreateGroupMembership",
+      "ActionConditionKeys": [
+        "identitystore:PrimaryRegion"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -64,6 +71,11 @@
     },
     {
       "Name": "CreateUser",
+      "ActionConditionKeys": [
+        "identitystore:PrimaryRegion",
+        "identitystore:ReservedUserId",
+        "identitystore:UserExternalIdIssuers"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -84,6 +96,10 @@
     },
     {
       "Name": "DeleteGroup",
+      "ActionConditionKeys": [
+        "identitystore:GroupExternalIdIssuers",
+        "identitystore:PrimaryRegion"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -107,6 +123,9 @@
     },
     {
       "Name": "DeleteGroupMembership",
+      "ActionConditionKeys": [
+        "identitystore:PrimaryRegion"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -151,6 +170,10 @@
     },
     {
       "Name": "DeleteUser",
+      "ActionConditionKeys": [
+        "identitystore:PrimaryRegion",
+        "identitystore:UserExternalIdIssuers"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -174,6 +197,10 @@
     },
     {
       "Name": "DescribeGroup",
+      "ActionConditionKeys": [
+        "identitystore:GroupExternalIdIssuers",
+        "identitystore:PrimaryRegion"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -197,6 +224,9 @@
     },
     {
       "Name": "DescribeGroupMembership",
+      "ActionConditionKeys": [
+        "identitystore:PrimaryRegion"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -226,6 +256,10 @@
     },
     {
       "Name": "DescribeUser",
+      "ActionConditionKeys": [
+        "identitystore:PrimaryRegion",
+        "identitystore:UserExternalIdIssuers"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -249,6 +283,9 @@
     },
     {
       "Name": "GetGroupId",
+      "ActionConditionKeys": [
+        "identitystore:PrimaryRegion"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -272,6 +309,9 @@
     },
     {
       "Name": "GetGroupMembershipId",
+      "ActionConditionKeys": [
+        "identitystore:PrimaryRegion"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -301,6 +341,9 @@
     },
     {
       "Name": "GetUserId",
+      "ActionConditionKeys": [
+        "identitystore:PrimaryRegion"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -324,6 +367,9 @@
     },
     {
       "Name": "IsMemberInGroups",
+      "ActionConditionKeys": [
+        "identitystore:PrimaryRegion"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -353,6 +399,9 @@
     },
     {
       "Name": "ListGroupMemberships",
+      "ActionConditionKeys": [
+        "identitystore:PrimaryRegion"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -379,6 +428,9 @@
     },
     {
       "Name": "ListGroupMembershipsForMember",
+      "ActionConditionKeys": [
+        "identitystore:PrimaryRegion"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -405,6 +457,10 @@
     },
     {
       "Name": "ListGroups",
+      "ActionConditionKeys": [
+        "identitystore:GroupExternalIdIssuers",
+        "identitystore:PrimaryRegion"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -428,6 +484,10 @@
     },
     {
       "Name": "ListUsers",
+      "ActionConditionKeys": [
+        "identitystore:PrimaryRegion",
+        "identitystore:UserExternalIdIssuers"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -451,6 +511,10 @@
     },
     {
       "Name": "UpdateGroup",
+      "ActionConditionKeys": [
+        "identitystore:GroupExternalIdIssuers",
+        "identitystore:PrimaryRegion"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -489,6 +553,10 @@
     },
     {
       "Name": "UpdateUser",
+      "ActionConditionKeys": [
+        "identitystore:PrimaryRegion",
+        "identitystore:UserExternalIdIssuers"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -512,6 +580,36 @@
     }
   ],
   "ConditionKeys": [
+    {
+      "Name": "identitystore:GroupExternalIdIssuers",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "identitystore:IdentityStoreArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "identitystore:PrimaryRegion",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "identitystore:ReservedUserId",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "identitystore:UserExternalIdIssuers",
+      "Types": [
+        "ARN"
+      ]
+    },
     {
       "Name": "identitystore:UserId",
       "Types": [

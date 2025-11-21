@@ -274,6 +274,8 @@
     {
       "Name": "CreateBucket",
       "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
         "s3:ResourceAccount",
         "s3:TlsVersion",
         "s3:authType",
@@ -1576,6 +1578,34 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "GetBucketAbac",
+      "ActionConditionKeys": [
+        "s3:ResourceAccount",
+        "s3:TlsVersion",
+        "s3:authType",
+        "s3:signatureAge",
+        "s3:signatureversion",
+        "s3:x-amz-content-sha256"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -3342,6 +3372,9 @@
           "Name": "accesspoint"
         },
         {
+          "Name": "bucket"
+        },
+        {
           "Name": "storagelensgroup"
         }
       ],
@@ -3618,6 +3651,34 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "PutBucketAbac",
+      "ActionConditionKeys": [
+        "s3:ResourceAccount",
+        "s3:TlsVersion",
+        "s3:authType",
+        "s3:signatureAge",
+        "s3:signatureversion",
+        "s3:x-amz-content-sha256"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -4700,6 +4761,9 @@
           "Name": "accesspoint"
         },
         {
+          "Name": "bucket"
+        },
+        {
           "Name": "storagelensgroup"
         }
       ],
@@ -4739,6 +4803,9 @@
         },
         {
           "Name": "accesspoint"
+        },
+        {
+          "Name": "bucket"
         },
         {
           "Name": "storagelensgroup"
@@ -4971,6 +5038,12 @@
     },
     {
       "Name": "s3:AccessPointTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "s3:BucketTag/${TagKey}",
       "Types": [
         "String"
       ]
@@ -6528,6 +6601,16 @@
       ]
     },
     {
+      "Name": "GetBucketAbac",
+      "SDK": [
+        {
+          "Name": "s3",
+          "Method": "get_bucket_abac",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetBucketAccelerateConfiguration",
       "AuthorizedActions": [
         {
@@ -7780,6 +7863,16 @@
       ]
     },
     {
+      "Name": "PutBucketAbac",
+      "SDK": [
+        {
+          "Name": "s3",
+          "Method": "put_bucket_abac",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "PutBucketAccelerateConfiguration",
       "AuthorizedActions": [
         {
@@ -8674,6 +8767,10 @@
       "Name": "bucket",
       "ARNFormats": [
         "arn:${Partition}:s3:::${BucketName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3:BucketTag/${TagKey}"
       ]
     },
     {
