@@ -265,6 +265,26 @@
       }
     },
     {
+      "Name": "ListInvestigations",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "case"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListMemberships",
       "Annotations": {
         "Properties": {
@@ -299,6 +319,26 @@
         },
         {
           "Name": "membership"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "SendFeedback",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "case"
         }
       ],
       "SupportedBy": {
@@ -700,6 +740,22 @@
       ]
     },
     {
+      "Name": "ListInvestigations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListInvestigations",
+          "Service": "security-ir"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "security-ir",
+          "Method": "list_investigations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListMemberships",
       "AuthorizedActions": [
         {
@@ -727,6 +783,22 @@
         {
           "Name": "security-ir",
           "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SendFeedback",
+      "AuthorizedActions": [
+        {
+          "Name": "SendFeedback",
+          "Service": "security-ir"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "security-ir",
+          "Method": "send_feedback",
           "Package": "Boto3"
         }
       ]

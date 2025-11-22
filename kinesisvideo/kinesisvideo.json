@@ -290,6 +290,26 @@
       }
     },
     {
+      "Name": "DescribeStreamStorageConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetClip",
       "Annotations": {
         "Properties": {
@@ -896,6 +916,26 @@
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
+    },
+    {
+      "Name": "UpdateStreamStorageConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "stream"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
     }
   ],
   "ConditionKeys": [
@@ -1115,6 +1155,22 @@
         {
           "Name": "kinesisvideo",
           "Method": "describe_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeStreamStorageConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeStreamStorageConfiguration",
+          "Service": "kinesisvideo"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesisvideo",
+          "Method": "describe_stream_storage_configuration",
           "Package": "Boto3"
         }
       ]
@@ -1579,6 +1635,22 @@
         {
           "Name": "kinesisvideo",
           "Method": "update_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateStreamStorageConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateStreamStorageConfiguration",
+          "Service": "kinesisvideo"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kinesisvideo",
+          "Method": "update_stream_storage_configuration",
           "Package": "Boto3"
         }
       ]

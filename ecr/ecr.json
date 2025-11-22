@@ -281,6 +281,36 @@
       }
     },
     {
+      "Name": "DeleteSigningConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeregisterPullTimeUpdateExclusion",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeImageReplicationStatus",
       "Annotations": {
         "Properties": {
@@ -318,6 +348,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DescribeImageSigningStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -569,6 +619,21 @@
       }
     },
     {
+      "Name": "GetSigningConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "InitiateLayerUpload",
       "Annotations": {
         "Properties": {
@@ -606,6 +671,21 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListPullTimeUpdateExclusions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -776,6 +856,36 @@
       }
     },
     {
+      "Name": "PutSigningConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "RegisterPullTimeUpdateExclusion",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ReplicateImage",
       "Annotations": {
         "Properties": {
@@ -899,6 +1009,26 @@
       ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateImageStorageClass",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "repository"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
@@ -1272,7 +1402,29 @@
       ]
     },
     {
+      "Name": "DeleteSigningConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteSigningConfiguration",
+          "Service": "ecr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecr",
+          "Method": "delete_signing_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeregisterPullTimeUpdateExclusion",
+      "AuthorizedActions": [
+        {
+          "Name": "DeregisterPullTimeUpdateExclusion",
+          "Service": "ecr"
+        }
+      ],
       "SDK": [
         {
           "Name": "ecr",
@@ -1309,6 +1461,22 @@
         {
           "Name": "ecr",
           "Method": "describe_image_scan_findings",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeImageSigningStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeImageSigningStatus",
+          "Service": "ecr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecr",
+          "Method": "describe_image_signing_status",
           "Package": "Boto3"
         }
       ]
@@ -1526,6 +1694,22 @@
       ]
     },
     {
+      "Name": "GetSigningConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetSigningConfiguration",
+          "Service": "ecr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecr",
+          "Method": "get_signing_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "InitiateLayerUpload",
       "AuthorizedActions": [
         {
@@ -1575,6 +1759,12 @@
     },
     {
       "Name": "ListPullTimeUpdateExclusions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPullTimeUpdateExclusions",
+          "Service": "ecr"
+        }
+      ],
       "SDK": [
         {
           "Name": "ecr",
@@ -1728,7 +1918,29 @@
       ]
     },
     {
+      "Name": "PutSigningConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "PutSigningConfiguration",
+          "Service": "ecr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecr",
+          "Method": "put_signing_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "RegisterPullTimeUpdateExclusion",
+      "AuthorizedActions": [
+        {
+          "Name": "RegisterPullTimeUpdateExclusion",
+          "Service": "ecr"
+        }
+      ],
       "SDK": [
         {
           "Name": "ecr",
@@ -1819,6 +2031,12 @@
     },
     {
       "Name": "UpdateImageStorageClass",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateImageStorageClass",
+          "Service": "ecr"
+        }
+      ],
       "SDK": [
         {
           "Name": "ecr",

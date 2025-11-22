@@ -1057,6 +1057,27 @@
       ]
     },
     {
+      "Name": "AssociateIamRoleToResource",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "odb.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "odb",
+          "Method": "associate_iam_role_to_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateCloudAutonomousVmCluster",
       "AuthorizedActions": [
         {
@@ -1240,6 +1261,16 @@
         {
           "Name": "odb",
           "Method": "delete_odb_peering_connection",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateIamRoleFromResource",
+      "SDK": [
+        {
+          "Name": "odb",
+          "Method": "disassociate_iam_role_from_resource",
           "Package": "Boto3"
         }
       ]
