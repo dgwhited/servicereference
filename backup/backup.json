@@ -3896,6 +3896,16 @@
       "Name": "StartScanJob",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "backup.amazonaws.com",
+              "malware-protection.guardduty.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "StartScanJob",
           "Service": "backup"
         }
