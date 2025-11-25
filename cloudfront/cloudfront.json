@@ -151,6 +151,25 @@
       }
     },
     {
+      "Name": "CreateConnectionFunction",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateConnectionGroup",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -478,6 +497,25 @@
       }
     },
     {
+      "Name": "CreateTrustStore",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateVpcOrigin",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -554,6 +592,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteConnectionFunction",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "connection-function"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -882,6 +940,26 @@
       }
     },
     {
+      "Name": "DeleteTrustStore",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "trust-store"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteVpcOrigin",
       "Annotations": {
         "Properties": {
@@ -899,6 +977,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DescribeConnectionFunction",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "connection-function"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1079,6 +1177,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "GetConnectionFunction",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "connection-function"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1692,6 +1810,26 @@
       }
     },
     {
+      "Name": "GetTrustStore",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "trust-store"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetVpcOrigin",
       "Annotations": {
         "Properties": {
@@ -1774,6 +1912,21 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListConnectionFunctions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1882,6 +2035,26 @@
       }
     },
     {
+      "Name": "ListDistributionsByConnectionFunction",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "connection-function"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListDistributionsByConnectionMode",
       "Annotations": {
         "Properties": {
@@ -1969,6 +2142,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListDistributionsByTrustStore",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "trust-store"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2274,6 +2467,9 @@
           "Name": "anycast-ip-list"
         },
         {
+          "Name": "connection-function"
+        },
+        {
           "Name": "connection-group"
         },
         {
@@ -2283,11 +2479,29 @@
           "Name": "distribution-tenant"
         },
         {
+          "Name": "trust-store"
+        },
+        {
           "Name": "vpcorigin"
         }
       ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListTrustStores",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
@@ -2316,6 +2530,26 @@
           "IsWrite": false
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "PublishConnectionFunction",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "connection-function"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -2380,6 +2614,9 @@
           "Name": "anycast-ip-list"
         },
         {
+          "Name": "connection-function"
+        },
+        {
           "Name": "connection-group"
         },
         {
@@ -2392,11 +2629,34 @@
           "Name": "streaming-distribution"
         },
         {
+          "Name": "trust-store"
+        },
+        {
           "Name": "vpcorigin"
         }
       ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "TestConnectionFunction",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "connection-function"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
@@ -2438,6 +2698,9 @@
           "Name": "anycast-ip-list"
         },
         {
+          "Name": "connection-function"
+        },
+        {
           "Name": "connection-group"
         },
         {
@@ -2448,6 +2711,9 @@
         },
         {
           "Name": "streaming-distribution"
+        },
+        {
+          "Name": "trust-store"
         },
         {
           "Name": "vpcorigin"
@@ -2516,6 +2782,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "UpdateConnectionFunction",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "connection-function"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2862,6 +3148,26 @@
       }
     },
     {
+      "Name": "UpdateTrustStore",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "trust-store"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateVpcOrigin",
       "Annotations": {
         "Properties": {
@@ -3051,6 +3357,26 @@
         {
           "Name": "cloudfront",
           "Method": "create_cloud_front_origin_access_identity",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateConnectionFunction",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateConnectionFunction",
+          "Service": "cloudfront"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "cloudfront"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "create_connection_function",
           "Package": "Boto3"
         }
       ]
@@ -3397,6 +3723,22 @@
       ]
     },
     {
+      "Name": "CreateTrustStore",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateTrustStore",
+          "Service": "cloudfront"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "create_trust_store",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateVpcOrigin",
       "AuthorizedActions": [
         {
@@ -3460,6 +3802,22 @@
         {
           "Name": "cloudfront",
           "Method": "delete_cloud_front_origin_access_identity",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConnectionFunction",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteConnectionFunction",
+          "Service": "cloudfront"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "delete_connection_function",
           "Package": "Boto3"
         }
       ]
@@ -3747,6 +4105,22 @@
       ]
     },
     {
+      "Name": "DeleteTrustStore",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteTrustStore",
+          "Service": "cloudfront"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "delete_trust_store",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteVpcOrigin",
       "AuthorizedActions": [
         {
@@ -3758,6 +4132,22 @@
         {
           "Name": "cloudfront",
           "Method": "delete_vpc_origin",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeConnectionFunction",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeConnectionFunction",
+          "Service": "cloudfront"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "describe_connection_function",
           "Package": "Boto3"
         }
       ]
@@ -3902,6 +4292,22 @@
         {
           "Name": "cloudfront",
           "Method": "get_cloud_front_origin_access_identity_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnectionFunction",
+      "AuthorizedActions": [
+        {
+          "Name": "GetConnectionFunction",
+          "Service": "cloudfront"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "get_connection_function",
           "Package": "Boto3"
         }
       ]
@@ -4403,6 +4809,22 @@
       ]
     },
     {
+      "Name": "GetTrustStore",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTrustStore",
+          "Service": "cloudfront"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "get_trust_store",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetVpcOrigin",
       "AuthorizedActions": [
         {
@@ -4482,6 +4904,22 @@
         {
           "Name": "cloudfront",
           "Method": "list_conflicting_aliases",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListConnectionFunctions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListConnectionFunctions",
+          "Service": "cloudfront"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "list_connection_functions",
           "Package": "Boto3"
         }
       ]
@@ -4599,6 +5037,22 @@
       ]
     },
     {
+      "Name": "ListDistributionsByConnectionFunction",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDistributionsByConnectionFunction",
+          "Service": "cloudfront"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "list_distributions_by_connection_function",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListDistributionsByConnectionMode",
       "AuthorizedActions": [
         {
@@ -4684,6 +5138,22 @@
         {
           "Name": "cloudfront",
           "Method": "list_distributions_by_response_headers_policy_id",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDistributionsByTrustStore",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDistributionsByTrustStore",
+          "Service": "cloudfront"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "list_distributions_by_trust_store",
           "Package": "Boto3"
         }
       ]
@@ -4969,6 +5439,22 @@
       ]
     },
     {
+      "Name": "ListTrustStores",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTrustStores",
+          "Service": "cloudfront"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "list_trust_stores",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListVpcOrigins",
       "AuthorizedActions": [
         {
@@ -4980,6 +5466,22 @@
         {
           "Name": "cloudfront",
           "Method": "list_vpc_origins",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PublishConnectionFunction",
+      "AuthorizedActions": [
+        {
+          "Name": "PublishConnectionFunction",
+          "Service": "cloudfront"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "publish_connection_function",
           "Package": "Boto3"
         }
       ]
@@ -5028,6 +5530,22 @@
         {
           "Name": "cloudfront",
           "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TestConnectionFunction",
+      "AuthorizedActions": [
+        {
+          "Name": "TestConnectionFunction",
+          "Service": "cloudfront"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "test_connection_function",
           "Package": "Boto3"
         }
       ]
@@ -5108,6 +5626,22 @@
         {
           "Name": "cloudfront",
           "Method": "update_cloud_front_origin_access_identity",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateConnectionFunction",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateConnectionFunction",
+          "Service": "cloudfront"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "update_connection_function",
           "Package": "Boto3"
         }
       ]
@@ -5400,6 +5934,22 @@
       ]
     },
     {
+      "Name": "UpdateTrustStore",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateTrustStore",
+          "Service": "cloudfront"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudfront",
+          "Method": "update_trust_store",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "UpdateVpcOrigin",
       "AuthorizedActions": [
         {
@@ -5446,6 +5996,15 @@
       "Name": "cache-policy",
       "ARNFormats": [
         "arn:${Partition}:cloudfront::${Account}:cache-policy/${Id}"
+      ]
+    },
+    {
+      "Name": "connection-function",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:connection-function/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -5539,6 +6098,15 @@
       "Name": "streaming-distribution",
       "ARNFormats": [
         "arn:${Partition}:cloudfront::${Account}:streaming-distribution/${DistributionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "trust-store",
+      "ARNFormats": [
+        "arn:${Partition}:cloudfront::${Account}:trust-store/${Id}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

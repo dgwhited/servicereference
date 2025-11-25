@@ -1563,6 +1563,26 @@
       }
     },
     {
+      "Name": "PutLogGroupDeletionProtection",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "PutMetricFilter",
       "Annotations": {
         "Properties": {
@@ -3415,6 +3435,22 @@
         {
           "Name": "logs",
           "Method": "put_log_events",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutLogGroupDeletionProtection",
+      "AuthorizedActions": [
+        {
+          "Name": "PutLogGroupDeletionProtection",
+          "Service": "logs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "logs",
+          "Method": "put_log_group_deletion_protection",
           "Package": "Boto3"
         }
       ]
