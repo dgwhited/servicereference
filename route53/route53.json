@@ -1292,6 +1292,26 @@
       }
     },
     {
+      "Name": "UpdateHostedZoneFeatures",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "hostedzone"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateTrafficPolicyComment",
       "Annotations": {
         "Properties": {
@@ -2425,6 +2445,22 @@
         {
           "Name": "route53",
           "Method": "update_hosted_zone_comment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateHostedZoneFeatures",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateHostedZoneFeatures",
+          "Service": "route53"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "route53",
+          "Method": "update_hosted_zone_features",
           "Package": "Boto3"
         }
       ]

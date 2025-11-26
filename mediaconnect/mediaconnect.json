@@ -55,6 +55,11 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -74,6 +79,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        },
+        {
+          "Name": "Output"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -93,6 +106,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        },
+        {
+          "Name": "Source"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -112,9 +133,29 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "AssociateRouterNetworkInterface",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -127,6 +168,11 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Bridge"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -146,6 +192,11 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -161,9 +212,86 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Gateway"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "CreateRouterInput",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterInput"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateRouterNetworkInterface",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterNetworkInterface"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateRouterOutput",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterOutput"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -196,6 +324,11 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -219,6 +352,66 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteRouterInput",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterInput"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteRouterNetworkInterface",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterNetworkInterface"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteRouterOutput",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterOutput"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -271,6 +464,11 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -286,6 +484,11 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -301,6 +504,11 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -356,6 +564,11 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "Offering"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -371,6 +584,11 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "Reservation"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -383,9 +601,114 @@
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
-          "IsWrite": true
+          "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "Gateway"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetRouterInput",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterInput"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetRouterInputSourceMetadata",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterInput"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetRouterInputThumbnail",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterInput"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetRouterNetworkInterface",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterNetworkInterface"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetRouterOutput",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterOutput"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -405,6 +728,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Entitlement"
+        },
+        {
+          "Name": "Flow"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -420,11 +751,6 @@
           "IsWrite": false
         }
       },
-      "Resources": [
-        {
-          "Name": "Bridge"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -470,11 +796,6 @@
           "IsWrite": false
         }
       },
-      "Resources": [
-        {
-          "Name": "GatewayInstance"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -526,6 +847,51 @@
       }
     },
     {
+      "Name": "ListRouterInputs",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListRouterNetworkInterfaces",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListRouterOutputs",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListTagsForResource",
       "Annotations": {
         "Properties": {
@@ -565,6 +931,11 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Reservation"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -620,6 +991,11 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -635,6 +1011,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        },
+        {
+          "Name": "Output"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -650,6 +1034,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        },
+        {
+          "Name": "Source"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -665,9 +1057,54 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "RestartRouterInput",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterInput"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "RestartRouterOutput",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterOutput"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -680,6 +1117,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Entitlement"
+        },
+        {
+          "Name": "Flow"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -695,9 +1140,54 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "StartRouterInput",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterInput"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "StartRouterOutput",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterOutput"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -710,9 +1200,54 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "StopRouterInput",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterInput"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "StopRouterOutput",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterOutput"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -755,11 +1290,40 @@
           "Name": "Output"
         },
         {
+          "Name": "RouterInput"
+        },
+        {
+          "Name": "RouterNetworkInterface"
+        },
+        {
+          "Name": "RouterOutput"
+        },
+        {
           "Name": "Source"
         }
       ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "TakeRouterInput",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterOutput"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
@@ -785,6 +1349,15 @@
         },
         {
           "Name": "Output"
+        },
+        {
+          "Name": "RouterInput"
+        },
+        {
+          "Name": "RouterNetworkInterface"
+        },
+        {
+          "Name": "RouterOutput"
         },
         {
           "Name": "Source"
@@ -885,6 +1458,11 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -900,6 +1478,11 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -915,6 +1498,11 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -930,6 +1518,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        },
+        {
+          "Name": "Output"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -945,6 +1541,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "Flow"
+        },
+        {
+          "Name": "Source"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -968,6 +1572,66 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "UpdateRouterInput",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterInput"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateRouterNetworkInterface",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterNetworkInterface"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateRouterOutput",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RouterOutput"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     }
   ],
@@ -1133,6 +1797,12 @@
     },
     {
       "Name": "BatchGetRouterInput",
+      "AuthorizedActions": [
+        {
+          "Name": "GetRouterInput",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -1143,6 +1813,12 @@
     },
     {
       "Name": "BatchGetRouterNetworkInterface",
+      "AuthorizedActions": [
+        {
+          "Name": "GetRouterNetworkInterface",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -1153,6 +1829,12 @@
     },
     {
       "Name": "BatchGetRouterOutput",
+      "AuthorizedActions": [
+        {
+          "Name": "GetRouterOutput",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -1254,6 +1936,14 @@
       "Name": "CreateRouterInput",
       "AuthorizedActions": [
         {
+          "Name": "AssociateRouterNetworkInterface",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "CreateRouterInput",
+          "Service": "mediaconnect"
+        },
+        {
           "Name": "PassRole",
           "Context": {
             "iam:PassedToService": [
@@ -1279,6 +1969,10 @@
       "Name": "CreateRouterNetworkInterface",
       "AuthorizedActions": [
         {
+          "Name": "CreateRouterNetworkInterface",
+          "Service": "mediaconnect"
+        },
+        {
           "Name": "TagResource",
           "Service": "mediaconnect"
         }
@@ -1294,6 +1988,14 @@
     {
       "Name": "CreateRouterOutput",
       "AuthorizedActions": [
+        {
+          "Name": "AssociateRouterNetworkInterface",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "CreateRouterOutput",
+          "Service": "mediaconnect"
+        },
         {
           "Name": "PassRole",
           "Context": {
@@ -1390,6 +2092,12 @@
     },
     {
       "Name": "DeleteRouterInput",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteRouterInput",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -1400,6 +2108,12 @@
     },
     {
       "Name": "DeleteRouterNetworkInterface",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteRouterNetworkInterface",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -1410,6 +2124,12 @@
     },
     {
       "Name": "DeleteRouterOutput",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteRouterOutput",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -1564,6 +2284,12 @@
     },
     {
       "Name": "GetRouterInput",
+      "AuthorizedActions": [
+        {
+          "Name": "GetRouterInput",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -1574,6 +2300,12 @@
     },
     {
       "Name": "GetRouterInputSourceMetadata",
+      "AuthorizedActions": [
+        {
+          "Name": "GetRouterInputSourceMetadata",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -1584,6 +2316,12 @@
     },
     {
       "Name": "GetRouterInputThumbnail",
+      "AuthorizedActions": [
+        {
+          "Name": "GetRouterInputThumbnail",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -1594,6 +2332,12 @@
     },
     {
       "Name": "GetRouterNetworkInterface",
+      "AuthorizedActions": [
+        {
+          "Name": "GetRouterNetworkInterface",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -1604,6 +2348,12 @@
     },
     {
       "Name": "GetRouterOutput",
+      "AuthorizedActions": [
+        {
+          "Name": "GetRouterOutput",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -1755,6 +2505,12 @@
     },
     {
       "Name": "ListRouterInputs",
+      "AuthorizedActions": [
+        {
+          "Name": "ListRouterInputs",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -1765,6 +2521,12 @@
     },
     {
       "Name": "ListRouterNetworkInterfaces",
+      "AuthorizedActions": [
+        {
+          "Name": "ListRouterNetworkInterfaces",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -1775,6 +2537,12 @@
     },
     {
       "Name": "ListRouterOutputs",
+      "AuthorizedActions": [
+        {
+          "Name": "ListRouterOutputs",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -1923,6 +2691,12 @@
     },
     {
       "Name": "RestartRouterInput",
+      "AuthorizedActions": [
+        {
+          "Name": "RestartRouterInput",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -1933,6 +2707,12 @@
     },
     {
       "Name": "RestartRouterOutput",
+      "AuthorizedActions": [
+        {
+          "Name": "RestartRouterOutput",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -1975,6 +2755,12 @@
     },
     {
       "Name": "StartRouterInput",
+      "AuthorizedActions": [
+        {
+          "Name": "StartRouterInput",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -1985,6 +2771,12 @@
     },
     {
       "Name": "StartRouterOutput",
+      "AuthorizedActions": [
+        {
+          "Name": "StartRouterOutput",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -2011,6 +2803,12 @@
     },
     {
       "Name": "StopRouterInput",
+      "AuthorizedActions": [
+        {
+          "Name": "StopRouterInput",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -2021,6 +2819,12 @@
     },
     {
       "Name": "StopRouterOutput",
+      "AuthorizedActions": [
+        {
+          "Name": "StopRouterOutput",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -2057,6 +2861,12 @@
     },
     {
       "Name": "TakeRouterInput",
+      "AuthorizedActions": [
+        {
+          "Name": "TakeRouterInput",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -2282,6 +3092,10 @@
       "Name": "UpdateRouterInput",
       "AuthorizedActions": [
         {
+          "Name": "AssociateRouterNetworkInterface",
+          "Service": "mediaconnect"
+        },
+        {
           "Name": "PassRole",
           "Context": {
             "iam:PassedToService": [
@@ -2292,6 +3106,10 @@
         },
         {
           "Name": "UpdateFlowOutput",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "UpdateRouterInput",
           "Service": "mediaconnect"
         }
       ],
@@ -2305,6 +3123,12 @@
     },
     {
       "Name": "UpdateRouterNetworkInterface",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateRouterNetworkInterface",
+          "Service": "mediaconnect"
+        }
+      ],
       "SDK": [
         {
           "Name": "mediaconnect",
@@ -2317,6 +3141,10 @@
       "Name": "UpdateRouterOutput",
       "AuthorizedActions": [
         {
+          "Name": "AssociateRouterNetworkInterface",
+          "Service": "mediaconnect"
+        },
+        {
           "Name": "PassRole",
           "Context": {
             "iam:PassedToService": [
@@ -2327,6 +3155,10 @@
         },
         {
           "Name": "UpdateFlowSource",
+          "Service": "mediaconnect"
+        },
+        {
+          "Name": "UpdateRouterOutput",
           "Service": "mediaconnect"
         }
       ],
@@ -2343,7 +3175,7 @@
     {
       "Name": "Bridge",
       "ARNFormats": [
-        "arn:${Partition}:mediaconnect:${Region}:${Account}:bridge:${FlowId}:${FlowName}"
+        "arn:${Partition}:mediaconnect:${Region}:${Account}:bridge:${BridgeId}:${BridgeName}"
       ]
     },
     {
@@ -2377,9 +3209,48 @@
       ]
     },
     {
+      "Name": "Offering",
+      "ARNFormats": [
+        "arn:${Partition}:mediaconnect:${Region}:offering:${OfferingId}"
+      ]
+    },
+    {
       "Name": "Output",
       "ARNFormats": [
         "arn:${Partition}:mediaconnect:${Region}:${Account}:output:${OutputId}:${OutputName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Reservation",
+      "ARNFormats": [
+        "arn:${Partition}:mediaconnect:${Region}:${Account}:reservation:${ReservationId}:${ReservationName}"
+      ]
+    },
+    {
+      "Name": "RouterInput",
+      "ARNFormats": [
+        "arn:${Partition}:mediaconnect:${Region}:${Account}:routerInput:${RouterInputId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "RouterNetworkInterface",
+      "ARNFormats": [
+        "arn:${Partition}:mediaconnect:${Region}:${Account}:routerNetworkInterface:${RouterNetworkInterfaceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "RouterOutput",
+      "ARNFormats": [
+        "arn:${Partition}:mediaconnect:${Region}:${Account}:routerOutput:${RouterOutputId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
