@@ -148,6 +148,30 @@
       }
     },
     {
+      "Name": "CreateCapability",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateCluster",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -306,6 +330,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteCapability",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "capability"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -499,6 +543,26 @@
       }
     },
     {
+      "Name": "DescribeCapability",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "capability"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeCluster",
       "Annotations": {
         "Properties": {
@@ -688,6 +752,9 @@
           "Name": "addon"
         },
         {
+          "Name": "capability"
+        },
+        {
           "Name": "cluster"
         },
         {
@@ -817,6 +884,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListCapabilities",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1004,6 +1091,9 @@
           "Name": "addon"
         },
         {
+          "Name": "capability"
+        },
+        {
           "Name": "cluster"
         },
         {
@@ -1040,6 +1130,9 @@
       "Resources": [
         {
           "Name": "addon"
+        },
+        {
+          "Name": "capability"
         },
         {
           "Name": "cluster"
@@ -1134,6 +1227,9 @@
           "Name": "addon"
         },
         {
+          "Name": "capability"
+        },
+        {
           "Name": "cluster"
         },
         {
@@ -1179,6 +1275,9 @@
         },
         {
           "Name": "addon"
+        },
+        {
+          "Name": "capability"
         },
         {
           "Name": "cluster"
@@ -1248,6 +1347,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "UpdateCapability",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "capability"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2614,6 +2733,15 @@
       "Name": "addon",
       "ARNFormats": [
         "arn:${Partition}:eks:${Region}:${Account}:addon/${ClusterName}/${AddonName}/${UUID}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "capability",
+      "ARNFormats": [
+        "arn:${Partition}:eks:${Region}:${Account}:capability/${ClusterName}/${CapabilityType}/${CapabilityName}/${UUID}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
