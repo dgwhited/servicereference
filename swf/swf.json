@@ -1729,6 +1729,15 @@
       "Name": "RespondDecisionTaskCompleted",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "swf.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "RespondDecisionTaskCompleted",
           "Service": "swf"
         }
