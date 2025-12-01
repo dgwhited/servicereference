@@ -413,6 +413,36 @@
       }
     },
     {
+      "Name": "AssociateSecurityProfiles",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ai-agent"
+        },
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "security-profile"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "AssociateTrafficDistributionGroupUser",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
@@ -470,6 +500,36 @@
       }
     },
     {
+      "Name": "AssociateWorkspace",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "routing-profile"
+        },
+        {
+          "Name": "user"
+        },
+        {
+          "Name": "workspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "BatchAssociateAnalyticsDataSet",
       "ActionConditionKeys": [
         "connect:InstanceId"
@@ -490,6 +550,82 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "BatchCreateDataTableValue",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:ExpressionValue",
+        "connect:InstanceId",
+        "connect:PrimaryAttribute/${PrimaryAttribute}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "BatchDeleteDataTableValue",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId",
+        "connect:PrimaryAttribute/${PrimaryAttribute}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "BatchDescribeDataTableValue",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId",
+        "connect:PrimaryAttribute/${PrimaryAttribute}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -588,6 +724,32 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "BatchUpdateDataTableValue",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:ExpressionValue",
+        "connect:InstanceId",
+        "connect:PrimaryAttribute/${PrimaryAttribute}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -777,6 +939,54 @@
       }
     },
     {
+      "Name": "CreateContactFlowModuleAlias",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "contact-flow-module"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateContactFlowModuleVersion",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "contact-flow-module"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateContactFlowVersion",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
@@ -799,6 +1009,54 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "CreateDataTable",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateDataTableAttribute",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1430,6 +1688,61 @@
       }
     },
     {
+      "Name": "CreateWorkspace",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateWorkspacePage",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "aws-managed-view"
+        },
+        {
+          "Name": "customer-managed-view"
+        },
+        {
+          "Name": "workspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeactivateEvaluationForm",
       "ActionConditionKeys": [
         "connect:InstanceId"
@@ -1551,6 +1864,54 @@
       }
     },
     {
+      "Name": "DeleteContactFlowModuleAlias",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "contact-flow-module"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteContactFlowModuleVersion",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "contact-flow-module"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteContactFlowVersion",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
@@ -1573,6 +1934,54 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteDataTable",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteDataTableAttribute",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2106,6 +2515,78 @@
       }
     },
     {
+      "Name": "DeleteWorkspace",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteWorkspaceMedia",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteWorkspacePage",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeAgentStatus",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
@@ -2248,6 +2729,78 @@
       ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeContactFlowModuleAlias",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "contact-flow-module"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeDataTable",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeDataTableAttribute",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
@@ -2785,6 +3338,30 @@
       }
     },
     {
+      "Name": "DescribeWorkspace",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DisassociateAnalyticsDataSet",
       "ActionConditionKeys": [
         "connect:InstanceId"
@@ -3090,6 +3667,36 @@
       }
     },
     {
+      "Name": "DisassociateSecurityProfiles",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ai-agent"
+        },
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "security-profile"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DisassociateTrafficDistributionGroupUser",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
@@ -3146,6 +3753,30 @@
       }
     },
     {
+      "Name": "DisassociateWorkspace",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DismissUserContact",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
@@ -3167,6 +3798,31 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "EvaluateDataTableValues",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId",
+        "connect:PrimaryAttribute/${PrimaryAttribute}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -3535,6 +4191,30 @@
       }
     },
     {
+      "Name": "ImportWorkspaceMedia",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListAgentStatuses",
       "Annotations": {
         "Properties": {
@@ -3716,6 +4396,54 @@
       }
     },
     {
+      "Name": "ListContactFlowModuleAliases",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "contact-flow-module"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListContactFlowModuleVersions",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "contact-flow-module"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListContactFlowModules",
       "Annotations": {
         "Properties": {
@@ -3810,6 +4538,103 @@
       }
     },
     {
+      "Name": "ListDataTableAttributes",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListDataTablePrimaryValues",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId",
+        "connect:PrimaryAttribute/${PrimaryAttribute}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListDataTableValues",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId",
+        "connect:PrimaryAttribute/${PrimaryAttribute}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListDataTables",
+      "ActionConditionKeys": [
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListDefaultVocabularies",
       "ActionConditionKeys": [
         "connect:InstanceId"
@@ -3830,6 +4655,33 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListEntitySecurityProfiles",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ai-agent"
+        },
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -4416,6 +5268,33 @@
       }
     },
     {
+      "Name": "ListSecurityProfileFlowModules",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "security-profile"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListSecurityProfilePermissions",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
@@ -4748,6 +5627,77 @@
       }
     },
     {
+      "Name": "ListWorkspaceMedia",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListWorkspacePages",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListWorkspaces",
+      "ActionConditionKeys": [
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "MonitorContact",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
@@ -4986,6 +5936,30 @@
       }
     },
     {
+      "Name": "SearchContactEvaluations",
+      "ActionConditionKeys": [
+        "connect:InstanceId",
+        "connect:SearchTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "SearchContactFlowModules",
       "ActionConditionKeys": [
         "connect:InstanceId",
@@ -5061,6 +6035,30 @@
       }
     },
     {
+      "Name": "SearchDataTables",
+      "ActionConditionKeys": [
+        "connect:InstanceId",
+        "connect:SearchTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "SearchEmailAddresses",
       "ActionConditionKeys": [
         "connect:InstanceId",
@@ -5082,6 +6080,30 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "SearchEvaluationForms",
+      "ActionConditionKeys": [
+        "connect:InstanceId",
+        "connect:SearchTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -5351,6 +6373,30 @@
       }
     },
     {
+      "Name": "SearchViews",
+      "ActionConditionKeys": [
+        "connect:InstanceId",
+        "connect:SearchTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "SearchVocabularies",
       "ActionConditionKeys": [
         "connect:InstanceId"
@@ -5371,6 +6417,54 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "SearchWorkspaceAssociations",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "SearchWorkspaces",
+      "ActionConditionKeys": [
+        "connect:InstanceId",
+        "connect:SearchTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -5532,6 +6626,32 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "StartContactMediaProcessing",
+      "ActionConditionKeys": [
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "contact"
+        },
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -5822,6 +6942,32 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "StopContactMediaProcessing",
+      "ActionConditionKeys": [
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "contact"
+        },
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -6382,6 +7528,30 @@
       }
     },
     {
+      "Name": "UpdateContactFlowModuleAlias",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "contact-flow-module"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateContactFlowModuleContent",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
@@ -6504,6 +7674,79 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "UpdateDataTableAttribute",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateDataTableMetadata",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateDataTablePrimaryValues",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId",
+        "connect:PrimaryAttribute/${PrimaryAttribute}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -7475,6 +8718,108 @@
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
       }
+    },
+    {
+      "Name": "UpdateWorkspaceMetadata",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateWorkspacePage",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "aws-managed-view"
+        },
+        {
+          "Name": "customer-managed-view"
+        },
+        {
+          "Name": "workspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateWorkspaceTheme",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateWorkspaceVisibility",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "workspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
     }
   ],
   "ConditionKeys": [
@@ -7527,6 +8872,12 @@
       ]
     },
     {
+      "Name": "connect:ExpressionValue",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "connect:FlowType",
       "Types": [
         "ArrayOfString"
@@ -7560,6 +8911,12 @@
       "Name": "connect:PreferredUserArn",
       "Types": [
         "ARN"
+      ]
+    },
+    {
+      "Name": "connect:PrimaryAttribute/${PrimaryAttribute}",
+      "Types": [
+        "String"
       ]
     },
     {
@@ -7836,6 +9193,12 @@
     },
     {
       "Name": "AssociateSecurityProfiles",
+      "AuthorizedActions": [
+        {
+          "Name": "AssociateSecurityProfiles",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -7878,6 +9241,12 @@
     },
     {
       "Name": "AssociateWorkspace",
+      "AuthorizedActions": [
+        {
+          "Name": "AssociateWorkspace",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -7904,6 +9273,12 @@
     },
     {
       "Name": "BatchCreateDataTableValue",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchCreateDataTableValue",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -7914,6 +9289,12 @@
     },
     {
       "Name": "BatchDeleteDataTableValue",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchDeleteDataTableValue",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -7924,6 +9305,12 @@
     },
     {
       "Name": "BatchDescribeDataTableValue",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchDescribeDataTableValue",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -7998,6 +9385,12 @@
     },
     {
       "Name": "BatchUpdateDataTableValue",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchUpdateDataTableValue",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -8140,6 +9533,12 @@
     },
     {
       "Name": "CreateContactFlowModuleAlias",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateContactFlowModuleAlias",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -8150,6 +9549,12 @@
     },
     {
       "Name": "CreateContactFlowModuleVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateContactFlowModuleVersion",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -8178,6 +9583,10 @@
       "Name": "CreateDataTable",
       "AuthorizedActions": [
         {
+          "Name": "CreateDataTable",
+          "Service": "connect"
+        },
+        {
           "Name": "TagResource",
           "Service": "connect"
         }
@@ -8192,6 +9601,12 @@
     },
     {
       "Name": "CreateDataTableAttribute",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDataTableAttribute",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -8662,6 +10077,10 @@
       "Name": "CreateWorkspace",
       "AuthorizedActions": [
         {
+          "Name": "CreateWorkspace",
+          "Service": "connect"
+        },
+        {
           "Name": "TagResource",
           "Service": "connect"
         }
@@ -8676,6 +10095,12 @@
     },
     {
       "Name": "CreateWorkspacePage",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateWorkspacePage",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -8766,6 +10191,12 @@
     },
     {
       "Name": "DeleteContactFlowModuleAlias",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteContactFlowModuleAlias",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -8776,6 +10207,12 @@
     },
     {
       "Name": "DeleteContactFlowModuleVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteContactFlowModuleVersion",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -8802,6 +10239,12 @@
     },
     {
       "Name": "DeleteDataTable",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteDataTable",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -8812,6 +10255,12 @@
     },
     {
       "Name": "DeleteDataTableAttribute",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteDataTableAttribute",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -9174,6 +10623,12 @@
     },
     {
       "Name": "DeleteWorkspace",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteWorkspace",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -9184,6 +10639,12 @@
     },
     {
       "Name": "DeleteWorkspaceMedia",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteWorkspaceMedia",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -9194,6 +10655,12 @@
     },
     {
       "Name": "DeleteWorkspacePage",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteWorkspacePage",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -9300,6 +10767,12 @@
     },
     {
       "Name": "DescribeContactFlowModuleAlias",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeContactFlowModuleAlias",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -9310,6 +10783,12 @@
     },
     {
       "Name": "DescribeDataTable",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeDataTable",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -9320,6 +10799,12 @@
     },
     {
       "Name": "DescribeDataTableAttribute",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeDataTableAttribute",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -9671,6 +11156,12 @@
     },
     {
       "Name": "DescribeWorkspace",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeWorkspace",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -9915,6 +11406,12 @@
     },
     {
       "Name": "DisassociateWorkspace",
+      "AuthorizedActions": [
+        {
+          "Name": "DisassociateWorkspace",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -9951,6 +11448,12 @@
     },
     {
       "Name": "EvaluateDataTableValues",
+      "AuthorizedActions": [
+        {
+          "Name": "EvaluateDataTableValues",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -10219,6 +11722,12 @@
     },
     {
       "Name": "ImportWorkspaceMedia",
+      "AuthorizedActions": [
+        {
+          "Name": "ImportWorkspaceMedia",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -10357,6 +11866,12 @@
     },
     {
       "Name": "ListContactFlowModuleAliases",
+      "AuthorizedActions": [
+        {
+          "Name": "ListContactFlowModuleAliases",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -10367,6 +11882,12 @@
     },
     {
       "Name": "ListContactFlowModuleVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListContactFlowModuleVersions",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -10441,6 +11962,12 @@
     },
     {
       "Name": "ListDataTableAttributes",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDataTableAttributes",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -10451,6 +11978,12 @@
     },
     {
       "Name": "ListDataTablePrimaryValues",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDataTablePrimaryValues",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -10461,6 +11994,12 @@
     },
     {
       "Name": "ListDataTableValues",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDataTableValues",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -10471,6 +12010,12 @@
     },
     {
       "Name": "ListDataTables",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDataTables",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -10497,6 +12042,12 @@
     },
     {
       "Name": "ListEntitySecurityProfiles",
+      "AuthorizedActions": [
+        {
+          "Name": "ListEntitySecurityProfiles",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -10923,6 +12474,12 @@
     },
     {
       "Name": "ListSecurityProfileFlowModules",
+      "AuthorizedActions": [
+        {
+          "Name": "ListSecurityProfileFlowModules",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -11125,6 +12682,12 @@
     },
     {
       "Name": "ListWorkspaceMedia",
+      "AuthorizedActions": [
+        {
+          "Name": "ListWorkspaceMedia",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -11135,6 +12698,12 @@
     },
     {
       "Name": "ListWorkspacePages",
+      "AuthorizedActions": [
+        {
+          "Name": "ListWorkspacePages",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -11145,6 +12714,12 @@
     },
     {
       "Name": "ListWorkspaces",
+      "AuthorizedActions": [
+        {
+          "Name": "ListWorkspaces",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -11307,6 +12882,10 @@
         {
           "Name": "DescribeContactEvaluation",
           "Service": "connect"
+        },
+        {
+          "Name": "SearchContactEvaluations",
+          "Service": "connect"
         }
       ],
       "SDK": [
@@ -11383,6 +12962,16 @@
     },
     {
       "Name": "SearchDataTables",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeDataTable",
+          "Service": "connect"
+        },
+        {
+          "Name": "SearchDataTables",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -11416,6 +13005,10 @@
       "AuthorizedActions": [
         {
           "Name": "DescribeEvaluationForm",
+          "Service": "connect"
+        },
+        {
+          "Name": "SearchEvaluationForms",
           "Service": "connect"
         }
       ],
@@ -11653,6 +13246,10 @@
         {
           "Name": "DescribeView",
           "Service": "connect"
+        },
+        {
+          "Name": "SearchViews",
+          "Service": "connect"
         }
       ],
       "SDK": [
@@ -11681,6 +13278,12 @@
     },
     {
       "Name": "SearchWorkspaceAssociations",
+      "AuthorizedActions": [
+        {
+          "Name": "SearchWorkspaceAssociations",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -11691,6 +13294,16 @@
     },
     {
       "Name": "SearchWorkspaces",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeWorkspace",
+          "Service": "connect"
+        },
+        {
+          "Name": "SearchWorkspaces",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -11819,6 +13432,12 @@
     },
     {
       "Name": "StartContactMediaProcessing",
+      "AuthorizedActions": [
+        {
+          "Name": "StartContactMediaProcessing",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -11989,6 +13608,12 @@
     },
     {
       "Name": "StopContactMediaProcessing",
+      "AuthorizedActions": [
+        {
+          "Name": "StopContactMediaProcessing",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -12255,6 +13880,12 @@
     },
     {
       "Name": "UpdateContactFlowModuleAlias",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateContactFlowModuleAlias",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -12345,6 +13976,12 @@
     },
     {
       "Name": "UpdateDataTableAttribute",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateDataTableAttribute",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -12355,6 +13992,12 @@
     },
     {
       "Name": "UpdateDataTableMetadata",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateDataTableMetadata",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -12365,6 +14008,12 @@
     },
     {
       "Name": "UpdateDataTablePrimaryValues",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateDataTablePrimaryValues",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -12999,6 +14648,12 @@
     },
     {
       "Name": "UpdateWorkspaceMetadata",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateWorkspaceMetadata",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -13009,6 +14664,12 @@
     },
     {
       "Name": "UpdateWorkspacePage",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateWorkspacePage",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -13019,6 +14680,12 @@
     },
     {
       "Name": "UpdateWorkspaceTheme",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateWorkspaceTheme",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -13029,6 +14696,12 @@
     },
     {
       "Name": "UpdateWorkspaceVisibility",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateWorkspaceVisibility",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -13046,6 +14719,12 @@
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ai-agent",
+      "ARNFormats": [
+        "arn:${Partition}:wisdom:${Region}:${Account}:ai-agent/${AssistantId}/${AIAgentId}:${Version}"
       ]
     },
     {
@@ -13115,6 +14794,15 @@
       "Name": "customer-managed-view-version",
       "ARNFormats": [
         "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/view/${ViewId}:${ViewVersion}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "data-table",
+      "ARNFormats": [
+        "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/data-table/${DataTableId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -13340,6 +15028,15 @@
       "Name": "wildcard-quick-connect",
       "ARNFormats": [
         "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/transfer-destination/*"
+      ]
+    },
+    {
+      "Name": "workspace",
+      "ARNFormats": [
+        "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/workspace/${WorkspaceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     }
   ],

@@ -67,6 +67,32 @@
       }
     },
     {
+      "Name": "CreateCapacityProvider",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "lambda:SecurityGroupIds",
+        "lambda:SubnetIds"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "capacityProvider"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateCodeSigningConfig",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -176,6 +202,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteCapacityProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "capacityProvider"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -444,6 +490,26 @@
       }
     },
     {
+      "Name": "GetCapacityProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "capacityProvider"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetCodeSigningConfig",
       "Annotations": {
         "Properties": {
@@ -604,6 +670,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "GetFunctionScalingConfig",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "function"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -823,6 +909,21 @@
       }
     },
     {
+      "Name": "ListCapacityProviders",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListCodeSigningConfigs",
       "Annotations": {
         "Properties": {
@@ -893,6 +994,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListFunctionVersionsByCapacityProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "capacityProvider"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -992,6 +1113,9 @@
       },
       "Resources": [
         {
+          "Name": "capacityProvider"
+        },
+        {
           "Name": "code signing config"
         },
         {
@@ -1024,6 +1148,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "PassCapacityProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "capacityProvider"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1153,6 +1297,26 @@
       }
     },
     {
+      "Name": "PutFunctionScalingConfig",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "function"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "PutProvisionedConcurrencyConfig",
       "Annotations": {
         "Properties": {
@@ -1255,6 +1419,9 @@
       },
       "Resources": [
         {
+          "Name": "capacityProvider"
+        },
+        {
           "Name": "code signing config"
         },
         {
@@ -1283,6 +1450,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "capacityProvider"
+        },
         {
           "Name": "code signing config"
         },
@@ -1316,6 +1486,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "UpdateCapacityProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "capacityProvider"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1632,6 +1822,35 @@
       ]
     },
     {
+      "Name": "CreateCapacityProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateCapacityProvider",
+          "Service": "lambda"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "lambda.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "lambda"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "lambda",
+          "Method": "create_capacity_provider",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateCodeSigningConfig",
       "AuthorizedActions": [
         {
@@ -1680,6 +1899,10 @@
         },
         {
           "Name": "GetLayerVersion",
+          "Service": "lambda"
+        },
+        {
+          "Name": "PassCapacityProvider",
           "Service": "lambda"
         },
         {
@@ -1732,6 +1955,22 @@
         {
           "Name": "lambda",
           "Method": "delete_alias",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCapacityProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteCapacityProvider",
+          "Service": "lambda"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "lambda",
+          "Method": "delete_capacity_provider",
           "Package": "Boto3"
         }
       ]
@@ -1913,6 +2152,22 @@
       ]
     },
     {
+      "Name": "GetCapacityProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "GetCapacityProvider",
+          "Service": "lambda"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "lambda",
+          "Method": "get_capacity_provider",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetCodeSigningConfig",
       "AuthorizedActions": [
         {
@@ -2050,6 +2305,22 @@
         {
           "Name": "lambda",
           "Method": "get_function_recursion_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetFunctionScalingConfig",
+      "AuthorizedActions": [
+        {
+          "Name": "GetFunctionScalingConfig",
+          "Service": "lambda"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "lambda",
+          "Method": "get_function_scaling_config",
           "Package": "Boto3"
         }
       ]
@@ -2231,6 +2502,22 @@
       ]
     },
     {
+      "Name": "ListCapacityProviders",
+      "AuthorizedActions": [
+        {
+          "Name": "ListCapacityProviders",
+          "Service": "lambda"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "lambda",
+          "Method": "list_capacity_providers",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListCodeSigningConfigs",
       "AuthorizedActions": [
         {
@@ -2300,6 +2587,22 @@
         {
           "Name": "lambda",
           "Method": "list_function_url_configs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListFunctionVersionsByCapacityProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "ListFunctionVersionsByCapacityProvider",
+          "Service": "lambda"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "lambda",
+          "Method": "list_function_versions_by_capacity_provider",
           "Package": "Boto3"
         }
       ]
@@ -2513,6 +2816,22 @@
       ]
     },
     {
+      "Name": "PutFunctionScalingConfig",
+      "AuthorizedActions": [
+        {
+          "Name": "PutFunctionScalingConfig",
+          "Service": "lambda"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "lambda",
+          "Method": "put_function_scaling_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "PutProvisionedConcurrencyConfig",
       "AuthorizedActions": [
         {
@@ -2635,6 +2954,22 @@
       ]
     },
     {
+      "Name": "UpdateCapacityProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateCapacityProvider",
+          "Service": "lambda"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "lambda",
+          "Method": "update_capacity_provider",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "UpdateCodeSigningConfig",
       "AuthorizedActions": [
         {
@@ -2687,6 +3022,10 @@
       "AuthorizedActions": [
         {
           "Name": "GetLayerVersion",
+          "Service": "lambda"
+        },
+        {
+          "Name": "PassCapacityProvider",
           "Service": "lambda"
         },
         {
@@ -2766,6 +3105,15 @@
     }
   ],
   "Resources": [
+    {
+      "Name": "capacityProvider",
+      "ARNFormats": [
+        "arn:${Partition}:lambda:${Region}:${Account}:capacity-provider:${CapacityProviderName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
     {
       "Name": "code signing config",
       "ARNFormats": [
