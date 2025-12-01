@@ -3974,6 +3974,15 @@
       "Name": "UpdateBackupPlan",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "malware-protection.guardduty.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "UpdateBackupPlan",
           "Service": "backup"
         }

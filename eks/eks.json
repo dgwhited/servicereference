@@ -1738,6 +1738,35 @@
       ]
     },
     {
+      "Name": "CreateCapability",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateCapability",
+          "Service": "eks"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "eks.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "eks"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "eks",
+          "Method": "create_capability",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateCluster",
       "AuthorizedActions": [
         {
@@ -1911,6 +1940,22 @@
       ]
     },
     {
+      "Name": "DeleteCapability",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteCapability",
+          "Service": "eks"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "eks",
+          "Method": "delete_capability",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteCluster",
       "AuthorizedActions": [
         {
@@ -2066,6 +2111,22 @@
         {
           "Name": "eks",
           "Method": "describe_addon_versions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeCapability",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeCapability",
+          "Service": "eks"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "eks",
+          "Method": "describe_capability",
           "Package": "Boto3"
         }
       ]
@@ -2322,6 +2383,22 @@
         {
           "Name": "eks",
           "Method": "list_associated_access_policies",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListCapabilities",
+      "AuthorizedActions": [
+        {
+          "Name": "ListCapabilities",
+          "Service": "eks"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "eks",
+          "Method": "list_capabilities",
           "Package": "Boto3"
         }
       ]
@@ -2584,6 +2661,31 @@
         {
           "Name": "eks",
           "Method": "update_addon",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCapability",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "eks.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateCapability",
+          "Service": "eks"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "eks",
+          "Method": "update_capability",
           "Package": "Boto3"
         }
       ]
