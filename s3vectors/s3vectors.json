@@ -3,6 +3,14 @@
   "Actions": [
     {
       "Name": "CreateIndex",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "s3vectors:VectorBucketTag/${TagKey}",
+        "s3vectors:kmsKeyArn",
+        "s3vectors:sseType"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -24,6 +32,10 @@
     {
       "Name": "CreateVectorBucket",
       "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "s3vectors:VectorBucketTag/${TagKey}",
         "s3vectors:kmsKeyArn",
         "s3vectors:sseType"
       ],
@@ -47,6 +59,10 @@
     },
     {
       "Name": "DeleteIndex",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3vectors:VectorBucketTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -67,6 +83,10 @@
     },
     {
       "Name": "DeleteVectorBucket",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3vectors:VectorBucketTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -87,6 +107,10 @@
     },
     {
       "Name": "DeleteVectorBucketPolicy",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3vectors:VectorBucketTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -107,6 +131,10 @@
     },
     {
       "Name": "DeleteVectors",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3vectors:VectorBucketTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -127,6 +155,10 @@
     },
     {
       "Name": "GetIndex",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3vectors:VectorBucketTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -147,6 +179,10 @@
     },
     {
       "Name": "GetVectorBucket",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3vectors:VectorBucketTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -167,6 +203,10 @@
     },
     {
       "Name": "GetVectorBucketPolicy",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3vectors:VectorBucketTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -187,6 +227,10 @@
     },
     {
       "Name": "GetVectors",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3vectors:VectorBucketTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -207,6 +251,10 @@
     },
     {
       "Name": "ListIndexes",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3vectors:VectorBucketTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -242,6 +290,10 @@
     },
     {
       "Name": "ListVectors",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3vectors:VectorBucketTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -262,6 +314,10 @@
     },
     {
       "Name": "PutVectorBucketPolicy",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3vectors:VectorBucketTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -282,6 +338,10 @@
     },
     {
       "Name": "PutVectors",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3vectors:VectorBucketTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -302,6 +362,10 @@
     },
     {
       "Name": "QueryVectors",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3vectors:VectorBucketTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -322,6 +386,30 @@
     }
   ],
   "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "s3vectors:VectorBucketTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
     {
       "Name": "s3vectors:kmsKeyArn",
       "Types": [
@@ -502,12 +590,20 @@
       "Name": "Index",
       "ARNFormats": [
         "arn:${Partition}:s3vectors:${Region}:${Account}:bucket/${BucketName}/index/${IndexName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3vectors:VectorBucketTag/${TagKey}"
       ]
     },
     {
       "Name": "VectorBucket",
       "ARNFormats": [
         "arn:${Partition}:s3vectors:${Region}:${Account}:bucket/${BucketName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "s3vectors:VectorBucketTag/${TagKey}"
       ]
     }
   ],
