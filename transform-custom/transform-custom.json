@@ -1,8 +1,8 @@
 {
-  "Name": "transform",
+  "Name": "transform-custom",
   "Actions": [
     {
-      "Name": "AssociateConnectorResource",
+      "Name": "CompleteTransformationPackageUpload",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -13,7 +13,7 @@
       },
       "Resources": [
         {
-          "Name": "connector"
+          "Name": "package"
         }
       ],
       "SupportedBy": {
@@ -22,27 +22,7 @@
       }
     },
     {
-      "Name": "CreateProfile",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "profile"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "DeleteAgentRuntimeConfiguration",
+      "Name": "ConverseStream",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -57,7 +37,7 @@
       }
     },
     {
-      "Name": "DeleteConnector",
+      "Name": "CreateCampaign",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -68,7 +48,7 @@
       },
       "Resources": [
         {
-          "Name": "connector"
+          "Name": "campaign"
         }
       ],
       "SupportedBy": {
@@ -77,7 +57,7 @@
       }
     },
     {
-      "Name": "DeleteProfile",
+      "Name": "CreateTransformationPackageUrl",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -88,7 +68,7 @@
       },
       "Resources": [
         {
-          "Name": "profile"
+          "Name": "package"
         }
       ],
       "SupportedBy": {
@@ -97,52 +77,87 @@
       }
     },
     {
-      "Name": "GetAccountSettings",
+      "Name": "DeleteCampaign",
       "Annotations": {
         "Properties": {
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
-          "IsWrite": false
+          "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
     {
-      "Name": "GetAgent",
+      "Name": "DeleteKnowledgeItem",
       "Annotations": {
         "Properties": {
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
-          "IsWrite": false
+          "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "knowledge-item"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
     {
-      "Name": "GetAgentRuntimeConfiguration",
+      "Name": "DeleteTransformationPackage",
       "Annotations": {
         "Properties": {
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
-          "IsWrite": false
+          "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "package"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
     {
-      "Name": "GetConnector",
+      "Name": "ExecuteTransformation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "package"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetCampaign",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -153,7 +168,7 @@
       },
       "Resources": [
         {
-          "Name": "connector"
+          "Name": "campaign"
         }
       ],
       "SupportedBy": {
@@ -162,7 +177,47 @@
       }
     },
     {
-      "Name": "ListAgents",
+      "Name": "GetKnowledgeItem",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "knowledge-item"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetTransformationPackageUrl",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "package"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListCampaignRepositories",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -177,10 +232,10 @@
       }
     },
     {
-      "Name": "ListConnectors",
+      "Name": "ListCampaigns",
       "Annotations": {
         "Properties": {
-          "IsList": true,
+          "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -192,10 +247,10 @@
       }
     },
     {
-      "Name": "ListProfiles",
+      "Name": "ListKnowledgeItems",
       "Annotations": {
         "Properties": {
-          "IsList": true,
+          "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -216,46 +271,21 @@
           "IsWrite": false
         }
       },
-      "Resources": [
-        {
-          "Name": "connector"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
     {
-      "Name": "PutAgentRuntimeConfiguration",
+      "Name": "ListTransformationPackageMetadata",
       "Annotations": {
         "Properties": {
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
-          "IsWrite": true
+          "IsWrite": false
         }
       },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "RejectConnector",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "connector"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -275,11 +305,6 @@
           "IsWrite": true
         }
       },
-      "Resources": [
-        {
-          "Name": "connector"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -298,9 +323,24 @@
           "IsWrite": true
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateCampaign",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "Resources": [
         {
-          "Name": "connector"
+          "Name": "campaign"
         }
       ],
       "SupportedBy": {
@@ -309,37 +349,7 @@
       }
     },
     {
-      "Name": "UpdateAccountSettings",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "UpdateAgentAccess",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "UpdateProfile",
+      "Name": "UpdateCampaignRepositoryStatus",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -350,7 +360,42 @@
       },
       "Resources": [
         {
-          "Name": "profile"
+          "Name": "campaign"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateKnowledgeItemConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateKnowledgeItemStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "knowledge-item"
         }
       ],
       "SupportedBy": {
@@ -367,6 +412,12 @@
       ]
     },
     {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "aws:TagKeys",
       "Types": [
         "ArrayOfString"
@@ -375,15 +426,27 @@
   ],
   "Resources": [
     {
-      "Name": "connector",
+      "Name": "campaign",
       "ARNFormats": [
-        "arn:${Partition}:transform:${Region}:${Account}:connector/${WorkspaceId}/${ConnectorId}"
+        "arn:${Partition}:transform-custom:${Region}:${Account}:campaign/${Name}"
       ]
     },
     {
-      "Name": "profile",
+      "Name": "conversation",
       "ARNFormats": [
-        "arn:${Partition}:transform:${Region}:${Account}:profile/${Identifier}"
+        "arn:${Partition}:transform-custom:${Region}:${Account}:conversation/${ConversationId}"
+      ]
+    },
+    {
+      "Name": "knowledge-item",
+      "ARNFormats": [
+        "arn:${Partition}:transform-custom:${Region}:${Account}:package/${TransformationPackageName}/knowledge-item/${Id}"
+      ]
+    },
+    {
+      "Name": "package",
+      "ARNFormats": [
+        "arn:${Partition}:transform-custom:${Region}:${Account}:package/${Name}"
       ]
     }
   ],
