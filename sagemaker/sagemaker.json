@@ -10289,6 +10289,35 @@
       ]
     },
     {
+      "Name": "CreateMlflowApp",
+      "AuthorizedActions": [
+        {
+          "Name": "AddTags",
+          "Service": "sagemaker"
+        },
+        {
+          "Name": "CreateMlflowApp",
+          "Service": "sagemaker"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "sagemaker.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sagemaker",
+          "Method": "create_mlflow_app",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateMlflowTrackingServer",
       "AuthorizedActions": [
         {
@@ -10711,6 +10740,22 @@
         {
           "Name": "sagemaker",
           "Method": "create_presigned_domain_url",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePresignedMlflowAppUrl",
+      "AuthorizedActions": [
+        {
+          "Name": "CreatePresignedMlflowAppUrl",
+          "Service": "sagemaker"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sagemaker",
+          "Method": "create_presigned_mlflow_app_url",
           "Package": "Boto3"
         }
       ]
@@ -11513,6 +11558,22 @@
         {
           "Name": "sagemaker",
           "Method": "delete_inference_experiment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMlflowApp",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteMlflowApp",
+          "Service": "sagemaker"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sagemaker",
+          "Method": "delete_mlflow_app",
           "Package": "Boto3"
         }
       ]
@@ -12543,6 +12604,22 @@
         {
           "Name": "sagemaker",
           "Method": "describe_lineage_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMlflowApp",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeMlflowApp",
+          "Service": "sagemaker"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sagemaker",
+          "Method": "describe_mlflow_app",
           "Package": "Boto3"
         }
       ]
@@ -13982,6 +14059,22 @@
         {
           "Name": "sagemaker",
           "Method": "list_lineage_groups",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListMlflowApps",
+      "AuthorizedActions": [
+        {
+          "Name": "ListMlflowApps",
+          "Service": "sagemaker"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sagemaker",
+          "Method": "list_mlflow_apps",
           "Package": "Boto3"
         }
       ]
@@ -15624,6 +15717,22 @@
         {
           "Name": "sagemaker",
           "Method": "update_inference_experiment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMlflowApp",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateMlflowApp",
+          "Service": "sagemaker"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sagemaker",
+          "Method": "update_mlflow_app",
           "Package": "Boto3"
         }
       ]

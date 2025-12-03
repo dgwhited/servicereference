@@ -3098,6 +3098,22 @@
       ]
     },
     {
+      "Name": "CreateEvaluator",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateEvaluator",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "create_evaluator",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateEvent",
       "AuthorizedActions": [
         {
@@ -3216,6 +3232,63 @@
       ]
     },
     {
+      "Name": "CreateOnlineEvaluationConfig",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateOnlineEvaluationConfig",
+          "Service": "bedrock-agentcore"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "bedrock-agentcore.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "create_online_evaluation_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "CreatePolicy",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "create_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePolicyEngine",
+      "AuthorizedActions": [
+        {
+          "Name": "CreatePolicyEngine",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "create_policy_engine",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateWorkloadIdentity",
       "AuthorizedActions": [
         {
@@ -3311,6 +3384,22 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "delete_code_interpreter",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEvaluator",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteEvaluator",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "delete_evaluator",
           "Package": "Boto3"
         }
       ]
@@ -3412,6 +3501,64 @@
       ]
     },
     {
+      "Name": "DeleteOnlineEvaluationConfig",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteOnlineEvaluationConfig",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "delete_online_evaluation_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "DeletePolicy",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "delete_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePolicyEngine",
+      "AuthorizedActions": [
+        {
+          "Name": "DeletePolicyEngine",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "delete_policy_engine",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteResourcePolicy",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "delete_resource_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteWorkloadIdentity",
       "AuthorizedActions": [
         {
@@ -3423,6 +3570,22 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "delete_workload_identity",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "Evaluate",
+      "AuthorizedActions": [
+        {
+          "Name": "Evaluate",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore",
+          "Method": "evaluate",
           "Package": "Boto3"
         }
       ]
@@ -3556,6 +3719,22 @@
       ]
     },
     {
+      "Name": "GetEvaluator",
+      "AuthorizedActions": [
+        {
+          "Name": "GetEvaluator",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "get_evaluator",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetEvent",
       "AuthorizedActions": [
         {
@@ -3652,6 +3831,64 @@
       ]
     },
     {
+      "Name": "GetOnlineEvaluationConfig",
+      "AuthorizedActions": [
+        {
+          "Name": "GetOnlineEvaluationConfig",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "get_online_evaluation_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPolicy",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "get_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPolicyEngine",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPolicyEngine",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "get_policy_engine",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPolicyGeneration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPolicyGeneration",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "get_policy_generation",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetResourceApiKey",
       "AuthorizedActions": [
         {
@@ -3679,6 +3916,22 @@
         {
           "Name": "bedrock-agentcore",
           "Method": "get_resource_oauth2_token",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "GetResourcePolicy",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "get_resource_policy",
           "Package": "Boto3"
         }
       ]
@@ -3948,6 +4201,22 @@
       ]
     },
     {
+      "Name": "ListEvaluators",
+      "AuthorizedActions": [
+        {
+          "Name": "ListEvaluators",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_evaluators",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListEvents",
       "AuthorizedActions": [
         {
@@ -4060,6 +4329,80 @@
       ]
     },
     {
+      "Name": "ListOnlineEvaluationConfigs",
+      "AuthorizedActions": [
+        {
+          "Name": "ListOnlineEvaluationConfigs",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_online_evaluation_configs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPolicies",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPolicies",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_policies",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPolicyEngines",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPolicyEngines",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_policy_engines",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPolicyGenerationAssets",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPolicyGenerationAssets",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_policy_generation_assets",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPolicyGenerations",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_policy_generations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListSessions",
       "AuthorizedActions": [
         {
@@ -4103,6 +4446,16 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "list_workload_identities",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "put_resource_policy",
           "Package": "Boto3"
         }
       ]
@@ -4183,6 +4536,22 @@
         {
           "Name": "bedrock-agentcore",
           "Method": "start_memory_extraction_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartPolicyGeneration",
+      "AuthorizedActions": [
+        {
+          "Name": "StartPolicyGeneration",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "start_policy_generation",
           "Package": "Boto3"
         }
       ]
@@ -4357,6 +4726,16 @@
       ]
     },
     {
+      "Name": "UpdateEvaluator",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "update_evaluator",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "UpdateGateway",
       "AuthorizedActions": [
         {
@@ -4438,6 +4817,57 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "update_oauth2_credential_provider",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateOnlineEvaluationConfig",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "bedrock-agentcore.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateOnlineEvaluationConfig",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "update_online_evaluation_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdatePolicy",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "update_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePolicyEngine",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "update_policy_engine",
           "Package": "Boto3"
         }
       ]

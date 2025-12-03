@@ -22,6 +22,21 @@
       }
     },
     {
+      "Name": "AssociateSourceToS3TableIntegration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CancelExportTask",
       "Annotations": {
         "Properties": {
@@ -454,6 +469,21 @@
       }
     },
     {
+      "Name": "DeletePipelineRule",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteQueryDefinition",
       "Annotations": {
         "Properties": {
@@ -839,6 +869,21 @@
       }
     },
     {
+      "Name": "DisassociateSourceFromS3TableIntegration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "FilterLogEvents",
       "Annotations": {
         "Properties": {
@@ -1029,6 +1074,21 @@
       }
     },
     {
+      "Name": "GetLogFields",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetLogGroupFields",
       "Annotations": {
         "Properties": {
@@ -1149,6 +1209,26 @@
       }
     },
     {
+      "Name": "IntegrateWithS3Table",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "Link",
       "Annotations": {
         "Properties": {
@@ -1156,6 +1236,21 @@
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListAggregateLogGroupSummaries",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
         }
       },
       "SupportedBy": {
@@ -1309,6 +1404,21 @@
       }
     },
     {
+      "Name": "ListSourcesForS3TableIntegration",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListTagsForResource",
       "Annotations": {
         "Properties": {
@@ -1360,6 +1470,26 @@
       ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ProcessWithPipeline",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "log-group"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
@@ -1600,6 +1730,21 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "PutPipelineRule",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2096,6 +2241,22 @@
         {
           "Name": "logs",
           "Method": "associate_kms_key",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateSourceToS3TableIntegration",
+      "AuthorizedActions": [
+        {
+          "Name": "AssociateSourceToS3TableIntegration",
+          "Service": "logs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "logs",
+          "Method": "associate_source_to_s3_table_integration",
           "Package": "Boto3"
         }
       ]
@@ -2834,6 +2995,22 @@
       ]
     },
     {
+      "Name": "DisassociateSourceFromS3TableIntegration",
+      "AuthorizedActions": [
+        {
+          "Name": "DisassociateSourceFromS3TableIntegration",
+          "Service": "logs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "logs",
+          "Method": "disassociate_source_from_s3_table_integration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "FilterLogEvents",
       "AuthorizedActions": [
         {
@@ -2986,6 +3163,22 @@
       ]
     },
     {
+      "Name": "GetLogFields",
+      "AuthorizedActions": [
+        {
+          "Name": "GetLogFields",
+          "Service": "logs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "logs",
+          "Method": "get_log_fields",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetLogGroupFields",
       "AuthorizedActions": [
         {
@@ -3112,6 +3305,22 @@
       ]
     },
     {
+      "Name": "ListAggregateLogGroupSummaries",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAggregateLogGroupSummaries",
+          "Service": "logs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "logs",
+          "Method": "list_aggregate_log_group_summaries",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListAnomalies",
       "AuthorizedActions": [
         {
@@ -3207,6 +3416,22 @@
         {
           "Name": "logs",
           "Method": "list_scheduled_queries",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListSourcesForS3TableIntegration",
+      "AuthorizedActions": [
+        {
+          "Name": "ListSourcesForS3TableIntegration",
+          "Service": "logs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "logs",
+          "Method": "list_sources_for_s3_table_integration",
           "Package": "Boto3"
         }
       ]

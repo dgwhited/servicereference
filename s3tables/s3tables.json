@@ -186,6 +186,26 @@
       }
     },
     {
+      "Name": "DeleteTableBucketReplication",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteTablePolicy",
       "ActionConditionKeys": [
         "s3tables:namespace",
@@ -195,6 +215,30 @@
         "Properties": {
           "IsList": false,
           "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteTableReplication",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": true
         }
@@ -337,6 +381,46 @@
       }
     },
     {
+      "Name": "GetTableBucketReplication",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetTableBucketStorageClass",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetTableData",
       "ActionConditionKeys": [
         "s3tables:namespace",
@@ -458,6 +542,126 @@
     },
     {
       "Name": "GetTablePolicy",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetTableRecordExpirationConfiguration",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetTableRecordExpirationJobStatus",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetTableReplication",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetTableReplicationStatus",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetTableStorageClass",
       "ActionConditionKeys": [
         "s3tables:namespace",
         "s3tables:tableName"
@@ -630,6 +834,49 @@
       }
     },
     {
+      "Name": "PutTableBucketReplication",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "PutTableBucketStorageClass",
+      "ActionConditionKeys": [
+        "s3tables:StorageClass"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "PutTableData",
       "ActionConditionKeys": [
         "s3tables:namespace",
@@ -712,6 +959,79 @@
         "Properties": {
           "IsList": false,
           "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "PutTableRecordExpirationConfiguration",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "PutTableReplication",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "PutTableStorageClass",
+      "ActionConditionKeys": [
+        "s3tables:StorageClass",
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": true
         }
@@ -864,6 +1184,12 @@
       ]
     },
     {
+      "Name": "s3tables:StorageClass",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "s3tables:TableBucketTag/${TagKey}",
       "Types": [
         "String"
@@ -911,6 +1237,10 @@
           "Service": "s3tables"
         },
         {
+          "Name": "PutTableStorageClass",
+          "Service": "s3tables"
+        },
+        {
           "Name": "TagResource",
           "Service": "s3tables"
         }
@@ -936,6 +1266,10 @@
         },
         {
           "Name": "PutTableBucketPolicy",
+          "Service": "s3tables"
+        },
+        {
+          "Name": "PutTableBucketStorageClass",
           "Service": "s3tables"
         },
         {
@@ -1042,6 +1376,22 @@
       ]
     },
     {
+      "Name": "DeleteTableBucketReplication",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteTableBucketReplication",
+          "Service": "s3tables"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3tables",
+          "Method": "delete_table_bucket_replication",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteTablePolicy",
       "AuthorizedActions": [
         {
@@ -1053,6 +1403,22 @@
         {
           "Name": "s3tables",
           "Method": "delete_table_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTableReplication",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteTableReplication",
+          "Service": "s3tables"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3tables",
+          "Method": "delete_table_replication",
           "Package": "Boto3"
         }
       ]
@@ -1164,6 +1530,38 @@
       ]
     },
     {
+      "Name": "GetTableBucketReplication",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTableBucketReplication",
+          "Service": "s3tables"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3tables",
+          "Method": "get_table_bucket_replication",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableBucketStorageClass",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTableBucketStorageClass",
+          "Service": "s3tables"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3tables",
+          "Method": "get_table_bucket_storage_class",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetTableEncryption",
       "AuthorizedActions": [
         {
@@ -1239,6 +1637,80 @@
         {
           "Name": "s3tables",
           "Method": "get_table_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableRecordExpirationConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTableRecordExpirationConfiguration",
+          "Service": "s3tables"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3tables",
+          "Method": "get_table_record_expiration_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableRecordExpirationJobStatus",
+      "SDK": [
+        {
+          "Name": "s3tables",
+          "Method": "get_table_record_expiration_job_status",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableReplication",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTableReplication",
+          "Service": "s3tables"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3tables",
+          "Method": "get_table_replication",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableReplicationStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTableReplicationStatus",
+          "Service": "s3tables"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3tables",
+          "Method": "get_table_replication_status",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetTableStorageClass",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTableStorageClass",
+          "Service": "s3tables"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3tables",
+          "Method": "get_table_storage_class",
           "Package": "Boto3"
         }
       ]
@@ -1366,6 +1838,47 @@
       ]
     },
     {
+      "Name": "PutTableBucketReplication",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "replication.s3tables.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "PutTableBucketReplication",
+          "Service": "s3tables"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3tables",
+          "Method": "put_table_bucket_replication",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutTableBucketStorageClass",
+      "AuthorizedActions": [
+        {
+          "Name": "PutTableBucketStorageClass",
+          "Service": "s3tables"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3tables",
+          "Method": "put_table_bucket_storage_class",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "PutTableMaintenanceConfiguration",
       "AuthorizedActions": [
         {
@@ -1393,6 +1906,41 @@
         {
           "Name": "s3tables",
           "Method": "put_table_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutTableRecordExpirationConfiguration",
+      "SDK": [
+        {
+          "Name": "s3tables",
+          "Method": "put_table_record_expiration_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutTableReplication",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "replication.s3tables.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "PutTableReplication",
+          "Service": "s3tables"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3tables",
+          "Method": "put_table_replication",
           "Package": "Boto3"
         }
       ]

@@ -29,6 +29,55 @@
       }
     },
     {
+      "Name": "CreateS3TableIntegration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "s3tableintegration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateTelemetryPipeline",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "observabilityadmin:SourceType"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "telemetry-pipeline"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateTelemetryRule",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -97,6 +146,46 @@
       }
     },
     {
+      "Name": "DeleteS3TableIntegration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "s3tableintegration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteTelemetryPipeline",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "telemetry-pipeline"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteTelemetryRule",
       "Annotations": {
         "Properties": {
@@ -157,6 +246,26 @@
       }
     },
     {
+      "Name": "GetS3TableIntegration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "s3tableintegration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetTelemetryEnrichmentStatus",
       "Annotations": {
         "Properties": {
@@ -196,6 +305,26 @@
           "IsWrite": false
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetTelemetryPipeline",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "telemetry-pipeline"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -287,6 +416,21 @@
       }
     },
     {
+      "Name": "ListS3TableIntegrations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListTagsForResource",
       "Annotations": {
         "Properties": {
@@ -304,9 +448,30 @@
           "Name": "organization-telemetry-rule"
         },
         {
+          "Name": "s3tableintegration"
+        },
+        {
+          "Name": "telemetry-pipeline"
+        },
+        {
           "Name": "telemetry-rule"
         }
       ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListTelemetryPipelines",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -454,9 +619,30 @@
           "Name": "organization-telemetry-rule"
         },
         {
+          "Name": "s3tableintegration"
+        },
+        {
+          "Name": "telemetry-pipeline"
+        },
+        {
           "Name": "telemetry-rule"
         }
       ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "TestTelemetryPipeline",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -481,6 +667,12 @@
         },
         {
           "Name": "organization-telemetry-rule"
+        },
+        {
+          "Name": "s3tableintegration"
+        },
+        {
+          "Name": "telemetry-pipeline"
         },
         {
           "Name": "telemetry-rule"
@@ -509,6 +701,26 @@
       "Resources": [
         {
           "Name": "organization-centralization-rule"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateTelemetryPipeline",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "telemetry-pipeline"
         }
       ],
       "SupportedBy": {
@@ -555,6 +767,21 @@
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
+    },
+    {
+      "Name": "ValidateTelemetryPipelineConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
     }
   ],
   "ConditionKeys": [
@@ -593,6 +820,12 @@
       "Types": [
         "ArrayOfString"
       ]
+    },
+    {
+      "Name": "observabilityadmin:SourceType",
+      "Types": [
+        "String"
+      ]
     }
   ],
   "Operations": [
@@ -612,6 +845,65 @@
         {
           "Name": "observabilityadmin",
           "Method": "create_centralization_rule_for_organization",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateS3TableIntegration",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateS3TableIntegration",
+          "Service": "observabilityadmin"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "logs.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "create_s3_table_integration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTelemetryPipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateTelemetryPipeline",
+          "Service": "observabilityadmin"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "logs.amazonaws.com",
+              "telemetry-pipelines.observabilityadmin.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "create_telemetry_pipeline",
           "Package": "Boto3"
         }
       ]
@@ -673,6 +965,38 @@
       ]
     },
     {
+      "Name": "DeleteS3TableIntegration",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteS3TableIntegration",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "delete_s3_table_integration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTelemetryPipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteTelemetryPipeline",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "delete_telemetry_pipeline",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteTelemetryRule",
       "AuthorizedActions": [
         {
@@ -721,6 +1045,22 @@
       ]
     },
     {
+      "Name": "GetS3TableIntegration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetS3TableIntegration",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "get_s3_table_integration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetTelemetryEnrichmentStatus",
       "AuthorizedActions": [
         {
@@ -764,6 +1104,22 @@
         {
           "Name": "observabilityadmin",
           "Method": "get_telemetry_evaluation_status_for_organization",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetTelemetryPipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTelemetryPipeline",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "get_telemetry_pipeline",
           "Package": "Boto3"
         }
       ]
@@ -849,6 +1205,22 @@
       ]
     },
     {
+      "Name": "ListS3TableIntegrations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListS3TableIntegrations",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "list_s3_table_integrations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListTagsForResource",
       "AuthorizedActions": [
         {
@@ -860,6 +1232,22 @@
         {
           "Name": "observabilityadmin",
           "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTelemetryPipelines",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTelemetryPipelines",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "list_telemetry_pipelines",
           "Package": "Boto3"
         }
       ]
@@ -1009,6 +1397,22 @@
       ]
     },
     {
+      "Name": "TestTelemetryPipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "TestTelemetryPipeline",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "test_telemetry_pipeline",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "UntagResource",
       "AuthorizedActions": [
         {
@@ -1036,6 +1440,32 @@
         {
           "Name": "observabilityadmin",
           "Method": "update_centralization_rule_for_organization",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTelemetryPipeline",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "logs.amazonaws.com",
+              "telemetry-pipelines.observabilityadmin.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateTelemetryPipeline",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "update_telemetry_pipeline",
           "Package": "Boto3"
         }
       ]
@@ -1071,6 +1501,22 @@
           "Package": "Boto3"
         }
       ]
+    },
+    {
+      "Name": "ValidateTelemetryPipelineConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "ValidateTelemetryPipelineConfiguration",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "validate_telemetry_pipeline_configuration",
+          "Package": "Boto3"
+        }
+      ]
     }
   ],
   "Resources": [
@@ -1087,6 +1533,24 @@
       "Name": "organization-telemetry-rule",
       "ARNFormats": [
         "arn:${Partition}:observabilityadmin:${Region}:${Account}:organization-telemetry-rule/${TelemetryRuleName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "s3tableintegration",
+      "ARNFormats": [
+        "arn:${Partition}:observabilityadmin:${Region}:${Account}:s3tableintegration/${S3TableIntegrationIdentifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "telemetry-pipeline",
+      "ARNFormats": [
+        "arn:${Partition}:observabilityadmin:${Region}:${Account}:telemetry-pipeline/${TelemetryPipelineIdentifier}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
