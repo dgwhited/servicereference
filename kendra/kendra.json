@@ -2392,6 +2392,15 @@
       "Name": "PutPrincipalMapping",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "kendra.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "PutPrincipalMapping",
           "Service": "kendra"
         }
