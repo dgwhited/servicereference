@@ -2240,6 +2240,19 @@
           "Service": "redshift"
         },
         {
+          "Name": "DeregisterNamespace",
+          "Service": "redshift"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "redshift-serverless.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "RegisterNamespace",
           "Service": "redshift"
         }
