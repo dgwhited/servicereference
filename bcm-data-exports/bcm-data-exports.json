@@ -17,6 +17,9 @@
       },
       "Resources": [
         {
+          "Name": "billingview"
+        },
+        {
           "Name": "table"
         }
       ],
@@ -253,6 +256,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "billingview"
+        },
         {
           "Name": "export"
         },
@@ -501,6 +507,15 @@
     }
   ],
   "Resources": [
+    {
+      "Name": "billingview",
+      "ARNFormats": [
+        "arn:${Partition}:billing::${Account}:billingview/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
     {
       "Name": "export",
       "ARNFormats": [

@@ -772,6 +772,21 @@
       }
     },
     {
+      "Name": "ListCostCategoryResourceAssociations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListSavingsPlansPurchaseRecommendationGeneration",
       "Annotations": {
         "Properties": {
@@ -1722,6 +1737,22 @@
         {
           "Name": "ce",
           "Method": "list_cost_category_definitions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListCostCategoryResourceAssociations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListCostCategoryResourceAssociations",
+          "Service": "ce"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ce",
+          "Method": "list_cost_category_resource_associations",
           "Package": "Boto3"
         }
       ]

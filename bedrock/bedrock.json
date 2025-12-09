@@ -1204,6 +1204,21 @@
       }
     },
     {
+      "Name": "DeleteEnforcedGuardrailConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteFlow",
       "Annotations": {
         "Properties": {
@@ -1504,6 +1519,12 @@
       "Resources": [
         {
           "Name": "custom-model"
+        },
+        {
+          "Name": "guardrail"
+        },
+        {
+          "Name": "guardrail-profile"
         }
       ],
       "SupportedBy": {
@@ -2637,6 +2658,12 @@
       "Resources": [
         {
           "Name": "custom-model"
+        },
+        {
+          "Name": "guardrail"
+        },
+        {
+          "Name": "guardrail-profile"
         }
       ],
       "SupportedBy": {
@@ -3299,6 +3326,21 @@
       }
     },
     {
+      "Name": "ListEnforcedGuardrailsConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListEvaluationJobs",
       "Annotations": {
         "Properties": {
@@ -3901,6 +3943,21 @@
       }
     },
     {
+      "Name": "PutEnforcedGuardrailConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "PutFoundationModelEntitlement",
       "Annotations": {
         "Properties": {
@@ -3967,6 +4024,12 @@
       "Resources": [
         {
           "Name": "custom-model"
+        },
+        {
+          "Name": "guardrail"
+        },
+        {
+          "Name": "guardrail-profile"
         }
       ],
       "SupportedBy": {
@@ -6118,6 +6181,12 @@
     },
     {
       "Name": "DeleteEnforcedGuardrailConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteEnforcedGuardrailConfiguration",
+          "Service": "bedrock"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock",
@@ -7784,6 +7853,12 @@
     },
     {
       "Name": "ListEnforcedGuardrailsConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "ListEnforcedGuardrailsConfiguration",
+          "Service": "bedrock"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock",
@@ -8318,6 +8393,12 @@
     },
     {
       "Name": "PutEnforcedGuardrailConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "PutEnforcedGuardrailConfiguration",
+          "Service": "bedrock"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock",
