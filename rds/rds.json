@@ -78,10 +78,16 @@
       },
       "Resources": [
         {
+          "Name": "auto-backup"
+        },
+        {
           "Name": "cev"
         },
         {
           "Name": "cluster"
+        },
+        {
+          "Name": "cluster-auto-backup"
         },
         {
           "Name": "cluster-endpoint"
@@ -2508,10 +2514,16 @@
       },
       "Resources": [
         {
+          "Name": "auto-backup"
+        },
+        {
           "Name": "cev"
         },
         {
           "Name": "cluster"
+        },
+        {
+          "Name": "cluster-auto-backup"
         },
         {
           "Name": "cluster-endpoint"
@@ -3326,10 +3338,16 @@
       },
       "Resources": [
         {
+          "Name": "auto-backup"
+        },
+        {
           "Name": "cev"
         },
         {
           "Name": "cluster"
+        },
+        {
+          "Name": "cluster-auto-backup"
         },
         {
           "Name": "cluster-endpoint"
@@ -3765,6 +3783,11 @@
     },
     {
       "Name": "StartDBInstanceAutomatedBackupsReplication",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "rds:req-tag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -7834,6 +7857,9 @@
       "Name": "auto-backup",
       "ARNFormats": [
         "arn:${Partition}:rds:${Region}:${Account}:auto-backup:${DbInstanceAutomatedBackupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -7859,6 +7885,9 @@
       "Name": "cluster-auto-backup",
       "ARNFormats": [
         "arn:${Partition}:rds:${Region}:${Account}:cluster-auto-backup:${DbClusterAutomatedBackupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
