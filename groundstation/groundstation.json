@@ -60,6 +60,25 @@
       }
     },
     {
+      "Name": "CreateDataflowEndpointGroupV2",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateEphemeris",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -824,6 +843,10 @@
     {
       "Name": "CreateDataflowEndpointGroupV2",
       "AuthorizedActions": [
+        {
+          "Name": "CreateDataflowEndpointGroupV2",
+          "Service": "groundstation"
+        },
         {
           "Name": "TagResource",
           "Service": "groundstation"

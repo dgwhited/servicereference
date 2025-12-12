@@ -22,6 +22,9 @@
     },
     {
       "Name": "DeleteIdentities",
+      "ActionConditionKeys": [
+        "cognito-identity:IdentityPoolArn"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -57,6 +60,9 @@
     },
     {
       "Name": "DescribeIdentity",
+      "ActionConditionKeys": [
+        "cognito-identity:IdentityPoolArn"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -92,6 +98,12 @@
     },
     {
       "Name": "GetCredentialsForIdentity",
+      "ActionConditionKeys": [
+        "cognito-identity-auth:AccountId",
+        "cognito-identity-auth:IdentityPoolArn",
+        "cognito-identity-unauth:AccountId",
+        "cognito-identity-unauth:IdentityPoolArn"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -107,6 +119,12 @@
     },
     {
       "Name": "GetId",
+      "ActionConditionKeys": [
+        "cognito-identity-auth:AccountId",
+        "cognito-identity-auth:IdentityPoolArn",
+        "cognito-identity-unauth:AccountId",
+        "cognito-identity-unauth:IdentityPoolArn"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -202,6 +220,12 @@
     },
     {
       "Name": "GetOpenIdToken",
+      "ActionConditionKeys": [
+        "cognito-identity-auth:AccountId",
+        "cognito-identity-auth:IdentityPoolArn",
+        "cognito-identity-unauth:AccountId",
+        "cognito-identity-unauth:IdentityPoolArn"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -426,6 +450,10 @@
     },
     {
       "Name": "UnlinkIdentity",
+      "ActionConditionKeys": [
+        "cognito-identity-auth:AccountId",
+        "cognito-identity-auth:IdentityPoolArn"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -500,6 +528,36 @@
       "Name": "aws:TagKeys",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "cognito-identity-auth:AccountId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "cognito-identity-auth:IdentityPoolArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "cognito-identity-unauth:AccountId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "cognito-identity-unauth:IdentityPoolArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "cognito-identity:IdentityPoolArn",
+      "Types": [
+        "ARN"
       ]
     }
   ],
