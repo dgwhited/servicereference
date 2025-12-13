@@ -4560,6 +4560,7 @@
           "Name": "PassRole",
           "Context": {
             "iam:PassedToService": [
+              "rds-preview.amazonaws.com",
               "rds.amazonaws.com"
             ]
           },
@@ -7054,6 +7055,10 @@
     {
       "Name": "PromoteReadReplica",
       "AuthorizedActions": [
+        {
+          "Name": "AddTagsToResource",
+          "Service": "rds"
+        },
         {
           "Name": "PromoteReadReplica",
           "Service": "rds"
