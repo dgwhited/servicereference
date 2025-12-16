@@ -107,6 +107,21 @@
       }
     },
     {
+      "Name": "GetQuotaUtilizationReport",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetRequestedServiceQuotaChange",
       "Annotations": {
         "Properties": {
@@ -304,6 +319,21 @@
     },
     {
       "Name": "StartAutoManagement",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "StartQuotaUtilizationReport",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -525,6 +555,22 @@
       ]
     },
     {
+      "Name": "GetQuotaUtilizationReport",
+      "AuthorizedActions": [
+        {
+          "Name": "GetQuotaUtilizationReport",
+          "Service": "servicequotas"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "service-quotas",
+          "Method": "get_quota_utilization_report",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetRequestedServiceQuotaChange",
       "AuthorizedActions": [
         {
@@ -728,6 +774,22 @@
         {
           "Name": "service-quotas",
           "Method": "start_auto_management",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartQuotaUtilizationReport",
+      "AuthorizedActions": [
+        {
+          "Name": "StartQuotaUtilizationReport",
+          "Service": "servicequotas"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "service-quotas",
+          "Method": "start_quota_utilization_report",
           "Package": "Boto3"
         }
       ]

@@ -3,6 +3,9 @@
   "Actions": [
     {
       "Name": "CompleteTransformationPackageUpload",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -38,6 +41,11 @@
     },
     {
       "Name": "CreateCampaign",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -58,6 +66,11 @@
     },
     {
       "Name": "CreateTransformationPackageUrl",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -78,6 +91,9 @@
     },
     {
       "Name": "DeleteCampaign",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -98,6 +114,9 @@
     },
     {
       "Name": "DeleteKnowledgeItem",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -118,6 +137,9 @@
     },
     {
       "Name": "DeleteTransformationPackage",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -138,6 +160,9 @@
     },
     {
       "Name": "ExecuteTransformation",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -158,6 +183,9 @@
     },
     {
       "Name": "GetCampaign",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -178,6 +206,9 @@
     },
     {
       "Name": "GetKnowledgeItem",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -198,6 +229,9 @@
     },
     {
       "Name": "GetTransformationPackageUrl",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -218,6 +252,9 @@
     },
     {
       "Name": "ListCampaignRepositories",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -226,6 +263,11 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -235,7 +277,7 @@
       "Name": "ListCampaigns",
       "Annotations": {
         "Properties": {
-          "IsList": false,
+          "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -250,7 +292,7 @@
       "Name": "ListKnowledgeItems",
       "Annotations": {
         "Properties": {
-          "IsList": false,
+          "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -280,7 +322,7 @@
       "Name": "ListTransformationPackageMetadata",
       "Annotations": {
         "Properties": {
-          "IsList": false,
+          "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -295,6 +337,7 @@
       "Name": "TagResource",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -305,6 +348,17 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "campaign"
+        },
+        {
+          "Name": "knowledge-item"
+        },
+        {
+          "Name": "package"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -323,6 +377,17 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "campaign"
+        },
+        {
+          "Name": "knowledge-item"
+        },
+        {
+          "Name": "package"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -330,6 +395,9 @@
     },
     {
       "Name": "UpdateCampaign",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -350,6 +418,9 @@
     },
     {
       "Name": "UpdateCampaignRepositoryStatus",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -370,6 +441,9 @@
     },
     {
       "Name": "UpdateKnowledgeItemConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -378,6 +452,11 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "package"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -385,6 +464,9 @@
     },
     {
       "Name": "UpdateKnowledgeItemStatus",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -429,24 +511,27 @@
       "Name": "campaign",
       "ARNFormats": [
         "arn:${Partition}:transform-custom:${Region}:${Account}:campaign/${Name}"
-      ]
-    },
-    {
-      "Name": "conversation",
-      "ARNFormats": [
-        "arn:${Partition}:transform-custom:${Region}:${Account}:conversation/${ConversationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "knowledge-item",
       "ARNFormats": [
         "arn:${Partition}:transform-custom:${Region}:${Account}:package/${TransformationPackageName}/knowledge-item/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "package",
       "ARNFormats": [
         "arn:${Partition}:transform-custom:${Region}:${Account}:package/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     }
   ],

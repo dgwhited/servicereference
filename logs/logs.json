@@ -2278,6 +2278,16 @@
       ]
     },
     {
+      "Name": "CancelImportTask",
+      "SDK": [
+        {
+          "Name": "logs",
+          "Method": "cancel_import_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateDelivery",
       "AuthorizedActions": [
         {
@@ -2309,6 +2319,27 @@
         {
           "Name": "logs",
           "Method": "create_export_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateImportTask",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "cloudtrail.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "logs",
+          "Method": "create_import_task",
           "Package": "Boto3"
         }
       ]
@@ -2842,6 +2873,26 @@
         {
           "Name": "logs",
           "Method": "describe_field_indexes",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeImportTaskBatches",
+      "SDK": [
+        {
+          "Name": "logs",
+          "Method": "describe_import_task_batches",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeImportTasks",
+      "SDK": [
+        {
+          "Name": "logs",
+          "Method": "describe_import_tasks",
           "Package": "Boto3"
         }
       ]

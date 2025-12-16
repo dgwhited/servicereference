@@ -2753,7 +2753,9 @@
       "Name": "StartAutomationExecution",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ssm:DocumentVersion"
       ],
       "Annotations": {
         "Properties": {
@@ -2768,6 +2770,9 @@
           "Name": "automation-definition"
         },
         {
+          "Name": "automation-execution"
+        },
+        {
           "Name": "document"
         }
       ],
@@ -2780,8 +2785,10 @@
       "Name": "StartChangeRequestExecution",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
-        "ssm:AutoApprove"
+        "ssm:AutoApprove",
+        "ssm:DocumentVersion"
       ],
       "Annotations": {
         "Properties": {
@@ -2794,6 +2801,9 @@
       "Resources": [
         {
           "Name": "automation-definition"
+        },
+        {
+          "Name": "automation-execution"
         },
         {
           "Name": "document"
@@ -3357,6 +3367,12 @@
       "Name": "ssm:DocumentType",
       "Types": [
         "String"
+      ]
+    },
+    {
+      "Name": "ssm:DocumentVersion",
+      "Types": [
+        "ArrayOfString"
       ]
     },
     {
@@ -5987,6 +6003,9 @@
       "Name": "automation-definition",
       "ARNFormats": [
         "arn:${Partition}:ssm:${Region}:${Account}:automation-definition/${AutomationDefinitionName}:${VersionId}"
+      ],
+      "ConditionKeys": [
+        "ssm:DocumentType"
       ]
     },
     {

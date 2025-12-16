@@ -2783,6 +2783,26 @@
       }
     },
     {
+      "Name": "GetIdentityContext",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetSessionEmbedUrl",
       "Annotations": {
         "Properties": {
@@ -7548,6 +7568,12 @@
     },
     {
       "Name": "GetIdentityContext",
+      "AuthorizedActions": [
+        {
+          "Name": "GetIdentityContext",
+          "Service": "quicksight"
+        }
+      ],
       "SDK": [
         {
           "Name": "quicksight",
