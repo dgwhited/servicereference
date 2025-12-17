@@ -263,6 +263,49 @@
       }
     },
     {
+      "Name": "RebootDbCluster",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "db-cluster"
+        },
+        {
+          "Name": "db-instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "RebootDbInstance",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "db-instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "TagResource",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -615,6 +658,36 @@
         {
           "Name": "timestream-influxdb",
           "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RebootDbCluster",
+      "AuthorizedActions": [
+        {
+          "Name": "RebootDbCluster",
+          "Service": "timestream-influxdb"
+        },
+        {
+          "Name": "RebootDbInstance",
+          "Service": "timestream-influxdb"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "timestream-influxdb",
+          "Method": "reboot_db_cluster",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RebootDbInstance",
+      "SDK": [
+        {
+          "Name": "timestream-influxdb",
+          "Method": "reboot_db_instance",
           "Package": "Boto3"
         }
       ]
