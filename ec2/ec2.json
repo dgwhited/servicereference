@@ -1298,6 +1298,33 @@
       }
     },
     {
+      "Name": "AttachApplianceToNatGateway",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "natgateway",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "AttachClassicLinkVpc",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -2799,6 +2826,14 @@
       },
       "Resources": [
         {
+          "Name": "natgateway",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:Vpc"
+          ]
+        },
+        {
           "Name": "network-interface",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
@@ -3149,6 +3184,49 @@
       }
     },
     {
+      "Name": "CreateInterruptibleCapacityReservationAllocation",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "capacity-reservation",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:AvailabilityZone",
+            "ec2:AvailabilityZoneId",
+            "ec2:CreateDate",
+            "ec2:EbsOptimized",
+            "ec2:EndDate",
+            "ec2:EndDateType",
+            "ec2:InstanceCount",
+            "ec2:InstanceMatchCriteria",
+            "ec2:InstancePlatform",
+            "ec2:InstanceType",
+            "ec2:InterruptibleCapacityReservationId",
+            "ec2:InterruptionType",
+            "ec2:IsInterruptible",
+            "ec2:SourceCapacityReservationId",
+            "ec2:TargetInstanceCount",
+            "ec2:Tenancy"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateIpam",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -3210,6 +3288,40 @@
       }
     },
     {
+      "Name": "CreateIpamPolicy",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ipam",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "ipam-policy",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateIpamPool",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -3241,6 +3353,81 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "CreateIpamPrefixListResolver",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ipam",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "ipam-prefix-list-resolver",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
+        {
+          "Name": "ipam-scope",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateIpamPrefixListResolverTarget",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ipam-prefix-list-resolver",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "ipam-prefix-list-resolver-target",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -3775,6 +3962,17 @@
             "ec2:SubnetID",
             "ec2:Vpc"
           ]
+        },
+        {
+          "Name": "vpc",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:Ipv4IpamPoolId",
+            "ec2:Ipv6IpamPoolId",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:Tenancy",
+            "ec2:VpcID"
+          ]
         }
       ],
       "SupportedBy": {
@@ -4066,6 +4264,35 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "CreateOdbNetworkPeering",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "vpc",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:Tenancy",
+            "ec2:VpcID"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -5034,7 +5261,34 @@
           ]
         },
         {
+          "Name": "ipam-policy",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
           "Name": "ipam-pool",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "ipam-prefix-list-resolver",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "ipam-prefix-list-resolver-target",
           "ConditionKeys": [
             "aws:RequestTag/${TagKey}",
             "aws:ResourceTag/${TagKey}",
@@ -5251,6 +5505,7 @@
             "aws:RequestTag/${TagKey}",
             "aws:ResourceTag/${TagKey}",
             "aws:TagKeys",
+            "ec2:IpamPrefixListResolverTargetId",
             "ec2:ResourceTag/${TagKey}"
           ]
         },
@@ -5456,6 +5711,16 @@
           ]
         },
         {
+          "Name": "transit-gateway-metering-policy",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:transitGatewayMeteringPolicyId"
+          ]
+        },
+        {
           "Name": "transit-gateway-multicast-domain",
           "ConditionKeys": [
             "aws:RequestTag/${TagKey}",
@@ -5591,6 +5856,15 @@
           ]
         },
         {
+          "Name": "vpc-encryption-control",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
           "Name": "vpc-endpoint",
           "ConditionKeys": [
             "aws:RequestTag/${TagKey}",
@@ -5648,6 +5922,15 @@
             "ec2:RequesterVpc",
             "ec2:ResourceTag/${TagKey}",
             "ec2:VpcPeeringConnectionID"
+          ]
+        },
+        {
+          "Name": "vpn-concentrator",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
           ]
         },
         {
@@ -5940,6 +6223,86 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "CreateTransitGatewayMeteringPolicy",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "transit-gateway",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:transitGatewayId"
+          ]
+        },
+        {
+          "Name": "transit-gateway-attachment",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:transitGatewayAttachmentId"
+          ]
+        },
+        {
+          "Name": "transit-gateway-metering-policy",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:transitGatewayMeteringPolicyId"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateTransitGatewayMeteringPolicyEntry",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "transit-gateway-attachment",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:transitGatewayAttachmentId"
+          ]
+        },
+        {
+          "Name": "transit-gateway-metering-policy",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:transitGatewayMeteringPolicyId"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -6563,6 +6926,42 @@
       }
     },
     {
+      "Name": "CreateVpcEncryptionControl",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "vpc",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:Tenancy",
+            "ec2:VpcID"
+          ]
+        },
+        {
+          "Name": "vpc-encryption-control",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateVpcEndpoint",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -6614,6 +7013,8 @@
             "aws:RequestTag/${TagKey}",
             "aws:TagKeys",
             "ec2:VpceMultiRegion",
+            "ec2:VpcePrivateDnsPreference",
+            "ec2:VpcePrivateDnsSpecifiedDomains",
             "ec2:VpceServiceName",
             "ec2:VpceServiceOwner",
             "ec2:VpceServiceRegion"
@@ -6731,6 +7132,41 @@
       }
     },
     {
+      "Name": "CreateVpnConcentrator",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "transit-gateway",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:transitGatewayId"
+          ]
+        },
+        {
+          "Name": "vpn-concentrator",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateVpnConnection",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -6765,6 +7201,13 @@
             "aws:ResourceTag/${TagKey}",
             "ec2:ResourceTag/${TagKey}",
             "ec2:transitGatewayAttachmentId"
+          ]
+        },
+        {
+          "Name": "vpn-concentrator",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
           ]
         },
         {
@@ -7401,6 +7844,33 @@
       }
     },
     {
+      "Name": "DeleteIpamPolicy",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ipam-policy",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteIpamPool",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -7425,6 +7895,60 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteIpamPrefixListResolver",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ipam-prefix-list-resolver",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteIpamPrefixListResolverTarget",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ipam-prefix-list-resolver-target",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -7780,6 +8304,7 @@
           "Name": "prefix-list",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
+            "ec2:IpamPrefixListResolverTargetId",
             "ec2:ResourceTag/${TagKey}"
           ]
         }
@@ -8044,6 +8569,35 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteOdbNetworkPeering",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "vpc",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:Tenancy",
+            "ec2:VpcID"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -8723,7 +9277,34 @@
           ]
         },
         {
+          "Name": "ipam-policy",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
           "Name": "ipam-pool",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "ipam-prefix-list-resolver",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "ipam-prefix-list-resolver-target",
           "ConditionKeys": [
             "aws:RequestTag/${TagKey}",
             "aws:ResourceTag/${TagKey}",
@@ -9110,6 +9691,15 @@
           ]
         },
         {
+          "Name": "transit-gateway-metering-policy",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
           "Name": "transit-gateway-multicast-domain",
           "ConditionKeys": [
             "aws:RequestTag/${TagKey}",
@@ -9227,6 +9817,15 @@
           ]
         },
         {
+          "Name": "vpc-encryption-control",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
           "Name": "vpc-endpoint",
           "ConditionKeys": [
             "aws:RequestTag/${TagKey}",
@@ -9273,6 +9872,15 @@
         },
         {
           "Name": "vpc-peering-connection",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "vpn-concentrator",
           "ConditionKeys": [
             "aws:RequestTag/${TagKey}",
             "aws:ResourceTag/${TagKey}",
@@ -9501,6 +10109,62 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteTransitGatewayMeteringPolicy",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "transit-gateway-metering-policy",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:transitGatewayMeteringPolicyId"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteTransitGatewayMeteringPolicyEntry",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "transit-gateway-metering-policy",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:transitGatewayMeteringPolicyId"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -9938,6 +10602,33 @@
       }
     },
     {
+      "Name": "DeleteVpcEncryptionControl",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "vpc-encryption-control",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteVpcEndpointConnectionNotifications",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -10060,6 +10751,33 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteVpnConcentrator",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "vpn-concentrator",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -10700,6 +11418,24 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DescribeCapacityReservationTopology",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -11619,6 +12355,42 @@
       }
     },
     {
+      "Name": "DescribeInstanceSqlHaHistoryStates",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeInstanceSqlHaStates",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeInstanceStatus",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -11763,6 +12535,24 @@
       }
     },
     {
+      "Name": "DescribeIpamPolicies",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeIpamPools",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -11778,6 +12568,42 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DescribeIpamPrefixListResolverTargets",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeIpamPrefixListResolvers",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -13105,6 +13931,24 @@
       }
     },
     {
+      "Name": "DescribeTransitGatewayMeteringPolicies",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeTransitGatewayMulticastDomains",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -13551,6 +14395,24 @@
       }
     },
     {
+      "Name": "DescribeVpcEncryptionControls",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeVpcEndpointAssociations",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -13724,6 +14586,24 @@
       }
     },
     {
+      "Name": "DescribeVpnConcentrators",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeVpnConnections",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -13757,6 +14637,33 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DetachApplianceFromNatGateway",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "natgateway",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -14323,6 +15230,48 @@
       }
     },
     {
+      "Name": "DisableInstanceSqlHaStandbyDetections",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:AvailabilityZone",
+            "ec2:AvailabilityZoneId",
+            "ec2:EbsOptimized",
+            "ec2:InstanceAutoRecovery",
+            "ec2:InstanceBandwidthWeighting",
+            "ec2:InstanceID",
+            "ec2:InstanceMarketType",
+            "ec2:InstanceMetadataTags",
+            "ec2:InstanceProfile",
+            "ec2:InstanceType",
+            "ec2:MetadataHttpEndpoint",
+            "ec2:MetadataHttpPutResponseHopLimit",
+            "ec2:MetadataHttpTokens",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:RootDeviceType",
+            "ec2:Tenancy"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DisableIpamOrganizationAdminAccount",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -14338,6 +15287,33 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DisableIpamPolicy",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ipam-policy",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -15524,6 +16500,48 @@
       }
     },
     {
+      "Name": "EnableInstanceSqlHaStandbyDetections",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:AvailabilityZone",
+            "ec2:AvailabilityZoneId",
+            "ec2:EbsOptimized",
+            "ec2:InstanceAutoRecovery",
+            "ec2:InstanceBandwidthWeighting",
+            "ec2:InstanceID",
+            "ec2:InstanceMarketType",
+            "ec2:InstanceMetadataTags",
+            "ec2:InstanceProfile",
+            "ec2:InstanceType",
+            "ec2:MetadataHttpEndpoint",
+            "ec2:MetadataHttpPutResponseHopLimit",
+            "ec2:MetadataHttpTokens",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:RootDeviceType",
+            "ec2:Tenancy"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "EnableIpamOrganizationAdminAccount",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -15539,6 +16557,33 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "EnableIpamPolicy",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ipam-policy",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -16351,6 +17396,24 @@
       }
     },
     {
+      "Name": "GetEnabledIpamPolicy",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetFlowLogsIntegrationTemplate",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -16420,6 +17483,38 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "GetImageAncestry",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "image",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ImageID",
+            "ec2:ImageType",
+            "ec2:Owner",
+            "ec2:Public",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:RootDeviceType"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -16676,6 +17771,60 @@
       }
     },
     {
+      "Name": "GetIpamPolicyAllocationRules",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ipam-policy",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetIpamPolicyOrganizationTargets",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ipam-policy",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetIpamPoolAllocations",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -16727,6 +17876,87 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "GetIpamPrefixListResolverRules",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ipam-prefix-list-resolver",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetIpamPrefixListResolverVersionEntries",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ipam-prefix-list-resolver",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetIpamPrefixListResolverVersions",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ipam-prefix-list-resolver",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -16827,6 +18057,7 @@
           "Name": "prefix-list",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
+            "ec2:IpamPrefixListResolverTargetId",
             "ec2:ResourceTag/${TagKey}"
           ]
         }
@@ -16854,6 +18085,7 @@
           "Name": "prefix-list",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
+            "ec2:IpamPrefixListResolverTargetId",
             "ec2:ResourceTag/${TagKey}"
           ]
         }
@@ -17247,6 +18479,34 @@
       }
     },
     {
+      "Name": "GetTransitGatewayMeteringPolicyEntries",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "transit-gateway-metering-policy",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:transitGatewayMeteringPolicyId"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetTransitGatewayMulticastDomainAssociations",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -17489,6 +18749,35 @@
       ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetVpcResourcesBlockingEncryptionEnforcement",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "vpc",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:Tenancy",
+            "ec2:VpcID"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
@@ -17902,6 +19191,24 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListVolumesInRecycleBin",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -18922,6 +20229,40 @@
       }
     },
     {
+      "Name": "ModifyIpamPolicyAllocationRules",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ipam-policy",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "ipam-pool",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ModifyIpamPool",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -18948,6 +20289,69 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ModifyIpamPrefixListResolver",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ipam-prefix-list-resolver",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:Attribute",
+            "ec2:Attribute/${AttributeName}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "ipam-scope",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ModifyIpamPrefixListResolverTarget",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ipam-prefix-list-resolver-target",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -19143,6 +20547,7 @@
             "aws:ResourceTag/${TagKey}",
             "ec2:Attribute",
             "ec2:Attribute/${AttributeName}",
+            "ec2:IpamPrefixListResolverTargetId",
             "ec2:ResourceTag/${TagKey}"
           ]
         }
@@ -19229,6 +20634,36 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ModifyOdbNetworkPeering",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "vpc",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:Attribute/${AttributeName}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:Tenancy",
+            "ec2:VpcID"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -19719,6 +21154,43 @@
       }
     },
     {
+      "Name": "ModifyTransitGatewayMeteringPolicy",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "transit-gateway-attachment",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:transitGatewayAttachmentId"
+          ]
+        },
+        {
+          "Name": "transit-gateway-metering-policy",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:Attribute/${AttributeName}",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:transitGatewayMeteringPolicyId"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ModifyTransitGatewayPrefixListReference",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -20188,6 +21660,34 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ModifyVpcEncryptionControl",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "vpc-encryption-control",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:Attribute/${AttributeName}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -22422,6 +23922,44 @@
       }
     },
     {
+      "Name": "RestoreVolumeFromRecycleBin",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "volume",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:AvailabilityZone",
+            "ec2:AvailabilityZoneId",
+            "ec2:Encrypted",
+            "ec2:ParentSnapshot",
+            "ec2:ParentVolume",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:VolumeID",
+            "ec2:VolumeInitializationRate",
+            "ec2:VolumeIops",
+            "ec2:VolumeSize",
+            "ec2:VolumeThroughput",
+            "ec2:VolumeType"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "RevokeClientVpnIngress",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -23372,6 +24910,49 @@
       }
     },
     {
+      "Name": "UpdateInterruptibleCapacityReservationAllocation",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "capacity-reservation",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:AvailabilityZone",
+            "ec2:AvailabilityZoneId",
+            "ec2:CreateDate",
+            "ec2:EbsOptimized",
+            "ec2:EndDate",
+            "ec2:EndDateType",
+            "ec2:InstanceCount",
+            "ec2:InstanceMatchCriteria",
+            "ec2:InstancePlatform",
+            "ec2:InstanceType",
+            "ec2:InterruptibleCapacityReservationId",
+            "ec2:InterruptionType",
+            "ec2:IsInterruptible",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:SourceCapacityReservationId",
+            "ec2:TargetInstanceCount",
+            "ec2:Tenancy"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateSecurityGroupRuleDescriptionsEgress",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -23567,6 +25148,12 @@
       "Name": "ec2:CloudwatchLogStreamArn",
       "Types": [
         "ARN"
+      ]
+    },
+    {
+      "Name": "ec2:CommitmentDuration",
+      "Types": [
+        "Numeric"
       ]
     },
     {
@@ -23774,6 +25361,24 @@
       ]
     },
     {
+      "Name": "ec2:InterruptibleCapacityReservationId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ec2:InterruptionType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ec2:IpamPrefixListResolverTargetId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "ec2:Ipv4IpamPoolId",
       "Types": [
         "String"
@@ -23783,6 +25388,12 @@
       "Name": "ec2:Ipv6IpamPoolId",
       "Types": [
         "String"
+      ]
+    },
+    {
+      "Name": "ec2:IsInterruptible",
+      "Types": [
+        "Bool"
       ]
     },
     {
@@ -24140,6 +25751,12 @@
       ]
     },
     {
+      "Name": "ec2:TargetInstanceCount",
+      "Types": [
+        "Numeric"
+      ]
+    },
+    {
       "Name": "ec2:Tenancy",
       "Types": [
         "String"
@@ -24206,6 +25823,18 @@
       ]
     },
     {
+      "Name": "ec2:VpcePrivateDnsPreference",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ec2:VpcePrivateDnsSpecifiedDomains",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
       "Name": "ec2:VpceServiceName",
       "Types": [
         "String"
@@ -24249,6 +25878,12 @@
     },
     {
       "Name": "ec2:transitGatewayId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "ec2:transitGatewayMeteringPolicyId",
       "Types": [
         "String"
       ]
@@ -25773,6 +27408,10 @@
       "Name": "CreateInterruptibleCapacityReservationAllocation",
       "AuthorizedActions": [
         {
+          "Name": "CreateInterruptibleCapacityReservationAllocation",
+          "Service": "ec2"
+        },
+        {
           "Name": "CreateTags",
           "Service": "ec2"
         }
@@ -25829,6 +27468,10 @@
       "Name": "CreateIpamPolicy",
       "AuthorizedActions": [
         {
+          "Name": "CreateIpamPolicy",
+          "Service": "ec2"
+        },
+        {
           "Name": "CreateTags",
           "Service": "ec2"
         }
@@ -25865,6 +27508,10 @@
       "Name": "CreateIpamPrefixListResolver",
       "AuthorizedActions": [
         {
+          "Name": "CreateIpamPrefixListResolver",
+          "Service": "ec2"
+        },
+        {
           "Name": "CreateTags",
           "Service": "ec2"
         }
@@ -25880,6 +27527,10 @@
     {
       "Name": "CreateIpamPrefixListResolverTarget",
       "AuthorizedActions": [
+        {
+          "Name": "CreateIpamPrefixListResolverTarget",
+          "Service": "ec2"
+        },
         {
           "Name": "CreateTags",
           "Service": "ec2"
@@ -26772,6 +28423,10 @@
         {
           "Name": "CreateTags",
           "Service": "ec2"
+        },
+        {
+          "Name": "CreateTransitGatewayMeteringPolicy",
+          "Service": "ec2"
         }
       ],
       "SDK": [
@@ -26784,6 +28439,12 @@
     },
     {
       "Name": "CreateTransitGatewayMeteringPolicyEntry",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateTransitGatewayMeteringPolicyEntry",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -27086,6 +28747,10 @@
         {
           "Name": "CreateTags",
           "Service": "ec2"
+        },
+        {
+          "Name": "CreateVpcEncryptionControl",
+          "Service": "ec2"
         }
       ],
       "SDK": [
@@ -27177,6 +28842,10 @@
       "AuthorizedActions": [
         {
           "Name": "CreateTags",
+          "Service": "ec2"
+        },
+        {
+          "Name": "CreateVpnConcentrator",
           "Service": "ec2"
         }
       ],
@@ -27534,6 +29203,12 @@
     },
     {
       "Name": "DeleteIpamPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteIpamPolicy",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -27560,6 +29235,12 @@
     },
     {
       "Name": "DeleteIpamPrefixListResolver",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteIpamPrefixListResolver",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -27570,6 +29251,12 @@
     },
     {
       "Name": "DeleteIpamPrefixListResolverTarget",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteIpamPrefixListResolverTarget",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -28252,6 +29939,12 @@
     },
     {
       "Name": "DeleteTransitGatewayMeteringPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteTransitGatewayMeteringPolicy",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -28262,6 +29955,12 @@
     },
     {
       "Name": "DeleteTransitGatewayMeteringPolicyEntry",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteTransitGatewayMeteringPolicyEntry",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -28512,6 +30211,12 @@
     },
     {
       "Name": "DeleteVpcEncryptionControl",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteVpcEncryptionControl",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -28586,6 +30291,12 @@
     },
     {
       "Name": "DeleteVpnConcentrator",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteVpnConcentrator",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -29044,6 +30755,12 @@
     },
     {
       "Name": "DescribeCapacityReservationTopology",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeCapacityReservationTopology",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -29752,6 +31469,12 @@
     },
     {
       "Name": "DescribeInstanceSqlHaHistoryStates",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeInstanceSqlHaHistoryStates",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -29762,6 +31485,12 @@
     },
     {
       "Name": "DescribeInstanceSqlHaStates",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeInstanceSqlHaStates",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -29900,6 +31629,12 @@
     },
     {
       "Name": "DescribeIpamPolicies",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeIpamPolicies",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -29926,6 +31661,12 @@
     },
     {
       "Name": "DescribeIpamPrefixListResolverTargets",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeIpamPrefixListResolverTargets",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -29936,6 +31677,12 @@
     },
     {
       "Name": "DescribeIpamPrefixListResolvers",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeIpamPrefixListResolvers",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -31060,6 +32807,12 @@
     },
     {
       "Name": "DescribeTransitGatewayMeteringPolicies",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeTransitGatewayMeteringPolicies",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -31422,6 +33175,12 @@
     },
     {
       "Name": "DescribeVpcEncryptionControls",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeVpcEncryptionControls",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -31576,6 +33335,12 @@
     },
     {
       "Name": "DescribeVpnConcentrators",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeVpnConcentrators",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -31890,6 +33655,12 @@
     },
     {
       "Name": "DisableInstanceSqlHaStandbyDetections",
+      "AuthorizedActions": [
+        {
+          "Name": "DisableInstanceSqlHaStandbyDetections",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -31916,6 +33687,12 @@
     },
     {
       "Name": "DisableIpamPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "DisableIpamPolicy",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -32502,6 +34279,12 @@
     },
     {
       "Name": "EnableInstanceSqlHaStandbyDetections",
+      "AuthorizedActions": [
+        {
+          "Name": "EnableInstanceSqlHaStandbyDetections",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -32528,6 +34311,12 @@
     },
     {
       "Name": "EnableIpamPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "EnableIpamPolicy",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -33016,6 +34805,12 @@
     },
     {
       "Name": "GetEnabledIpamPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "GetEnabledIpamPolicy",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -33074,6 +34869,12 @@
     },
     {
       "Name": "GetImageAncestry",
+      "AuthorizedActions": [
+        {
+          "Name": "GetImageAncestry",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -33228,6 +35029,12 @@
     },
     {
       "Name": "GetIpamPolicyAllocationRules",
+      "AuthorizedActions": [
+        {
+          "Name": "GetIpamPolicyAllocationRules",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -33238,6 +35045,12 @@
     },
     {
       "Name": "GetIpamPolicyOrganizationTargets",
+      "AuthorizedActions": [
+        {
+          "Name": "GetIpamPolicyOrganizationTargets",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -33280,6 +35093,12 @@
     },
     {
       "Name": "GetIpamPrefixListResolverRules",
+      "AuthorizedActions": [
+        {
+          "Name": "GetIpamPrefixListResolverRules",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -33290,6 +35109,12 @@
     },
     {
       "Name": "GetIpamPrefixListResolverVersionEntries",
+      "AuthorizedActions": [
+        {
+          "Name": "GetIpamPrefixListResolverVersionEntries",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -33300,6 +35125,12 @@
     },
     {
       "Name": "GetIpamPrefixListResolverVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "GetIpamPrefixListResolverVersions",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -33582,6 +35413,12 @@
     },
     {
       "Name": "GetTransitGatewayMeteringPolicyEntries",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTransitGatewayMeteringPolicyEntries",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -33736,6 +35573,12 @@
     },
     {
       "Name": "GetVpcResourcesBlockingEncryptionEnforcement",
+      "AuthorizedActions": [
+        {
+          "Name": "GetVpcResourcesBlockingEncryptionEnforcement",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -33934,6 +35777,12 @@
     },
     {
       "Name": "ListVolumesInRecycleBin",
+      "AuthorizedActions": [
+        {
+          "Name": "ListVolumesInRecycleBin",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -34376,6 +36225,12 @@
     },
     {
       "Name": "ModifyIpamPolicyAllocationRules",
+      "AuthorizedActions": [
+        {
+          "Name": "ModifyIpamPolicyAllocationRules",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -34402,6 +36257,12 @@
     },
     {
       "Name": "ModifyIpamPrefixListResolver",
+      "AuthorizedActions": [
+        {
+          "Name": "ModifyIpamPrefixListResolver",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -34412,6 +36273,12 @@
     },
     {
       "Name": "ModifyIpamPrefixListResolverTarget",
+      "AuthorizedActions": [
+        {
+          "Name": "ModifyIpamPrefixListResolverTarget",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -34742,6 +36609,12 @@
     },
     {
       "Name": "ModifyTransitGatewayMeteringPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "ModifyTransitGatewayMeteringPolicy",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -34976,6 +36849,12 @@
     },
     {
       "Name": "ModifyVpcEncryptionControl",
+      "AuthorizedActions": [
+        {
+          "Name": "ModifyVpcEncryptionControl",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -35997,6 +37876,12 @@
     },
     {
       "Name": "RestoreVolumeFromRecycleBin",
+      "AuthorizedActions": [
+        {
+          "Name": "RestoreVolumeFromRecycleBin",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -36396,6 +38281,12 @@
     },
     {
       "Name": "UpdateInterruptibleCapacityReservationAllocation",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateInterruptibleCapacityReservationAllocation",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -36498,6 +38389,7 @@
         "ec2:AvailabilityZone",
         "ec2:AvailabilityZoneId",
         "ec2:CapacityReservationFleet",
+        "ec2:CommitmentDuration",
         "ec2:CreateDate",
         "ec2:DestinationCapacityReservationId",
         "ec2:EbsOptimized",
@@ -36508,6 +38400,9 @@
         "ec2:InstanceMatchCriteria",
         "ec2:InstancePlatform",
         "ec2:InstanceType",
+        "ec2:InterruptibleCapacityReservationId",
+        "ec2:InterruptionType",
+        "ec2:IsInterruptible",
         "ec2:IsLaunchTemplateResource",
         "ec2:LaunchTemplate",
         "ec2:OutpostArn",
@@ -36515,6 +38410,7 @@
         "ec2:Region",
         "ec2:ResourceTag/${TagKey}",
         "ec2:SourceCapacityReservationId",
+        "ec2:TargetInstanceCount",
         "ec2:Tenancy"
       ]
     },
@@ -36954,9 +38850,54 @@
       ]
     },
     {
+      "Name": "ipam-policy",
+      "ARNFormats": [
+        "arn:${Partition}:ec2::${Account}:ipam-policy/${IpamPolicyId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ec2:Attribute",
+        "ec2:Attribute/${AttributeName}",
+        "ec2:Region",
+        "ec2:ResourceTag/${TagKey}"
+      ]
+    },
+    {
       "Name": "ipam-pool",
       "ARNFormats": [
         "arn:${Partition}:ec2::${Account}:ipam-pool/${IpamPoolId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ec2:Attribute",
+        "ec2:Attribute/${AttributeName}",
+        "ec2:Region",
+        "ec2:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ipam-prefix-list-resolver",
+      "ARNFormats": [
+        "arn:${Partition}:ec2::${Account}:ipam-prefix-list-resolver/${IpamPrefixListResolverId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ec2:Attribute",
+        "ec2:Attribute/${AttributeName}",
+        "ec2:Region",
+        "ec2:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ipam-prefix-list-resolver-target",
+      "ARNFormats": [
+        "arn:${Partition}:ec2::${Account}:ipam-prefix-list-resolver-target/${IpamPrefixListResolverTargetId}"
       ],
       "ConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -37180,7 +39121,8 @@
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "ec2:Region",
-        "ec2:ResourceTag/${TagKey}"
+        "ec2:ResourceTag/${TagKey}",
+        "ec2:Vpc"
       ]
     },
     {
@@ -37317,6 +39259,7 @@
         "aws:TagKeys",
         "ec2:Attribute",
         "ec2:Attribute/${AttributeName}",
+        "ec2:IpamPrefixListResolverTargetId",
         "ec2:Region",
         "ec2:ResourceTag/${TagKey}"
       ]
@@ -37650,6 +39593,21 @@
       ]
     },
     {
+      "Name": "transit-gateway-metering-policy",
+      "ARNFormats": [
+        "arn:${Partition}:ec2:${Region}:${Account}:transit-gateway-metering-policy/${TransitGatewayMeteringPolicyId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ec2:Attribute/${AttributeName}",
+        "ec2:Region",
+        "ec2:ResourceTag/${TagKey}",
+        "ec2:transitGatewayMeteringPolicyId"
+      ]
+    },
+    {
       "Name": "transit-gateway-multicast-domain",
       "ARNFormats": [
         "arn:${Partition}:ec2:${Region}:${Account}:transit-gateway-multicast-domain/${TransitGatewayMulticastDomainId}"
@@ -37857,6 +39815,20 @@
       ]
     },
     {
+      "Name": "vpc-encryption-control",
+      "ARNFormats": [
+        "arn:${Partition}:ec2:${Region}:${Account}:vpc-encryption-control/${VpcEncryptionControlId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ec2:Attribute/${AttributeName}",
+        "ec2:Region",
+        "ec2:ResourceTag/${TagKey}"
+      ]
+    },
+    {
       "Name": "vpc-endpoint",
       "ARNFormats": [
         "arn:${Partition}:ec2:${Region}:${Account}:vpc-endpoint/${VpcEndpointId}"
@@ -37870,6 +39842,8 @@
         "ec2:Region",
         "ec2:ResourceTag/${TagKey}",
         "ec2:VpceMultiRegion",
+        "ec2:VpcePrivateDnsPreference",
+        "ec2:VpcePrivateDnsSpecifiedDomains",
         "ec2:VpceServiceName",
         "ec2:VpceServiceOwner",
         "ec2:VpceServiceRegion"
@@ -37949,6 +39923,19 @@
         "ec2:RequesterVpc",
         "ec2:ResourceTag/${TagKey}",
         "ec2:VpcPeeringConnectionID"
+      ]
+    },
+    {
+      "Name": "vpn-concentrator",
+      "ARNFormats": [
+        "arn:${Partition}:ec2:${Region}:${Account}:vpn-concentrator/${VpnConcentratorId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ec2:Region",
+        "ec2:ResourceTag/${TagKey}"
       ]
     },
     {
