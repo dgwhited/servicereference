@@ -2,6 +2,29 @@
   "Name": "payment-cryptography",
   "Actions": [
     {
+      "Name": "AddKeyReplicationRegions",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "alias"
+        },
+        {
+          "Name": "key"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateAlias",
       "Annotations": {
         "Properties": {
@@ -105,6 +128,36 @@
           "Name": "key"
         }
       ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DisableDefaultKeyReplicationRegions",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "EnableDefaultKeyReplicationRegions",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -273,6 +326,44 @@
       }
     },
     {
+      "Name": "GetCertificateSigningRequest",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "alias"
+        },
+        {
+          "Name": "key"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetDefaultKeyReplicationRegions",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetKey",
       "Annotations": {
         "Properties": {
@@ -435,6 +526,29 @@
       }
     },
     {
+      "Name": "RemoveKeyReplicationRegions",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "alias"
+        },
+        {
+          "Name": "key"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "RestoreKey",
       "Annotations": {
         "Properties": {
@@ -509,6 +623,29 @@
         }
       },
       "Resources": [
+        {
+          "Name": "key"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "TranslateKeyMaterial",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "alias"
+        },
         {
           "Name": "key"
         }
@@ -755,6 +892,12 @@
   "Operations": [
     {
       "Name": "AddKeyReplicationRegions",
+      "AuthorizedActions": [
+        {
+          "Name": "AddKeyReplicationRegions",
+          "Service": "payment-cryptography"
+        }
+      ],
       "SDK": [
         {
           "Name": "payment-cryptography",
@@ -853,6 +996,12 @@
     },
     {
       "Name": "EnableDefaultKeyReplicationRegions",
+      "AuthorizedActions": [
+        {
+          "Name": "EnableDefaultKeyReplicationRegions",
+          "Service": "payment-cryptography"
+        }
+      ],
       "SDK": [
         {
           "Name": "payment-cryptography",
@@ -955,6 +1104,12 @@
     },
     {
       "Name": "GetCertificateSigningRequest",
+      "AuthorizedActions": [
+        {
+          "Name": "GetCertificateSigningRequest",
+          "Service": "payment-cryptography"
+        }
+      ],
       "SDK": [
         {
           "Name": "payment-cryptography",
@@ -965,6 +1120,12 @@
     },
     {
       "Name": "GetDefaultKeyReplicationRegions",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDefaultKeyReplicationRegions",
+          "Service": "payment-cryptography"
+        }
+      ],
       "SDK": [
         {
           "Name": "payment-cryptography",
@@ -1117,6 +1278,12 @@
     },
     {
       "Name": "RemoveKeyReplicationRegions",
+      "AuthorizedActions": [
+        {
+          "Name": "RemoveKeyReplicationRegions",
+          "Service": "payment-cryptography"
+        }
+      ],
       "SDK": [
         {
           "Name": "payment-cryptography",

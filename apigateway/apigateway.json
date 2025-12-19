@@ -45,6 +45,107 @@
       }
     },
     {
+      "Name": "CreatePortal",
+      "ActionConditionKeys": [
+        "apigateway:Request/CognitoUserPoolArn",
+        "apigateway:Request/PortalDisplayName",
+        "apigateway:Request/PortalDomainName",
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Portal"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreatePortalProduct",
+      "ActionConditionKeys": [
+        "apigateway:Request/PortalProductDisplayName",
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "PortalProduct"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateProductPage",
+      "ActionConditionKeys": [
+        "apigateway:Request/ProductPageTitle"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProductPage"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateProductRestEndpointPage",
+      "ActionConditionKeys": [
+        "apigateway:Request/Method",
+        "apigateway:Request/ProductRestEndpointPageEndpointPrefix",
+        "apigateway:Request/RestApiId",
+        "apigateway:Request/Stage"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProductRestEndpointPage"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateRoutingRule",
       "ActionConditionKeys": [
         "apigateway:Request/ConditionBasePaths",
@@ -200,6 +301,109 @@
       }
     },
     {
+      "Name": "DeletePortal",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Portal"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeletePortalProduct",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "PortalProduct"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeletePortalProductSharingPolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "PortalProduct"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteProductPage",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProductPage"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteProductRestEndpointPage",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "PortalProduct"
+        },
+        {
+          "Name": "ProductRestEndpointPage"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteRoutingRule",
       "ActionConditionKeys": [
         "apigateway:Resource/ConditionBasePaths",
@@ -221,6 +425,26 @@
             "apigateway:Resource/ConditionBasePaths",
             "apigateway:Resource/Priority"
           ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DisablePortal",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Portal"
         }
       ],
       "SupportedBy": {
@@ -432,6 +656,112 @@
       }
     },
     {
+      "Name": "GetPortal",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Portal"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetPortalProduct",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "PortalProduct"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetPortalProductSharingPolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "PortalProduct"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetProductPage",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "PortalProduct"
+        },
+        {
+          "Name": "ProductPage"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetProductRestEndpointPage",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "PortalProduct"
+        },
+        {
+          "Name": "ProductRestEndpointPage"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetRoutingRule",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -447,6 +777,92 @@
       "Resources": [
         {
           "Name": "RoutingRule"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListPortalProducts",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "PortalProduct"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListPortals",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Portal"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListProductPages",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "PortalProduct"
+        },
+        {
+          "Name": "ProductPage"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListProductRestEndpointPages",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "PortalProduct"
+        },
+        {
+          "Name": "ProductRestEndpointPage"
         }
       ],
       "SupportedBy": {
@@ -736,6 +1152,66 @@
       }
     },
     {
+      "Name": "PreviewPortal",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Portal"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "PublishPortal",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Portal"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "PutPortalProductSharingPolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "PortalProduct"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "RejectAccessAssociation",
       "Annotations": {
         "Properties": {
@@ -845,6 +1321,104 @@
       }
     },
     {
+      "Name": "UpdatePortal",
+      "ActionConditionKeys": [
+        "apigateway:Request/CognitoUserPoolArn",
+        "apigateway:Request/PortalDisplayName",
+        "apigateway:Request/PortalDomainName",
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Portal"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdatePortalProduct",
+      "ActionConditionKeys": [
+        "apigateway:Request/PortalProductDisplayName",
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "PortalProduct"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateProductPage",
+      "ActionConditionKeys": [
+        "apigateway:Request/ProductPageTitle"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProductPage"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateProductRestEndpointPage",
+      "ActionConditionKeys": [
+        "apigateway:Request/ProductRestEndpointPageEndpointPrefix"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProductRestEndpointPage"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateRestApiPolicy",
       "Annotations": {
         "Properties": {
@@ -945,6 +1519,12 @@
       ]
     },
     {
+      "Name": "apigateway:Request/CognitoUserPoolArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
       "Name": "apigateway:Request/CognitoUserPoolProviderArn",
       "Types": [
         "ARN"
@@ -975,6 +1555,12 @@
       ]
     },
     {
+      "Name": "apigateway:Request/Method",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "apigateway:Request/MtlsTrustStoreUri",
       "Types": [
         "String"
@@ -987,9 +1573,45 @@
       ]
     },
     {
+      "Name": "apigateway:Request/PortalDisplayName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "apigateway:Request/PortalDomainName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "apigateway:Request/PortalProductDisplayName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "apigateway:Request/Priority",
       "Types": [
         "Numeric"
+      ]
+    },
+    {
+      "Name": "apigateway:Request/ProductPageTitle",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "apigateway:Request/ProductRestEndpointPageEndpointPrefix",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "apigateway:Request/RestApiId",
+      "Types": [
+        "String"
       ]
     },
     {
@@ -1008,6 +1630,12 @@
       "Name": "apigateway:Request/SecurityPolicy",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "apigateway:Request/Stage",
+      "Types": [
+        "String"
       ]
     },
     {
@@ -1053,6 +1681,12 @@
       ]
     },
     {
+      "Name": "apigateway:Resource/CognitoUserPoolArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
       "Name": "apigateway:Resource/CognitoUserPoolProviderArn",
       "Types": [
         "ARN"
@@ -1077,6 +1711,12 @@
       ]
     },
     {
+      "Name": "apigateway:Resource/Method",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "apigateway:Resource/MtlsTrustStoreUri",
       "Types": [
         "String"
@@ -1089,9 +1729,51 @@
       ]
     },
     {
+      "Name": "apigateway:Resource/PortalDisplayName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "apigateway:Resource/PortalDomainName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "apigateway:Resource/PortalProductDisplayName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "apigateway:Resource/PortalPublishStatus",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "apigateway:Resource/Priority",
       "Types": [
         "Numeric"
+      ]
+    },
+    {
+      "Name": "apigateway:Resource/ProductPageTitle",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "apigateway:Resource/ProductRestEndpointPageEndpointPrefix",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "apigateway:Resource/RestApiId",
+      "Types": [
+        "String"
       ]
     },
     {
@@ -1110,6 +1792,12 @@
       "Name": "apigateway:Resource/SecurityPolicy",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "apigateway:Resource/Stage",
+      "Types": [
+        "String"
       ]
     },
     {
@@ -1411,6 +2099,14 @@
       "Name": "CreatePortal",
       "AuthorizedActions": [
         {
+          "Name": "CreatePortal",
+          "Service": "apigateway"
+        },
+        {
+          "Name": "GetPortalProduct",
+          "Service": "apigateway"
+        },
+        {
           "Name": "POST",
           "Service": "apigateway"
         }
@@ -1425,6 +2121,12 @@
     },
     {
       "Name": "CreatePortalProduct",
+      "AuthorizedActions": [
+        {
+          "Name": "CreatePortalProduct",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -1435,6 +2137,12 @@
     },
     {
       "Name": "CreateProductPage",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateProductPage",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -1445,6 +2153,12 @@
     },
     {
       "Name": "CreateProductRestEndpointPage",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateProductRestEndpointPage",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -1979,6 +2693,12 @@
     },
     {
       "Name": "DeletePortal",
+      "AuthorizedActions": [
+        {
+          "Name": "DeletePortal",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -1989,6 +2709,12 @@
     },
     {
       "Name": "DeletePortalProduct",
+      "AuthorizedActions": [
+        {
+          "Name": "DeletePortalProduct",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -1999,6 +2725,12 @@
     },
     {
       "Name": "DeletePortalProductSharingPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "DeletePortalProductSharingPolicy",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -2009,6 +2741,12 @@
     },
     {
       "Name": "DeleteProductPage",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteProductPage",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -2019,6 +2757,12 @@
     },
     {
       "Name": "DeleteProductRestEndpointPage",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteProductRestEndpointPage",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -2231,6 +2975,12 @@
     },
     {
       "Name": "DisablePortal",
+      "AuthorizedActions": [
+        {
+          "Name": "DisablePortal",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -2908,6 +3658,12 @@
     },
     {
       "Name": "GetPortal",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPortal",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -2918,6 +3674,12 @@
     },
     {
       "Name": "GetPortalProduct",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPortalProduct",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -2928,6 +3690,12 @@
     },
     {
       "Name": "GetPortalProductSharingPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPortalProductSharingPolicy",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -2938,6 +3706,12 @@
     },
     {
       "Name": "GetProductPage",
+      "AuthorizedActions": [
+        {
+          "Name": "GetProductPage",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -2948,6 +3722,12 @@
     },
     {
       "Name": "GetProductRestEndpointPage",
+      "AuthorizedActions": [
+        {
+          "Name": "GetProductRestEndpointPage",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -3457,6 +4237,12 @@
     },
     {
       "Name": "ListPortalProducts",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPortalProducts",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -3467,6 +4253,12 @@
     },
     {
       "Name": "ListPortals",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPortals",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -3477,6 +4269,12 @@
     },
     {
       "Name": "ListProductPages",
+      "AuthorizedActions": [
+        {
+          "Name": "ListProductPages",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -3487,6 +4285,12 @@
     },
     {
       "Name": "ListProductRestEndpointPages",
+      "AuthorizedActions": [
+        {
+          "Name": "ListProductRestEndpointPages",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -3513,6 +4317,16 @@
     },
     {
       "Name": "PreviewPortal",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPortalProduct",
+          "Service": "apigateway"
+        },
+        {
+          "Name": "PreviewPortal",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -3523,6 +4337,16 @@
     },
     {
       "Name": "PublishPortal",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPortalProduct",
+          "Service": "apigateway"
+        },
+        {
+          "Name": "PublishPortal",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -3622,6 +4446,12 @@
     },
     {
       "Name": "PutPortalProductSharingPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "PutPortalProductSharingPolicy",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -4165,6 +4995,16 @@
     },
     {
       "Name": "UpdatePortal",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPortalProduct",
+          "Service": "apigateway"
+        },
+        {
+          "Name": "UpdatePortal",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -4175,6 +5015,12 @@
     },
     {
       "Name": "UpdatePortalProduct",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdatePortalProduct",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -4185,6 +5031,12 @@
     },
     {
       "Name": "UpdateProductPage",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateProductPage",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -4195,6 +5047,12 @@
     },
     {
       "Name": "UpdateProductRestEndpointPage",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateProductRestEndpointPage",
+          "Service": "apigateway"
+        }
+      ],
       "SDK": [
         {
           "Name": "apigatewayv2",
@@ -4759,6 +5617,29 @@
       ]
     },
     {
+      "Name": "Portal",
+      "ARNFormats": [
+        "arn:${Partition}:apigateway:${Region}:${Account}:/portals/${PortalId}"
+      ],
+      "ConditionKeys": [
+        "apigateway:Resource/CognitoUserPoolArn",
+        "apigateway:Resource/PortalDisplayName",
+        "apigateway:Resource/PortalDomainName",
+        "apigateway:Resource/PortalPublishStatus",
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "PortalProduct",
+      "ARNFormats": [
+        "arn:${Partition}:apigateway:${Region}:${Account}:/portalproducts/${PortalProductId}"
+      ],
+      "ConditionKeys": [
+        "apigateway:Resource/PortalProductDisplayName",
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
       "Name": "PrivateBasePathMapping",
       "ARNFormats": [
         "arn:${Partition}:apigateway:${Region}::/domainnames/${DomainName}+${DomainIdentifier}/basepathmappings/${BasePath}"
@@ -4785,6 +5666,29 @@
         "apigateway:Request/EndpointType",
         "apigateway:Resource/EndpointType",
         "apigateway:Resource/RoutingMode",
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ProductPage",
+      "ARNFormats": [
+        "arn:${Partition}:apigateway:${Region}:${Account}:/portalproducts/${PortalProductId}/productpages/${ProductPageId}"
+      ],
+      "ConditionKeys": [
+        "apigateway:Resource/ProductPageTitle",
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ProductRestEndpointPage",
+      "ARNFormats": [
+        "arn:${Partition}:apigateway:${Region}:${Account}:/portalproducts/${PortalProductId}/productrestendpointpages/${ProductRestEndpointPageId}"
+      ],
+      "ConditionKeys": [
+        "apigateway:Resource/Method",
+        "apigateway:Resource/ProductRestEndpointPageEndpointPrefix",
+        "apigateway:Resource/RestApiId",
+        "apigateway:Resource/Stage",
         "aws:ResourceTag/${TagKey}"
       ]
     },
