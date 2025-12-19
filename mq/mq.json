@@ -885,6 +885,15 @@
       "Name": "UpdateBroker",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "mq.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "UpdateBroker",
           "Service": "mq"
         },
