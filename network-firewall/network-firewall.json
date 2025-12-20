@@ -85,6 +85,29 @@
       }
     },
     {
+      "Name": "AttachRuleGroupsToProxyConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProxyConfiguration"
+        },
+        {
+          "Name": "ProxyRuleGroup"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateFirewall",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -137,6 +160,104 @@
         },
         {
           "Name": "TLSInspectionConfiguration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateProxy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Proxy"
+        },
+        {
+          "Name": "ProxyConfiguration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateProxyConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProxyConfiguration"
+        },
+        {
+          "Name": "ProxyRuleGroup"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateProxyRuleGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProxyRuleGroup"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateProxyRules",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProxyRuleGroup"
         }
       ],
       "SupportedBy": {
@@ -275,6 +396,86 @@
       "Resources": [
         {
           "Name": "Firewall"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteProxy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Proxy"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteProxyConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProxyConfiguration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteProxyRuleGroup",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProxyRuleGroup"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteProxyRules",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProxyRuleGroup"
         }
       ],
       "SupportedBy": {
@@ -484,6 +685,86 @@
       }
     },
     {
+      "Name": "DescribeProxy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Proxy"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeProxyConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProxyConfiguration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeProxyRule",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProxyRuleGroup"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeProxyRuleGroup",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProxyRuleGroup"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeResourcePolicy",
       "Annotations": {
         "Properties": {
@@ -614,6 +895,29 @@
       "Resources": [
         {
           "Name": "VpcEndpointAssociation"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DetachRuleGroupsFromProxyConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProxyConfiguration"
+        },
+        {
+          "Name": "ProxyRuleGroup"
         }
       ],
       "SupportedBy": {
@@ -774,6 +1078,66 @@
       "Resources": [
         {
           "Name": "Firewall"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListProxies",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Proxy"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListProxyConfigurations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProxyConfiguration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListProxyRuleGroups",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProxyRuleGroup"
         }
       ],
       "SupportedBy": {
@@ -1227,6 +1591,106 @@
       }
     },
     {
+      "Name": "UpdateProxy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Proxy"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateProxyConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProxyConfiguration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateProxyRule",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProxyRuleGroup"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateProxyRuleGroupPriorities",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProxyConfiguration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateProxyRulePriorities",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ProxyRuleGroup"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateRuleGroup",
       "Annotations": {
         "Properties": {
@@ -1377,6 +1841,12 @@
     },
     {
       "Name": "AttachRuleGroupsToProxyConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "AttachRuleGroupsToProxyConfiguration",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -1441,6 +1911,10 @@
       "Name": "CreateProxy",
       "AuthorizedActions": [
         {
+          "Name": "CreateProxy",
+          "Service": "network-firewall"
+        },
+        {
           "Name": "TagResource",
           "Service": "network-firewall"
         }
@@ -1456,6 +1930,14 @@
     {
       "Name": "CreateProxyConfiguration",
       "AuthorizedActions": [
+        {
+          "Name": "AttachRuleGroupsToProxyConfiguration",
+          "Service": "network-firewall"
+        },
+        {
+          "Name": "CreateProxyConfiguration",
+          "Service": "network-firewall"
+        },
         {
           "Name": "TagResource",
           "Service": "network-firewall"
@@ -1473,6 +1955,10 @@
       "Name": "CreateProxyRuleGroup",
       "AuthorizedActions": [
         {
+          "Name": "CreateProxyRuleGroup",
+          "Service": "network-firewall"
+        },
+        {
           "Name": "TagResource",
           "Service": "network-firewall"
         }
@@ -1487,6 +1973,12 @@
     },
     {
       "Name": "CreateProxyRules",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateProxyRules",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -1609,6 +2101,12 @@
     },
     {
       "Name": "DeleteProxy",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteProxy",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -1619,6 +2117,12 @@
     },
     {
       "Name": "DeleteProxyConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteProxyConfiguration",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -1629,6 +2133,12 @@
     },
     {
       "Name": "DeleteProxyRuleGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteProxyRuleGroup",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -1639,6 +2149,12 @@
     },
     {
       "Name": "DeleteProxyRules",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteProxyRules",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -1793,6 +2309,12 @@
     },
     {
       "Name": "DescribeProxy",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeProxy",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -1803,6 +2325,12 @@
     },
     {
       "Name": "DescribeProxyConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeProxyConfiguration",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -1813,6 +2341,12 @@
     },
     {
       "Name": "DescribeProxyRule",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeProxyRule",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -1823,6 +2357,12 @@
     },
     {
       "Name": "DescribeProxyRuleGroup",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeProxyRuleGroup",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -1929,6 +2469,16 @@
     },
     {
       "Name": "DetachRuleGroupsFromProxyConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "AttachRuleGroupsToProxyConfiguration",
+          "Service": "network-firewall"
+        },
+        {
+          "Name": "DetachRuleGroupsFromProxyConfiguration",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -2067,6 +2617,12 @@
     },
     {
       "Name": "ListProxies",
+      "AuthorizedActions": [
+        {
+          "Name": "ListProxies",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -2077,6 +2633,12 @@
     },
     {
       "Name": "ListProxyConfigurations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListProxyConfigurations",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -2087,6 +2649,12 @@
     },
     {
       "Name": "ListProxyRuleGroups",
+      "AuthorizedActions": [
+        {
+          "Name": "ListProxyRuleGroups",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -2409,6 +2977,12 @@
     },
     {
       "Name": "UpdateProxy",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateProxy",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -2419,6 +2993,12 @@
     },
     {
       "Name": "UpdateProxyConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateProxyConfiguration",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -2429,6 +3009,12 @@
     },
     {
       "Name": "UpdateProxyRule",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateProxyRule",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -2439,6 +3025,12 @@
     },
     {
       "Name": "UpdateProxyRuleGroupPriorities",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateProxyRuleGroupPriorities",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -2449,6 +3041,12 @@
     },
     {
       "Name": "UpdateProxyRulePriorities",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateProxyRulePriorities",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -2520,6 +3118,33 @@
       "Name": "FirewallPolicy",
       "ARNFormats": [
         "arn:${Partition}:network-firewall:${Region}:${Account}:firewall-policy/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Proxy",
+      "ARNFormats": [
+        "arn:${Partition}:network-firewall:${Region}:${Account}:proxy/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ProxyConfiguration",
+      "ARNFormats": [
+        "arn:${Partition}:network-firewall:${Region}:${Account}:proxy-configuration/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "ProxyRuleGroup",
+      "ARNFormats": [
+        "arn:${Partition}:network-firewall:${Region}:${Account}:proxy-rule-group/${Name}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

@@ -291,6 +291,26 @@
       }
     },
     {
+      "Name": "ListRoute53HealthChecksInRegion",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "plan"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListTagsForResource",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -706,6 +726,12 @@
     },
     {
       "Name": "ListRoute53HealthChecksInRegion",
+      "AuthorizedActions": [
+        {
+          "Name": "ListRoute53HealthChecksInRegion",
+          "Service": "arc-region-switch"
+        }
+      ],
       "SDK": [
         {
           "Name": "arc-region-switch",

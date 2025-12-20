@@ -318,6 +318,8 @@
     {
       "Name": "CreateCustomVerificationEmailTemplate",
       "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
         "ses:ApiVersion"
       ],
       "Annotations": {
@@ -440,6 +442,8 @@
     {
       "Name": "CreateEmailTemplate",
       "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
         "ses:ApiVersion"
       ],
       "Annotations": {
@@ -935,6 +939,7 @@
     {
       "Name": "DeleteCustomVerificationEmailTemplate",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
       "Annotations": {
@@ -1030,6 +1035,7 @@
     {
       "Name": "DeleteEmailTemplate",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
       "Annotations": {
@@ -1829,6 +1835,7 @@
     {
       "Name": "GetCustomVerificationEmailTemplate",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
       "Annotations": {
@@ -2000,6 +2007,24 @@
       }
     },
     {
+      "Name": "GetEmailAddressInsights",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetEmailIdentity",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
@@ -2050,6 +2075,7 @@
     {
       "Name": "GetEmailTemplate",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
       "Annotations": {
@@ -3082,6 +3108,9 @@
           "Name": "contact-list"
         },
         {
+          "Name": "custom-verification-email-template"
+        },
+        {
           "Name": "dedicated-ip-pool"
         },
         {
@@ -3104,6 +3133,9 @@
         },
         {
           "Name": "mailmanager-traffic-policy"
+        },
+        {
+          "Name": "template"
         },
         {
           "Name": "tenant"
@@ -4275,6 +4307,9 @@
           "Name": "contact-list"
         },
         {
+          "Name": "custom-verification-email-template"
+        },
+        {
           "Name": "dedicated-ip-pool"
         },
         {
@@ -4300,6 +4335,9 @@
         },
         {
           "Name": "mailmanager-traffic-policy"
+        },
+        {
+          "Name": "template"
         },
         {
           "Name": "tenant"
@@ -4379,6 +4417,9 @@
           "Name": "contact-list"
         },
         {
+          "Name": "custom-verification-email-template"
+        },
+        {
           "Name": "dedicated-ip-pool"
         },
         {
@@ -4404,6 +4445,9 @@
         },
         {
           "Name": "mailmanager-traffic-policy"
+        },
+        {
+          "Name": "template"
         },
         {
           "Name": "tenant"
@@ -4584,6 +4628,7 @@
     {
       "Name": "UpdateCustomVerificationEmailTemplate",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
       "Annotations": {
@@ -4631,6 +4676,7 @@
     {
       "Name": "UpdateEmailTemplate",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "ses:ApiVersion"
       ],
       "Annotations": {
@@ -6687,6 +6733,12 @@
     },
     {
       "Name": "GetEmailAddressInsights",
+      "AuthorizedActions": [
+        {
+          "Name": "GetEmailAddressInsights",
+          "Service": "ses"
+        }
+      ],
       "SDK": [
         {
           "Name": "sesv2",
@@ -9011,6 +9063,9 @@
       "Name": "custom-verification-email-template",
       "ARNFormats": [
         "arn:${Partition}:ses:${Region}:${Account}:custom-verification-email-template/${TemplateName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -9123,6 +9178,9 @@
       "Name": "template",
       "ARNFormats": [
         "arn:${Partition}:ses:${Region}:${Account}:template/${TemplateName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {

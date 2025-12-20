@@ -52,6 +52,21 @@
       }
     },
     {
+      "Name": "CancelImportTask",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateDelivery",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -99,6 +114,21 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "CreateImportTask",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -711,6 +741,36 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DescribeImportTaskBatches",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeImportTasks",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2279,6 +2339,12 @@
     },
     {
       "Name": "CancelImportTask",
+      "AuthorizedActions": [
+        {
+          "Name": "CancelImportTask",
+          "Service": "logs"
+        }
+      ],
       "SDK": [
         {
           "Name": "logs",
@@ -2326,6 +2392,10 @@
     {
       "Name": "CreateImportTask",
       "AuthorizedActions": [
+        {
+          "Name": "CreateImportTask",
+          "Service": "logs"
+        },
         {
           "Name": "PassRole",
           "Context": {
@@ -2879,6 +2949,12 @@
     },
     {
       "Name": "DescribeImportTaskBatches",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeImportTaskBatches",
+          "Service": "logs"
+        }
+      ],
       "SDK": [
         {
           "Name": "logs",
@@ -2889,6 +2965,12 @@
     },
     {
       "Name": "DescribeImportTasks",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeImportTasks",
+          "Service": "logs"
+        }
+      ],
       "SDK": [
         {
           "Name": "logs",

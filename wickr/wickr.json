@@ -2,6 +2,126 @@
   "Name": "wickr",
   "Actions": [
     {
+      "Name": "BatchCreateUser",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "BatchDeleteUser",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "BatchLookupUserUname",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "BatchReinviteUser",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "BatchResetDevicesForUser",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "BatchToggleUserSuspendStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateAdminSession",
       "Annotations": {
         "Properties": {
@@ -22,7 +142,7 @@
       }
     },
     {
-      "Name": "CreateNetwork",
+      "Name": "CreateBot",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -31,6 +151,135 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateDataRetentionBot",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateDataRetentionBotChallenge",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateNetwork",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateSecurityGroup",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteBot",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteDataRetentionBot",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -46,6 +295,311 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteSecurityGroup",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetBot",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetBotsCount",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetDataRetentionBot",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetGuestUserHistoryCount",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetNetwork",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetNetworkSettings",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetOidcInfo",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetSecurityGroup",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetUser",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetUsersCount",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListBlockedGuestUsers",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListBots",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListDevicesForUser",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListGuestUsers",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -58,9 +612,49 @@
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
-          "IsWrite": true
+          "IsWrite": false
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListSecurityGroupUsers",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListSecurityGroups",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -76,6 +670,71 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListUsers",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "RegisterOidcConfig",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "RegisterOidcConfigTest",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -130,7 +789,127 @@
       }
     },
     {
+      "Name": "UpdateBot",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateDataRetention",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateGuestUser",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateNetworkDetails",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateNetworkSettings",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateSecurityGroup",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateUser",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -167,6 +946,540 @@
       "Name": "aws:TagKeys",
       "Types": [
         "ArrayOfString"
+      ]
+    }
+  ],
+  "Operations": [
+    {
+      "Name": "BatchCreateUser",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchCreateUser",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "batch_create_user",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDeleteUser",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchDeleteUser",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "batch_delete_user",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "BatchLookupUserUname",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "batch_lookup_user_uname",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "BatchReinviteUser",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "batch_reinvite_user",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "BatchResetDevicesForUser",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchResetDevicesForUser",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "batch_reset_devices_for_user",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "BatchToggleUserSuspendStatus",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "batch_toggle_user_suspend_status",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBot",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "create_bot",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataRetentionBot",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "create_data_retention_bot",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataRetentionBotChallenge",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "create_data_retention_bot_challenge",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateNetwork",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateNetwork",
+          "Service": "wickr"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "create_network",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSecurityGroup",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "create_security_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteBot",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "delete_bot",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataRetentionBot",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "delete_data_retention_bot",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteNetwork",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteNetwork",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "delete_network",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSecurityGroup",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "delete_security_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetBot",
+      "AuthorizedActions": [
+        {
+          "Name": "GetBot",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "get_bot",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetBotsCount",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "get_bots_count",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataRetentionBot",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDataRetentionBot",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "get_data_retention_bot",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetGuestUserHistoryCount",
+      "AuthorizedActions": [
+        {
+          "Name": "GetGuestUserHistoryCount",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "get_guest_user_history_count",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetNetwork",
+      "AuthorizedActions": [
+        {
+          "Name": "GetNetwork",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "get_network",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetNetworkSettings",
+      "AuthorizedActions": [
+        {
+          "Name": "GetNetworkSettings",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "get_network_settings",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetOidcInfo",
+      "AuthorizedActions": [
+        {
+          "Name": "GetOidcInfo",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "get_oidc_info",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetSecurityGroup",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "get_security_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetUser",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "get_user",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetUsersCount",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "get_users_count",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListBlockedGuestUsers",
+      "AuthorizedActions": [
+        {
+          "Name": "ListBlockedGuestUsers",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "list_blocked_guest_users",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListBots",
+      "AuthorizedActions": [
+        {
+          "Name": "ListBots",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "list_bots",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDevicesForUser",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDevicesForUser",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "list_devices_for_user",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListGuestUsers",
+      "AuthorizedActions": [
+        {
+          "Name": "ListGuestUsers",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "list_guest_users",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListNetworks",
+      "AuthorizedActions": [
+        {
+          "Name": "ListNetworks",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "list_networks",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListSecurityGroupUsers",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "list_security_group_users",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListSecurityGroups",
+      "AuthorizedActions": [
+        {
+          "Name": "ListSecurityGroups",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "list_security_groups",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListUsers",
+      "AuthorizedActions": [
+        {
+          "Name": "ListUsers",
+          "Service": "wickr"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "list_users",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterOidcConfig",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "register_oidc_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterOidcConfigTest",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "register_oidc_config_test",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBot",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "update_bot",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDataRetention",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "update_data_retention",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGuestUser",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "update_guest_user",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNetwork",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "update_network",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateNetworkSettings",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "update_network_settings",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSecurityGroup",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "update_security_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateUser",
+      "SDK": [
+        {
+          "Name": "wickr",
+          "Method": "update_user",
+          "Package": "Boto3"
+        }
       ]
     }
   ],
