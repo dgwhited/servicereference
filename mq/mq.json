@@ -547,6 +547,15 @@
         {
           "Name": "CreateTags",
           "Service": "mq"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "mq.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [

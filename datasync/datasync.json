@@ -2341,6 +2341,15 @@
       "Name": "UpdateLocationSmb",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "datasync.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "UpdateLocationSmb",
           "Service": "datasync"
         }
