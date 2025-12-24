@@ -1405,7 +1405,11 @@
       },
       "Resources": [
         {
-          "Name": "mlflow-app"
+          "Name": "mlflow-app",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "sagemaker:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1429,7 +1433,11 @@
       },
       "Resources": [
         {
-          "Name": "mlflow-tracking-server"
+          "Name": "mlflow-tracking-server",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "sagemaker:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1793,7 +1801,11 @@
       },
       "Resources": [
         {
-          "Name": "partner-app"
+          "Name": "partner-app",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "sagemaker:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1813,7 +1825,11 @@
       },
       "Resources": [
         {
-          "Name": "partner-app"
+          "Name": "partner-app",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "sagemaker:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1877,7 +1893,11 @@
       },
       "Resources": [
         {
-          "Name": "mlflow-app"
+          "Name": "mlflow-app",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "sagemaker:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1897,7 +1917,11 @@
       },
       "Resources": [
         {
-          "Name": "mlflow-tracking-server"
+          "Name": "mlflow-tracking-server",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "sagemaker:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -2998,7 +3022,11 @@
       },
       "Resources": [
         {
-          "Name": "mlflow-app"
+          "Name": "mlflow-app",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "sagemaker:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -3018,7 +3046,11 @@
       },
       "Resources": [
         {
-          "Name": "mlflow-tracking-server"
+          "Name": "mlflow-tracking-server",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "sagemaker:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -3283,7 +3315,11 @@
       },
       "Resources": [
         {
-          "Name": "partner-app"
+          "Name": "partner-app",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "sagemaker:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -4559,7 +4595,11 @@
       },
       "Resources": [
         {
-          "Name": "mlflow-app"
+          "Name": "mlflow-app",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "sagemaker:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -4579,7 +4619,11 @@
       },
       "Resources": [
         {
-          "Name": "mlflow-tracking-server"
+          "Name": "mlflow-tracking-server",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "sagemaker:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -4844,7 +4888,11 @@
       },
       "Resources": [
         {
-          "Name": "partner-app"
+          "Name": "partner-app",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "sagemaker:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -7503,7 +7551,11 @@
       },
       "Resources": [
         {
-          "Name": "mlflow-tracking-server"
+          "Name": "mlflow-tracking-server",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "sagemaker:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -7786,7 +7838,11 @@
       },
       "Resources": [
         {
-          "Name": "mlflow-tracking-server"
+          "Name": "mlflow-tracking-server",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "sagemaker:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -8519,7 +8575,11 @@
       },
       "Resources": [
         {
-          "Name": "mlflow-app"
+          "Name": "mlflow-app",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "sagemaker:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -8539,7 +8599,11 @@
       },
       "Resources": [
         {
-          "Name": "mlflow-tracking-server"
+          "Name": "mlflow-tracking-server",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "sagemaker:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -8712,7 +8776,11 @@
       },
       "Resources": [
         {
-          "Name": "partner-app"
+          "Name": "partner-app",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "sagemaker:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -16466,20 +16534,12 @@
       "Name": "mlflow-app",
       "ARNFormats": [
         "arn:${Partition}:sagemaker:${Region}:${Account}:mlflow-app/${MLflowAppId}"
-      ],
-      "ConditionKeys": [
-        "aws:ResourceTag/${TagKey}",
-        "sagemaker:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "mlflow-tracking-server",
       "ARNFormats": [
         "arn:${Partition}:sagemaker:${Region}:${Account}:mlflow-tracking-server/${MlflowTrackingServerName}"
-      ],
-      "ConditionKeys": [
-        "aws:ResourceTag/${TagKey}",
-        "sagemaker:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -16615,10 +16675,6 @@
       "Name": "partner-app",
       "ARNFormats": [
         "arn:${Partition}:sagemaker:${Region}:${Account}:partner-app/${AppId}"
-      ],
-      "ConditionKeys": [
-        "aws:ResourceTag/${TagKey}",
-        "sagemaker:ResourceTag/${TagKey}"
       ]
     },
     {
