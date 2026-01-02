@@ -80,6 +80,36 @@
       }
     },
     {
+      "Name": "BatchGetPreferences",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "BatchUpdatePreferences",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CancelIngestion",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -2329,6 +2359,21 @@
       }
     },
     {
+      "Name": "DescribeSelfUpgradeConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeTemplate",
       "Annotations": {
         "Properties": {
@@ -3306,6 +3351,26 @@
           "IsWrite": false
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListSelfUpgrades",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -5072,6 +5137,41 @@
     },
     {
       "Name": "UpdateSPICECapacityConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateSelfUpgrade",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateSelfUpgradeConfiguration",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -7260,6 +7360,12 @@
     },
     {
       "Name": "DescribeSelfUpgradeConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeSelfUpgradeConfiguration",
+          "Service": "quicksight"
+        }
+      ],
       "SDK": [
         {
           "Name": "quicksight",
@@ -7990,6 +8096,12 @@
     },
     {
       "Name": "ListSelfUpgrades",
+      "AuthorizedActions": [
+        {
+          "Name": "ListSelfUpgrades",
+          "Service": "quicksight"
+        }
+      ],
       "SDK": [
         {
           "Name": "quicksight",
@@ -9149,6 +9261,12 @@
     },
     {
       "Name": "UpdateSelfUpgrade",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateSelfUpgrade",
+          "Service": "quicksight"
+        }
+      ],
       "SDK": [
         {
           "Name": "quicksight",
@@ -9159,6 +9277,12 @@
     },
     {
       "Name": "UpdateSelfUpgradeConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateSelfUpgradeConfiguration",
+          "Service": "quicksight"
+        }
+      ],
       "SDK": [
         {
           "Name": "quicksight",
