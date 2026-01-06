@@ -66,6 +66,7 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys",
+        "rds:TagsFromRequest",
         "rds:req-tag/${TagKey}"
       ],
       "Annotations": {
@@ -4077,6 +4078,12 @@
       "Name": "rds:StorageSize",
       "Types": [
         "Numeric"
+      ]
+    },
+    {
+      "Name": "rds:TagsFromRequest",
+      "Types": [
+        "Bool"
       ]
     },
     {
