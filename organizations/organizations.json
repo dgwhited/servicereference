@@ -643,6 +643,7 @@
     {
       "Name": "InviteOrganizationToTransferResponsibility",
       "ActionConditionKeys": [
+        "organizations:TransferDirection",
         "organizations:TransferType"
       ],
       "Annotations": {
@@ -1051,7 +1052,11 @@
           "Name": "resourcepolicy"
         },
         {
-          "Name": "responsibilitytransfer"
+          "Name": "responsibilitytransfer",
+          "ConditionKeys": [
+            "organizations:TransferDirection",
+            "organizations:TransferType"
+          ]
         },
         {
           "Name": "root"
