@@ -3,6 +3,9 @@
   "Actions": [
     {
       "Name": "AddKeyReplicationRegions",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -51,7 +54,10 @@
       "Name": "CreateKey",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "payment-cryptography:KeyAlgorithm",
+        "payment-cryptography:KeyClass",
+        "payment-cryptography:KeyUsage"
       ],
       "Annotations": {
         "Properties": {
@@ -68,6 +74,9 @@
     },
     {
       "Name": "DecryptData",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -115,6 +124,9 @@
     },
     {
       "Name": "DeleteKey",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -165,6 +177,9 @@
     },
     {
       "Name": "EncryptData",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -188,6 +203,11 @@
     },
     {
       "Name": "ExportKey",
+      "ActionConditionKeys": [
+        "payment-cryptography:CertificateAuthorityPublicKeyIdentifier",
+        "payment-cryptography:RequestAlias",
+        "payment-cryptography:WrappingKeyIdentifier"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -208,6 +228,9 @@
     },
     {
       "Name": "GenerateCardValidationData",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -231,6 +254,9 @@
     },
     {
       "Name": "GenerateMac",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -254,6 +280,9 @@
     },
     {
       "Name": "GenerateMacEmvPinChange",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -277,6 +306,9 @@
     },
     {
       "Name": "GeneratePinData",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -327,6 +359,9 @@
     },
     {
       "Name": "GetCertificateSigningRequest",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -365,6 +400,9 @@
     },
     {
       "Name": "GetKey",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -415,6 +453,9 @@
     },
     {
       "Name": "GetPublicKeyCertificate",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -437,7 +478,10 @@
       "Name": "ImportKey",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "payment-cryptography:CertificateAuthorityPublicKeyIdentifier",
+        "payment-cryptography:ImportKeyMaterial",
+        "payment-cryptography:WrappingKeyIdentifier"
       ],
       "Annotations": {
         "Properties": {
@@ -504,6 +548,9 @@
     },
     {
       "Name": "ReEncryptData",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -527,6 +574,9 @@
     },
     {
       "Name": "RemoveKeyReplicationRegions",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -550,6 +600,9 @@
     },
     {
       "Name": "RestoreKey",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -570,6 +623,9 @@
     },
     {
       "Name": "StartKeyUsage",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -590,6 +646,9 @@
     },
     {
       "Name": "StopKeyUsage",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -634,6 +693,9 @@
     },
     {
       "Name": "TranslateKeyMaterial",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -657,6 +719,9 @@
     },
     {
       "Name": "TranslatePinData",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -730,6 +795,9 @@
     },
     {
       "Name": "VerifyAuthRequestCryptogram",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -753,6 +821,9 @@
     },
     {
       "Name": "VerifyCardValidationData",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -776,6 +847,9 @@
     },
     {
       "Name": "VerifyMac",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -799,6 +873,9 @@
     },
     {
       "Name": "VerifyPinData",
+      "ActionConditionKeys": [
+        "payment-cryptography:RequestAlias"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
