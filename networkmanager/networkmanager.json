@@ -228,6 +228,26 @@
       }
     },
     {
+      "Name": "CreateCoreNetworkPrefixListAssociation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "core-network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateDevice",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -549,6 +569,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteCoreNetworkPrefixListAssociation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "core-network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1454,6 +1494,46 @@
       }
     },
     {
+      "Name": "ListCoreNetworkPrefixListAssociations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "core-network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListCoreNetworkRoutingInformation",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "core-network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListCoreNetworks",
       "Annotations": {
         "Properties": {
@@ -1546,6 +1626,29 @@
       }
     },
     {
+      "Name": "PutAttachmentRoutingPolicyLabel",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "attachment"
+        },
+        {
+          "Name": "core-network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "PutCoreNetworkPolicy",
       "Annotations": {
         "Properties": {
@@ -1626,6 +1729,29 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "RemoveAttachmentRoutingPolicyLabel",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "attachment"
+        },
+        {
+          "Name": "core-network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2145,6 +2271,10 @@
           "Service": "networkmanager"
         },
         {
+          "Name": "PutAttachmentRoutingPolicyLabel",
+          "Service": "networkmanager"
+        },
+        {
           "Name": "TagResource",
           "Service": "networkmanager"
         }
@@ -2219,6 +2349,12 @@
     },
     {
       "Name": "CreateCoreNetworkPrefixListAssociation",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateCoreNetworkPrefixListAssociation",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
@@ -2252,6 +2388,10 @@
       "AuthorizedActions": [
         {
           "Name": "CreateDirectConnectGatewayAttachment",
+          "Service": "networkmanager"
+        },
+        {
+          "Name": "PutAttachmentRoutingPolicyLabel",
           "Service": "networkmanager"
         },
         {
@@ -2335,6 +2475,10 @@
           "Service": "networkmanager"
         },
         {
+          "Name": "PutAttachmentRoutingPolicyLabel",
+          "Service": "networkmanager"
+        },
+        {
           "Name": "TagResource",
           "Service": "networkmanager"
         }
@@ -2375,6 +2519,10 @@
           "Service": "networkmanager"
         },
         {
+          "Name": "PutAttachmentRoutingPolicyLabel",
+          "Service": "networkmanager"
+        },
+        {
           "Name": "TagResource",
           "Service": "networkmanager"
         }
@@ -2392,6 +2540,10 @@
       "AuthorizedActions": [
         {
           "Name": "CreateVpcAttachment",
+          "Service": "networkmanager"
+        },
+        {
+          "Name": "PutAttachmentRoutingPolicyLabel",
           "Service": "networkmanager"
         },
         {
@@ -2489,6 +2641,12 @@
     },
     {
       "Name": "DeleteCoreNetworkPrefixListAssociation",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteCoreNetworkPrefixListAssociation",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
@@ -3197,6 +3355,12 @@
     },
     {
       "Name": "ListCoreNetworkPrefixListAssociations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListCoreNetworkPrefixListAssociations",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
@@ -3207,6 +3371,12 @@
     },
     {
       "Name": "ListCoreNetworkRoutingInformation",
+      "AuthorizedActions": [
+        {
+          "Name": "ListCoreNetworkRoutingInformation",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
@@ -3281,6 +3451,12 @@
     },
     {
       "Name": "PutAttachmentRoutingPolicyLabel",
+      "AuthorizedActions": [
+        {
+          "Name": "PutAttachmentRoutingPolicyLabel",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
@@ -3355,6 +3531,12 @@
     },
     {
       "Name": "RemoveAttachmentRoutingPolicyLabel",
+      "AuthorizedActions": [
+        {
+          "Name": "RemoveAttachmentRoutingPolicyLabel",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
