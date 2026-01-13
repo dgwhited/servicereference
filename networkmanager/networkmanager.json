@@ -1434,6 +1434,26 @@
       }
     },
     {
+      "Name": "ListAttachmentRoutingPolicyAssociations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "core-network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListAttachments",
       "Annotations": {
         "Properties": {
@@ -3297,6 +3317,12 @@
     },
     {
       "Name": "ListAttachmentRoutingPolicyAssociations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAttachmentRoutingPolicyAssociations",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
