@@ -166,6 +166,26 @@
       }
     },
     {
+      "Name": "DeleteTableBucketMetricsConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteTableBucketPolicy",
       "Annotations": {
         "Properties": {
@@ -342,6 +362,26 @@
     },
     {
       "Name": "GetTableBucketMaintenanceConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetTableBucketMetricsConfiguration",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -795,6 +835,26 @@
     },
     {
       "Name": "PutTableBucketMaintenanceConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "PutTableBucketMetricsConfiguration",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1351,6 +1411,12 @@
     },
     {
       "Name": "DeleteTableBucketMetricsConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteTableBucketMetricsConfiguration",
+          "Service": "s3tables"
+        }
+      ],
       "SDK": [
         {
           "Name": "s3tables",
@@ -1505,6 +1571,12 @@
     },
     {
       "Name": "GetTableBucketMetricsConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTableBucketMetricsConfiguration",
+          "Service": "s3tables"
+        }
+      ],
       "SDK": [
         {
           "Name": "s3tables",
@@ -1819,6 +1891,12 @@
     },
     {
       "Name": "PutTableBucketMetricsConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "PutTableBucketMetricsConfiguration",
+          "Service": "s3tables"
+        }
+      ],
       "SDK": [
         {
           "Name": "s3tables",
