@@ -43,6 +43,10 @@
     },
     {
       "Name": "AssociateFirewallPolicy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,

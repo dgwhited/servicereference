@@ -242,6 +242,10 @@
     },
     {
       "Name": "CreateBudget",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1875,6 +1879,9 @@
       },
       "Resources": [
         {
+          "Name": "budget"
+        },
+        {
           "Name": "farm"
         },
         {
@@ -2084,6 +2091,9 @@
       },
       "Resources": [
         {
+          "Name": "budget"
+        },
+        {
           "Name": "farm"
         },
         {
@@ -2121,6 +2131,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "budget"
+        },
         {
           "Name": "farm"
         },
@@ -4453,6 +4466,7 @@
         "arn:${Partition}:deadline:${Region}:${Account}:farm/${FarmId}/budget/${BudgetId}"
       ],
       "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "deadline:FarmMembershipLevels"
       ]
     },
