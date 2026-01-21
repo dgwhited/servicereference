@@ -9491,6 +9491,9 @@
       "Name": "prompt-router",
       "ARNFormats": [
         "arn:${Partition}:bedrock:${Region}:${Account}:prompt-router/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
