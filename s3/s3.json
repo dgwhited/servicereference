@@ -8114,6 +8114,15 @@
       "Name": "PutBucketReplication",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "s3.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "PutReplicationConfiguration",
           "Service": "s3"
         }

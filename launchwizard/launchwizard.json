@@ -207,6 +207,21 @@
       }
     },
     {
+      "Name": "GetDeploymentPatternVersion",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetInfrastructureSuggestion",
       "Annotations": {
         "Properties": {
@@ -373,6 +388,21 @@
     },
     {
       "Name": "ListDeploymentEvents",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListDeploymentPatternVersions",
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -593,6 +623,29 @@
       }
     },
     {
+      "Name": "UpdateDeployment",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "deployment",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateSettingsSet",
       "Annotations": {
         "Properties": {
@@ -683,6 +736,12 @@
     },
     {
       "Name": "GetDeploymentPatternVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDeploymentPatternVersion",
+          "Service": "launchwizard"
+        }
+      ],
       "SDK": [
         {
           "Name": "launch-wizard",
@@ -741,6 +800,12 @@
     },
     {
       "Name": "ListDeploymentPatternVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDeploymentPatternVersions",
+          "Service": "launchwizard"
+        }
+      ],
       "SDK": [
         {
           "Name": "launch-wizard",
@@ -847,6 +912,12 @@
     },
     {
       "Name": "UpdateDeployment",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateDeployment",
+          "Service": "launchwizard"
+        }
+      ],
       "SDK": [
         {
           "Name": "launch-wizard",
