@@ -27639,6 +27639,15 @@
         {
           "Name": "CreateLaunchTemplateVersion",
           "Service": "ec2"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ec2.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [
