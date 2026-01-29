@@ -4965,6 +4965,39 @@
       }
     },
     {
+      "Name": "UpdateObjectEncryption",
+      "ActionConditionKeys": [
+        "s3:ResourceAccount",
+        "s3:TlsVersion",
+        "s3:authType",
+        "s3:signatureAge",
+        "s3:signatureversion",
+        "s3:x-amz-content-sha256",
+        "s3:x-amz-server-side-encryption",
+        "s3:x-amz-server-side-encryption-aws-kms-key-id"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "accesspointobject"
+        },
+        {
+          "Name": "object"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateStorageLensGroup",
       "ActionConditionKeys": [
         "s3:ResourceAccount",
@@ -8637,6 +8670,16 @@
         {
           "Name": "s3control",
           "Method": "update_job_status",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateObjectEncryption",
+      "SDK": [
+        {
+          "Name": "s3",
+          "Method": "update_object_encryption",
           "Package": "Boto3"
         }
       ]
