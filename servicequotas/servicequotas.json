@@ -138,6 +138,9 @@
     },
     {
       "Name": "GetServiceQuota",
+      "ActionConditionKeys": [
+        "servicequotas:service"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -146,6 +149,11 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "quota"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -153,6 +161,9 @@
     },
     {
       "Name": "GetServiceQuotaIncreaseRequestFromTemplate",
+      "ActionConditionKeys": [
+        "servicequotas:service"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -161,6 +172,11 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "quota"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -198,6 +214,9 @@
     },
     {
       "Name": "ListRequestedServiceQuotaChangeHistoryByQuota",
+      "ActionConditionKeys": [
+        "servicequotas:service"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -206,6 +225,11 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "quota"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true

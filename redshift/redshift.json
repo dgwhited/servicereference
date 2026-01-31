@@ -2256,6 +2256,26 @@
       }
     },
     {
+      "Name": "GetIdentityCenterAuthToken",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetReservedNodeExchangeConfigurationOptions",
       "Annotations": {
         "Properties": {
@@ -4944,6 +4964,12 @@
     },
     {
       "Name": "GetIdentityCenterAuthToken",
+      "AuthorizedActions": [
+        {
+          "Name": "GetIdentityCenterAuthToken",
+          "Service": "redshift"
+        }
+      ],
       "SDK": [
         {
           "Name": "redshift",
