@@ -2541,6 +2541,10 @@
         {
           "Name": "DELETE",
           "Service": "apigateway"
+        },
+        {
+          "Name": "RemoveCertificateFromDomain",
+          "Service": "apigateway"
         }
       ],
       "SDK": [
@@ -4679,6 +4683,15 @@
         {
           "Name": "PATCH",
           "Service": "apigateway"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "apigateway.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [
