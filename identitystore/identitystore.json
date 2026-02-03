@@ -2,6 +2,21 @@
   "Name": "identitystore",
   "Actions": [
     {
+      "Name": "AddRegion",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateGroup",
       "ActionConditionKeys": [
         "identitystore:GroupExternalIdIssuers",
@@ -255,6 +270,24 @@
       }
     },
     {
+      "Name": "DescribeRegion",
+      "ActionConditionKeys": [
+        "identitystore:PrimaryRegion"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeUser",
       "ActionConditionKeys": [
         "identitystore:PrimaryRegion",
@@ -483,6 +516,24 @@
       }
     },
     {
+      "Name": "ListRegions",
+      "ActionConditionKeys": [
+        "identitystore:PrimaryRegion"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListUsers",
       "ActionConditionKeys": [
         "identitystore:PrimaryRegion",
@@ -507,6 +558,21 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "RemoveRegion",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {

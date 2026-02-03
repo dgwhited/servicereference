@@ -181,7 +181,9 @@
       "Name": "CreateAgentRuntime",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "bedrock-agentcore:securityGroups",
+        "bedrock-agentcore:subnets"
       ],
       "Annotations": {
         "Properties": {
@@ -251,7 +253,9 @@
       "Name": "CreateBrowser",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "bedrock-agentcore:securityGroups",
+        "bedrock-agentcore:subnets"
       ],
       "Annotations": {
         "Properties": {
@@ -270,7 +274,9 @@
       "Name": "CreateCodeInterpreter",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "bedrock-agentcore:securityGroups",
+        "bedrock-agentcore:subnets"
       ],
       "Annotations": {
         "Properties": {
@@ -2538,6 +2544,10 @@
     },
     {
       "Name": "UpdateAgentRuntime",
+      "ActionConditionKeys": [
+        "bedrock-agentcore:securityGroups",
+        "bedrock-agentcore:subnets"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -2883,6 +2893,12 @@
       ]
     },
     {
+      "Name": "bedrock-agentcore:securityGroups",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
       "Name": "bedrock-agentcore:sessionId",
       "Types": [
         "String"
@@ -2892,6 +2908,12 @@
       "Name": "bedrock-agentcore:strategyId",
       "Types": [
         "String"
+      ]
+    },
+    {
+      "Name": "bedrock-agentcore:subnets",
+      "Types": [
+        "ArrayOfString"
       ]
     },
     {
