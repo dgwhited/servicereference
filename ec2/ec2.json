@@ -19158,6 +19158,42 @@
       }
     },
     {
+      "Name": "InjectVolumeIOLatency",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "volume",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:AvailabilityZone",
+            "ec2:AvailabilityZoneId",
+            "ec2:Encrypted",
+            "ec2:ParentSnapshot",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:VolumeID",
+            "ec2:VolumeIops",
+            "ec2:VolumeSize",
+            "ec2:VolumeThroughput",
+            "ec2:VolumeType"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListImagesInRecycleBin",
       "ActionConditionKeys": [
         "ec2:Region"
