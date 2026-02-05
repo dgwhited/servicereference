@@ -825,6 +825,10 @@
     },
     {
       "Name": "InjectError",
+      "ActionConditionKeys": [
+        "dynamodb:FisActionId",
+        "dynamodb:FisTargetArns"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -833,11 +837,6 @@
           "IsWrite": true
         }
       },
-      "Resources": [
-        {
-          "Name": "table"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -1659,6 +1658,18 @@
       "Name": "dynamodb:FirstPartitionKeyValues",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "dynamodb:FisActionId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "dynamodb:FisTargetArns",
+      "Types": [
+        "ArrayOfARN"
       ]
     },
     {
