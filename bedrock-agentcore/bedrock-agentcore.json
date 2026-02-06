@@ -271,6 +271,25 @@
       }
     },
     {
+      "Name": "CreateBrowserProfile",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateCodeInterpreter",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -293,6 +312,11 @@
     },
     {
       "Name": "CreateEvaluator",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -373,7 +397,8 @@
       "Name": "CreateMemory",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "bedrock-agentcore:KmsKeyArn"
       ],
       "Annotations": {
         "Properties": {
@@ -417,6 +442,11 @@
     },
     {
       "Name": "CreateOnlineEvaluationConfig",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -571,6 +601,26 @@
       "Resources": [
         {
           "Name": "browser-custom"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteBrowserProfile",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "browser-profile"
         }
       ],
       "SupportedBy": {
@@ -979,6 +1029,26 @@
       "Resources": [
         {
           "Name": "browser-custom"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetBrowserProfile",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "browser-profile"
         }
       ],
       "SupportedBy": {
@@ -1715,6 +1785,21 @@
       }
     },
     {
+      "Name": "ListBrowserProfiles",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListBrowserSessions",
       "Annotations": {
         "Properties": {
@@ -2072,7 +2157,13 @@
           "Name": "browser-custom"
         },
         {
+          "Name": "browser-profile"
+        },
+        {
           "Name": "code-interpreter-custom"
+        },
+        {
+          "Name": "evaluator"
         },
         {
           "Name": "gateway"
@@ -2082,6 +2173,9 @@
         },
         {
           "Name": "oauth2credentialprovider"
+        },
+        {
+          "Name": "online-evaluation-config"
         },
         {
           "Name": "runtime"
@@ -2236,6 +2330,32 @@
       }
     },
     {
+      "Name": "SaveBrowserSessionProfile",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "browser"
+        },
+        {
+          "Name": "browser-custom"
+        },
+        {
+          "Name": "browser-profile"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "SetTokenVaultCMK",
       "Annotations": {
         "Properties": {
@@ -2271,6 +2391,9 @@
         },
         {
           "Name": "browser-custom"
+        },
+        {
+          "Name": "browser-profile"
         }
       ],
       "SupportedBy": {
@@ -2457,7 +2580,13 @@
           "Name": "browser-custom"
         },
         {
+          "Name": "browser-profile"
+        },
+        {
           "Name": "code-interpreter-custom"
+        },
+        {
+          "Name": "evaluator"
         },
         {
           "Name": "gateway"
@@ -2467,6 +2596,9 @@
         },
         {
           "Name": "oauth2credentialprovider"
+        },
+        {
+          "Name": "online-evaluation-config"
         },
         {
           "Name": "runtime"
@@ -2510,7 +2642,13 @@
           "Name": "browser-custom"
         },
         {
+          "Name": "browser-profile"
+        },
+        {
           "Name": "code-interpreter-custom"
+        },
+        {
+          "Name": "evaluator"
         },
         {
           "Name": "gateway"
@@ -2520,6 +2658,9 @@
         },
         {
           "Name": "oauth2credentialprovider"
+        },
+        {
+          "Name": "online-evaluation-config"
         },
         {
           "Name": "runtime"
@@ -2881,6 +3022,12 @@
       ]
     },
     {
+      "Name": "bedrock-agentcore:KmsKeyArn",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "bedrock-agentcore:actorId",
       "Types": [
         "String"
@@ -3086,6 +3233,22 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "create_browser",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBrowserProfile",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateBrowserProfile",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "create_browser_profile",
           "Package": "Boto3"
         }
       ]
@@ -3395,6 +3558,16 @@
       ]
     },
     {
+      "Name": "DeleteBrowserProfile",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "delete_browser_profile",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteCodeInterpreter",
       "AuthorizedActions": [
         {
@@ -3694,6 +3867,16 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "get_browser",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetBrowserProfile",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "get_browser_profile",
           "Package": "Boto3"
         }
       ]
@@ -4171,6 +4354,22 @@
       ]
     },
     {
+      "Name": "ListBrowserProfiles",
+      "AuthorizedActions": [
+        {
+          "Name": "ListBrowserProfiles",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_browser_profiles",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListBrowserSessions",
       "AuthorizedActions": [
         {
@@ -4518,6 +4717,16 @@
         {
           "Name": "bedrock-agentcore",
           "Method": "retrieve_memory_records",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SaveBrowserSessionProfile",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore",
+          "Method": "save_browser_session_profile",
           "Package": "Boto3"
         }
       ]
@@ -4973,6 +5182,15 @@
       ]
     },
     {
+      "Name": "browser-profile",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:aws:browser-profile/${BrowserProfileId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
       "Name": "code-interpreter",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:aws:code-interpreter/${CodeInterpreterId}"
@@ -4991,6 +5209,9 @@
       "Name": "evaluator",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:evaluator/${EvaluatorId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -5024,6 +5245,9 @@
       "Name": "online-evaluation-config",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:online-evaluation-config/${OnlineEvaluationConfigId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {

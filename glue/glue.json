@@ -639,6 +639,9 @@
       },
       "Resources": [
         {
+          "Name": "connectionType"
+        },
+        {
           "Name": "rootcatalog"
         }
       ],
@@ -1425,6 +1428,26 @@
       }
     },
     {
+      "Name": "DeleteConnectionType",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "connectionType"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteCrawler",
       "Annotations": {
         "Properties": {
@@ -2032,6 +2055,11 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "connectionType"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -2050,6 +2078,9 @@
       "Resources": [
         {
           "Name": "connection"
+        },
+        {
+          "Name": "connectionType"
         },
         {
           "Name": "rootcatalog"
@@ -2847,6 +2878,9 @@
         },
         {
           "Name": "connection"
+        },
+        {
+          "Name": "connectionType"
         }
       ],
       "SupportedBy": {
@@ -4369,6 +4403,9 @@
           "Name": "connection"
         },
         {
+          "Name": "connectionType"
+        },
+        {
           "Name": "rootcatalog"
         }
       ],
@@ -4846,7 +4883,33 @@
           "Name": "connection"
         },
         {
+          "Name": "connectionType"
+        },
+        {
           "Name": "rootcatalog"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "RegisterConnectionType",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "connectionType"
         }
       ],
       "SupportedBy": {
@@ -5676,6 +5739,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "connectionType"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -5915,6 +5986,9 @@
       "Resources": [
         {
           "Name": "connection"
+        },
+        {
+          "Name": "connectionType"
         },
         {
           "Name": "rootcatalog"
@@ -7674,6 +7748,22 @@
         {
           "Name": "glue",
           "Method": "delete_connection",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConnectionType",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteConnectionType",
+          "Service": "glue"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "glue",
+          "Method": "delete_connection_type",
           "Package": "Boto3"
         }
       ]
@@ -9950,6 +10040,22 @@
       ]
     },
     {
+      "Name": "RegisterConnectionType",
+      "AuthorizedActions": [
+        {
+          "Name": "RegisterConnectionType",
+          "Service": "glue"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "glue",
+          "Method": "register_connection_type",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "RegisterSchemaVersion",
       "AuthorizedActions": [
         {
@@ -11057,6 +11163,15 @@
       "Name": "connection",
       "ARNFormats": [
         "arn:${Partition}:glue:${Region}:${Account}:connection/${ConnectionName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "connectionType",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:connectionType:${ConnectionTypeName}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
