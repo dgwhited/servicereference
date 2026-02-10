@@ -314,6 +314,10 @@
     },
     {
       "Name": "CreateJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1871,7 +1875,7 @@
       ],
       "Annotations": {
         "Properties": {
-          "IsList": true,
+          "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -1886,6 +1890,9 @@
         },
         {
           "Name": "fleet"
+        },
+        {
+          "Name": "job"
         },
         {
           "Name": "license-endpoint"
@@ -1969,7 +1976,7 @@
       "Name": "SearchJobs",
       "Annotations": {
         "Properties": {
-          "IsList": true,
+          "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -1989,7 +1996,7 @@
       "Name": "SearchSteps",
       "Annotations": {
         "Properties": {
-          "IsList": true,
+          "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -2012,7 +2019,7 @@
       "Name": "SearchTasks",
       "Annotations": {
         "Properties": {
-          "IsList": true,
+          "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -2035,17 +2042,12 @@
       "Name": "SearchWorkers",
       "Annotations": {
         "Properties": {
-          "IsList": true,
+          "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
         }
       },
-      "Resources": [
-        {
-          "Name": "fleet"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -2100,6 +2102,9 @@
           "Name": "fleet"
         },
         {
+          "Name": "job"
+        },
+        {
           "Name": "license-endpoint"
         },
         {
@@ -2139,6 +2144,9 @@
         },
         {
           "Name": "fleet"
+        },
+        {
+          "Name": "job"
         },
         {
           "Name": "license-endpoint"
@@ -4501,6 +4509,7 @@
         "arn:${Partition}:deadline:${Region}:${Account}:farm/${FarmId}/queue/${QueueId}/job/${JobId}"
       ],
       "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "deadline:FarmMembershipLevels",
         "deadline:JobMembershipLevels",
         "deadline:QueueMembershipLevels"
