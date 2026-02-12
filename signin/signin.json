@@ -11,6 +11,14 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "oauth2-public-client-localhost"
+        },
+        {
+          "Name": "oauth2-public-client-remote"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -26,6 +34,14 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "oauth2-public-client-localhost"
+        },
+        {
+          "Name": "oauth2-public-client-remote"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -71,6 +87,20 @@
           "Method": "create_o_auth2_token",
           "Package": "Boto3"
         }
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "oauth2-public-client-localhost",
+      "ARNFormats": [
+        "arn:${Partition}:signin:${Region}:${Account}:oauth2/public-client/localhost"
+      ]
+    },
+    {
+      "Name": "oauth2-public-client-remote",
+      "ARNFormats": [
+        "arn:${Partition}:signin:${Region}:${Account}:oauth2/public-client/remote"
       ]
     }
   ],

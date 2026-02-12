@@ -362,13 +362,23 @@
       },
       "Resources": [
         {
-          "Name": "directoryid"
+          "Name": "directoryid",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
-          "Name": "workspacebundle"
+          "Name": "workspacebundle",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
-          "Name": "workspaceid"
+          "Name": "workspaceid",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
         }
       ],
       "SupportedBy": {
