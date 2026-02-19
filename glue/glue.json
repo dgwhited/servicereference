@@ -821,6 +821,10 @@
     },
     {
       "Name": "CreateIntegrationResourceProperty",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -838,6 +842,9 @@
         },
         {
           "Name": "database"
+        },
+        {
+          "Name": "integrationResourceProperty"
         }
       ],
       "SupportedBy": {
@@ -1589,6 +1596,35 @@
       "Resources": [
         {
           "Name": "integration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteIntegrationResourceProperty",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "integrationResourceProperty"
         }
       ],
       "SupportedBy": {
@@ -2982,6 +3018,9 @@
         },
         {
           "Name": "database"
+        },
+        {
+          "Name": "integrationResourceProperty"
         }
       ],
       "SupportedBy": {
@@ -4415,6 +4454,35 @@
       }
     },
     {
+      "Name": "ListIntegrationResourceProperties",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "catalog"
+        },
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "database"
+        },
+        {
+          "Name": "integrationResourceProperty"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListJobUpgradeAnalyses",
       "Annotations": {
         "Properties": {
@@ -5685,6 +5753,9 @@
           "Name": "integration"
         },
         {
+          "Name": "integrationResourceProperty"
+        },
+        {
           "Name": "job"
         },
         {
@@ -5787,6 +5858,9 @@
         },
         {
           "Name": "integration"
+        },
+        {
+          "Name": "integrationResourceProperty"
         },
         {
           "Name": "job"
@@ -6138,6 +6212,9 @@
         },
         {
           "Name": "database"
+        },
+        {
+          "Name": "integrationResourceProperty"
         }
       ],
       "SupportedBy": {
@@ -7882,6 +7959,12 @@
     },
     {
       "Name": "DeleteIntegrationResourceProperty",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteIntegrationResourceProperty",
+          "Service": "glue"
+        }
+      ],
       "SDK": [
         {
           "Name": "glue",
@@ -9730,6 +9813,12 @@
     },
     {
       "Name": "ListIntegrationResourceProperties",
+      "AuthorizedActions": [
+        {
+          "Name": "ListIntegrationResourceProperties",
+          "Service": "glue"
+        }
+      ],
       "SDK": [
         {
           "Name": "glue",
@@ -11232,6 +11321,15 @@
       "Name": "integration",
       "ARNFormats": [
         "arn:${Partition}:glue:${Region}:${Account}:integration:${IntegrationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "integrationResourceProperty",
+      "ARNFormats": [
+        "arn:${Partition}:glue:${Region}:${Account}:integrationresourceproperty/${ResourceType}/${ResourceName}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
