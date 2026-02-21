@@ -164,6 +164,26 @@
       }
     },
     {
+      "Name": "CopyBlueprintStage",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "blueprint"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CountTokens",
       "Annotations": {
         "Properties": {
@@ -2010,6 +2030,26 @@
       }
     },
     {
+      "Name": "GetBlueprintOptimizationStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "blueprint-optimization-invocation"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetBlueprintRecommendation",
       "Annotations": {
         "Properties": {
@@ -2752,6 +2792,33 @@
         },
         {
           "Name": "automated-reasoning-policy-version"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "InvokeBlueprintOptimizationAsync",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "blueprint"
+        },
+        {
+          "Name": "data-automation-profile"
         }
       ],
       "SupportedBy": {
@@ -3810,6 +3877,9 @@
           "Name": "blueprint"
         },
         {
+          "Name": "blueprint-optimization-invocation"
+        },
+        {
           "Name": "custom-model"
         },
         {
@@ -4359,6 +4429,9 @@
           "Name": "blueprint"
         },
         {
+          "Name": "blueprint-optimization-invocation"
+        },
+        {
           "Name": "custom-model"
         },
         {
@@ -4458,6 +4531,9 @@
         },
         {
           "Name": "blueprint"
+        },
+        {
+          "Name": "blueprint-optimization-invocation"
         },
         {
           "Name": "custom-model"
@@ -5174,6 +5250,12 @@
     },
     {
       "Name": "CopyBlueprintStage",
+      "AuthorizedActions": [
+        {
+          "Name": "CopyBlueprintStage",
+          "Service": "bedrock"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-data-automation",
@@ -6837,6 +6919,12 @@
     },
     {
       "Name": "GetBlueprintOptimizationStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "GetBlueprintOptimizationStatus",
+          "Service": "bedrock"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-data-automation",
@@ -7447,6 +7535,12 @@
     },
     {
       "Name": "InvokeBlueprintOptimizationAsync",
+      "AuthorizedActions": [
+        {
+          "Name": "InvokeBlueprintOptimizationAsync",
+          "Service": "bedrock"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-data-automation",
@@ -9306,6 +9400,15 @@
       "Name": "blueprint",
       "ARNFormats": [
         "arn:${Partition}:bedrock:${Region}:${Account}:blueprint/${BlueprintId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "blueprint-optimization-invocation",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:blueprint-optimization-invocation/${ResourceId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

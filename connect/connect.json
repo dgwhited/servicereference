@@ -336,6 +336,30 @@
       }
     },
     {
+      "Name": "AssociateQueueEmailAddresses",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "AssociateQueueQuickConnects",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
@@ -1203,6 +1227,34 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "CreateNotification",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        },
+        {
+          "Name": "user"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2133,6 +2185,30 @@
       }
     },
     {
+      "Name": "DeleteNotification",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "notification"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeletePredefinedAttribute",
       "ActionConditionKeys": [
         "connect:InstanceId"
@@ -2998,6 +3074,30 @@
       }
     },
     {
+      "Name": "DescribeNotification",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "notification"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribePhoneNumber",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -3590,6 +3690,30 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DisassociateQueueEmailAddresses",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -4933,6 +5057,29 @@
       }
     },
     {
+      "Name": "ListNotifications",
+      "ActionConditionKeys": [
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListPhoneNumbers",
       "Annotations": {
         "Properties": {
@@ -5016,6 +5163,30 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListQueueEmailAddresses",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "queue"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -5525,6 +5696,30 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListUserNotifications",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -6158,6 +6353,30 @@
       }
     },
     {
+      "Name": "SearchNotifications",
+      "ActionConditionKeys": [
+        "connect:InstanceId",
+        "connect:SearchTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "SearchPredefinedAttributes",
       "ActionConditionKeys": [
         "connect:InstanceId"
@@ -6716,9 +6935,6 @@
       "Resources": [
         {
           "Name": "contact-flow"
-        },
-        {
-          "Name": "instance"
         }
       ],
       "SupportedBy": {
@@ -6802,9 +7018,6 @@
       "Resources": [
         {
           "Name": "contact-flow"
-        },
-        {
-          "Name": "instance"
         }
       ],
       "SupportedBy": {
@@ -7895,6 +8108,30 @@
       }
     },
     {
+      "Name": "UpdateNotificationContent",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "notification"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateParticipantAuthentication",
       "ActionConditionKeys": [
         "connect:InstanceId"
@@ -8565,6 +8802,30 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "UpdateUserNotificationStatus",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "user"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -9745,6 +10006,10 @@
       "Name": "CreateNotification",
       "AuthorizedActions": [
         {
+          "Name": "CreateNotification",
+          "Service": "connect"
+        },
+        {
           "Name": "TagResource",
           "Service": "connect"
         }
@@ -10409,6 +10674,12 @@
     },
     {
       "Name": "DeleteNotification",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteNotification",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -10989,6 +11260,12 @@
     },
     {
       "Name": "DescribeNotification",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeNotification",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -12352,6 +12629,12 @@
     },
     {
       "Name": "ListNotifications",
+      "AuthorizedActions": [
+        {
+          "Name": "ListNotifications",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -12776,6 +13059,12 @@
     },
     {
       "Name": "ListUserNotifications",
+      "AuthorizedActions": [
+        {
+          "Name": "ListUserNotifications",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -13230,6 +13519,16 @@
     },
     {
       "Name": "SearchNotifications",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeNotification",
+          "Service": "connect"
+        },
+        {
+          "Name": "SearchNotifications",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -14328,6 +14627,12 @@
     },
     {
       "Name": "UpdateNotificationContent",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateNotificationContent",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -14796,6 +15101,12 @@
     },
     {
       "Name": "UpdateUserNotificationStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateUserNotificationStatus",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -15120,6 +15431,15 @@
       "Name": "legacy-phone-number",
       "ARNFormats": [
         "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/phone-number/${PhoneNumberId}"
+      ]
+    },
+    {
+      "Name": "notification",
+      "ARNFormats": [
+        "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/notification/${NotificationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
