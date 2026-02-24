@@ -58,6 +58,9 @@
       "Resources": [
         {
           "Name": "Flow"
+        },
+        {
+          "Name": "MediaStream"
         }
       ],
       "SupportedBy": {
@@ -136,6 +139,9 @@
       "Resources": [
         {
           "Name": "Flow"
+        },
+        {
+          "Name": "VpcInterface"
         }
       ],
       "SupportedBy": {
@@ -994,6 +1000,9 @@
       "Resources": [
         {
           "Name": "Flow"
+        },
+        {
+          "Name": "MediaStream"
         }
       ],
       "SupportedBy": {
@@ -1060,6 +1069,9 @@
       "Resources": [
         {
           "Name": "Flow"
+        },
+        {
+          "Name": "VpcInterface"
         }
       ],
       "SupportedBy": {
@@ -1287,6 +1299,9 @@
           "Name": "Flow"
         },
         {
+          "Name": "MediaStream"
+        },
+        {
           "Name": "Output"
         },
         {
@@ -1300,6 +1315,9 @@
         },
         {
           "Name": "Source"
+        },
+        {
+          "Name": "VpcInterface"
         }
       ],
       "SupportedBy": {
@@ -1348,6 +1366,9 @@
           "Name": "Flow"
         },
         {
+          "Name": "MediaStream"
+        },
+        {
           "Name": "Output"
         },
         {
@@ -1361,6 +1382,9 @@
         },
         {
           "Name": "Source"
+        },
+        {
+          "Name": "VpcInterface"
         }
       ],
       "SupportedBy": {
@@ -1501,6 +1525,9 @@
       "Resources": [
         {
           "Name": "Flow"
+        },
+        {
+          "Name": "MediaStream"
         }
       ],
       "SupportedBy": {
@@ -3213,6 +3240,15 @@
       ]
     },
     {
+      "Name": "MediaStream",
+      "ARNFormats": [
+        "arn:${Partition}:mediaconnect:${Region}:${Account}:flow:${FlowId}:${FlowName}/mediaStream/${MediaStreamName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
       "Name": "Offering",
       "ARNFormats": [
         "arn:${Partition}:mediaconnect:${Region}:offering:${OfferingId}"
@@ -3264,6 +3300,15 @@
       "Name": "Source",
       "ARNFormats": [
         "arn:${Partition}:mediaconnect:${Region}:${Account}:source:${SourceId}:${SourceName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "VpcInterface",
+      "ARNFormats": [
+        "arn:${Partition}:mediaconnect:${Region}:${Account}:flow:${FlowId}:${FlowName}/vpcInterface/${VpcInterfaceName}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
