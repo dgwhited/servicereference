@@ -669,6 +669,26 @@
       }
     },
     {
+      "Name": "GetTopPathStatisticsByTraffic",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "webacl"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetWebACL",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -1798,6 +1818,22 @@
         {
           "Name": "wafv2",
           "Method": "get_sampled_requests",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetTopPathStatisticsByTraffic",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTopPathStatisticsByTraffic",
+          "Service": "wafv2"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "wafv2",
+          "Method": "get_top_path_statistics_by_traffic",
           "Package": "Boto3"
         }
       ]
