@@ -1483,6 +1483,35 @@
       }
     },
     {
+      "Name": "AttachResourcesToPlacementGroup",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "placement-group",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:PlacementGroupName",
+            "ec2:PlacementGroupStrategy",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "AttachVerifiedAccessTrustProvider",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -4660,6 +4689,67 @@
       }
     },
     {
+      "Name": "CreateSecondaryNetwork",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "secondary-network",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateSecondarySubnet",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "secondary-network",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "secondary-subnet",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateSecurityGroup",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -5567,6 +5657,35 @@
             "ec2:ResourceTag/${TagKey}",
             "ec2:RouteTableID",
             "ec2:Vpc"
+          ]
+        },
+        {
+          "Name": "secondary-interface",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:AvailabilityZone",
+            "ec2:AvailabilityZoneId",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "secondary-network",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "secondary-subnet",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
           ]
         },
         {
@@ -8871,6 +8990,60 @@
       }
     },
     {
+      "Name": "DeleteSecondaryNetwork",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "secondary-network",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteSecondarySubnet",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "secondary-subnet",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteSecurityGroup",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -9557,6 +9730,33 @@
         },
         {
           "Name": "route-table",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "secondary-interface",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "secondary-network",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "secondary-subnet",
           "ConditionKeys": [
             "aws:RequestTag/${TagKey}",
             "aws:ResourceTag/${TagKey}",
@@ -13435,6 +13635,60 @@
       }
     },
     {
+      "Name": "DescribeSecondaryInterfaces",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeSecondaryNetworks",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeSecondarySubnets",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeSecurityGroupReferences",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -14810,6 +15064,35 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DetachResourcesFromPlacementGroup",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "placement-group",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:PlacementGroupName",
+            "ec2:PlacementGroupStrategy",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -24218,6 +24501,13 @@
           ]
         },
         {
+          "Name": "secondary-subnet",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
+        {
           "Name": "security-group",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
@@ -28178,6 +28468,10 @@
       "Name": "CreateSecondaryNetwork",
       "AuthorizedActions": [
         {
+          "Name": "CreateSecondaryNetwork",
+          "Service": "ec2"
+        },
+        {
           "Name": "CreateTags",
           "Service": "ec2"
         }
@@ -28193,6 +28487,10 @@
     {
       "Name": "CreateSecondarySubnet",
       "AuthorizedActions": [
+        {
+          "Name": "CreateSecondarySubnet",
+          "Service": "ec2"
+        },
         {
           "Name": "CreateTags",
           "Service": "ec2"
@@ -29812,6 +30110,12 @@
     },
     {
       "Name": "DeleteSecondaryNetwork",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteSecondaryNetwork",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -29822,6 +30126,12 @@
     },
     {
       "Name": "DeleteSecondarySubnet",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteSecondarySubnet",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -32508,6 +32818,12 @@
     },
     {
       "Name": "DescribeSecondaryInterfaces",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeSecondaryInterfaces",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -32518,6 +32834,12 @@
     },
     {
       "Name": "DescribeSecondaryNetworks",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeSecondaryNetworks",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -32528,6 +32850,12 @@
     },
     {
       "Name": "DescribeSecondarySubnets",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeSecondarySubnets",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -39497,6 +39825,49 @@
         "ec2:ResourceTag/${TagKey}",
         "ec2:RouteTableID",
         "ec2:Vpc"
+      ]
+    },
+    {
+      "Name": "secondary-interface",
+      "ARNFormats": [
+        "arn:${Partition}:ec2:${Region}:${Account}:secondary-interface/${SecondaryInterfaceId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ec2:AvailabilityZone",
+        "ec2:AvailabilityZoneId",
+        "ec2:IsLaunchTemplateResource",
+        "ec2:LaunchTemplate",
+        "ec2:Region",
+        "ec2:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "secondary-network",
+      "ARNFormats": [
+        "arn:${Partition}:ec2:${Region}:${Account}:secondary-network/${SecondaryNetworkId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ec2:Region",
+        "ec2:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "secondary-subnet",
+      "ARNFormats": [
+        "arn:${Partition}:ec2:${Region}:${Account}:secondary-subnet/${SecondarySubnetId}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ec2:Region",
+        "ec2:ResourceTag/${TagKey}"
       ]
     },
     {
