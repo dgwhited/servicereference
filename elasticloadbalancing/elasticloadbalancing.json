@@ -452,14 +452,23 @@
     },
     {
       "Name": "CreateWebACLAssociation",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "elasticloadbalancing:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
-          "IsPermissionManagement": true,
+          "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "loadbalancer/app/"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -677,14 +686,23 @@
     },
     {
       "Name": "DeleteWebACLAssociation",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "elasticloadbalancing:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
-          "IsPermissionManagement": true,
+          "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "loadbalancer/app/"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -1027,10 +1045,10 @@
       "Name": "DescribeWebACLAssociation",
       "Annotations": {
         "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": true,
+          "IsList": true,
+          "IsPermissionManagement": false,
           "IsTaggingOnly": false,
-          "IsWrite": true
+          "IsWrite": false
         }
       },
       "SupportedBy": {
@@ -1112,14 +1130,23 @@
     },
     {
       "Name": "GetLoadBalancerWebACL",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "elasticloadbalancing:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
-          "IsPermissionManagement": true,
+          "IsPermissionManagement": false,
           "IsTaggingOnly": false,
-          "IsWrite": true
+          "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "loadbalancer/app/"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true

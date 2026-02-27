@@ -557,6 +557,8 @@
     {
       "Name": "CreateCatalog",
       "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
         "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
@@ -710,6 +712,8 @@
     {
       "Name": "CreateDatabase",
       "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
         "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions"
       ],
@@ -3958,10 +3962,22 @@
           "Name": "blueprint"
         },
         {
+          "Name": "catalog"
+        },
+        {
+          "Name": "connection"
+        },
+        {
+          "Name": "connectionType"
+        },
+        {
           "Name": "crawler"
         },
         {
           "Name": "customEntityType"
+        },
+        {
+          "Name": "database"
         },
         {
           "Name": "devendpoint"
@@ -4965,7 +4981,9 @@
     {
       "Name": "RegisterConnectionType",
       "ActionConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
       ],
       "Annotations": {
         "Properties": {
@@ -5735,7 +5753,13 @@
           "Name": "blueprint"
         },
         {
+          "Name": "catalog"
+        },
+        {
           "Name": "connection"
+        },
+        {
+          "Name": "connectionType"
         },
         {
           "Name": "crawler"
@@ -5745,6 +5769,9 @@
         },
         {
           "Name": "dataQualityRuleset"
+        },
+        {
+          "Name": "database"
         },
         {
           "Name": "devendpoint"
@@ -5842,7 +5869,13 @@
           "Name": "blueprint"
         },
         {
+          "Name": "catalog"
+        },
+        {
           "Name": "connection"
+        },
+        {
+          "Name": "connectionType"
         },
         {
           "Name": "crawler"
@@ -5852,6 +5885,9 @@
         },
         {
           "Name": "dataQualityRuleset"
+        },
+        {
+          "Name": "database"
         },
         {
           "Name": "devendpoint"
@@ -11249,6 +11285,9 @@
       "Name": "catalog",
       "ARNFormats": [
         "arn:${Partition}:glue:${Region}:${Account}:catalog/${CatalogName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -11306,6 +11345,9 @@
       "Name": "database",
       "ARNFormats": [
         "arn:${Partition}:glue:${Region}:${Account}:database/${DatabaseName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
