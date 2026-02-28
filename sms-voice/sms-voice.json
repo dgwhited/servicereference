@@ -3504,6 +3504,15 @@
       "Name": "UpdateConfigurationSetEventDestination",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "sms-voice.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "UpdateConfigurationSetEventDestination",
           "Service": "sms-voice"
         }
