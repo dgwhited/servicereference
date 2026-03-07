@@ -242,6 +242,26 @@
       }
     },
     {
+      "Name": "BatchGetTargetDomains",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "TargetDomain"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "BatchGetTasks",
       "Annotations": {
         "Properties": {
@@ -452,6 +472,21 @@
       }
     },
     {
+      "Name": "CreateTargetDomain",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteAgentInstance",
       "Annotations": {
         "Properties": {
@@ -652,6 +687,26 @@
       }
     },
     {
+      "Name": "DeleteTargetDomain",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "TargetDomain"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeFindings",
       "Annotations": {
         "Properties": {
@@ -773,6 +828,26 @@
     },
     {
       "Name": "GetDesignReviewArtifact",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "AgentSpace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetDesignReviewFeedback",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1312,6 +1387,21 @@
       }
     },
     {
+      "Name": "ListTargetDomains",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListTasks",
       "Annotations": {
         "Properties": {
@@ -1319,6 +1409,26 @@
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "AgentSpace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "PutDesignReviewFeedback",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
         }
       },
       "Resources": [
@@ -1632,6 +1742,26 @@
       }
     },
     {
+      "Name": "UpdateTargetDomain",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "TargetDomain"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "VerifyTargetDomain",
       "Annotations": {
         "Properties": {
@@ -1643,7 +1773,7 @@
       },
       "Resources": [
         {
-          "Name": "AgentSpace"
+          "Name": "TargetDomain"
         }
       ],
       "SupportedBy": {
@@ -1717,6 +1847,12 @@
       "Name": "SecurityRequirement",
       "ARNFormats": [
         "arn:${Partition}:securityagent:${Region}:${Account}:security-requirement/${SecurityRequirementId}"
+      ]
+    },
+    {
+      "Name": "TargetDomain",
+      "ARNFormats": [
+        "arn:${Partition}:securityagent:${Region}:${Account}:target-domain/${TargetDomainId}"
       ]
     }
   ],

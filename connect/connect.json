@@ -679,6 +679,7 @@
       "Name": "BatchGetAttachedFileMetadata",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "connect:InstanceId"
       ],
@@ -811,6 +812,7 @@
       "Name": "CompleteAttachedFileUpload",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "connect:InstanceId"
       ],
@@ -1260,6 +1262,7 @@
     {
       "Name": "CreateParticipant",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:InstanceId"
       ],
       "Annotations": {
@@ -1286,6 +1289,7 @@
     {
       "Name": "CreatePersistentContactAssociation",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:InstanceId"
       ],
       "Annotations": {
@@ -1821,6 +1825,7 @@
       "Name": "DeleteAttachedFile",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "connect:InstanceId"
       ],
@@ -2712,6 +2717,7 @@
     {
       "Name": "DescribeContact",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:Channel",
         "connect:ContactAssociationId",
         "connect:InstanceId",
@@ -3953,6 +3959,7 @@
       "Name": "GetAttachedFile",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "connect:InstanceId"
       ],
@@ -3977,6 +3984,7 @@
     {
       "Name": "GetContactAttributes",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:Channel",
         "connect:ContactAssociationId",
         "connect:InstanceId",
@@ -4430,6 +4438,7 @@
     {
       "Name": "ListAssociatedContacts",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:InstanceId"
       ],
       "Annotations": {
@@ -4499,6 +4508,7 @@
     {
       "Name": "ListContactEvaluations",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:InstanceId"
       ],
       "Annotations": {
@@ -4638,6 +4648,7 @@
     {
       "Name": "ListContactReferences",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:Channel",
         "connect:ContactAssociationId",
         "connect:InstanceId",
@@ -5255,6 +5266,9 @@
     },
     {
       "Name": "ListRealtimeContactAnalysisSegments",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -5276,6 +5290,7 @@
     {
       "Name": "ListRealtimeContactAnalysisSegmentsV2",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:ListRealtimeContactAnalysisSegmentsByOutputType",
         "connect:ListRealtimeContactAnalysisSegmentsBySegmentType"
       ],
@@ -6064,6 +6079,7 @@
     {
       "Name": "ResumeContactRecording",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:Channel",
         "connect:ContactAssociationId",
         "connect:UserArn"
@@ -6209,7 +6225,8 @@
         "connect:Channel",
         "connect:InstanceId",
         "connect:PreferredUserArn",
-        "connect:SearchContactsByContactAnalysis"
+        "connect:SearchContactsByContactAnalysis",
+        "connect:SearchTag/${TagKey}"
       ],
       "Annotations": {
         "Properties": {
@@ -6770,6 +6787,7 @@
       "Name": "StartAttachedFileUpload",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "connect:InstanceId",
         "connect:UserArn"
@@ -6821,6 +6839,7 @@
     {
       "Name": "StartContactEvaluation",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:InstanceId"
       ],
       "Annotations": {
@@ -6876,6 +6895,7 @@
     {
       "Name": "StartContactRecording",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:Channel",
         "connect:ContactAssociationId",
         "connect:UserArn"
@@ -6900,6 +6920,9 @@
     },
     {
       "Name": "StartContactStreaming",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -7048,6 +7071,7 @@
     {
       "Name": "StartScreenSharing",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:Channel",
         "connect:ContactAssociationId",
         "connect:InstanceId",
@@ -7186,6 +7210,7 @@
     {
       "Name": "StopContactRecording",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:Channel",
         "connect:ContactAssociationId",
         "connect:UserArn"
@@ -7210,6 +7235,9 @@
     },
     {
       "Name": "StopContactStreaming",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -7277,6 +7305,7 @@
     {
       "Name": "SuspendContactRecording",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:Channel",
         "connect:ContactAssociationId",
         "connect:UserArn"
@@ -7302,6 +7331,8 @@
     {
       "Name": "TagContact",
       "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
         "connect:Channel",
         "connect:ContactAssociationId",
         "connect:InstanceId",
@@ -7421,6 +7452,7 @@
     {
       "Name": "TransferContact",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:Channel",
         "connect:ContactAssociationId",
         "connect:InstanceId",
@@ -7453,6 +7485,7 @@
     {
       "Name": "UntagContact",
       "ActionConditionKeys": [
+        "aws:TagKeys",
         "connect:Channel",
         "connect:ContactAssociationId",
         "connect:InstanceId",
@@ -7618,6 +7651,7 @@
     {
       "Name": "UpdateContact",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:Channel",
         "connect:ContactAssociationId",
         "connect:InstanceId",
@@ -7644,6 +7678,7 @@
     {
       "Name": "UpdateContactAttributes",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:Channel",
         "connect:ContactAssociationId",
         "connect:InstanceId",
@@ -7840,6 +7875,7 @@
     {
       "Name": "UpdateContactRoutingData",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:Channel",
         "connect:ContactAssociationId",
         "connect:InstanceId",
@@ -7866,6 +7902,7 @@
     {
       "Name": "UpdateContactSchedule",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:Channel",
         "connect:ContactAssociationId",
         "connect:InstanceId",
@@ -8157,6 +8194,7 @@
     {
       "Name": "UpdateParticipantRoleConfig",
       "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
         "connect:InstanceId"
       ],
       "Annotations": {
