@@ -8104,12 +8104,6 @@
     },
     {
       "Name": "DisableTopicRule",
-      "AuthorizedActions": [
-        {
-          "Name": "DisableTopicRule",
-          "Service": "iot"
-        }
-      ],
       "SDK": [
         {
           "Name": "iot",
@@ -9947,6 +9941,12 @@
     },
     {
       "Name": "StartOnDemandAuditTask",
+      "AuthorizedActions": [
+        {
+          "Name": "StartOnDemandAuditTask",
+          "Service": "iot"
+        }
+      ],
       "SDK": [
         {
           "Name": "iot",
@@ -10548,6 +10548,21 @@
     },
     {
       "Name": "UpdateStream",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "iot.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateStream",
+          "Service": "iot"
+        }
+      ],
       "SDK": [
         {
           "Name": "iot",
