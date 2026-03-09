@@ -34,7 +34,8 @@
         "ram:RequestedResourceType",
         "ram:ResourceArn",
         "ram:ResourceShareName",
-        "ram:ResourceTag/${TagKey}"
+        "ram:ResourceTag/${TagKey}",
+        "ram:RetainSharingOnAccountLeaveOrganization"
       ],
       "Annotations": {
         "Properties": {
@@ -135,7 +136,8 @@
         "ram:Principal",
         "ram:RequestedAllowsExternalPrincipals",
         "ram:RequestedResourceType",
-        "ram:ResourceArn"
+        "ram:ResourceArn",
+        "ram:RetainSharingOnAccountLeaveOrganization"
       ],
       "Annotations": {
         "Properties": {
@@ -205,7 +207,8 @@
         "aws:ResourceTag/${TagKey}",
         "ram:AllowsExternalPrincipals",
         "ram:ResourceShareName",
-        "ram:ResourceTag/${TagKey}"
+        "ram:ResourceTag/${TagKey}",
+        "ram:RetainSharingOnAccountLeaveOrganization"
       ],
       "Annotations": {
         "Properties": {
@@ -234,7 +237,8 @@
         "ram:RequestedResourceType",
         "ram:ResourceArn",
         "ram:ResourceShareName",
-        "ram:ResourceTag/${TagKey}"
+        "ram:ResourceTag/${TagKey}",
+        "ram:RetainSharingOnAccountLeaveOrganization"
       ],
       "Annotations": {
         "Properties": {
@@ -500,7 +504,8 @@
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
         "ram:AllowsExternalPrincipals",
-        "ram:ResourceShareName"
+        "ram:ResourceShareName",
+        "ram:RetainSharingOnAccountLeaveOrganization"
       ],
       "Annotations": {
         "Properties": {
@@ -548,6 +553,21 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListSourceAssociations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -729,7 +749,8 @@
         "ram:AllowsExternalPrincipals",
         "ram:RequestedAllowsExternalPrincipals",
         "ram:ResourceShareName",
-        "ram:ResourceTag/${TagKey}"
+        "ram:ResourceTag/${TagKey}",
+        "ram:RetainSharingOnAccountLeaveOrganization"
       ],
       "Annotations": {
         "Properties": {
@@ -821,6 +842,12 @@
       "Name": "ram:ResourceTag/${TagKey}",
       "Types": [
         "String"
+      ]
+    },
+    {
+      "Name": "ram:RetainSharingOnAccountLeaveOrganization",
+      "Types": [
+        "Bool"
       ]
     },
     {
@@ -1257,6 +1284,12 @@
     },
     {
       "Name": "ListSourceAssociations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListSourceAssociations",
+          "Service": "ram"
+        }
+      ],
       "SDK": [
         {
           "Name": "ram",
