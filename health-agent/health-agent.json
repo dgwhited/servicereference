@@ -984,6 +984,15 @@
           "Service": "health-agent"
         },
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "health-agent.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "TagResource",
           "Service": "health-agent"
         }
