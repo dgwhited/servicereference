@@ -22,6 +22,26 @@
       }
     },
     {
+      "Name": "AddUserPoolClientSecret",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "userpool"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "AdminAddUserToGroup",
       "Annotations": {
         "Properties": {
@@ -990,6 +1010,26 @@
       }
     },
     {
+      "Name": "DeleteUserPoolClientSecret",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "userpool"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteUserPoolDomain",
       "Annotations": {
         "Properties": {
@@ -1660,6 +1700,26 @@
       }
     },
     {
+      "Name": "ListUserPoolClientSecrets",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "userpool"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListUserPoolClients",
       "Annotations": {
         "Properties": {
@@ -2275,6 +2335,12 @@
     },
     {
       "Name": "AddUserPoolClientSecret",
+      "AuthorizedActions": [
+        {
+          "Name": "AddUserPoolClientSecret",
+          "Service": "cognito-idp"
+        }
+      ],
       "SDK": [
         {
           "Name": "cognito-idp",
@@ -3099,6 +3165,12 @@
     },
     {
       "Name": "DeleteUserPoolClientSecret",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteUserPoolClientSecret",
+          "Service": "cognito-idp"
+        }
+      ],
       "SDK": [
         {
           "Name": "cognito-idp",
@@ -3657,6 +3729,12 @@
     },
     {
       "Name": "ListUserPoolClientSecrets",
+      "AuthorizedActions": [
+        {
+          "Name": "ListUserPoolClientSecrets",
+          "Service": "cognito-idp"
+        }
+      ],
       "SDK": [
         {
           "Name": "cognito-idp",
