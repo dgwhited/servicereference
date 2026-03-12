@@ -10291,6 +10291,25 @@
     },
     {
       "Name": "CreateInferenceRecommendationsJob",
+      "AuthorizedActions": [
+        {
+          "Name": "AddTags",
+          "Service": "sagemaker"
+        },
+        {
+          "Name": "CreateInferenceRecommendationsJob",
+          "Service": "sagemaker"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "sagemaker.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "sagemaker",

@@ -10554,6 +10554,21 @@
     },
     {
       "Name": "UpdateStream",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "iot.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateStream",
+          "Service": "iot"
+        }
+      ],
       "SDK": [
         {
           "Name": "iot",
