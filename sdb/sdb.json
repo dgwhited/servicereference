@@ -142,6 +142,26 @@
       }
     },
     {
+      "Name": "GetExport",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "export"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListDomains",
       "Annotations": {
         "Properties": {
@@ -154,6 +174,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListExports",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -184,6 +224,26 @@
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "domain"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "StartDomainExport",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
         }
       },
       "Resources": [
@@ -270,6 +330,12 @@
     },
     {
       "Name": "GetExport",
+      "AuthorizedActions": [
+        {
+          "Name": "GetExport",
+          "Service": "sdb"
+        }
+      ],
       "SDK": [
         {
           "Name": "simpledbv2",
@@ -290,6 +356,12 @@
     },
     {
       "Name": "ListExports",
+      "AuthorizedActions": [
+        {
+          "Name": "ListExports",
+          "Service": "sdb"
+        }
+      ],
       "SDK": [
         {
           "Name": "simpledbv2",
@@ -320,6 +392,12 @@
     },
     {
       "Name": "StartDomainExport",
+      "AuthorizedActions": [
+        {
+          "Name": "StartDomainExport",
+          "Service": "sdb"
+        }
+      ],
       "SDK": [
         {
           "Name": "simpledbv2",
@@ -334,6 +412,12 @@
       "Name": "domain",
       "ARNFormats": [
         "arn:${Partition}:sdb:${Region}:${Account}:domain/${DomainName}"
+      ]
+    },
+    {
+      "Name": "export",
+      "ARNFormats": [
+        "arn:${Partition}:sdb:${Region}:${Account}:domain/${DomainName}/export/${ExportUUID}"
       ]
     }
   ],
