@@ -1187,6 +1187,9 @@
       "Name": "Agent",
       "ARNFormats": [
         "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/agent/${AgentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -1202,24 +1205,36 @@
       "Name": "Integration",
       "ARNFormats": [
         "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/integration/${IntegrationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "PatientInsightsJob",
       "ARNFormats": [
         "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/patient-insights-job/${JobId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "Session",
       "ARNFormats": [
         "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/session/${SessionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "Subscription",
       "ARNFormats": [
         "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/subscription/${SubscriptionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     }
   ],
