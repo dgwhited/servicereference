@@ -6,6 +6,7 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys",
+        "ecs:instance-metadata-tags-propagation",
         "ecs:propagate-tags"
       ],
       "Annotations": {
@@ -1422,6 +1423,7 @@
       "Name": "UpdateCapacityProvider",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
+        "ecs:instance-metadata-tags-propagation",
         "ecs:propagate-tags"
       ],
       "Annotations": {
@@ -1790,6 +1792,12 @@
       "Name": "ecs:fargate-ephemeral-storage-kms-key",
       "Types": [
         "String"
+      ]
+    },
+    {
+      "Name": "ecs:instance-metadata-tags-propagation",
+      "Types": [
+        "Bool"
       ]
     },
     {
