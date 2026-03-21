@@ -103,6 +103,33 @@
       }
     },
     {
+      "Name": "CreateQuotaShare",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "job-queue"
+        },
+        {
+          "Name": "quota-share"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateSchedulingPolicy",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -208,6 +235,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteQuotaShare",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "quota-share"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -351,6 +398,26 @@
       }
     },
     {
+      "Name": "DescribeQuotaShare",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "quota-share"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeSchedulingPolicies",
       "Annotations": {
         "Properties": {
@@ -466,6 +533,26 @@
       }
     },
     {
+      "Name": "ListQuotaShares",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "job-queue"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListSchedulingPolicies",
       "Annotations": {
         "Properties": {
@@ -520,6 +607,9 @@
         },
         {
           "Name": "job-queue"
+        },
+        {
+          "Name": "quota-share"
         },
         {
           "Name": "scheduling-policy"
@@ -625,7 +715,8 @@
       "Name": "SubmitServiceJob",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "batch:SchedulingPriority"
       ],
       "Annotations": {
         "Properties": {
@@ -638,6 +729,9 @@
       "Resources": [
         {
           "Name": "job-queue"
+        },
+        {
+          "Name": "quota-share"
         },
         {
           "Name": "service-job",
@@ -680,6 +774,9 @@
         },
         {
           "Name": "job-queue"
+        },
+        {
+          "Name": "quota-share"
         },
         {
           "Name": "scheduling-policy"
@@ -766,6 +863,9 @@
           "Name": "job-queue"
         },
         {
+          "Name": "quota-share"
+        },
+        {
           "Name": "scheduling-policy"
         },
         {
@@ -847,6 +947,26 @@
       }
     },
     {
+      "Name": "UpdateQuotaShare",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "quota-share"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateSchedulingPolicy",
       "Annotations": {
         "Properties": {
@@ -884,6 +1004,29 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "UpdateServiceJob",
+      "ActionConditionKeys": [
+        "batch:SchedulingPriority"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "service-job"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     }
   ],
@@ -982,6 +1125,12 @@
       "Name": "batch:Privileged",
       "Types": [
         "Bool"
+      ]
+    },
+    {
+      "Name": "batch:SchedulingPriority",
+      "Types": [
+        "Numeric"
       ]
     },
     {
@@ -1089,6 +1238,10 @@
       "Name": "CreateQuotaShare",
       "AuthorizedActions": [
         {
+          "Name": "CreateQuotaShare",
+          "Service": "batch"
+        },
+        {
           "Name": "TagResource",
           "Service": "batch"
         }
@@ -1191,6 +1344,12 @@
     },
     {
       "Name": "DeleteQuotaShare",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteQuotaShare",
+          "Service": "batch"
+        }
+      ],
       "SDK": [
         {
           "Name": "batch",
@@ -1329,6 +1488,12 @@
     },
     {
       "Name": "DescribeQuotaShare",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeQuotaShare",
+          "Service": "batch"
+        }
+      ],
       "SDK": [
         {
           "Name": "batch",
@@ -1451,6 +1616,12 @@
     },
     {
       "Name": "ListQuotaShares",
+      "AuthorizedActions": [
+        {
+          "Name": "ListQuotaShares",
+          "Service": "batch"
+        }
+      ],
       "SDK": [
         {
           "Name": "batch",
@@ -1709,6 +1880,12 @@
     },
     {
       "Name": "UpdateQuotaShare",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateQuotaShare",
+          "Service": "batch"
+        }
+      ],
       "SDK": [
         {
           "Name": "batch",
@@ -1751,6 +1928,12 @@
     },
     {
       "Name": "UpdateServiceJob",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateServiceJob",
+          "Service": "batch"
+        }
+      ],
       "SDK": [
         {
           "Name": "batch",
@@ -1807,6 +1990,15 @@
       "Name": "job-queue",
       "ARNFormats": [
         "arn:${Partition}:batch:${Region}:${Account}:job-queue/${JobQueueName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "quota-share",
+      "ARNFormats": [
+        "arn:${Partition}:batch:${Region}:${Account}:job-queue/${JobQueueName}/quota-share/${QuotaShareName}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
