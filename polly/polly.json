@@ -122,6 +122,26 @@
       }
     },
     {
+      "Name": "StartSpeechSynthesisStream",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "lexicon"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "StartSpeechSynthesisTask",
       "Annotations": {
         "Properties": {
@@ -277,6 +297,12 @@
     },
     {
       "Name": "StartSpeechSynthesisStream",
+      "AuthorizedActions": [
+        {
+          "Name": "StartSpeechSynthesisStream",
+          "Service": "polly"
+        }
+      ],
       "SDK": [
         {
           "Name": "polly",
