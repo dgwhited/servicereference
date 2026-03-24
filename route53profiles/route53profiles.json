@@ -5,7 +5,8 @@
       "Name": "AssociateProfile",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "route53profiles:ResourceIds"
       ],
       "Annotations": {
         "Properties": {
@@ -22,6 +23,13 @@
     },
     {
       "Name": "AssociateResourceToProfile",
+      "ActionConditionKeys": [
+        "route53profiles:FirewallRuleGroupPriority",
+        "route53profiles:HostedZoneDomains",
+        "route53profiles:ResolverRuleDomains",
+        "route53profiles:ResourceArns",
+        "route53profiles:ResourceTypes"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -71,6 +79,9 @@
     },
     {
       "Name": "DisassociateProfile",
+      "ActionConditionKeys": [
+        "route53profiles:ResourceIds"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -86,6 +97,13 @@
     },
     {
       "Name": "DisassociateResourceFromProfile",
+      "ActionConditionKeys": [
+        "route53profiles:FirewallRuleGroupPriority",
+        "route53profiles:HostedZoneDomains",
+        "route53profiles:ResolverRuleDomains",
+        "route53profiles:ResourceArns",
+        "route53profiles:ResourceTypes"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -299,6 +317,12 @@
     },
     {
       "Name": "UpdateProfileResourceAssociation",
+      "ActionConditionKeys": [
+        "route53profiles:FirewallRuleGroupPriority",
+        "route53profiles:HostedZoneDomains",
+        "route53profiles:ResolverRuleDomains",
+        "route53profiles:ResourceTypes"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -330,6 +354,42 @@
       "Name": "aws:TagKeys",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "route53profiles:FirewallRuleGroupPriority",
+      "Types": [
+        "Numeric"
+      ]
+    },
+    {
+      "Name": "route53profiles:HostedZoneDomains",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "route53profiles:ResolverRuleDomains",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "route53profiles:ResourceArns",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "route53profiles:ResourceIds",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "route53profiles:ResourceTypes",
+      "Types": [
+        "String"
       ]
     }
   ],
