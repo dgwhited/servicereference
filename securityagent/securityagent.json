@@ -22,26 +22,6 @@
       }
     },
     {
-      "Name": "AddControl",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "Application"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
       "Name": "BatchDeletePentests",
       "Annotations": {
         "Properties": {
@@ -54,26 +34,6 @@
       "Resources": [
         {
           "Name": "AgentSpace"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "BatchGetAgentInstances",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "AgentInstance"
         }
       ],
       "SupportedBy": {
@@ -282,27 +242,11 @@
       }
     },
     {
-      "Name": "CreateAgentInstance",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "Application"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
       "Name": "CreateAgentSpace",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -318,6 +262,10 @@
     },
     {
       "Name": "CreateApplication",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -352,27 +300,11 @@
       }
     },
     {
-      "Name": "CreateDocumentReview",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "AgentSpace"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
       "Name": "CreateIntegration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -463,7 +395,7 @@
       },
       "Resources": [
         {
-          "Name": "Application"
+          "Name": "SecurityRequirementPack"
         }
       ],
       "SupportedBy": {
@@ -481,26 +413,6 @@
           "IsWrite": true
         }
       },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "DeleteAgentInstance",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "AgentInstance"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -567,47 +479,7 @@
       }
     },
     {
-      "Name": "DeleteControl",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "Control"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
       "Name": "DeleteDesignReview",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "AgentSpace"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "DeleteDocumentReview",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -678,7 +550,7 @@
       },
       "Resources": [
         {
-          "Name": "SecurityRequirement"
+          "Name": "SecurityRequirementPack"
         }
       ],
       "SupportedBy": {
@@ -787,26 +659,6 @@
       }
     },
     {
-      "Name": "GetControl",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "Control"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
       "Name": "GetDesignReview",
       "Annotations": {
         "Properties": {
@@ -887,46 +739,6 @@
       }
     },
     {
-      "Name": "GetDocumentReview",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "AgentSpace"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "GetDocumentReviewArtifact",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "AgentSpace"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
       "Name": "GetIntegration",
       "Annotations": {
         "Properties": {
@@ -947,21 +759,6 @@
       }
     },
     {
-      "Name": "GetLoginSessionCredentials",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
       "Name": "GetSecurityRequirement",
       "Annotations": {
         "Properties": {
@@ -973,24 +770,9 @@
       },
       "Resources": [
         {
-          "Name": "SecurityRequirement"
+          "Name": "SecurityRequirementPack"
         }
       ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "HandleOneTimeLoginSession",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -1011,41 +793,6 @@
           "Name": "Application"
         }
       ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "ListAgentInstanceTasks",
-      "Annotations": {
-        "Properties": {
-          "IsList": true,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "AgentInstance"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "ListAgentInstances",
-      "Annotations": {
-        "Properties": {
-          "IsList": true,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -1102,21 +849,6 @@
       }
     },
     {
-      "Name": "ListControls",
-      "Annotations": {
-        "Properties": {
-          "IsList": true,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
       "Name": "ListDesignReviewComments",
       "Annotations": {
         "Properties": {
@@ -1158,46 +890,6 @@
     },
     {
       "Name": "ListDiscoveredEndpoints",
-      "Annotations": {
-        "Properties": {
-          "IsList": true,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "AgentSpace"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "ListDocumentReviewComments",
-      "Annotations": {
-        "Properties": {
-          "IsList": true,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "AgentSpace"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "ListDocumentReviews",
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -1381,6 +1073,43 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "SecurityRequirementPack"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListTagsForResource",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "AgentSpace"
+        },
+        {
+          "Name": "Application"
+        },
+        {
+          "Name": "Integration"
+        },
+        {
+          "Name": "SecurityRequirementPack"
+        },
+        {
+          "Name": "TargetDomain"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -1542,18 +1271,34 @@
       }
     },
     {
-      "Name": "ToggleManagedControl",
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
           "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
+          "IsTaggingOnly": true,
           "IsWrite": true
         }
       },
       "Resources": [
         {
-          "Name": "Control"
+          "Name": "AgentSpace"
+        },
+        {
+          "Name": "Application"
+        },
+        {
+          "Name": "Integration"
+        },
+        {
+          "Name": "SecurityRequirementPack"
+        },
+        {
+          "Name": "TargetDomain"
         }
       ],
       "SupportedBy": {
@@ -1573,7 +1318,7 @@
       },
       "Resources": [
         {
-          "Name": "SecurityRequirement"
+          "Name": "SecurityRequirementPack"
         }
       ],
       "SupportedBy": {
@@ -1582,18 +1327,33 @@
       }
     },
     {
-      "Name": "UpdateAgentInstance",
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
           "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
+          "IsTaggingOnly": true,
           "IsWrite": true
         }
       },
       "Resources": [
         {
-          "Name": "AgentInstance"
+          "Name": "AgentSpace"
+        },
+        {
+          "Name": "Application"
+        },
+        {
+          "Name": "Integration"
+        },
+        {
+          "Name": "SecurityRequirementPack"
+        },
+        {
+          "Name": "TargetDomain"
         }
       ],
       "SupportedBy": {
@@ -1634,26 +1394,6 @@
       "Resources": [
         {
           "Name": "Application"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "UpdateControl",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "Control"
         }
       ],
       "SupportedBy": {
@@ -1733,7 +1473,7 @@
       },
       "Resources": [
         {
-          "Name": "SecurityRequirement"
+          "Name": "SecurityRequirementPack"
         }
       ],
       "SupportedBy": {
@@ -1782,77 +1522,70 @@
       }
     }
   ],
-  "Resources": [
+  "ConditionKeys": [
     {
-      "Name": "AgentInstance",
-      "ARNFormats": [
-        "arn:${Partition}:securityagent:${Region}:${Account}:agent-instance/${AgentId}"
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
       ]
     },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Resources": [
     {
       "Name": "AgentSpace",
       "ARNFormats": [
         "arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "Application",
       "ARNFormats": [
         "arn:${Partition}:securityagent:${Region}:${Account}:application/${ApplicationId}"
-      ]
-    },
-    {
-      "Name": "Artifact",
-      "ARNFormats": [
-        "arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}/artifact/${ArtifactId}"
-      ]
-    },
-    {
-      "Name": "Control",
-      "ARNFormats": [
-        "arn:${Partition}:securityagent:${Region}:${Account}:control/${ControlId}"
-      ]
-    },
-    {
-      "Name": "Finding",
-      "ARNFormats": [
-        "arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}/finding/${FindingId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "Integration",
       "ARNFormats": [
         "arn:${Partition}:securityagent:${Region}:${Account}:integration/${IntegrationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
-      "Name": "Pentest",
+      "Name": "SecurityRequirementPack",
       "ARNFormats": [
-        "arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}/pentest/${PentestId}"
-      ]
-    },
-    {
-      "Name": "PentestJob",
-      "ARNFormats": [
-        "arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}/pentest-job/${JobId}"
-      ]
-    },
-    {
-      "Name": "PentestTask",
-      "ARNFormats": [
-        "arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}/pentest-task/${TaskId}"
-      ]
-    },
-    {
-      "Name": "SecurityRequirement",
-      "ARNFormats": [
-        "arn:${Partition}:securityagent:${Region}:${Account}:security-requirement/${SecurityRequirementId}"
+        "arn:${Partition}:securityagent:${Region}:${Account}:security-requirement-pack/${SecurityRequirementPackId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "TargetDomain",
       "ARNFormats": [
         "arn:${Partition}:securityagent:${Region}:${Account}:target-domain/${TargetDomainId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     }
   ],

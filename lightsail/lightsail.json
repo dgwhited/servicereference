@@ -232,6 +232,10 @@
     },
     {
       "Name": "CreateContactMethod",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -2621,6 +2625,9 @@
           "Name": "Certificate"
         },
         {
+          "Name": "ContactMethod"
+        },
+        {
           "Name": "ContainerService"
         },
         {
@@ -2716,6 +2723,9 @@
         },
         {
           "Name": "Certificate"
+        },
+        {
+          "Name": "ContactMethod"
         },
         {
           "Name": "ContainerService"
@@ -5657,6 +5667,9 @@
       "Name": "ContactMethod",
       "ARNFormats": [
         "arn:${Partition}:lightsail:${Region}:${Account}:ContactMethod/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
