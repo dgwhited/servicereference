@@ -170,6 +170,25 @@
       }
     },
     {
+      "Name": "CreateConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateMultipartReadSetUpload",
       "Annotations": {
         "Properties": {
@@ -383,6 +402,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "configuration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -659,6 +698,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "GetConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "configuration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1117,6 +1176,21 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListConfigurations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1608,6 +1682,9 @@
       },
       "Resources": [
         {
+          "Name": "configuration"
+        },
+        {
           "Name": "run"
         },
         {
@@ -1673,6 +1750,9 @@
           "Name": "WorkflowVersion"
         },
         {
+          "Name": "configuration"
+        },
+        {
           "Name": "readSet"
         },
         {
@@ -1727,6 +1807,9 @@
         },
         {
           "Name": "WorkflowVersion"
+        },
+        {
+          "Name": "configuration"
         },
         {
           "Name": "readSet"
@@ -2120,6 +2203,16 @@
       ]
     },
     {
+      "Name": "CreateConfiguration",
+      "SDK": [
+        {
+          "Name": "omics",
+          "Method": "create_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateMultipartReadSetUpload",
       "AuthorizedActions": [
         {
@@ -2341,6 +2434,16 @@
         {
           "Name": "omics",
           "Method": "delete_batch",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteConfiguration",
+      "SDK": [
+        {
+          "Name": "omics",
+          "Method": "delete_configuration",
           "Package": "Boto3"
         }
       ]
@@ -2579,6 +2682,16 @@
         {
           "Name": "omics",
           "Method": "get_batch",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetConfiguration",
+      "SDK": [
+        {
+          "Name": "omics",
+          "Method": "get_configuration",
           "Package": "Boto3"
         }
       ]
@@ -2957,6 +3070,16 @@
         {
           "Name": "omics",
           "Method": "list_batch",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListConfigurations",
+      "SDK": [
+        {
+          "Name": "omics",
+          "Method": "list_configurations",
           "Package": "Boto3"
         }
       ]
@@ -3698,6 +3821,15 @@
       "Name": "WorkflowVersion",
       "ARNFormats": [
         "arn:${Partition}:omics:${Region}:${Account}:workflow/${Id}/version/${VersionName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "configuration",
+      "ARNFormats": [
+        "arn:${Partition}:omics:${Region}:${Account}:configuration/${Name}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
