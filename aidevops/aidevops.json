@@ -125,6 +125,26 @@
       }
     },
     {
+      "Name": "CreateOneTimeLoginSession",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "agentspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteAgentSpace",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -1103,6 +1123,663 @@
       "Name": "aws:TagKeys",
       "Types": [
         "ArrayOfString"
+      ]
+    }
+  ],
+  "Operations": [
+    {
+      "Name": "AllowVendedLogDeliveryForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "AllowVendedLogDeliveryForResource",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "allow_vended_log_delivery_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "AssociateService",
+      "AuthorizedActions": [
+        {
+          "Name": "AssociateService",
+          "Service": "aidevops"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "aidevops.amazonaws.com",
+              "cloudsmith.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "associate_service",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAgentSpace",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateAgentSpace",
+          "Service": "aidevops"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "create_agent_space",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateBacklogTask",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "create_backlog_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateChat",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "create_chat",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePrivateConnection",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "create_private_connection",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAgentSpace",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteAgentSpace",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "delete_agent_space",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePrivateConnection",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "delete_private_connection",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeregisterService",
+      "AuthorizedActions": [
+        {
+          "Name": "DeregisterService",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "deregister_service",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribePrivateConnection",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "describe_private_connection",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSupportLevel",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "describe_support_level",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DisableOperatorApp",
+      "AuthorizedActions": [
+        {
+          "Name": "DisableOperatorApp",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "disable_operator_app",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateService",
+      "AuthorizedActions": [
+        {
+          "Name": "DisassociateService",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "disassociate_service",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "EnableOperatorApp",
+      "AuthorizedActions": [
+        {
+          "Name": "EnableOperatorApp",
+          "Service": "aidevops"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "aidevops.amazonaws.com",
+              "cloudsmith.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "enable_operator_app",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "EndChatForCase",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "end_chat_for_case",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetAccountUsage",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "get_account_usage",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetAgentSpace",
+      "AuthorizedActions": [
+        {
+          "Name": "GetAgentSpace",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "get_agent_space",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetAssociation",
+      "AuthorizedActions": [
+        {
+          "Name": "GetAssociation",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "get_association",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetBacklogTask",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "get_backlog_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetOperatorApp",
+      "AuthorizedActions": [
+        {
+          "Name": "GetOperatorApp",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "get_operator_app",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetRecommendation",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "get_recommendation",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetService",
+      "AuthorizedActions": [
+        {
+          "Name": "GetService",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "get_service",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "InitiateChatForCase",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "initiate_chat_for_case",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListAgentSpaces",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAgentSpaces",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "list_agent_spaces",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListAssociations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAssociations",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "list_associations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListBacklogTasks",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "list_backlog_tasks",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListChats",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "list_chats",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListExecutions",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "list_executions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListGoals",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "list_goals",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListJournalRecords",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "list_journal_records",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPendingMessages",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "list_pending_messages",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPrivateConnections",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "list_private_connections",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListRecommendations",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "list_recommendations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListServices",
+      "AuthorizedActions": [
+        {
+          "Name": "ListServices",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "list_services",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListWebhooks",
+      "AuthorizedActions": [
+        {
+          "Name": "ListWebhooks",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "list_webhooks",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterService",
+      "AuthorizedActions": [
+        {
+          "Name": "RegisterService",
+          "Service": "aidevops"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "register_service",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SendMessage",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "send_message",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgentSpace",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateAgentSpace",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "update_agent_space",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAssociation",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "aidevops.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateAssociation",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "update_association",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBacklogTask",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "update_backlog_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGoal",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "update_goal",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateOperatorAppIdpConfig",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "update_operator_app_idp_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePrivateConnectionCertificate",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "update_private_connection_certificate",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRecommendation",
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "update_recommendation",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ValidateAwsAssociations",
+      "AuthorizedActions": [
+        {
+          "Name": "ValidateAwsAssociations",
+          "Service": "aidevops"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "devops-agent",
+          "Method": "validate_aws_associations",
+          "Package": "Boto3"
+        }
       ]
     }
   ],
