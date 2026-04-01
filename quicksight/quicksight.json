@@ -1726,6 +1726,26 @@
       }
     },
     {
+      "Name": "DescribeAutomationJob",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "automationJob"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeBrand",
       "Annotations": {
         "Properties": {
@@ -4143,6 +4163,26 @@
       "Resources": [
         {
           "Name": "assetBundleImportJob"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "StartAutomationJob",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "automation"
         }
       ],
       "SupportedBy": {
@@ -6849,6 +6889,16 @@
       ]
     },
     {
+      "Name": "DescribeAutomationJob",
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "describe_automation_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DescribeBrand",
       "AuthorizedActions": [
         {
@@ -8533,6 +8583,22 @@
       ]
     },
     {
+      "Name": "StartAutomationJob",
+      "AuthorizedActions": [
+        {
+          "Name": "StartAutomationJob",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "start_automation_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "StartDashboardSnapshotJob",
       "AuthorizedActions": [
         {
@@ -9509,6 +9575,24 @@
       "Name": "assignment",
       "ARNFormats": [
         "arn:${Partition}:quicksight::${Account}:assignment/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "automation",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:automation-group/${AutomationGroupId}/automation/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "automationGroup",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:automation-group/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "automationJob",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:automation-group/${AutomationGroupId}/automation/${AutomationId}/job/${ResourceId}"
       ]
     },
     {

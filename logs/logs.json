@@ -230,6 +230,30 @@
       }
     },
     {
+      "Name": "CreateLookupTable",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "lookup-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateScheduledQuery",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -491,6 +515,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteLookupTable",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "lookup-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -836,6 +880,21 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DescribeLookupTables",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1204,6 +1263,26 @@
       }
     },
     {
+      "Name": "GetLookupTable",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "lookup-table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetQueryResults",
       "Annotations": {
         "Properties": {
@@ -1521,6 +1600,9 @@
         },
         {
           "Name": "log-group"
+        },
+        {
+          "Name": "lookup-table"
         }
       ],
       "SupportedBy": {
@@ -2063,6 +2145,9 @@
           "Name": "log-group"
         },
         {
+          "Name": "lookup-table"
+        },
+        {
           "Name": "scheduled-query"
         }
       ],
@@ -2177,6 +2262,9 @@
           "Name": "log-group"
         },
         {
+          "Name": "lookup-table"
+        },
+        {
           "Name": "scheduled-query"
         }
       ],
@@ -2265,6 +2353,26 @@
           "IsWrite": true
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateLookupTable",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "lookup-table"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -2511,6 +2619,12 @@
     },
     {
       "Name": "CreateLookupTable",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateLookupTable",
+          "Service": "logs"
+        }
+      ],
       "SDK": [
         {
           "Name": "logs",
@@ -2758,6 +2872,12 @@
     },
     {
       "Name": "DeleteLookupTable",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteLookupTable",
+          "Service": "logs"
+        }
+      ],
       "SDK": [
         {
           "Name": "logs",
@@ -3088,6 +3208,12 @@
     },
     {
       "Name": "DescribeLookupTables",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeLookupTables",
+          "Service": "logs"
+        }
+      ],
       "SDK": [
         {
           "Name": "logs",
@@ -3436,6 +3562,12 @@
     },
     {
       "Name": "GetLookupTable",
+      "AuthorizedActions": [
+        {
+          "Name": "GetLookupTable",
+          "Service": "logs"
+        }
+      ],
       "SDK": [
         {
           "Name": "logs",
@@ -4216,6 +4348,12 @@
     },
     {
       "Name": "UpdateLookupTable",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateLookupTable",
+          "Service": "logs"
+        }
+      ],
       "SDK": [
         {
           "Name": "logs",
@@ -4309,6 +4447,15 @@
       "Name": "log-stream",
       "ARNFormats": [
         "arn:${Partition}:logs:${Region}:${Account}:log-group:${LogGroupName}:log-stream:${LogStreamName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "lookup-table",
+      "ARNFormats": [
+        "arn:${Partition}:logs:${Region}:${Account}:lookup-table:${LookupTableName}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

@@ -3324,6 +3324,26 @@
       }
     },
     {
+      "Name": "DeleteProcessingJob",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "processing-job"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteProject",
       "Annotations": {
         "Properties": {
@@ -3614,6 +3634,26 @@
         },
         {
           "Name": "workteam"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteTrainingJob",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "training-job"
         }
       ],
       "SupportedBy": {
@@ -7446,6 +7486,26 @@
       "Resources": [
         {
           "Name": "shared-model-event"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "StartClusterHealthCheck",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cluster"
         }
       ],
       "SupportedBy": {
@@ -11860,6 +11920,12 @@
     },
     {
       "Name": "DeleteProcessingJob",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteProcessingJob",
+          "Service": "sagemaker"
+        }
+      ],
       "SDK": [
         {
           "Name": "sagemaker",
@@ -11950,6 +12016,12 @@
     },
     {
       "Name": "DeleteTrainingJob",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteTrainingJob",
+          "Service": "sagemaker"
+        }
+      ],
       "SDK": [
         {
           "Name": "sagemaker",

@@ -310,6 +310,21 @@
       }
     },
     {
+      "Name": "SearchCertificates",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateCertificateOptions",
       "Annotations": {
         "Properties": {
@@ -631,6 +646,22 @@
         {
           "Name": "acm",
           "Method": "revoke_certificate",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SearchCertificates",
+      "AuthorizedActions": [
+        {
+          "Name": "SearchCertificates",
+          "Service": "acm"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "acm",
+          "Method": "search_certificates",
           "Package": "Boto3"
         }
       ]

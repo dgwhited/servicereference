@@ -1372,6 +1372,842 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "AddArtifact",
+      "AuthorizedActions": [
+        {
+          "Name": "AddArtifact",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "add_artifact",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "BatchDeletePentests",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchDeletePentests",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "batch_delete_pentests",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetAgentSpaces",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchGetAgentSpaces",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "batch_get_agent_spaces",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetArtifactMetadata",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchGetArtifactMetadata",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "batch_get_artifact_metadata",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetFindings",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchGetFindings",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "batch_get_findings",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetPentestJobTasks",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchGetPentestJobTasks",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "batch_get_pentest_job_tasks",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetPentestJobs",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchGetPentestJobs",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "batch_get_pentest_jobs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetPentests",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchGetPentests",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "batch_get_pentests",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "BatchGetTargetDomains",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchGetTargetDomains",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "batch_get_target_domains",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAgentSpace",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateAgentSpace",
+          "Service": "securityagent"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "securityagent.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "create_agent_space",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateApplication",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateApplication",
+          "Service": "securityagent"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "securityagent.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "create_application",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateIntegration",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateIntegration",
+          "Service": "securityagent"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "create_integration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMembership",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateMembership",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "create_membership",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePentest",
+      "AuthorizedActions": [
+        {
+          "Name": "CreatePentest",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "create_pentest",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTargetDomain",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateTargetDomain",
+          "Service": "securityagent"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "create_target_domain",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAgentSpace",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteAgentSpace",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "delete_agent_space",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteApplication",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteApplication",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "delete_application",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteArtifact",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteArtifact",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "delete_artifact",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteIntegration",
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "delete_integration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMembership",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteMembership",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "delete_membership",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTargetDomain",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteTargetDomain",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "delete_target_domain",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetApplication",
+      "AuthorizedActions": [
+        {
+          "Name": "GetApplication",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "get_application",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetArtifact",
+      "AuthorizedActions": [
+        {
+          "Name": "GetArtifact",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "get_artifact",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetIntegration",
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "get_integration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "InitiateProviderRegistration",
+      "AuthorizedActions": [
+        {
+          "Name": "InitiateProviderRegistration",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "initiate_provider_registration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListAgentSpaces",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAgentSpaces",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "list_agent_spaces",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplications",
+      "AuthorizedActions": [
+        {
+          "Name": "ListApplications",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "list_applications",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListArtifacts",
+      "AuthorizedActions": [
+        {
+          "Name": "ListArtifacts",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "list_artifacts",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDiscoveredEndpoints",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDiscoveredEndpoints",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "list_discovered_endpoints",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListFindings",
+      "AuthorizedActions": [
+        {
+          "Name": "ListFindings",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "list_findings",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListIntegratedResources",
+      "AuthorizedActions": [
+        {
+          "Name": "ListIntegratedResources",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "list_integrated_resources",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListIntegrations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListIntegrations",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "list_integrations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListMemberships",
+      "AuthorizedActions": [
+        {
+          "Name": "ListMemberships",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "list_memberships",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPentestJobTasks",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPentestJobTasks",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "list_pentest_job_tasks",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPentestJobsForPentest",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPentestJobsForPentest",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "list_pentest_jobs_for_pentest",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPentests",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPentests",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "list_pentests",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTargetDomains",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTargetDomains",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "list_target_domains",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartCodeRemediation",
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "start_code_remediation",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartPentestJob",
+      "AuthorizedActions": [
+        {
+          "Name": "StartPentestJob",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "start_pentest_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StopPentestJob",
+      "AuthorizedActions": [
+        {
+          "Name": "StopPentestJob",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "stop_pentest_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgentSpace",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "securityagent.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateAgentSpace",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "update_agent_space",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateApplication",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "securityagent.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateApplication",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "update_application",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFinding",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateFinding",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "update_finding",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateIntegratedResources",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateIntegratedResources",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "update_integrated_resources",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePentest",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdatePentest",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "update_pentest",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTargetDomain",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateTargetDomain",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "update_target_domain",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "VerifyTargetDomain",
+      "AuthorizedActions": [
+        {
+          "Name": "VerifyTargetDomain",
+          "Service": "securityagent"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityagent",
+          "Method": "verify_target_domain",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "AgentSpace",
