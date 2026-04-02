@@ -60,6 +60,41 @@
       }
     },
     {
+      "Name": "CreateDaemon",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "ecs:capacity-provider",
+        "ecs:daemon-task-definition",
+        "ecs:enable-ecs-managed-tags",
+        "ecs:enable-execute-command",
+        "ecs:propagate-tags",
+        "ecs:task-cpu",
+        "ecs:task-memory"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "daemon",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ecs:cluster"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateExpressGatewayService",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -248,6 +283,53 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteDaemon",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "daemon",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ecs:cluster"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteDaemonTaskDefinition",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "daemon-task-definition",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -452,6 +534,117 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DescribeDaemon",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "daemon",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ecs:cluster"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeDaemonDeployments",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "daemon",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ecs:cluster"
+          ]
+        },
+        {
+          "Name": "daemon-deployment",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ecs:cluster",
+            "ecs:daemon"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeDaemonRevisions",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "daemon",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ecs:cluster"
+          ]
+        },
+        {
+          "Name": "daemon-revision",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ecs:cluster",
+            "ecs:daemon"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeDaemonTaskDefinition",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "daemon-task-definition",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -772,6 +965,63 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListDaemonDeployments",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "daemon",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ecs:cluster"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListDaemonTaskDefinitions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListDaemons",
+      "ActionConditionKeys": [
+        "ecs:cluster"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1097,6 +1347,36 @@
       }
     },
     {
+      "Name": "RegisterDaemonTaskDefinition",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "ecs:privileged",
+        "ecs:task-cpu",
+        "ecs:task-memory"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "daemon-task-definition",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "RegisterTaskDefinition",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -1360,6 +1640,12 @@
           "Name": "container-instance"
         },
         {
+          "Name": "daemon"
+        },
+        {
+          "Name": "daemon-task-definition"
+        },
+        {
           "Name": "service"
         },
         {
@@ -1400,6 +1686,12 @@
         },
         {
           "Name": "container-instance"
+        },
+        {
+          "Name": "daemon"
+        },
+        {
+          "Name": "daemon-task-definition"
         },
         {
           "Name": "service"
@@ -1539,6 +1831,39 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "UpdateDaemon",
+      "ActionConditionKeys": [
+        "ecs:capacity-provider",
+        "ecs:daemon-task-definition",
+        "ecs:enable-ecs-managed-tags",
+        "ecs:enable-execute-command",
+        "ecs:propagate-tags",
+        "ecs:task-cpu",
+        "ecs:task-memory"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "daemon",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ecs:cluster"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1759,6 +2084,18 @@
       ]
     },
     {
+      "Name": "ecs:daemon",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "ecs:daemon-task-definition",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
       "Name": "ecs:enable-ebs-volumes",
       "Types": [
         "String"
@@ -1905,6 +2242,35 @@
         {
           "Name": "ecs",
           "Method": "create_cluster",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDaemon",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDaemon",
+          "Service": "ecs"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ecs-tasks.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "create_daemon",
           "Package": "Boto3"
         }
       ]
@@ -2074,6 +2440,38 @@
       ]
     },
     {
+      "Name": "DeleteDaemon",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteDaemon",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "delete_daemon",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDaemonTaskDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteDaemonTaskDefinition",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "delete_daemon_task_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteExpressGatewayService",
       "AuthorizedActions": [
         {
@@ -2213,6 +2611,70 @@
         {
           "Name": "ecs",
           "Method": "describe_container_instances",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDaemon",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeDaemon",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "describe_daemon",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDaemonDeployments",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeDaemonDeployments",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "describe_daemon_deployments",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDaemonRevisions",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeDaemonRevisions",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "describe_daemon_revisions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeDaemonTaskDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeDaemonTaskDefinition",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "describe_daemon_task_definition",
           "Package": "Boto3"
         }
       ]
@@ -2442,6 +2904,54 @@
       ]
     },
     {
+      "Name": "ListDaemonDeployments",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDaemonDeployments",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "list_daemon_deployments",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDaemonTaskDefinitions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDaemonTaskDefinitions",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "list_daemon_task_definitions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDaemons",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDaemons",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "list_daemons",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListServiceDeployments",
       "AuthorizedActions": [
         {
@@ -2633,6 +3143,35 @@
         {
           "Name": "ecs",
           "Method": "register_container_instance",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterDaemonTaskDefinition",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ecs-tasks.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "RegisterDaemonTaskDefinition",
+          "Service": "ecs"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "register_daemon_task_definition",
           "Package": "Boto3"
         }
       ]
@@ -2932,6 +3471,31 @@
       ]
     },
     {
+      "Name": "UpdateDaemon",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ecs-tasks.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateDaemon",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "update_daemon",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "UpdateExpressGatewayService",
       "AuthorizedActions": [
         {
@@ -3064,6 +3628,47 @@
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}",
         "ecs:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "daemon",
+      "ARNFormats": [
+        "arn:${Partition}:ecs:${Region}:${Account}:daemon/${ClusterName}/${DaemonName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ecs:cluster"
+      ]
+    },
+    {
+      "Name": "daemon-deployment",
+      "ARNFormats": [
+        "arn:${Partition}:ecs:${Region}:${Account}:daemon-deployment/${ClusterName}/${DaemonName}/${DaemonDeploymentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ecs:cluster",
+        "ecs:daemon"
+      ]
+    },
+    {
+      "Name": "daemon-revision",
+      "ARNFormats": [
+        "arn:${Partition}:ecs:${Region}:${Account}:daemon-revision/${ClusterName}/${DaemonName}/${DaemonRevisionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "ecs:cluster",
+        "ecs:daemon"
+      ]
+    },
+    {
+      "Name": "daemon-task-definition",
+      "ARNFormats": [
+        "arn:${Partition}:ecs:${Region}:${Account}:daemon-task-definition/${DaemonTaskDefinitionFamilyName}:${DaemonTaskDefinitionRevisionNumber}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
