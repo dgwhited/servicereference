@@ -43,6 +43,10 @@
     },
     {
       "Name": "CreateAsset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -565,6 +569,9 @@
       },
       "Resources": [
         {
+          "Name": "assets"
+        },
+        {
           "Name": "data-grants"
         },
         {
@@ -725,6 +732,9 @@
       },
       "Resources": [
         {
+          "Name": "assets"
+        },
+        {
           "Name": "data-grants"
         },
         {
@@ -756,6 +766,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "assets"
+        },
         {
           "Name": "data-grants"
         },
@@ -1569,6 +1582,9 @@
       "Name": "assets",
       "ARNFormats": [
         "arn:${Partition}:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}/assets/${AssetId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
