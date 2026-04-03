@@ -416,6 +416,25 @@
       }
     },
     {
+      "Name": "CreateDataAutomationLibrary",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateDataAutomationProject",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -432,6 +451,9 @@
       "Resources": [
         {
           "Name": "blueprint"
+        },
+        {
+          "Name": "data-automation-library"
         }
       ],
       "SupportedBy": {
@@ -1166,6 +1188,26 @@
       "Resources": [
         {
           "Name": "custom-model-deployment"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteDataAutomationLibrary",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-automation-library"
         }
       ],
       "SupportedBy": {
@@ -2105,6 +2147,69 @@
       }
     },
     {
+      "Name": "GetDataAutomationLibrary",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-automation-library"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetDataAutomationLibraryEntity",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-automation-library"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetDataAutomationLibraryIngestionJob",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-automation-library"
+        },
+        {
+          "Name": "data-automation-library-ingestion-job"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetDataAutomationProject",
       "Annotations": {
         "Properties": {
@@ -2918,6 +3023,30 @@
       }
     },
     {
+      "Name": "InvokeDataAutomationLibraryIngestionJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-automation-library"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "InvokeFlow",
       "Annotations": {
         "Properties": {
@@ -3341,6 +3470,66 @@
       }
     },
     {
+      "Name": "ListDataAutomationLibraries",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-automation-project"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListDataAutomationLibraryEntities",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-automation-library"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListDataAutomationLibraryIngestionJobs",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-automation-library"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListDataAutomationProjects",
       "Annotations": {
         "Properties": {
@@ -3353,6 +3542,9 @@
       "Resources": [
         {
           "Name": "blueprint"
+        },
+        {
+          "Name": "data-automation-project"
         }
       ],
       "SupportedBy": {
@@ -3887,6 +4079,12 @@
         },
         {
           "Name": "data-automation-invocation-job"
+        },
+        {
+          "Name": "data-automation-library"
+        },
+        {
+          "Name": "data-automation-library-ingestion-job"
         },
         {
           "Name": "data-automation-project"
@@ -4441,6 +4639,12 @@
           "Name": "data-automation-invocation-job"
         },
         {
+          "Name": "data-automation-library"
+        },
+        {
+          "Name": "data-automation-library-ingestion-job"
+        },
+        {
           "Name": "data-automation-project"
         },
         {
@@ -4543,6 +4747,12 @@
         },
         {
           "Name": "data-automation-invocation-job"
+        },
+        {
+          "Name": "data-automation-library"
+        },
+        {
+          "Name": "data-automation-library-ingestion-job"
         },
         {
           "Name": "data-automation-project"
@@ -4808,6 +5018,26 @@
       }
     },
     {
+      "Name": "UpdateDataAutomationLibrary",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "data-automation-library"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateDataAutomationProject",
       "Annotations": {
         "Properties": {
@@ -4820,6 +5050,9 @@
       "Resources": [
         {
           "Name": "blueprint"
+        },
+        {
+          "Name": "data-automation-project"
         },
         {
           "Name": "data-automation-project"
@@ -5502,6 +5735,26 @@
         {
           "Name": "bedrock",
           "Method": "create_custom_model_deployment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDataAutomationLibrary",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDataAutomationLibrary",
+          "Service": "bedrock"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "bedrock"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-data-automation",
+          "Method": "create_data_automation_library",
           "Package": "Boto3"
         }
       ]
@@ -6217,6 +6470,22 @@
         {
           "Name": "bedrock",
           "Method": "delete_custom_model_deployment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDataAutomationLibrary",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteDataAutomationLibrary",
+          "Service": "bedrock"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-data-automation",
+          "Method": "delete_data_automation_library",
           "Package": "Boto3"
         }
       ]
@@ -6970,6 +7239,54 @@
       ]
     },
     {
+      "Name": "GetDataAutomationLibrary",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDataAutomationLibrary",
+          "Service": "bedrock"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-data-automation",
+          "Method": "get_data_automation_library",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataAutomationLibraryEntity",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDataAutomationLibraryEntity",
+          "Service": "bedrock"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-data-automation",
+          "Method": "get_data_automation_library_entity",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetDataAutomationLibraryIngestionJob",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDataAutomationLibraryIngestionJob",
+          "Service": "bedrock"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-data-automation",
+          "Method": "get_data_automation_library_ingestion_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetDataAutomationProject",
       "AuthorizedActions": [
         {
@@ -7582,6 +7899,22 @@
       ]
     },
     {
+      "Name": "InvokeDataAutomationLibraryIngestionJob",
+      "AuthorizedActions": [
+        {
+          "Name": "InvokeDataAutomationLibraryIngestionJob",
+          "Service": "bedrock"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-data-automation",
+          "Method": "invoke_data_automation_library_ingestion_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "InvokeFlow",
       "AuthorizedActions": [
         {
@@ -7917,6 +8250,54 @@
         {
           "Name": "bedrock",
           "Method": "list_custom_models",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataAutomationLibraries",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDataAutomationLibraries",
+          "Service": "bedrock"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-data-automation",
+          "Method": "list_data_automation_libraries",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataAutomationLibraryEntities",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDataAutomationLibraryEntities",
+          "Service": "bedrock"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-data-automation",
+          "Method": "list_data_automation_library_entities",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDataAutomationLibraryIngestionJobs",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDataAutomationLibraryIngestionJobs",
+          "Service": "bedrock"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-data-automation",
+          "Method": "list_data_automation_library_ingestion_jobs",
           "Package": "Boto3"
         }
       ]
@@ -9112,6 +9493,22 @@
       ]
     },
     {
+      "Name": "UpdateDataAutomationLibrary",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateDataAutomationLibrary",
+          "Service": "bedrock"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-data-automation",
+          "Method": "update_data_automation_library",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "UpdateDataAutomationProject",
       "AuthorizedActions": [
         {
@@ -9432,6 +9829,24 @@
       "Name": "data-automation-invocation-job",
       "ARNFormats": [
         "arn:${Partition}:bedrock:${Region}:${Account}:data-automation-invocation/${JobId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "data-automation-library",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:data-automation-library/${DataAutomationLibraryId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "data-automation-library-ingestion-job",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock:${Region}:${Account}:data-automation-library-ingestion-job/${IngestionJobId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

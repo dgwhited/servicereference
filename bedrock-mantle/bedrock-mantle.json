@@ -25,6 +25,39 @@
       }
     },
     {
+      "Name": "AssociateCustomizedModel",
+      "ActionConditionKeys": [
+        "bedrock-mantle:CustomizedModelArn",
+        "bedrock-mantle:ProjectArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "customized-model",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "project",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CallWithBearerToken",
       "ActionConditionKeys": [
         "bedrock-mantle:BearerTokenType"
@@ -81,6 +114,33 @@
       "Resources": [
         {
           "Name": "project",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateCustomizedModel",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "customized-model",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}"
           ]
@@ -196,6 +256,64 @@
       }
     },
     {
+      "Name": "CreateReservation",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "bedrock-mantle:ProjectArn",
+        "bedrock-mantle:ReservationArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "project",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "reservation",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteCustomizedModel",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "customized-model",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteFile",
       "ActionConditionKeys": [
         "bedrock-mantle:Files"
@@ -234,6 +352,95 @@
       "Resources": [
         {
           "Name": "project",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteReservation",
+      "ActionConditionKeys": [
+        "bedrock-mantle:ProjectArn",
+        "bedrock-mantle:ReservationArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "project",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "reservation",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DisassociateCustomizedModel",
+      "ActionConditionKeys": [
+        "bedrock-mantle:CustomizedModelArn",
+        "bedrock-mantle:ProjectArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "customized-model",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "project",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetCustomizedModel",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "customized-model",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}"
           ]
@@ -366,6 +573,69 @@
       }
     },
     {
+      "Name": "GetReservation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "reservation",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListCustomizedModelAssociations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "customized-model"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListCustomizedModels",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "customized-model"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListFiles",
       "Annotations": {
         "Properties": {
@@ -455,6 +725,26 @@
       }
     },
     {
+      "Name": "ListReservations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "reservation"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListTagsForResource",
       "Annotations": {
         "Properties": {
@@ -466,7 +756,19 @@
       },
       "Resources": [
         {
+          "Name": "customized-model",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
           "Name": "project",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "reservation",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}"
           ]
@@ -493,7 +795,19 @@
       },
       "Resources": [
         {
+          "Name": "customized-model",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
           "Name": "project",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "reservation",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}"
           ]
@@ -519,7 +833,19 @@
       },
       "Resources": [
         {
+          "Name": "customized-model",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
           "Name": "project",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "reservation",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}"
           ]
@@ -543,6 +869,39 @@
       "Resources": [
         {
           "Name": "project",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateReservation",
+      "ActionConditionKeys": [
+        "bedrock-mantle:ProjectArn",
+        "bedrock-mantle:ReservationArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "project",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "reservation",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}"
           ]
@@ -580,6 +939,12 @@
       ]
     },
     {
+      "Name": "bedrock-mantle:CustomizedModelArn",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "bedrock-mantle:Files",
       "Types": [
         "ArrayOfString"
@@ -598,6 +963,18 @@
       ]
     },
     {
+      "Name": "bedrock-mantle:ProjectArn",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "bedrock-mantle:ReservationArn",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "bedrock-mantle:ServiceTier",
       "Types": [
         "String"
@@ -606,9 +983,27 @@
   ],
   "Resources": [
     {
+      "Name": "customized-model",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-mantle:${Region}:${Account}:customized-model/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
       "Name": "project",
       "ARNFormats": [
         "arn:${Partition}:bedrock-mantle:${Region}:${Account}:project/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "reservation",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-mantle:${Region}:${Account}:reservation/${ResourceId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
