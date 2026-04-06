@@ -13,10 +13,16 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-ingress-point"
+          "Name": "mailmanager-ingress-point",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
-          "Name": "mailmanager-rule-set"
+          "Name": "mailmanager-rule-set",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -108,6 +114,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "addon-instance",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -127,6 +141,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "addon-subscription",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -146,6 +168,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "mailmanager-address-list",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -188,6 +218,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "mailmanager-archive",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -517,6 +555,15 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "mailmanager-ingress-point",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ses:MailManagerIngressPointType"
+          ]
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -610,6 +657,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "mailmanager-smtp-relay",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -629,6 +684,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "mailmanager-rule-set",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -725,6 +788,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "mailmanager-traffic-policy",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -732,9 +803,6 @@
     },
     {
       "Name": "DeleteAddonInstance",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -745,7 +813,10 @@
       },
       "Resources": [
         {
-          "Name": "addon-instance"
+          "Name": "addon-instance",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -755,9 +826,6 @@
     },
     {
       "Name": "DeleteAddonSubscription",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -768,7 +836,10 @@
       },
       "Resources": [
         {
-          "Name": "addon-subscription"
+          "Name": "addon-subscription",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -801,9 +872,6 @@
     },
     {
       "Name": "DeleteArchive",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -814,7 +882,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-archive"
+          "Name": "mailmanager-archive",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1094,9 +1165,6 @@
     },
     {
       "Name": "DeleteIngressPoint",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1107,7 +1175,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-ingress-point"
+          "Name": "mailmanager-ingress-point",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1195,9 +1266,6 @@
     },
     {
       "Name": "DeleteRelay",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1208,7 +1276,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-smtp-relay"
+          "Name": "mailmanager-smtp-relay",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1218,9 +1289,6 @@
     },
     {
       "Name": "DeleteRuleSet",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1231,7 +1299,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-rule-set"
+          "Name": "mailmanager-rule-set",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1334,9 +1405,6 @@
     },
     {
       "Name": "DeleteTrafficPolicy",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1347,7 +1415,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-traffic-policy"
+          "Name": "mailmanager-traffic-policy",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1506,9 +1577,6 @@
     },
     {
       "Name": "GetAddonInstance",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1519,7 +1587,10 @@
       },
       "Resources": [
         {
-          "Name": "addon-instance"
+          "Name": "addon-instance",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1529,9 +1600,6 @@
     },
     {
       "Name": "GetAddonSubscription",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1542,7 +1610,10 @@
       },
       "Resources": [
         {
-          "Name": "addon-subscription"
+          "Name": "addon-subscription",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1598,9 +1669,6 @@
     },
     {
       "Name": "GetArchive",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1611,7 +1679,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-archive"
+          "Name": "mailmanager-archive",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1631,7 +1702,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-archive"
+          "Name": "mailmanager-archive",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1651,7 +1725,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-archive"
+          "Name": "mailmanager-archive",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1671,7 +1748,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-archive"
+          "Name": "mailmanager-archive",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1691,7 +1771,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-archive"
+          "Name": "mailmanager-archive",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1711,7 +1794,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-archive"
+          "Name": "mailmanager-archive",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -2235,9 +2321,6 @@
     },
     {
       "Name": "GetIngressPoint",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -2248,7 +2331,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-ingress-point"
+          "Name": "mailmanager-ingress-point",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -2323,9 +2409,6 @@
     },
     {
       "Name": "GetRelay",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -2336,7 +2419,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-smtp-relay"
+          "Name": "mailmanager-smtp-relay",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -2370,9 +2456,6 @@
     },
     {
       "Name": "GetRuleSet",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -2383,7 +2466,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-rule-set"
+          "Name": "mailmanager-rule-set",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -2489,9 +2575,6 @@
     },
     {
       "Name": "GetTrafficPolicy",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -2502,7 +2585,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-traffic-policy"
+          "Name": "mailmanager-traffic-policy",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -4187,7 +4273,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-archive"
+          "Name": "mailmanager-archive",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -4207,7 +4296,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-archive"
+          "Name": "mailmanager-archive",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -4250,7 +4342,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-archive"
+          "Name": "mailmanager-archive",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -4270,7 +4365,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-archive"
+          "Name": "mailmanager-archive",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -4478,9 +4576,6 @@
     },
     {
       "Name": "UpdateArchive",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -4491,7 +4586,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-archive"
+          "Name": "mailmanager-archive",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -4700,7 +4798,6 @@
     {
       "Name": "UpdateIngressPoint",
       "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
         "ses:MailManagerRuleSetArn",
         "ses:MailManagerTrafficPolicyArn"
       ],
@@ -4714,7 +4811,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-ingress-point"
+          "Name": "mailmanager-ingress-point",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -4742,9 +4842,6 @@
     },
     {
       "Name": "UpdateRelay",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -4755,7 +4852,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-smtp-relay"
+          "Name": "mailmanager-smtp-relay",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -4816,9 +4916,6 @@
     },
     {
       "Name": "UpdateRuleSet",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -4829,7 +4926,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-rule-set"
+          "Name": "mailmanager-rule-set",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -4857,9 +4957,6 @@
     },
     {
       "Name": "UpdateTrafficPolicy",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -4870,7 +4967,10 @@
       },
       "Resources": [
         {
-          "Name": "mailmanager-traffic-policy"
+          "Name": "mailmanager-traffic-policy",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
