@@ -1,148 +1,11 @@
 {
-  "Name": "transform",
+  "Name": "s3files",
   "Actions": [
     {
-      "Name": "AssociateConnectorResource",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "connector"
-        }
+      "Name": "ClientMount",
+      "ActionConditionKeys": [
+        "s3files:AccessPointArn"
       ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "CreateProfile",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "profile"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "DeleteAgentRuntimeConfiguration",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "DeleteConnector",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "connector"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "DeleteProfile",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "profile"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "GetAccountSettings",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "GetAgent",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "GetAgentRuntimeConfiguration",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "GetConnector",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -153,7 +16,7 @@
       },
       "Resources": [
         {
-          "Name": "connector"
+          "Name": "file-system"
         }
       ],
       "SupportedBy": {
@@ -162,13 +25,87 @@
       }
     },
     {
-      "Name": "GetWebAppUrl",
+      "Name": "ClientRootAccess",
+      "ActionConditionKeys": [
+        "s3files:AccessPointArn"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
-          "IsWrite": false
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ClientWrite",
+      "ActionConditionKeys": [
+        "s3files:AccessPointArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateAccessPoint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateFileSystem",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
         }
       },
       "SupportedBy": {
@@ -177,7 +114,107 @@
       }
     },
     {
-      "Name": "ListAgents",
+      "Name": "CreateMountTarget",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteAccessPoint",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "access-point"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteFileSystem",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteFileSystemPolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteMountTarget",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetAccessPoint",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -186,13 +223,98 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "access-point"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
     {
-      "Name": "ListConnectors",
+      "Name": "GetFileSystem",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetFileSystemPolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetMountTarget",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetSynchronizationConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListAccessPoints",
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -201,13 +323,18 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "access-point"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
     {
-      "Name": "ListProfiles",
+      "Name": "ListFileSystems",
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -216,6 +343,31 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListMountTargets",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -233,7 +385,10 @@
       },
       "Resources": [
         {
-          "Name": "connector"
+          "Name": "access-point"
+        },
+        {
+          "Name": "file-system"
         }
       ],
       "SupportedBy": {
@@ -242,22 +397,27 @@
       }
     },
     {
-      "Name": "PutAgentRuntimeConfiguration",
+      "Name": "PutFileSystemPolicy",
       "Annotations": {
         "Properties": {
           "IsList": false,
-          "IsPermissionManagement": false,
+          "IsPermissionManagement": true,
           "IsTaggingOnly": false,
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "file-system"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
     {
-      "Name": "RejectConnector",
+      "Name": "PutSynchronizationConfiguration",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -268,7 +428,7 @@
       },
       "Resources": [
         {
-          "Name": "connector"
+          "Name": "file-system"
         }
       ],
       "SupportedBy": {
@@ -280,7 +440,8 @@
       "Name": "TagResource",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "s3files:CreateAction"
       ],
       "Annotations": {
         "Properties": {
@@ -292,7 +453,10 @@
       },
       "Resources": [
         {
-          "Name": "connector"
+          "Name": "access-point"
+        },
+        {
+          "Name": "file-system"
         }
       ],
       "SupportedBy": {
@@ -315,7 +479,10 @@
       },
       "Resources": [
         {
-          "Name": "connector"
+          "Name": "access-point"
+        },
+        {
+          "Name": "file-system"
         }
       ],
       "SupportedBy": {
@@ -324,37 +491,7 @@
       }
     },
     {
-      "Name": "UpdateAccountSettings",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "UpdateAgentAccess",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "UpdateProfile",
+      "Name": "UpdateMountTarget",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -365,7 +502,7 @@
       },
       "Resources": [
         {
-          "Name": "profile"
+          "Name": "file-system"
         }
       ],
       "SupportedBy": {
@@ -382,23 +519,47 @@
       ]
     },
     {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "aws:TagKeys",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "s3files:AccessPointArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "s3files:CreateAction",
+      "Types": [
+        "String"
       ]
     }
   ],
   "Resources": [
     {
-      "Name": "connector",
+      "Name": "access-point",
       "ARNFormats": [
-        "arn:${Partition}:transform:${Region}:${Account}:connector/${WorkspaceId}/${ConnectorId}"
+        "arn:${Partition}:s3files:${Region}:${Account}:file-system/${FileSystemId}/access-point/${AccessPointId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
-      "Name": "profile",
+      "Name": "file-system",
       "ARNFormats": [
-        "arn:${Partition}:transform:${Region}:${Account}:profile/${Identifier}"
+        "arn:${Partition}:s3files:${Region}:${Account}:file-system/${FileSystemId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     }
   ],
