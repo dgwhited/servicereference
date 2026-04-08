@@ -543,6 +543,361 @@
       ]
     }
   ],
+  "Operations": [
+    {
+      "Name": "CreateAccessPoint",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateAccessPoint",
+          "Service": "s3files"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "create_access_point",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFileSystem",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateFileSystem",
+          "Service": "s3files"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "elasticfilesystem.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "create_file_system",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateMountTarget",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateMountTarget",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "create_mount_target",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAccessPoint",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteAccessPoint",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "delete_access_point",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFileSystem",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteFileSystem",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "delete_file_system",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFileSystemPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteFileSystemPolicy",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "delete_file_system_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteMountTarget",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteMountTarget",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "delete_mount_target",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetAccessPoint",
+      "AuthorizedActions": [
+        {
+          "Name": "GetAccessPoint",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "get_access_point",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetFileSystem",
+      "AuthorizedActions": [
+        {
+          "Name": "GetFileSystem",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "get_file_system",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetFileSystemPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "GetFileSystemPolicy",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "get_file_system_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetMountTarget",
+      "AuthorizedActions": [
+        {
+          "Name": "GetMountTarget",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "get_mount_target",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetSynchronizationConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetSynchronizationConfiguration",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "get_synchronization_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListAccessPoints",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAccessPoints",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "list_access_points",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListFileSystems",
+      "AuthorizedActions": [
+        {
+          "Name": "ListFileSystems",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "list_file_systems",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListMountTargets",
+      "AuthorizedActions": [
+        {
+          "Name": "ListMountTargets",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "list_mount_targets",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutFileSystemPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "PutFileSystemPolicy",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "put_file_system_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutSynchronizationConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "PutSynchronizationConfiguration",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "put_synchronization_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMountTarget",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateMountTarget",
+          "Service": "s3files"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3files",
+          "Method": "update_mount_target",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
   "Resources": [
     {
       "Name": "access-point",
