@@ -3597,6 +3597,25 @@
     },
     {
       "Name": "StartRunBatch",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "omics.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "StartRun",
+          "Service": "omics"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "omics"
+        }
+      ],
       "SDK": [
         {
           "Name": "omics",
