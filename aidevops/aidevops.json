@@ -1587,6 +1587,15 @@
       "Name": "RegisterService",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "aidevops.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "RegisterService",
           "Service": "aidevops"
         },
