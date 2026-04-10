@@ -496,6 +496,41 @@
       }
     },
     {
+      "Name": "CreateRegistry",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateRegistryRecord",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateWorkloadIdentity",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -851,6 +886,46 @@
       "Resources": [
         {
           "Name": "policy-engine"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteRegistry",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteRegistryRecord",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "registry-record"
         }
       ],
       "SupportedBy": {
@@ -1356,6 +1431,46 @@
       }
     },
     {
+      "Name": "GetRegistry",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetRegistryRecord",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "registry-record"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetResourceApiKey",
       "Annotations": {
         "Properties": {
@@ -1712,6 +1827,26 @@
       "Resources": [
         {
           "Name": "gateway"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "InvokeRegistryMcp",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "registry"
         }
       ],
       "SupportedBy": {
@@ -2140,6 +2275,41 @@
       }
     },
     {
+      "Name": "ListRegistries",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListRegistryRecords",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListSessions",
       "ActionConditionKeys": [
         "bedrock-agentcore:actorId"
@@ -2379,6 +2549,26 @@
       }
     },
     {
+      "Name": "SearchRegistryRecords",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "SetTokenVaultCMK",
       "Annotations": {
         "Properties": {
@@ -2554,6 +2744,26 @@
         },
         {
           "Name": "runtime-endpoint"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "SubmitRegistryRecordForApproval",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "registry-record"
         }
       ],
       "SupportedBy": {
@@ -2958,6 +3168,66 @@
       "Resources": [
         {
           "Name": "policy-engine"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateRegistry",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "registry"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateRegistryRecord",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "registry-record"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateRegistryRecordStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "registry-record"
         }
       ],
       "SupportedBy": {
@@ -3509,6 +3779,47 @@
       ]
     },
     {
+      "Name": "CreateRegistry",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateRegistry",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "create_registry",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRegistryRecord",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateRegistryRecord",
+          "Service": "bedrock-agentcore"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "bedrock-agentcore.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "create_registry_record",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateWorkloadIdentity",
       "AuthorizedActions": [
         {
@@ -3788,6 +4099,38 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "delete_policy_engine",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRegistry",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteRegistry",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "delete_registry",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRegistryRecord",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteRegistryRecord",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "delete_registry_record",
           "Package": "Boto3"
         }
       ]
@@ -4156,6 +4499,38 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "get_policy_generation",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetRegistry",
+      "AuthorizedActions": [
+        {
+          "Name": "GetRegistry",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "get_registry",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetRegistryRecord",
+      "AuthorizedActions": [
+        {
+          "Name": "GetRegistryRecord",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "get_registry_record",
           "Package": "Boto3"
         }
       ]
@@ -4723,6 +5098,38 @@
       ]
     },
     {
+      "Name": "ListRegistries",
+      "AuthorizedActions": [
+        {
+          "Name": "ListRegistries",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_registries",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListRegistryRecords",
+      "AuthorizedActions": [
+        {
+          "Name": "ListRegistryRecords",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_registry_records",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListSessions",
       "AuthorizedActions": [
         {
@@ -4814,6 +5221,22 @@
         {
           "Name": "bedrock-agentcore",
           "Method": "save_browser_session_profile",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SearchRegistryRecords",
+      "AuthorizedActions": [
+        {
+          "Name": "SearchRegistryRecords",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore",
+          "Method": "search_registry_records",
           "Package": "Boto3"
         }
       ]
@@ -4942,6 +5365,22 @@
         {
           "Name": "bedrock-agentcore",
           "Method": "stop_runtime_session",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SubmitRegistryRecordForApproval",
+      "AuthorizedActions": [
+        {
+          "Name": "SubmitRegistryRecordForApproval",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "submit_registry_record_for_approval",
           "Package": "Boto3"
         }
       ]
@@ -5227,6 +5666,63 @@
       ]
     },
     {
+      "Name": "UpdateRegistry",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateRegistry",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "update_registry",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRegistryRecord",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "bedrock-agentcore.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateRegistryRecord",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "update_registry_record",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRegistryRecordStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateRegistryRecordStatus",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "update_registry_record_status",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "UpdateWorkloadIdentity",
       "AuthorizedActions": [
         {
@@ -5353,6 +5849,18 @@
       "Name": "policy-generation",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:policy-engine/${PolicyEngineId}/policy-generation/${PolicyGenerationId}"
+      ]
+    },
+    {
+      "Name": "registry",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:registry/${RegistryId}"
+      ]
+    },
+    {
+      "Name": "registry-record",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:registry/${RegistryId}/record/${RecordId}"
       ]
     },
     {

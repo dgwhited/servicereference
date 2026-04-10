@@ -7,7 +7,10 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys",
         "observabilityadmin:CentralizationBackupRegion",
+        "observabilityadmin:CentralizationDestinationAccount",
         "observabilityadmin:CentralizationDestinationRegion",
+        "observabilityadmin:CentralizationRuleName",
+        "observabilityadmin:CentralizationSourceId",
         "observabilityadmin:CentralizationSourceRegions"
       ],
       "Annotations": {
@@ -81,7 +84,8 @@
       "Name": "CreateTelemetryRule",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "observabilityadmin:TargetRegions"
       ],
       "Annotations": {
         "Properties": {
@@ -105,7 +109,8 @@
       "Name": "CreateTelemetryRuleForOrganization",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "observabilityadmin:TargetRegions"
       ],
       "Annotations": {
         "Properties": {
@@ -127,6 +132,9 @@
     },
     {
       "Name": "DeleteCentralizationRuleForOrganization",
+      "ActionConditionKeys": [
+        "observabilityadmin:CentralizationRuleName"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -227,6 +235,9 @@
     },
     {
       "Name": "GetCentralizationRuleForOrganization",
+      "ActionConditionKeys": [
+        "observabilityadmin:CentralizationRuleName"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -387,6 +398,9 @@
     },
     {
       "Name": "ListResourceTelemetry",
+      "ActionConditionKeys": [
+        "observabilityadmin:TargetRegions"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -402,6 +416,9 @@
     },
     {
       "Name": "ListResourceTelemetryForOrganization",
+      "ActionConditionKeys": [
+        "observabilityadmin:TargetRegions"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -524,6 +541,9 @@
     },
     {
       "Name": "StartTelemetryEvaluation",
+      "ActionConditionKeys": [
+        "observabilityadmin:TargetRegions"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -539,6 +559,9 @@
     },
     {
       "Name": "StartTelemetryEvaluationForOrganization",
+      "ActionConditionKeys": [
+        "observabilityadmin:TargetRegions"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -687,7 +710,10 @@
       "Name": "UpdateCentralizationRuleForOrganization",
       "ActionConditionKeys": [
         "observabilityadmin:CentralizationBackupRegion",
+        "observabilityadmin:CentralizationDestinationAccount",
         "observabilityadmin:CentralizationDestinationRegion",
+        "observabilityadmin:CentralizationRuleName",
+        "observabilityadmin:CentralizationSourceId",
         "observabilityadmin:CentralizationSourceRegions"
       ],
       "Annotations": {
@@ -730,6 +756,9 @@
     },
     {
       "Name": "UpdateTelemetryRule",
+      "ActionConditionKeys": [
+        "observabilityadmin:TargetRegions"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -750,6 +779,9 @@
     },
     {
       "Name": "UpdateTelemetryRuleForOrganization",
+      "ActionConditionKeys": [
+        "observabilityadmin:TargetRegions"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -810,9 +842,27 @@
       ]
     },
     {
+      "Name": "observabilityadmin:CentralizationDestinationAccount",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "observabilityadmin:CentralizationDestinationRegion",
       "Types": [
         "String"
+      ]
+    },
+    {
+      "Name": "observabilityadmin:CentralizationRuleName",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "observabilityadmin:CentralizationSourceId",
+      "Types": [
+        "ArrayOfString"
       ]
     },
     {
@@ -823,6 +873,12 @@
     },
     {
       "Name": "observabilityadmin:SourceType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "observabilityadmin:TargetRegions",
       "Types": [
         "String"
       ]

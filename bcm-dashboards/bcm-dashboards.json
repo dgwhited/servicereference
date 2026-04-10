@@ -180,6 +180,31 @@
       ]
     },
     {
+      "Name": "CreateScheduledReport",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "bcm-dashboards.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "bcm-dashboards"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bcm-dashboards",
+          "Method": "create_scheduled_report",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteDashboard",
       "AuthorizedActions": [
         {
@@ -191,6 +216,26 @@
         {
           "Name": "bcm-dashboards",
           "Method": "delete_dashboard",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteScheduledReport",
+      "SDK": [
+        {
+          "Name": "bcm-dashboards",
+          "Method": "delete_scheduled_report",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ExecuteScheduledReport",
+      "SDK": [
+        {
+          "Name": "bcm-dashboards",
+          "Method": "execute_scheduled_report",
           "Package": "Boto3"
         }
       ]
@@ -228,6 +273,16 @@
       ]
     },
     {
+      "Name": "GetScheduledReport",
+      "SDK": [
+        {
+          "Name": "bcm-dashboards",
+          "Method": "get_scheduled_report",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListDashboards",
       "AuthorizedActions": [
         {
@@ -239,6 +294,16 @@
         {
           "Name": "bcm-dashboards",
           "Method": "list_dashboards",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListScheduledReports",
+      "SDK": [
+        {
+          "Name": "bcm-dashboards",
+          "Method": "list_scheduled_reports",
           "Package": "Boto3"
         }
       ]
@@ -303,6 +368,27 @@
         {
           "Name": "bcm-dashboards",
           "Method": "update_dashboard",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateScheduledReport",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "bcm-dashboards.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bcm-dashboards",
+          "Method": "update_scheduled_report",
           "Package": "Boto3"
         }
       ]
