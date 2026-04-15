@@ -3,6 +3,10 @@
   "Actions": [
     {
       "Name": "CreateBatchInferenceJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -14,6 +18,9 @@
       "Resources": [
         {
           "Name": "batchInferenceJob"
+        },
+        {
+          "Name": "solution"
         }
       ],
       "SupportedBy": {
@@ -23,6 +30,10 @@
     },
     {
       "Name": "CreateBatchSegmentJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -43,6 +54,10 @@
     },
     {
       "Name": "CreateCampaign",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -54,6 +69,9 @@
       "Resources": [
         {
           "Name": "campaign"
+        },
+        {
+          "Name": "solution"
         }
       ],
       "SupportedBy": {
@@ -63,6 +81,10 @@
     },
     {
       "Name": "CreateDataDeletionJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -74,6 +96,9 @@
       "Resources": [
         {
           "Name": "dataDeletionJob"
+        },
+        {
+          "Name": "datasetGroup"
         }
       ],
       "SupportedBy": {
@@ -103,6 +128,10 @@
     },
     {
       "Name": "CreateDataset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -114,6 +143,9 @@
       "Resources": [
         {
           "Name": "dataset"
+        },
+        {
+          "Name": "datasetGroup"
         }
       ],
       "SupportedBy": {
@@ -123,6 +155,10 @@
     },
     {
       "Name": "CreateDatasetExportJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -132,6 +168,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "dataset"
+        },
         {
           "Name": "datasetExportJob"
         }
@@ -143,6 +182,10 @@
     },
     {
       "Name": "CreateDatasetGroup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -163,6 +206,10 @@
     },
     {
       "Name": "CreateDatasetImportJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -172,6 +219,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "dataset"
+        },
         {
           "Name": "datasetImportJob"
         }
@@ -183,6 +233,10 @@
     },
     {
       "Name": "CreateEventTracker",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -192,6 +246,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "datasetGroup"
+        },
         {
           "Name": "eventTracker"
         }
@@ -203,6 +260,10 @@
     },
     {
       "Name": "CreateFilter",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -212,6 +273,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "datasetGroup"
+        },
         {
           "Name": "filter"
         }
@@ -233,6 +297,9 @@
       },
       "Resources": [
         {
+          "Name": "datasetGroup"
+        },
+        {
           "Name": "metricAttribution"
         }
       ],
@@ -243,6 +310,10 @@
     },
     {
       "Name": "CreateRecommender",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -252,6 +323,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "datasetGroup"
+        },
         {
           "Name": "recommender"
         }
@@ -283,6 +357,10 @@
     },
     {
       "Name": "CreateSolution",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -292,6 +370,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "datasetGroup"
+        },
         {
           "Name": "solution"
         }
@@ -303,6 +384,10 @@
     },
     {
       "Name": "CreateSolutionVersion",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1261,6 +1346,44 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "batchInferenceJob"
+        },
+        {
+          "Name": "batchSegmentJob"
+        },
+        {
+          "Name": "campaign"
+        },
+        {
+          "Name": "dataDeletionJob"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "datasetExportJob"
+        },
+        {
+          "Name": "datasetGroup"
+        },
+        {
+          "Name": "datasetImportJob"
+        },
+        {
+          "Name": "eventTracker"
+        },
+        {
+          "Name": "filter"
+        },
+        {
+          "Name": "recommender"
+        },
+        {
+          "Name": "solution"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -1418,6 +1541,10 @@
     },
     {
       "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1426,6 +1553,44 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "batchInferenceJob"
+        },
+        {
+          "Name": "batchSegmentJob"
+        },
+        {
+          "Name": "campaign"
+        },
+        {
+          "Name": "dataDeletionJob"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "datasetExportJob"
+        },
+        {
+          "Name": "datasetGroup"
+        },
+        {
+          "Name": "datasetImportJob"
+        },
+        {
+          "Name": "eventTracker"
+        },
+        {
+          "Name": "filter"
+        },
+        {
+          "Name": "recommender"
+        },
+        {
+          "Name": "solution"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -1433,6 +1598,9 @@
     },
     {
       "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1441,6 +1609,44 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "batchInferenceJob"
+        },
+        {
+          "Name": "batchSegmentJob"
+        },
+        {
+          "Name": "campaign"
+        },
+        {
+          "Name": "dataDeletionJob"
+        },
+        {
+          "Name": "dataset"
+        },
+        {
+          "Name": "datasetExportJob"
+        },
+        {
+          "Name": "datasetGroup"
+        },
+        {
+          "Name": "datasetImportJob"
+        },
+        {
+          "Name": "eventTracker"
+        },
+        {
+          "Name": "filter"
+        },
+        {
+          "Name": "recommender"
+        },
+        {
+          "Name": "solution"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -1545,6 +1751,26 @@
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
     }
   ],
   "Operations": [
@@ -2944,24 +3170,36 @@
       "Name": "batchInferenceJob",
       "ARNFormats": [
         "arn:${Partition}:personalize:${Region}:${Account}:batch-inference-job/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "batchSegmentJob",
       "ARNFormats": [
         "arn:${Partition}:personalize:${Region}:${Account}:batch-segment-job/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "campaign",
       "ARNFormats": [
         "arn:${Partition}:personalize:${Region}:${Account}:campaign/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "dataDeletionJob",
       "ARNFormats": [
         "arn:${Partition}:personalize:${Region}:${Account}:data-deletion-job/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -2974,30 +3212,45 @@
       "Name": "dataset",
       "ARNFormats": [
         "arn:${Partition}:personalize:${Region}:${Account}:dataset/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "datasetExportJob",
       "ARNFormats": [
         "arn:${Partition}:personalize:${Region}:${Account}:dataset-export-job/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "datasetGroup",
       "ARNFormats": [
         "arn:${Partition}:personalize:${Region}:${Account}:dataset-group/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "datasetImportJob",
       "ARNFormats": [
         "arn:${Partition}:personalize:${Region}:${Account}:dataset-import-job/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "eventTracker",
       "ARNFormats": [
         "arn:${Partition}:personalize:${Region}:${Account}:event-tracker/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -3010,6 +3263,9 @@
       "Name": "filter",
       "ARNFormats": [
         "arn:${Partition}:personalize:${Region}:${Account}:filter/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -3028,6 +3284,9 @@
       "Name": "recommender",
       "ARNFormats": [
         "arn:${Partition}:personalize:${Region}:${Account}:recommender/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -3040,6 +3299,9 @@
       "Name": "solution",
       "ARNFormats": [
         "arn:${Partition}:personalize:${Region}:${Account}:solution/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     }
   ],
