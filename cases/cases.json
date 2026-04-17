@@ -711,6 +711,26 @@
       }
     },
     {
+      "Name": "SearchAllRelatedItems",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Domain"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "SearchCases",
       "Annotations": {
         "Properties": {
@@ -1503,6 +1523,12 @@
     },
     {
       "Name": "SearchAllRelatedItems",
+      "AuthorizedActions": [
+        {
+          "Name": "SearchAllRelatedItems",
+          "Service": "cases"
+        }
+      ],
       "SDK": [
         {
           "Name": "connectcases",
