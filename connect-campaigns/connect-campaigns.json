@@ -106,6 +106,26 @@
       }
     },
     {
+      "Name": "DeleteCampaignEntryLimits",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteConnectInstanceConfig",
       "Annotations": {
         "Properties": {
@@ -633,6 +653,26 @@
       }
     },
     {
+      "Name": "UpdateCampaignEntryLimits",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "campaign"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateCampaignFlowAssociation",
       "Annotations": {
         "Properties": {
@@ -844,6 +884,22 @@
         {
           "Name": "connectcampaignsv2",
           "Method": "delete_campaign_communication_time",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCampaignEntryLimits",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteCampaignEntryLimits",
+          "Service": "connect-campaigns"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "connectcampaignsv2",
+          "Method": "delete_campaign_entry_limits",
           "Package": "Boto3"
         }
       ]
@@ -1372,6 +1428,22 @@
         {
           "Name": "connectcampaigns",
           "Method": "update_campaign_dialer_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateCampaignEntryLimits",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateCampaignEntryLimits",
+          "Service": "connect-campaigns"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "connectcampaignsv2",
+          "Method": "update_campaign_entry_limits",
           "Package": "Boto3"
         }
       ]

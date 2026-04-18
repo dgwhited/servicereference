@@ -48,6 +48,9 @@
     },
     {
       "Name": "AssociateEncryptionConfig",
+      "ActionConditionKeys": [
+        "eks:encryptionConfigProviderKeyArns"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -181,9 +184,16 @@
         "eks:bootstrapClusterCreatorAdminPermissions",
         "eks:bootstrapSelfManagedAddons",
         "eks:computeConfigEnabled",
+        "eks:controlPlaneScalingTier",
+        "eks:deletionProtection",
         "eks:elasticLoadBalancingEnabled",
+        "eks:encryptionConfigProviderKeyArns",
+        "eks:endpointPrivateAccess",
+        "eks:endpointPublicAccess",
+        "eks:kubernetesVersion",
         "eks:loggingType/${type}",
-        "eks:supportType"
+        "eks:supportType",
+        "eks:zonalShiftEnabled"
       ],
       "Annotations": {
         "Properties": {
@@ -1375,9 +1385,14 @@
         "eks:authenticationMode",
         "eks:blockStorageEnabled",
         "eks:computeConfigEnabled",
+        "eks:controlPlaneScalingTier",
+        "eks:deletionProtection",
         "eks:elasticLoadBalancingEnabled",
+        "eks:endpointPrivateAccess",
+        "eks:endpointPublicAccess",
         "eks:loggingType/${type}",
-        "eks:supportType"
+        "eks:supportType",
+        "eks:zonalShiftEnabled"
       ],
       "Annotations": {
         "Properties": {
@@ -1399,6 +1414,9 @@
     },
     {
       "Name": "UpdateClusterVersion",
+      "ActionConditionKeys": [
+        "eks:kubernetesVersion"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1572,7 +1590,37 @@
       ]
     },
     {
+      "Name": "eks:controlPlaneScalingTier",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "eks:deletionProtection",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
       "Name": "eks:elasticLoadBalancingEnabled",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
+      "Name": "eks:encryptionConfigProviderKeyArns",
+      "Types": [
+        "ArrayOfARN"
+      ]
+    },
+    {
+      "Name": "eks:endpointPrivateAccess",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
+      "Name": "eks:endpointPublicAccess",
       "Types": [
         "Bool"
       ]
@@ -1587,6 +1635,12 @@
       "Name": "eks:kubernetesGroups",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "eks:kubernetesVersion",
+      "Types": [
+        "String"
       ]
     },
     {
@@ -1623,6 +1677,12 @@
       "Name": "eks:username",
       "Types": [
         "String"
+      ]
+    },
+    {
+      "Name": "eks:zonalShiftEnabled",
+      "Types": [
+        "Bool"
       ]
     }
   ],
