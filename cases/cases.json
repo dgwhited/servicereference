@@ -955,6 +955,32 @@
       }
     },
     {
+      "Name": "UpdateRelatedItem",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Case"
+        },
+        {
+          "Name": "Domain"
+        },
+        {
+          "Name": "RelatedItem"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateTemplate",
       "Annotations": {
         "Properties": {
@@ -995,6 +1021,18 @@
       "Name": "aws:TagKeys",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "cases:CreatedBy",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "cases:RelatedItemType",
+      "Types": [
+        "String"
       ]
     },
     {
@@ -1667,6 +1705,12 @@
     },
     {
       "Name": "UpdateRelatedItem",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateRelatedItem",
+          "Service": "cases"
+        }
+      ],
       "SDK": [
         {
           "Name": "connectcases",
@@ -1744,7 +1788,9 @@
         "arn:${Partition}:cases:${Region}:${Account}:domain/${DomainId}/case/${CaseId}/related-item/${RelatedItemId}"
       ],
       "ConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
+        "aws:ResourceTag/${TagKey}",
+        "cases:CreatedBy",
+        "cases:RelatedItemType"
       ]
     },
     {

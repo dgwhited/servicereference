@@ -392,6 +392,33 @@
       }
     },
     {
+      "Name": "GetInventoryConfiguration",
+      "ActionConditionKeys": [
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetLifecycleConfiguration",
       "ActionConditionKeys": [
         "s3express:ResourceAccount",
@@ -634,6 +661,34 @@
       }
     },
     {
+      "Name": "PutInventoryConfiguration",
+      "ActionConditionKeys": [
+        "s3express:InventoryAccessibleOptionalFields",
+        "s3express:ResourceAccount",
+        "s3express:TlsVersion",
+        "s3express:authType",
+        "s3express:signatureversion",
+        "s3express:x-amz-content-sha256"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "PutLifecycleConfiguration",
       "ActionConditionKeys": [
         "s3express:ResourceAccount",
@@ -804,6 +859,12 @@
       "Name": "s3express:DataAccessPointArn",
       "Types": [
         "ARN"
+      ]
+    },
+    {
+      "Name": "s3express:InventoryAccessibleOptionalFields",
+      "Types": [
+        "ArrayOfString"
       ]
     },
     {
