@@ -1486,6 +1486,16 @@
       ]
     },
     {
+      "Name": "CancelJob",
+      "SDK": [
+        {
+          "Name": "location",
+          "Method": "cancel_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateGeofenceCollection",
       "AuthorizedActions": [
         {
@@ -1974,6 +1984,16 @@
       ]
     },
     {
+      "Name": "GetJob",
+      "SDK": [
+        {
+          "Name": "location",
+          "Method": "get_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetMapGlyphs",
       "AuthorizedActions": [
         {
@@ -2097,6 +2117,16 @@
         {
           "Name": "location",
           "Method": "list_geofences",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobs",
+      "SDK": [
+        {
+          "Name": "location",
+          "Method": "list_jobs",
           "Package": "Boto3"
         }
       ]
@@ -2273,6 +2303,31 @@
         {
           "Name": "location",
           "Method": "search_place_index_for_text",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartJob",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "geo.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "geo"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "location",
+          "Method": "start_job",
           "Package": "Boto3"
         }
       ]

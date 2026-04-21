@@ -22,6 +22,26 @@
       }
     },
     {
+      "Name": "CreateEntitlement",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateEnvironment",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -35,6 +55,26 @@
           "IsWrite": true
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateEnvironmentConnector",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -61,7 +101,47 @@
       }
     },
     {
+      "Name": "DeleteEntitlement",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteEnvironment",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteEnvironmentConnector",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -156,6 +236,26 @@
       }
     },
     {
+      "Name": "ListEnvironmentConnectors",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListEnvironmentHosts",
       "Annotations": {
         "Properties": {
@@ -231,6 +331,26 @@
       }
     },
     {
+      "Name": "ListVmEntitlements",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "TagResource",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -266,6 +386,26 @@
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateEnvironmentConnector",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
           "IsWrite": true
         }
       },
@@ -318,6 +458,22 @@
       ]
     },
     {
+      "Name": "CreateEntitlement",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateEntitlement",
+          "Service": "evs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "evs",
+          "Method": "create_entitlement",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateEnvironment",
       "AuthorizedActions": [
         {
@@ -333,6 +489,22 @@
         {
           "Name": "evs",
           "Method": "create_environment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateEnvironmentConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateEnvironmentConnector",
+          "Service": "evs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "evs",
+          "Method": "create_environment_connector",
           "Package": "Boto3"
         }
       ]
@@ -354,6 +526,22 @@
       ]
     },
     {
+      "Name": "DeleteEntitlement",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteEntitlement",
+          "Service": "evs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "evs",
+          "Method": "delete_entitlement",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteEnvironment",
       "AuthorizedActions": [
         {
@@ -365,6 +553,22 @@
         {
           "Name": "evs",
           "Method": "delete_environment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteEnvironmentConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteEnvironmentConnector",
+          "Service": "evs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "evs",
+          "Method": "delete_environment_connector",
           "Package": "Boto3"
         }
       ]
@@ -434,6 +638,22 @@
       ]
     },
     {
+      "Name": "ListEnvironmentConnectors",
+      "AuthorizedActions": [
+        {
+          "Name": "ListEnvironmentConnectors",
+          "Service": "evs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "evs",
+          "Method": "list_environment_connectors",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListEnvironmentHosts",
       "AuthorizedActions": [
         {
@@ -498,6 +718,22 @@
       ]
     },
     {
+      "Name": "ListVmEntitlements",
+      "AuthorizedActions": [
+        {
+          "Name": "ListVmEntitlements",
+          "Service": "evs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "evs",
+          "Method": "list_vm_entitlements",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "TagResource",
       "AuthorizedActions": [
         {
@@ -525,6 +761,22 @@
         {
           "Name": "evs",
           "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateEnvironmentConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateEnvironmentConnector",
+          "Service": "evs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "evs",
+          "Method": "update_environment_connector",
           "Package": "Boto3"
         }
       ]
