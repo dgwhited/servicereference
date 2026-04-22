@@ -512,6 +512,26 @@
       }
     },
     {
+      "Name": "GetInvoiceSubmissionTask",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "InvoiceSubmissionTask"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetListing",
       "Annotations": {
         "Properties": {
@@ -852,6 +872,36 @@
       }
     },
     {
+      "Name": "ListInvoiceSubmissionTasks",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListPayables",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListPrivateListings",
       "Annotations": {
         "Properties": {
@@ -923,6 +973,9 @@
         },
         {
           "Name": "Entity"
+        },
+        {
+          "Name": "InvoiceSubmissionTask"
         }
       ],
       "SupportedBy": {
@@ -1212,6 +1265,30 @@
       }
     },
     {
+      "Name": "StartInvoiceSubmissionTask",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "InvoiceSubmissionTask"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "Subscribe",
       "Annotations": {
         "Properties": {
@@ -1255,6 +1332,9 @@
         },
         {
           "Name": "Entity"
+        },
+        {
+          "Name": "InvoiceSubmissionTask"
         }
       ],
       "SupportedBy": {
@@ -1304,6 +1384,9 @@
         },
         {
           "Name": "Entity"
+        },
+        {
+          "Name": "InvoiceSubmissionTask"
         }
       ],
       "SupportedBy": {
@@ -2213,6 +2296,15 @@
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}",
         "catalog:ChangeType"
+      ]
+    },
+    {
+      "Name": "InvoiceSubmissionTask",
+      "ARNFormats": [
+        "arn:${Partition}:aws-marketplace:${Region}:${Account}:catalog/${Catalog}/invoice-submission-task/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {

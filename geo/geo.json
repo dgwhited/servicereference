@@ -947,6 +947,9 @@
           "Name": "geofence-collection"
         },
         {
+          "Name": "job"
+        },
+        {
           "Name": "map"
         },
         {
@@ -1109,6 +1112,9 @@
           "Name": "geofence-collection"
         },
         {
+          "Name": "job"
+        },
+        {
           "Name": "map"
         },
         {
@@ -1145,6 +1151,9 @@
         },
         {
           "Name": "geofence-collection"
+        },
+        {
+          "Name": "job"
         },
         {
           "Name": "map"
@@ -2591,6 +2600,15 @@
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}",
         "geo:GeofenceIds"
+      ]
+    },
+    {
+      "Name": "job",
+      "ARNFormats": [
+        "arn:${Partition}:geo:${Region}:${Account}:job/${JobId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
