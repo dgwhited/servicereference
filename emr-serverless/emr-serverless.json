@@ -181,6 +181,66 @@
       }
     },
     {
+      "Name": "GetResourceDashboard",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetSession",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetSessionEndpoint",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListApplications",
       "Annotations": {
         "Properties": {
@@ -236,6 +296,26 @@
       }
     },
     {
+      "Name": "ListSessions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListTagsForResource",
       "Annotations": {
         "Properties": {
@@ -251,6 +331,9 @@
         },
         {
           "Name": "jobRun"
+        },
+        {
+          "Name": "session"
         }
       ],
       "SupportedBy": {
@@ -303,6 +386,30 @@
       }
     },
     {
+      "Name": "StartSession",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "StopApplication",
       "Annotations": {
         "Properties": {
@@ -342,10 +449,33 @@
         },
         {
           "Name": "jobRun"
+        },
+        {
+          "Name": "session"
         }
       ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "TerminateSession",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
     },
@@ -368,6 +498,9 @@
         },
         {
           "Name": "jobRun"
+        },
+        {
+          "Name": "session"
         }
       ],
       "SupportedBy": {
@@ -530,6 +663,48 @@
       ]
     },
     {
+      "Name": "GetResourceDashboard",
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "get_resource_dashboard",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetSession",
+      "AuthorizedActions": [
+        {
+          "Name": "GetSession",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "get_session",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetSessionEndpoint",
+      "AuthorizedActions": [
+        {
+          "Name": "GetSessionEndpoint",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "get_session_endpoint",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListApplications",
       "AuthorizedActions": [
         {
@@ -573,6 +748,16 @@
         {
           "Name": "emr-serverless",
           "Method": "list_job_runs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListSessions",
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "list_sessions",
           "Package": "Boto3"
         }
       ]
@@ -639,6 +824,31 @@
       ]
     },
     {
+      "Name": "StartSession",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "emr-serverless.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "StartSession",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "start_session",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "StopApplication",
       "AuthorizedActions": [
         {
@@ -666,6 +876,22 @@
         {
           "Name": "emr-serverless",
           "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TerminateSession",
+      "AuthorizedActions": [
+        {
+          "Name": "TerminateSession",
+          "Service": "emr-serverless"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr-serverless",
+          "Method": "terminate_session",
           "Package": "Boto3"
         }
       ]
@@ -717,6 +943,15 @@
       "Name": "jobRun",
       "ARNFormats": [
         "arn:${Partition}:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}/jobruns/${JobRunId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "session",
+      "ARNFormats": [
+        "arn:${Partition}:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}/sessions/${SessionId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
