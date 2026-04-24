@@ -182,6 +182,7 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys",
+        "bedrock-agentcore:RuntimeAuthorizerType",
         "bedrock-agentcore:securityGroups",
         "bedrock-agentcore:subnets"
       ],
@@ -388,6 +389,25 @@
           "Name": "gateway"
         }
       ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateHarness",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -760,6 +780,26 @@
       "Resources": [
         {
           "Name": "gateway"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteHarness",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "harness"
         }
       ],
       "SupportedBy": {
@@ -1274,6 +1314,26 @@
       "Resources": [
         {
           "Name": "gateway"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetHarness",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "harness"
         }
       ],
       "SupportedBy": {
@@ -1835,6 +1895,26 @@
       }
     },
     {
+      "Name": "InvokeHarness",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "harness"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "InvokeRegistryMcp",
       "Annotations": {
         "Properties": {
@@ -2086,6 +2166,21 @@
     },
     {
       "Name": "ListGateways",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListHarnesses",
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -2360,6 +2455,9 @@
         },
         {
           "Name": "gateway"
+        },
+        {
+          "Name": "harness"
         },
         {
           "Name": "memory"
@@ -2825,6 +2923,9 @@
           "Name": "gateway"
         },
         {
+          "Name": "harness"
+        },
+        {
           "Name": "memory"
         },
         {
@@ -2887,6 +2988,9 @@
           "Name": "gateway"
         },
         {
+          "Name": "harness"
+        },
+        {
           "Name": "memory"
         },
         {
@@ -2919,6 +3023,7 @@
     {
       "Name": "UpdateAgentRuntime",
       "ActionConditionKeys": [
+        "bedrock-agentcore:RuntimeAuthorizerType",
         "bedrock-agentcore:securityGroups",
         "bedrock-agentcore:subnets"
       ],
@@ -3062,6 +3167,26 @@
       "Resources": [
         {
           "Name": "gateway"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateHarness",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "harness"
         }
       ],
       "SupportedBy": {
@@ -3316,6 +3441,12 @@
     },
     {
       "Name": "bedrock-agentcore:KmsKeyArn",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "bedrock-agentcore:RuntimeAuthorizerType",
       "Types": [
         "String"
       ]
@@ -4019,6 +4150,12 @@
     },
     {
       "Name": "DeleteHarness",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteHarness",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -4413,6 +4550,12 @@
     },
     {
       "Name": "GetHarness",
+      "AuthorizedActions": [
+        {
+          "Name": "GetHarness",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -4765,6 +4908,10 @@
         {
           "Name": "InvokeAgentRuntime",
           "Service": "bedrock-agentcore"
+        },
+        {
+          "Name": "InvokeHarness",
+          "Service": "bedrock-agentcore"
         }
       ],
       "SDK": [
@@ -5001,6 +5148,12 @@
     },
     {
       "Name": "ListHarnesses",
+      "AuthorizedActions": [
+        {
+          "Name": "ListHarnesses",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -5867,6 +6020,15 @@
       "Name": "gateway",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:gateway/${GatewayId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "harness",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:harness/${HarnessId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
