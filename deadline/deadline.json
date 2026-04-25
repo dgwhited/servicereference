@@ -4464,6 +4464,15 @@
       "Name": "UpdateMonitor",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "deadline.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "UpdateMonitor",
           "Service": "deadline"
         }
