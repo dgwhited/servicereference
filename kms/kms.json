@@ -431,6 +431,7 @@
       "Name": "DisableKey",
       "ActionConditionKeys": [
         "kms:CallerAccount",
+        "kms:TrailingDaysWithoutKeyUsage",
         "kms:ViaService"
       ],
       "Annotations": {
@@ -899,6 +900,30 @@
       }
     },
     {
+      "Name": "GetKeyLastUsage",
+      "ActionConditionKeys": [
+        "kms:CallerAccount",
+        "kms:ViaService"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "key"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetKeyPolicy",
       "ActionConditionKeys": [
         "kms:CallerAccount",
@@ -1354,6 +1379,7 @@
       "ActionConditionKeys": [
         "kms:CallerAccount",
         "kms:ScheduleKeyDeletionPendingWindowInDays",
+        "kms:TrailingDaysWithoutKeyUsage",
         "kms:ViaService"
       ],
       "Annotations": {
@@ -2162,6 +2188,12 @@
       ]
     },
     {
+      "Name": "kms:TrailingDaysWithoutKeyUsage",
+      "Types": [
+        "Numeric"
+      ]
+    },
+    {
       "Name": "kms:ValidTo",
       "Types": [
         "Date"
@@ -2591,6 +2623,22 @@
         {
           "Name": "kms",
           "Method": "generate_random",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetKeyLastUsage",
+      "AuthorizedActions": [
+        {
+          "Name": "GetKeyLastUsage",
+          "Service": "kms"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kms",
+          "Method": "get_key_last_usage",
           "Package": "Boto3"
         }
       ]

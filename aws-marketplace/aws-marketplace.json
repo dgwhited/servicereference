@@ -1016,7 +1016,7 @@
       },
       "Resources": [
         {
-          "Name": "PurchaseOption"
+          "Name": "AllPurchaseOptions"
         }
       ],
       "SupportedBy": {
@@ -1250,7 +1250,7 @@
       },
       "Resources": [
         {
-          "Name": "Listing"
+          "Name": "AllListings"
         }
       ],
       "SupportedBy": {
@@ -1270,7 +1270,7 @@
       },
       "Resources": [
         {
-          "Name": "Listing"
+          "Name": "AllListings"
         }
       ],
       "SupportedBy": {
@@ -2351,6 +2351,18 @@
     }
   ],
   "Resources": [
+    {
+      "Name": "AllListings",
+      "ARNFormats": [
+        "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/listing/*"
+      ]
+    },
+    {
+      "Name": "AllPurchaseOptions",
+      "ARNFormats": [
+        "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/purchaseOption/*"
+      ]
+    },
     {
       "Name": "Assessment",
       "ARNFormats": [
