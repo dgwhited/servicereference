@@ -783,6 +783,26 @@
       }
     },
     {
+      "Name": "DescribeContainerGroupPortMappings",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "containerFleet"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeEC2InstanceLimits",
       "Annotations": {
         "Properties": {
@@ -3109,6 +3129,22 @@
         {
           "Name": "gamelift",
           "Method": "describe_container_group_definition",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeContainerGroupPortMappings",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeContainerGroupPortMappings",
+          "Service": "gamelift"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "gamelift",
+          "Method": "describe_container_group_port_mappings",
           "Package": "Boto3"
         }
       ]
