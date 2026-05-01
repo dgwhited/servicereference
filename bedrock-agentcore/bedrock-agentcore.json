@@ -178,6 +178,21 @@
       }
     },
     {
+      "Name": "CreateABTest",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateAgentRuntime",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -312,6 +327,21 @@
       }
     },
     {
+      "Name": "CreateConfigurationBundle",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateEvaluator",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -369,6 +399,26 @@
           "IsWrite": true
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateGatewayRule",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -578,6 +628,26 @@
       }
     },
     {
+      "Name": "DeleteABTest",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ab-test"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteAgentRuntime",
       "Annotations": {
         "Properties": {
@@ -636,6 +706,26 @@
         },
         {
           "Name": "token-vault"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteBatchEvaluation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "batch-evaluate"
         }
       ],
       "SupportedBy": {
@@ -704,6 +794,26 @@
       }
     },
     {
+      "Name": "DeleteConfigurationBundle",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "configuration-bundle"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteEvaluator",
       "Annotations": {
         "Properties": {
@@ -749,6 +859,26 @@
     },
     {
       "Name": "DeleteGateway",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteGatewayRule",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -934,6 +1064,26 @@
       }
     },
     {
+      "Name": "DeleteRecommendation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "recommendation"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteRegistry",
       "Annotations": {
         "Properties": {
@@ -1043,6 +1193,26 @@
       }
     },
     {
+      "Name": "GetABTest",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ab-test"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetAgentCard",
       "Annotations": {
         "Properties": {
@@ -1124,6 +1294,26 @@
         },
         {
           "Name": "token-vault"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetBatchEvaluation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "batch-evaluate"
         }
       ],
       "SupportedBy": {
@@ -1238,6 +1428,46 @@
       }
     },
     {
+      "Name": "GetConfigurationBundle",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "configuration-bundle"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetConfigurationBundleVersion",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "configuration-bundle"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetEvaluator",
       "Annotations": {
         "Properties": {
@@ -1283,6 +1513,26 @@
     },
     {
       "Name": "GetGateway",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetGatewayRule",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1483,6 +1733,26 @@
         },
         {
           "Name": "policy-generation"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetRecommendation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "recommendation"
         }
       ],
       "SupportedBy": {
@@ -1935,6 +2205,21 @@
       }
     },
     {
+      "Name": "ListABTests",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListActors",
       "Annotations": {
         "Properties": {
@@ -2017,6 +2302,21 @@
           "Name": "token-vault"
         }
       ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListBatchEvaluations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -2106,6 +2406,41 @@
       }
     },
     {
+      "Name": "ListConfigurationBundleVersions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "configuration-bundle"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListConfigurationBundles",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListEvaluators",
       "Annotations": {
         "Properties": {
@@ -2137,6 +2472,26 @@
       "Resources": [
         {
           "Name": "memory"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListGatewayRules",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
         }
       ],
       "SupportedBy": {
@@ -2364,6 +2719,21 @@
           "Name": "policy-engine"
         }
       ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListRecommendations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -2687,6 +3057,21 @@
       }
     },
     {
+      "Name": "StartBatchEvaluation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "StartBrowserSession",
       "Annotations": {
         "Properties": {
@@ -2773,6 +3158,41 @@
       "Resources": [
         {
           "Name": "policy-engine"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "StartRecommendation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "StopBatchEvaluation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "batch-evaluate"
         }
       ],
       "SupportedBy": {
@@ -3021,6 +3441,26 @@
       }
     },
     {
+      "Name": "UpdateABTest",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ab-test"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateAgentRuntime",
       "ActionConditionKeys": [
         "bedrock-agentcore:RuntimeAuthorizerType",
@@ -3115,6 +3555,26 @@
       }
     },
     {
+      "Name": "UpdateConfigurationBundle",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "configuration-bundle"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateEvaluator",
       "Annotations": {
         "Properties": {
@@ -3136,6 +3596,26 @@
     },
     {
       "Name": "UpdateGateway",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateGatewayRule",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -3561,6 +4041,12 @@
     },
     {
       "Name": "CreateABTest",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateABTest",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore",
@@ -3722,6 +4208,12 @@
     },
     {
       "Name": "CreateConfigurationBundle",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateConfigurationBundle",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -3801,6 +4293,12 @@
     },
     {
       "Name": "CreateGatewayRule",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateGatewayRule",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -4031,6 +4529,12 @@
     },
     {
       "Name": "DeleteABTest",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteABTest",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore",
@@ -4155,6 +4659,12 @@
     },
     {
       "Name": "DeleteConfigurationBundle",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteConfigurationBundle",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -4213,6 +4723,12 @@
     },
     {
       "Name": "DeleteGatewayRule",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteGatewayRule",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -4441,6 +4957,12 @@
     },
     {
       "Name": "GetABTest",
+      "AuthorizedActions": [
+        {
+          "Name": "GetABTest",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore",
@@ -4515,6 +5037,12 @@
     },
     {
       "Name": "GetBatchEvaluation",
+      "AuthorizedActions": [
+        {
+          "Name": "GetBatchEvaluation",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore",
@@ -4605,6 +5133,12 @@
     },
     {
       "Name": "GetConfigurationBundle",
+      "AuthorizedActions": [
+        {
+          "Name": "GetConfigurationBundle",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -4615,6 +5149,12 @@
     },
     {
       "Name": "GetConfigurationBundleVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "GetConfigurationBundleVersion",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -4673,6 +5213,12 @@
     },
     {
       "Name": "GetGatewayRule",
+      "AuthorizedActions": [
+        {
+          "Name": "GetGatewayRule",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -4827,6 +5373,12 @@
     },
     {
       "Name": "GetRecommendation",
+      "AuthorizedActions": [
+        {
+          "Name": "GetRecommendation",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore",
@@ -5083,6 +5635,12 @@
     },
     {
       "Name": "ListABTests",
+      "AuthorizedActions": [
+        {
+          "Name": "ListABTests",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore",
@@ -5173,6 +5731,12 @@
     },
     {
       "Name": "ListBatchEvaluations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListBatchEvaluations",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore",
@@ -5315,6 +5879,12 @@
     },
     {
       "Name": "ListGatewayRules",
+      "AuthorizedActions": [
+        {
+          "Name": "ListGatewayRules",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -5517,6 +6087,12 @@
     },
     {
       "Name": "ListRecommendations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListRecommendations",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore",
@@ -5687,6 +6263,12 @@
     },
     {
       "Name": "StartBatchEvaluation",
+      "AuthorizedActions": [
+        {
+          "Name": "StartBatchEvaluation",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore",
@@ -5761,6 +6343,12 @@
     },
     {
       "Name": "StartRecommendation",
+      "AuthorizedActions": [
+        {
+          "Name": "StartRecommendation",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore",
@@ -5893,6 +6481,12 @@
     },
     {
       "Name": "UpdateABTest",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateABTest",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore",
@@ -6027,6 +6621,12 @@
     },
     {
       "Name": "UpdateGatewayRule",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateGatewayRule",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -6254,12 +6854,24 @@
   ],
   "Resources": [
     {
+      "Name": "ab-test",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:ab-test/${ABTestId}"
+      ]
+    },
+    {
       "Name": "apikeycredentialprovider",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:token-vault/${TokenVaultId}/apikeycredentialprovider/${Name}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "batch-evaluate",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:batch-evaluate/${BatchEvaluationId}"
       ]
     },
     {
@@ -6299,6 +6911,12 @@
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "configuration-bundle",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:configuration-bundle/${ConfigurationBundleId}"
       ]
     },
     {
@@ -6371,6 +6989,12 @@
       "Name": "policy-generation",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:policy-engine/${PolicyEngineId}/policy-generation/${PolicyGenerationId}"
+      ]
+    },
+    {
+      "Name": "recommendation",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:recommendation/${RecommendationId}"
       ]
     },
     {

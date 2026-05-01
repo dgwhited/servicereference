@@ -28,6 +28,26 @@
       }
     },
     {
+      "Name": "AssociateMpaTeam",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "approval-team"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateAlias",
       "Annotations": {
         "Properties": {
@@ -146,6 +166,26 @@
       }
     },
     {
+      "Name": "DeleteResourcePolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "key"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DisableDefaultKeyReplicationRegions",
       "Annotations": {
         "Properties": {
@@ -155,6 +195,26 @@
           "IsWrite": true
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DisassociateMpaTeam",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "approval-team"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -448,6 +508,26 @@
       }
     },
     {
+      "Name": "GetMpaTeamAssociation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "approval-team"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetParametersForExport",
       "Annotations": {
         "Properties": {
@@ -482,6 +562,26 @@
       "ActionConditionKeys": [
         "payment-cryptography:RequestAlias"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "key"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetResourcePolicy",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -560,6 +660,26 @@
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "key"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
         }
       },
       "Resources": [
@@ -1010,6 +1130,16 @@
       ]
     },
     {
+      "Name": "AssociateMpaTeam",
+      "SDK": [
+        {
+          "Name": "payment-cryptography",
+          "Method": "associate_mpa_team",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateAlias",
       "AuthorizedActions": [
         {
@@ -1088,6 +1218,22 @@
       ]
     },
     {
+      "Name": "DeleteResourcePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteResourcePolicy",
+          "Service": "payment-cryptography"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "payment-cryptography",
+          "Method": "delete_resource_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DisableDefaultKeyReplicationRegions",
       "AuthorizedActions": [
         {
@@ -1099,6 +1245,16 @@
         {
           "Name": "payment-cryptography",
           "Method": "disable_default_key_replication_regions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateMpaTeam",
+      "SDK": [
+        {
+          "Name": "payment-cryptography",
+          "Method": "disassociate_mpa_team",
           "Package": "Boto3"
         }
       ]
@@ -1260,6 +1416,16 @@
       ]
     },
     {
+      "Name": "GetMpaTeamAssociation",
+      "SDK": [
+        {
+          "Name": "payment-cryptography",
+          "Method": "get_mpa_team_association",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetParametersForExport",
       "AuthorizedActions": [
         {
@@ -1303,6 +1469,22 @@
         {
           "Name": "payment-cryptography",
           "Method": "get_public_key_certificate",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "GetResourcePolicy",
+          "Service": "payment-cryptography"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "payment-cryptography",
+          "Method": "get_resource_policy",
           "Package": "Boto3"
         }
       ]
@@ -1371,6 +1553,22 @@
         {
           "Name": "payment-cryptography",
           "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutResourcePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "PutResourcePolicy",
+          "Service": "payment-cryptography"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "payment-cryptography",
+          "Method": "put_resource_policy",
           "Package": "Boto3"
         }
       ]
@@ -1566,6 +1764,15 @@
       ],
       "ConditionKeys": [
         "payment-cryptography:ResourceAliases"
+      ]
+    },
+    {
+      "Name": "approval-team",
+      "ARNFormats": [
+        "arn:${Partition}:mpa:${Region}:${Account}:approval-team/${ApprovalTeamId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
