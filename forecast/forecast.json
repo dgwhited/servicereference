@@ -1681,6 +1681,25 @@
     },
     {
       "Name": "CreateDatasetImportJob",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDatasetImportJob",
+          "Service": "forecast"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "forecast.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "forecast"
+        }
+      ],
       "SDK": [
         {
           "Name": "forecast",
@@ -1714,6 +1733,10 @@
       "AuthorizedActions": [
         {
           "Name": "CreateForecast",
+          "Service": "forecast"
+        },
+        {
+          "Name": "TagResource",
           "Service": "forecast"
         }
       ],
@@ -1909,6 +1932,12 @@
     },
     {
       "Name": "DeleteMonitor",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteMonitor",
+          "Service": "forecast"
+        }
+      ],
       "SDK": [
         {
           "Name": "forecast",
@@ -1935,6 +1964,12 @@
     },
     {
       "Name": "DeletePredictorBacktestExportJob",
+      "AuthorizedActions": [
+        {
+          "Name": "DeletePredictorBacktestExportJob",
+          "Service": "forecast"
+        }
+      ],
       "SDK": [
         {
           "Name": "forecast",
@@ -1961,6 +1996,12 @@
     },
     {
       "Name": "DeleteWhatIfAnalysis",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteWhatIfAnalysis",
+          "Service": "forecast"
+        }
+      ],
       "SDK": [
         {
           "Name": "forecast",
@@ -2119,6 +2160,12 @@
     },
     {
       "Name": "DescribeMonitor",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeMonitor",
+          "Service": "forecast"
+        }
+      ],
       "SDK": [
         {
           "Name": "forecast",
@@ -2161,6 +2208,12 @@
     },
     {
       "Name": "DescribeWhatIfAnalysis",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeWhatIfAnalysis",
+          "Service": "forecast"
+        }
+      ],
       "SDK": [
         {
           "Name": "forecast",
@@ -2527,6 +2580,12 @@
     },
     {
       "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "forecast"
+        }
+      ],
       "SDK": [
         {
           "Name": "forecast",

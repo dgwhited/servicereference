@@ -793,6 +793,9 @@
           "Name": "alarm-mute-rule"
         },
         {
+          "Name": "dashboard"
+        },
+        {
           "Name": "insight-rule"
         },
         {
@@ -873,6 +876,10 @@
     },
     {
       "Name": "PutDashboard",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1115,6 +1122,9 @@
           "Name": "alarm-mute-rule"
         },
         {
+          "Name": "dashboard"
+        },
+        {
           "Name": "insight-rule"
         },
         {
@@ -1145,6 +1155,9 @@
         },
         {
           "Name": "alarm-mute-rule"
+        },
+        {
+          "Name": "dashboard"
         },
         {
           "Name": "insight-rule"
@@ -2011,6 +2024,9 @@
       "Name": "dashboard",
       "ARNFormats": [
         "arn:${Partition}:cloudwatch::${Account}:dashboard/${DashboardName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
