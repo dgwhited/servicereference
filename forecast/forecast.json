@@ -1750,6 +1750,25 @@
     },
     {
       "Name": "CreateForecastExportJob",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateForecastExportJob",
+          "Service": "forecast"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "forecast.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "forecast"
+        }
+      ],
       "SDK": [
         {
           "Name": "forecast",
