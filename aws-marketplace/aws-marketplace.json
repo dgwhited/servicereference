@@ -586,6 +586,26 @@
       }
     },
     {
+      "Name": "GetIssuedTaxInvoice",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "IssuedTaxInvoice"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetListing",
       "Annotations": {
         "Properties": {
@@ -960,6 +980,21 @@
       }
     },
     {
+      "Name": "ListIssuedTaxInvoices",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListPayables",
       "Annotations": {
         "Properties": {
@@ -1049,6 +1084,9 @@
         },
         {
           "Name": "InvoiceSubmissionTask"
+        },
+        {
+          "Name": "IssuedTaxInvoice"
         }
       ],
       "SupportedBy": {
@@ -1428,6 +1466,9 @@
         },
         {
           "Name": "InvoiceSubmissionTask"
+        },
+        {
+          "Name": "IssuedTaxInvoice"
         }
       ],
       "SupportedBy": {
@@ -1480,6 +1521,9 @@
         },
         {
           "Name": "InvoiceSubmissionTask"
+        },
+        {
+          "Name": "IssuedTaxInvoice"
         }
       ],
       "SupportedBy": {
@@ -2604,6 +2648,15 @@
       "Name": "InvoiceSubmissionTask",
       "ARNFormats": [
         "arn:${Partition}:aws-marketplace:${Region}:${Account}:catalog/${Catalog}/invoice-submission-task/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "IssuedTaxInvoice",
+      "ARNFormats": [
+        "arn:${Partition}:aws-marketplace:${Region}:${Account}:catalog/${Catalog}/issued-tax-invoice/${ResourceId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
