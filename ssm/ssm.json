@@ -3575,6 +3575,15 @@
         {
           "Name": "CreateAssociationBatch",
           "Service": "ssm"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ssm.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [
