@@ -60,7 +60,6 @@
       "Name": "CreateJob",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -71,6 +70,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "job"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -80,7 +87,6 @@
       "Name": "CreateQuantumTask",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -91,6 +97,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "quantum-task"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -100,7 +114,6 @@
       "Name": "CreateSpendingLimit",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ],
       "Annotations": {
@@ -111,6 +124,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "device"
+        },
+        {
+          "Name": "spending-limit"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -118,11 +139,6 @@
     },
     {
       "Name": "DeleteSpendingLimit",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -131,6 +147,11 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "spending-limit"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -146,6 +167,11 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "device"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -251,7 +277,7 @@
       "Name": "SearchDevices",
       "Annotations": {
         "Properties": {
-          "IsList": false,
+          "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -266,7 +292,7 @@
       "Name": "SearchJobs",
       "Annotations": {
         "Properties": {
-          "IsList": false,
+          "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -281,7 +307,7 @@
       "Name": "SearchQuantumTasks",
       "Annotations": {
         "Properties": {
-          "IsList": false,
+          "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -368,11 +394,6 @@
     },
     {
       "Name": "UpdateSpendingLimit",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -381,6 +402,11 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "spending-limit"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -703,6 +729,12 @@
     }
   ],
   "Resources": [
+    {
+      "Name": "device",
+      "ARNFormats": [
+        "arn:${Partition}:braket:*:${Account}:device/${DeviceType}/${Provider}/${DeviceId}"
+      ]
+    },
     {
       "Name": "job",
       "ARNFormats": [

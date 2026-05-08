@@ -4301,26 +4301,6 @@
       }
     },
     {
-      "Name": "UpdatePaymentSession",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "payment-manager"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
       "Name": "UpdatePolicy",
       "Annotations": {
         "Properties": {
@@ -5012,6 +4992,86 @@
       ]
     },
     {
+      "Name": "CreatePaymentConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "CreatePaymentConnector",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "create_payment_connector",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePaymentCredentialProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "CreatePaymentCredentialProvider",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "create_payment_credential_provider",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePaymentInstrument",
+      "AuthorizedActions": [
+        {
+          "Name": "CreatePaymentInstrument",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore",
+          "Method": "create_payment_instrument",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePaymentManager",
+      "AuthorizedActions": [
+        {
+          "Name": "CreatePaymentManager",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "create_payment_manager",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePaymentSession",
+      "AuthorizedActions": [
+        {
+          "Name": "CreatePaymentSession",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore",
+          "Method": "create_payment_session",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreatePolicy",
       "AuthorizedActions": [
         {
@@ -5412,6 +5472,68 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "delete_online_evaluation_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePaymentConnector",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "delete_payment_connector",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePaymentCredentialProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "DeletePaymentCredentialProvider",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "delete_payment_credential_provider",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePaymentInstrument",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore",
+          "Method": "delete_payment_instrument",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePaymentManager",
+      "AuthorizedActions": [
+        {
+          "Name": "DeletePaymentManager",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "delete_payment_manager",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePaymentSession",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore",
+          "Method": "delete_payment_session",
           "Package": "Boto3"
         }
       ]
@@ -5913,6 +6035,96 @@
       ]
     },
     {
+      "Name": "GetPaymentConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPaymentConnector",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "get_payment_connector",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPaymentCredentialProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPaymentCredentialProvider",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "get_payment_credential_provider",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPaymentInstrument",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPaymentInstrument",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore",
+          "Method": "get_payment_instrument",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPaymentInstrumentBalance",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore",
+          "Method": "get_payment_instrument_balance",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPaymentManager",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPaymentManager",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "get_payment_manager",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPaymentSession",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPaymentSession",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore",
+          "Method": "get_payment_session",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetPolicy",
       "AuthorizedActions": [
         {
@@ -6036,6 +6248,22 @@
         {
           "Name": "bedrock-agentcore",
           "Method": "get_resource_oauth2_token",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetResourcePaymentToken",
+      "AuthorizedActions": [
+        {
+          "Name": "GetResourcePaymentToken",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore",
+          "Method": "get_resource_payment_token",
           "Package": "Boto3"
         }
       ]
@@ -6623,6 +6851,86 @@
       ]
     },
     {
+      "Name": "ListPaymentConnectors",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPaymentConnectors",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_payment_connectors",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPaymentCredentialProviders",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPaymentCredentialProviders",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_payment_credential_providers",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPaymentInstruments",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPaymentInstruments",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore",
+          "Method": "list_payment_instruments",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPaymentManagers",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPaymentManagers",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_payment_managers",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPaymentSessions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPaymentSessions",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore",
+          "Method": "list_payment_sessions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListPolicies",
       "AuthorizedActions": [
         {
@@ -6778,6 +7086,22 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "list_workload_identities",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ProcessPayment",
+      "AuthorizedActions": [
+        {
+          "Name": "ProcessPayment",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore",
+          "Method": "process_payment",
           "Package": "Boto3"
         }
       ]
@@ -7355,6 +7679,48 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "update_online_evaluation_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePaymentConnector",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "update_payment_connector",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePaymentCredentialProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdatePaymentCredentialProvider",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "update_payment_credential_provider",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePaymentManager",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdatePaymentManager",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "update_payment_manager",
           "Package": "Boto3"
         }
       ]
