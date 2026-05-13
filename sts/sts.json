@@ -238,9 +238,6 @@
       "Resources": [
         {
           "Name": "federated-user"
-        },
-        {
-          "Name": "user"
         }
       ],
       "SupportedBy": {
@@ -347,9 +344,6 @@
       "Resources": [
         {
           "Name": "role"
-        },
-        {
-          "Name": "user"
         }
       ],
       "SupportedBy": {
@@ -395,9 +389,6 @@
       "Resources": [
         {
           "Name": "role"
-        },
-        {
-          "Name": "user"
         }
       ],
       "SupportedBy": {
@@ -728,7 +719,7 @@
     {
       "Name": "sts:TaskPolicyArn",
       "Types": [
-        "String"
+        "ARN"
       ]
     },
     {
@@ -969,12 +960,6 @@
       "Name": "self-session",
       "ARNFormats": [
         "arn:${Partition}:sts::${Account}:self"
-      ]
-    },
-    {
-      "Name": "user",
-      "ARNFormats": [
-        "arn:${Partition}:iam::${Account}:user/${UserNameWithPath}"
       ]
     }
   ],
