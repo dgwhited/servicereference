@@ -5179,6 +5179,25 @@
     },
     {
       "Name": "CreatePaymentManager",
+      "AuthorizedActions": [
+        {
+          "Name": "CreatePaymentManager",
+          "Service": "bedrock-agentcore"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "bedrock-agentcore.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
