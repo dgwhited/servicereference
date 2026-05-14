@@ -47,6 +47,30 @@
       }
     },
     {
+      "Name": "CreateStream",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Cluster"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DbConnect",
       "Annotations": {
         "Properties": {
@@ -119,6 +143,26 @@
       "Resources": [
         {
           "Name": "Cluster"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteStream",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Stream"
         }
       ],
       "SupportedBy": {
@@ -207,6 +251,26 @@
       }
     },
     {
+      "Name": "GetStream",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Stream"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetVpcEndpointServiceName",
       "Annotations": {
         "Properties": {
@@ -261,6 +325,26 @@
       }
     },
     {
+      "Name": "ListStreams",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Cluster"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListTagsForResource",
       "Annotations": {
         "Properties": {
@@ -273,6 +357,9 @@
       "Resources": [
         {
           "Name": "Cluster"
+        },
+        {
+          "Name": "Stream"
         }
       ],
       "SupportedBy": {
@@ -460,6 +547,9 @@
       "Resources": [
         {
           "Name": "Cluster"
+        },
+        {
+          "Name": "Stream"
         }
       ],
       "SupportedBy": {
@@ -483,6 +573,9 @@
       "Resources": [
         {
           "Name": "Cluster"
+        },
+        {
+          "Name": "Stream"
         }
       ],
       "SupportedBy": {
@@ -506,6 +599,26 @@
       "Resources": [
         {
           "Name": "Cluster"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateStream",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Stream"
         }
       ],
       "SupportedBy": {
@@ -594,6 +707,35 @@
       ]
     },
     {
+      "Name": "CreateStream",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateStream",
+          "Service": "dsql"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "dsql.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "dsql"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "dsql",
+          "Method": "create_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteCluster",
       "AuthorizedActions": [
         {
@@ -621,6 +763,22 @@
         {
           "Name": "dsql",
           "Method": "delete_cluster_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteStream",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteStream",
+          "Service": "dsql"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "dsql",
+          "Method": "delete_stream",
           "Package": "Boto3"
         }
       ]
@@ -658,6 +816,22 @@
       ]
     },
     {
+      "Name": "GetStream",
+      "AuthorizedActions": [
+        {
+          "Name": "GetStream",
+          "Service": "dsql"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "dsql",
+          "Method": "get_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetVpcEndpointServiceName",
       "AuthorizedActions": [
         {
@@ -685,6 +859,22 @@
         {
           "Name": "dsql",
           "Method": "list_clusters",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListStreams",
+      "AuthorizedActions": [
+        {
+          "Name": "ListStreams",
+          "Service": "dsql"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "dsql",
+          "Method": "list_streams",
           "Package": "Boto3"
         }
       ]
@@ -799,6 +989,15 @@
       "Name": "Cluster",
       "ARNFormats": [
         "arn:${Partition}:dsql:${Region}:${Account}:cluster/${Identifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "Stream",
+      "ARNFormats": [
+        "arn:${Partition}:dsql:${Region}:${Account}:cluster/${ClusterId}/stream/${StreamId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

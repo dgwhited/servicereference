@@ -661,6 +661,10 @@
     },
     {
       "Name": "CreatePolicyEngine",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -2053,6 +2057,26 @@
       }
     },
     {
+      "Name": "GetPolicyEngineSummary",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "policy-engine"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetPolicyGeneration",
       "Annotations": {
         "Properties": {
@@ -2068,6 +2092,52 @@
         },
         {
           "Name": "policy-generation"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetPolicyGenerationSummary",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "policy-engine"
+        },
+        {
+          "Name": "policy-generation"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetPolicySummary",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "policy"
+        },
+        {
+          "Name": "policy-engine"
         }
       ],
       "SupportedBy": {
@@ -3129,6 +3199,21 @@
       }
     },
     {
+      "Name": "ListPolicyEngineSummaries",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListPolicyEngines",
       "Annotations": {
         "Properties": {
@@ -3167,7 +3252,47 @@
       }
     },
     {
+      "Name": "ListPolicyGenerationSummaries",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "policy-engine"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListPolicyGenerations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "policy-engine"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListPolicySummaries",
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -3305,6 +3430,9 @@
         },
         {
           "Name": "paymentcredentialprovider"
+        },
+        {
+          "Name": "policy-engine"
         },
         {
           "Name": "runtime"
@@ -3849,6 +3977,9 @@
           "Name": "paymentcredentialprovider"
         },
         {
+          "Name": "policy-engine"
+        },
+        {
           "Name": "runtime"
         },
         {
@@ -3918,6 +4049,9 @@
         },
         {
           "Name": "paymentcredentialprovider"
+        },
+        {
+          "Name": "policy-engine"
         },
         {
           "Name": "runtime"
@@ -6187,6 +6321,16 @@
       ]
     },
     {
+      "Name": "GetPolicyEngineSummary",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "get_policy_engine_summary",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetPolicyGeneration",
       "AuthorizedActions": [
         {
@@ -6198,6 +6342,26 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "get_policy_generation",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPolicyGenerationSummary",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "get_policy_generation_summary",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPolicySummary",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "get_policy_summary",
           "Package": "Boto3"
         }
       ]
@@ -6977,6 +7141,16 @@
       ]
     },
     {
+      "Name": "ListPolicyEngineSummaries",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_policy_engine_summaries",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListPolicyEngines",
       "AuthorizedActions": [
         {
@@ -7009,6 +7183,16 @@
       ]
     },
     {
+      "Name": "ListPolicyGenerationSummaries",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_policy_generation_summaries",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListPolicyGenerations",
       "AuthorizedActions": [
         {
@@ -7020,6 +7204,16 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "list_policy_generations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPolicySummaries",
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_policy_summaries",
           "Package": "Boto3"
         }
       ]
@@ -8016,6 +8210,9 @@
       "Name": "policy-engine",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:policy-engine/${PolicyEngineId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
