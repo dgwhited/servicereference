@@ -563,25 +563,6 @@
       }
     },
     {
-      "Name": "CreateOAuthClientApplication",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
       "Name": "CreateReader",
       "Annotations": {
         "Properties": {
@@ -1234,26 +1215,6 @@
       }
     },
     {
-      "Name": "DeleteKnowledgeBase",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "knowledgeBase"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
       "Name": "DeleteNamespace",
       "Annotations": {
         "Properties": {
@@ -1266,30 +1227,6 @@
       "Resources": [
         {
           "Name": "namespace"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "DeleteOAuthClientApplication",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "oauthClientApplication"
         }
       ],
       "SupportedBy": {
@@ -1790,10 +1727,6 @@
     },
     {
       "Name": "DescribeAutomationJob",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -2346,46 +2279,6 @@
       }
     },
     {
-      "Name": "DescribeKnowledgeBase",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "knowledgeBase"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "DescribeKnowledgeBasePermissions",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "knowledgeBase"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
       "Name": "DescribeNamespace",
       "Annotations": {
         "Properties": {
@@ -2398,30 +2291,6 @@
       "Resources": [
         {
           "Name": "namespace"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "DescribeOAuthClientApplication",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "Resources": [
-        {
-          "Name": "oauthClientApplication"
         }
       ],
       "SupportedBy": {
@@ -3463,41 +3332,7 @@
       }
     },
     {
-      "Name": "ListKnowledgeBases",
-      "Annotations": {
-        "Properties": {
-          "IsList": true,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
       "Name": "ListNamespaces",
-      "Annotations": {
-        "Properties": {
-          "IsList": true,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "ListOAuthClientApplications",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -3604,12 +3439,6 @@
         },
         {
           "Name": "folder"
-        },
-        {
-          "Name": "knowledgeBase"
-        },
-        {
-          "Name": "oauthClientApplication"
         },
         {
           "Name": "template"
@@ -4247,21 +4076,6 @@
       }
     },
     {
-      "Name": "SearchKnowledgeBases",
-      "Annotations": {
-        "Properties": {
-          "IsList": true,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": false
-        }
-      },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
       "Name": "SearchTopics",
       "Annotations": {
         "Properties": {
@@ -4358,10 +4172,6 @@
     },
     {
       "Name": "StartAutomationJob",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -4486,12 +4296,6 @@
           "Name": "ingestion"
         },
         {
-          "Name": "knowledgeBase"
-        },
-        {
-          "Name": "oauthClientApplication"
-        },
-        {
           "Name": "template"
         },
         {
@@ -4593,12 +4397,6 @@
         },
         {
           "Name": "ingestion"
-        },
-        {
-          "Name": "knowledgeBase"
-        },
-        {
-          "Name": "oauthClientApplication"
         },
         {
           "Name": "template"
@@ -5262,50 +5060,6 @@
           "IsWrite": true
         }
       },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "UpdateKnowledgeBasePermissions",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": true,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "knowledgeBase"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "UpdateOAuthClientApplication",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "oauthClientApplication"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -8676,6 +8430,14 @@
       "Name": "RestoreAnalysis",
       "AuthorizedActions": [
         {
+          "Name": "CreateFolderMembership",
+          "Service": "quicksight"
+        },
+        {
+          "Name": "ListFoldersForResource",
+          "Service": "quicksight"
+        },
+        {
           "Name": "RestoreAnalysis",
           "Service": "quicksight"
         }
@@ -9851,18 +9613,6 @@
       ]
     },
     {
-      "Name": "approvalPolicy",
-      "ARNFormats": [
-        "arn:${Partition}:quicksight:${Region}:${Account}:approval-policy/${ResourceId}"
-      ]
-    },
-    {
-      "Name": "approvalPolicyEngine",
-      "ARNFormats": [
-        "arn:${Partition}:quicksight:${Region}:${Account}:approval-policy-engine/${ResourceId}"
-      ]
-    },
-    {
       "Name": "assetBundleExportJob",
       "ARNFormats": [
         "arn:${Partition}:quicksight:${Region}:${Account}:asset-bundle-export-job/${ResourceId}"
@@ -9890,9 +9640,6 @@
       "Name": "automationGroup",
       "ARNFormats": [
         "arn:${Partition}:quicksight:${Region}:${Account}:automation-group/${ResourceId}"
-      ],
-      "ConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -10013,36 +9760,15 @@
       ]
     },
     {
-      "Name": "knowledgeBase",
-      "ARNFormats": [
-        "arn:${Partition}:quicksight:${Region}:${Account}:knowledge-base/${ResourceId}"
-      ],
-      "ConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
-      ]
-    },
-    {
       "Name": "namespace",
       "ARNFormats": [
         "arn:${Partition}:quicksight:${Region}:${Account}:namespace/${ResourceId}"
       ]
     },
     {
-      "Name": "oauthClientApplication",
-      "ARNFormats": [
-        "arn:${Partition}:quicksight:${Region}:${Account}:oauthClientApplication/${ResourceId}"
-      ],
-      "ConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
-      ]
-    },
-    {
       "Name": "refreshschedule",
       "ARNFormats": [
         "arn:${Partition}:quicksight:${Region}:${Account}:dataset/${DatasetId}/refresh-schedule/${ResourceId}"
-      ],
-      "ConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
       ]
     },
     {

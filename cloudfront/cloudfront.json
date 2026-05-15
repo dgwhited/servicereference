@@ -273,6 +273,10 @@
     },
     {
       "Name": "CreateFunction",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -343,6 +347,10 @@
     },
     {
       "Name": "CreateKeyValueStore",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -2478,6 +2486,12 @@
           "Name": "distribution-tenant"
         },
         {
+          "Name": "function"
+        },
+        {
+          "Name": "key-value-store"
+        },
+        {
           "Name": "trust-store"
         },
         {
@@ -2625,6 +2639,12 @@
           "Name": "distribution-tenant"
         },
         {
+          "Name": "function"
+        },
+        {
+          "Name": "key-value-store"
+        },
+        {
           "Name": "streaming-distribution"
         },
         {
@@ -2707,6 +2727,12 @@
         },
         {
           "Name": "distribution-tenant"
+        },
+        {
+          "Name": "function"
+        },
+        {
+          "Name": "key-value-store"
         },
         {
           "Name": "streaming-distribution"
@@ -6091,12 +6117,18 @@
       "Name": "function",
       "ARNFormats": [
         "arn:${Partition}:cloudfront::${Account}:function/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "key-value-store",
       "ARNFormats": [
         "arn:${Partition}:cloudfront::${Account}:key-value-store/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
