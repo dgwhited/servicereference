@@ -2,6 +2,38 @@
   "Name": "ecs",
   "Actions": [
     {
+      "Name": "ContinueServiceDeployment",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ecs:cluster"
+          ]
+        },
+        {
+          "Name": "service-deployment",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ecs:cluster",
+            "ecs:service"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateCapacityProvider",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -2132,6 +2164,12 @@
       ]
     },
     {
+      "Name": "ecs:gateway",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
       "Name": "ecs:instance-metadata-tags-propagation",
       "Types": [
         "Bool"
@@ -2193,6 +2231,22 @@
     }
   ],
   "Operations": [
+    {
+      "Name": "ContinueServiceDeployment",
+      "AuthorizedActions": [
+        {
+          "Name": "ContinueServiceDeployment",
+          "Service": "ecs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ecs",
+          "Method": "continue_service_deployment",
+          "Package": "Boto3"
+        }
+      ]
+    },
     {
       "Name": "CreateCapacityProvider",
       "AuthorizedActions": [
