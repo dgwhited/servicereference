@@ -94,11 +94,14 @@
         "kms:CallerAccount",
         "kms:EncryptionContext:${EncryptionContextKey}",
         "kms:EncryptionContextKeys",
+        "kms:GrantConstraintSourceArn",
         "kms:GrantConstraintType",
         "kms:GrantIsForAWSResource",
         "kms:GrantOperations",
         "kms:GranteePrincipal",
+        "kms:GranteeServicePrincipal",
         "kms:RetiringPrincipal",
+        "kms:RetiringServicePrincipal",
         "kms:ViaService"
       ],
       "Annotations": {
@@ -1720,6 +1723,12 @@
       ]
     },
     {
+      "Name": "kms:GrantConstraintSourceArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
       "Name": "kms:GrantConstraintType",
       "Types": [
         "String"
@@ -1739,6 +1748,12 @@
     },
     {
       "Name": "kms:GranteePrincipal",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "kms:GranteeServicePrincipal",
       "Types": [
         "String"
       ]
@@ -2165,6 +2180,12 @@
     },
     {
       "Name": "kms:RetiringPrincipal",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "kms:RetiringServicePrincipal",
       "Types": [
         "String"
       ]
