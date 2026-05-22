@@ -201,6 +201,26 @@
       }
     },
     {
+      "Name": "GetDepotUrl",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "environment"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetEnvironment",
       "Annotations": {
         "Properties": {
@@ -601,6 +621,22 @@
         {
           "Name": "evs",
           "Method": "disassociate_eip_from_vlan",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetDepotUrl",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDepotUrl",
+          "Service": "evs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "evs",
+          "Method": "get_depot_url",
           "Package": "Boto3"
         }
       ]

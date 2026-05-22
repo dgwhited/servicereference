@@ -52,7 +52,8 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
-        "transfer:RequestConnectorProtocol"
+        "transfer:RequestConnectorProtocol",
+        "transfer:RequestSecurityPolicyName"
       ],
       "Annotations": {
         "Properties": {
@@ -98,6 +99,7 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "transfer:RequestSecurityPolicyName",
         "transfer:RequestServerDomain",
         "transfer:RequestServerEndpointType",
         "transfer:RequestServerProtocols"
@@ -1338,6 +1340,9 @@
     },
     {
       "Name": "UpdateConnector",
+      "ActionConditionKeys": [
+        "transfer:RequestSecurityPolicyName"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1402,6 +1407,7 @@
     {
       "Name": "UpdateServer",
       "ActionConditionKeys": [
+        "transfer:RequestSecurityPolicyName",
         "transfer:RequestServerEndpointType",
         "transfer:RequestServerProtocols"
       ],
@@ -1505,6 +1511,12 @@
     },
     {
       "Name": "transfer:RequestConnectorProtocol",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "transfer:RequestSecurityPolicyName",
       "Types": [
         "String"
       ]
