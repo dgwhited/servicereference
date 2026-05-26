@@ -195,6 +195,26 @@
       }
     },
     {
+      "Name": "ListPerformanceAnalysisReportRecommendations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "perf-reports-resource"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListPerformanceAnalysisReports",
       "Annotations": {
         "Properties": {
@@ -474,6 +494,12 @@
     },
     {
       "Name": "ListPerformanceAnalysisReportRecommendations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPerformanceAnalysisReportRecommendations",
+          "Service": "pi"
+        }
+      ],
       "SDK": [
         {
           "Name": "pi",
