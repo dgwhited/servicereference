@@ -3306,6 +3306,15 @@
       "Name": "PutGroup",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "qbusiness.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "PutGroup",
           "Service": "qbusiness"
         }
