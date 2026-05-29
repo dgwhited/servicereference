@@ -2852,6 +2852,29 @@
       }
     },
     {
+      "Name": "GetConnection",
+      "ActionConditionKeys": [
+        "iot:IncludeSocketInformation"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "client"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetEffectivePolicies",
       "Annotations": {
         "Properties": {
@@ -4042,6 +4065,26 @@
       }
     },
     {
+      "Name": "ListSubscriptions",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "client"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListTagsForResource",
       "Annotations": {
         "Properties": {
@@ -4715,6 +4758,29 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "SendDirectMessage",
+      "ActionConditionKeys": [
+        "iot:Topic"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "client"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -5881,9 +5947,21 @@
       ]
     },
     {
+      "Name": "iot:IncludeSocketInformation",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "iot:ThingGroupArn",
       "Types": [
         "ArrayOfARN"
+      ]
+    },
+    {
+      "Name": "iot:Topic",
+      "Types": [
+        "String"
       ]
     },
     {
@@ -8270,6 +8348,16 @@
       ]
     },
     {
+      "Name": "GetConnection",
+      "SDK": [
+        {
+          "Name": "iot-data",
+          "Method": "get_connection",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetEffectivePolicies",
       "AuthorizedActions": [
         {
@@ -9350,6 +9438,16 @@
       ]
     },
     {
+      "Name": "ListSubscriptions",
+      "SDK": [
+        {
+          "Name": "iot-data",
+          "Method": "list_subscriptions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListTagsForResource",
       "AuthorizedActions": [
         {
@@ -9862,6 +9960,16 @@
         {
           "Name": "iot",
           "Method": "search_index",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SendDirectMessage",
+      "SDK": [
+        {
+          "Name": "iot-data",
+          "Method": "send_direct_message",
           "Package": "Boto3"
         }
       ]
