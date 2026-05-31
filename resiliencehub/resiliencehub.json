@@ -2655,6 +2655,21 @@
     },
     {
       "Name": "CreateService",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateService",
+          "Service": "resiliencehub"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "resiliencehub.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "resiliencehubv2",
@@ -2665,6 +2680,12 @@
     },
     {
       "Name": "CreateServiceFunction",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateServiceFunction",
+          "Service": "resiliencehub"
+        }
+      ],
       "SDK": [
         {
           "Name": "resiliencehubv2",
@@ -4125,6 +4146,21 @@
     },
     {
       "Name": "UpdateService",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "resiliencehub.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateService",
+          "Service": "resiliencehub"
+        }
+      ],
       "SDK": [
         {
           "Name": "resiliencehubv2",
@@ -4135,6 +4171,12 @@
     },
     {
       "Name": "UpdateServiceFunction",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateServiceFunction",
+          "Service": "resiliencehub"
+        }
+      ],
       "SDK": [
         {
           "Name": "resiliencehubv2",
@@ -4161,6 +4203,12 @@
     },
     {
       "Name": "UpdateUserJourney",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateUserJourney",
+          "Service": "resiliencehub"
+        }
+      ],
       "SDK": [
         {
           "Name": "resiliencehubv2",
