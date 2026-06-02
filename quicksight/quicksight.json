@@ -216,6 +216,26 @@
       }
     },
     {
+      "Name": "CreateAgent",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateAnalysis",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -391,6 +411,26 @@
       "Resources": [
         {
           "Name": "extensionaccess"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateFlow",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "flow"
         }
       ],
       "SupportedBy": {
@@ -615,6 +655,26 @@
           "IsWrite": true
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateSpace",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -875,6 +935,26 @@
       }
     },
     {
+      "Name": "DeleteAgent",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteAnalysis",
       "Annotations": {
         "Properties": {
@@ -1088,6 +1168,26 @@
       }
     },
     {
+      "Name": "DeleteFlow",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteFolder",
       "Annotations": {
         "Properties": {
@@ -1282,6 +1382,26 @@
           "IsWrite": true
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteSpace",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -2102,6 +2222,26 @@
       }
     },
     {
+      "Name": "DescribeFlow",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeFolder",
       "Annotations": {
         "Properties": {
@@ -2388,6 +2528,46 @@
           "IsWrite": false
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeSpace",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeSpacePermissions",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -3397,6 +3577,41 @@
       }
     },
     {
+      "Name": "ListSpaceResources",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListSpaces",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListTagsForResource",
       "Annotations": {
         "Properties": {
@@ -4076,6 +4291,21 @@
       }
     },
     {
+      "Name": "SearchSpaces",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "SearchTopics",
       "Annotations": {
         "Properties": {
@@ -4507,6 +4737,26 @@
       }
     },
     {
+      "Name": "UpdateAgent",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "agent"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateAgentPermissions",
       "Annotations": {
         "Properties": {
@@ -4921,6 +5171,26 @@
       }
     },
     {
+      "Name": "UpdateFlow",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "flow"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateFlowPermissions",
       "Annotations": {
         "Properties": {
@@ -5220,6 +5490,66 @@
           "IsWrite": true
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateSpace",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateSpacePermissions",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateSpaceResources",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "space"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -5628,6 +5958,10 @@
         {
           "Name": "Subscribe",
           "Service": "quicksight"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "quicksight"
         }
       ],
       "SDK": [
@@ -5663,6 +5997,16 @@
         {
           "Name": "quicksight",
           "Method": "create_action_connector",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateAgent",
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "create_agent",
           "Package": "Boto3"
         }
       ]
@@ -5840,6 +6184,22 @@
         {
           "Name": "quicksight",
           "Method": "create_data_source",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateFlow",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateFlow",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "create_flow",
           "Package": "Boto3"
         }
       ]
@@ -6036,6 +6396,22 @@
         {
           "Name": "quicksight",
           "Method": "create_role_membership",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateSpace",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateSpace",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "create_space",
           "Package": "Boto3"
         }
       ]
@@ -6258,6 +6634,22 @@
       ]
     },
     {
+      "Name": "DeleteAgent",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteAgent",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "delete_agent",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteAnalysis",
       "AuthorizedActions": [
         {
@@ -6397,6 +6789,22 @@
         {
           "Name": "quicksight",
           "Method": "delete_default_q_business_application",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteFlow",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteFlow",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "delete_flow",
           "Package": "Boto3"
         }
       ]
@@ -6597,6 +7005,22 @@
         {
           "Name": "quicksight",
           "Method": "delete_role_membership",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSpace",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteSpace",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "delete_space",
           "Package": "Boto3"
         }
       ]
@@ -6866,6 +7290,38 @@
         {
           "Name": "quicksight",
           "Method": "describe_action_connector_permissions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAgent",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeAgent",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "describe_agent",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeAgentPermissions",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeAgentPermissions",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "describe_agent_permissions",
           "Package": "Boto3"
         }
       ]
@@ -7223,6 +7679,22 @@
       ]
     },
     {
+      "Name": "DescribeFlow",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeFlow",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "describe_flow",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DescribeFolder",
       "AuthorizedActions": [
         {
@@ -7478,6 +7950,38 @@
         {
           "Name": "quicksight",
           "Method": "describe_self_upgrade_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSpace",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeSpace",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "describe_space",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeSpacePermissions",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeSpacePermissions",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "describe_space_permissions",
           "Package": "Boto3"
         }
       ]
@@ -7842,6 +8346,22 @@
         {
           "Name": "quicksight",
           "Method": "list_action_connectors",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListAgents",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAgents",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "list_agents",
           "Package": "Boto3"
         }
       ]
@@ -8235,6 +8755,38 @@
       ]
     },
     {
+      "Name": "ListSpaceResources",
+      "AuthorizedActions": [
+        {
+          "Name": "ListSpaceResources",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "list_space_resources",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListSpaces",
+      "AuthorizedActions": [
+        {
+          "Name": "ListSpaces",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "list_spaces",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListTagsForResource",
       "AuthorizedActions": [
         {
@@ -8535,6 +9087,22 @@
       ]
     },
     {
+      "Name": "SearchAgents",
+      "AuthorizedActions": [
+        {
+          "Name": "SearchAgents",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "search_agents",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "SearchAnalyses",
       "AuthorizedActions": [
         {
@@ -8642,6 +9210,22 @@
         {
           "Name": "quicksight",
           "Method": "search_groups",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SearchSpaces",
+      "AuthorizedActions": [
+        {
+          "Name": "SearchSpaces",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "search_spaces",
           "Package": "Boto3"
         }
       ]
@@ -8850,6 +9434,32 @@
         {
           "Name": "quicksight",
           "Method": "update_action_connector_permissions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgent",
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "update_agent",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAgentPermissions",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateAgentPermissions",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "update_agent_permissions",
           "Package": "Boto3"
         }
       ]
@@ -9168,6 +9778,22 @@
       ]
     },
     {
+      "Name": "UpdateFlow",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateFlow",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "update_flow",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "UpdateFlowPermissions",
       "AuthorizedActions": [
         {
@@ -9443,6 +10069,54 @@
         {
           "Name": "quicksight",
           "Method": "update_self_upgrade_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSpace",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateSpace",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "update_space",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSpacePermissions",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateSpacePermissions",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "update_space_permissions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSpaceResources",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateSpaceResources",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "update_space_resources",
           "Package": "Boto3"
         }
       ]
@@ -9853,6 +10527,12 @@
       "Name": "refreshschedule",
       "ARNFormats": [
         "arn:${Partition}:quicksight:${Region}:${Account}:dataset/${DatasetId}/refresh-schedule/${ResourceId}"
+      ]
+    },
+    {
+      "Name": "space",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:space/${ResourceId}"
       ]
     },
     {
