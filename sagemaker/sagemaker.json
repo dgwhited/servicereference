@@ -175,6 +175,9 @@
           "Name": "inference-recommendations-job"
         },
         {
+          "Name": "job"
+        },
+        {
           "Name": "labeling-job"
         },
         {
@@ -478,6 +481,44 @@
       }
     },
     {
+      "Name": "CallWithBearerToken",
+      "ActionConditionKeys": [
+        "sagemaker:BearerTokenType"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CompleteRollout",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateAIBenchmarkJob",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -681,8 +722,8 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys",
         "sagemaker:InterContainerTrafficEncryption",
-        "sagemaker:OutputKmsKey",
-        "sagemaker:VolumeKmsKey",
+        "sagemaker:OutputKmsKeyArn",
+        "sagemaker:VolumeKmsKeyArn",
         "sagemaker:VpcSecurityGroupIds",
         "sagemaker:VpcSubnets"
       ],
@@ -710,8 +751,8 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys",
         "sagemaker:InterContainerTrafficEncryption",
-        "sagemaker:OutputKmsKey",
-        "sagemaker:VolumeKmsKey",
+        "sagemaker:OutputKmsKeyArn",
+        "sagemaker:VolumeKmsKeyArn",
         "sagemaker:VpcSecurityGroupIds",
         "sagemaker:VpcSubnets"
       ],
@@ -901,8 +942,8 @@
         "sagemaker:InterContainerTrafficEncryption",
         "sagemaker:MaxRuntimeInSeconds",
         "sagemaker:NetworkIsolation",
-        "sagemaker:OutputKmsKey",
-        "sagemaker:VolumeKmsKey",
+        "sagemaker:OutputKmsKeyArn",
+        "sagemaker:VolumeKmsKeyArn",
         "sagemaker:VpcSecurityGroupIds",
         "sagemaker:VpcSubnets"
       ],
@@ -954,12 +995,12 @@
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys",
         "sagemaker:AppNetworkAccessType",
-        "sagemaker:DomainSharingOutputKmsKey",
+        "sagemaker:DomainSharingOutputKmsKeyArn",
         "sagemaker:ImageArns",
         "sagemaker:ImageVersionArns",
         "sagemaker:InstanceTypes",
         "sagemaker:StudioLifecycleConfigArns",
-        "sagemaker:VolumeKmsKey",
+        "sagemaker:VolumeKmsKeyArn",
         "sagemaker:VpcSecurityGroupIds",
         "sagemaker:VpcSubnets"
       ],
@@ -1091,7 +1132,7 @@
         "sagemaker:NetworkIsolation",
         "sagemaker:ServerlessMaxConcurrency",
         "sagemaker:ServerlessMemorySize",
-        "sagemaker:VolumeKmsKey",
+        "sagemaker:VolumeKmsKeyArn",
         "sagemaker:VpcSecurityGroupIds",
         "sagemaker:VpcSubnets"
       ],
@@ -1145,9 +1186,9 @@
         "sagemaker:FeatureGroupDisableGlueTableCreation",
         "sagemaker:FeatureGroupEnableOnlineStore",
         "sagemaker:FeatureGroupOfflineStoreConfig",
-        "sagemaker:FeatureGroupOfflineStoreKmsKey",
+        "sagemaker:FeatureGroupOfflineStoreKmsKeyArn",
         "sagemaker:FeatureGroupOfflineStoreS3Uri",
-        "sagemaker:FeatureGroupOnlineStoreKmsKey"
+        "sagemaker:FeatureGroupOnlineStoreKmsKeyArn"
       ],
       "Annotations": {
         "Properties": {
@@ -1304,8 +1345,8 @@
         "sagemaker:InterContainerTrafficEncryption",
         "sagemaker:MaxRuntimeInSeconds",
         "sagemaker:NetworkIsolation",
-        "sagemaker:OutputKmsKey",
-        "sagemaker:VolumeKmsKey",
+        "sagemaker:OutputKmsKeyArn",
+        "sagemaker:VolumeKmsKeyArn",
         "sagemaker:VpcSecurityGroupIds",
         "sagemaker:VpcSubnets"
       ],
@@ -1448,12 +1489,39 @@
       }
     },
     {
+      "Name": "CreateJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "sagemaker:OutputKmsKeyArn",
+        "sagemaker:VpcSecurityGroupIds",
+        "sagemaker:VpcSubnets"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateLabelingJob",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys",
-        "sagemaker:OutputKmsKey",
-        "sagemaker:VolumeKmsKey",
+        "sagemaker:OutputKmsKeyArn",
+        "sagemaker:VolumeKmsKeyArn",
         "sagemaker:WorkteamArn",
         "sagemaker:WorkteamType"
       ],
@@ -1579,8 +1647,8 @@
         "sagemaker:InterContainerTrafficEncryption",
         "sagemaker:MaxRuntimeInSeconds",
         "sagemaker:NetworkIsolation",
-        "sagemaker:OutputKmsKey",
-        "sagemaker:VolumeKmsKey",
+        "sagemaker:OutputKmsKeyArn",
+        "sagemaker:VolumeKmsKeyArn",
         "sagemaker:VpcSecurityGroupIds",
         "sagemaker:VpcSubnets"
       ],
@@ -1655,8 +1723,8 @@
         "sagemaker:InterContainerTrafficEncryption",
         "sagemaker:MaxRuntimeInSeconds",
         "sagemaker:NetworkIsolation",
-        "sagemaker:OutputKmsKey",
-        "sagemaker:VolumeKmsKey",
+        "sagemaker:OutputKmsKeyArn",
+        "sagemaker:VolumeKmsKeyArn",
         "sagemaker:VpcSecurityGroupIds",
         "sagemaker:VpcSubnets"
       ],
@@ -1744,8 +1812,8 @@
         "sagemaker:InterContainerTrafficEncryption",
         "sagemaker:MaxRuntimeInSeconds",
         "sagemaker:NetworkIsolation",
-        "sagemaker:OutputKmsKey",
-        "sagemaker:VolumeKmsKey",
+        "sagemaker:OutputKmsKeyArn",
+        "sagemaker:VolumeKmsKeyArn",
         "sagemaker:VpcSecurityGroupIds",
         "sagemaker:VpcSubnets"
       ],
@@ -1776,8 +1844,8 @@
         "sagemaker:InterContainerTrafficEncryption",
         "sagemaker:MaxRuntimeInSeconds",
         "sagemaker:NetworkIsolation",
-        "sagemaker:OutputKmsKey",
-        "sagemaker:VolumeKmsKey",
+        "sagemaker:OutputKmsKeyArn",
+        "sagemaker:VolumeKmsKeyArn",
         "sagemaker:VpcSecurityGroupIds",
         "sagemaker:VpcSubnets"
       ],
@@ -1810,7 +1878,7 @@
         "sagemaker:MinimumInstanceMetadataServiceVersion",
         "sagemaker:NotebookInstanceLifecycleConfigArns",
         "sagemaker:RootAccess",
-        "sagemaker:VolumeKmsKey",
+        "sagemaker:VolumeKmsKeyArn",
         "sagemaker:VpcSecurityGroupIds",
         "sagemaker:VpcSubnets"
       ],
@@ -2041,8 +2109,8 @@
         "sagemaker:InterContainerTrafficEncryption",
         "sagemaker:MaxRuntimeInSeconds",
         "sagemaker:NetworkIsolation",
-        "sagemaker:OutputKmsKey",
-        "sagemaker:VolumeKmsKey",
+        "sagemaker:OutputKmsKeyArn",
+        "sagemaker:VolumeKmsKeyArn",
         "sagemaker:VpcSecurityGroupIds",
         "sagemaker:VpcSubnets"
       ],
@@ -2203,8 +2271,8 @@
         "sagemaker:KeepAlivePeriod",
         "sagemaker:MaxRuntimeInSeconds",
         "sagemaker:NetworkIsolation",
-        "sagemaker:OutputKmsKey",
-        "sagemaker:VolumeKmsKey",
+        "sagemaker:OutputKmsKeyArn",
+        "sagemaker:VolumeKmsKeyArn",
         "sagemaker:VpcSecurityGroupIds",
         "sagemaker:VpcSubnets"
       ],
@@ -2263,8 +2331,8 @@
         "aws:TagKeys",
         "sagemaker:InstanceTypes",
         "sagemaker:ModelArn",
-        "sagemaker:OutputKmsKey",
-        "sagemaker:VolumeKmsKey"
+        "sagemaker:OutputKmsKeyArn",
+        "sagemaker:VolumeKmsKeyArn"
       ],
       "Annotations": {
         "Properties": {
@@ -2340,7 +2408,7 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys",
-        "sagemaker:DomainSharingOutputKmsKey",
+        "sagemaker:DomainSharingOutputKmsKeyArn",
         "sagemaker:ImageArns",
         "sagemaker:ImageVersionArns",
         "sagemaker:InstanceTypes",
@@ -3139,6 +3207,26 @@
       }
     },
     {
+      "Name": "DeleteJob",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteLineageGroupPolicy",
       "Annotations": {
         "Properties": {
@@ -3719,6 +3807,9 @@
         },
         {
           "Name": "inference-recommendations-job"
+        },
+        {
+          "Name": "job"
         },
         {
           "Name": "labeling-job"
@@ -4790,6 +4881,41 @@
           "Name": "inference-recommendations-job"
         }
       ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeJob",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeJobSchemaVersion",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -6536,6 +6662,36 @@
       }
     },
     {
+      "Name": "ListJobSchemaVersions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListJobs",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListLabelingJobs",
       "Annotations": {
         "Properties": {
@@ -7267,6 +7423,9 @@
           "Name": "inference-recommendations-job"
         },
         {
+          "Name": "job"
+        },
+        {
           "Name": "labeling-job"
         },
         {
@@ -7655,6 +7814,46 @@
       "Resources": [
         {
           "Name": "pipeline-execution"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "Sample",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "SampleWithResponseStream",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "job"
         }
       ],
       "SupportedBy": {
@@ -8163,6 +8362,26 @@
       }
     },
     {
+      "Name": "StopJob",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "StopLabelingJob",
       "Annotations": {
         "Properties": {
@@ -8624,7 +8843,7 @@
       "Name": "UpdateDomain",
       "ActionConditionKeys": [
         "sagemaker:AppNetworkAccessType",
-        "sagemaker:DomainSharingOutputKmsKey",
+        "sagemaker:DomainSharingOutputKmsKeyArn",
         "sagemaker:ImageArns",
         "sagemaker:ImageVersionArns",
         "sagemaker:InstanceTypes",
@@ -9047,8 +9266,8 @@
         "sagemaker:InterContainerTrafficEncryption",
         "sagemaker:MaxRuntimeInSeconds",
         "sagemaker:NetworkIsolation",
-        "sagemaker:OutputKmsKey",
-        "sagemaker:VolumeKmsKey",
+        "sagemaker:OutputKmsKeyArn",
+        "sagemaker:VolumeKmsKeyArn",
         "sagemaker:VpcSecurityGroupIds",
         "sagemaker:VpcSubnets"
       ],
@@ -9225,6 +9444,26 @@
       }
     },
     {
+      "Name": "UpdateReward",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "job"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateSharedModel",
       "Annotations": {
         "Properties": {
@@ -9341,7 +9580,7 @@
     {
       "Name": "UpdateUserProfile",
       "ActionConditionKeys": [
-        "sagemaker:DomainSharingOutputKmsKey",
+        "sagemaker:DomainSharingOutputKmsKeyArn",
         "sagemaker:ImageArns",
         "sagemaker:ImageVersionArns",
         "sagemaker:InstanceTypes",
@@ -9440,6 +9679,12 @@
       ]
     },
     {
+      "Name": "sagemaker:BearerTokenType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}",
       "Types": [
         "String"
@@ -9494,6 +9739,12 @@
       ]
     },
     {
+      "Name": "sagemaker:DomainSharingOutputKmsKeyArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
       "Name": "sagemaker:EnableRemoteDebug",
       "Types": [
         "Bool"
@@ -9524,6 +9775,12 @@
       ]
     },
     {
+      "Name": "sagemaker:FeatureGroupOfflineStoreKmsKeyArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
       "Name": "sagemaker:FeatureGroupOfflineStoreS3Uri",
       "Types": [
         "String"
@@ -9531,6 +9788,12 @@
     },
     {
       "Name": "sagemaker:FeatureGroupOnlineStoreKmsKey",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "sagemaker:FeatureGroupOnlineStoreKmsKeyArn",
       "Types": [
         "ARN"
       ]
@@ -9650,6 +9913,12 @@
       ]
     },
     {
+      "Name": "sagemaker:OutputKmsKeyArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
       "Name": "sagemaker:OwnerUserProfileArn",
       "Types": [
         "ARN"
@@ -9735,6 +10004,12 @@
     },
     {
       "Name": "sagemaker:VolumeKmsKey",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "sagemaker:VolumeKmsKeyArn",
       "Types": [
         "ARN"
       ]
@@ -9941,6 +10216,26 @@
         {
           "Name": "sagemaker",
           "Method": "batch_replace_cluster_nodes",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CompleteRollout",
+      "AuthorizedActions": [
+        {
+          "Name": "CallWithBearerToken",
+          "Service": "sagemaker"
+        },
+        {
+          "Name": "CompleteRollout",
+          "Service": "sagemaker"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sagemakerjobruntime",
+          "Method": "complete_rollout",
           "Package": "Boto3"
         }
       ]
@@ -10781,6 +11076,44 @@
         {
           "Name": "sagemaker",
           "Method": "create_inference_recommendations_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateJob",
+      "AuthorizedActions": [
+        {
+          "Name": "AddTags",
+          "Service": "sagemaker"
+        },
+        {
+          "Name": "CreateJob",
+          "Service": "sagemaker"
+        },
+        {
+          "Name": "ImportHubContent",
+          "Service": "sagemaker"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "job.sagemaker.amazonaws.com",
+              "sagemaker.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateHubContent",
+          "Service": "sagemaker"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sagemaker",
+          "Method": "create_job",
           "Package": "Boto3"
         }
       ]
@@ -12141,6 +12474,22 @@
       ]
     },
     {
+      "Name": "DeleteJob",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteJob",
+          "Service": "sagemaker"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sagemaker",
+          "Method": "delete_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteMlflowApp",
       "AuthorizedActions": [
         {
@@ -13215,6 +13564,38 @@
       ]
     },
     {
+      "Name": "DescribeJob",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeJob",
+          "Service": "sagemaker"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sagemaker",
+          "Method": "describe_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeJobSchemaVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeJobSchemaVersion",
+          "Service": "sagemaker"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sagemaker",
+          "Method": "describe_job_schema_version",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DescribeLabelingJob",
       "AuthorizedActions": [
         {
@@ -14033,6 +14414,10 @@
       "Name": "InvokeEndpointWithResponseStream",
       "AuthorizedActions": [
         {
+          "Name": "CallWithBearerToken",
+          "Service": "sagemaker"
+        },
+        {
           "Name": "InvokeEndpoint",
           "Service": "sagemaker"
         }
@@ -14705,6 +15090,38 @@
         {
           "Name": "sagemaker",
           "Method": "list_inference_recommendations_jobs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobSchemaVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListJobSchemaVersions",
+          "Service": "sagemaker"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sagemaker",
+          "Method": "list_job_schema_versions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListJobs",
+      "AuthorizedActions": [
+        {
+          "Name": "ListJobs",
+          "Service": "sagemaker"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sagemaker",
+          "Method": "list_jobs",
           "Package": "Boto3"
         }
       ]
@@ -15539,6 +15956,46 @@
       ]
     },
     {
+      "Name": "Sample",
+      "AuthorizedActions": [
+        {
+          "Name": "CallWithBearerToken",
+          "Service": "sagemaker"
+        },
+        {
+          "Name": "Sample",
+          "Service": "sagemaker"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sagemakerjobruntime",
+          "Method": "sample",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SampleWithResponseStream",
+      "AuthorizedActions": [
+        {
+          "Name": "CallWithBearerToken",
+          "Service": "sagemaker"
+        },
+        {
+          "Name": "SampleWithResponseStream",
+          "Service": "sagemaker"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sagemakerjobruntime",
+          "Method": "sample_with_response_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "Search",
       "AuthorizedActions": [
         {
@@ -15894,6 +16351,22 @@
         {
           "Name": "sagemaker",
           "Method": "stop_inference_recommendations_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StopJob",
+      "AuthorizedActions": [
+        {
+          "Name": "StopJob",
+          "Service": "sagemaker"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sagemaker",
+          "Method": "stop_job",
           "Package": "Boto3"
         }
       ]
@@ -16713,6 +17186,26 @@
       ]
     },
     {
+      "Name": "UpdateReward",
+      "AuthorizedActions": [
+        {
+          "Name": "CallWithBearerToken",
+          "Service": "sagemaker"
+        },
+        {
+          "Name": "UpdateReward",
+          "Service": "sagemaker"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "sagemakerjobruntime",
+          "Method": "update_reward",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "UpdateSpace",
       "AuthorizedActions": [
         {
@@ -17205,6 +17698,16 @@
       "Name": "inference-recommendations-job",
       "ARNFormats": [
         "arn:${Partition}:sagemaker:${Region}:${Account}:inference-recommendations-job/${InferenceRecommendationsJobName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "job",
+      "ARNFormats": [
+        "arn:${Partition}:sagemaker:${Region}:${Account}:job/${JobCategory}/${JobName}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}",
