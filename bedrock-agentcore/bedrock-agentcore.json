@@ -7789,6 +7789,15 @@
       "Name": "UpdateABTest",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "bedrock-agentcore.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "UpdateABTest",
           "Service": "bedrock-agentcore"
         }
