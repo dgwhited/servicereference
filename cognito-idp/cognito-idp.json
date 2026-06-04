@@ -840,6 +840,26 @@
       }
     },
     {
+      "Name": "CreateUserPoolReplica",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "userpool"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteGroup",
       "Annotations": {
         "Properties": {
@@ -1047,6 +1067,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteUserPoolReplica",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "userpool"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1740,6 +1780,26 @@
       }
     },
     {
+      "Name": "ListUserPoolReplicas",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "userpool"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListUserPools",
       "Annotations": {
         "Properties": {
@@ -2263,6 +2323,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "UpdateUserPoolReplica",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "userpool"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -3023,6 +3103,10 @@
       "Name": "CreateUserPoolReplica",
       "AuthorizedActions": [
         {
+          "Name": "CreateUserPoolReplica",
+          "Service": "cognito-idp"
+        },
+        {
           "Name": "TagResource",
           "Service": "cognito-idp"
         }
@@ -3213,6 +3297,12 @@
     },
     {
       "Name": "DeleteUserPoolReplica",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteUserPoolReplica",
+          "Service": "cognito-idp"
+        }
+      ],
       "SDK": [
         {
           "Name": "cognito-idp",
@@ -3787,6 +3877,12 @@
     },
     {
       "Name": "ListUserPoolReplicas",
+      "AuthorizedActions": [
+        {
+          "Name": "ListUserPoolReplicas",
+          "Service": "cognito-idp"
+        }
+      ],
       "SDK": [
         {
           "Name": "cognito-idp",
@@ -4289,6 +4385,12 @@
     },
     {
       "Name": "UpdateUserPoolReplica",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateUserPoolReplica",
+          "Service": "cognito-idp"
+        }
+      ],
       "SDK": [
         {
           "Name": "cognito-idp",

@@ -3652,6 +3652,26 @@
       }
     },
     {
+      "Name": "GetSessionEndpoint",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "session"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetStage",
       "Annotations": {
         "Properties": {
@@ -11451,12 +11471,18 @@
       "Name": "table",
       "ARNFormats": [
         "arn:${Partition}:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
       "Name": "tableversion",
       "ARNFormats": [
         "arn:${Partition}:glue:${Region}:${Account}:tableVersion/${DatabaseName}/${TableName}/${TableVersionName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -11481,6 +11507,9 @@
       "Name": "userdefinedfunction",
       "ARNFormats": [
         "arn:${Partition}:glue:${Region}:${Account}:userDefinedFunction/${DatabaseName}/${UserDefinedFunctionName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
