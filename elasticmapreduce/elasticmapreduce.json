@@ -2078,6 +2078,26 @@
       ]
     },
     {
+      "Name": "GetSession",
+      "SDK": [
+        {
+          "Name": "emr",
+          "Method": "get_session",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetSessionEndpoint",
+      "SDK": [
+        {
+          "Name": "emr",
+          "Method": "get_session_endpoint",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetStudioSessionMapping",
       "AuthorizedActions": [
         {
@@ -2217,6 +2237,16 @@
         {
           "Name": "emr",
           "Method": "list_security_configurations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListSessions",
+      "SDK": [
+        {
+          "Name": "emr",
+          "Method": "list_sessions",
           "Package": "Boto3"
         }
       ]
@@ -2581,6 +2611,27 @@
       ]
     },
     {
+      "Name": "StartSession",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "elasticmapreduce.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "emr",
+          "Method": "start_session",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "StopNotebookExecution",
       "AuthorizedActions": [
         {
@@ -2608,6 +2659,16 @@
         {
           "Name": "emr",
           "Method": "terminate_job_flows",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TerminateSession",
+      "SDK": [
+        {
+          "Name": "emr",
+          "Method": "terminate_session",
           "Package": "Boto3"
         }
       ]

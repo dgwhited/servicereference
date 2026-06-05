@@ -1599,6 +1599,21 @@
       }
     },
     {
+      "Name": "UpdateAdConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateChannel",
       "Annotations": {
         "Properties": {
@@ -2911,6 +2926,22 @@
         {
           "Name": "ivs-realtime",
           "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateAdConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateAdConfiguration",
+          "Service": "ivs"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ivs",
+          "Method": "update_ad_configuration",
           "Package": "Boto3"
         }
       ]
