@@ -248,6 +248,30 @@
       }
     },
     {
+      "Name": "CreateVerificationEvidence",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "VerificationEvidence"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteResourcePolicy",
       "Annotations": {
         "Properties": {
@@ -746,6 +770,44 @@
       }
     },
     {
+      "Name": "GetVerification",
+      "ActionConditionKeys": [
+        "aws-marketplace:VerificationType"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetVerificationEvidence",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "VerificationEvidence"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListAgreementApprovalRequests",
       "Annotations": {
         "Properties": {
@@ -1087,8 +1149,44 @@
         },
         {
           "Name": "IssuedTaxInvoice"
+        },
+        {
+          "Name": "VerificationEvidence"
         }
       ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListVerificationEvidence",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListVerifications",
+      "ActionConditionKeys": [
+        "aws-marketplace:VerificationType"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -1420,6 +1518,29 @@
       }
     },
     {
+      "Name": "StartVerification",
+      "ActionConditionKeys": [
+        "aws-marketplace:VerificationType"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "VerificationEvidence"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "Subscribe",
       "Annotations": {
         "Properties": {
@@ -1469,6 +1590,9 @@
         },
         {
           "Name": "IssuedTaxInvoice"
+        },
+        {
+          "Name": "VerificationEvidence"
         }
       ],
       "SupportedBy": {
@@ -1524,6 +1648,9 @@
         },
         {
           "Name": "IssuedTaxInvoice"
+        },
+        {
+          "Name": "VerificationEvidence"
         }
       ],
       "SupportedBy": {
@@ -1559,6 +1686,26 @@
           "IsWrite": true
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateVerificationEvidence",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "VerificationEvidence"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -1603,6 +1750,12 @@
       "Name": "aws-marketplace:ProductId",
       "Types": [
         "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "aws-marketplace:VerificationType",
+      "Types": [
+        "String"
       ]
     },
     {
@@ -2696,6 +2849,15 @@
       "Name": "SellerDashboard",
       "ARNFormats": [
         "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/Dashboard/${DashboardName}"
+      ]
+    },
+    {
+      "Name": "VerificationEvidence",
+      "ARNFormats": [
+        "arn:${Partition}:aws-marketplace:${Region}:${Account}:verification-type/${VerificationType}/verification-evidence/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     }
   ],
