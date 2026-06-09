@@ -878,6 +878,8 @@
     {
       "Name": "PutEvents",
       "ActionConditionKeys": [
+        "events:ResourceArn",
+        "events:SystemMetadata/EventGroupId",
         "events:detail-type",
         "events:eventBusInvocation",
         "events:source"
@@ -893,6 +895,9 @@
       "Resources": [
         {
           "Name": "event-bus"
+        },
+        {
+          "Name": "event-busv2"
         }
       ],
       "SupportedBy": {
