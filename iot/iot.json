@@ -10541,6 +10541,15 @@
       "Name": "UpdateJob",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "iot.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "UpdateJob",
           "Service": "iot"
         }
