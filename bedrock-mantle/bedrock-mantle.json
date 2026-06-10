@@ -232,7 +232,8 @@
       "Name": "CreateProject",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "bedrock-mantle:DataRetentionMode"
       ],
       "Annotations": {
         "Properties": {
@@ -423,6 +424,21 @@
           ]
         }
       ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetAccountDataRetention",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -780,6 +796,24 @@
       }
     },
     {
+      "Name": "PutAccountDataRetention",
+      "ActionConditionKeys": [
+        "bedrock-mantle:DataRetentionMode"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "TagResource",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -858,6 +892,9 @@
     },
     {
       "Name": "UpdateProject",
+      "ActionConditionKeys": [
+        "bedrock-mantle:DataRetentionMode"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -940,6 +977,12 @@
     },
     {
       "Name": "bedrock-mantle:CustomizedModelArn",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "bedrock-mantle:DataRetentionMode",
       "Types": [
         "String"
       ]
