@@ -40,6 +40,74 @@
       }
     },
     {
+      "Name": "CreateAutonomousDatabase",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "odb-network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateAutonomousDatabaseBackup",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateAutonomousDatabaseWallet",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateCloudAutonomousVmCluster",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -206,6 +274,46 @@
         },
         {
           "Name": "cloud-vm-cluster"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteAutonomousDatabase",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteAutonomousDatabaseBackup",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database-backup"
         }
       ],
       "SupportedBy": {
@@ -387,6 +495,86 @@
         },
         {
           "Name": "cloud-vm-cluster"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "FailoverAutonomousDatabase",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetAutonomousDatabase",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetAutonomousDatabaseBackup",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database-backup"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetAutonomousDatabaseWalletDetails",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database"
         }
       ],
       "SupportedBy": {
@@ -611,6 +799,111 @@
       }
     },
     {
+      "Name": "ListAutonomousDatabaseBackups",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListAutonomousDatabaseCharacterSets",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListAutonomousDatabaseClones",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListAutonomousDatabasePeers",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListAutonomousDatabaseVersions",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListAutonomousDatabases",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListAutonomousVirtualMachines",
       "Annotations": {
         "Properties": {
@@ -820,6 +1113,12 @@
       },
       "Resources": [
         {
+          "Name": "autonomous-database"
+        },
+        {
+          "Name": "autonomous-database-backup"
+        },
+        {
           "Name": "cloud-autonomous-vm-cluster"
         },
         {
@@ -867,6 +1166,26 @@
       }
     },
     {
+      "Name": "RebootAutonomousDatabase",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "RebootDbNode",
       "Annotations": {
         "Properties": {
@@ -882,6 +1201,66 @@
         },
         {
           "Name": "db-node"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "RestoreAutonomousDatabase",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ShrinkAutonomousDatabase",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "StartAutonomousDatabase",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database"
         }
       ],
       "SupportedBy": {
@@ -913,6 +1292,26 @@
       }
     },
     {
+      "Name": "StopAutonomousDatabase",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "StopDbNode",
       "Annotations": {
         "Properties": {
@@ -936,6 +1335,26 @@
       }
     },
     {
+      "Name": "SwitchoverAutonomousDatabase",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "TagResource",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -951,6 +1370,12 @@
         }
       },
       "Resources": [
+        {
+          "Name": "autonomous-database"
+        },
+        {
+          "Name": "autonomous-database-backup"
+        },
         {
           "Name": "cloud-autonomous-vm-cluster"
         },
@@ -991,6 +1416,12 @@
       },
       "Resources": [
         {
+          "Name": "autonomous-database"
+        },
+        {
+          "Name": "autonomous-database-backup"
+        },
+        {
           "Name": "cloud-autonomous-vm-cluster"
         },
         {
@@ -1007,6 +1438,46 @@
         },
         {
           "Name": "odb-peering-connection"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateAutonomousDatabase",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateAutonomousDatabaseBackup",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "autonomous-database-backup"
         }
       ],
       "SupportedBy": {
@@ -1179,6 +1650,10 @@
       "Name": "CreateAutonomousDatabase",
       "AuthorizedActions": [
         {
+          "Name": "CreateAutonomousDatabase",
+          "Service": "odb"
+        },
+        {
           "Name": "TagResource",
           "Service": "odb"
         }
@@ -1193,6 +1668,12 @@
     },
     {
       "Name": "CreateAutonomousDatabaseBackup",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateAutonomousDatabaseBackup",
+          "Service": "odb"
+        }
+      ],
       "SDK": [
         {
           "Name": "odb",
@@ -1203,6 +1684,12 @@
     },
     {
       "Name": "CreateAutonomousDatabaseWallet",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateAutonomousDatabaseWallet",
+          "Service": "odb"
+        }
+      ],
       "SDK": [
         {
           "Name": "odb",
@@ -1317,6 +1804,12 @@
     },
     {
       "Name": "DeleteAutonomousDatabase",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteAutonomousDatabase",
+          "Service": "odb"
+        }
+      ],
       "SDK": [
         {
           "Name": "odb",
@@ -1327,6 +1820,12 @@
     },
     {
       "Name": "DeleteAutonomousDatabaseBackup",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteAutonomousDatabaseBackup",
+          "Service": "odb"
+        }
+      ],
       "SDK": [
         {
           "Name": "odb",
@@ -1437,6 +1936,12 @@
     },
     {
       "Name": "FailoverAutonomousDatabase",
+      "AuthorizedActions": [
+        {
+          "Name": "FailoverAutonomousDatabase",
+          "Service": "odb"
+        }
+      ],
       "SDK": [
         {
           "Name": "odb",
@@ -1447,6 +1952,12 @@
     },
     {
       "Name": "GetAutonomousDatabase",
+      "AuthorizedActions": [
+        {
+          "Name": "GetAutonomousDatabase",
+          "Service": "odb"
+        }
+      ],
       "SDK": [
         {
           "Name": "odb",
@@ -1637,6 +2148,12 @@
     },
     {
       "Name": "ListAutonomousDatabaseBackups",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAutonomousDatabaseBackups",
+          "Service": "odb"
+        }
+      ],
       "SDK": [
         {
           "Name": "odb",
@@ -1647,6 +2164,12 @@
     },
     {
       "Name": "ListAutonomousDatabaseCharacterSets",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAutonomousDatabaseCharacterSets",
+          "Service": "odb"
+        }
+      ],
       "SDK": [
         {
           "Name": "odb",
@@ -1657,6 +2180,12 @@
     },
     {
       "Name": "ListAutonomousDatabaseClones",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAutonomousDatabaseClones",
+          "Service": "odb"
+        }
+      ],
       "SDK": [
         {
           "Name": "odb",
@@ -1667,6 +2196,12 @@
     },
     {
       "Name": "ListAutonomousDatabasePeers",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAutonomousDatabasePeers",
+          "Service": "odb"
+        }
+      ],
       "SDK": [
         {
           "Name": "odb",
@@ -1677,6 +2212,12 @@
     },
     {
       "Name": "ListAutonomousDatabaseVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAutonomousDatabaseVersions",
+          "Service": "odb"
+        }
+      ],
       "SDK": [
         {
           "Name": "odb",
@@ -1687,6 +2228,12 @@
     },
     {
       "Name": "ListAutonomousDatabases",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAutonomousDatabases",
+          "Service": "odb"
+        }
+      ],
       "SDK": [
         {
           "Name": "odb",
@@ -1889,6 +2436,12 @@
     },
     {
       "Name": "RebootAutonomousDatabase",
+      "AuthorizedActions": [
+        {
+          "Name": "RebootAutonomousDatabase",
+          "Service": "odb"
+        }
+      ],
       "SDK": [
         {
           "Name": "odb",
@@ -1935,6 +2488,12 @@
     },
     {
       "Name": "StartAutonomousDatabase",
+      "AuthorizedActions": [
+        {
+          "Name": "StartAutonomousDatabase",
+          "Service": "odb"
+        }
+      ],
       "SDK": [
         {
           "Name": "odb",
@@ -1961,6 +2520,12 @@
     },
     {
       "Name": "StopAutonomousDatabase",
+      "AuthorizedActions": [
+        {
+          "Name": "StopAutonomousDatabase",
+          "Service": "odb"
+        }
+      ],
       "SDK": [
         {
           "Name": "odb",
@@ -1987,6 +2552,12 @@
     },
     {
       "Name": "SwitchoverAutonomousDatabase",
+      "AuthorizedActions": [
+        {
+          "Name": "SwitchoverAutonomousDatabase",
+          "Service": "odb"
+        }
+      ],
       "SDK": [
         {
           "Name": "odb",
@@ -2097,6 +2668,24 @@
     }
   ],
   "Resources": [
+    {
+      "Name": "autonomous-database",
+      "ARNFormats": [
+        "arn:${Partition}:odb:${Region}:${Account}:autonomous-database/${AutonomousDatabaseId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "autonomous-database-backup",
+      "ARNFormats": [
+        "arn:${Partition}:odb:${Region}:${Account}:autonomous-database-backup/${AutonomousDatabaseBackupId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
     {
       "Name": "cloud-autonomous-vm-cluster",
       "ARNFormats": [
