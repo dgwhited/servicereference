@@ -925,6 +925,26 @@
       }
     },
     {
+      "Name": "UpdateFHIRDatastore",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "datastore"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateResource",
       "Annotations": {
         "Properties": {
@@ -1232,6 +1252,22 @@
         {
           "Name": "healthlake",
           "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateFHIRDatastore",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateFHIRDatastore",
+          "Service": "healthlake"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "healthlake",
+          "Method": "update_fhir_datastore",
           "Package": "Boto3"
         }
       ]
