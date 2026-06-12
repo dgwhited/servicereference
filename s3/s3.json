@@ -34,6 +34,31 @@
       }
     },
     {
+      "Name": "AllowVendedLogDeliveryForResource",
+      "ActionConditionKeys": [
+        "s3:deliverySourceArn",
+        "s3:logType",
+        "s3:resourceArnBeingAuthorized"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "bucket"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "AssociateAccessGrantsIdentityCenter",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
@@ -5180,6 +5205,12 @@
       ]
     },
     {
+      "Name": "s3:deliverySourceArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
       "Name": "s3:destinationRegion",
       "Types": [
         "String"
@@ -5205,6 +5236,12 @@
     },
     {
       "Name": "s3:locationconstraint",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "s3:logType",
       "Types": [
         "String"
       ]
@@ -5243,6 +5280,12 @@
       "Name": "s3:prefix",
       "Types": [
         "String"
+      ]
+    },
+    {
+      "Name": "s3:resourceArnBeingAuthorized",
+      "Types": [
+        "ARN"
       ]
     },
     {
