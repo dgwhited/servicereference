@@ -22,6 +22,26 @@
       }
     },
     {
+      "Name": "BatchCreateSecurityRequirements",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "SecurityRequirementPack"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "BatchDeleteCodeReviews",
       "Annotations": {
         "Properties": {
@@ -54,6 +74,26 @@
       "Resources": [
         {
           "Name": "AgentSpace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "BatchDeleteSecurityRequirements",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "SecurityRequirementPack"
         }
       ],
       "SupportedBy": {
@@ -302,6 +342,26 @@
       }
     },
     {
+      "Name": "BatchGetSecurityRequirements",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "SecurityRequirementPack"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "BatchGetTargetDomains",
       "Annotations": {
         "Properties": {
@@ -394,6 +454,26 @@
       "Resources": [
         {
           "Name": "AgentSpace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "BatchUpdateSecurityRequirements",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "SecurityRequirementPack"
         }
       ],
       "SupportedBy": {
@@ -559,6 +639,25 @@
       }
     },
     {
+      "Name": "CreatePrivateConnection",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateSecurityRequirement",
       "Annotations": {
         "Properties": {
@@ -573,6 +672,25 @@
           "Name": "SecurityRequirementPack"
         }
       ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateSecurityRequirementPack",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -754,7 +872,47 @@
       }
     },
     {
+      "Name": "DeletePrivateConnection",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "PrivateConnection"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteSecurityRequirement",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "SecurityRequirementPack"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteSecurityRequirementPack",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -786,6 +944,26 @@
       "Resources": [
         {
           "Name": "TargetDomain"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribePrivateConnection",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "PrivateConnection"
         }
       ],
       "SupportedBy": {
@@ -914,6 +1092,21 @@
       }
     },
     {
+      "Name": "GetProviderRegistrationManifest",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetSecurityRequirement",
       "Annotations": {
         "Properties": {
@@ -921,6 +1114,61 @@
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "SecurityRequirementPack"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetSecurityRequirementPack",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "SecurityRequirementPack"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "HandleProviderRegistrationCallback",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ImportSecurityRequirements",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
         }
       },
       "Resources": [
@@ -1254,6 +1502,21 @@
       }
     },
     {
+      "Name": "ListPrivateConnections",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListResourcesFromIntegration",
       "Annotations": {
         "Properties": {
@@ -1268,6 +1531,21 @@
           "Name": "Integration"
         }
       ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListSecurityRequirementPacks",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -1312,6 +1590,9 @@
         },
         {
           "Name": "Integration"
+        },
+        {
+          "Name": "PrivateConnection"
         },
         {
           "Name": "SecurityRequirementPack"
@@ -1605,6 +1886,9 @@
           "Name": "Integration"
         },
         {
+          "Name": "PrivateConnection"
+        },
+        {
           "Name": "SecurityRequirementPack"
         },
         {
@@ -1658,6 +1942,9 @@
         },
         {
           "Name": "Integration"
+        },
+        {
+          "Name": "PrivateConnection"
         },
         {
           "Name": "SecurityRequirementPack"
@@ -1792,7 +2079,47 @@
       }
     },
     {
+      "Name": "UpdatePrivateConnectionCertificate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "PrivateConnection"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateSecurityRequirement",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "SecurityRequirementPack"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateSecurityRequirementPack",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -2965,6 +3292,15 @@
       "Name": "Integration",
       "ARNFormats": [
         "arn:${Partition}:securityagent:${Region}:${Account}:integration/${IntegrationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "PrivateConnection",
+      "ARNFormats": [
+        "arn:${Partition}:securityagent:${Region}:${Account}:private-connection/${PrivateConnectionName}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

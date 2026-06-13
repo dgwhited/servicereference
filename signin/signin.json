@@ -2,6 +2,29 @@
   "Name": "signin",
   "Actions": [
     {
+      "Name": "Authenticate",
+      "ActionConditionKeys": [
+        "signin:PrincipalArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "console"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "AuthorizeOAuth2Access",
       "Annotations": {
         "Properties": {
@@ -13,10 +36,33 @@
       },
       "Resources": [
         {
+          "Name": "console"
+        },
+        {
           "Name": "oauth2-public-client-localhost"
         },
         {
           "Name": "oauth2-public-client-remote"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateAccount",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "console"
         }
       ],
       "SupportedBy": {
@@ -35,6 +81,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "console"
+        },
         {
           "Name": "oauth2-public-client-localhost"
         },
@@ -63,6 +112,81 @@
       }
     },
     {
+      "Name": "DeleteConsoleAuthorizationConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteResourcePermissionStatement",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetConsoleAuthorizationConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetResourcePolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListResourcePermissionStatements",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListTrustedIdentityPropagationApplicationsForConsole",
       "Annotations": {
         "Properties": {
@@ -76,6 +200,44 @@
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
       }
+    },
+    {
+      "Name": "PutConsoleAuthorizationConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "PutResourcePermissionStatement",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "signin:PrincipalArn",
+      "Types": [
+        "ARN"
+      ]
     }
   ],
   "Operations": [
@@ -91,6 +253,12 @@
     },
     {
       "Name": "DeleteConsoleAuthorizationConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteConsoleAuthorizationConfiguration",
+          "Service": "signin"
+        }
+      ],
       "SDK": [
         {
           "Name": "signin",
@@ -111,6 +279,12 @@
     },
     {
       "Name": "GetConsoleAuthorizationConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetConsoleAuthorizationConfiguration",
+          "Service": "signin"
+        }
+      ],
       "SDK": [
         {
           "Name": "signin",
@@ -121,6 +295,12 @@
     },
     {
       "Name": "GetResourcePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "GetResourcePolicy",
+          "Service": "signin"
+        }
+      ],
       "SDK": [
         {
           "Name": "signin",
@@ -131,6 +311,12 @@
     },
     {
       "Name": "ListResourcePermissionStatements",
+      "AuthorizedActions": [
+        {
+          "Name": "ListResourcePermissionStatements",
+          "Service": "signin"
+        }
+      ],
       "SDK": [
         {
           "Name": "signin",
@@ -141,6 +327,12 @@
     },
     {
       "Name": "PutConsoleAuthorizationConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "PutConsoleAuthorizationConfiguration",
+          "Service": "signin"
+        }
+      ],
       "SDK": [
         {
           "Name": "signin",
@@ -161,6 +353,12 @@
     }
   ],
   "Resources": [
+    {
+      "Name": "console",
+      "ARNFormats": [
+        "arn:${Partition}:signin:::console/${ConsoleName}"
+      ]
+    },
     {
       "Name": "oauth2-public-client-localhost",
       "ARNFormats": [
