@@ -2600,6 +2600,21 @@
     },
     {
       "Name": "UpdateAutonomousDatabase",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "odb.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateAutonomousDatabase",
+          "Service": "odb"
+        }
+      ],
       "SDK": [
         {
           "Name": "odb",
