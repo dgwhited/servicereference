@@ -5085,7 +5085,15 @@
       "Name": "CreateHarness",
       "AuthorizedActions": [
         {
+          "Name": "CreateAgentRuntime",
+          "Service": "bedrock-agentcore"
+        },
+        {
           "Name": "CreateHarness",
+          "Service": "bedrock-agentcore"
+        },
+        {
+          "Name": "GetMemory",
           "Service": "bedrock-agentcore"
         },
         {
@@ -5641,6 +5649,10 @@
     {
       "Name": "DeleteHarness",
       "AuthorizedActions": [
+        {
+          "Name": "DeleteAgentRuntime",
+          "Service": "bedrock-agentcore"
+        },
         {
           "Name": "DeleteHarness",
           "Service": "bedrock-agentcore"
@@ -8034,6 +8046,10 @@
             ]
           },
           "Service": "iam"
+        },
+        {
+          "Name": "UpdateAgentRuntime",
+          "Service": "bedrock-agentcore"
         },
         {
           "Name": "UpdateHarness",
