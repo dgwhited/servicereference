@@ -467,6 +467,30 @@
       }
     },
     {
+      "Name": "CreateHarnessEndpoint",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "harness"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateMemory",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -1051,6 +1075,29 @@
       }
     },
     {
+      "Name": "DeleteHarnessEndpoint",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "harness"
+        },
+        {
+          "Name": "harness-endpoint"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteMemory",
       "Annotations": {
         "Properties": {
@@ -1403,6 +1450,81 @@
           "Name": "evaluator"
         }
       ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GatewayAssociateWebACL",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GatewayDisassociateWebACL",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GatewayGetWebACLForResource",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GatewayListResourcesForWebACL",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -1800,6 +1922,29 @@
       "Resources": [
         {
           "Name": "harness"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetHarnessEndpoint",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "harness"
+        },
+        {
+          "Name": "harness-endpoint"
         }
       ],
       "SupportedBy": {
@@ -2634,6 +2779,9 @@
       "Resources": [
         {
           "Name": "harness"
+        },
+        {
+          "Name": "harness-endpoint"
         }
       ],
       "SupportedBy": {
@@ -2654,6 +2802,26 @@
       "Resources": [
         {
           "Name": "registry"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "InvokeWebSearch",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": true,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "web-search"
         }
       ],
       "SupportedBy": {
@@ -2978,6 +3146,21 @@
     },
     {
       "Name": "ListGateways",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListHarnessEndpoints",
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -4324,6 +4507,29 @@
       "Resources": [
         {
           "Name": "harness"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateHarnessEndpoint",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "harness"
+        },
+        {
+          "Name": "harness-endpoint"
         }
       ],
       "SupportedBy": {
@@ -8298,6 +8504,9 @@
       "Name": "ab-test",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:ab-test/${ABTestId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -8313,6 +8522,9 @@
       "Name": "batch-evaluate",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:batch-evaluate/${BatchEvaluationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -8358,6 +8570,9 @@
       "Name": "configuration-bundle",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:configuration-bundle/${ConfigurationBundleId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -8382,6 +8597,15 @@
       "Name": "harness",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:harness/${HarnessId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "harness-endpoint",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:harness/${HarnessId}/harness-endpoint/${Name}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -8457,6 +8681,9 @@
       "Name": "recommendation",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:recommendation/${RecommendationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -8496,6 +8723,12 @@
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "web-search",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:tool/web-search.v1"
       ]
     },
     {
