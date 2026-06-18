@@ -5540,6 +5540,26 @@
   ],
   "Operations": [
     {
+      "Name": "AgenticRetrieveStream",
+      "AuthorizedActions": [
+        {
+          "Name": "AgenticRetrieveStream",
+          "Service": "bedrock"
+        },
+        {
+          "Name": "Retrieve",
+          "Service": "bedrock"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agent-runtime",
+          "Method": "agentic_retrieve_stream",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ApplyGuardrail",
       "AuthorizedActions": [
         {
@@ -7053,6 +7073,11 @@
           "Name": "bedrock",
           "Method": "delete_resource_policy",
           "Package": "Boto3"
+        },
+        {
+          "Name": "bedrock-agent",
+          "Method": "delete_resource_policy",
+          "Package": "Boto3"
         }
       ]
     },
@@ -7629,6 +7654,26 @@
       ]
     },
     {
+      "Name": "GetDocumentContent",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDocumentContent",
+          "Service": "bedrock"
+        },
+        {
+          "Name": "Retrieve",
+          "Service": "bedrock"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agent-runtime",
+          "Method": "get_document_content",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetEvaluationJob",
       "AuthorizedActions": [
         {
@@ -8079,6 +8124,11 @@
       "SDK": [
         {
           "Name": "bedrock",
+          "Method": "get_resource_policy",
+          "Package": "Boto3"
+        },
+        {
+          "Name": "bedrock-agent",
           "Method": "get_resource_policy",
           "Package": "Boto3"
         }
@@ -9324,6 +9374,11 @@
       "SDK": [
         {
           "Name": "bedrock",
+          "Method": "put_resource_policy",
+          "Package": "Boto3"
+        },
+        {
+          "Name": "bedrock-agent",
           "Method": "put_resource_policy",
           "Package": "Boto3"
         }
