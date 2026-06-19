@@ -456,6 +456,29 @@
       }
     },
     {
+      "Name": "GetDataset",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetInsightRuleReport",
       "Annotations": {
         "Properties": {
@@ -485,6 +508,14 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "dataset",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -755,6 +786,14 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "dataset",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -802,19 +841,52 @@
       },
       "Resources": [
         {
-          "Name": "alarm"
+          "Name": "alarm",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
-          "Name": "alarm-mute-rule"
+          "Name": "alarm-mute-rule",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
-          "Name": "dashboard"
+          "Name": "dashboard",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
-          "Name": "insight-rule"
+          "Name": "dataset",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
-          "Name": "slo"
+          "Name": "insight-rule",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "metric-stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "slo",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -939,6 +1011,31 @@
       }
     },
     {
+      "Name": "PutLogAlarm",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "cloudwatch:AlarmActions"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "alarm"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "PutManagedInsightRules",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -976,6 +1073,12 @@
       "Resources": [
         {
           "Name": "alarm"
+        },
+        {
+          "Name": "dataset",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -996,6 +1099,14 @@
           "IsWrite": true
         }
       },
+      "Resources": [
+        {
+          "Name": "dataset",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -1131,19 +1242,52 @@
       },
       "Resources": [
         {
-          "Name": "alarm"
+          "Name": "alarm",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
-          "Name": "alarm-mute-rule"
+          "Name": "alarm-mute-rule",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
-          "Name": "dashboard"
+          "Name": "dashboard",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
-          "Name": "insight-rule"
+          "Name": "dataset",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
-          "Name": "slo"
+          "Name": "insight-rule",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "metric-stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "slo",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1166,19 +1310,52 @@
       },
       "Resources": [
         {
-          "Name": "alarm"
+          "Name": "alarm",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
-          "Name": "alarm-mute-rule"
+          "Name": "alarm-mute-rule",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
-          "Name": "dashboard"
+          "Name": "dashboard",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
-          "Name": "insight-rule"
+          "Name": "dataset",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
-          "Name": "slo"
+          "Name": "insight-rule",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "metric-stream",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "slo",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1556,6 +1733,12 @@
     },
     {
       "Name": "GetDataset",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDataset",
+          "Service": "cloudwatch"
+        }
+      ],
       "SDK": [
         {
           "Name": "cloudwatch",
@@ -2069,6 +2252,15 @@
       "Name": "dashboard",
       "ARNFormats": [
         "arn:${Partition}:cloudwatch::${Account}:dashboard/${DashboardName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "dataset",
+      "ARNFormats": [
+        "arn:${Partition}:cloudwatch:${Region}:${Account}:dataset/${DatasetId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

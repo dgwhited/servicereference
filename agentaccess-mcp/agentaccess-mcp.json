@@ -2,6 +2,42 @@
   "Name": "agentaccess-mcp",
   "Actions": [
     {
+      "Name": "CallForwardedTool",
+      "ActionConditionKeys": [
+        "agentaccess-mcp:StackArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CheckConnectionStatus",
+      "ActionConditionKeys": [
+        "agentaccess-mcp:StackArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DoubleClick",
       "ActionConditionKeys": [
         "agentaccess-mcp:StackArn"
