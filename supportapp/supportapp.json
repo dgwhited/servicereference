@@ -204,6 +204,15 @@
         {
           "Name": "CreateSlackChannelConfiguration",
           "Service": "supportapp"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "supportapp.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [
@@ -345,6 +354,15 @@
     {
       "Name": "UpdateSlackChannelConfiguration",
       "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "supportapp.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
         {
           "Name": "UpdateSlackChannelConfiguration",
           "Service": "supportapp"
