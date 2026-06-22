@@ -2,6 +2,26 @@
   "Name": "application-signals",
   "Actions": [
     {
+      "Name": "BatchDeleteInstrumentationConfigurations",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instrumentationConfig"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "BatchGetServiceLevelObjectiveBudgetReport",
       "Annotations": {
         "Properties": {
@@ -42,6 +62,25 @@
       }
     },
     {
+      "Name": "CreateInstrumentationConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateServiceLevelObjective",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -76,6 +115,26 @@
       }
     },
     {
+      "Name": "DeleteInstrumentationConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instrumentationConfig"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteServiceLevelObjective",
       "Annotations": {
         "Properties": {
@@ -88,6 +147,46 @@
       "Resources": [
         {
           "Name": "slo"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetInstrumentationConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instrumentationConfig"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetInstrumentationConfigurationStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instrumentationConfig"
         }
       ],
       "SupportedBy": {
@@ -177,6 +276,21 @@
     },
     {
       "Name": "ListGroupingAttributeDefinitions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListInstrumentationConfigurations",
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -327,6 +441,9 @@
       },
       "Resources": [
         {
+          "Name": "instrumentationConfig"
+        },
+        {
           "Name": "slo"
         }
       ],
@@ -345,6 +462,26 @@
           "IsWrite": true
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ReportInstrumentationConfigurationStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instrumentationConfig"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -381,6 +518,9 @@
       },
       "Resources": [
         {
+          "Name": "instrumentationConfig"
+        },
+        {
           "Name": "slo"
         }
       ],
@@ -403,6 +543,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "instrumentationConfig"
+        },
         {
           "Name": "slo"
         }
@@ -836,6 +979,15 @@
     }
   ],
   "Resources": [
+    {
+      "Name": "instrumentationConfig",
+      "ARNFormats": [
+        "arn:${Partition}:application-signals:${Region}:${Account}:instrumentationConfig/${Service}/${Environment}/${SignalType}/${LocationHash}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
     {
       "Name": "slo",
       "ARNFormats": [
