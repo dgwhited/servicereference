@@ -111,6 +111,21 @@
       }
     },
     {
+      "Name": "CreateInvestigation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateMalwareProtectionPlan",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -694,6 +709,21 @@
       }
     },
     {
+      "Name": "GetInvestigation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetInvitationsCount",
       "Annotations": {
         "Properties": {
@@ -1001,6 +1031,21 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListInvestigations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1709,6 +1754,22 @@
       ]
     },
     {
+      "Name": "CreateInvestigation",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateInvestigation",
+          "Service": "guardduty"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "guardduty",
+          "Method": "create_investigation",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateMalwareProtectionPlan",
       "AuthorizedActions": [
         {
@@ -2266,6 +2327,22 @@
       ]
     },
     {
+      "Name": "GetInvestigation",
+      "AuthorizedActions": [
+        {
+          "Name": "GetInvestigation",
+          "Service": "guardduty"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "guardduty",
+          "Method": "get_investigation",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetInvitationsCount",
       "AuthorizedActions": [
         {
@@ -2565,6 +2642,22 @@
         {
           "Name": "guardduty",
           "Method": "list_ip_sets",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListInvestigations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListInvestigations",
+          "Service": "guardduty"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "guardduty",
+          "Method": "list_investigations",
           "Package": "Boto3"
         }
       ]
