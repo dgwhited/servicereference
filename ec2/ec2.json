@@ -1423,6 +1423,38 @@
       }
     },
     {
+      "Name": "AttachImageWatermark",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "image",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ImageID",
+            "ec2:ImageType",
+            "ec2:Owner",
+            "ec2:Public",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:RootDeviceType"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "AttachInternetGateway",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -2378,6 +2410,13 @@
         }
       },
       "Resources": [
+        {
+          "Name": "capacity-reservation",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ResourceTag/${TagKey}"
+          ]
+        },
         {
           "Name": "capacity-reservation-cancellation-quote",
           "ConditionKeys": [
@@ -15152,6 +15191,38 @@
       }
     },
     {
+      "Name": "DetachImageWatermark",
+      "ActionConditionKeys": [
+        "ec2:Region"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "image",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "ec2:ImageID",
+            "ec2:ImageType",
+            "ec2:Owner",
+            "ec2:Public",
+            "ec2:ResourceTag/${TagKey}",
+            "ec2:RootDeviceType"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DetachInternetGateway",
       "ActionConditionKeys": [
         "ec2:Region"
@@ -24803,6 +24874,13 @@
           ]
         },
         {
+          "Name": "secondary-interface",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
+        {
           "Name": "secondary-subnet",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}",
@@ -24832,6 +24910,13 @@
             "ec2:SnapshotID",
             "ec2:SnapshotTime",
             "ec2:VolumeSize"
+          ]
+        },
+        {
+          "Name": "spot-instances-request",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
           ]
         },
         {
@@ -27183,6 +27268,12 @@
     },
     {
       "Name": "AttachImageWatermark",
+      "AuthorizedActions": [
+        {
+          "Name": "AttachImageWatermark",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
@@ -34276,6 +34367,12 @@
     },
     {
       "Name": "DetachImageWatermark",
+      "AuthorizedActions": [
+        {
+          "Name": "DetachImageWatermark",
+          "Service": "ec2"
+        }
+      ],
       "SDK": [
         {
           "Name": "ec2",
