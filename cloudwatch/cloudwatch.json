@@ -2036,6 +2036,35 @@
       ]
     },
     {
+      "Name": "PutLogAlarm",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "cloudwatch.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "PutLogAlarm",
+          "Service": "cloudwatch"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "cloudwatch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudwatch",
+          "Method": "put_log_alarm",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "PutManagedInsightRules",
       "AuthorizedActions": [
         {
