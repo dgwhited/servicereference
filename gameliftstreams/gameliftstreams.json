@@ -83,6 +83,26 @@
       }
     },
     {
+      "Name": "CreateStreamSessionAdminShell",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "stream group"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateStreamSessionConnection",
       "Annotations": {
         "Properties": {
@@ -580,6 +600,16 @@
         {
           "Name": "gameliftstreams",
           "Method": "create_stream_group",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateStreamSessionAdminShell",
+      "SDK": [
+        {
+          "Name": "gameliftstreams",
+          "Method": "create_stream_session_admin_shell",
           "Package": "Boto3"
         }
       ]

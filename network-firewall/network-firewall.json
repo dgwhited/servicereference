@@ -112,6 +112,30 @@
       }
     },
     {
+      "Name": "CreateContainerAssociation",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ContainerAssociation"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateFirewall",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -348,6 +372,26 @@
       }
     },
     {
+      "Name": "DeleteContainerAssociation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ContainerAssociation"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteFirewall",
       "Annotations": {
         "Properties": {
@@ -572,6 +616,26 @@
       "Resources": [
         {
           "Name": "VpcEndpointAssociation"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeContainerAssociation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ContainerAssociation"
         }
       ],
       "SupportedBy": {
@@ -1010,6 +1074,21 @@
       }
     },
     {
+      "Name": "ListContainerAssociations",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListFirewallPolicies",
       "Annotations": {
         "Properties": {
@@ -1196,6 +1275,9 @@
       },
       "Resources": [
         {
+          "Name": "ContainerAssociation"
+        },
+        {
           "Name": "Firewall"
         },
         {
@@ -1364,6 +1446,9 @@
       },
       "Resources": [
         {
+          "Name": "ContainerAssociation"
+        },
+        {
           "Name": "Firewall"
         },
         {
@@ -1411,6 +1496,9 @@
       },
       "Resources": [
         {
+          "Name": "ContainerAssociation"
+        },
+        {
           "Name": "Firewall"
         },
         {
@@ -1456,6 +1544,26 @@
       "Resources": [
         {
           "Name": "Firewall"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateContainerAssociation",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ContainerAssociation"
         }
       ],
       "SupportedBy": {
@@ -1879,6 +1987,12 @@
     },
     {
       "Name": "CreateContainerAssociation",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateContainerAssociation",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -2085,6 +2199,12 @@
     },
     {
       "Name": "DeleteContainerAssociation",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteContainerAssociation",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -2271,6 +2391,12 @@
     },
     {
       "Name": "DescribeContainerAssociation",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeContainerAssociation",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -2601,6 +2727,12 @@
     },
     {
       "Name": "ListContainerAssociations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListContainerAssociations",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -2915,6 +3047,12 @@
     },
     {
       "Name": "UpdateContainerAssociation",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateContainerAssociation",
+          "Service": "network-firewall"
+        }
+      ],
       "SDK": [
         {
           "Name": "network-firewall",
@@ -3173,6 +3311,15 @@
     }
   ],
   "Resources": [
+    {
+      "Name": "ContainerAssociation",
+      "ARNFormats": [
+        "arn:${Partition}:network-firewall:${Region}:${Account}:container-association/${Name}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
     {
       "Name": "Firewall",
       "ARNFormats": [

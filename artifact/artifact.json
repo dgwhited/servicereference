@@ -472,6 +472,42 @@
   ],
   "Operations": [
     {
+      "Name": "CreateComplianceInquiry",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateComplianceInquiry",
+          "Service": "artifact"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "artifact"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "artifact",
+          "Method": "create_compliance_inquiry",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ExportComplianceInquiry",
+      "AuthorizedActions": [
+        {
+          "Name": "ExportComplianceInquiry",
+          "Service": "artifact"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "artifact",
+          "Method": "export_compliance_inquiry",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetAccountSettings",
       "AuthorizedActions": [
         {
@@ -483,6 +519,22 @@
         {
           "Name": "artifact",
           "Method": "get_account_settings",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetComplianceInquiryMetadata",
+      "AuthorizedActions": [
+        {
+          "Name": "GetComplianceInquiryMetadata",
+          "Service": "artifact"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "artifact",
+          "Method": "get_compliance_inquiry_metadata",
           "Package": "Boto3"
         }
       ]
@@ -536,6 +588,38 @@
       ]
     },
     {
+      "Name": "ListComplianceInquiries",
+      "AuthorizedActions": [
+        {
+          "Name": "ListComplianceInquiries",
+          "Service": "artifact"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "artifact",
+          "Method": "list_compliance_inquiries",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListComplianceInquiryQueries",
+      "AuthorizedActions": [
+        {
+          "Name": "ListComplianceInquiryQueries",
+          "Service": "artifact"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "artifact",
+          "Method": "list_compliance_inquiry_queries",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListCustomerAgreements",
       "AuthorizedActions": [
         {
@@ -584,6 +668,22 @@
       ]
     },
     {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "artifact"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "artifact",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "PutAccountSettings",
       "AuthorizedActions": [
         {
@@ -595,6 +695,26 @@
         {
           "Name": "artifact",
           "Method": "put_account_settings",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "SDK": [
+        {
+          "Name": "artifact",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "SDK": [
+        {
+          "Name": "artifact",
+          "Method": "untag_resource",
           "Package": "Boto3"
         }
       ]
