@@ -4977,6 +4977,21 @@
     },
     {
       "Name": "CreateABTest",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateABTest",
+          "Service": "bedrock-agentcore"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "bedrock-agentcore.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore",
