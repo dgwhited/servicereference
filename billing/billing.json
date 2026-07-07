@@ -704,6 +704,26 @@
       ]
     },
     {
+      "Name": "GetBillingPreferences",
+      "AuthorizedActions": [
+        {
+          "Name": "GetBillingPreferences",
+          "Service": "billing"
+        },
+        {
+          "Name": "ViewBilling",
+          "Service": "aws-portal"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "billing",
+          "Method": "get_billing_preferences",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetBillingView",
       "AuthorizedActions": [
         {
@@ -715,6 +735,42 @@
         {
           "Name": "billing",
           "Method": "get_billing_view",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetCreditAllocationHistory",
+      "AuthorizedActions": [
+        {
+          "Name": "GetCreditAllocationHistory",
+          "Service": "billing"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "billing",
+          "Method": "get_credit_allocation_history",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetCredits",
+      "AuthorizedActions": [
+        {
+          "Name": "GetCredits",
+          "Service": "billing"
+        },
+        {
+          "Name": "ViewBilling",
+          "Service": "aws-portal"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "billing",
+          "Method": "get_credits",
           "Package": "Boto3"
         }
       ]
@@ -784,6 +840,26 @@
       ]
     },
     {
+      "Name": "RedeemCredits",
+      "AuthorizedActions": [
+        {
+          "Name": "ModifyBilling",
+          "Service": "aws-portal"
+        },
+        {
+          "Name": "RedeemCredits",
+          "Service": "billing"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "billing",
+          "Method": "redeem_credits",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "TagResource",
       "AuthorizedActions": [
         {
@@ -811,6 +887,26 @@
         {
           "Name": "billing",
           "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateBillingPreferences",
+      "AuthorizedActions": [
+        {
+          "Name": "ModifyBilling",
+          "Service": "aws-portal"
+        },
+        {
+          "Name": "UpdateBillingPreferences",
+          "Service": "billing"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "billing",
+          "Method": "update_billing_preferences",
           "Package": "Boto3"
         }
       ]
