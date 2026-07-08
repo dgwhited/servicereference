@@ -3735,6 +3735,35 @@
       ]
     },
     {
+      "Name": "CreateCloudConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "AddTagsToResource",
+          "Service": "ssm"
+        },
+        {
+          "Name": "CreateCloudConnector",
+          "Service": "ssm"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ssm.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ssm",
+          "Method": "create_cloud_connector",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateDocument",
       "AuthorizedActions": [
         {
@@ -3892,6 +3921,22 @@
         {
           "Name": "ssm",
           "Method": "delete_association",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCloudConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteCloudConnector",
+          "Service": "ssm"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ssm",
+          "Method": "delete_cloud_connector",
           "Package": "Boto3"
         }
       ]
@@ -4731,6 +4776,22 @@
       ]
     },
     {
+      "Name": "GetCloudConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "GetCloudConnector",
+          "Service": "ssm"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ssm",
+          "Method": "get_cloud_connector",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetCommandInvocation",
       "AuthorizedActions": [
         {
@@ -5158,6 +5219,22 @@
         {
           "Name": "ssm",
           "Method": "list_associations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListCloudConnectors",
+      "AuthorizedActions": [
+        {
+          "Name": "ListCloudConnectors",
+          "Service": "ssm"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ssm",
+          "Method": "list_cloud_connectors",
           "Package": "Boto3"
         }
       ]
@@ -5876,6 +5953,22 @@
       ]
     },
     {
+      "Name": "UpdateCloudConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateCloudConnector",
+          "Service": "ssm"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ssm",
+          "Method": "update_cloud_connector",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "UpdateDocument",
       "AuthorizedActions": [
         {
@@ -6100,6 +6193,22 @@
         {
           "Name": "ssm",
           "Method": "update_service_setting",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ValidateCloudConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "ValidateCloudConnector",
+          "Service": "ssm"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ssm",
+          "Method": "validate_cloud_connector",
           "Package": "Boto3"
         }
       ]

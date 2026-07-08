@@ -239,7 +239,9 @@
     {
       "Name": "UpdatePurchaseOrder",
       "ActionConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
       ],
       "Annotations": {
         "Properties": {
