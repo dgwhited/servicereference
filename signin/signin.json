@@ -26,10 +26,6 @@
     },
     {
       "Name": "AuthorizeOAuth2Access",
-      "ActionConditionKeys": [
-        "signin:OAuthClientId",
-        "signin:OAuthRedirectUri"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -43,13 +39,25 @@
           "Name": "console"
         },
         {
-          "Name": "oauth2-public-client-localhost"
+          "Name": "oauth2-public-client-localhost",
+          "ConditionKeys": [
+            "signin:OAuthClientId",
+            "signin:OAuthRedirectUri"
+          ]
         },
         {
-          "Name": "oauth2-public-client-remote"
+          "Name": "oauth2-public-client-remote",
+          "ConditionKeys": [
+            "signin:OAuthClientId",
+            "signin:OAuthRedirectUri"
+          ]
         },
         {
-          "Name": "oauth2-resource-service-principal"
+          "Name": "oauth2-resource-service-principal",
+          "ConditionKeys": [
+            "signin:OAuthClientId",
+            "signin:OAuthRedirectUri"
+          ]
         }
       ],
       "SupportedBy": {
@@ -102,12 +110,6 @@
     },
     {
       "Name": "CreateOAuth2Token",
-      "ActionConditionKeys": [
-        "signin:OAuthClientAuthentication",
-        "signin:OAuthClientId",
-        "signin:OAuthGrantType",
-        "signin:OAuthRedirectUri"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -121,13 +123,31 @@
           "Name": "console"
         },
         {
-          "Name": "oauth2-public-client-localhost"
+          "Name": "oauth2-public-client-localhost",
+          "ConditionKeys": [
+            "signin:OAuthClientAuthentication",
+            "signin:OAuthClientId",
+            "signin:OAuthGrantType",
+            "signin:OAuthRedirectUri"
+          ]
         },
         {
-          "Name": "oauth2-public-client-remote"
+          "Name": "oauth2-public-client-remote",
+          "ConditionKeys": [
+            "signin:OAuthClientAuthentication",
+            "signin:OAuthClientId",
+            "signin:OAuthGrantType",
+            "signin:OAuthRedirectUri"
+          ]
         },
         {
-          "Name": "oauth2-resource-service-principal"
+          "Name": "oauth2-resource-service-principal",
+          "ConditionKeys": [
+            "signin:OAuthClientAuthentication",
+            "signin:OAuthClientId",
+            "signin:OAuthGrantType",
+            "signin:OAuthRedirectUri"
+          ]
         }
       ],
       "SupportedBy": {
