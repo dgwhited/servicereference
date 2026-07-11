@@ -643,6 +643,33 @@
       }
     },
     {
+      "Name": "CreateKnowledgeBase",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "datasource"
+        },
+        {
+          "Name": "knowledgeBase"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateLimitsProfile",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -5841,6 +5868,26 @@
       }
     },
     {
+      "Name": "UpdateKnowledgeBase",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "knowledgeBase"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateKnowledgeBasePermissions",
       "Annotations": {
         "Properties": {
@@ -6919,6 +6966,16 @@
         {
           "Name": "quicksight",
           "Method": "create_ingestion",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateKnowledgeBase",
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "create_knowledge_base",
           "Package": "Boto3"
         }
       ]
@@ -10646,6 +10703,22 @@
         {
           "Name": "quicksight",
           "Method": "update_key_registration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateKnowledgeBase",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateKnowledgeBase",
+          "Service": "quicksight"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "quicksight",
+          "Method": "update_knowledge_base",
           "Package": "Boto3"
         }
       ]
