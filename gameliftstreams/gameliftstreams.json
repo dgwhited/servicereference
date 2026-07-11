@@ -842,6 +842,15 @@
       "Name": "StartStreamSession",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "gameliftstreams.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "StartStreamSession",
           "Service": "gameliftstreams"
         }
