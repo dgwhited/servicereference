@@ -462,6 +462,15 @@
         {
           "Name": "CreateCluster",
           "Service": "snowball"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "importexport.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [
