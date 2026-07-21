@@ -250,6 +250,9 @@
       "Resources": [
         {
           "Name": "invoice-unit"
+        },
+        {
+          "Name": "procurement-portal-preference"
         }
       ],
       "SupportedBy": {
@@ -274,6 +277,24 @@
     },
     {
       "Name": "PutProcurementPortalPreference",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "SendProcurementPortalValidation",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],
@@ -323,6 +344,9 @@
       "Resources": [
         {
           "Name": "invoice-unit"
+        },
+        {
+          "Name": "procurement-portal-preference"
         }
       ],
       "SupportedBy": {
@@ -347,6 +371,9 @@
       "Resources": [
         {
           "Name": "invoice-unit"
+        },
+        {
+          "Name": "procurement-portal-preference"
         }
       ],
       "SupportedBy": {
@@ -379,6 +406,24 @@
     },
     {
       "Name": "UpdateProcurementPortalPreferenceStatus",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "VerifyProcurementPortalValidation",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
       ],

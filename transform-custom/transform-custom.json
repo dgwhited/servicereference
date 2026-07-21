@@ -3,6 +3,11 @@
   "Actions": [
     {
       "Name": "BatchCreateFindings",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
