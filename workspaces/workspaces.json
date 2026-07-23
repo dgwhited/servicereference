@@ -110,10 +110,6 @@
     },
     {
       "Name": "CopyWorkspaceImage",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -124,7 +120,10 @@
       },
       "Resources": [
         {
-          "Name": "workspaceimage"
+          "Name": "workspaceimage",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -227,10 +226,6 @@
     },
     {
       "Name": "CreateStandbyWorkspaces",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -241,10 +236,10 @@
       },
       "Resources": [
         {
-          "Name": "directoryid"
-        },
-        {
-          "Name": "workspaceid"
+          "Name": "directoryid",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -273,10 +268,6 @@
     },
     {
       "Name": "CreateUpdatedWorkspaceImage",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -287,7 +278,10 @@
       },
       "Resources": [
         {
-          "Name": "workspaceimage"
+          "Name": "workspaceimage",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -297,10 +291,6 @@
     },
     {
       "Name": "CreateWorkspaceBundle",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -311,10 +301,10 @@
       },
       "Resources": [
         {
-          "Name": "workspacebundle"
-        },
-        {
-          "Name": "workspaceimage"
+          "Name": "workspaceimage",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -324,10 +314,6 @@
     },
     {
       "Name": "CreateWorkspaceImage",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -338,7 +324,10 @@
       },
       "Resources": [
         {
-          "Name": "workspaceid"
+          "Name": "workspaceid",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -348,10 +337,6 @@
     },
     {
       "Name": "CreateWorkspaces",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -372,13 +357,6 @@
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}"
           ]
-        },
-        {
-          "Name": "workspaceid",
-          "ConditionKeys": [
-            "aws:RequestTag/${TagKey}",
-            "aws:TagKeys"
-          ]
         }
       ],
       "SupportedBy": {
@@ -388,10 +366,6 @@
     },
     {
       "Name": "CreateWorkspacesPool",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -402,13 +376,16 @@
       },
       "Resources": [
         {
-          "Name": "directoryid"
+          "Name": "directoryid",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         },
         {
-          "Name": "workspacebundle"
-        },
-        {
-          "Name": "workspacespoolid"
+          "Name": "workspacebundle",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
         }
       ],
       "SupportedBy": {
@@ -1057,7 +1034,7 @@
       },
       "Resources": [
         {
-          "Name": "workspacespoolid"
+          "Name": "workspacespool"
         }
       ],
       "SupportedBy": {
@@ -1075,6 +1052,11 @@
           "IsWrite": false
         }
       },
+      "Resources": [
+        {
+          "Name": "workspacespool"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
@@ -1713,7 +1695,7 @@
       },
       "Resources": [
         {
-          "Name": "workspacespoolid"
+          "Name": "workspacespool"
         }
       ],
       "SupportedBy": {
@@ -1753,7 +1735,7 @@
       },
       "Resources": [
         {
-          "Name": "workspacespoolid"
+          "Name": "workspacespool"
         }
       ],
       "SupportedBy": {
@@ -1816,7 +1798,7 @@
       },
       "Resources": [
         {
-          "Name": "workspacespoolid"
+          "Name": "workspacespool"
         }
       ],
       "SupportedBy": {
@@ -1989,7 +1971,7 @@
       },
       "Resources": [
         {
-          "Name": "workspacespoolid"
+          "Name": "workspacespool"
         }
       ],
       "SupportedBy": {
@@ -3568,6 +3550,9 @@
       "Name": "certificateid",
       "ARNFormats": [
         "arn:${Partition}:workspaces:${Region}:${Account}:workspacecertificate/${CertificateId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -3634,7 +3619,7 @@
       ]
     },
     {
-      "Name": "workspacespoolid",
+      "Name": "workspacespool",
       "ARNFormats": [
         "arn:${Partition}:workspaces:${Region}:${Account}:workspacespool/${PoolId}"
       ],
