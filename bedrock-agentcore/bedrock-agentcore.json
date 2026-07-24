@@ -2,6 +2,26 @@
   "Name": "bedrock-agentcore",
   "Actions": [
     {
+      "Name": "AddDatasetExamples",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "AllowVendedLogDeliveryForResource",
       "Annotations": {
         "Properties": {
@@ -345,6 +365,46 @@
       }
     },
     {
+      "Name": "CreateDataset",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateDatasetVersion",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateEvaluator",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -628,7 +688,8 @@
       "Name": "CreatePaymentManager",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "bedrock-agentcore:DiscoveryUrl"
       ],
       "Annotations": {
         "Properties": {
@@ -943,6 +1004,46 @@
       "Resources": [
         {
           "Name": "configuration-bundle"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteDataset",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteDatasetExamples",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "dataset"
         }
       ],
       "SupportedBy": {
@@ -1798,6 +1899,26 @@
       "Resources": [
         {
           "Name": "configuration-bundle"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetDataset",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "dataset"
         }
       ],
       "SupportedBy": {
@@ -3052,6 +3173,61 @@
     },
     {
       "Name": "ListConfigurationBundles",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListDatasetExamples",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListDatasetVersions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListDatasets",
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -4415,6 +4591,46 @@
       }
     },
     {
+      "Name": "UpdateDataset",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateDatasetExamples",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "dataset"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateEvaluator",
       "Annotations": {
         "Properties": {
@@ -4645,6 +4861,9 @@
     },
     {
       "Name": "UpdatePaymentManager",
+      "ActionConditionKeys": [
+        "bedrock-agentcore:DiscoveryUrl"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -4987,6 +5206,12 @@
   "Operations": [
     {
       "Name": "AddDatasetExamples",
+      "AuthorizedActions": [
+        {
+          "Name": "AddDatasetExamples",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -5259,6 +5484,10 @@
       "Name": "CreateDataset",
       "AuthorizedActions": [
         {
+          "Name": "CreateDataset",
+          "Service": "bedrock-agentcore"
+        },
+        {
           "Name": "TagResource",
           "Service": "bedrock-agentcore"
         }
@@ -5273,6 +5502,12 @@
     },
     {
       "Name": "CreateDatasetVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDatasetVersion",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -5873,6 +6108,12 @@
     },
     {
       "Name": "DeleteDataset",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteDataset",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -5883,6 +6124,12 @@
     },
     {
       "Name": "DeleteDatasetExamples",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteDatasetExamples",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -6489,6 +6736,12 @@
     },
     {
       "Name": "GetDataset",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDataset",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -7369,6 +7622,12 @@
     },
     {
       "Name": "ListDatasetExamples",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDatasetExamples",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -7379,6 +7638,12 @@
     },
     {
       "Name": "ListDatasetVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDatasetVersions",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -7389,6 +7654,12 @@
     },
     {
       "Name": "ListDatasets",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDatasets",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -8323,6 +8594,12 @@
     },
     {
       "Name": "UpdateDataset",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateDataset",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -8333,6 +8610,12 @@
     },
     {
       "Name": "UpdateDatasetExamples",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateDatasetExamples",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
@@ -8771,6 +9054,15 @@
       "Name": "configuration-bundle",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:configuration-bundle/${ConfigurationBundleId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "dataset",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:dataset/${DatasetId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
