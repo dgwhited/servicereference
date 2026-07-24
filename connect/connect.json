@@ -2718,6 +2718,29 @@
       }
     },
     {
+      "Name": "DescribeAttachedFilesConfiguration",
+      "ActionConditionKeys": [
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeAuthenticationProfile",
       "ActionConditionKeys": [
         "connect:InstanceId"
@@ -4507,6 +4530,29 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListAttachedFilesConfigurations",
+      "ActionConditionKeys": [
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -7764,6 +7810,29 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "UpdateAttachedFilesConfiguration",
+      "ActionConditionKeys": [
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -11261,6 +11330,12 @@
     },
     {
       "Name": "DescribeAttachedFilesConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeAttachedFilesConfiguration",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -12486,6 +12561,12 @@
     },
     {
       "Name": "ListAttachedFilesConfigurations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAttachedFilesConfigurations",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -14668,6 +14749,12 @@
     },
     {
       "Name": "UpdateAttachedFilesConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateAttachedFilesConfiguration",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
@@ -15695,6 +15782,9 @@
       "Name": "authentication-profile",
       "ARNFormats": [
         "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/authentication-profile/${AuthenticationProfileId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -15707,6 +15797,9 @@
       "Name": "contact",
       "ARNFormats": [
         "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/contact/${ContactId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
