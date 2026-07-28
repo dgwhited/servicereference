@@ -238,6 +238,26 @@
       }
     },
     {
+      "Name": "GetPrimaryEmailUpdateStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "accountInOrganization"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetRegionOptStatus",
       "ActionConditionKeys": [
         "account:TargetRegion"
@@ -565,6 +585,12 @@
     },
     {
       "Name": "GetPrimaryEmailUpdateStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPrimaryEmailUpdateStatus",
+          "Service": "account"
+        }
+      ],
       "SDK": [
         {
           "Name": "account",
