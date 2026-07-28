@@ -2268,6 +2268,29 @@
       }
     },
     {
+      "Name": "QueryDataset",
+      "ActionConditionKeys": [
+        "partnercentral:Catalog"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Dataset"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "RecallBenefitApplication",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
@@ -2732,6 +2755,9 @@
           "Name": "ChannelHandshake"
         },
         {
+          "Name": "Dataset"
+        },
+        {
           "Name": "MarketplaceRevenueShare"
         },
         {
@@ -2781,6 +2807,9 @@
         },
         {
           "Name": "ChannelHandshake"
+        },
+        {
+          "Name": "Dataset"
         },
         {
           "Name": "MarketplaceRevenueShare"
@@ -5262,6 +5291,15 @@
       "Name": "Dashboard",
       "ARNFormats": [
         "arn:${Partition}:partnercentral::${Account}:catalog/${Catalog}/ReportingData/${TableId}/Dashboard/${DashboardId}"
+      ]
+    },
+    {
+      "Name": "Dataset",
+      "ARNFormats": [
+        "arn:${Partition}:partnercentral::${Account}:catalog/AWS/ReportingData/${Domain}/Dataset/${DatasetName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {

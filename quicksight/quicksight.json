@@ -671,10 +671,6 @@
     },
     {
       "Name": "CreateLimitsProfile",
-      "ActionConditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
-      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -11511,9 +11507,6 @@
       "Name": "limitsProfile",
       "ARNFormats": [
         "arn:${Partition}:quicksight:${Region}:${Account}:limits-profile/${ResourceId}"
-      ],
-      "ConditionKeys": [
-        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
