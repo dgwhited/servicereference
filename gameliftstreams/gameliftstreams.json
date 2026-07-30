@@ -123,6 +123,32 @@
       }
     },
     {
+      "Name": "CreateStreamUrl",
+      "ActionConditionKeys": [
+        "gameliftstreams:RoleArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "application"
+        },
+        {
+          "Name": "stream group"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteApplication",
       "Annotations": {
         "Properties": {
@@ -266,6 +292,46 @@
       }
     },
     {
+      "Name": "GetStreamUrl",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "stream group"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListApplicationShaderCaches",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "application"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListApplications",
       "Annotations": {
         "Properties": {
@@ -331,6 +397,21 @@
       }
     },
     {
+      "Name": "ListStreamUrls",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListTagsForResource",
       "Annotations": {
         "Properties": {
@@ -355,6 +436,26 @@
     },
     {
       "Name": "RemoveStreamGroupLocations",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "stream group"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "RevokeStreamUrl",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -646,6 +747,16 @@
       ]
     },
     {
+      "Name": "CreateStreamUrl",
+      "SDK": [
+        {
+          "Name": "gameliftstreams",
+          "Method": "create_stream_url",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteApplication",
       "AuthorizedActions": [
         {
@@ -758,6 +869,32 @@
       ]
     },
     {
+      "Name": "GetStreamUrl",
+      "AuthorizedActions": [
+        {
+          "Name": "GetStreamUrl",
+          "Service": "gameliftstreams"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "gameliftstreams",
+          "Method": "get_stream_url",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListApplicationShaderCaches",
+      "SDK": [
+        {
+          "Name": "gameliftstreams",
+          "Method": "list_application_shader_caches",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListApplications",
       "AuthorizedActions": [
         {
@@ -822,6 +959,22 @@
       ]
     },
     {
+      "Name": "ListStreamUrls",
+      "AuthorizedActions": [
+        {
+          "Name": "ListStreamUrls",
+          "Service": "gameliftstreams"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "gameliftstreams",
+          "Method": "list_stream_urls",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListTagsForResource",
       "AuthorizedActions": [
         {
@@ -849,6 +1002,16 @@
         {
           "Name": "gameliftstreams",
           "Method": "remove_stream_group_locations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RevokeStreamUrl",
+      "SDK": [
+        {
+          "Name": "gameliftstreams",
+          "Method": "revoke_stream_url",
           "Package": "Boto3"
         }
       ]
