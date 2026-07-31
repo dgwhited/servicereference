@@ -1346,6 +1346,35 @@
       ]
     },
     {
+      "Name": "CreateChannel",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateChannel",
+          "Service": "kafka"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "kafka.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "kafka"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafka",
+          "Method": "create_channel",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateCluster",
       "AuthorizedActions": [
         {
@@ -1479,6 +1508,22 @@
       ]
     },
     {
+      "Name": "DeleteChannel",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteChannel",
+          "Service": "kafka"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafka",
+          "Method": "delete_channel",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteCluster",
       "AuthorizedActions": [
         {
@@ -1578,6 +1623,22 @@
         {
           "Name": "kafka",
           "Method": "delete_vpc_connection",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeChannel",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeChannel",
+          "Service": "kafka"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafka",
+          "Method": "describe_channel",
           "Package": "Boto3"
         }
       ]
@@ -1806,6 +1867,22 @@
         {
           "Name": "kafka",
           "Method": "get_compatible_kafka_versions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListChannels",
+      "AuthorizedActions": [
+        {
+          "Name": "ListChannels",
+          "Service": "kafka"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafka",
+          "Method": "list_channels",
           "Package": "Boto3"
         }
       ]
@@ -2162,6 +2239,22 @@
         {
           "Name": "kafka",
           "Method": "update_broker_type",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateChannel",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateChannel",
+          "Service": "kafka"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "kafka",
+          "Method": "update_channel",
           "Package": "Boto3"
         }
       ]

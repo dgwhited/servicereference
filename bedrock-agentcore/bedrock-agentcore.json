@@ -3351,6 +3351,21 @@
       }
     },
     {
+      "Name": "ListHarnessVersions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListHarnesses",
       "Annotations": {
         "Properties": {
@@ -7766,6 +7781,12 @@
     },
     {
       "Name": "ListHarnessVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListHarnessVersions",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",
