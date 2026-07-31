@@ -3380,6 +3380,24 @@
       }
     },
     {
+      "Name": "PutAccountPricingAttributes",
+      "ActionConditionKeys": [
+        "ses:ApiVersion"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "PutAccountSendingAttributes",
       "ActionConditionKeys": [
         "ses:ApiVersion"
@@ -7944,6 +7962,12 @@
     },
     {
       "Name": "PutAccountPricingAttributes",
+      "AuthorizedActions": [
+        {
+          "Name": "PutAccountPricingAttributes",
+          "Service": "ses"
+        }
+      ],
       "SDK": [
         {
           "Name": "sesv2",
