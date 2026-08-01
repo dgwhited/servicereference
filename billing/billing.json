@@ -282,6 +282,36 @@
       }
     },
     {
+      "Name": "GetEnterpriseSupportChargeSummary",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetEnterpriseSupportContractDetails",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetIAMAccessPreference",
       "Annotations": {
         "Properties": {
@@ -339,6 +369,21 @@
       "Annotations": {
         "Properties": {
           "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListEnterpriseSupportLinkedAccountCharges",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
@@ -736,6 +781,38 @@
       ]
     },
     {
+      "Name": "GetEnterpriseSupportChargeSummary",
+      "AuthorizedActions": [
+        {
+          "Name": "GetEnterpriseSupportChargeSummary",
+          "Service": "billing"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "billing",
+          "Method": "get_enterprise_support_charge_summary",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetEnterpriseSupportContractDetails",
+      "AuthorizedActions": [
+        {
+          "Name": "GetEnterpriseSupportContractDetails",
+          "Service": "billing"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "billing",
+          "Method": "get_enterprise_support_contract_details",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetResourcePolicy",
       "AuthorizedActions": [
         {
@@ -763,6 +840,22 @@
         {
           "Name": "billing",
           "Method": "list_billing_views",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListEnterpriseSupportLinkedAccountCharges",
+      "AuthorizedActions": [
+        {
+          "Name": "ListEnterpriseSupportLinkedAccountCharges",
+          "Service": "billing"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "billing",
+          "Method": "list_enterprise_support_linked_account_charges",
           "Package": "Boto3"
         }
       ]

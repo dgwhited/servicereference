@@ -373,6 +373,29 @@
       }
     },
     {
+      "Name": "CreateTest",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateUserJourney",
       "Annotations": {
         "Properties": {
@@ -692,6 +715,52 @@
       "Resources": [
         {
           "Name": "system",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteTest",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteTestSources",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "service",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}"
           ]
@@ -1027,6 +1096,67 @@
           ]
         }
       ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetTest",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetTestRun",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetTestTemplate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -1561,6 +1691,29 @@
       }
     },
     {
+      "Name": "ListResolvedTestRunTargetResources",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListResourceGroupingRecommendations",
       "Annotations": {
         "Properties": {
@@ -1819,6 +1972,136 @@
       }
     },
     {
+      "Name": "ListTestRunEvents",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListTestRunSources",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListTestRuns",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListTestSources",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListTestTemplates",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListTests",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListUnsupportedAppVersionResources",
       "Annotations": {
         "Properties": {
@@ -1899,6 +2182,29 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "PutTestSources",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2041,6 +2347,52 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "StartTestRun",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "StopTestRun",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "service",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2389,6 +2741,29 @@
       "Resources": [
         {
           "Name": "system",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateTest",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "service",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}"
           ]
@@ -2749,6 +3124,22 @@
       ]
     },
     {
+      "Name": "CreateTest",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateTest",
+          "Service": "resiliencehub"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "resiliencehubv2",
+          "Method": "create_test",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateUserJourney",
       "AuthorizedActions": [
         {
@@ -2984,6 +3375,26 @@
         {
           "Name": "resiliencehubv2",
           "Method": "delete_system",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTest",
+      "SDK": [
+        {
+          "Name": "resiliencehubv2",
+          "Method": "delete_test",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTestSources",
+      "SDK": [
+        {
+          "Name": "resiliencehubv2",
+          "Method": "delete_test_sources",
           "Package": "Boto3"
         }
       ]
@@ -3240,6 +3651,42 @@
         {
           "Name": "resiliencehubv2",
           "Method": "get_system",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetTest",
+      "SDK": [
+        {
+          "Name": "resiliencehubv2",
+          "Method": "get_test",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetTestRun",
+      "SDK": [
+        {
+          "Name": "resiliencehubv2",
+          "Method": "get_test_run",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetTestTemplate",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTestTemplate",
+          "Service": "resiliencehub"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "resiliencehubv2",
+          "Method": "get_test_template",
           "Package": "Boto3"
         }
       ]
@@ -3661,6 +4108,16 @@
       ]
     },
     {
+      "Name": "ListResolvedTestRunTargetResources",
+      "SDK": [
+        {
+          "Name": "resiliencehubv2",
+          "Method": "list_resolved_test_run_target_resources",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListResourceGroupingRecommendations",
       "AuthorizedActions": [
         {
@@ -3858,6 +4315,84 @@
       ]
     },
     {
+      "Name": "ListTestRunEvents",
+      "SDK": [
+        {
+          "Name": "resiliencehubv2",
+          "Method": "list_test_run_events",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTestRunSources",
+      "SDK": [
+        {
+          "Name": "resiliencehubv2",
+          "Method": "list_test_run_sources",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTestRuns",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTestRuns",
+          "Service": "resiliencehub"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "resiliencehubv2",
+          "Method": "list_test_runs",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTestSources",
+      "SDK": [
+        {
+          "Name": "resiliencehubv2",
+          "Method": "list_test_sources",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTestTemplates",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTestTemplates",
+          "Service": "resiliencehub"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "resiliencehubv2",
+          "Method": "list_test_templates",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTests",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTests",
+          "Service": "resiliencehub"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "resiliencehubv2",
+          "Method": "list_tests",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListUnsupportedAppVersionResources",
       "AuthorizedActions": [
         {
@@ -3917,6 +4452,16 @@
         {
           "Name": "resiliencehub",
           "Method": "put_draft_app_version_template",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutTestSources",
+      "SDK": [
+        {
+          "Name": "resiliencehubv2",
+          "Method": "put_test_sources",
           "Package": "Boto3"
         }
       ]
@@ -4033,6 +4578,26 @@
         {
           "Name": "resiliencehub",
           "Method": "start_resource_grouping_recommendation_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartTestRun",
+      "SDK": [
+        {
+          "Name": "resiliencehubv2",
+          "Method": "start_test_run",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StopTestRun",
+      "SDK": [
+        {
+          "Name": "resiliencehubv2",
+          "Method": "stop_test_run",
           "Package": "Boto3"
         }
       ]
@@ -4290,6 +4855,16 @@
       ]
     },
     {
+      "Name": "UpdateTest",
+      "SDK": [
+        {
+          "Name": "resiliencehubv2",
+          "Method": "update_test",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "UpdateUserJourney",
       "AuthorizedActions": [
         {
@@ -4368,6 +4943,12 @@
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "test-template",
+      "ARNFormats": [
+        "arn:${Partition}:resiliencehub:${Region}:${Account}:test-template/${TestTemplateId}"
       ]
     }
   ],
