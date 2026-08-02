@@ -2585,6 +2585,15 @@
         {
           "Name": "CreateServiceAction",
           "Service": "servicecatalog"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "servicecatalog.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [
@@ -4099,6 +4108,15 @@
     {
       "Name": "UpdateServiceAction",
       "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "servicecatalog.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
         {
           "Name": "UpdateServiceAction",
           "Service": "servicecatalog"
