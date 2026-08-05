@@ -19,6 +19,9 @@
           "Name": "Pool"
         },
         {
+          "Name": "RcsAgent"
+        },
+        {
           "Name": "SenderId"
         }
       ],
@@ -48,6 +51,21 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "CarrierLookup",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -102,6 +120,25 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "CreateNotifyConfiguration",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -170,6 +207,25 @@
       }
     },
     {
+      "Name": "CreateRcsAgent",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateRegistration",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -201,6 +257,9 @@
       "Resources": [
         {
           "Name": "PhoneNumber"
+        },
+        {
+          "Name": "RcsAgent"
         },
         {
           "Name": "Registration"
@@ -418,6 +477,41 @@
       }
     },
     {
+      "Name": "DeleteNotifyConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "NotifyConfiguration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteNotifyMessageSpendLimitOverride",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteOptOutList",
       "Annotations": {
         "Properties": {
@@ -515,6 +609,41 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteRcsAgent",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RcsAgent"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteRcsMessageSpendLimitOverride",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -730,6 +859,41 @@
       }
     },
     {
+      "Name": "DescribeNotifyConfigurations",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "NotifyConfiguration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeNotifyTemplates",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DescribeOptOutLists",
       "Annotations": {
         "Properties": {
@@ -827,6 +991,46 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DescribeRcsAgentCountryLaunchStatus",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RcsAgent"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeRcsAgents",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RcsAgent"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1027,6 +1231,9 @@
           "Name": "Pool"
         },
         {
+          "Name": "RcsAgent"
+        },
+        {
           "Name": "SenderId"
         }
       ],
@@ -1158,6 +1365,21 @@
       }
     },
     {
+      "Name": "ListNotifyCountries",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListPoolOriginationIdentities",
       "Annotations": {
         "Properties": {
@@ -1232,6 +1454,9 @@
           "Name": "ConfigurationSet"
         },
         {
+          "Name": "NotifyConfiguration"
+        },
+        {
           "Name": "OptOutList"
         },
         {
@@ -1242,6 +1467,9 @@
         },
         {
           "Name": "ProtectConfiguration"
+        },
+        {
+          "Name": "RcsAgent"
         },
         {
           "Name": "Registration"
@@ -1449,7 +1677,13 @@
       },
       "Resources": [
         {
+          "Name": "OptOutList"
+        },
+        {
           "Name": "Pool"
+        },
+        {
+          "Name": "Registration"
         }
       ],
       "SupportedBy": {
@@ -1488,6 +1722,9 @@
       },
       "Resources": [
         {
+          "Name": "ConfigurationSet"
+        },
+        {
           "Name": "PhoneNumber"
         },
         {
@@ -1514,10 +1751,97 @@
       },
       "Resources": [
         {
+          "Name": "ConfigurationSet"
+        },
+        {
           "Name": "PhoneNumber"
         },
         {
           "Name": "Pool"
+        },
+        {
+          "Name": "ProtectConfiguration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "SendNotifyTextMessage",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        },
+        {
+          "Name": "NotifyConfiguration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "SendNotifyVoiceMessage",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        },
+        {
+          "Name": "NotifyConfiguration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "SendRcsMessage",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        },
+        {
+          "Name": "PhoneNumber"
+        },
+        {
+          "Name": "Pool"
+        },
+        {
+          "Name": "ProtectConfiguration"
+        },
+        {
+          "Name": "RcsAgent"
+        },
+        {
+          "Name": "SenderId"
         }
       ],
       "SupportedBy": {
@@ -1537,10 +1861,16 @@
       },
       "Resources": [
         {
+          "Name": "ConfigurationSet"
+        },
+        {
           "Name": "PhoneNumber"
         },
         {
           "Name": "Pool"
+        },
+        {
+          "Name": "ProtectConfiguration"
         },
         {
           "Name": "SenderId"
@@ -1562,6 +1892,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "ConfigurationSet"
+        },
         {
           "Name": "PhoneNumber"
         },
@@ -1670,6 +2003,36 @@
       }
     },
     {
+      "Name": "SetNotifyMessageSpendLimitOverride",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "SetRcsMessageSpendLimitOverride",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "SetTextMessageSpendLimitOverride",
       "Annotations": {
         "Properties": {
@@ -1738,6 +2101,9 @@
           "Name": "ConfigurationSet"
         },
         {
+          "Name": "NotifyConfiguration"
+        },
+        {
           "Name": "OptOutList"
         },
         {
@@ -1748,6 +2114,9 @@
         },
         {
           "Name": "ProtectConfiguration"
+        },
+        {
+          "Name": "RcsAgent"
         },
         {
           "Name": "Registration"
@@ -1785,6 +2154,9 @@
           "Name": "ConfigurationSet"
         },
         {
+          "Name": "NotifyConfiguration"
+        },
+        {
           "Name": "OptOutList"
         },
         {
@@ -1795,6 +2167,9 @@
         },
         {
           "Name": "ProtectConfiguration"
+        },
+        {
+          "Name": "RcsAgent"
         },
         {
           "Name": "Registration"
@@ -1850,6 +2225,26 @@
       }
     },
     {
+      "Name": "UpdateNotifyConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "NotifyConfiguration"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdatePhoneNumber",
       "Annotations": {
         "Properties": {
@@ -1860,6 +2255,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "OptOutList"
+        },
         {
           "Name": "PhoneNumber"
         }
@@ -1880,6 +2278,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "OptOutList"
+        },
         {
           "Name": "Pool"
         }
@@ -1927,6 +2328,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "UpdateRcsAgent",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "RcsAgent"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2025,6 +2446,12 @@
     },
     {
       "Name": "CarrierLookup",
+      "AuthorizedActions": [
+        {
+          "Name": "CarrierLookup",
+          "Service": "sms-voice"
+        }
+      ],
       "SDK": [
         {
           "Name": "pinpoint-sms-voice-v2",
@@ -2122,6 +2549,10 @@
       "Name": "CreateNotifyConfiguration",
       "AuthorizedActions": [
         {
+          "Name": "CreateNotifyConfiguration",
+          "Service": "sms-voice"
+        },
+        {
           "Name": "TagResource",
           "Service": "sms-voice"
         }
@@ -2197,6 +2628,10 @@
     {
       "Name": "CreateRcsAgent",
       "AuthorizedActions": [
+        {
+          "Name": "CreateRcsAgent",
+          "Service": "sms-voice"
+        },
         {
           "Name": "TagResource",
           "Service": "sms-voice"
@@ -2447,6 +2882,12 @@
     },
     {
       "Name": "DeleteNotifyConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteNotifyConfiguration",
+          "Service": "sms-voice"
+        }
+      ],
       "SDK": [
         {
           "Name": "pinpoint-sms-voice-v2",
@@ -2457,6 +2898,12 @@
     },
     {
       "Name": "DeleteNotifyMessageSpendLimitOverride",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteNotifyMessageSpendLimitOverride",
+          "Service": "sms-voice"
+        }
+      ],
       "SDK": [
         {
           "Name": "pinpoint-sms-voice-v2",
@@ -2547,6 +2994,12 @@
     },
     {
       "Name": "DeleteRcsAgent",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteRcsAgent",
+          "Service": "sms-voice"
+        }
+      ],
       "SDK": [
         {
           "Name": "pinpoint-sms-voice-v2",
@@ -2557,6 +3010,12 @@
     },
     {
       "Name": "DeleteRcsMessageSpendLimitOverride",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteRcsMessageSpendLimitOverride",
+          "Service": "sms-voice"
+        }
+      ],
       "SDK": [
         {
           "Name": "pinpoint-sms-voice-v2",
@@ -2743,6 +3202,12 @@
     },
     {
       "Name": "DescribeNotifyConfigurations",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeNotifyConfigurations",
+          "Service": "sms-voice"
+        }
+      ],
       "SDK": [
         {
           "Name": "pinpoint-sms-voice-v2",
@@ -2753,6 +3218,12 @@
     },
     {
       "Name": "DescribeNotifyTemplates",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeNotifyTemplates",
+          "Service": "sms-voice"
+        }
+      ],
       "SDK": [
         {
           "Name": "pinpoint-sms-voice-v2",
@@ -2843,6 +3314,12 @@
     },
     {
       "Name": "DescribeRcsAgentCountryLaunchStatus",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeRcsAgentCountryLaunchStatus",
+          "Service": "sms-voice"
+        }
+      ],
       "SDK": [
         {
           "Name": "pinpoint-sms-voice-v2",
@@ -2853,6 +3330,12 @@
     },
     {
       "Name": "DescribeRcsAgents",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeRcsAgents",
+          "Service": "sms-voice"
+        }
+      ],
       "SDK": [
         {
           "Name": "pinpoint-sms-voice-v2",
@@ -3145,6 +3628,12 @@
     },
     {
       "Name": "ListNotifyCountries",
+      "AuthorizedActions": [
+        {
+          "Name": "ListNotifyCountries",
+          "Service": "sms-voice"
+        }
+      ],
       "SDK": [
         {
           "Name": "pinpoint-sms-voice-v2",
@@ -3431,6 +3920,12 @@
     },
     {
       "Name": "SendNotifyTextMessage",
+      "AuthorizedActions": [
+        {
+          "Name": "SendNotifyTextMessage",
+          "Service": "sms-voice"
+        }
+      ],
       "SDK": [
         {
           "Name": "pinpoint-sms-voice-v2",
@@ -3441,6 +3936,12 @@
     },
     {
       "Name": "SendNotifyVoiceMessage",
+      "AuthorizedActions": [
+        {
+          "Name": "SendNotifyVoiceMessage",
+          "Service": "sms-voice"
+        }
+      ],
       "SDK": [
         {
           "Name": "pinpoint-sms-voice-v2",
@@ -3451,6 +3952,12 @@
     },
     {
       "Name": "SendRcsMessage",
+      "AuthorizedActions": [
+        {
+          "Name": "SendRcsMessage",
+          "Service": "sms-voice"
+        }
+      ],
       "SDK": [
         {
           "Name": "pinpoint-sms-voice-v2",
@@ -3583,6 +4090,12 @@
     },
     {
       "Name": "SetNotifyMessageSpendLimitOverride",
+      "AuthorizedActions": [
+        {
+          "Name": "SetNotifyMessageSpendLimitOverride",
+          "Service": "sms-voice"
+        }
+      ],
       "SDK": [
         {
           "Name": "pinpoint-sms-voice-v2",
@@ -3593,6 +4106,12 @@
     },
     {
       "Name": "SetRcsMessageSpendLimitOverride",
+      "AuthorizedActions": [
+        {
+          "Name": "SetRcsMessageSpendLimitOverride",
+          "Service": "sms-voice"
+        }
+      ],
       "SDK": [
         {
           "Name": "pinpoint-sms-voice-v2",
@@ -3729,6 +4248,12 @@
     },
     {
       "Name": "UpdateNotifyConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateNotifyConfiguration",
+          "Service": "sms-voice"
+        }
+      ],
       "SDK": [
         {
           "Name": "pinpoint-sms-voice-v2",
@@ -3830,6 +4355,10 @@
             ]
           },
           "Service": "iam"
+        },
+        {
+          "Name": "UpdateRcsAgent",
+          "Service": "sms-voice"
         }
       ],
       "SDK": [
@@ -3890,6 +4419,15 @@
       ]
     },
     {
+      "Name": "NotifyConfiguration",
+      "ARNFormats": [
+        "arn:${Partition}:sms-voice:${Region}:${Account}:notify-configuration/${NotifyConfigurationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
       "Name": "OptOutList",
       "ARNFormats": [
         "arn:${Partition}:sms-voice:${Region}:${Account}:opt-out-list/${OptOutListName}"
@@ -3920,6 +4458,15 @@
       "Name": "ProtectConfiguration",
       "ARNFormats": [
         "arn:${Partition}:sms-voice:${Region}:${Account}:protect-configuration/${ProtectConfigurationId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "RcsAgent",
+      "ARNFormats": [
+        "arn:${Partition}:sms-voice:${Region}:${Account}:rcs-agent/${RcsAgentId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
