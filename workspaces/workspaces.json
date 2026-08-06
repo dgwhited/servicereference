@@ -122,7 +122,9 @@
         {
           "Name": "workspaceimage",
           "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}"
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
           ]
         }
       ],
@@ -240,6 +242,13 @@
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}"
           ]
+        },
+        {
+          "Name": "workspaceid",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
         }
       ],
       "SupportedBy": {
@@ -280,7 +289,9 @@
         {
           "Name": "workspaceimage",
           "ConditionKeys": [
-            "aws:ResourceTag/${TagKey}"
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
           ]
         }
       ],
@@ -300,6 +311,13 @@
         }
       },
       "Resources": [
+        {
+          "Name": "workspacebundle",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
         {
           "Name": "workspaceimage",
           "ConditionKeys": [
@@ -327,6 +345,13 @@
           "Name": "workspaceid",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "workspaceimage",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
           ]
         }
       ],
@@ -357,6 +382,13 @@
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}"
           ]
+        },
+        {
+          "Name": "workspaceid",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
         }
       ],
       "SupportedBy": {
@@ -385,6 +417,13 @@
           "Name": "workspacebundle",
           "ConditionKeys": [
             "aws:ResourceTag/${TagKey}"
+          ]
+        },
+        {
+          "Name": "workspacespool",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
           ]
         }
       ],
@@ -1203,6 +1242,10 @@
     },
     {
       "Name": "ImportCustomWorkspaceImage",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1218,6 +1261,10 @@
     },
     {
       "Name": "ImportWorkspaceImage",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,

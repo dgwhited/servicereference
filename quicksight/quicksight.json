@@ -32,26 +32,6 @@
       }
     },
     {
-      "Name": "BatchAssignLimitsProfile",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "limitsProfile"
-        }
-      ],
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
       "Name": "BatchCreateTopicReviewedAnswer",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -120,6 +100,26 @@
       }
     },
     {
+      "Name": "BatchDescribeUserLimits",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "limitsProfile"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "BatchGetPreferences",
       "Annotations": {
         "Properties": {
@@ -129,26 +129,6 @@
           "IsWrite": false
         }
       },
-      "SupportedBy": {
-        "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
-      }
-    },
-    {
-      "Name": "BatchUnassignLimitsProfile",
-      "Annotations": {
-        "Properties": {
-          "IsList": false,
-          "IsPermissionManagement": false,
-          "IsTaggingOnly": false,
-          "IsWrite": true
-        }
-      },
-      "Resources": [
-        {
-          "Name": "limitsProfile"
-        }
-      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -429,6 +409,30 @@
           "IsWrite": true
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateDlpSetting",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "dlpSetting"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -1272,6 +1276,26 @@
           "IsWrite": true
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteDlpSetting",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "dlpSetting"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -2470,6 +2494,46 @@
           "IsWrite": false
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeDlpJob",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "dlpSetting"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DescribeDlpSetting",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "dlpSetting"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -3714,6 +3778,41 @@
       }
     },
     {
+      "Name": "ListDlpLabels",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListDlpSettings",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "dlpSetting"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListExtensionAccesses",
       "Annotations": {
         "Properties": {
@@ -4155,6 +4254,9 @@
         },
         {
           "Name": "datasource"
+        },
+        {
+          "Name": "dlpSetting"
         },
         {
           "Name": "emailCustomizationTemplate"
@@ -5073,6 +5175,26 @@
       }
     },
     {
+      "Name": "StartDlpJob",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "dlpSetting"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "Subscribe",
       "ActionConditionKeys": [
         "quicksight:DirectoryType",
@@ -5132,6 +5254,9 @@
         },
         {
           "Name": "datasource"
+        },
+        {
+          "Name": "dlpSetting"
         },
         {
           "Name": "emailCustomizationTemplate"
@@ -5247,6 +5372,9 @@
         },
         {
           "Name": "datasource"
+        },
+        {
+          "Name": "dlpSetting"
         },
         {
           "Name": "emailCustomizationTemplate"
@@ -5806,6 +5934,26 @@
           "IsWrite": true
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateDlpSetting",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "dlpSetting"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -11571,6 +11719,15 @@
       "Name": "datasource",
       "ARNFormats": [
         "arn:${Partition}:quicksight:${Region}:${Account}:datasource/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "dlpSetting",
+      "ARNFormats": [
+        "arn:${Partition}:quicksight:${Region}:${Account}:dlpsetting/${ResourceId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
