@@ -1984,6 +1984,26 @@
       }
     },
     {
+      "Name": "ListFreeTrialStatusesV2",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "hubv2"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListInvitations",
       "Annotations": {
         "Properties": {
@@ -4068,6 +4088,22 @@
         {
           "Name": "securityhub",
           "Method": "list_finding_aggregators",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListFreeTrialStatusesV2",
+      "AuthorizedActions": [
+        {
+          "Name": "ListFreeTrialStatusesV2",
+          "Service": "securityhub"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "securityhub",
+          "Method": "list_free_trial_statuses_v2",
           "Package": "Boto3"
         }
       ]

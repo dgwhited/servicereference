@@ -111,6 +111,26 @@
       }
     },
     {
+      "Name": "BatchPutGatewayRateLimits",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "BatchUpdateMemoryRecords",
       "ActionConditionKeys": [
         "bedrock-agentcore:namespace"
@@ -329,6 +349,26 @@
       }
     },
     {
+      "Name": "CreateCapacityProvider",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateCodeInterpreter",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -462,6 +502,26 @@
           "IsWrite": true
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateGatewayRateLimit",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -972,6 +1032,46 @@
       }
     },
     {
+      "Name": "DeleteCapacityProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "capacity-provider"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteCapacityProviderSession",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "capacity-provider"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteCodeInterpreter",
       "Annotations": {
         "Properties": {
@@ -1097,6 +1197,26 @@
     },
     {
       "Name": "DeleteGateway",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteGatewayRateLimit",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1824,6 +1944,26 @@
       }
     },
     {
+      "Name": "GetCapacityProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "capacity-provider"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetCodeInterpreter",
       "Annotations": {
         "Properties": {
@@ -1972,6 +2112,26 @@
     },
     {
       "Name": "GetGateway",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetGatewayRateLimit",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -3016,6 +3176,21 @@
       }
     },
     {
+      "Name": "ListAgentRuntimeVersionsByCapacityProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListAgentRuntimes",
       "Annotations": {
         "Properties": {
@@ -3100,6 +3275,21 @@
     },
     {
       "Name": "ListBrowsers",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListCapacityProviders",
       "Annotations": {
         "Properties": {
           "IsList": true,
@@ -3273,6 +3463,26 @@
       "Resources": [
         {
           "Name": "memory"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListGatewayRateLimits",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
         }
       ],
       "SupportedBy": {
@@ -3802,6 +4012,9 @@
           "Name": "browser-profile"
         },
         {
+          "Name": "capacity-provider"
+        },
+        {
           "Name": "code-interpreter-custom"
         },
         {
@@ -3934,6 +4147,26 @@
       }
     },
     {
+      "Name": "PassCapacityProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "capacity-provider"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ProcessPayment",
       "Annotations": {
         "Properties": {
@@ -3972,6 +4205,29 @@
         },
         {
           "Name": "runtime-endpoint"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "PutSystemLogEvents",
+      "ActionConditionKeys": [
+        "bedrock-agentcore:runtimeSessionId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "capacity-provider"
         }
       ],
       "SupportedBy": {
@@ -4347,6 +4603,9 @@
           "Name": "browser-profile"
         },
         {
+          "Name": "capacity-provider"
+        },
+        {
           "Name": "code-interpreter-custom"
         },
         {
@@ -4419,6 +4678,9 @@
         },
         {
           "Name": "browser-profile"
+        },
+        {
+          "Name": "capacity-provider"
         },
         {
           "Name": "code-interpreter-custom"
@@ -4586,6 +4848,26 @@
       }
     },
     {
+      "Name": "UpdateCapacityProvider",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "capacity-provider"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateConfigurationBundle",
       "Annotations": {
         "Properties": {
@@ -4667,6 +4949,26 @@
     },
     {
       "Name": "UpdateGateway",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "gateway"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateGatewayRateLimit",
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -5188,6 +5490,12 @@
       ]
     },
     {
+      "Name": "bedrock-agentcore:runtimeSessionId",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "bedrock-agentcore:securityGroups",
       "Types": [
         "ArrayOfString"
@@ -5268,6 +5576,22 @@
       ]
     },
     {
+      "Name": "BatchPutGatewayRateLimits",
+      "AuthorizedActions": [
+        {
+          "Name": "BatchPutGatewayRateLimits",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "batch_put_gateway_rate_limits",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "BatchUpdateMemoryRecords",
       "AuthorizedActions": [
         {
@@ -5333,6 +5657,10 @@
         },
         {
           "Name": "CreateAgentRuntimeEndpoint",
+          "Service": "bedrock-agentcore"
+        },
+        {
+          "Name": "PassCapacityProvider",
           "Service": "bedrock-agentcore"
         },
         {
@@ -5442,6 +5770,36 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "create_browser_profile",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateCapacityProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateCapacityProvider",
+          "Service": "bedrock-agentcore"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "bedrock-agentcore.amazonaws.com",
+              "ec2.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "create_capacity_provider",
           "Package": "Boto3"
         }
       ]
@@ -5596,6 +5954,22 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "create_gateway",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateGatewayRateLimit",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateGatewayRateLimit",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "create_gateway_rate_limit",
           "Package": "Boto3"
         }
       ]
@@ -6094,6 +6468,38 @@
       ]
     },
     {
+      "Name": "DeleteCapacityProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteCapacityProvider",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "delete_capacity_provider",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteCapacityProviderSession",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteCapacityProviderSession",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore",
+          "Method": "delete_capacity_provider_session",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteCodeInterpreter",
       "AuthorizedActions": [
         {
@@ -6201,6 +6607,22 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "delete_gateway",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteGatewayRateLimit",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteGatewayRateLimit",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "delete_gateway_rate_limit",
           "Package": "Boto3"
         }
       ]
@@ -6690,6 +7112,22 @@
       ]
     },
     {
+      "Name": "GetCapacityProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "GetCapacityProvider",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "get_capacity_provider",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetCodeInterpreter",
       "AuthorizedActions": [
         {
@@ -6813,6 +7251,22 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "get_gateway",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetGatewayRateLimit",
+      "AuthorizedActions": [
+        {
+          "Name": "GetGatewayRateLimit",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "get_gateway_rate_limit",
           "Package": "Boto3"
         }
       ]
@@ -7480,6 +7934,22 @@
       ]
     },
     {
+      "Name": "ListAgentRuntimeVersionsByCapacityProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAgentRuntimeVersionsByCapacityProvider",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_agent_runtime_versions_by_capacity_provider",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListAgentRuntimes",
       "AuthorizedActions": [
         {
@@ -7571,6 +8041,22 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "list_browsers",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListCapacityProviders",
+      "AuthorizedActions": [
+        {
+          "Name": "ListCapacityProviders",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_capacity_providers",
           "Package": "Boto3"
         }
       ]
@@ -7715,6 +8201,22 @@
         {
           "Name": "bedrock-agentcore",
           "Method": "list_events",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListGatewayRateLimits",
+      "AuthorizedActions": [
+        {
+          "Name": "ListGatewayRateLimits",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "list_gateway_rate_limits",
           "Package": "Boto3"
         }
       ]
@@ -8602,6 +9104,22 @@
       ]
     },
     {
+      "Name": "UpdateCapacityProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateCapacityProvider",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "update_capacity_provider",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "UpdateConfigurationBundle",
       "AuthorizedActions": [
         {
@@ -8686,6 +9204,22 @@
         {
           "Name": "bedrock-agentcore-control",
           "Method": "update_gateway",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateGatewayRateLimit",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateGatewayRateLimit",
+          "Service": "bedrock-agentcore"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "bedrock-agentcore-control",
+          "Method": "update_gateway_rate_limit",
           "Package": "Boto3"
         }
       ]
@@ -9055,6 +9589,15 @@
       "Name": "browser-profile",
       "ARNFormats": [
         "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:browser-profile/${BrowserProfileId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "capacity-provider",
+      "ARNFormats": [
+        "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:capacity-provider/${CapacityProviderId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
