@@ -3,6 +3,10 @@
   "Actions": [
     {
       "Name": "CreateRegistry",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -18,6 +22,10 @@
     },
     {
       "Name": "CreateRegistryRecord",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
