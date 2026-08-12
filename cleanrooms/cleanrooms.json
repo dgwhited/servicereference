@@ -807,6 +807,26 @@
       }
     },
     {
+      "Name": "GetAnalysisLogExport",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "membership"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetAnalysisTemplate",
       "Annotations": {
         "Properties": {
@@ -1266,6 +1286,26 @@
         },
         {
           "Name": "configuredtableassociation"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListAnalysisLogExports",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "membership"
         }
       ],
       "SupportedBy": {
@@ -1863,6 +1903,26 @@
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
           "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "membership"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "StartAnalysisLogExport",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
         }
       },
       "Resources": [
@@ -3008,6 +3068,16 @@
       ]
     },
     {
+      "Name": "GetAnalysisLogExport",
+      "SDK": [
+        {
+          "Name": "cleanrooms",
+          "Method": "get_analysis_log_export",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetAnalysisTemplate",
       "AuthorizedActions": [
         {
@@ -3355,6 +3425,16 @@
         {
           "Name": "cleanrooms",
           "Method": "get_schema_analysis_rule",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListAnalysisLogExports",
+      "SDK": [
+        {
+          "Name": "cleanrooms",
+          "Method": "list_analysis_log_exports",
           "Package": "Boto3"
         }
       ]
@@ -3771,6 +3851,16 @@
         {
           "Name": "cleanrooms",
           "Method": "preview_privacy_impact",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartAnalysisLogExport",
+      "SDK": [
+        {
+          "Name": "cleanrooms",
+          "Method": "start_analysis_log_export",
           "Package": "Boto3"
         }
       ]

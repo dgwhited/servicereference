@@ -1258,6 +1258,31 @@
       }
     },
     {
+      "Name": "CreateMetric",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "metric"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateNotification",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -2216,6 +2241,30 @@
       }
     },
     {
+      "Name": "DeleteMetric",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "metric"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteNotification",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}",
@@ -3126,6 +3175,33 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DescribeMetric",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "metric"
+        },
+        {
+          "Name": "qualified-metric"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -5164,6 +5240,29 @@
       }
     },
     {
+      "Name": "ListMetrics",
+      "ActionConditionKeys": [
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListNotifications",
       "ActionConditionKeys": [
         "connect:InstanceId"
@@ -5660,6 +5759,9 @@
         },
         {
           "Name": "integration-association"
+        },
+        {
+          "Name": "metric"
         },
         {
           "Name": "phone-number"
@@ -6463,6 +6565,30 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "SearchMetrics",
+      "ActionConditionKeys": [
+        "connect:InstanceId",
+        "connect:SearchTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -7592,6 +7718,9 @@
           "Name": "integration-association"
         },
         {
+          "Name": "metric"
+        },
+        {
           "Name": "phone-number"
         },
         {
@@ -7742,6 +7871,9 @@
         },
         {
           "Name": "integration-association"
+        },
+        {
+          "Name": "metric"
         },
         {
           "Name": "phone-number"
@@ -8352,6 +8484,60 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "UpdateMetricContent",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "metric"
+        },
+        {
+          "Name": "qualified-metric"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateMetricMetadata",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "metric"
+        },
+        {
+          "Name": "qualified-metric"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -10293,6 +10479,26 @@
       ]
     },
     {
+      "Name": "CreateMetric",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateMetric",
+          "Service": "connect"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "connect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "connect",
+          "Method": "create_metric",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateNotification",
       "AuthorizedActions": [
         {
@@ -10973,6 +11179,22 @@
       ]
     },
     {
+      "Name": "DeleteMetric",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteMetric",
+          "Service": "connect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "connect",
+          "Method": "delete_metric",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteNotification",
       "AuthorizedActions": [
         {
@@ -11580,6 +11802,22 @@
         {
           "Name": "connect",
           "Method": "describe_instance_storage_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DescribeMetric",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeMetric",
+          "Service": "connect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "connect",
+          "Method": "describe_metric",
           "Package": "Boto3"
         }
       ]
@@ -13002,6 +13240,22 @@
       ]
     },
     {
+      "Name": "ListMetrics",
+      "AuthorizedActions": [
+        {
+          "Name": "ListMetrics",
+          "Service": "connect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "connect",
+          "Method": "list_metrics",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListNotifications",
       "AuthorizedActions": [
         {
@@ -13903,6 +14157,26 @@
         {
           "Name": "connect",
           "Method": "search_hours_of_operations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SearchMetrics",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeMetric",
+          "Service": "connect"
+        },
+        {
+          "Name": "SearchMetrics",
+          "Service": "connect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "connect",
+          "Method": "search_metrics",
           "Package": "Boto3"
         }
       ]
@@ -15110,6 +15384,38 @@
       ]
     },
     {
+      "Name": "UpdateMetricContent",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateMetricContent",
+          "Service": "connect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "connect",
+          "Method": "update_metric_content",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateMetricMetadata",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateMetricMetadata",
+          "Service": "connect"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "connect",
+          "Method": "update_metric_metadata",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "UpdateNotificationContent",
       "AuthorizedActions": [
         {
@@ -15927,6 +16233,15 @@
       ]
     },
     {
+      "Name": "metric",
+      "ARNFormats": [
+        "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/metric/${MetricId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
       "Name": "notification",
       "ARNFormats": [
         "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/notification/${NotificationId}"
@@ -15963,6 +16278,15 @@
       "Name": "qualified-customer-managed-view",
       "ARNFormats": [
         "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/view/${ViewId}:${ViewQualifier}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "qualified-metric",
+      "ARNFormats": [
+        "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/metric/${MetricId}:${MetricQualifier}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
