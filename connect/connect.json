@@ -5088,6 +5088,29 @@
       }
     },
     {
+      "Name": "ListEvaluationFormAIVersions",
+      "ActionConditionKeys": [
+        "connect:InstanceId"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "instance"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListEvaluationFormVersions",
       "ActionConditionKeys": [
         "connect:InstanceId"
@@ -13316,6 +13339,12 @@
     },
     {
       "Name": "ListEvaluationFormAIVersions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListEvaluationFormAIVersions",
+          "Service": "connect"
+        }
+      ],
       "SDK": [
         {
           "Name": "connect",
