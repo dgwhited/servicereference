@@ -1014,6 +1014,36 @@
       ]
     },
     {
+      "Name": "CreateDatasetIntegration",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDatasetIntegration",
+          "Service": "observabilityadmin"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "logs.amazonaws.com",
+              "test.logs.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "create_dataset_integration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateS3TableIntegration",
       "AuthorizedActions": [
         {
@@ -1134,6 +1164,22 @@
       ]
     },
     {
+      "Name": "DeleteDatasetIntegration",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteDatasetIntegration",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "delete_dataset_integration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteS3TableIntegration",
       "AuthorizedActions": [
         {
@@ -1213,6 +1259,22 @@
         {
           "Name": "observabilityadmin",
           "Method": "get_centralization_rule_for_organization",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetDatasetIntegration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDatasetIntegration",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "get_dataset_integration",
           "Package": "Boto3"
         }
       ]
@@ -1341,6 +1403,22 @@
         {
           "Name": "observabilityadmin",
           "Method": "list_centralization_rules_for_organization",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDatasetIntegrations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDatasetIntegrations",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "list_dataset_integrations",
           "Package": "Boto3"
         }
       ]
@@ -1613,6 +1691,32 @@
         {
           "Name": "observabilityadmin",
           "Method": "update_centralization_rule_for_organization",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDatasetIntegration",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "logs.amazonaws.com",
+              "test.logs.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateDatasetIntegration",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "update_dataset_integration",
           "Package": "Boto3"
         }
       ]
