@@ -1,0 +1,2001 @@
+{
+  "Name": "network-security-manager",
+  "Actions": [
+    {
+      "Name": "CreateDeployment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "policy"
+        },
+        {
+          "Name": "policy-snapshot"
+        },
+        {
+          "Name": "scope"
+        },
+        {
+          "Name": "scope-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateDeploymentSnapshot",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "deployment"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreatePolicy",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "rule"
+        },
+        {
+          "Name": "rule-snapshot"
+        },
+        {
+          "Name": "template"
+        },
+        {
+          "Name": "template-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreatePolicySnapshot",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "policy"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateRule",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateRuleSnapshot",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "rule"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateScope",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateScopeSnapshot",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "scope"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateTemplate",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "rule"
+        },
+        {
+          "Name": "rule-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "CreateTemplateSnapshot",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteAdminAccount",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteDeployment",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "deployment-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeletePolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "policy"
+        },
+        {
+          "Name": "policy-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteRule",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "rule"
+        },
+        {
+          "Name": "rule-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteScope",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "scope"
+        },
+        {
+          "Name": "scope-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteTemplate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "template"
+        },
+        {
+          "Name": "template-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GenerateRuleConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetAdminAccount",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetDeployment",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "deployment-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetPolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "policy"
+        },
+        {
+          "Name": "policy-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetRule",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "rule"
+        },
+        {
+          "Name": "rule-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetScope",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "scope"
+        },
+        {
+          "Name": "scope-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetTemplate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "template"
+        },
+        {
+          "Name": "template-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListAdminAccounts",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListAggregateResourceSynchronizationStatuses",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListDeploymentSnapshots",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "deployment"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListDeployments",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListPolicies",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListPolicySnapshots",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "policy"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListResourceAssociations",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "deployment-snapshot"
+        },
+        {
+          "Name": "policy"
+        },
+        {
+          "Name": "policy-snapshot"
+        },
+        {
+          "Name": "rule"
+        },
+        {
+          "Name": "rule-snapshot"
+        },
+        {
+          "Name": "scope"
+        },
+        {
+          "Name": "scope-snapshot"
+        },
+        {
+          "Name": "template"
+        },
+        {
+          "Name": "template-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListResourceSynchronizationStatuses",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "deployment-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListRuleSnapshots",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "rule"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListRules",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListScopeSnapshots",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "scope"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListScopes",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListTagsForResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "deployment-snapshot"
+        },
+        {
+          "Name": "policy"
+        },
+        {
+          "Name": "policy-snapshot"
+        },
+        {
+          "Name": "rule"
+        },
+        {
+          "Name": "rule-snapshot"
+        },
+        {
+          "Name": "scope"
+        },
+        {
+          "Name": "scope-snapshot"
+        },
+        {
+          "Name": "template"
+        },
+        {
+          "Name": "template-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListTemplateSnapshots",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "template"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListTemplates",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "PutAdminAccount",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "TagResource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "deployment-snapshot"
+        },
+        {
+          "Name": "policy"
+        },
+        {
+          "Name": "policy-snapshot"
+        },
+        {
+          "Name": "rule"
+        },
+        {
+          "Name": "rule-snapshot"
+        },
+        {
+          "Name": "scope"
+        },
+        {
+          "Name": "scope-snapshot"
+        },
+        {
+          "Name": "template"
+        },
+        {
+          "Name": "template-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UntagResource",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": true,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "deployment-snapshot"
+        },
+        {
+          "Name": "policy"
+        },
+        {
+          "Name": "policy-snapshot"
+        },
+        {
+          "Name": "rule"
+        },
+        {
+          "Name": "rule-snapshot"
+        },
+        {
+          "Name": "scope"
+        },
+        {
+          "Name": "scope-snapshot"
+        },
+        {
+          "Name": "template"
+        },
+        {
+          "Name": "template-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateDeployment",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "deployment"
+        },
+        {
+          "Name": "policy"
+        },
+        {
+          "Name": "policy-snapshot"
+        },
+        {
+          "Name": "scope"
+        },
+        {
+          "Name": "scope-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdatePolicy",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "policy"
+        },
+        {
+          "Name": "rule"
+        },
+        {
+          "Name": "rule-snapshot"
+        },
+        {
+          "Name": "template"
+        },
+        {
+          "Name": "template-snapshot"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateRule",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "rule"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateScope",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "scope"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateTemplate",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "rule"
+        },
+        {
+          "Name": "rule-snapshot"
+        },
+        {
+          "Name": "template"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    }
+  ],
+  "ConditionKeys": [
+    {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    }
+  ],
+  "Operations": [
+    {
+      "Name": "CreateDeployment",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDeployment",
+          "Service": "network-security-manager"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "create_deployment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateDeploymentSnapshot",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDeploymentSnapshot",
+          "Service": "network-security-manager"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "create_deployment_snapshot",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "CreatePolicy",
+          "Service": "network-security-manager"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "create_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreatePolicySnapshot",
+      "AuthorizedActions": [
+        {
+          "Name": "CreatePolicySnapshot",
+          "Service": "network-security-manager"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "create_policy_snapshot",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRule",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateRule",
+          "Service": "network-security-manager"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "create_rule",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateRuleSnapshot",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateRuleSnapshot",
+          "Service": "network-security-manager"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "create_rule_snapshot",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateScope",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateScope",
+          "Service": "network-security-manager"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "create_scope",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateScopeSnapshot",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateScopeSnapshot",
+          "Service": "network-security-manager"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "create_scope_snapshot",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTemplate",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateTemplate",
+          "Service": "network-security-manager"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "create_template",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateTemplateSnapshot",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateTemplateSnapshot",
+          "Service": "network-security-manager"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "create_template_snapshot",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteAdminAccount",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteAdminAccount",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "delete_admin_account",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteDeployment",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteDeployment",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "delete_deployment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeletePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "DeletePolicy",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "delete_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteRule",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteRule",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "delete_rule",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteScope",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteScope",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "delete_scope",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteTemplate",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteTemplate",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "delete_template",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GenerateRuleConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "GenerateRuleConfiguration",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "generate_rule_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetAdminAccount",
+      "AuthorizedActions": [
+        {
+          "Name": "GetAdminAccount",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "get_admin_account",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeployment",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDeployment",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "get_deployment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPolicy",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "get_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetRule",
+      "AuthorizedActions": [
+        {
+          "Name": "GetRule",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "get_rule",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetScope",
+      "AuthorizedActions": [
+        {
+          "Name": "GetScope",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "get_scope",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetTemplate",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTemplate",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "get_template",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListAdminAccounts",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAdminAccounts",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "list_admin_accounts",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListAggregateResourceSynchronizationStatuses",
+      "AuthorizedActions": [
+        {
+          "Name": "ListAggregateResourceSynchronizationStatuses",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "list_aggregate_resource_synchronization_statuses",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeploymentSnapshots",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDeploymentSnapshots",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "list_deployment_snapshots",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeployments",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDeployments",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "list_deployments",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPolicies",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPolicies",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "list_policies",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListPolicySnapshots",
+      "AuthorizedActions": [
+        {
+          "Name": "ListPolicySnapshots",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "list_policy_snapshots",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListResourceAssociations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListResourceAssociations",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "list_resource_associations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListResourceSynchronizationStatuses",
+      "AuthorizedActions": [
+        {
+          "Name": "ListResourceSynchronizationStatuses",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "list_resource_synchronization_statuses",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListRuleSnapshots",
+      "AuthorizedActions": [
+        {
+          "Name": "ListRuleSnapshots",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "list_rule_snapshots",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListRules",
+      "AuthorizedActions": [
+        {
+          "Name": "ListRules",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "list_rules",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListScopeSnapshots",
+      "AuthorizedActions": [
+        {
+          "Name": "ListScopeSnapshots",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "list_scope_snapshots",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListScopes",
+      "AuthorizedActions": [
+        {
+          "Name": "ListScopes",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "list_scopes",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTemplateSnapshots",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTemplateSnapshots",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "list_template_snapshots",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListTemplates",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTemplates",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "list_templates",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutAdminAccount",
+      "AuthorizedActions": [
+        {
+          "Name": "PutAdminAccount",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "put_admin_account",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateDeployment",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateDeployment",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "update_deployment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdatePolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdatePolicy",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "update_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateRule",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateRule",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "update_rule",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateScope",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateScope",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "update_scope",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateTemplate",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateTemplate",
+          "Service": "network-security-manager"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-security-manager",
+          "Method": "update_template",
+          "Package": "Boto3"
+        }
+      ]
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "deployment",
+      "ARNFormats": [
+        "arn:${Partition}:network-security-manager:${Region}:${Account}:deployment:${DeploymentId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "deployment-snapshot",
+      "ARNFormats": [
+        "arn:${Partition}:network-security-manager:${Region}:${Account}:deployment:${DeploymentId}:${VersionNumber}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "policy",
+      "ARNFormats": [
+        "arn:${Partition}:network-security-manager:${Region}:${Account}:policy:${PolicyId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "policy-snapshot",
+      "ARNFormats": [
+        "arn:${Partition}:network-security-manager:${Region}:${Account}:policy:${PolicyId}:${VersionNumber}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "rule",
+      "ARNFormats": [
+        "arn:${Partition}:network-security-manager:${Region}:${Account}:rule:${RuleId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "rule-snapshot",
+      "ARNFormats": [
+        "arn:${Partition}:network-security-manager:${Region}:${Account}:rule:${RuleId}:${VersionNumber}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "scope",
+      "ARNFormats": [
+        "arn:${Partition}:network-security-manager:${Region}:${Account}:scope:${ScopeId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "scope-snapshot",
+      "ARNFormats": [
+        "arn:${Partition}:network-security-manager:${Region}:${Account}:scope:${ScopeId}:${VersionNumber}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "template",
+      "ARNFormats": [
+        "arn:${Partition}:network-security-manager:${Region}:${Account}:template:${TemplateId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "template-snapshot",
+      "ARNFormats": [
+        "arn:${Partition}:network-security-manager:${Region}:${Account}:template:${TemplateId}:${VersionNumber}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    }
+  ],
+  "Version": "v1.4"
+}
