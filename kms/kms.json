@@ -158,6 +158,32 @@
       }
     },
     {
+      "Name": "Decapsulate",
+      "ActionConditionKeys": [
+        "kms:CallerAccount",
+        "kms:EncapsulationAlgorithm",
+        "kms:RequestAlias",
+        "kms:ViaService"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "key"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "Decrypt",
       "ActionConditionKeys": [
         "kms:CallerAccount",
@@ -220,6 +246,7 @@
         "kms:RecipientAttestation:PCR6",
         "kms:RecipientAttestation:PCR7",
         "kms:RecipientAttestation:PCR8",
+        "kms:RecipientAttestation:PCR8:ServiceName",
         "kms:RecipientAttestation:PCR9",
         "kms:RequestAlias",
         "kms:ViaService"
@@ -376,6 +403,7 @@
         "kms:RecipientAttestation:PCR6",
         "kms:RecipientAttestation:PCR7",
         "kms:RecipientAttestation:PCR8",
+        "kms:RecipientAttestation:PCR8:ServiceName",
         "kms:RecipientAttestation:PCR9",
         "kms:RequestAlias",
         "kms:ViaService"
@@ -566,6 +594,32 @@
       }
     },
     {
+      "Name": "Encapsulate",
+      "ActionConditionKeys": [
+        "kms:CallerAccount",
+        "kms:EncapsulationAlgorithm",
+        "kms:RequestAlias",
+        "kms:ViaService"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "key"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "Encrypt",
       "ActionConditionKeys": [
         "kms:CallerAccount",
@@ -657,6 +711,7 @@
         "kms:RecipientAttestation:PCR6",
         "kms:RecipientAttestation:PCR7",
         "kms:RecipientAttestation:PCR8",
+        "kms:RecipientAttestation:PCR8:ServiceName",
         "kms:RecipientAttestation:PCR9",
         "kms:RequestAlias",
         "kms:ViaService"
@@ -744,6 +799,7 @@
         "kms:RecipientAttestation:PCR6",
         "kms:RecipientAttestation:PCR7",
         "kms:RecipientAttestation:PCR8",
+        "kms:RecipientAttestation:PCR8:ServiceName",
         "kms:RecipientAttestation:PCR9",
         "kms:RequestAlias",
         "kms:ViaService"
@@ -856,6 +912,7 @@
     {
       "Name": "GenerateRandom",
       "ActionConditionKeys": [
+        "kms:CallerAccount",
         "kms:RecipientAttestation:ImageSha384",
         "kms:RecipientAttestation:NitroTPMPCR0",
         "kms:RecipientAttestation:NitroTPMPCR1",
@@ -912,6 +969,7 @@
         "kms:RecipientAttestation:PCR6",
         "kms:RecipientAttestation:PCR7",
         "kms:RecipientAttestation:PCR8",
+        "kms:RecipientAttestation:PCR8:ServiceName",
         "kms:RecipientAttestation:PCR9"
       ],
       "Annotations": {
@@ -1085,6 +1143,10 @@
     },
     {
       "Name": "ListAliases",
+      "ActionConditionKeys": [
+        "kms:CallerAccount",
+        "kms:ViaService"
+      ],
       "Annotations": {
         "Properties": {
           "IsDataPlane": false,
@@ -1177,6 +1239,10 @@
     },
     {
       "Name": "ListKeys",
+      "ActionConditionKeys": [
+        "kms:CallerAccount",
+        "kms:ViaService"
+      ],
       "Annotations": {
         "Properties": {
           "IsDataPlane": false,
@@ -1750,6 +1816,12 @@
     },
     {
       "Name": "kms:DataKeyPairSpec",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "kms:EncapsulationAlgorithm",
       "Types": [
         "String"
       ]
