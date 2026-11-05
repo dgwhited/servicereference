@@ -118,6 +118,7 @@
       "Name": "ListTagsForResource",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -272,6 +273,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": true,
@@ -410,6 +412,22 @@
       ]
     },
     {
+      "Name": "ListTagsForResource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListTagsForResource",
+          "Service": "polly"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "polly",
+          "Method": "list_tags_for_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "PutLexicon",
       "AuthorizedActions": [
         {
@@ -473,6 +491,38 @@
         {
           "Name": "polly",
           "Method": "synthesize_speech",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "TagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "polly"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "polly",
+          "Method": "tag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UntagResource",
+      "AuthorizedActions": [
+        {
+          "Name": "UntagResource",
+          "Service": "polly"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "polly",
+          "Method": "untag_resource",
           "Package": "Boto3"
         }
       ]
