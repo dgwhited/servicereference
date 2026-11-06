@@ -22,6 +22,7 @@
       "Name": "CreateApplication",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -37,6 +38,7 @@
       "Name": "CreateComponent",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -84,6 +86,7 @@
       "Name": "DeleteComponent",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -488,6 +491,7 @@
       "Name": "UpdateComponentConfiguration",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -518,6 +522,7 @@
       "Name": "UpdateProblem",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -584,6 +589,16 @@
     },
     {
       "Name": "CreateApplication",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateApplication",
+          "Service": "applicationinsights"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "applicationinsights"
+        }
+      ],
       "SDK": [
         {
           "Name": "application-insights",
@@ -594,6 +609,12 @@
     },
     {
       "Name": "CreateComponent",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateComponent",
+          "Service": "applicationinsights"
+        }
+      ],
       "SDK": [
         {
           "Name": "application-insights",
@@ -636,6 +657,12 @@
     },
     {
       "Name": "DeleteComponent",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteComponent",
+          "Service": "applicationinsights"
+        }
+      ],
       "SDK": [
         {
           "Name": "application-insights",
@@ -1008,6 +1035,12 @@
     },
     {
       "Name": "UpdateComponentConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateComponentConfiguration",
+          "Service": "applicationinsights"
+        }
+      ],
       "SDK": [
         {
           "Name": "application-insights",
@@ -1028,6 +1061,12 @@
     },
     {
       "Name": "UpdateProblem",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateProblem",
+          "Service": "applicationinsights"
+        }
+      ],
       "SDK": [
         {
           "Name": "application-insights",
