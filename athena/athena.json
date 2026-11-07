@@ -248,6 +248,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -398,6 +399,7 @@
       "Name": "DeleteSystemTableConfiguration",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -939,6 +941,7 @@
       "Name": "GetSystemTableConfiguration",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1300,6 +1303,7 @@
       "Name": "ListSystemTableStatuses",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1759,6 +1763,7 @@
       "Name": "UpdateSystemTableConfiguration",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1987,6 +1992,26 @@
       ]
     },
     {
+      "Name": "CreateSystemTableConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateSystemTableConfiguration",
+          "Service": "athena"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "athena"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "athena",
+          "Method": "create_system_table_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateWorkGroup",
       "AuthorizedActions": [
         {
@@ -2091,6 +2116,22 @@
         {
           "Name": "athena",
           "Method": "delete_prepared_statement",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteSystemTableConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteSystemTableConfiguration",
+          "Service": "athena"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "athena",
+          "Method": "delete_system_table_configuration",
           "Package": "Boto3"
         }
       ]
@@ -2400,6 +2441,22 @@
       ]
     },
     {
+      "Name": "GetSystemTableConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetSystemTableConfiguration",
+          "Service": "athena"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "athena",
+          "Method": "get_system_table_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetTableMetadata",
       "AuthorizedActions": [
         {
@@ -2651,6 +2708,22 @@
         {
           "Name": "athena",
           "Method": "list_sessions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListSystemTableStatuses",
+      "AuthorizedActions": [
+        {
+          "Name": "ListSystemTableStatuses",
+          "Service": "athena"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "athena",
+          "Method": "list_system_table_statuses",
           "Package": "Boto3"
         }
       ]
@@ -2956,6 +3029,22 @@
         {
           "Name": "athena",
           "Method": "update_prepared_statement",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateSystemTableConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateSystemTableConfiguration",
+          "Service": "athena"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "athena",
+          "Method": "update_system_table_configuration",
           "Package": "Boto3"
         }
       ]

@@ -1486,6 +1486,7 @@
       "Name": "RegisterAssistantReplicaKey",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -3451,6 +3452,12 @@
     },
     {
       "Name": "RegisterAssistantReplicaKey",
+      "AuthorizedActions": [
+        {
+          "Name": "RegisterAssistantReplicaKey",
+          "Service": "wisdom"
+        }
+      ],
       "SDK": [
         {
           "Name": "qconnect",

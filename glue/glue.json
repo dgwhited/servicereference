@@ -665,6 +665,9 @@
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:TagKeys",
+        "glue:ConnectionType",
+        "glue:CredentialVendingMode",
+        "glue:InstanceUrl",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {
@@ -6425,6 +6428,9 @@
     {
       "Name": "UpdateConnection",
       "ActionConditionKeys": [
+        "glue:ConnectionType",
+        "glue:CredentialVendingMode",
+        "glue:InstanceUrl",
         "glue:LakeFormationPermissions"
       ],
       "Annotations": {
@@ -7035,7 +7041,19 @@
       ]
     },
     {
+      "Name": "glue:ConnectionType",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "glue:CredentialIssuingService",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "glue:CredentialVendingMode",
       "Types": [
         "String"
       ]
@@ -7048,6 +7066,12 @@
     },
     {
       "Name": "glue:FederatedAuthorizationSource",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "glue:InstanceUrl",
       "Types": [
         "String"
       ]

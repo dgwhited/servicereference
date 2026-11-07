@@ -652,6 +652,7 @@
       "Name": "DeregisterDefaultHostManagementConfiguration",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -2657,6 +2658,7 @@
       "Name": "RegisterDefaultHostManagementConfiguration",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -4335,6 +4337,22 @@
       ]
     },
     {
+      "Name": "DeregisterDefaultHostManagementConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "DeregisterDefaultHostManagementConfiguration",
+          "Service": "ssm"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ssm",
+          "Method": "deregister_default_host_management_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeregisterManagedInstance",
       "AuthorizedActions": [
         {
@@ -5808,6 +5826,31 @@
         {
           "Name": "ssm",
           "Method": "put_resource_policy",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "RegisterDefaultHostManagementConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "ssm.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "RegisterDefaultHostManagementConfiguration",
+          "Service": "ssm"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "ssm",
+          "Method": "register_default_host_management_configuration",
           "Package": "Boto3"
         }
       ]

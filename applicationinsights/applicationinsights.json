@@ -476,6 +476,7 @@
       "Name": "UpdateComponent",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -507,6 +508,7 @@
       "Name": "UpdateLogPattern",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -538,6 +540,7 @@
       "Name": "UpdateWorkload",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1025,6 +1028,12 @@
     },
     {
       "Name": "UpdateComponent",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateComponent",
+          "Service": "applicationinsights"
+        }
+      ],
       "SDK": [
         {
           "Name": "application-insights",
@@ -1051,6 +1060,12 @@
     },
     {
       "Name": "UpdateLogPattern",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateLogPattern",
+          "Service": "applicationinsights"
+        }
+      ],
       "SDK": [
         {
           "Name": "application-insights",
@@ -1077,6 +1092,12 @@
     },
     {
       "Name": "UpdateWorkload",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateWorkload",
+          "Service": "applicationinsights"
+        }
+      ],
       "SDK": [
         {
           "Name": "application-insights",
