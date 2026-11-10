@@ -2422,6 +2422,7 @@
       "Name": "UpdateClone",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -3529,6 +3530,22 @@
         {
           "Name": "es",
           "Method": "start_elasticsearch_service_software_update",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateClone",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateClone",
+          "Service": "es"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "es",
+          "Method": "update_clone",
           "Package": "Boto3"
         }
       ]

@@ -800,6 +800,30 @@
       }
     },
     {
+      "Name": "GetKnowledgeGraph",
+      "ActionConditionKeys": [
+        "aidevops:SourceAgentSpaceArn",
+        "aidevops:TargetAgentSpaceArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "agentspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetKnowledgeItem",
       "Annotations": {
         "Properties": {
@@ -824,6 +848,26 @@
       "Annotations": {
         "Properties": {
           "IsDataPlane": true,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "agentspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetPlan",
+      "Annotations": {
+        "Properties": {
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -945,6 +989,26 @@
       }
     },
     {
+      "Name": "ListAgentSpaceMetrics",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "agentspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListAgentSpaces",
       "Annotations": {
         "Properties": {
@@ -955,6 +1019,30 @@
           "IsWrite": false
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListAssetChanges",
+      "ActionConditionKeys": [
+        "aidevops:SourceAgentSpaceArn",
+        "aidevops:TargetAgentSpaceArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "agentspace"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -1555,6 +1643,26 @@
       }
     },
     {
+      "Name": "StopPlan",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "agentspace"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "TagResource",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -1670,6 +1778,9 @@
     },
     {
       "Name": "UpdateApprovalAction",
+      "ActionConditionKeys": [
+        "aidevops:ApprovalTarget"
+      ],
       "Annotations": {
         "Properties": {
           "IsList": false,
@@ -1947,6 +2058,12 @@
     }
   ],
   "ConditionKeys": [
+    {
+      "Name": "aidevops:ApprovalTarget",
+      "Types": [
+        "String"
+      ]
+    },
     {
       "Name": "aidevops:ServiceType",
       "Types": [
