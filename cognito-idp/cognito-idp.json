@@ -423,6 +423,26 @@
       }
     },
     {
+      "Name": "AdminListUserSessions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "userpool"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "AdminRemoveUserFromGroup",
       "Annotations": {
         "Properties": {
@@ -483,6 +503,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "AdminRevokeUserSession",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "userpool"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1688,6 +1728,26 @@
       }
     },
     {
+      "Name": "GetUserPoolClientSessionConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "userpool"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetUserPoolMfaConfig",
       "Annotations": {
         "Properties": {
@@ -1706,6 +1766,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "GetUserPoolSessionConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "userpool"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2002,6 +2082,21 @@
       }
     },
     {
+      "Name": "ListUserSessions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListUsers",
       "Annotations": {
         "Properties": {
@@ -2092,6 +2187,21 @@
       }
     },
     {
+      "Name": "RevokeUserSession",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "SetLogDeliveryConfiguration",
       "Annotations": {
         "Properties": {
@@ -2171,6 +2281,26 @@
       }
     },
     {
+      "Name": "SetUserPoolClientSessionConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "userpool"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "SetUserPoolMfaConfig",
       "Annotations": {
         "Properties": {
@@ -2189,6 +2319,26 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "SetUserPoolSessionConfiguration",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "userpool"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2951,6 +3101,22 @@
       ]
     },
     {
+      "Name": "AdminListUserSessions",
+      "AuthorizedActions": [
+        {
+          "Name": "AdminListUserSessions",
+          "Service": "cognito-idp"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cognito-idp",
+          "Method": "admin_list_user_sessions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "AdminRemoveUserFromGroup",
       "AuthorizedActions": [
         {
@@ -2994,6 +3160,22 @@
         {
           "Name": "cognito-idp",
           "Method": "admin_respond_to_auth_challenge",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "AdminRevokeUserSession",
+      "AuthorizedActions": [
+        {
+          "Name": "AdminRevokeUserSession",
+          "Service": "cognito-idp"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cognito-idp",
+          "Method": "admin_revoke_user_session",
           "Package": "Boto3"
         }
       ]
@@ -3997,6 +4179,22 @@
       ]
     },
     {
+      "Name": "GetUserPoolClientSessionConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetUserPoolClientSessionConfiguration",
+          "Service": "cognito-idp"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cognito-idp",
+          "Method": "get_user_pool_client_session_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetUserPoolMfaConfig",
       "AuthorizedActions": [
         {
@@ -4008,6 +4206,22 @@
         {
           "Name": "cognito-idp",
           "Method": "get_user_pool_mfa_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetUserPoolSessionConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetUserPoolSessionConfiguration",
+          "Service": "cognito-idp"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cognito-idp",
+          "Method": "get_user_pool_session_configuration",
           "Package": "Boto3"
         }
       ]
@@ -4221,6 +4435,22 @@
       ]
     },
     {
+      "Name": "ListUserSessions",
+      "AuthorizedActions": [
+        {
+          "Name": "ListUserSessions",
+          "Service": "cognito-idp"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cognito-idp",
+          "Method": "list_user_sessions",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListUsers",
       "AuthorizedActions": [
         {
@@ -4311,6 +4541,22 @@
       ]
     },
     {
+      "Name": "RevokeUserSession",
+      "AuthorizedActions": [
+        {
+          "Name": "RevokeUserSession",
+          "Service": "cognito-idp"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cognito-idp",
+          "Method": "revoke_user_session",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "SetLogDeliveryConfiguration",
       "AuthorizedActions": [
         {
@@ -4375,6 +4621,22 @@
       ]
     },
     {
+      "Name": "SetUserPoolClientSessionConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "SetUserPoolClientSessionConfiguration",
+          "Service": "cognito-idp"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cognito-idp",
+          "Method": "set_user_pool_client_session_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "SetUserPoolMfaConfig",
       "AuthorizedActions": [
         {
@@ -4390,6 +4652,22 @@
         {
           "Name": "cognito-idp",
           "Method": "set_user_pool_mfa_config",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SetUserPoolSessionConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "SetUserPoolSessionConfiguration",
+          "Service": "cognito-idp"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cognito-idp",
+          "Method": "set_user_pool_session_configuration",
           "Package": "Boto3"
         }
       ]
