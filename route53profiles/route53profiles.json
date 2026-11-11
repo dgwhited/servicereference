@@ -335,6 +335,7 @@
       "Name": "UpdateProfileAssociation",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -670,6 +671,22 @@
         {
           "Name": "route53profiles",
           "Method": "untag_resource",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateProfileAssociation",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateProfileAssociation",
+          "Service": "route53profiles"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "route53profiles",
+          "Method": "update_profile_association",
           "Package": "Boto3"
         }
       ]

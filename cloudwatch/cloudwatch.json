@@ -888,7 +888,7 @@
       },
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
-        "IAM Action Last Accessed": false
+        "IAM Action Last Accessed": true
       }
     },
     {
@@ -1681,6 +1681,25 @@
       }
     },
     {
+      "Name": "GetSpaceDataAccess",
+      "ActionConditionKeys": [
+        "cloudwatch:HasAccessGrant"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetTelemetryQueryResults",
       "ActionConditionKeys": [
         "cloudwatch:HasAccessGrant"
@@ -2026,7 +2045,7 @@
       ],
       "Annotations": {
         "Properties": {
-          "IsDataPlane": true,
+          "IsDataPlane": false,
           "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -4430,6 +4449,22 @@
         {
           "Name": "cloudwatchomni",
           "Method": "get_space_credentials_for_organization",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetSpaceDataAccess",
+      "AuthorizedActions": [
+        {
+          "Name": "GetSpaceDataAccess",
+          "Service": "cloudwatch"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudwatchomni",
+          "Method": "get_space_data_access",
           "Package": "Boto3"
         }
       ]

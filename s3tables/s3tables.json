@@ -405,6 +405,27 @@
       }
     },
     {
+      "Name": "GetTableBucketLogging",
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetTableBucketMaintenanceConfiguration",
       "Annotations": {
         "Properties": {
@@ -935,6 +956,27 @@
         "s3tables:KMSKeyArn",
         "s3tables:SSEAlgorithm"
       ],
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "TableBucket"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "PutTableBucketLogging",
       "Annotations": {
         "Properties": {
           "IsDataPlane": false,
@@ -1788,6 +1830,22 @@
       ]
     },
     {
+      "Name": "GetTableBucketLogging",
+      "AuthorizedActions": [
+        {
+          "Name": "GetTableBucketLogging",
+          "Service": "s3tables"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3tables",
+          "Method": "get_table_bucket_logging",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetTableBucketMaintenanceConfiguration",
       "AuthorizedActions": [
         {
@@ -2135,6 +2193,22 @@
         {
           "Name": "s3tables",
           "Method": "put_table_bucket_encryption",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutTableBucketLogging",
+      "AuthorizedActions": [
+        {
+          "Name": "PutTableBucketLogging",
+          "Service": "s3tables"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3tables",
+          "Method": "put_table_bucket_logging",
           "Package": "Boto3"
         }
       ]
