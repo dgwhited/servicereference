@@ -100,7 +100,6 @@
       "Name": "AttachRuleGroupsToProxyConfiguration",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -252,7 +251,6 @@
       ],
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -280,7 +278,6 @@
       ],
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -308,7 +305,6 @@
       ],
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -329,7 +325,6 @@
       "Name": "CreateProxyRules",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -563,7 +558,6 @@
       "Name": "DeleteProxyConfiguration",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -584,7 +578,6 @@
       "Name": "DeleteProxyRuleGroup",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -605,7 +598,6 @@
       "Name": "DeleteProxyRules",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -923,7 +915,6 @@
       "Name": "DescribeProxyConfiguration",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -944,7 +935,6 @@
       "Name": "DescribeProxyRule",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -965,7 +955,6 @@
       "Name": "DescribeProxyRuleGroup",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1157,7 +1146,6 @@
       "Name": "DetachRuleGroupsFromProxyConfiguration",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1386,7 +1374,6 @@
       "Name": "ListProxies",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1407,7 +1394,6 @@
       "Name": "ListProxyConfigurations",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1428,7 +1414,6 @@
       "Name": "ListProxyRuleGroups",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -2027,7 +2012,6 @@
       "Name": "UpdateProxy",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -2048,7 +2032,6 @@
       "Name": "UpdateProxyConfiguration",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -2069,7 +2052,6 @@
       "Name": "UpdateProxyRule",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -2090,7 +2072,6 @@
       "Name": "UpdateProxyRuleGroupPriorities",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -2111,7 +2092,6 @@
       "Name": "UpdateProxyRulePriorities",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -2287,22 +2267,6 @@
       ]
     },
     {
-      "Name": "AttachRuleGroupsToProxyConfiguration",
-      "AuthorizedActions": [
-        {
-          "Name": "AttachRuleGroupsToProxyConfiguration",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "attach_rule_groups_to_proxy_configuration",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
       "Name": "CreateContainerAssociation",
       "AuthorizedActions": [
         {
@@ -2398,86 +2362,6 @@
         {
           "Name": "network-firewall",
           "Method": "create_firewall_policy_v2",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "CreateProxy",
-      "AuthorizedActions": [
-        {
-          "Name": "CreateProxy",
-          "Service": "network-firewall"
-        },
-        {
-          "Name": "TagResource",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "create_proxy",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "CreateProxyConfiguration",
-      "AuthorizedActions": [
-        {
-          "Name": "AttachRuleGroupsToProxyConfiguration",
-          "Service": "network-firewall"
-        },
-        {
-          "Name": "CreateProxyConfiguration",
-          "Service": "network-firewall"
-        },
-        {
-          "Name": "TagResource",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "create_proxy_configuration",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "CreateProxyRuleGroup",
-      "AuthorizedActions": [
-        {
-          "Name": "CreateProxyRuleGroup",
-          "Service": "network-firewall"
-        },
-        {
-          "Name": "TagResource",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "create_proxy_rule_group",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "CreateProxyRules",
-      "AuthorizedActions": [
-        {
-          "Name": "CreateProxyRules",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "create_proxy_rules",
           "Package": "Boto3"
         }
       ]
@@ -2638,54 +2522,6 @@
         {
           "Name": "network-firewall",
           "Method": "delete_proxy",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "DeleteProxyConfiguration",
-      "AuthorizedActions": [
-        {
-          "Name": "DeleteProxyConfiguration",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "delete_proxy_configuration",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "DeleteProxyRuleGroup",
-      "AuthorizedActions": [
-        {
-          "Name": "DeleteProxyRuleGroup",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "delete_proxy_rule_group",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "DeleteProxyRules",
-      "AuthorizedActions": [
-        {
-          "Name": "DeleteProxyRules",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "delete_proxy_rules",
           "Package": "Boto3"
         }
       ]
@@ -2883,54 +2719,6 @@
       ]
     },
     {
-      "Name": "DescribeProxyConfiguration",
-      "AuthorizedActions": [
-        {
-          "Name": "DescribeProxyConfiguration",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "describe_proxy_configuration",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "DescribeProxyRule",
-      "AuthorizedActions": [
-        {
-          "Name": "DescribeProxyRule",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "describe_proxy_rule",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "DescribeProxyRuleGroup",
-      "AuthorizedActions": [
-        {
-          "Name": "DescribeProxyRuleGroup",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "describe_proxy_rule_group",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
       "Name": "DescribeResourcePolicy",
       "AuthorizedActions": [
         {
@@ -3022,22 +2810,6 @@
         {
           "Name": "network-firewall",
           "Method": "describe_vpc_endpoint_association",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "DetachRuleGroupsFromProxyConfiguration",
-      "AuthorizedActions": [
-        {
-          "Name": "DetachRuleGroupsFromProxyConfiguration",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "detach_rule_groups_from_proxy_configuration",
           "Package": "Boto3"
         }
       ]
@@ -3198,54 +2970,6 @@
         {
           "Name": "network-firewall",
           "Method": "list_flow_operations",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "ListProxies",
-      "AuthorizedActions": [
-        {
-          "Name": "ListProxies",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "list_proxies",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "ListProxyConfigurations",
-      "AuthorizedActions": [
-        {
-          "Name": "ListProxyConfigurations",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "list_proxy_configurations",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "ListProxyRuleGroups",
-      "AuthorizedActions": [
-        {
-          "Name": "ListProxyRuleGroups",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "list_proxy_rule_groups",
           "Package": "Boto3"
         }
       ]
@@ -3598,86 +3322,6 @@
         {
           "Name": "network-firewall",
           "Method": "update_logging_configuration",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "UpdateProxy",
-      "AuthorizedActions": [
-        {
-          "Name": "UpdateProxy",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "update_proxy",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "UpdateProxyConfiguration",
-      "AuthorizedActions": [
-        {
-          "Name": "UpdateProxyConfiguration",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "update_proxy_configuration",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "UpdateProxyRule",
-      "AuthorizedActions": [
-        {
-          "Name": "UpdateProxyRule",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "update_proxy_rule",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "UpdateProxyRuleGroupPriorities",
-      "AuthorizedActions": [
-        {
-          "Name": "UpdateProxyRuleGroupPriorities",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "update_proxy_rule_group_priorities",
-          "Package": "Boto3"
-        }
-      ]
-    },
-    {
-      "Name": "UpdateProxyRulePriorities",
-      "AuthorizedActions": [
-        {
-          "Name": "UpdateProxyRulePriorities",
-          "Service": "network-firewall"
-        }
-      ],
-      "SDK": [
-        {
-          "Name": "network-firewall",
-          "Method": "update_proxy_rule_priorities",
           "Package": "Boto3"
         }
       ]

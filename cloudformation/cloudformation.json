@@ -1657,6 +1657,7 @@
       "Name": "RemoveAlias",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1701,6 +1702,7 @@
       "Name": "SetAlias",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -3623,6 +3625,22 @@
       ]
     },
     {
+      "Name": "RemoveAlias",
+      "AuthorizedActions": [
+        {
+          "Name": "RemoveAlias",
+          "Service": "cloudformation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudformation",
+          "Method": "remove_alias",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "RollbackStack",
       "AuthorizedActions": [
         {
@@ -3643,6 +3661,22 @@
         {
           "Name": "cloudformation",
           "Method": "rollback_stack",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "SetAlias",
+      "AuthorizedActions": [
+        {
+          "Name": "SetAlias",
+          "Service": "cloudformation"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "cloudformation",
+          "Method": "set_alias",
           "Package": "Boto3"
         }
       ]
