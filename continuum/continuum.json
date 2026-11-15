@@ -184,6 +184,7 @@
       "Name": "DeleteIntegration",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -370,6 +371,7 @@
       "Name": "GetIntegration",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -570,6 +572,7 @@
       "Name": "ListIntegrations",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -610,6 +613,7 @@
       "Name": "StartIntegrationAuthorization",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -797,6 +801,12 @@
     },
     {
       "Name": "DeleteIntegration",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteIntegration",
+          "Service": "continuum"
+        }
+      ],
       "SDK": [
         {
           "Name": "continuum",
@@ -887,6 +897,12 @@
     },
     {
       "Name": "GetIntegration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetIntegration",
+          "Service": "continuum"
+        }
+      ],
       "SDK": [
         {
           "Name": "continuum",
@@ -987,6 +1003,12 @@
     },
     {
       "Name": "ListIntegrations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListIntegrations",
+          "Service": "continuum"
+        }
+      ],
       "SDK": [
         {
           "Name": "continuum",
@@ -1007,6 +1029,12 @@
     },
     {
       "Name": "StartIntegrationAuthorization",
+      "AuthorizedActions": [
+        {
+          "Name": "StartIntegrationAuthorization",
+          "Service": "continuum"
+        }
+      ],
       "SDK": [
         {
           "Name": "continuum",
