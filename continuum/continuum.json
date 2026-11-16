@@ -124,6 +124,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -675,6 +676,7 @@
       "Name": "UpdateIntegration",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -771,6 +773,21 @@
     },
     {
       "Name": "CreateIntegration",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateIntegration",
+          "Service": "continuum"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "continuum.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "continuum",
@@ -1065,6 +1082,21 @@
     },
     {
       "Name": "UpdateIntegration",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "continuum.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateIntegration",
+          "Service": "continuum"
+        }
+      ],
       "SDK": [
         {
           "Name": "continuum",

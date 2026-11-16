@@ -4313,6 +4313,15 @@
       "Name": "PutIntegration",
       "AuthorizedActions": [
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "directquery.opensearchservice.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "PutIntegration",
           "Service": "logs"
         }
