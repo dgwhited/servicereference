@@ -1269,6 +1269,7 @@
       "Name": "ListContextStores",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1449,6 +1450,7 @@
       "Name": "ListResourcesInContextStore",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -2925,6 +2927,22 @@
       ]
     },
     {
+      "Name": "ListContextStores",
+      "AuthorizedActions": [
+        {
+          "Name": "ListContextStores",
+          "Service": "network-firewall"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-firewall",
+          "Method": "list_context_stores",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListFirewallPolicies",
       "AuthorizedActions": [
         {
@@ -3000,6 +3018,22 @@
         {
           "Name": "network-firewall",
           "Method": "list_flow_operations",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListResourcesInContextStore",
+      "AuthorizedActions": [
+        {
+          "Name": "ListResourcesInContextStore",
+          "Service": "network-firewall"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "network-firewall",
+          "Method": "list_resources_in_context_store",
           "Package": "Boto3"
         }
       ]

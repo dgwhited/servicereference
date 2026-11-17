@@ -1599,6 +1599,15 @@
           "Service": "wafv2"
         },
         {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "wafv2.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
           "Name": "TagResource",
           "Service": "wafv2"
         }
@@ -2466,6 +2475,15 @@
     {
       "Name": "UpdateWebACL",
       "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "wafv2.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
         {
           "Name": "UpdateWebACL",
           "Service": "wafv2"
