@@ -42,6 +42,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -214,6 +215,7 @@
       "Name": "DeleteConnector",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -363,6 +365,7 @@
       "Name": "GetConnector",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -383,6 +386,7 @@
       "Name": "GetConnectorTelemetryManifest",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -403,6 +407,7 @@
       "Name": "GetConnectorTelemetrySetup",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -576,6 +581,7 @@
       "Name": "GetThirdPartyTelemetryEnrichment",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -612,6 +618,7 @@
       "Name": "ListConnectors",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -681,6 +688,7 @@
       "Name": "ListResourcesByConnector",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -807,6 +815,7 @@
       "Name": "ListThirdPartyTelemetryEnrichments",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -825,6 +834,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -899,6 +909,7 @@
       "Name": "StartTelemetryPipelineRefresh",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -991,6 +1002,7 @@
       "Name": "StopThirdPartyTelemetryEnrichment",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1353,6 +1365,35 @@
       ]
     },
     {
+      "Name": "CreateConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateConnector",
+          "Service": "observabilityadmin"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "observabilityadmin.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "create_connector",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "CreateDatasetIntegration",
       "AuthorizedActions": [
         {
@@ -1498,6 +1539,22 @@
       ]
     },
     {
+      "Name": "DeleteConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteConnector",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "delete_connector",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteDatasetIntegration",
       "AuthorizedActions": [
         {
@@ -1589,6 +1646,54 @@
         {
           "Name": "observabilityadmin",
           "Method": "get_centralization_rule_for_organization",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "GetConnector",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "get_connector",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnectorTelemetryManifest",
+      "AuthorizedActions": [
+        {
+          "Name": "GetConnectorTelemetryManifest",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "get_connector_telemetry_manifest",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetConnectorTelemetrySetup",
+      "AuthorizedActions": [
+        {
+          "Name": "GetConnectorTelemetrySetup",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "get_connector_telemetry_setup",
           "Package": "Boto3"
         }
       ]
@@ -1722,6 +1827,22 @@
       ]
     },
     {
+      "Name": "GetThirdPartyTelemetryEnrichment",
+      "AuthorizedActions": [
+        {
+          "Name": "GetThirdPartyTelemetryEnrichment",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "get_third_party_telemetry_enrichment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListCentralizationRulesForOrganization",
       "AuthorizedActions": [
         {
@@ -1733,6 +1854,22 @@
         {
           "Name": "observabilityadmin",
           "Method": "list_centralization_rules_for_organization",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListConnectors",
+      "AuthorizedActions": [
+        {
+          "Name": "ListConnectors",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "list_connectors",
           "Package": "Boto3"
         }
       ]
@@ -1781,6 +1918,22 @@
         {
           "Name": "observabilityadmin",
           "Method": "list_resource_telemetry_for_organization",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListResourcesByConnector",
+      "AuthorizedActions": [
+        {
+          "Name": "ListResourcesByConnector",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "list_resources_by_connector",
           "Package": "Boto3"
         }
       ]
@@ -1866,6 +2019,38 @@
       ]
     },
     {
+      "Name": "ListThirdPartyTelemetryEnrichments",
+      "AuthorizedActions": [
+        {
+          "Name": "ListThirdPartyTelemetryEnrichments",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "list_third_party_telemetry_enrichments",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "PutConnectorTelemetryManifest",
+      "AuthorizedActions": [
+        {
+          "Name": "PutConnectorTelemetryManifest",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "put_connector_telemetry_manifest",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "StartTelemetryEnrichment",
       "AuthorizedActions": [
         {
@@ -1914,6 +2099,32 @@
       ]
     },
     {
+      "Name": "StartTelemetryPipelineRefresh",
+      "AuthorizedActions": [
+        {
+          "Name": "StartTelemetryPipelineRefresh",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "start_telemetry_pipeline_refresh",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartThirdPartyTelemetryEnrichment",
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "start_third_party_telemetry_enrichment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "StopTelemetryEnrichment",
       "AuthorizedActions": [
         {
@@ -1957,6 +2168,22 @@
         {
           "Name": "observabilityadmin",
           "Method": "stop_telemetry_evaluation_for_organization",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StopThirdPartyTelemetryEnrichment",
+      "AuthorizedActions": [
+        {
+          "Name": "StopThirdPartyTelemetryEnrichment",
+          "Service": "observabilityadmin"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "observabilityadmin",
+          "Method": "stop_third_party_telemetry_enrichment",
           "Package": "Boto3"
         }
       ]

@@ -4323,6 +4323,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": true,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -4389,6 +4390,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": true,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -4422,6 +4424,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": true,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -8865,6 +8868,10 @@
         {
           "Name": "SendBulkEmail",
           "Service": "ses"
+        },
+        {
+          "Name": "SendBulkTemplatedEmail",
+          "Service": "ses"
         }
       ],
       "SDK": [
@@ -8908,6 +8915,20 @@
     },
     {
       "Name": "SendEmail",
+      "AuthorizedActions": [
+        {
+          "Name": "SendEmail",
+          "Service": "ses"
+        },
+        {
+          "Name": "SendRawEmail",
+          "Service": "ses"
+        },
+        {
+          "Name": "SendTemplatedEmail",
+          "Service": "ses"
+        }
+      ],
       "SDK": [
         {
           "Name": "pinpoint-email",

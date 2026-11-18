@@ -9,6 +9,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -59,6 +60,7 @@
       "Name": "AssociateApplicationToEntitlement",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -354,7 +356,6 @@
       ],
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -382,7 +383,6 @@
       ],
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -453,7 +453,6 @@
       ],
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -526,7 +525,6 @@
       ],
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -582,6 +580,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -605,6 +604,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1210,6 +1210,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1363,6 +1364,7 @@
       "Name": "GetExportImageTask",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1441,6 +1443,7 @@
       "Name": "ListExportImageTasks",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1475,6 +1478,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1569,6 +1573,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1749,6 +1754,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1772,6 +1778,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1835,7 +1842,6 @@
       ],
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1862,6 +1868,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1976,6 +1983,12 @@
   "Operations": [
     {
       "Name": "AssociateAppBlockBuilderAppBlock",
+      "AuthorizedActions": [
+        {
+          "Name": "AssociateAppBlockBuilderAppBlock",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -2002,6 +2015,12 @@
     },
     {
       "Name": "AssociateApplicationToEntitlement",
+      "AuthorizedActions": [
+        {
+          "Name": "AssociateApplicationToEntitlement",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -2180,25 +2199,6 @@
     },
     {
       "Name": "CreateFleet",
-      "AuthorizedActions": [
-        {
-          "Name": "CreateFleet",
-          "Service": "appstream"
-        },
-        {
-          "Name": "PassRole",
-          "Context": {
-            "iam:PassedToService": [
-              "appstream.amazonaws.com"
-            ]
-          },
-          "Service": "iam"
-        },
-        {
-          "Name": "TagResource",
-          "Service": "appstream"
-        }
-      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -2209,25 +2209,6 @@
     },
     {
       "Name": "CreateImageBuilder",
-      "AuthorizedActions": [
-        {
-          "Name": "CreateImageBuilder",
-          "Service": "appstream"
-        },
-        {
-          "Name": "PassRole",
-          "Context": {
-            "iam:PassedToService": [
-              "appstream.amazonaws.com"
-            ]
-          },
-          "Service": "iam"
-        },
-        {
-          "Name": "TagResource",
-          "Service": "appstream"
-        }
-      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -2264,16 +2245,6 @@
     },
     {
       "Name": "CreateStack",
-      "AuthorizedActions": [
-        {
-          "Name": "CreateStack",
-          "Service": "appstream"
-        },
-        {
-          "Name": "TagResource",
-          "Service": "appstream"
-        }
-      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -2310,16 +2281,6 @@
     },
     {
       "Name": "CreateUpdatedImage",
-      "AuthorizedActions": [
-        {
-          "Name": "CreateUpdatedImage",
-          "Service": "appstream"
-        },
-        {
-          "Name": "TagResource",
-          "Service": "appstream"
-        }
-      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -2362,6 +2323,12 @@
     },
     {
       "Name": "DeleteAppBlock",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteAppBlock",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -2372,6 +2339,12 @@
     },
     {
       "Name": "DeleteAppBlockBuilder",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteAppBlockBuilder",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -2860,6 +2833,12 @@
     },
     {
       "Name": "DisassociateAppBlockBuilderAppBlock",
+      "AuthorizedActions": [
+        {
+          "Name": "DisassociateAppBlockBuilderAppBlock",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -2970,6 +2949,12 @@
     },
     {
       "Name": "GetExportImageTask",
+      "AuthorizedActions": [
+        {
+          "Name": "GetExportImageTask",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -3028,6 +3013,12 @@
     },
     {
       "Name": "ListExportImageTasks",
+      "AuthorizedActions": [
+        {
+          "Name": "ListExportImageTasks",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -3054,6 +3045,12 @@
     },
     {
       "Name": "StartAppBlockBuilder",
+      "AuthorizedActions": [
+        {
+          "Name": "StartAppBlockBuilder",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -3106,6 +3103,12 @@
     },
     {
       "Name": "StopAppBlockBuilder",
+      "AuthorizedActions": [
+        {
+          "Name": "StopAppBlockBuilder",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -3180,6 +3183,12 @@
     },
     {
       "Name": "UpdateAppBlockBuilder",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateAppBlockBuilder",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -3190,6 +3199,12 @@
     },
     {
       "Name": "UpdateApplication",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateApplication",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -3232,21 +3247,6 @@
     },
     {
       "Name": "UpdateFleet",
-      "AuthorizedActions": [
-        {
-          "Name": "PassRole",
-          "Context": {
-            "iam:PassedToService": [
-              "appstream.amazonaws.com"
-            ]
-          },
-          "Service": "iam"
-        },
-        {
-          "Name": "UpdateFleet",
-          "Service": "appstream"
-        }
-      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -3257,6 +3257,12 @@
     },
     {
       "Name": "UpdateImageBuilder",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateImageBuilder",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
