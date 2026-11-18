@@ -700,6 +700,58 @@
       }
     },
     {
+      "Name": "GetDeploymentConfiguration",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "DeploymentConfiguration",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetDeploymentConfigurationJob",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "DeploymentConfiguration",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetEntitlements",
       "Annotations": {
         "Properties": {
@@ -1173,6 +1225,32 @@
       }
     },
     {
+      "Name": "ListDeploymentConfigurationJobs",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "DeploymentConfiguration",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListEntities",
       "Annotations": {
         "Properties": {
@@ -1338,6 +1416,9 @@
       "Resources": [
         {
           "Name": "ChangeSet"
+        },
+        {
+          "Name": "DeploymentConfiguration"
         },
         {
           "Name": "DeploymentParameter"
@@ -1781,6 +1862,36 @@
       }
     },
     {
+      "Name": "StartDeploymentConfigurationJob",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "DeploymentConfiguration",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "StartInvoiceSubmissionTask",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -1888,6 +1999,14 @@
           "Name": "ChangeSet"
         },
         {
+          "Name": "DeploymentConfiguration",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
+        {
           "Name": "DeploymentParameter",
           "ConditionKeys": [
             "aws:RequestTag/${TagKey}",
@@ -1953,6 +2072,13 @@
       "Resources": [
         {
           "Name": "ChangeSet"
+        },
+        {
+          "Name": "DeploymentConfiguration",
+          "ConditionKeys": [
+            "aws:ResourceTag/${TagKey}",
+            "aws:TagKeys"
+          ]
         },
         {
           "Name": "DeploymentParameter",
@@ -3309,6 +3435,17 @@
       "Name": "Dashboard",
       "ARNFormats": [
         "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/Dashboard/${DashboardName}"
+      ]
+    },
+    {
+      "Name": "DeploymentConfiguration",
+      "ARNFormats": [
+        "arn:${Partition}:aws-marketplace:${Region}:${Account}:DeploymentConfiguration:catalogs/${CatalogName}/products/${ProductId}/delivery-options/${DeliveryOptionType}"
+      ],
+      "ConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
       ]
     },
     {
