@@ -740,6 +740,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -6611,6 +6612,7 @@
       "Name": "UpdateDataQualityEvaluationConfig",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -7840,6 +7842,25 @@
     },
     {
       "Name": "CreateDataQualityEvaluationConfig",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateDataQualityEvaluationConfig",
+          "Service": "glue"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "glue.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "glue"
+        }
+      ],
       "SDK": [
         {
           "Name": "glue",
@@ -12011,6 +12032,21 @@
     },
     {
       "Name": "UpdateDataQualityEvaluationConfig",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "glue.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateDataQualityEvaluationConfig",
+          "Service": "glue"
+        }
+      ],
       "SDK": [
         {
           "Name": "glue",

@@ -267,6 +267,30 @@
       }
     },
     {
+      "Name": "CreateDataSubscription",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "DataSubscription"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreatePrivateMarketplaceRequests",
       "Annotations": {
         "Properties": {
@@ -298,6 +322,29 @@
       "Resources": [
         {
           "Name": "VerificationEvidence"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DeleteDataSubscription",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "DataSubscription"
         }
       ],
       "SupportedBy": {
@@ -692,6 +739,29 @@
       "Resources": [
         {
           "Name": "Dashboard"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetDataSubscription",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "DataSubscription"
         }
       ],
       "SupportedBy": {
@@ -1225,6 +1295,21 @@
       }
     },
     {
+      "Name": "ListDataSubscriptions",
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListDeploymentConfigurationJobs",
       "ActionConditionKeys": [
         "aws:ResourceTag/${TagKey}"
@@ -1416,6 +1501,9 @@
       "Resources": [
         {
           "Name": "ChangeSet"
+        },
+        {
+          "Name": "DataSubscription"
         },
         {
           "Name": "DeploymentConfiguration"
@@ -1820,6 +1908,30 @@
       }
     },
     {
+      "Name": "StartAssessment",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Entity"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "StartBuild",
       "Annotations": {
         "Properties": {
@@ -1999,6 +2111,9 @@
           "Name": "ChangeSet"
         },
         {
+          "Name": "DataSubscription"
+        },
+        {
           "Name": "DeploymentConfiguration",
           "ConditionKeys": [
             "aws:RequestTag/${TagKey}",
@@ -2072,6 +2187,9 @@
       "Resources": [
         {
           "Name": "ChangeSet"
+        },
+        {
+          "Name": "DataSubscription"
         },
         {
           "Name": "DeploymentConfiguration",
@@ -3419,6 +3537,9 @@
       "Name": "Assessment",
       "ARNFormats": [
         "arn:${Partition}:aws-marketplace:${Region}::${Catalog}/Assessment/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -3435,6 +3556,15 @@
       "Name": "Dashboard",
       "ARNFormats": [
         "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/Dashboard/${DashboardName}"
+      ]
+    },
+    {
+      "Name": "DataSubscription",
+      "ARNFormats": [
+        "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/DataSubscription/${DataSubscriptionId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {

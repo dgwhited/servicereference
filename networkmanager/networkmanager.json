@@ -48,6 +48,31 @@
       }
     },
     {
+      "Name": "AssociateContextStore",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "networkmanager:tgwArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "context-store"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "AssociateCustomerGateway",
       "ActionConditionKeys": [
         "networkmanager:cgwArn"
@@ -210,6 +235,31 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "CreateContextStore",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "global-network"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -555,6 +605,30 @@
       }
     },
     {
+      "Name": "DeleteContextStore",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "context-store"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DeleteCoreNetwork",
       "Annotations": {
         "Properties": {
@@ -819,6 +893,31 @@
       }
     },
     {
+      "Name": "DisassociateContextStore",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "networkmanager:tgwArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "context-store"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DisassociateCustomerGateway",
       "ActionConditionKeys": [
         "networkmanager:cgwArn"
@@ -999,6 +1098,79 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "GetContextStore",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "context-store"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetContextStoreAssociation",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "networkmanager:tgwArn"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "context-store"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetContextVersion",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "context-store"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1584,6 +1756,99 @@
       }
     },
     {
+      "Name": "ListContextChanges",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "context-store"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListContextStoreAssociations",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "context-store"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListContextStores",
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "context-store"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListContexts",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "context-store"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListCoreNetworkPolicyVersions",
       "Annotations": {
         "Properties": {
@@ -1719,6 +1984,9 @@
           "Name": "connection"
         },
         {
+          "Name": "context-store"
+        },
+        {
           "Name": "core-network"
         },
         {
@@ -1729,6 +1997,9 @@
         },
         {
           "Name": "link"
+        },
+        {
+          "Name": "network-scope"
         },
         {
           "Name": "peering"
@@ -1962,6 +2233,9 @@
           "Name": "connection"
         },
         {
+          "Name": "context-store"
+        },
+        {
           "Name": "core-network"
         },
         {
@@ -1972,6 +2246,9 @@
         },
         {
           "Name": "link"
+        },
+        {
+          "Name": "network-scope"
         },
         {
           "Name": "peering"
@@ -2010,6 +2287,9 @@
           "Name": "connection"
         },
         {
+          "Name": "context-store"
+        },
+        {
           "Name": "core-network"
         },
         {
@@ -2020,6 +2300,9 @@
         },
         {
           "Name": "link"
+        },
+        {
+          "Name": "network-scope"
         },
         {
           "Name": "peering"
@@ -2076,6 +2359,30 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "UpdateContextStore",
+      "ActionConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "context-store"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -2286,6 +2593,12 @@
       ]
     },
     {
+      "Name": "networkmanager:ManagedBy",
+      "Types": [
+        "String"
+      ]
+    },
+    {
       "Name": "networkmanager:cgwArn",
       "Types": [
         "ARN"
@@ -2375,6 +2688,12 @@
     },
     {
       "Name": "AssociateContextStore",
+      "AuthorizedActions": [
+        {
+          "Name": "AssociateContextStore",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
@@ -2502,6 +2821,10 @@
     {
       "Name": "CreateContextStore",
       "AuthorizedActions": [
+        {
+          "Name": "CreateContextStore",
+          "Service": "networkmanager"
+        },
         {
           "Name": "TagResource",
           "Service": "networkmanager"
@@ -2809,6 +3132,12 @@
     },
     {
       "Name": "DeleteContextStore",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteContextStore",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
@@ -3011,6 +3340,12 @@
     },
     {
       "Name": "DisassociateContextStore",
+      "AuthorizedActions": [
+        {
+          "Name": "DisassociateContextStore",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
@@ -3149,6 +3484,12 @@
     },
     {
       "Name": "GetContextStore",
+      "AuthorizedActions": [
+        {
+          "Name": "GetContextStore",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
@@ -3159,6 +3500,12 @@
     },
     {
       "Name": "GetContextStoreAssociation",
+      "AuthorizedActions": [
+        {
+          "Name": "GetContextStoreAssociation",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
@@ -3169,6 +3516,12 @@
     },
     {
       "Name": "GetContextVersion",
+      "AuthorizedActions": [
+        {
+          "Name": "GetContextVersion",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
@@ -3611,6 +3964,12 @@
     },
     {
       "Name": "ListContextChanges",
+      "AuthorizedActions": [
+        {
+          "Name": "ListContextChanges",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
@@ -3621,6 +3980,12 @@
     },
     {
       "Name": "ListContextStoreAssociations",
+      "AuthorizedActions": [
+        {
+          "Name": "ListContextStoreAssociations",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
@@ -3631,6 +3996,12 @@
     },
     {
       "Name": "ListContextStores",
+      "AuthorizedActions": [
+        {
+          "Name": "ListContextStores",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
@@ -3641,6 +4012,12 @@
     },
     {
       "Name": "ListContexts",
+      "AuthorizedActions": [
+        {
+          "Name": "ListContexts",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
@@ -3971,6 +4348,12 @@
     },
     {
       "Name": "UpdateContextStore",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateContextStore",
+          "Service": "networkmanager"
+        }
+      ],
       "SDK": [
         {
           "Name": "networkmanager",
@@ -4137,6 +4520,15 @@
       ]
     },
     {
+      "Name": "context-store",
+      "ARNFormats": [
+        "arn:${Partition}:networkmanager::${Account}:context-store/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
       "Name": "core-network",
       "ARNFormats": [
         "arn:${Partition}:networkmanager::${Account}:core-network/${ResourceId}"
@@ -4170,6 +4562,16 @@
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "network-scope",
+      "ARNFormats": [
+        "arn:${Partition}:networkmanager:${Region}:${Account}:network-scope/${ResourceId}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "networkmanager:ManagedBy"
       ]
     },
     {

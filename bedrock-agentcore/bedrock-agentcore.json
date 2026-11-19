@@ -1931,6 +1931,7 @@
       "Name": "GetAgentInsight",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": true,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -5216,6 +5217,7 @@
       "Name": "UpdateAgentInsightStore",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -7638,6 +7640,12 @@
     },
     {
       "Name": "GetAgentInsight",
+      "AuthorizedActions": [
+        {
+          "Name": "GetAgentInsight",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore",
@@ -9851,6 +9859,12 @@
     },
     {
       "Name": "UpdateAgentInsightStore",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateAgentInsightStore",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore-control",

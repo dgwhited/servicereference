@@ -1784,6 +1784,38 @@
       }
     },
     {
+      "Name": "GetRequestAuthorizationDetails",
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "GetRequestAuthorizationPolicy",
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetRole",
       "ActionConditionKeys": [
         "iam:PermissionsBoundary",
@@ -5462,6 +5494,12 @@
     },
     {
       "Name": "GetRequestAuthorizationDetails",
+      "AuthorizedActions": [
+        {
+          "Name": "GetRequestAuthorizationDetails",
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "iam-toolbox",
@@ -5472,6 +5510,12 @@
     },
     {
       "Name": "GetRequestAuthorizationPolicy",
+      "AuthorizedActions": [
+        {
+          "Name": "GetRequestAuthorizationPolicy",
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "iam-toolbox",
