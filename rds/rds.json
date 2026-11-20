@@ -534,6 +534,7 @@
         "rds:Piops",
         "rds:StorageEncrypted",
         "rds:StorageSize",
+        "rds:VpcNetworkingEnabled",
         "rds:req-tag/${TagKey}"
       ],
       "Annotations": {
@@ -2596,6 +2597,47 @@
       }
     },
     {
+      "Name": "DisableInternetAccessGateway",
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "DisableVpcNetworking",
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "DownloadCompleteDBLogFile",
       "Annotations": {
         "Properties": {
@@ -2638,6 +2680,48 @@
     },
     {
       "Name": "EnableHttpEndpoint",
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "EnableInternetAccessGateway",
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "cluster"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "EnableVpcNetworking",
       "Annotations": {
         "Properties": {
           "IsDataPlane": false,
@@ -2924,6 +3008,9 @@
         },
         {
           "Name": "pg"
+        },
+        {
+          "Name": "subgrp"
         }
       ],
       "SupportedBy": {
@@ -3738,6 +3825,7 @@
         "rds:DatabaseName",
         "rds:ManageMasterUserPassword",
         "rds:StorageEncrypted",
+        "rds:VpcNetworkingEnabled",
         "rds:req-tag/${TagKey}"
       ],
       "Annotations": {
@@ -3776,6 +3864,7 @@
         "rds:DatabaseClass",
         "rds:Piops",
         "rds:StorageSize",
+        "rds:VpcNetworkingEnabled",
         "rds:req-tag/${TagKey}"
       ],
       "Annotations": {
@@ -3820,6 +3909,7 @@
         "rds:DatabaseClass",
         "rds:Piops",
         "rds:StorageSize",
+        "rds:VpcNetworkingEnabled",
         "rds:req-tag/${TagKey}"
       ],
       "Annotations": {
@@ -4403,6 +4493,12 @@
       ]
     },
     {
+      "Name": "rds:VpcNetworkingEnabled",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
       "Name": "rds:cluster-pg-tag/${TagKey}",
       "Types": [
         "String"
@@ -4909,6 +5005,14 @@
         },
         {
           "Name": "CreateDBInstance",
+          "Service": "rds"
+        },
+        {
+          "Name": "DisableVpcNetworking",
+          "Service": "rds"
+        },
+        {
+          "Name": "EnableInternetAccessGateway",
           "Service": "rds"
         },
         {
@@ -7840,6 +7944,18 @@
           "Service": "rds"
         },
         {
+          "Name": "DisableVpcNetworking",
+          "Service": "rds"
+        },
+        {
+          "Name": "EnableInternetAccessGateway",
+          "Service": "rds"
+        },
+        {
+          "Name": "EnableVpcNetworking",
+          "Service": "rds"
+        },
+        {
           "Name": "PassRole",
           "Context": {
             "iam:PassedToService": [
@@ -7884,6 +8000,18 @@
         },
         {
           "Name": "CreateDBInstance",
+          "Service": "rds"
+        },
+        {
+          "Name": "DisableVpcNetworking",
+          "Service": "rds"
+        },
+        {
+          "Name": "EnableInternetAccessGateway",
+          "Service": "rds"
+        },
+        {
+          "Name": "EnableVpcNetworking",
           "Service": "rds"
         },
         {

@@ -776,6 +776,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -802,6 +803,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1316,6 +1318,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1499,6 +1502,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "Assessment"
+        },
         {
           "Name": "ChangeSet"
         },
@@ -1915,6 +1921,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1982,6 +1989,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -2108,6 +2116,9 @@
       },
       "Resources": [
         {
+          "Name": "Assessment"
+        },
+        {
           "Name": "ChangeSet"
         },
         {
@@ -2185,6 +2196,9 @@
         }
       },
       "Resources": [
+        {
+          "Name": "Assessment"
+        },
         {
           "Name": "ChangeSet"
         },
@@ -2422,6 +2436,10 @@
         },
         {
           "Name": "Subscribe",
+          "Service": "aws-marketplace"
+        },
+        {
+          "Name": "UpdatePurchaseOrders",
           "Service": "aws-marketplace"
         }
       ],
@@ -2854,6 +2872,38 @@
       ]
     },
     {
+      "Name": "GetDeploymentConfiguration",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDeploymentConfiguration",
+          "Service": "aws-marketplace"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "marketplace-deployment",
+          "Method": "get_deployment_configuration",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetDeploymentConfigurationJob",
+      "AuthorizedActions": [
+        {
+          "Name": "GetDeploymentConfigurationJob",
+          "Service": "aws-marketplace"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "marketplace-deployment",
+          "Method": "get_deployment_configuration_job",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetEntitlements",
       "AuthorizedActions": [
         {
@@ -3105,6 +3155,22 @@
         {
           "Name": "marketplace-catalog",
           "Method": "list_change_sets",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListDeploymentConfigurationJobs",
+      "AuthorizedActions": [
+        {
+          "Name": "ListDeploymentConfigurationJobs",
+          "Service": "aws-marketplace"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "marketplace-deployment",
+          "Method": "list_deployment_configuration_jobs",
           "Package": "Boto3"
         }
       ]
@@ -3413,6 +3479,30 @@
       ]
     },
     {
+      "Name": "StartAssessment",
+      "AuthorizedActions": [
+        {
+          "Name": "DescribeEntity",
+          "Service": "aws-marketplace"
+        },
+        {
+          "Name": "StartAssessment",
+          "Service": "aws-marketplace"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "aws-marketplace"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "marketplace-catalog",
+          "Method": "start_assessment",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "StartChangeSet",
       "AuthorizedActions": [
         {
@@ -3457,6 +3547,22 @@
         {
           "Name": "marketplace-catalog",
           "Method": "start_change_set",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "StartDeploymentConfigurationJob",
+      "AuthorizedActions": [
+        {
+          "Name": "StartDeploymentConfigurationJob",
+          "Service": "aws-marketplace"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "marketplace-deployment",
+          "Method": "start_deployment_configuration_job",
           "Package": "Boto3"
         }
       ]

@@ -913,6 +913,7 @@
       "Name": "ListFirewallRuleDomains",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -2302,6 +2303,22 @@
         {
           "Name": "route53resolver",
           "Method": "list_firewall_domains",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListFirewallRuleDomains",
+      "AuthorizedActions": [
+        {
+          "Name": "ListFirewallRuleDomains",
+          "Service": "route53resolver"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "route53resolver",
+          "Method": "list_firewall_rule_domains",
           "Package": "Boto3"
         }
       ]

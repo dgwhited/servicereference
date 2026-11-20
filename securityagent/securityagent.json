@@ -1895,6 +1895,7 @@
       "Name": "ResumePentestJob",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -3743,6 +3744,12 @@
     },
     {
       "Name": "ResumePentestJob",
+      "AuthorizedActions": [
+        {
+          "Name": "ResumePentestJob",
+          "Service": "securityagent"
+        }
+      ],
       "SDK": [
         {
           "Name": "securityagent",

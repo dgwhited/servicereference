@@ -110,6 +110,13 @@
           "Name": "healthcheck"
         },
         {
+          "Name": "healthchecksource",
+          "ConditionKeys": [
+            "aws:RequestTag/${TagKey}",
+            "aws:TagKeys"
+          ]
+        },
+        {
           "Name": "hostedzone"
         }
       ],
@@ -148,6 +155,31 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "CreateHealthCheckSource",
+      "ActionConditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "healthchecksource"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -409,6 +441,27 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteHealthCheckSource",
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "healthchecksource"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -812,6 +865,27 @@
       }
     },
     {
+      "Name": "GetHealthCheckSource",
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "healthchecksource"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetHealthCheckStatus",
       "Annotations": {
         "Properties": {
@@ -1101,6 +1175,22 @@
       }
     },
     {
+      "Name": "ListHealthCheckSources",
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "ListHealthChecks",
       "Annotations": {
         "Properties": {
@@ -1114,6 +1204,27 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": true,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "ListHealthChecksBySource",
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "healthchecksource"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1277,6 +1388,9 @@
           "Name": "healthcheck"
         },
         {
+          "Name": "healthchecksource"
+        },
+        {
           "Name": "hostedzone"
         }
       ],
@@ -1299,6 +1413,9 @@
       "Resources": [
         {
           "Name": "healthcheck"
+        },
+        {
+          "Name": "healthchecksource"
         },
         {
           "Name": "hostedzone"
@@ -1564,6 +1681,24 @@
   ],
   "ConditionKeys": [
     {
+      "Name": "aws:RequestTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:ResourceTag/${TagKey}",
+      "Types": [
+        "String"
+      ]
+    },
+    {
+      "Name": "aws:TagKeys",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
       "Name": "route53:ChangeResourceRecordSetsActions",
       "Types": [
         "ArrayOfString"
@@ -1697,6 +1832,26 @@
         {
           "Name": "route53",
           "Method": "create_health_check",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "CreateHealthCheckSource",
+      "AuthorizedActions": [
+        {
+          "Name": "ChangeTagsForResource",
+          "Service": "route53"
+        },
+        {
+          "Name": "CreateHealthCheckSource",
+          "Service": "route53"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "route53",
+          "Method": "create_health_check_source",
           "Package": "Boto3"
         }
       ]
@@ -1889,6 +2044,22 @@
         {
           "Name": "route53",
           "Method": "delete_health_check",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteHealthCheckSource",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteHealthCheckSource",
+          "Service": "route53"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "route53",
+          "Method": "delete_health_check_source",
           "Package": "Boto3"
         }
       ]
@@ -2198,6 +2369,22 @@
       ]
     },
     {
+      "Name": "GetHealthCheckSource",
+      "AuthorizedActions": [
+        {
+          "Name": "GetHealthCheckSource",
+          "Service": "route53"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "route53",
+          "Method": "get_health_check_source",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "GetHealthCheckStatus",
       "AuthorizedActions": [
         {
@@ -2422,6 +2609,22 @@
       ]
     },
     {
+      "Name": "ListHealthCheckSources",
+      "AuthorizedActions": [
+        {
+          "Name": "ListHealthCheckSources",
+          "Service": "route53"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "route53",
+          "Method": "list_health_check_sources",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "ListHealthChecks",
       "AuthorizedActions": [
         {
@@ -2433,6 +2636,22 @@
         {
           "Name": "route53",
           "Method": "list_health_checks",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "ListHealthChecksBySource",
+      "AuthorizedActions": [
+        {
+          "Name": "ListHealthChecksBySource",
+          "Service": "route53"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "route53",
+          "Method": "list_health_checks_by_source",
           "Package": "Boto3"
         }
       ]
@@ -2797,6 +3016,15 @@
       "Name": "healthcheck",
       "ARNFormats": [
         "arn:${Partition}:route53:::healthcheck/${Id}"
+      ]
+    },
+    {
+      "Name": "healthchecksource",
+      "ARNFormats": [
+        "arn:${Partition}:route53:::healthchecksource/${Id}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {

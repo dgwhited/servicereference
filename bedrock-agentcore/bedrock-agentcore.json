@@ -5202,6 +5202,7 @@
       "Name": "UpdateAgentInsight",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": true,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -9849,6 +9850,12 @@
     },
     {
       "Name": "UpdateAgentInsight",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateAgentInsight",
+          "Service": "bedrock-agentcore"
+        }
+      ],
       "SDK": [
         {
           "Name": "bedrock-agentcore",

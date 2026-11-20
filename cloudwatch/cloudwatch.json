@@ -212,6 +212,24 @@
       }
     },
     {
+      "Name": "CreateOmniAgentAsset",
+      "ActionConditionKeys": [
+        "cloudwatch:HasAccessGrant"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "CreateOmniDashboard",
       "ActionConditionKeys": [
         "cloudwatch:HasAccessGrant"
@@ -659,6 +677,29 @@
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": true
+      }
+    },
+    {
+      "Name": "DeleteOmniAgentAsset",
+      "ActionConditionKeys": [
+        "cloudwatch:HasAccessGrant"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "omni-agent-asset"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
       }
     },
     {
@@ -1484,6 +1525,29 @@
       }
     },
     {
+      "Name": "GetOmniAgentAsset",
+      "ActionConditionKeys": [
+        "cloudwatch:HasAccessGrant"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
+      "Resources": [
+        {
+          "Name": "omni-agent-asset"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetOmniDashboard",
       "ActionConditionKeys": [
         "cloudwatch:HasAccessGrant"
@@ -2118,6 +2182,24 @@
           ]
         }
       ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "ListOmniAgentAssets",
+      "ActionConditionKeys": [
+        "cloudwatch:HasAccessGrant"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": false
+        }
+      },
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -3291,6 +3373,29 @@
           "IsWrite": true
         }
       },
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
+      "Name": "UpdateOmniAgentAsset",
+      "ActionConditionKeys": [
+        "cloudwatch:HasAccessGrant"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "omni-agent-asset"
+        }
+      ],
       "SupportedBy": {
         "IAM Access Analyzer Policy Generation": false,
         "IAM Action Last Accessed": false
@@ -5704,6 +5809,15 @@
       "Name": "metric-stream",
       "ARNFormats": [
         "arn:${Partition}:cloudwatch:${Region}:${Account}:metric-stream/${MetricStreamName}"
+      ],
+      "ConditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
+    {
+      "Name": "omni-agent-asset",
+      "ARNFormats": [
+        "arn:${Partition}:cloudwatch:${Region}:${Account}:omni-agent-asset/${AssetId}"
       ],
       "ConditionKeys": [
         "aws:ResourceTag/${TagKey}"

@@ -337,7 +337,13 @@
       "Name": "CreateOpenIDConnectProvider",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "iam:EnableIdentityCenterAssociation",
+        "iam:EnableIdentityPropagation",
+        "iam:RequestIdentityCenterInstanceArn",
+        "iam:RequestIdentityProviderIssuers",
+        "iam:ResourceIdentityCenterInstanceArn",
+        "iam:ResourceIdentityProviderIssuers"
       ],
       "Annotations": {
         "Properties": {
@@ -435,7 +441,13 @@
       "Name": "CreateSAMLProvider",
       "ActionConditionKeys": [
         "aws:RequestTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "iam:EnableIdentityCenterAssociation",
+        "iam:EnableIdentityPropagation",
+        "iam:RequestIdentityCenterInstanceArn",
+        "iam:RequestIdentityProviderIssuers",
+        "iam:ResourceIdentityCenterInstanceArn",
+        "iam:ResourceIdentityProviderIssuers"
       ],
       "Annotations": {
         "Properties": {
@@ -3724,6 +3736,34 @@
       }
     },
     {
+      "Name": "UpdateOpenIDConnectProvider",
+      "ActionConditionKeys": [
+        "iam:EnableIdentityCenterAssociation",
+        "iam:EnableIdentityPropagation",
+        "iam:RequestIdentityCenterInstanceArn",
+        "iam:ResourceIdentityCenterInstanceArn",
+        "iam:ResourceIdentityProviderIssuers"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "oidc-provider"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "UpdateOpenIDConnectProviderThumbprint",
       "Annotations": {
         "Properties": {
@@ -3794,6 +3834,14 @@
     },
     {
       "Name": "UpdateSAMLProvider",
+      "ActionConditionKeys": [
+        "iam:EnableIdentityCenterAssociation",
+        "iam:EnableIdentityPropagation",
+        "iam:RequestIdentityCenterInstanceArn",
+        "iam:RequestIdentityProviderIssuers",
+        "iam:ResourceIdentityCenterInstanceArn",
+        "iam:ResourceIdentityProviderIssuers"
+      ],
       "Annotations": {
         "Properties": {
           "IsDataPlane": false,
@@ -4054,6 +4102,18 @@
       ]
     },
     {
+      "Name": "iam:EnableIdentityCenterAssociation",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
+      "Name": "iam:EnableIdentityPropagation",
+      "Types": [
+        "Bool"
+      ]
+    },
+    {
       "Name": "iam:FIDO-FIPS-140-2-certification",
       "Types": [
         "String"
@@ -4105,6 +4165,30 @@
       "Name": "iam:RegisterSecurityKey",
       "Types": [
         "String"
+      ]
+    },
+    {
+      "Name": "iam:RequestIdentityCenterInstanceArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "iam:RequestIdentityProviderIssuers",
+      "Types": [
+        "ArrayOfString"
+      ]
+    },
+    {
+      "Name": "iam:ResourceIdentityCenterInstanceArn",
+      "Types": [
+        "ARN"
+      ]
+    },
+    {
+      "Name": "iam:ResourceIdentityProviderIssuers",
+      "Types": [
+        "ArrayOfString"
       ]
     },
     {
@@ -6888,6 +6972,22 @@
         {
           "Name": "iam",
           "Method": "update_login_profile",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "UpdateOpenIDConnectProvider",
+      "AuthorizedActions": [
+        {
+          "Name": "UpdateOpenIDConnectProvider",
+          "Service": "iam"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "iam",
+          "Method": "update_open_id_connect_provider",
           "Package": "Boto3"
         }
       ]

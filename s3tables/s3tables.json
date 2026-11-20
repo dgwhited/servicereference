@@ -314,6 +314,31 @@
       }
     },
     {
+      "Name": "DisassociateTableReplication",
+      "ActionConditionKeys": [
+        "s3tables:namespace",
+        "s3tables:tableName"
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsDataPlane": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false,
+          "IsWrite": true
+        }
+      },
+      "Resources": [
+        {
+          "Name": "Table"
+        }
+      ],
+      "SupportedBy": {
+        "IAM Access Analyzer Policy Generation": false,
+        "IAM Action Last Accessed": false
+      }
+    },
+    {
       "Name": "GetNamespace",
       "ActionConditionKeys": [
         "s3tables:namespace"
@@ -1761,6 +1786,22 @@
         {
           "Name": "s3tables",
           "Method": "delete_table_replication",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DisassociateTableReplication",
+      "AuthorizedActions": [
+        {
+          "Name": "DisassociateTableReplication",
+          "Service": "s3tables"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "s3tables",
+          "Method": "disassociate_table_replication",
           "Package": "Boto3"
         }
       ]

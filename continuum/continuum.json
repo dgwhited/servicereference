@@ -78,6 +78,7 @@
       "Name": "CreateCollector",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -805,6 +806,21 @@
     },
     {
       "Name": "CreateCollector",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateCollector",
+          "Service": "continuum"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "collector.continuum.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "continuum",
@@ -819,6 +835,15 @@
         {
           "Name": "CreateEnvironment",
           "Service": "continuum"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "continuum.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
         }
       ],
       "SDK": [

@@ -316,6 +316,22 @@
   ],
   "Operations": [
     {
+      "Name": "CreateVoice",
+      "AuthorizedActions": [
+        {
+          "Name": "TagResource",
+          "Service": "polly"
+        }
+      ],
+      "SDK": [
+        {
+          "Name": "polly",
+          "Method": "create_voice",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
       "Name": "DeleteLexicon",
       "AuthorizedActions": [
         {
@@ -327,6 +343,16 @@
         {
           "Name": "polly",
           "Method": "delete_lexicon",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "DeleteVoice",
+      "SDK": [
+        {
+          "Name": "polly",
+          "Method": "delete_voice",
           "Package": "Boto3"
         }
       ]
@@ -375,6 +401,16 @@
         {
           "Name": "polly",
           "Method": "get_speech_synthesis_task",
+          "Package": "Boto3"
+        }
+      ]
+    },
+    {
+      "Name": "GetVoice",
+      "SDK": [
+        {
+          "Name": "polly",
+          "Method": "get_voice",
           "Package": "Boto3"
         }
       ]
