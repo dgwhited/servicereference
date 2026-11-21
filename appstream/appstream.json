@@ -111,6 +111,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -228,6 +229,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -337,6 +339,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -356,6 +359,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -383,6 +387,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -434,6 +439,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -453,6 +459,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1551,6 +1558,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1843,6 +1851,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -2048,6 +2057,12 @@
     },
     {
       "Name": "AssociateSoftwareToImageBuilder",
+      "AuthorizedActions": [
+        {
+          "Name": "AssociateSoftwareToImageBuilder",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -2122,6 +2137,16 @@
     },
     {
       "Name": "CreateAppBlockBuilder",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateAppBlockBuilder",
+          "Service": "appstream"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -2190,6 +2215,21 @@
     },
     {
       "Name": "CreateExportImageTask",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateExportImageTask",
+          "Service": "appstream"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "appstream.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -2200,6 +2240,25 @@
     },
     {
       "Name": "CreateFleet",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateFleet",
+          "Service": "appstream"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "appstream.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -2210,6 +2269,25 @@
     },
     {
       "Name": "CreateImageBuilder",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateImageBuilder",
+          "Service": "appstream"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "appstream.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -2236,6 +2314,21 @@
     },
     {
       "Name": "CreateImportedImage",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateImportedImage",
+          "Service": "appstream"
+        },
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "appstream.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -2246,6 +2339,16 @@
     },
     {
       "Name": "CreateStack",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateStack",
+          "Service": "appstream"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -3100,6 +3203,12 @@
     },
     {
       "Name": "StartSoftwareDeploymentToImageBuilder",
+      "AuthorizedActions": [
+        {
+          "Name": "StartSoftwareDeploymentToImageBuilder",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -3254,6 +3363,21 @@
     },
     {
       "Name": "UpdateFleet",
+      "AuthorizedActions": [
+        {
+          "Name": "PassRole",
+          "Context": {
+            "iam:PassedToService": [
+              "appstream.amazonaws.com"
+            ]
+          },
+          "Service": "iam"
+        },
+        {
+          "Name": "UpdateFleet",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",

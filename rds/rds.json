@@ -2600,6 +2600,7 @@
       "Name": "DisableInternetAccessGateway",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -7144,6 +7145,14 @@
     {
       "Name": "ModifyDBCluster",
       "AuthorizedActions": [
+        {
+          "Name": "DisableInternetAccessGateway",
+          "Service": "rds"
+        },
+        {
+          "Name": "EnableVpcNetworking",
+          "Service": "rds"
+        },
         {
           "Name": "ModifyDBCluster",
           "Service": "rds"
