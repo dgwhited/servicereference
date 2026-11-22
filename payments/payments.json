@@ -346,7 +346,6 @@
       "Name": "ListPaymentInstruments",
       "Annotations": {
         "Properties": {
-          "IsDataPlane": false,
           "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -607,6 +606,10 @@
         {
           "Name": "GetPaymentInstrument",
           "Service": "payments"
+        },
+        {
+          "Name": "ViewPaymentMethods",
+          "Service": "aws-portal"
         }
       ],
       "SDK": [
@@ -629,12 +632,6 @@
     },
     {
       "Name": "ListPaymentInstruments",
-      "AuthorizedActions": [
-        {
-          "Name": "ListPaymentInstruments",
-          "Service": "payments"
-        }
-      ],
       "SDK": [
         {
           "Name": "payments",
