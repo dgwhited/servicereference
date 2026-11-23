@@ -532,6 +532,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1320,6 +1321,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -2385,6 +2387,16 @@
     },
     {
       "Name": "CreateUpdatedImage",
+      "AuthorizedActions": [
+        {
+          "Name": "CreateUpdatedImage",
+          "Service": "appstream"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
@@ -3007,6 +3019,12 @@
     },
     {
       "Name": "DisassociateSoftwareFromImageBuilder",
+      "AuthorizedActions": [
+        {
+          "Name": "DisassociateSoftwareFromImageBuilder",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",

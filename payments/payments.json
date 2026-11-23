@@ -286,6 +286,7 @@
       "Name": "ListFinancialRecords",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": true,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -622,6 +623,20 @@
     },
     {
       "Name": "ListFinancialRecords",
+      "AuthorizedActions": [
+        {
+          "Name": "GetPaymentStatus",
+          "Service": "payments"
+        },
+        {
+          "Name": "ListFinancialRecords",
+          "Service": "payments"
+        },
+        {
+          "Name": "ViewBilling",
+          "Service": "aws-portal"
+        }
+      ],
       "SDK": [
         {
           "Name": "payments",
