@@ -89,6 +89,7 @@
       "Name": "CancelRecoveryPlanExecution",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -1665,6 +1666,7 @@
       ],
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -2372,6 +2374,12 @@
     },
     {
       "Name": "CancelRecoveryPlanExecution",
+      "AuthorizedActions": [
+        {
+          "Name": "CancelRecoveryPlanExecution",
+          "Service": "drs"
+        }
+      ],
       "SDK": [
         {
           "Name": "drs",
@@ -3164,6 +3172,16 @@
     },
     {
       "Name": "StartFailbackLaunch",
+      "AuthorizedActions": [
+        {
+          "Name": "StartFailbackLaunch",
+          "Service": "drs"
+        },
+        {
+          "Name": "TagResource",
+          "Service": "drs"
+        }
+      ],
       "SDK": [
         {
           "Name": "drs",

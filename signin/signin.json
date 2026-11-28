@@ -152,6 +152,7 @@
     {
       "Name": "CreateOAuth2Token",
       "ActionConditionKeys": [
+        "signin:MaxSigninSessionDuration",
         "signin:PutSignInDurationBlock"
       ],
       "Annotations": {
@@ -435,6 +436,12 @@
     }
   ],
   "ConditionKeys": [
+    {
+      "Name": "signin:MaxSigninSessionDuration",
+      "Types": [
+        "Numeric"
+      ]
+    },
     {
       "Name": "signin:OAuthClientAuthentication",
       "Types": [

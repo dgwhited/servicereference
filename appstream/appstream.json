@@ -816,6 +816,7 @@
       "Name": "DeleteThemeForStack",
       "Annotations": {
         "Properties": {
+          "IsDataPlane": false,
           "IsList": false,
           "IsPermissionManagement": false,
           "IsTaggingOnly": false,
@@ -2621,6 +2622,12 @@
     },
     {
       "Name": "DeleteThemeForStack",
+      "AuthorizedActions": [
+        {
+          "Name": "DeleteThemeForStack",
+          "Service": "appstream"
+        }
+      ],
       "SDK": [
         {
           "Name": "appstream",
